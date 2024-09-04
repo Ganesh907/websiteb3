@@ -1,0 +1,59 @@
+.dropdown-menuu {
+  width: 140px;
+  position: absolute;
+  top: 65px;
+  list-style: none;
+  text-align: start;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.dropdown-menuu li {
+  background: white;
+  position: relative;
+  overflow: hidden; /* Ensures the pseudo-element stays within bounds */
+}
+
+.dropdown-menuu li:hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 8%;
+  height: 100%;
+  width: 50%; /* Set the width of the pseudo-element to 50% */
+  border-bottom: 2px solid #0060b5;
+  animation: slide-right 0.5s forwards; /* Animation duration and direction */
+}
+
+@keyframes slide-right {
+  70% {
+    left: -100%; /* Start from outside the left boundary */
+  }
+
+  100% {
+    left: 0; /* End at the center of the element */
+  }
+}
+
+.dropdown-menuu.clicked {
+  display: none;
+}
+
+.dropdown-link {
+  font-size: 15px;
+  display: block;
+  height: 100%;
+  width: 100%;
+  font-family: Montserrat;
+  text-decoration: none;
+  color: #0060b5;
+  padding: 12px 20px;
+  position: relative; /* Ensure the link is positioned above the pseudo-element */
+  z-index: 1; /* Ensure the link text is above the background animation */
+}
+
+@media screen and (max-width: 960px) {
+  .fa-caret-down {
+    display: none;
+  }
+}
