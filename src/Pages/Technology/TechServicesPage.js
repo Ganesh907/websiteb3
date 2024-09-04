@@ -22,7 +22,7 @@ import credentials from"../../Assets/Images/certificate.png";
 import price from"../../Assets/Images/tag.png";
 import careers1 from"../../Assets/Images/careers1.png";
 import Devsoft from"../../Assets/Images/cloud-computing.png";
-import ITConsulting from"../../Assets/Images/IT CONSULTATION.jpg";
+import ITConsulting from"../../Assets/Images/ITconsulting.jpg";
 import androiddev from"../../Assets/Images/AndroidDev.jpg";
 import itservice from"../../Assets/Images/it_service-2.jpeg";
 import finance from"../../Assets/Images/Finance.jpg";
@@ -141,7 +141,7 @@ export const TechServicesPage = (props) => {
 {/* /////////////////////////////////////////////////////////// */}
 <h1 className="techservice_heading  md:text-start  md:ml-10 text-center" data-aos="fade-up"
           data-aos-duration="4000">Services we provide </h1>
-    <span className="w-[8%] h-[5px] ml-[3%] hidden md:block rounded-b-[5px]" style={{backgroundColor:'#002eff'}}></span>      
+    {/* <span className="w-[8%] h-[5px] ml-[3%] hidden md:block rounded-b-[5px]" style={{backgroundColor:'#002eff'}}></span>       */}
 <section className=" flex  justify-center items-center  w-full h-auto pt-2">
           <div className="techservice_bg w-full h-auto pb-4   flex  flex-col items-center ">
           <div className="techservice_p md:w-[80%] md:mb-0 mb-4 md:pl-0 pl-2 text-black" data-aos="fade-up"
@@ -161,7 +161,7 @@ export const TechServicesPage = (props) => {
     <div class="card">
       <img src={ITConsulting}/>
       <div class="info">
-        <h1>IT Consultation</h1>
+        <h1 className="font-bold">IT Consultation</h1>
         <p>Expert IT consultants guiding your technology decisions to meet business goals.</p>
        
       </div>
@@ -186,7 +186,7 @@ export const TechServicesPage = (props) => {
     <div class="card">
       <img src={androiddev}/>
       <div class="info">
-        <h1>Android Development</h1>
+        <h1 className="font-bold">Android Development</h1>
         <p>Engage users and drive growth with our tailored, user-friendly Android apps.</p>
        
       </div>
@@ -207,7 +207,7 @@ export const TechServicesPage = (props) => {
     <div class="card">
       <img src={itservice}/>
       <div class="info">
-        <h1>Managed IT Services</h1>
+        <h1 className="font-bold">Managed IT Services</h1>
         <p>Focus on your core 
         business as our managed IT services handle all your technology needs.</p>
        
@@ -230,7 +230,7 @@ export const TechServicesPage = (props) => {
     <div class="card">
       <img src={finance}/>
       <div class="info">
-        <h1>Financial Transactions Management</h1>
+        <h1 className="font-bold">Financial Transactions Management</h1>
         <p>Streamline financial transactions with our secure solutions, from payment integration to data management.</p>
        
       </div>
@@ -250,7 +250,7 @@ export const TechServicesPage = (props) => {
     <div class="card">
       <img src={api_integration}/>
       <div class="info">
-        <h1>Third Party API Integration</h1>
+        <h1 className="font-bold">Third Party API Integration</h1>
         <p>Enhance your systems with our third-party API integrations for payments, social media, Google services, and more.</p>
        
       </div>
@@ -269,7 +269,7 @@ export const TechServicesPage = (props) => {
     <div class="card">
       <img src={hardwaresoftware}/>
       <div class="info">
-        <h1>Hardware/Software Support</h1>
+        <h1 className="font-bold">Hardware/Software Support</h1>
         <p>Ensure smooth operations with our expert hardware and software support services.</p>
        
       </div>
@@ -290,7 +290,7 @@ export const TechServicesPage = (props) => {
     <div class="card">
       <img src={cloudandinfra}/>
       <div class="info">
-        <h1>Cloud & Infrastructure as a Service (IaaS)</h1>
+        <h1 className="font-bold">Cloud & Infrastructure as a Service (IaaS)</h1>
         <p>Skyrocket your business with our IaaS solutions, offering consulting, migration, and managed services for AWS, Google Cloud, and Azure.</p>
        
       </div>
@@ -311,7 +311,7 @@ export const TechServicesPage = (props) => {
     <div class="card">
       <img src={workflow}/>
       <div class="info">
-        <h1>Workflow Management System</h1>
+        <h1 className="font-bold">Workflow Management System</h1>
         <p>Boost productivity with our workflow management systems, streamlining business processes for greater efficiency.</p>
        
       </div>
