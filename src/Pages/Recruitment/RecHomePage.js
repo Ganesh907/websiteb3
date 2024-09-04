@@ -161,7 +161,7 @@ const RecHomePage = () => {
         </Button>
       </div>
 
-      <div className="bg-red-200 ">
+      <div className="bg-green-200 ">
         <div className="third-section">
           <div className="row">
             <h2>Related Services</h2>
