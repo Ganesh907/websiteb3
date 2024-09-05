@@ -33,7 +33,7 @@ import workflow from"../../Assets/Images/workflow_img.jpg";
 import "./TechServicesPage.css"
 // import "../../components/Services/TechnologyService.scss";
 // import Header from "../Header/header";
-// import Footer from "../Footer/footer";
+import Footer from "../../Components/CommonComponents/Footer";
 // import techservice from "../../Assets/Images/techservice.png";
 
 
@@ -328,23 +328,23 @@ export const TechServicesPage = (props) => {
   
   {/* ////////////////////////////////////////section2//////////////////////////// */}
    
-  <div className=" w-full  bg-white ml-2 h-screen justify-start">
+  <div className=" w-full  bg-white mt-20 h-screen justify-start ">
       
       <div>
         <h1 className="text-black heading2 ml-10  ">Process & Methodology</h1>
-        <span className="w-[8%] h-[5px] ml-[3%] block rounded-b-[5px]" style={{backgroundColor:'#002eff'}}></span> 
+        {/* <span className="w-[8%] h-[5px] ml-[3%] block rounded-b-[5px]" style={{backgroundColor:'#002eff'}}></span>  */}
         
 
         </div>
     
         
-<div className="flex justify-between items-center h-[80vh] mt-0 ">
+<div className="flex justify-between items-center  h-[80vh] mt-4 ">
   <ol className="flex relative  bottom-16 text-gray-500  w-full border-gray-400  dark:border-gray-700 dark:text-gray-400">
     <li className="flex-1 mr-10 ml-10 ">
       <span className=" absolute flex items-center justify-center w-24 h-10 bg-gray-100 rounded top-0 -mt-4  ring-blue-400 dark:ring-gray-900 dark:bg-gray-700">
       <img src={requirements} className="h-20 w-40" />
       </span>
-      <div className="ml-[90px] -mt-[25px] w-80">
+      <div className="ml-[96px] -mt-[25px] w-80">
         <h3 className="font-xl font-bold text-black leading-tight">Planning and Requirement Analysis</h3>
         <p className="text-sm pt-1 leading-normal">We begin by understanding your business needs and defining clear project requirements.</p>
       </div>
@@ -353,16 +353,16 @@ export const TechServicesPage = (props) => {
       <span className="-mt-[110px]  absolute flex items-center justify-center w-24 h-10 bg-gray-100 rounded top-0 -mt-4  ring-blue-400 dark:ring-gray-900 dark:bg-gray-700">
       <img src={design} className="h-20 w-40" />
       </span>
-      <div className="ml-[90px] -mt-[120px] w-80">
+      <div className="ml-[95px] -mt-[120px] w-80">
         <h3 className="font-xl font-bold text-black leading-tight">Design</h3>
         <p className="text-sm pt-1">Our experienced architects design scalable and efficient software solutions tailored to your specifications.</p>
       </div>
     </li>
-    <li className="flex-1 mr-4 ">
+    <li className="flex-1  ">
       <span className="absolute flex items-center justify-center w-24 h-10 bg-gray-100 rounded top-0 -mt-4  ring-blue-400 dark:ring-gray-900 dark:bg-gray-700">
       <img src={development1} className=" h-20 w-40" />
       </span>
-      <div className="ml-[90px] -mt-[25px] w-80">
+      <div className="ml-[95px] -mt-[25px] w-80">
         <h3 className="font-xl font-bold text-black leading-tight">Development</h3>
         <p className="text-sm pt-1">Our developers build robust software using industry-best practices and cutting-edge technologies.</p>
       </div>
@@ -371,7 +371,7 @@ export const TechServicesPage = (props) => {
     </div>
 
 
-    <div className="flex justify-between items-center  mt-0 ">
+    <div className="flex justify-between items-center  mt-0  ">
       <ol className="flex relative text-gray-500  w-full border-gray-400  dark:border-gray-700 dark:text-gray-400">
     <div className="flex flex-wrap">
 
@@ -379,13 +379,13 @@ export const TechServicesPage = (props) => {
       <span className=" -mt-[160px] absolute flex items-center justify-center w-24 h-10  rounded top-0   ring-blue-400 dark:ring-gray-900 dark:bg-gray-700">
       <img src={testing} className=" h-20 w-40" />
       </span>
-      <div className="ml-[90px] -mt-[170px] ">
+      <div className="ml-[95px] -mt-[170px] ">
         <h3 className="font-xl font-bold text-black leading-tight">Testing</h3>
         <p className="text-sm pt-1">Comprehensive testing ensures that our software is reliable, secure, and performs flawlessly.</p>
       </div>
     </li>
           <span className="absolute  bottom-[250px] left-[540px] flex items-center justify-center w-56 h-10 rounded -mt-4 ring-blue-400 dark:ring-gray-900 dark:bg-gray-700">
-            <img src={arrow} className=" h-50 w-50" />
+            <img src={arrow} className=" h-40 w-40" />
           </span>
    
 
@@ -393,7 +393,7 @@ export const TechServicesPage = (props) => {
       <span className=" -mt-[60px] absolute flex items-center justify-center w-24 h-10 bg-gray-100 rounded top-0 -mt-4  ring-blue-400 dark:ring-gray-900 dark:bg-gray-700">
       <img src={deployment} className=" h-20 w-40" />
       </span>
-      <div className="ml-[90px] -mt-[70px] ">
+      <div className="ml-[95px] -mt-[70px] ">
         <h3 className="font-xl font-bold text-black leading-tight">Deployment</h3>
         <p className="text-sm pt-1">We seamlessly deploy your software, ensuring minimal disruption and maximum efficiency.</p>
       </div>
@@ -402,7 +402,7 @@ export const TechServicesPage = (props) => {
       <span className="-mt-[160px] absolute flex items-center justify-center w-24 h-10 bg-gray-100 rounded top-0 -mt-4  ring-blue-400 dark:ring-gray-900 dark:bg-gray-700">
       <img src={maintenance} className=" h-20 w-40" />
       </span>
-      <div className="ml-[90px] -mt-[160px] w-80">
+      <div className="ml-[95px] -mt-[160px] w-80">
         <h3 className="font-xl font-bold text-black leading-tight">Maintenance and Support</h3>
         <p className="text-sm pt-1">Ongoing support and maintenance keep your software running smoothly and adapt to evolving needs.</p>
       </div>
@@ -561,30 +561,35 @@ export const TechServicesPage = (props) => {
 
 
       <section className="service-section">
-        <div className="service-div">
-          <div className="service-content-section">
-            <p className="tech-service-p">
-              Founded and Headed by Tech savvy, like minded people, BitByBit has
-              been offering state-of-the-art technology solutions to its
-              clients. we have a special expertise in coding, designing,
-              programming, testing and then delivering different software
-              solutions to our clients. The industries we serve, so far, are e
-              Governance, Fintech, Healthcare and Technology corporations. We
-              have a team of young but highly knowledgeable and highly
-              experienced professionals which are well equipped to offer our
-              clients the best technological solutions in the form of customized
-              software applications whether web based or mobile based. All our
-              technology solutions are delivered bug-free. We offer an extremely
-              development lifecycle to ensure an uninterrupted service. We
-              deliver exactly what you need.
-            </p>
-          </div>
-        </div>
+        {/* <div className="service-div"> */}
+        <div style={{ 
+  width: '100%', 
+  textAlign: 'center', 
+  lineHeight: '1.8', 
+  fontFamily: 'Arial, sans-serif', 
+  fontSize: '2.5rem', 
+  fontWeight: 'bold',
+  // color: '#fff', 
+  padding: '30px',
+  // backgroundColor: '#007BFF', 
+  margin: '20px 0',
+  // boxShadow: '0px 4px 15px rgba(0, 0, 0, 0.2)', 
+  borderRadius: '8px', 
+  textShadow: '2px 2px 4px rgba(0, 0, 0, 0.3)' 
+}}>
+BitByBit delivers cutting-edge, custom software solutions in e-Governance, Fintech, Healthcare, and Technology, ensuring quality and seamless service.
+</div>
+
+
+          
+        {/* </div> */}
       </section>
+      
+
     </div>
       
       <div className="tech-footer">
-      {/* <Footer /> */}
+       <Footer /> 
       </div>
       </>
   );
