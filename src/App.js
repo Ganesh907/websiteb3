@@ -11,8 +11,35 @@ import RecHomePage from "./Pages/Recruitment/RecHomePage";
 import AboutUsPage from "./Pages/AboutUsPage";
 import { TechServicesPage } from "./Pages/Technology/TechServicesPage";
 import LandingPage from "./Pages/LandingPage";
+import { useEffect, useState } from "react";
+import KeyboardDoubleArrowUpIcon from '@mui/icons-material/KeyboardDoubleArrowUp';
 
 function App() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  // Show or hide the button based on scroll position
+  const toggleVisibility = () => {
+    if (window.scrollY > 100) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
+  };
+
+  // Scroll the window to the top
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", toggleVisibility);
+    return () => {
+      window.removeEventListener("scroll", toggleVisibility);
+    };
+  }, []);
   return (
     <Router>
       <div>
@@ -35,6 +62,17 @@ function App() {
           <Route path="/career" element={<CareerPage />} />
 
         </Routes>
+        <button
+      onClick={scrollToTop}
+      className={`fixed bottom-5 right-5 bg-blue-500 text-white h-10 w-10  rounded-full flex justify-center  items-end  shadow-lg hover:bg-blue-700 transition-opacity ${
+        isVisible ? "opacity-100 visible" : "opacity-0 invisible"
+      }`}
+    >
+      <KeyboardDoubleArrowUpIcon
+        className="animate-bounce"
+        style={{ fontSize: '30px' }}
+      />
+    </button>
       </div>
     </Router>
   );

@@ -171,18 +171,19 @@ const AboutUsPage = () => {
           </h1>
           <div className="px-20 sm:px-0 sm:h-[80vh] flex justify-center sm:flex-row flex-col item-center p-10 gap-10">
 
-            <div className="sm:w-[20vw]" data-aos="zoom-in" data-aos-duration="700">
-              <div className="p-10 h-[50%] w-[80%] m-auto sm:w-auto hover:scale-110">
+          <div className="sm:w-[20vw] border-2 border-transparent hover:border-gray-100 p-5 hover:translate-x-2 hover:shadow-lg rounded-lg" data-aos="zoom-in" data-aos-duration="700">
+
+              <div className="p-10 h-[50%] w-[80%] m-auto sm:w-auto">
                 <img src={AboutUs1} alt="" className="hover:shadow-xl" />
               </div>
-              <div className="h-[50%]">
-                <h1 className="font-bold text-center my-2 text-xl">TRANSPARENCY</h1>
+              <div className="h-[50%] ">
+                <h1 className="font-bold text-center my-2 text-xl hover:-translate-y-2 ">TRANSPARENCY</h1>
                 <p>  We build trust & commitment through openness &
                   accountability within our team and with our clients.</p>
               </div>
             </div>
 
-            <div className="sm:w-[20vw]" data-aos="zoom-in" data-aos-duration="700">
+            <div className="sm:w-[20vw] border-2 border-transparent hover:border-gray-100 p-5 hover:shadow-lg rounded-lg" data-aos="zoom-in" data-aos-duration="700">
               <div className="p-10 h-[50%] w-[80%] m-auto sm:w-auto">
                 <img src={AboutUs2} alt="" className="hover:drop-shadow-xl" />
               </div>
@@ -192,7 +193,7 @@ const AboutUsPage = () => {
                   results.</p>
               </div>
             </div>
-            <div className="sm:w-[20vw]" data-aos="zoom-in" data-aos-duration="700">
+            <div className="sm:w-[20vw] border-2 border-transparent hover:border-gray-100 p-5 hover:shadow-lg rounded-lg" data-aos="zoom-in" data-aos-duration="700">
               <div className="p-10 h-[50%] w-[80%] m-auto sm:w-auto">
                 <img src={AboutUs3} alt="" className="hover:drop-shadow-xl" />
               </div>
@@ -202,7 +203,7 @@ const AboutUsPage = () => {
                   it,we do it in a right way.</p>
               </div>
             </div>
-            <div className="sm:w-[20vw]" data-aos="zoom-in" data-aos-duration="700">
+            <div className="sm:w-[20vw] border-2 border-transparent hover:border-gray-100 p-5 hover:shadow-lg rounded-lg" data-aos="zoom-in" data-aos-duration="700">
               <div className="p-10 h-[50%] w-[80%] m-auto sm:w-auto">
                 <img src={AboutUs4} alt="" className="hover:shadow-xl" />
               </div>
