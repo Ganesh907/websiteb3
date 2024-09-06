@@ -65,7 +65,7 @@ const RecHomePage = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % quotes.length);
-    }, 3000); // Change quote every 3 seconds
+    }, 15000); // Change quote every 3 seconds
 
     return () => clearInterval(interval);
   }, [quotes.length]);
@@ -177,9 +177,9 @@ const RecHomePage = () => {
 
 
 
-      <div className='h-[100vh] w-full  flex flex-col justify-center items-center'>
+      <div className='h-[80vh] w-full  flex flex-col justify-center items-center'>
         <h1 className='uppercase text-xl font-bold'>for Job seekers</h1>
-        <h1 className='text-7xl mt-10 drop-shadow-xl' data-aos="zoom-in" data-aos-duration="1000">Our Seeking Process</h1>
+        <h1 className='text-7xl mt-10 drop-shadow-xl'>Our Seeking Process</h1>
         <p className='w-[50%] my-10'>Find jobs by checking job vacancy and recruitment websites, social media, professional and industry journals, and by going to career expos or promoting yourself at industry networking events.</p>
         <Button variant="contained" size="large" sx={{ borderRadius: '20px' }}>
           Discover Jobs</Button>

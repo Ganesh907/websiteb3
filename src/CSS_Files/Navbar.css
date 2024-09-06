@@ -1,16 +1,22 @@
 .header-navbar {
-        background: white;
-        height: 65px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        z-index: 999;
-        top: 0;
-        font-size: 1.2rem;
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-        width: 100%;
-      }
+  background: white;
+  height: 65px;
+  display: flex;
+  justify-content: center; /* Center items horizontally */
+  align-items: center;     /* Center items vertically */
+  position: absolute;      /* Make it absolutely positioned */
+  z-index: 999;
+  top: 0;
+  left: 50%;               /* Shift the navbar to the center horizontally */
+  transform: translateX(-50%); /* Adjust the shift to truly center it */
+  font-size: 1.2rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, 
+              rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  width: 70%;              /* Set a width for the navbar */
+  border-radius: 30px;
+  margin-top: 15px;         /* Add some space from the top */
+}
+
       
       .navbar-logo {
         color: #0060b5;
@@ -33,11 +39,12 @@
         grid-gap: 10px;
         list-style: none;
         text-align: center;
-        width: 70vw;
-        justify-content: end;
-        margin-right: 2rem;
+        /* width: 70vw; */
+        justify-content: start;
+        margin-left: 2rem;
         align-items: center;
         margin-top: auto;
+        /* background-color: red; */
       }
       
       .nav-item {

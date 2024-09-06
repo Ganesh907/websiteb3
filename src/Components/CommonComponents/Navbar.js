@@ -134,6 +134,11 @@ function Header() {
               Career
             </Link>
           </li>
+          <li className="nav-item">
+            <Link to="/blogs" className="nav-links" onClick={closeMobileMenu}>
+              Blogs
+            </Link>
+          </li>
         </ul>
       </nav>
       <style jsx>{`
@@ -144,7 +149,7 @@ function Header() {
         .nav-links:after {
           content: "";
           position: absolute;
-          width: 100%;
+          // width: 100%;
           transform: scaleX(0);
           height: 3px;
           bottom: 0;
@@ -160,7 +165,7 @@ function Header() {
         .header-navbar {
           transition: top 0.3s;
           position: fixed;
-          width: 100%;
+          // width 90%;
           top: 0;
           z-index: 10;
         }

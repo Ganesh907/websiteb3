@@ -13,6 +13,7 @@ import { TechServicesPage } from "./Pages/Technology/TechServicesPage";
 import LandingPage from "./Pages/LandingPage";
 import { useEffect, useState } from "react";
 import KeyboardDoubleArrowUpIcon from '@mui/icons-material/KeyboardDoubleArrowUp';
+import { Blogs } from "./Pages/Blogs";
 
 function App() {
   const [isVisible, setIsVisible] = useState(false);
@@ -60,6 +61,7 @@ function App() {
           <Route path="/contactus" element={<ContactUsPage />} />
           <Route path="/aboutus" element={<AboutUsPage />} />
           <Route path="/career" element={<CareerPage />} />
+          <Route path="/blogs" element={<Blogs />} />
 
         </Routes>
         <button

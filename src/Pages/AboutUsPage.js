@@ -8,10 +8,11 @@ import AboutUs1 from "../Assets/Images/AboutUs1.jpg";
 import AboutUs2 from "../Assets/Images/AboutUs2.png";
 import AboutUs3 from "../Assets/Images/AboutUs3.png";
 import AboutUs4 from "../Assets/Images/AboutUs4.jpg";
+import ITConsulting from "../Assets/Images/ITconsulting.jpg";
 
 
-import mission from "../Assets/Images/mission.png";
-import vision from "../Assets/Images/vision.png";
+import mission from "../Assets/Images/mission.gif";
+import vision from "../Assets/Images/vision.gif";
 
 import AboutUsBgVideo from '../Assets/Videos/AboutUsBgVideo.mp4'
 import Footer from "../Components/CommonComponents/Footer";
@@ -51,16 +52,16 @@ const AboutUsPage = () => {
           <source src={AboutUsBgVideo} type="video/mp4" />
           Your browser does not support the video tag.
         </video> */}
-        
+
         <video
-  autoPlay
-  loop
-  muted
-  className="absolute top-0 left-0 w-full h-full object-cover opacity-10"
->
-  <source src={AboutUsBgVideo} type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
+          autoPlay
+          loop
+          muted
+          className="absolute top-0 left-0 w-full h-full object-cover opacity-10"
+        >
+          <source src={AboutUsBgVideo} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
 
         <div className="flex gap-2 text-center z-40 ">
           <h1 className="sm:w-[80px] sm:h-[80px] bg-gray shadow-lg rounded-full sm:border-2 border-white animate-bounce" style={{ animationDuration: '2000ms', animationDelay: '100ms' }}>A</h1>
@@ -75,8 +76,170 @@ const AboutUsPage = () => {
       </div>
       <div>
 
+
+
+
+
+        {/* 
+<div className="h-[100vh] ">
+<h1 className="w-[40vw] hover:scale-110  hover:bg-green-300 border-2 p-2 ms-[5vw] bg-[#0060b5] text-white shadow-lg my-1 rounded-lg"> BitByBit Solutions is a growing and young TECHNOLOGY solutions
+              providing start up based out of commercial capital of India i.e.
+              Mumbai.</h1>
+            <h1 className="w-[45vw] hover:scale-110  hover:bg-green-300 border-2 p-2 ms-[20vw]  z-20 bg-white shadow-lg my-1 rounded-lg">  An India based technology services provider firm
+              specialized in providing IT Solutions to reputed clients in 
+              India and Indo-Pacific region. We started our operations in
+              early 2018.</h1>
+            <h1 className="w-[40vw] hover:scale-110  hover:bg-green-300 border-2 p-2  ms-[40vw] bg-[#0060b5] text-white  shadow-lg my-1 rounded-lg">  Our team offers high quality services which helps
+              provide the best outcomes in the services we deliver to our
+              clients.</h1>
+            <h1 className="w-[35vw] hover:scale-110 hover:bg-green-300 border-2 p-2  ms-[60vw] bg-white shadow-lg my-1 rounded-lg"> Team comprises of people who are young, passionate and
+              come Technology experience from a diverse set of business
+              sectors.</h1>
+              <h1 className="w-[50vw] hover:scale-110  hover:bg-green-300 border-2 p-2  ms-[40vw] bg-[#0060b5] text-white  shadow-lg my-1 rounded-lg"> Currently we are working with clients like IPS e
+              Services P L, Remedo Advisor, Viteos Capital (acquired by
+              ITG-Inter Trust Global), BRICSA Consulting, etc on their
+              requirements of Software Application Development.</h1>
+              <h1 className="w-[40vw] hover:scale-110  hover:bg-green-300 border-2 p-2  ms-[20vw] bg-white shadow-lg my-1 rounded-lg">  We have also
+              worked for Aditya Birla Insurance (Aditya Birla Capital), Citius
+              Tech, SS&C Globe-Op, Remedo Advisor, NumberTree Advisors, NSEiT,
+              Concept Securities and more for their Tech resource
+              requirements.</h1>
+              <h1 className="w-[60vw] hover:scale-110 hover:bg-green-300 border-2 p-2  ms-[5vw] bg-[#0060b5] text-white shadow-lg my-1 rounded-lg"> Usually our Tech resources work from our premises,
+              but in case if client requires on site tech delivery by making
+              our tech resources sit at their office(s), we provide that
+              service as well. We do this for our client VITEOS CAPITAL (now
+              ITG) & Remedo Advisor for their Bangalore, Chennai & Mumbai
+              locations.</h1>
+          
+</div> */}
+
+        <div className="flex flex-row-reverse">
+          <div className="w-[50vw] flex justify-start">
+          <div className="w-1 h-full my-2  bg-gray-300 "></div>
+          <div className="p-5 w-[70%] flex flex-col justify-center items-center">
+            <h1 className="shadow-lg p-2 border-2 my-2 rounded-lg w-full text-start border-l-4 border-l-[#0060b5]">
+              BitByBit Solutions is a growing and young TECHNOLOGY solutions
+              providing start up based out of commercial capital of India i.e.
+              Mumbai.
+            </h1>
+            <h1 className=" shadow-lg p-2 border-2 my-2 rounded-lg w-full text-start border-l-4 border-l-[#0060b5]">
+              An India based technology services provider firm
+              specialized in providing IT Solutions to reputed clients in
+              India and Indo-Pacific region. We started our operations in
+              early 2018.
+            </h1>
+            <h1 className=" shadow-lg p-2 border-2 my-2 rounded-lg w-full text-start border-l-4 border-l-[#0060b5]">
+              Our team offers high quality services which helps
+              provide the best outcomes in the services we deliver to our
+              clients.
+            </h1>
+            <h1 className="shadow-lg p-2 border-2 my-2 border-l-4 border-l-[#0060b5] rounded-lg w-full text-start">
+              Team comprises of people who are young, passionate and
+              come Technology experience from a diverse set of business
+              sectors.
+            </h1>
+
+          </div>
+        
+          </div>
+          <div className="w-[50%] flex flex-col justify-center items-center">
+
+            <img src={ITConsulting} className="h-64 w-64"/>
+          <h1 className="text-xl font-bold"> XYZ</h1>
+          <h1>Founder & CEO</h1>
+          </div>
+         
+
+        </div>
+
+        {/* <div className=" flex justify-end">
+          <div className="w-[50vw] p-5">
+            <h1 className="bg-[#0060b5] text-white shadow-lg p-2 border-2 my-1 rounded-lg w-full text-start">
+              Currently we are working with clients like IPS e
+              Services P L, Remedo Advisor, Viteos Capital (acquired by
+              ITG-Inter Trust Global), BRICSA Consulting, etc on their
+              requirements of Software Application Development.
+            </h1>
+            <h1 className="shadow-lg p-2 border-2 my-1 rounded-lg w-full text-start">
+              We have also
+              worked for Aditya Birla Insurance (Aditya Birla Capital), Citius
+              Tech, SS&C Globe-Op, Remedo Advisor, NumberTree Advisors, NSEiT,
+              Concept Securities and more for their Tech resource
+              requirements.
+            </h1>
+            <h1 className="bg-[#0060b5] text-white shadow-lg p-2 border-2 my-1 rounded-lg w-full text-start">
+              Usually our Tech resources work from our premises,
+              but in case if client requires on site tech delivery by making
+              our tech resources sit at their office(s), we provide that
+              service as well. We do this for our client VITEOS CAPITAL (now
+              ITG) & Remedo Advisor for their Bangalore, Chennai & Mumbai
+              locations.
+            </h1>
+          </div>
+        </div> */}
+
+
         <div className="grid md:grid-cols-2 h-auto w-100vw]">
-          <ul className=" h-[50vh] flex flex-col justify-around p-10  list-disc" >
+          
+          {/* <div className="md:h-[60vh] w-full flex justify-center items-center md:p-10 p-5 break-words" data-aos="fade-left" data-aos-duration="700">
+            <div className="relative h-full  w-full md:w-[80%] md:m-20 m-10 group p-4  rounded-lg  ">
+              <div className="h-1/2 w-full  group-hover:h-0 group-hover:opacity-0 transition-all duration-500 ease-in-out"
+                style={{
+                  backgroundSize: '30%',
+                  backgroundRepeat: 'no-repeat',
+                  backgroundPosition: 'center',
+                  backgroundImage: `url(${mission})`
+                }}>
+              </div>
+              <div class="w-full overflow-hidden   p-2 shadow-2xl text-black border-2 border-black z-10 rounded-lg transition-all duration-500 ease-in-out flex flex-col justify-between">
+              <h1 className="text-center text-2xl font-bold">
+                  OUR MISSION
+                </h1>
+                <h2 className="mt-4">
+                  {
+                    "We strive to provide a tailored, end to end services to our clients and establishing strong partnerships to ensure we understand each others goals and deadlines, without compromising our professional and ethical standards."
+                  }
+                </h2>
+               
+              </div>
+            </div>
+
+          </div> */}
+
+          <div className="md:h-[50vh] w-full flex flex-col justify-center items-center  ">
+            <div className="flex flex-col justify-between items-center  w-[75%] p-5"> 
+            <img src={mission} className="h-32 w-32 bg-red-200"/>
+            <div>
+              <h1 className="text-center text-2xl font-bold">
+                  OUR MISSION
+                </h1>
+                <h2 className="mt-4 border-2 border-[#0060b5] rounded-lg p-3">
+                  {
+                    "We strive to provide a tailored, end to end services to our clients and establishing strong partnerships to ensure we understand each others goals and deadlines, without compromising our professional and ethical standards."
+                  }
+                </h2>
+                </div>
+              </div>
+          </div>
+
+
+          <div className="md:h-[50vh] w-full flex flex-col justify-center items-center  ">
+            <div className="flex flex-col justify-between items-center  w-[70%] p-5"> 
+            <img src={vision} className="h-32 w-32 bg-red-200"/>
+            <div>
+              <h1 className="text-center text-2xl font-bold">
+                  OUR VISION
+                </h1>
+                <h2 className="mt-4 border-2 border-[#0060b5] rounded-lg p-3">
+                {
+                    "To build trust by establishing a winning value chain system based on the ever changing surroundings, with the utmost focus on transforming lives and providing solutions."
+                  }
+                </h2>
+                </div>
+              </div>
+          </div>
+
+          {/* <ul className=" h-[50vh] flex flex-col justify-around p-10  list-disc" >
             <li> BitByBit Solutions is a growing and young TECHNOLOGY solutions
               providing start up based out of commercial capital of India i.e.
               Mumbai.</li>
@@ -90,32 +253,10 @@ const AboutUsPage = () => {
             <li> Team comprises of people who are young, passionate and
               come Technology experience from a diverse set of business
               sectors.</li>
-          </ul>
+          </ul> */}
 
-          <div className="md:h-[60vh] w-full flex justify-center items-center md:p-10 p-5 break-words" data-aos="fade-left" data-aos-duration="700">
-            <div className="relative h-full  w-full md:w-[80%] md:m-20 m-10 bg-white p-4 border-2 rounded-lg border-[#0060b5] shadow-2xl group">
-              <div className="h-1/2 w-full  group-hover:h-0 group-hover:opacity-0 transition-all duration-500 ease-in-out"
-                style={{
-                  backgroundSize: '50%',
-                  backgroundRepeat: 'no-repeat',
-                  backgroundPosition: 'center',
-                  backgroundImage: `url(${mission})`
-                }}>
-              </div>
-              <div class="h-1/2 w-full overflow-hidden bg-[#0060b5] p-2 shadow-2xl text-white rounded-lg  group-hover:h-full transition-all duration-500 ease-in-out flex flex-col justify-between">
-                <h2 className="mb-20">
-                  {
-                    "We strive to provide a tailored, end to end services to our clients and establishing strong partnerships to ensure we understand each others goals and deadlines, without compromising our professional and ethical standards."
-                  }
-                </h2>
-                <h1 className="text-center text-2xl font-bold">
-                  OUR MISSION
-                </h1>
-              </div>
-            </div>
 
-          </div>
-          <div className=" md:h-[60vh] flex justify-center items-center md:p-10 p-5" data-aos="fade-right" data-aos-duration="700">
+          {/* <div className=" md:h-[50vh] flex justify-center items-center md:p-10 p-5" data-aos="fade-right" data-aos-duration="700">
             <div className="relative h-full w-[80%] md:m-20 m-10  p-4 border-2 rounded-lg border-[#0060b5] shadow-2xl group">
               <div className="h-1/2 w-full  group-hover:h-0 group-hover:opacity-0 transition-all duration-500 ease-in-out"
                 style={{
@@ -137,10 +278,10 @@ const AboutUsPage = () => {
               </div>
             </div>
 
-          </div>
+          </div> */}
 
 
-          <ul className=" h-[50vh] flex flex-col justify-around p-10  list-disc" >
+          {/* <ul className=" h-[50vh] flex flex-col justify-around p-10  list-disc" >
             <li>Currently we are working with clients like IPS e
               Services P L, Remedo Advisor, Viteos Capital (acquired by
               ITG-Inter Trust Global), BRICSA Consulting, etc on their
@@ -157,9 +298,10 @@ const AboutUsPage = () => {
               ITG) & Remedo Advisor for their Bangalore, Chennai & Mumbai
               locations.</li>
 
-          </ul>
+          </ul> */}
 
         </div>
+
 
         <div className=" mt-10">
           <h1
@@ -171,7 +313,7 @@ const AboutUsPage = () => {
           </h1>
           <div className="px-20 sm:px-0 sm:h-[80vh] flex justify-center sm:flex-row flex-col item-center p-10 gap-10">
 
-          <div className="sm:w-[20vw] border-2 border-transparent hover:border-gray-100 p-5 hover:translate-x-2 hover:shadow-lg rounded-lg" data-aos="zoom-in" data-aos-duration="700">
+            <div className="sm:w-[20vw] border-2 border-transparent hover:border-gray-100 p-5 hover:translate-x-2 hover:shadow-lg rounded-lg" data-aos="zoom-in" data-aos-duration="700">
 
               <div className="p-10 h-[50%] w-[80%] m-auto sm:w-auto">
                 <img src={AboutUs1} alt="" className="hover:shadow-xl" />
