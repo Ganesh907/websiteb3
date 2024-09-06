@@ -18,9 +18,9 @@ import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 export const TechHomePage = () => {
   const [expanded, setExpanded] = useState(false);
 
-  // Toggle function to manage the accordion's state
-  const handleChange = () => {
-    setExpanded(!expanded);
+  // Handle accordion expansion
+  const handleChange = (panel) => (event, isExpanded) => {
+    setExpanded(isExpanded ? panel : false);
   };
   return (
     <div className="techHomepageMain  ">
@@ -145,100 +145,150 @@ export const TechHomePage = () => {
         </div>
       </div>  */}
 {/*/////////////////////////////////////////////////////////// */}
-<div className=' w-[90%] h-auto '>
-<h1 className='mainh1 text-center md:text-start md:ml-[9%] text-[#0c0042] md:w-[52%] text-[40px] font-bold m-[5px] font-montserrat md:w-full md:mt-[40px]'> Industries we deal with</h1>
-<div className='grid grid-cols-2 gap-2 md:ml-20'>
-  <div>
-  <div className='m-7'>
-<Accordion className='p-2 bg-[#f9f9f9] border border-[#A9A9A9] border-spacing-4 hover:border-blue-600' >
-        <AccordionSummary
-         expandIcon={<ArrowDownwardIcon style={{ color: 'blue', fontWeight: 'bold', fontSize: '1.6rem', animation: 'bounce 1s infinite' }} />}
-          aria-controls="panel1-content"
-          // id="panel1-header"
-        
-        >
-          <div className="flex items-center justify-center gap-2">
-        <img src={bank} className="md:h-12 image" />
-        <div className="font-bold pt-1 text-lg">Banking, Financial Services and Insurance</div>
-      </div>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography className='md:pl-2'>
-          We have extensive experience in developing secure and efficient software solutions for the BFSI sector. Our services include financial transactions management, risk assessment systems,
-           customer relationship management, and regulatory compliance solutions.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-      </div>
-      <div className='mx-7'>
-      <Accordion className='p-2 bg-[#f9f9f9] border border-[#A9A9A9] hover:border-blue-600 border-spacing-4' >
-        <AccordionSummary
-          expandIcon={<ArrowDownwardIcon style={{ color: 'blue', fontWeight: 'bold', fontSize: '1.6rem', animation: 'bounce 1s infinite' }} />}
-          aria-controls="panel1-content"
-          // id="panel1-header"
-        
-        >
-          <div className="flex items-center justify-center gap-2">
-        <img src={hospitality} className="md:h-12 image" />
-        <div className="font-bold pt-1 text-lg">Hospitality</div>
-      </div>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-          Our hospitality software solutions include property management systems (PMS), booking and reservation systems, CRM software, and POS systems to enhance customer service and optimize operations. We use our industry expertise to provide tailored solutions and stay updated
-           on the latest trends and technologies to keep our clients ahead of the curve.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-      </div>
-      </div>
+ <div className='w-[90%] h-auto' >
+      <h1 className='mainh1 text-center md:text-start md:ml-[9%] text-[#0c0042] md:w-[52%] text-[40px] font-bold m-[5px] font-montserrat md:w-full md:mt-[40px]'>
+        Industries we deal with
+      </h1>
+      <div className='grid grid-cols-2 gap-2 md:ml-20 ' >
+        <div>
+          <div className='m-7'>
+            <Accordion
+              expanded={expanded === 'panel1'}
+              onChange={handleChange('panel1')}
+              className='p-2 bg-[#f9f9f9] border border-[#A9A9A9] border-spacing-4 hover:border-blue-600'
+            >
+              <AccordionSummary
+                expandIcon={
+                  <ArrowDownwardIcon
+                    style={{
+                      color: 'blue',
+                      fontWeight: 'bold',
+                      fontSize: '1.6rem',
+                      animation: 'bounce 1s infinite',
+                    }}
+                  />
+                }
+                aria-controls='panel1-content'
+              >
+                <div className='flex items-center justify-center gap-2'>
+                  <img src={bank} className='md:h-12 image' alt='Banking' />
+                  <div className='font-bold pt-1 text-lg'>
+                    Banking, Financial Services and Insurance
+                  </div>
+                </div>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Typography className='md:pl-2'>
+                We have extensive experience in developing secure and efficient software solutions for the BFSI sector. Our services include financial transactions management, risk assessment systems, customer relationship management,
+                 and regulatory compliance solutions.
+                </Typography>
+              </AccordionDetails>
+            </Accordion>
+          </div>
 
-      <div >
-      <div className='m-7'>
-      <Accordion className='p-2 bg-[#f9f9f9] border border-[#A9A9A9] hover:border-blue-600 border-spacing-4' >
-        <AccordionSummary
-           expandIcon={<ArrowDownwardIcon style={{ color: 'blue', fontWeight: 'bold', fontSize: '1.6rem', animation: 'bounce 1s infinite' }} />}
-          aria-controls="panel1-content"
-          // id="panel1-header"
-        
-        >
-          <div className="flex items-center justify-center gap-2">
-        <img src={ecom} className="md:h-12 image" />
-        <div className="font-bold pt-1 text-lg">E-Gov & E-Com</div>
-      </div>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-          We offer comprehensive e-Governance and e-Commerce solutions, including ticket booking, recharges, money transfers, Aadhaar enrolments, Amazon orders, insurance purchases, utility bill payments, and more, with features like shopping cart integration, payment gateways, 
-          customer management, and data analytics for seamless online transactions.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-      </div>
-      <div className='mx-7'>
-      <Accordion className='p-2 bg-[#f9f9f9] border border-[#A9A9A9] hover:border-blue-600 border-spacing-4' >
-        <AccordionSummary
-           expandIcon={<ArrowDownwardIcon style={{ color: 'blue', fontWeight: 'bold', fontSize: '1.6rem', animation: 'bounce 1s infinite' }} />}
-          aria-controls="panel1-content"
-          // id="panel1-header"
-        
-        >
-          <div className="flex items-center justify-center gap-2">
-        <img src={health} className="md:h-12 image" />
-        <div className="font-bold pt-1 text-lg">HealthCare</div>
-      </div>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-          We offer a wide range of healthcare IT solutions including electronic health records (EHR) systems, appointment scheduling software, telemedicine platforms, and healthcare data analytics. Our solutions 
-          are designed to improve patient care and streamline healthcare operations.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
+          <div className='mx-7'>
+            <Accordion
+              expanded={expanded === 'panel2'}
+              onChange={handleChange('panel2')}
+              className='p-2 bg-[#f9f9f9] border border-[#A9A9A9] hover:border-blue-600 border-spacing-4'
+            >
+              <AccordionSummary
+                expandIcon={
+                  <ArrowDownwardIcon
+                    style={{
+                      color: 'blue',
+                      fontWeight: 'bold',
+                      fontSize: '1.6rem',
+                      animation: 'bounce 1s infinite',
+                    }}
+                  />
+                }
+                aria-controls='panel2-content'
+              >
+                <div className='flex items-center justify-center gap-2'>
+                  <img src={hospitality} className='md:h-12 image' alt='Hospitality' />
+                  <div className='font-bold pt-1 text-lg'>Hospitality</div>
+                </div>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Typography>
+                Our hospitality software solutions include property management systems (PMS), booking and reservation systems, CRM software, and POS systems to enhance customer service and optimize operations. We use our industry expertise to provide tailored 
+                solutions and stay updated on the latest trends and technologies to keep our clients ahead of the curve.
+                </Typography>
+              </AccordionDetails>
+            </Accordion>
+          </div>
+        </div>
+
+        <div>
+          <div className='m-7'>
+            <Accordion
+              expanded={expanded === 'panel3'}
+              onChange={handleChange('panel3')}
+              className='p-2 bg-[#f9f9f9] border border-[#A9A9A9] hover:border-blue-600 border-spacing-4'
+            >
+              <AccordionSummary
+                expandIcon={
+                  <ArrowDownwardIcon
+                    style={{
+                      color: 'blue',
+                      fontWeight: 'bold',
+                      fontSize: '1.6rem',
+                      animation: 'bounce 1s infinite',
+                    }}
+                  />
+                }
+                aria-controls='panel3-content'
+              >
+                <div className='flex items-center justify-center gap-2'>
+                  <img src={ecom} className='md:h-12 image' alt='E-Gov & E-Com' />
+                  <div className='font-bold pt-1 text-lg'>E-Gov & E-Com</div>
+                </div>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Typography>
+                We offer comprehensive e-Governance and e-Commerce solutions, including ticket booking, recharges, money transfers, Aadhaar enrolments, Amazon orders, insurance purchases, utility bill payments, and more, with features like shopping cart integration, payment gateways, customer management, 
+                and data analytics for seamless online transactions.
+                </Typography>
+              </AccordionDetails>
+            </Accordion>
+          </div>
+
+          <div className='mx-7'>
+            <Accordion
+              expanded={expanded === 'panel4'}
+              onChange={handleChange('panel4')}
+              className='p-2 bg-[#f9f9f9] border border-[#A9A9A9] hover:border-blue-600 border-spacing-4'
+            >
+              <AccordionSummary
+                expandIcon={
+                  <ArrowDownwardIcon
+                    style={{
+                      color: 'blue',
+                      fontWeight: 'bold',
+                      fontSize: '1.6rem',
+                      animation: 'bounce 1s infinite',
+                    }}
+                  />
+                }
+                aria-controls='panel4-content'
+              >
+                <div className='flex items-center justify-center gap-2'>
+                  <img src={health} className='md:h-12 image' alt='HealthCare' />
+                  <div className='font-bold pt-1 text-lg'>HealthCare</div>
+                </div>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Typography>
+                We offer a wide range of healthcare IT solutions including electronic health records (EHR) systems, appointment scheduling software, telemedicine platforms, and healthcare data analytics. Our solutions are designed 
+                to improve patient care and streamline healthcare operations.
+                </Typography>
+              </AccordionDetails>
+            </Accordion>
+          </div>
+        </div>
       </div>
     </div>
-    </div>
-</div>
 
 
 
