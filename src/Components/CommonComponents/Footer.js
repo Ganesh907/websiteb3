@@ -200,20 +200,44 @@ const Footer = () => {
             <p className="mb-4">
               912 | 1st Floor | Building No 9 | Solitaire Corporate Park | Andheri Kurla Road | Chakala | Andheri (East) | Mumbai - 400 093
             </p>
-            <div className="flex space-x-4">
-              <a href="/facebook" className="text-blue-600 hover:text-blue-400 transition-colors duration-300">
-                <FacebookIcon />
-              </a>
-              <a href="/instagram" className="text-pink-500 hover:text-pink-400 transition-colors duration-300">
-                <InstagramIcon />
-              </a>
-              <a href="/linkedin" className="text-blue-700 hover:text-blue-500 transition-colors duration-300">
-                <LinkedInIcon />
-              </a>
-              <a href="/twitter" className="text-blue-400 hover:text-blue-300 transition-colors duration-300">
-                <TwitterIcon />
-              </a>
-            </div>
+            <div className="flex space-x-4 items-end mt-8">
+     <div className="relative group">
+    <a href="/facebook" className="text-blue-600 hover:text-blue-400 transition-colors duration-300">
+      <FacebookIcon />
+    </a>
+    <span className="absolute bottom-full mb-0 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 text-sm text-white transition-opacity duration-300">
+      Facebook
+    </span>
+  </div>
+
+  <div className="relative group">
+    <a href="/instagram" className="text-pink-500 hover:text-pink-400 transition-colors duration-300">
+      <InstagramIcon />
+    </a>
+    <span className="absolute bottom-full mb-0 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 text-sm text-white transition-opacity duration-300">
+      Instagram
+    </span>
+  </div>
+
+  <div className="relative group">
+    <a href="/linkedin" className="text-blue-700 hover:text-blue-500 transition-colors duration-300">
+      <LinkedInIcon />
+    </a>
+    <span className="absolute bottom-full mb-0 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 text-sm text-white transition-opacity duration-300">
+      LinkedIn
+    </span>
+  </div>
+
+  <div className="relative group">
+    <a href="/twitter" className="text-blue-400 hover:text-blue-300 transition-colors duration-300">
+      <TwitterIcon />
+    </a>
+    <span className="absolute bottom-full mb-0 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 text-sm text-white-700 transition-opacity duration-300">
+      Twitter
+    </span>
+  </div>
+</div>
+
           </div>
         </div>
         <div className="text-center text-sm py-4 bg-gray-800">

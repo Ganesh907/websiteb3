@@ -50,3 +50,4 @@ const TypingText = ({word}) => {
 };
 
 export default TypingText;
+
