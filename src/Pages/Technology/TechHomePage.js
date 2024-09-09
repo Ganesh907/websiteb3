@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import letstalk from "../../Assets/Images/letstakeicon1.png"
 import technologyhomeimg from "../../Assets/Images/technologyhomeimg.png"
-import highquality from "../../Assets/Images/AboutUs1.jpg"
+import highquality from "../../Assets/Images/highquality.jpg"
 import onbudget from "../../Assets/Images/on budget.jpg"
 import SplitCard from './SplitCard'
 import bank from "../../Assets/Images/bankingicon.png";
@@ -14,6 +14,7 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import Footer from '../../Components/CommonComponents/Footer';
 
 export const TechHomePage = () => {
   const [expanded, setExpanded] = useState(false);
@@ -289,64 +290,62 @@ export const TechHomePage = () => {
         </div>
       </div>
     </div>
+{/* .......................................................... */}
+<div className='w-[90%] h-auto  mb-20'>
+<h1 className='mb-3 text-center md:text-start md:ml-[9%] text-[#0c0042]  text-[40px] font-bold m-[5px] font-montserrat md:w-full md:mt-[40px]'>
+        Why do our clients value us?
+</h1>
+<div className='flex justify-evenly ml-6  '>
+<div className='w-[50%] space-y-4 '>
+  <h1 className='font-extrabold text-2xl'>High-Quality Products</h1>
+  <p className='leading-8'>
+    Clients value us for our dedication to exceptional quality, superior craftsmanship, and innovative technologies that make our products stand out. Rigorous quality control
+    ensures reliability and long-term value in every product.
+  </p>
+  <ul className='list-disc pl-5 space-y-2'>
+    <li>Clients receive the same high-quality experience every time.</li>
+    <li>Tailored solutions meet unique client needs.</li>
+    <li>We prioritize eco-friendly materials and processes.</li>
+    <li>Excellent customer service enhances the overall experience.</li>
+  </ul>
+</div>
+
+<div>
+<img src={highquality} className='h-[50vh]'/>
+</div>
+</div>
+
+
+
+<div className='flex justify-evenly ml-6  '>
+<div>
+<img src={highquality} className='h-[50vh]'/>
+</div>
+<div className='w-[50%] space-y-4 '>
+  <h1 className='font-extrabold text-2xl'>On Budget, On-Time</h1>
+  <p className='leading-8'>
+    Clients value us for our dedication to exceptional quality, superior craftsmanship, and innovative technologies that make our products stand out. Rigorous quality control
+    ensures reliability and long-term value in every product.
+  </p>
+  <ul className='list-disc pl-5 space-y-2'>
+    <li>Clients receive the same high-quality experience every time.</li>
+    <li>Tailored solutions meet unique client needs.</li>
+    <li>We prioritize eco-friendly materials and processes.</li>
+    <li>Excellent customer service enhances the overall experience.</li>
+  </ul>
+</div>
+
+
+</div>
+</div>
 
 
 
 
-
-      <>
-        {/* <div className="g1 md:flex h-[1040px] md:w-full min-h-screen  w-full md:h-[100vh]   md:pt-48 pt-10 md:pb-[30%]  pb-20 md:pl-[20px]  md:relative    my-background md:bg-cover md:bg-right-bottom md:bg-no-repeat bg-cover bg-right-bottom bg-no-repeat bg-white bg-[calc(0px)]" style={{ backgroundImage: `url(${backgroundImage})` }}  > */}
-
-
-
-
-          <div className="md:w-[30%] w-full md:h-96 h-56 md:flex md:items-center  md:justify-center">
-
-            <h4 className="md:w-[230px] titlehead md:text-[40px] md:font-bold text-[40px] font-[10] w-[307px] md:text-center text-center md:mt-10  md:mb-20 md:ml-10 ml-16 md:pr-0 pr-2">
-              Why do our <span className="text-[#0000ff] ">clients</span> value us?
-            </h4>
-
-          </div>
-
-
-          <div className="  flex flex-col justify-center items-center  md:w-[50%] md:h-96 md:gap-16 gap-2 md:mt-10  " >
-
-            <div className="md:flex md:w-[100%] md:h-[50%] md:gap-14  md:justify-center mb-4">
-
-
-              <div className=" md:w-[35%] h-[180px] w-[270px] md:h-[110%] mb-4  bg-blue-500    boxShadow shadow-[10px_10px_0px_rgb(0,0,0)] transition-all duration-300 ease-in-out hover:shadow-[20px_20px_0px_rgb(0,0,0)] shadow-[10px_10px_0px_rgb(0,0,0)] rounded-2xl">
-                <h1 className="text-center md:my-2 text-white md:font-semibold    title33 md:text-[20px] font-[10px] text-[5px] md:px-1 p-2">High-quality products </h1>
-                <div className="flex h-auto   md:gap-5  md:pl-2 text-white md:leading-6 md:mt-5 mt-2 pl-2 text-center leading-normal ">
-                  <p className="md:pt-0 pt-6">We create professional, bug-free, and optimized apps using modern technology for long-term use.</p>
-
-                </div>
-              </div>
-              <div className=" h-[180px] w-[270px] md:w-[35%] md:h-[110%] boxShadow shadow-[10px_10px_0px_rgb(0,0,0)]  transition-all duration-300 ease-in-out hover:shadow-[20px_20px_0px_rgb(0,0,0)] bg-gray-200 rounded-2xl shadow-[10px_10px_0px_rgb(0,0,0)]">
-                <img src={highquality} className="md:h-full rounded-2xl" />
-              </div>
-            </div>
-
-            <div className="md:flex md:w-[100%] md:h-[50%] h-[180px] w-[270px] md:mb-40 md:justify-start md:ml-12 md:gap-14  ">
-              <div className=" md:w-[35%] md:h-[110%] bg-gray-200 rounded-2xl boxShadow shadow-[10px_10px_0px_rgb(0,0,0)]  transition-all duration-300 ease-in-out hover:shadow-[20px_20px_0px_rgb(0,0,0)]">
-                <img src={onbudget} className="md:h-full rounded-2xl" />
-              </div>
-              <div className=" md:w-[35%]  md:h-[110%] h-[180px] w-[270px] md:mt-1 mt-6  bg-blue-500 rounded-2xl boxShadow shadow-[10px_10px_0px_rgb(0,0,0)]  transition-all duration-300 ease-in-out hover:shadow-[20px_20px_0px_rgb(0,0,0)] ">
-                <h1 className="text-center md:m-2 text-white title33 md:text-[20px] font-[10px] text-[5px] md:font-semibold md:pt-0 pt-3 "> On budget, on-time</h1>
-                <div className="md:flex md:h-auto md:gap-5  text-white md:leading-6 md:mt-5   leading-normal md:justify-center md:items-center   flex justify-center mt-4 h-full">
-                  <p className="md:p-0  p-4  md:ml-1 md:text-center">Consistently delivering projects on time, within budget, and as per specifications.</p>
-
-
-
-                </div>
-              </div>
-            </div>
-          </div>
-        {/* </div> */}
-      </>
 
 
       <div className=" tech-footer">
-        {/* <Footer /> */}
+        <Footer/>
       </div>
 
     </div>
