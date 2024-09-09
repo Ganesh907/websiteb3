@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import letstalk from "../../Assets/Images/letstakeicon1.png"
 import technologyhomeimg from "../../Assets/Images/technologyhomeimg.png"
 import highquality from "../../Assets/Images/highquality.jpg"
-import onbudget from "../../Assets/Images/on budget.jpg"
+import onbudget from "../../Assets/Images/onbudget.png"
 import SplitCard from './SplitCard'
 import bank from "../../Assets/Images/bankingicon.png";
 import ecom from "../../Assets/Images/egovandecomicon.png";
@@ -147,10 +147,10 @@ export const TechHomePage = () => {
       </div>  */}
 {/*/////////////////////////////////////////////////////////// */}
  <div className='w-[90%] h-auto' >
-      <h1 className='mainh1 text-center md:text-start md:ml-[9%] text-[#0c0042] md:w-[52%] text-[40px] font-bold m-[5px] font-montserrat md:w-full md:mt-[40px]'>
+      <h1 className='mainh1 text-center md:text-start md:ml-[9%] text-[#0c0042]  text-[40px] font-bold m-[5px] font-montserrat md:w-full md:mt-[40px] w-[110%]'>
         Industries we deal with
       </h1>
-      <div className='grid grid-cols-2 gap-2 md:ml-20 ' >
+      <div className='grid grid-cols-1 place-content-center md:grid-cols-2 md:gap-2 md:ml-20 md:w-auto w-[110%]' >
         <div>
           <div className='m-7'>
             <Accordion
@@ -291,18 +291,18 @@ export const TechHomePage = () => {
       </div>
     </div>
 {/* .......................................................... */}
-<div className='w-[90%] h-auto  mb-20'>
-<h1 className='mb-3 text-center md:text-start md:ml-[9%] text-[#0c0042]  text-[40px] font-bold m-[5px] font-montserrat md:w-full md:mt-[40px]'>
+<div className='w-[90%] h-auto  md:mb-20 mb-5'>
+<h1 className='mb-3  text-center md:text-start md:ml-[9%] text-[#0c0042]  text-[40px] font-bold m-[5px] font-montserrat md:w-full w-[110%]  md:mt-[40px] mt-5'>
         Why do our clients value us?
 </h1>
-<div className='flex justify-evenly ml-6  '>
-<div className='w-[50%] space-y-4 '>
-  <h1 className='font-extrabold text-2xl'>High-Quality Products</h1>
-  <p className='leading-8'>
+<div className='md:flex md:flex-row md:justify-evenly md:ml-6  flex flex-col-reverse '>
+<div className='md:w-[50%]  space-y-4 '>
+  <h1 className='font-extrabold text-2xl bg-red-3 md:text-start text-center'>High-Quality Products</h1>
+  <p className='leading-8 md:ml-0 ml-4'>
     Clients value us for our dedication to exceptional quality, superior craftsmanship, and innovative technologies that make our products stand out. Rigorous quality control
     ensures reliability and long-term value in every product.
   </p>
-  <ul className='list-disc pl-5 space-y-2'>
+  <ul className='list-disc pl-5 space-y-2 md:ml-0 ml-4'>
     <li>Clients receive the same high-quality experience every time.</li>
     <li>Tailored solutions meet unique client needs.</li>
     <li>We prioritize eco-friendly materials and processes.</li>
@@ -317,21 +317,21 @@ export const TechHomePage = () => {
 
 
 
-<div className='flex justify-evenly ml-6  '>
+<div className='md:flex md:justify-around md:gap-24 md:ml-6 md:mt-8'>
 <div>
-<img src={highquality} className='h-[50vh]'/>
+<img src={onbudget} className='h-[50vh] ml-6'/>
 </div>
-<div className='w-[50%] space-y-4 '>
-  <h1 className='font-extrabold text-2xl'>On Budget, On-Time</h1>
-  <p className='leading-8'>
-    Clients value us for our dedication to exceptional quality, superior craftsmanship, and innovative technologies that make our products stand out. Rigorous quality control
-    ensures reliability and long-term value in every product.
+<div className='md:w-[50%]  space-y-4 '>
+  <h1 className='font-extrabold text-2xl md:text-start text-center'>On Budget, On-Time</h1>
+  <p className='leading-8 md:ml-0 ml-4'>
+  Our commitment to on-time and budget-conscious project delivery sets us apart. We meet agreed specifications through clear planning, efficient management, and proactive
+   communication, ensuring reliability and peace of mind for our clients.
   </p>
-  <ul className='list-disc pl-5 space-y-2'>
-    <li>Clients receive the same high-quality experience every time.</li>
-    <li>Tailored solutions meet unique client needs.</li>
-    <li>We prioritize eco-friendly materials and processes.</li>
-    <li>Excellent customer service enhances the overall experience.</li>
+  <ul className='list-disc pl-5 space-y-2 md:ml-0 ml-4'>
+    <li>We meet deadlines consistently.</li>
+    <li>Projects stay within financial limits.</li>
+    <li>Effective planning reduces risks.</li>
+    <li>Keeps clients updated at every stage.</li>
   </ul>
 </div>
 

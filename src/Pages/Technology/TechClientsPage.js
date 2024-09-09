@@ -6,7 +6,7 @@ import technology from "../../Assets/Images/technology.png";
 import hamarakendra from "../../Assets/Images/hamarakendra.png";
 import ips from "../../Assets/Images/IPS_e_Services.jpg";
 import suntrap from "../../Assets/Images/suntrap.83df4c98.png" ;
- import download from "../../Assets/Images/download(2)";
+//  import download from "../../Assets/Images/download(2)";
 import credentials from "../../Assets/Images/certificate.png";
 import price from "../../Assets/Images/tag.png";
 import careers1 from "../../Assets/Images/careers1.png";
@@ -99,7 +99,7 @@ export const TechClientsPage = () => {
 
    <img src={suntrap} className=" h-40 w-30 ml-6 shadow-2xl rounded-sm" />
 
-   <img src={download} className=" h-40 w-30 ml-6 shadow-2xl rounded-sm" />
+   {/* <img src={download} className=" h-40 w-30 ml-6 shadow-2xl rounded-sm" /> */}
 
    
 
