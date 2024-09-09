@@ -77,7 +77,7 @@ export const ContactUsPage = () => {
 
                         </div>
 
-                        <div className=' bg-white w-[100vw] h-auto md:h-[100vh] flex justify-center  flex-col align-middle'>
+                        <div className=' w-[100vw] h-auto md:h-[100vh] flex justify-center  flex-col align-middle'>
                                 <div className='w-[90%] rounded-lg p-3 lg:w-[80%] m-auto flex flex-col lg:flex-row'>
                                 <div className='relative z-10 w-full lg:w-[51vw] h-full  md:mb-0 text-[#0060b5] flex justify-center items-center' data-aos="zoom-in" data-aos-duration="2000">
                                         <div className='h-full md:w-[20%] md:flex justify-center items-center  hidden '>
@@ -158,7 +158,7 @@ export const ContactUsPage = () => {
                                 </div>
 
                         </div>
-                        <div className='flex justify-center items-center h-[100vh] bg-[#0060b5]'>
+                        {/* <div className='flex justify-center items-center h-[100vh] bg-[#0060b5]'>
                                 <div className='bg-white w-[80%] shadow-2xl h-auto rounded-lg p-3 flex flex-col lg:flex-row'>
 
                                         <div className='lg:w-[38%] p-3' data-aos="fade-up" data-aos-duration="2000">
@@ -193,11 +193,12 @@ export const ContactUsPage = () => {
                                         </div>
                                         <div className='lg:w-[63%] h-[100%] p-2'>
 
-                                                {/* <Maps /> */}
+                                                <Maps />
 
                                         </div>
                                 </div>
-                        </div>
+                        </div> */}
+                        
                         <Footer />
                 </div>
         )

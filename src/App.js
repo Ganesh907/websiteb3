@@ -14,6 +14,7 @@ import LandingPage from "./Pages/LandingPage";
 import { useEffect, useState } from "react";
 import KeyboardDoubleArrowUpIcon from '@mui/icons-material/KeyboardDoubleArrowUp';
 import { Blogs } from "./Pages/Blogs";
+import { ColorTheme } from "./Components/ColorTheme";
 
 function App() {
   const [isVisible, setIsVisible] = useState(false);
@@ -41,6 +42,8 @@ function App() {
       window.removeEventListener("scroll", toggleVisibility);
     };
   }, []);
+
+
   return (
     <Router>
       <div>
@@ -60,7 +63,7 @@ function App() {
           <Route path="/recruitment-clients" element={<RecClientsPage />} /> 
           <Route path="/contactus" element={<ContactUsPage />} />
           <Route path="/aboutus" element={<AboutUsPage />} />
-          <Route path="/career" element={<CareerPage />} />
+          <Route path="/careers" element={<CareerPage />} />
           <Route path="/blogs" element={<Blogs />} />
 
         </Routes>
@@ -76,6 +79,7 @@ function App() {
       />
     </button>
       </div>
+      <ColorTheme/>
     </Router>
   );
 }

@@ -20,6 +20,7 @@ import { Padding } from '@mui/icons-material';
 
 import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
 import TypingText from '../../Components/CommonComponents/TypingText';
+import Footer from '../../Components/CommonComponents/Footer';
 
 // var target = $('canvas');
 // var targetHeight = target.outerHeight();
@@ -92,7 +93,7 @@ const RecHomePage = () => {
               <h1 className="text-[#0060b5] text-5xl font-bold  mr-2 ">
                 Find Your Job
               </h1>
-              <SearchIcon className="text-black bg-white scale-75" sx={{ fontSize: '60px' }} />
+              <SearchIcon className="text-white scale-75" sx={{ fontSize: '60px' }} />
             </div>
 
 
@@ -181,26 +182,26 @@ const RecHomePage = () => {
         <h1 className='uppercase text-xl font-bold'>for Job seekers</h1>
         <h1 className='text-7xl mt-10 drop-shadow-xl'>Our Seeking Process</h1>
         <p className='w-[50%] my-10'>Find jobs by checking job vacancy and recruitment websites, social media, professional and industry journals, and by going to career expos or promoting yourself at industry networking events.</p>
-        <Button variant="contained" size="large" sx={{ borderRadius: '20px' }}>
+        <Button variant="contained" size="large"  sx={{ borderRadius: '20px',backgroundColor:'green' }}>
           Discover Jobs</Button>
       </div>
 
 
-      <div className='bg-red-200 '>
+      {/* <div className='bg-red-200 flex'>
 
-        <div className="third-section">
-          <div className="row">
+        <div className=" flex bg-green-200 p-2">
+          <div className="">
             <h2>Related Services</h2>
-            <div className="icon-card__container small-12">
-              <div className="small-12 medium-4 columns icon-card icon-card--large">
-                <div className="card-content">
-                  <div className="icon-border-bottom">
+            <div className="">
+              <div className="">
+                <div className="">
+                  <div className="">
                     <img src={AboutUs4} alt="" className='h-36 w-36'></img>
-                    <div className="icon-card__description">
-                      <h4 className="icon-card__title icon-card__title--expanded">
+                    <div className="">
+                      <h4 className="">
                         Permanent Placement
                       </h4>
-                      <p className="small text-center">We help organisations hire expert full-time talent for middle,
+                      <p className="">We help organisations hire expert full-time talent for middle,
                         senior and top level positions across diverse sectors.
                       </p>
 
@@ -244,11 +245,57 @@ const RecHomePage = () => {
           </div>
         </div>
 
-      </div>
+      </div> */}
 
-      {/* 
+
+
+<div className='my-10  flex justify-around'
+>
+  
+  <div className="sm:w-[20vw] border-2 border-transparent border-gray-100 p-5 hover:translate-x-2 hover:shadow-lg rounded-lg" data-aos="zoom-in" data-aos-duration="700">
+
+<div className="p-10 h-[50%] w-[80%] m-auto sm:w-auto">
+  <img src={AboutUs4} alt="" className="hover:shadow-xl" />
+</div>
+<div className="h-[50%] ">
+  <h1 className="font-bold text-center my-2 text-xl hover:-translate-y-2 "> Permanent Placement</h1>
+  <p>  We help organisations hire expert full-time talent for middle,
+  senior and top level positions across diverse sectors.</p>
+
+</div>
+  </div>
+
+   <div className="sm:w-[20vw] border-2 border-transparent border-gray-100 p-5 hover:translate-x-2 hover:shadow-lg rounded-lg" data-aos="zoom-in" data-aos-duration="700">
+
+<div className="p-10 h-[50%] w-[80%] m-auto sm:w-auto">
+  <img src={AboutUs4} alt="" className="hover:shadow-xl" />
+</div>
+<div className="h-[50%] ">
+  <h1 className="font-bold text-center my-2 text-xl hover:-translate-y-2 "> Staffing Solutions</h1>
+  <p>  Building an agile and flexible workforce requires an easy and fast
+                        access to expert talent, available on short notice. We offer a pool of pre-screened
+                        talent, hired on our rolls</p>
+
+</div>
+  </div>
+  <div className="sm:w-[20vw] border-2 border-transparent border-gray-100 p-5 hover:translate-x-2 hover:shadow-lg rounded-lg" data-aos="zoom-in" data-aos-duration="700">
+
+<div className="p-10 h-[50%] w-[80%] m-auto sm:w-auto">
+  <img src={AboutUs4} alt="" className="hover:shadow-xl" />
+</div>
+<div className="h-[50%] ">
+  <h1 className="font-bold text-center my-2 text-xl hover:-translate-y-2 ">Contract to Hire</h1>
+  <p>  Our Temp-to-Hire services allow organisations the opportunity to
+                        evaluate a candidate over a period of time before on-boarding the candidate at the end of the
+                        contract period.</p>
+
+</div>
+  </div>
+</div>
+
+      
             <div className='recr-footer'>
-                <Footer /></div> */}
+                <Footer /></div>
     </div>
 
   );

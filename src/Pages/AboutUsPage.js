@@ -20,6 +20,20 @@ import Footer from "../Components/CommonComponents/Footer";
 
 const AboutUsPage = () => {
 
+  const [bottomRadius, setBottomRadius] = useState('0%');
+
+  useEffect(() => {
+          const handleScroll = () => {
+                  const scrollTop = window.scrollY;
+                  const maxScroll = 50; // Adjust this value for how quickly you want the border to round
+                  const radius = Math.min(scrollTop / maxScroll * 50, 50); // Cap at 50% for a smooth transition
+                  setBottomRadius(`${radius}%`);
+          };
+
+          window.addEventListener('scroll', handleScroll);
+          return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const [showFirstImage, setShowFirstImage] = useState(true);
 
 
@@ -41,8 +55,20 @@ const AboutUsPage = () => {
 
 
 
-      <div className="flex justify-end flex-col items-center  drop-shadow-2xl text-2xl sm:text-7xl h-[70vh]  bg-[#0060b5] font-bold text-white">
+      <div className="flex justify-end flex-col items-center  drop-shadow-2xl text-2xl sm:text-7xl h-[100vh]  bg-[#0060b5] font-bold text-white"
+        style={{
+          borderRadius: `0 0 ${bottomRadius} ${bottomRadius}`,
+  }}>
 
+<div
+          className="absolute top-0 -left-2 w-full h-full"
+          style={{
+            backgroundImage: 'linear-gradient(to right, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 80%)',
+            borderRadius: `0 0 ${bottomRadius} ${bottomRadius}`,
+            filter: 'blur(5px)',
+            pointerEvents: 'none',
+          }}
+        ></div>
         {/* <video
           autoPlay
           loop
@@ -58,6 +84,12 @@ const AboutUsPage = () => {
           loop
           muted
           className="absolute top-0 left-0 w-full h-full object-cover opacity-10"
+          style={{
+            borderRadius: `0 0 ${bottomRadius} ${bottomRadius}`,
+            // backgroundSize: 'cover',
+            // backgroundRepeat: 'no-repeat',
+            // backgroundPosition: 'center',
+    }}
         >
           <source src={AboutUsBgVideo} type="video/mp4" />
           Your browser does not support the video tag.
@@ -358,6 +390,15 @@ const AboutUsPage = () => {
 
           </div>
         </div>
+      </div>
+      <div className="h-[100vh]">
+      CORE VALUES
+ Intergrity
+ Client First
+ Trust 
+Respect
+ Accountability
+
       </div>
 
       <Footer />
