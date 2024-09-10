@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import RecServiceBackground from '../../Assets/Images/RecServiceBackground.jpg'
+// import intertrust from '../../Assets/Images/RecServiceBackground.jpg'
 import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
 
 export const RecServicesPage = () => {
@@ -26,8 +26,7 @@ export const RecServicesPage = () => {
     backgroundImage: `
       
       linear-gradient(rgba(0, 96, 181, 0.5), rgba(0, 96, 181, 0.5)), /* Transparent blue overlay */
-      url(${RecServiceBackground}) /* Background image */
-    `,
+        `,
     backgroundSize: 'cover',  
     backgroundPosition: 'center',  
     backgroundRepeat: 'no-repeat', 

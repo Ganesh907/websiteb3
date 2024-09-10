@@ -8,7 +8,7 @@ import AboutUs1 from "../Assets/Images/AboutUs1.jpg";
 import AboutUs2 from "../Assets/Images/AboutUs2.png";
 import AboutUs3 from "../Assets/Images/AboutUs3.png";
 import AboutUs4 from "../Assets/Images/AboutUs4.jpg";
-import ProfileImg from "../Assets/Images/ProfileImg.png";
+// import ProfileImg from "../Assets/Images/ProfileImg.png";
 import ITConsulting from "../Assets/Images/ITconsulting.jpg";
 
 import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
@@ -183,7 +183,7 @@ const AboutUsPage = () => {
           </div>
           <div className="w-[50%]  flex flex-col justify-center items-center text-[var(--primary-color)]">
 
-            <img src={ProfileImg} className="h-96 w-auto" />
+            {/* <img src={ProfileImg} className="h-96 w-auto" /> */}
             <h1 className="text-xl font-bold "> FOUNDER NAME</h1>
             <h1 className="text-[var(--secondary-color)]">Founder & CEO</h1>
           </div>

@@ -6,10 +6,10 @@ import technology from "../../Assets/Images/technology.png";
 import hamarakendra from "../../Assets/Images/hamarakendra.png";
 import ips from "../../Assets/Images/IPS_e_Services.jpg";
 import suntrap from "../../Assets/Images/suntrap.83df4c98.png" ;
- import intertrust from "../../Assets/Images/intertrust.jpg";
+//  import intertrust from "../../Assets/Images/intertrust.jpg";
 import credentials from "../../Assets/Images/certificate.png";
 import price from "../../Assets/Images/tag.png";
-import careers1 from "../../Assets/Images/careers1.png";
+// import careers1 from "../../Assets/Images/careers1.png";
 import Devsoft from "../../Assets/Images/cloud-computing.png";
 import client from "../../Assets/Images/client.jpg";
 import Footer from "../../Components/CommonComponents/Footer";
@@ -45,7 +45,7 @@ export const TechClientsPage = () => {
 <div className='flex mt-10 gap-4 ' >
 
 
-<img src={intertrust} className=" h-40 w-30 ml-6 shadow-2xl rounded-sm" />
+{/* <img src={intertrust} className=" h-40 w-30 ml-6 shadow-2xl rounded-sm" /> */}
 
 <img src={suntrap} className=" h-40 w-30 ml-6 shadow-2xl rounded-sm" />
 
@@ -215,7 +215,7 @@ export const TechClientsPage = () => {
     <div className="absolute top-[15%] left-[15%]">
       <div className="flex items-center justify-center">
         <p className="text-center">Careers</p>
-        <img src={careers1} className="h-10 w-10 ml-2" />
+        {/* <img src={careers1} className="h-10 w-10 ml-2" /> */}
       </div>
     </div>
   </div>
