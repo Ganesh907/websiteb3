@@ -58,14 +58,14 @@ export const ContactForm = () => {
         <form className=' text-center'   onSubmit={handleSubmit}
         //  data-aos="zoom-in" data-aos-duration="1000"
          >
-        <h1 className='font-bold text-4xl drop-shadow-lg text-[#0060b5]'>Contact Us</h1>
-        <h2 className=' font-semibold mt-2 text-base'>
+        <h1 className='font-bold text-4xl drop-shadow-lg text-[var(--primary-color)]'>Contact Us</h1>
+        <h2 className=' font-semibold mt-2 text-base text-[var(--secondary-color)]'>
                 Any question or remarks? Just write us a message !
         </h2>
-        <p className='opacity-70 font-semibold  text-sm'>Fill up the form and our team will get back to you within 24 hours.</p>
+        <p className='opacity-70 font-semibold  text-sm text-[var(--secondary-color)]'>Fill up the form and our team will get back to you within 24 hours.</p>
 
         
-        <div className='grid grid-cols-2 gap-10 mt-8 mb-8'>
+        <div className='grid grid-cols-2 gap-10 mt-8 mb-8 '>
                 <TextField
                         id="firstName"
                         name="firstName"
@@ -75,6 +75,17 @@ export const ContactForm = () => {
                         onChange={handleChange}
                         error={!!errors.firstName}
                         helperText={errors.firstName}
+                        InputLabelProps={{
+                                style: { color: "var(--primary-color)" },
+                              }}
+                              InputProps={{
+                                sx: {
+                                  '& .MuiInputBase-input::placeholder': {
+                                    color: 'var(--primary-color)', 
+                                  },
+                                  color: 'var(--text-color)'
+                                }
+                              }}
                 />
                 <TextField
                         id="lastName"
@@ -85,6 +96,17 @@ export const ContactForm = () => {
                         onChange={handleChange}
                         error={!!errors.lastName}
                         helperText={errors.lastName}
+                        InputLabelProps={{
+                                style: { color: "var(--primary-color)" },
+                              }}
+                              InputProps={{
+                                sx: {
+                                  '& .MuiInputBase-input::placeholder': {
+                                    color: 'var(--primary-color)', 
+                                  },
+                                  color: 'var(--text-color)'
+                                }
+                              }}
                 />
                 <TextField
                         id="email"
@@ -95,6 +117,17 @@ export const ContactForm = () => {
                         onChange={handleChange}
                         error={!!errors.email}
                         helperText={errors.email}
+                        InputLabelProps={{
+                                style: { color: "var(--primary-color)" },
+                              }}
+                              InputProps={{
+                                sx: {
+                                  '& .MuiInputBase-input::placeholder': {
+                                    color: 'var(--primary-color)', 
+                                  },
+                                  color: 'var(--text-color)'
+                                }
+                              }}
                 />
                 <TextField
                         id="phone"
@@ -105,6 +138,17 @@ export const ContactForm = () => {
                         onChange={handleChange}
                         error={!!errors.phone}
                         helperText={errors.phone}
+                        InputLabelProps={{
+                                style: { color: "var(--primary-color)" },
+                              }}
+                              InputProps={{
+                                sx: {
+                                  '& .MuiInputBase-input::placeholder': {
+                                    color: 'var(--primary-color)', 
+                                  },
+                                  color: 'var(--text-color)'
+                                }
+                              }}
                 />
         </div>
         <TextField
@@ -120,10 +164,21 @@ export const ContactForm = () => {
                 error={!!errors.message}
                 helperText={errors.message}
                 sx={{ marginBottom: '20px' }}
+                InputLabelProps={{
+                        style: { color: "var(--primary-color)" },
+                      }}
+                      InputProps={{
+                        sx: {
+                          '& .MuiInputBase-input::placeholder': {
+                            color: 'var(--primary-color)', 
+                          },
+                          color: 'var(--text-color)'
+                        }
+                      }}
         />
         <Button
                 variant="contained"
-                color="primary"
+                sx={{backgroundColor:"var(--primary-color)"}}
                 type="submit"
                 fullWidth
         >

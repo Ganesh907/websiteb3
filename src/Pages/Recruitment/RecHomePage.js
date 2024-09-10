@@ -79,10 +79,11 @@ const RecHomePage = () => {
 
 
 
-      <div className='h-[100vh] flex justify-start bg-[#0060b5]' style={{ borderRadius: `0 0 ${bottomRadius} ${bottomRadius}` }}>
-        <div className='h-14 flex justify-center animate-pulse  items-end text-[200px] rounded-full  w-14 absolute bottom-0 left-[50%] text-white z-50 ' style={{ animationDuration: "4000ms" }}>
-          <KeyboardDoubleArrowDownIcon className="animate-bounce" style={{ fontSize: "50px", animationDuration: "400ms",animationDelay:"3000ms" }} />
-        </div>
+      <div className='h-[100vh] flex justify-start bg-[#0060b5] transition-all duration-1000 ease-in-out' style={{ borderRadius: `0 0 ${bottomRadius} ${bottomRadius}` }}>
+      <div className='h-14 flex justify-center animate-pulse items-end text-[200px] rounded-full w-14 absolute bottom-0 left-1/2 transform -translate-x-1/2 text-white z-50' style={{ animationDuration: "4000ms" }}>
+  <KeyboardDoubleArrowDownIcon className="animate-bounce" style={{ fontSize: "50px", animationDuration: "400ms", animationDelay: "3000ms" }} />
+</div>
+
 
 
       
@@ -146,12 +147,12 @@ const RecHomePage = () => {
 
         <img
           src={RecruitmentHomeBg}
-          className="absolute top-0 left-0 w-full h-full object-cover"
+          className="absolute top-0 left-0 w-full h-full object-cover transition-all duration-1000 ease-in-out"
           // style={{  }}
           style={{ borderRadius: `0 0 ${bottomRadius} ${bottomRadius}`}}  // Makes the entire image slightly transparent
         />
         <div
-          className="absolute top-0 left-0 w-full h-full"
+          className="absolute top-0 left-0 w-full h-full transition-all duration-1000 ease-in-out"
           style={{
             backgroundColor: 'rgba(0, 96, 181, 0.5)',
             borderRadius: `0 0 ${bottomRadius} ${bottomRadius}`
@@ -159,7 +160,7 @@ const RecHomePage = () => {
           }}
         ></div>
         <div
-          className="absolute top-0 -left-2 w-full h-full"
+          className="absolute top-0 -left-2 w-full h-full transition-all duration-1000 ease-in-out"
           style={{
             backgroundImage: 'linear-gradient(to right, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 80%)',
             borderRadius: `0 0 ${bottomRadius} ${bottomRadius}`,
@@ -179,10 +180,10 @@ const RecHomePage = () => {
 
 
       <div className='h-[80vh] w-full  flex flex-col justify-center items-center'>
-        <h1 className='uppercase text-xl font-bold'>for Job seekers</h1>
-        <h1 className='text-7xl mt-10 drop-shadow-xl'>Our Seeking Process</h1>
-        <p className='w-[50%] my-10'>Find jobs by checking job vacancy and recruitment websites, social media, professional and industry journals, and by going to career expos or promoting yourself at industry networking events.</p>
-        <Button variant="contained" size="large"  sx={{ borderRadius: '20px',backgroundColor:'green' }}>
+        <h1 className='uppercase text-xl font-bold text-[var(--secondary-color)]'>for Job seekers</h1>
+        <h1 className='text-7xl mt-10 drop-shadow-xl text-[var(--primary-color)]'>Our Seeking Process</h1>
+        <p className='w-[50%] my-10 text-[var(--secondary-color)]'>Find jobs by checking job vacancy and recruitment websites, social media, professional and industry journals, and by going to career expos or promoting yourself at industry networking events.</p>
+        <Button variant="contained" size="large"  sx={{ borderRadius: '20px',backgroundColor:'var(--primary-color)' }}>
           Discover Jobs</Button>
       </div>
 
@@ -249,9 +250,9 @@ const RecHomePage = () => {
 
 
 
+<h2 className='text-center text-5xl font-bold mt-10 italic text-[var(--primary-color)]'>Related Services</h2>
 <div className='my-10  flex justify-around'
 >
-  
   <div className="sm:w-[20vw] border-2 border-transparent border-gray-100 p-5 hover:translate-x-2 hover:shadow-lg rounded-lg" data-aos="zoom-in" data-aos-duration="700">
 
 <div className="p-10 h-[50%] w-[80%] m-auto sm:w-auto">
@@ -259,7 +260,7 @@ const RecHomePage = () => {
 </div>
 <div className="h-[50%] ">
   <h1 className="font-bold text-center my-2 text-xl hover:-translate-y-2 "> Permanent Placement</h1>
-  <p>  We help organisations hire expert full-time talent for middle,
+  <p className='text-[var(--secondary-color)]'>  We help organisations hire expert full-time talent for middle,
   senior and top level positions across diverse sectors.</p>
 
 </div>
@@ -272,7 +273,7 @@ const RecHomePage = () => {
 </div>
 <div className="h-[50%] ">
   <h1 className="font-bold text-center my-2 text-xl hover:-translate-y-2 "> Staffing Solutions</h1>
-  <p>  Building an agile and flexible workforce requires an easy and fast
+  <p className='text-[var(--secondary-color)]'>  Building an agile and flexible workforce requires an easy and fast
                         access to expert talent, available on short notice. We offer a pool of pre-screened
                         talent, hired on our rolls</p>
 
@@ -285,7 +286,7 @@ const RecHomePage = () => {
 </div>
 <div className="h-[50%] ">
   <h1 className="font-bold text-center my-2 text-xl hover:-translate-y-2 ">Contract to Hire</h1>
-  <p>  Our Temp-to-Hire services allow organisations the opportunity to
+  <p className='text-[var(--secondary-color)]'>  Our Temp-to-Hire services allow organisations the opportunity to
                         evaluate a candidate over a period of time before on-boarding the candidate at the end of the
                         contract period.</p>
 

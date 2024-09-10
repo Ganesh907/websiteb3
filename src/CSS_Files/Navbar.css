@@ -58,9 +58,10 @@
       .nav-links {
         color: #0060b5;
         text-decoration: none;
-        padding: 0.5rem 1rem;
+        padding: 0.3rem 0.7rem;
         font-family: Montserrat;
-        font-size: 14px;
+        font-size: 17px;
+        font-weight: 700;
         justify-items: center;
         text-align: center;
       }
