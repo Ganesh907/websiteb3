@@ -92,11 +92,23 @@ export const TechHomePage = () => {
         </div> */}
       </div>
       <div className="secondary-section ">
-        <div className="label text-center mb-10 mt-5">
-          <h1 className="oneliner font-extrabold text-6xl">
+        <div className="label text-center md:mb-10 mt-5 md:flex md:justify-center md:gap-3">
+          {/* <h1 className="oneliner font-extrabold text-6xl">
             We <span style={{ color: "#0060b5" }}>design</span> We{" "}
             <span style={{ color: "#0060b5" }}>develop</span> We{" "}
             <span style={{ color: "#0060b5" }}>deliver</span>
+          </h1> */}
+          <h1 className="oneliner font-extrabold text-6xl ">
+          We <span style={{ color: "#0060b5" }} 
+          className=' animate-slow-blink'>Design</span>
+          </h1>
+          <h1 className="oneliner font-extrabold text-6xl">
+          We{" "}<span style={{ color: "#0060b5" }} 
+          className='animate-slow-blink'>Develop</span>
+          </h1>
+          <h1 className="oneliner font-extrabold text-6xl">
+          We{" "}<span style={{ color: "#0060b5" }}
+          className='animate-slow-blink'>Deliver</span>
           </h1>
         </div>
         <SplitCard />
@@ -311,7 +323,7 @@ export const TechHomePage = () => {
 </div>
 
 <div>
-<img src={highquality} className='h-[50vh]'/>
+<img src={highquality} className='h-[50vh] md:ml-0 ml-3'/>
 </div>
 </div>
 
