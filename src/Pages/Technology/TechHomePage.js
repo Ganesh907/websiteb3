@@ -31,10 +31,10 @@ export const TechHomePage = () => {
       {/* ............................................................. */}
       <div className="techpage md:mt-4     items-center ">
         <div className="techpage_main2   items-center md:flex md:flex-row md:w-full md:pl-10 pl-2 flex flex-col-reverse ">
-          <div className=" md:w-3/6 md:bg-white md:flex md:flex-col md:justify-center md:items-start md:gap-2 md:mt-28 md:ml-8">
-            <h1 className='home_h1 font-extrabold text-[45px] leading-[57px] text-[#0c0042] font-montserrat pb-4'>Your software <br /> development company!</h1>
-            <p className='home_p font-montserrat text-[16px] leading-[28px] break-words text-[#0c0042] pr-[70px]'>At BitByBit Solutions, we offer high-quality development services designed to meet your unique needs. Our expert developers specialize in creating reliable and scalable software solutions, from custom websites and mobile apps to enterprise systems. We use the latest technologies to deliver projects on time , ensuring a smooth and satisfying user experience. Partner with us to bring your ideas to life and stay ahead in the digital world. </p>
-            <div className='lets_talk flex justify-center items-center bg-[#002eff] rounded-lg text-white font-montserrat text-[18px] font-bold h-[44px] leading-[24px] w-2/5 gap-[10px] md:p-0 md:w-1/4'>
+          <div className=" md:w-3/6  md:flex md:flex-col md:justify-center md:items-start md:gap-2 md:mt-28 md:ml-8">
+            <h1 className='home_h1 font-extrabold text-[45px] leading-[57px] text-[var(--primary-color)] font-montserrat pb-4'>Your software <br /> development company!</h1>
+            <p className='home_p font-montserrat text-[16px] leading-[28px] break-words text-[var(--secondary-color)] pr-[70px]'>At BitByBit Solutions, we offer high-quality development services designed to meet your unique needs. Our expert developers specialize in creating reliable and scalable software solutions, from custom websites and mobile apps to enterprise systems. We use the latest technologies to deliver projects on time , ensuring a smooth and satisfying user experience. Partner with us to bring your ideas to life and stay ahead in the digital world. </p>
+            <div className='lets_talk flex justify-center items-center bg-[var(--primary-color)] text-[var(--background-color)] rounded-lg  font-montserrat text-[18px] font-bold h-[44px] leading-[24px] w-2/5 gap-[10px] md:p-0 md:w-1/4'>
               <img src={letstalk} width='25px' />
               <a href="#">Let’s talk</a>
             </div>
@@ -93,10 +93,10 @@ export const TechHomePage = () => {
       </div>
       <div className="secondary-section ">
         <div className="label text-center mb-10 mt-5">
-          <h1 className="oneliner font-extrabold text-6xl">
-            We <span style={{ color: "#0060b5" }}>design</span> We{" "}
-            <span style={{ color: "#0060b5" }}>develop</span> We{" "}
-            <span style={{ color: "#0060b5" }}>deliver</span>
+          <h1 className="oneliner font-extrabold  text-6xl">
+            We <span className='text-[var(--secondary-color)]'>design</span> We{" "}
+            <span className='text-[var(--secondary-color)]'>develop</span> We{" "}
+            <span className='text-[var(--secondary-color)]'>deliver</span>
           </h1>
         </div>
         <SplitCard />
@@ -147,7 +147,7 @@ export const TechHomePage = () => {
       </div>  */}
 {/*/////////////////////////////////////////////////////////// */}
  <div className='w-[90%] h-auto' >
-      <h1 className='mainh1 text-center md:text-start md:ml-[9%] text-[#0c0042]  text-[40px] font-bold m-[5px] font-montserrat md:w-full md:mt-[40px] w-[110%]'>
+      <h1 className='mainh1 text-center md:text-start md:ml-[9%] text-[var(--primary-color)]  text-[40px] font-bold m-[5px] font-montserrat md:mt-[40px] w-[110%]'>
         Industries we deal with
       </h1>
       <div className='grid grid-cols-1 place-content-center md:grid-cols-2 md:gap-2 md:ml-20 md:w-auto w-[110%]' >
@@ -292,13 +292,13 @@ export const TechHomePage = () => {
     </div>
 {/* .......................................................... */}
 <div className='w-[90%] h-auto  md:mb-20 mb-5'>
-<h1 className='mb-3  text-center md:text-start md:ml-[9%] text-[#0c0042]  text-[40px] font-bold m-[5px] font-montserrat md:w-full w-[110%]  md:mt-[40px] mt-5'>
+<h1 className='mb-3  text-center md:text-start md:ml-[9%] text-[var(--primary-color)]  text-[40px] font-bold m-[5px] font-montserrat md:w-full w-[110%]  md:mt-[40px] mt-5'>
         Why do our clients value us?
 </h1>
 <div className='md:flex md:flex-row md:justify-evenly md:ml-6  flex flex-col-reverse '>
-<div className='md:w-[50%]  space-y-4 '>
+<div className='md:w-[50%]  space-y-4 text-[var(--secondary-color)]'>
   <h1 className='font-extrabold text-2xl bg-red-3 md:text-start text-center'>High-Quality Products</h1>
-  <p className='leading-8 md:ml-0 ml-4'>
+  <p className='leading-8  md:ml-0 ml-4'>
     Clients value us for our dedication to exceptional quality, superior craftsmanship, and innovative technologies that make our products stand out. Rigorous quality control
     ensures reliability and long-term value in every product.
   </p>
@@ -321,7 +321,7 @@ export const TechHomePage = () => {
 <div>
 <img src={onbudget} className='h-[50vh] ml-6'/>
 </div>
-<div className='md:w-[50%]  space-y-4 '>
+<div className='md:w-[50%]  space-y-4 text-[var(--secondary-color)] '>
   <h1 className='font-extrabold text-2xl md:text-start text-center'>On Budget, On-Time</h1>
   <p className='leading-8 md:ml-0 ml-4'>
   Our commitment to on-time and budget-conscious project delivery sets us apart. We meet agreed specifications through clear planning, efficient management, and proactive

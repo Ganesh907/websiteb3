@@ -52,12 +52,9 @@ function App() {
         <Routes>
           {/* <Route path="/" element={<Homepage />} /> */}
           <Route path="/" element={<LandingPage />} />
-          
-
           <Route path="/technology" element={<TechHomePage />} />
           <Route path="/technology-services" element={<TechServicesPage />} />
           <Route path="/technology-clients" element={<TechClientsPage />} />
-
           <Route path="/recruitment" element={<RecHomePage />} />
           <Route path="/recruitment-services" element={<RecServicesPage />} />
           <Route path="/recruitment-clients" element={<RecClientsPage />} /> 
@@ -65,11 +62,10 @@ function App() {
           <Route path="/aboutus" element={<AboutUsPage />} />
           <Route path="/careers" element={<CareerPage />} />
           <Route path="/blogs" element={<Blogs />} />
-
         </Routes>
         <button
       onClick={scrollToTop}
-      className={`fixed bottom-5 right-5 bg-blue-500 text-white h-10 w-10  rounded-full flex justify-center  items-end  shadow-lg hover:bg-blue-700 transition-opacity ${
+      className={`fixed bottom-5 right-5 bg-[var(--primary-color)] text-white h-10 w-10  rounded-full flex justify-center  items-end  shadow-lg hover:bg-blue-700 transition-opacity ${
         isVisible ? "opacity-100 visible" : "opacity-0 invisible"
       }`}
     >

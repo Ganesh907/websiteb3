@@ -15,6 +15,7 @@ import VideoForContact from '../Assets/Videos/VideoForContact.mp4'
 import WaveBg from '../Assets/Images/WaveBG.jpg'
 import { ContactForm } from '../Components/ContactUsPage/ContactForm';
 import Footer from '../Components/CommonComponents/Footer';
+import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
 
 
 
@@ -38,7 +39,7 @@ export const ContactUsPage = () => {
         return (
                 <div className=''>
                         <div
-                                className="w-[100vw] relative h-[70vh] flex justify-center flex-col lg:flex-row-reverse items-center align-middle bg-[#0060b5] transition-all duration-1000 ease-in-out"
+                                className="w-[100vw] relative h-[100vh] flex justify-center flex-col lg:flex-row-reverse items-center align-middle bg-[#0060b5] transition-all duration-1000 ease-in-out"
                                 style={{
                                         borderRadius: `0 0 ${bottomRadius} ${bottomRadius}`,
                                         backgroundSize: 'cover',
@@ -46,6 +47,18 @@ export const ContactUsPage = () => {
                                         backgroundPosition: 'center',
                                 }}
                         >
+                                <div className='h-14 flex justify-center animate-pulse items-end text-[200px] rounded-full w-14 absolute bottom-0 left-1/2 transform -translate-x-1/2 text-white z-50' style={{ animationDuration: "4000ms" }}>
+  <KeyboardDoubleArrowDownIcon className="animate-bounce" style={{ fontSize: "50px", animationDuration: "400ms", animationDelay: "3000ms" }} />
+</div>
+                                 <div
+          className="absolute top-0 -left-2 w-full h-full transition-all duration-1000 ease-in-out"
+          style={{
+            backgroundImage: 'linear-gradient(to right, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 80%)',
+            borderRadius: `0 0 ${bottomRadius} ${bottomRadius}`,
+            filter: 'blur(5px)',
+            pointerEvents: 'none',
+          }}
+        ></div>
 
                                 {/* <video
         autoPlay
@@ -77,17 +90,17 @@ export const ContactUsPage = () => {
 
                         </div>
 
-                        <div className=' w-[100vw] h-auto md:h-[100vh] flex justify-center  flex-col align-middle'>
+                        <div className='w-[100vw] h-auto md:h-[100vh] flex justify-center  flex-col align-middle'>
                                 <div className='w-[90%] rounded-lg p-3 lg:w-[80%] m-auto flex flex-col lg:flex-row'>
-                                <div className='relative z-10 w-full lg:w-[51vw] h-full  md:mb-0 text-[#0060b5] flex justify-center items-center' data-aos="zoom-in" data-aos-duration="2000">
+                                <div className='relative z-10 w-full lg:w-[51vw] h-full  md:mb-0 text-[var(--primary-color)] flex justify-center items-center' data-aos="zoom-in" data-aos-duration="2000">
                                         <div className='h-full md:w-[20%] md:flex justify-center items-center  hidden '>
-                                                <h1 className='ms-[100%] text-xl font-bold drop-shadow-lg z-50 border-2 border-[#0060b5] p-4 shadow-lg backdrop-blur-md' data-aos="fade-right" data-aos-duration="2000">
+                                                <h1 className='ms-[100%] text-xl font-bold drop-shadow-lg z-50 border-2 border-[var(--primary-color)] p-4 shadow-lg backdrop-blur-md' data-aos="fade-right" data-aos-duration="2000">
 
                                                         CONTACT
                                                 </h1>
                                         </div>
 
-                                        <div className="grid grid-cols-3 lg:mt-12 md:border-4 border-[#0060b5] text-[#0060b5]  md:rounded-full p-2 h-[80%] md:w-96 md:shadow-2xl md:h-96"
+                                        <div className="grid grid-cols-3 lg:mt-12 md:border-4 border-[var(--primary-color)] text-[var(--primary-color)]  md:rounded-full p-2 h-[80%] md:w-96 md:shadow-2xl md:h-96"
                                                 style={{ animationDuration: '4000ms' }}
                                         // style={{ backgroundColor: 'rgba(0, 0, 0, 0.1)'}} 
                                         >
@@ -149,7 +162,7 @@ export const ContactUsPage = () => {
                                         </div>
                                         
                                         <div className='  h-full md:w-[20%] md:flex justify-center items-center hidden '>
-                                                <h1 className='me-[100%] text-xl font-bold drop-shadow-lg z-50  shadow-lg   p-4 backdrop-blur-md border-2 border-[#0060b5] text-[#0060b5]' data-aos="fade-left" data-aos-duration="2000">BITBYBIT
+                                                <h1 className='me-[100%] text-xl font-bold drop-shadow-lg z-50  shadow-lg   p-4 backdrop-blur-md border-2 border-[var(--primary-color)] text-[var(--primary-color)]' data-aos="fade-left" data-aos-duration="2000">BITBYBIT
                                                 </h1>
                                         </div>
                                 </div>
@@ -158,7 +171,7 @@ export const ContactUsPage = () => {
                                 </div>
 
                         </div>
-                        {/* <div className='flex justify-center items-center h-[100vh] bg-[#0060b5]'>
+                        <div className='flex justify-center items-center h-[100vh] bg-[#0060b5]'>
                                 <div className='bg-white w-[80%] shadow-2xl h-auto rounded-lg p-3 flex flex-col lg:flex-row'>
 
                                         <div className='lg:w-[38%] p-3' data-aos="fade-up" data-aos-duration="2000">
@@ -193,12 +206,11 @@ export const ContactUsPage = () => {
                                         </div>
                                         <div className='lg:w-[63%] h-[100%] p-2'>
 
-                                                <Maps />
+                                                {/* <Maps /> */}
 
                                         </div>
                                 </div>
-                        </div> */}
-                        
+                        </div>
                         <Footer />
                 </div>
         )

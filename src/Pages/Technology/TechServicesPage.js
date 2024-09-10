@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import techsupport from "../../Assets/Images/technical-support (1).png";
 import contentchange from "../../Assets/Images/content-writing.png";
 import hosting from "../../Assets/Images/hosting.png";
@@ -23,6 +23,8 @@ import hardwaresoftware from "../../Assets/Images/Hardwaresoftware.jpg";
 import cloudandinfra from "../../Assets/Images/cloud_infra.jpg";
 import workflow from "../../Assets/Images/workflow_img.jpg";
 import "./TechServicesPage.css";
+
+import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
 // import "../../components/Services/TechnologyService.scss";
 // import Header from "../Header/header";
 import Footer from "../../Components/CommonComponents/Footer";
@@ -30,18 +32,53 @@ import TypingTextAnimation from "../../Components/CommonComponents/TypingTextAni
 // import techservice from "../../Assets/Images/techservice.png";
 
 export const TechServicesPage = (props) => {
+
+  const [bottomRadius, setBottomRadius] = useState('0%');
+
+  useEffect(() => {
+          const handleScroll = () => {
+                  const scrollTop = window.scrollY;
+                  const maxScroll = 50; // Adjust this value for how quickly you want the border to round
+                  const radius = Math.min(scrollTop / maxScroll * 50, 50); // Cap at 50% for a smooth transition
+                  setBottomRadius(`${radius}%`);
+          };
+
+          window.addEventListener('scroll', handleScroll);
+          return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <>
+    <div
+          className="absolute top-0 -left-2 w-full z-10 h-full"
+          style={{
+            backgroundImage: 'linear-gradient(to right, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 80%)',
+            borderRadius: `0 0 ${bottomRadius} ${bottomRadius}`,
+            filter: 'blur(5px)',
+            pointerEvents: 'none',
+          }}
+        ></div>
+       <div className='h-14 flex justify-center animate-pulse items-end text-[200px] rounded-full w-14 absolute bottom-0 left-1/2 transform -translate-x-1/2 text-white z-50' style={{ animationDuration: "4000ms" }}>
+  <KeyboardDoubleArrowDownIcon className="animate-bounce" style={{ fontSize: "50px", animationDuration: "400ms", animationDelay: "3000ms" }} />
+</div>
+
+
       <div className="service-div-main">
+        
 
                 <div className="w-full relative">
-  <img src={workflowimage} className="w-full h-[90vh]" />
-  <div className="absolute inset-0 flex justify-center items-end">
+  <img src={workflowimage} className="w-full h-[100vh]"   style={{
+          borderRadius: `0 0 ${bottomRadius} ${bottomRadius}`,
+  }} />
+  <div className=" w-[100vw] z-20 absolute flex justify-start items-center top-0 h-[100vh] "  style={{
+          borderRadius: `0 0 ${bottomRadius} ${bottomRadius}`,
+  }}>
     <h1>
       <TypingTextAnimation />
     </h1>
   </div>
 </div>
+
 
                 
         {/* /////////////////////////////////////////////////////////// */}
@@ -68,7 +105,7 @@ export const TechServicesPage = (props) => {
               solutions, customized for your specific requirements.
             </div>
 
-            <div className="techservice_bgcards md:grid md:grid-cols-4 md:w-[80%] md:gap-y-4 md:mt-4 md:py-2 md:pl-2 bg-white grid grid-cols-1 gap-y-6 ">
+            <div className="techservice_bgcards md:grid md:grid-cols-4 md:w-[80%] md:gap-y-4 md:mt-4 md:py-2 md:pl-2  grid grid-cols-1 gap-y-6 ">
               <div
                 className="techservice_box md:w-[90%] md:h-46 md:m-0 md:flex md:flex-col md:justify-start md:items-start
             flex flex-col justify-center items-center  "
@@ -355,7 +392,7 @@ export const TechServicesPage = (props) => {
                     </p>
                   </div>
                 </li>
-                <span className="absolute  bottom-[250px] left-[540px] flex items-center justify-center w-56 h-10 rounded -mt-4 ring-blue-400 dark:ring-gray-900 dark:bg-gray-700">
+                <span className="absolute  bottom-[250px] left-[540px] flex items-center justify-center w-56 h-10 rounded -mt-4 ring-blue-400 ">
                   <img src={arrow} className=" h-40 w-40" />
                 </span>
 
