@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import letstalk from "../../Assets/Images/letstakeicon1.png"
-import technologyhomeimg from "../../Assets/Images/technologyhomeimg.png"
+import technologyhomeimg from "../../Assets/Images/technologyhomeheader2.png"
 import highquality from "../../Assets/Images/highquality.jpg"
 import onbudget from "../../Assets/Images/onbudget.png"
 import SplitCard from './SplitCard'
@@ -25,23 +25,33 @@ export const TechHomePage = () => {
   };
   return (
     <div className="techHomepageMain  ">
+       <div className='z-50  top-[90%] fixed  flex justify-center items-center bg-[var(--primary-color)] text-[var(--background-color)] rounded-lg  font-montserrat text-[18px] font-bold h-[44px] leading-[24px] w-2/5 gap-[10px] md:p-0 md:w-[10%] md:ml-2'>
+              <img src={letstalk} width='25px'  />
+              <a href="#">Let’s talk</a>
+            </div>
       {/* <div className={`header-container ${showNavbar ? "" : "header-hidden"}`}> */}
         {/* {showNavbar && <Header />} */}
       {/* </div> */}
       {/* ............................................................. */}
-      <div className="techpage md:mt-4     items-center ">
+      <div className="techpage md:mt-4 md:mb-16    items-center ">
         <div className="techpage_main2   items-center md:flex md:flex-row md:w-full md:pl-10 pl-2 flex flex-col-reverse ">
           <div className=" md:w-3/6  md:flex md:flex-col md:justify-center md:items-start md:gap-2 md:mt-28 md:ml-8">
-            <h1 className='home_h1 font-extrabold text-[45px] leading-[57px] text-[var(--primary-color)] font-montserrat pb-4'>Your software <br /> development company!</h1>
-            <p className='home_p font-montserrat text-[16px] leading-[28px] break-words text-[var(--secondary-color)] pr-[70px]'>At BitByBit Solutions, we offer high-quality development services designed to meet your unique needs. Our expert developers specialize in creating reliable and scalable software solutions, from custom websites and mobile apps to enterprise systems. We use the latest technologies to deliver projects on time , ensuring a smooth and satisfying user experience. Partner with us to bring your ideas to life and stay ahead in the digital world. </p>
-            <div className='lets_talk flex justify-center items-center bg-[var(--primary-color)] text-[var(--background-color)] rounded-lg  font-montserrat text-[18px] font-bold h-[44px] leading-[24px] w-2/5 gap-[10px] md:p-0 md:w-1/4'>
-              <img src={letstalk} width='25px' />
+            <h1 className='home_h1 font-extrabold text-[45px] leading-[57px] text-[var(--primary-color)] font-montserrat pb-4 z-50'>Your software <br /> development company!</h1>
+            <p className='home_p font-montserrat text-[16px] leading-[28px] break-words text-[var(--secondary-color)] pr-[70px] z-50'>At BitByBit Solutions, we provide high-quality development services tailored to your needs, from custom websites and mobile apps to enterprise systems. Our expert developers use the latest technologies to deliver reliable, scalable solutions on time. Partner with us to bring your ideas to life and stay ahead in the digital world. </p>
+            {/* <div className='z-50  flex justify-center items-center bg-[var(--primary-color)] text-[var(--background-color)] rounded-lg  font-montserrat text-[18px] font-bold h-[44px] leading-[24px] w-2/5 gap-[10px] md:p-0 md:w-1/4'>
+              <img src={letstalk} width='25px'  />
               <a href="#">Let’s talk</a>
-            </div>
+            </div> */}
           </div>
-          <div className=" mt-6 md:w-3/6 md:flex md:justify-center md:items-center">
+          {/* <div className=" mt-6 md:w-3/6 md:flex md:justify-center md:items-center">
             <img src={technologyhomeimg} style={{}} width='90%' />
-          </div>
+          </div> */}
+           <img
+          src={technologyhomeimg}
+          className="absolute top-0 left-0 w-full h-full object-cover transition-all duration-1000 ease-in-out"
+          // style={{  }}
+          // style={{ borderRadius: `0 0 ${bottomRadius} ${bottomRadius}`}}  // Makes the entire image slightly transparent
+        />
         </div>
 
         {/* <div class='multi_box'> */}
@@ -90,6 +100,15 @@ export const TechHomePage = () => {
           </div>
           <h1>From the cloud to customers, we bring all the answers</h1>
         </div> */}
+        <div className="label text-center md:mb-10 mt-5 md:flex md:justify-start md:ml-16 md:gap-3">
+        <h1 className="relative font-extrabold text-6xl">
+  We
+  <span className="absolute animate-zoom-design md:ml-4" style={{ color: "#0060b5" }}>Design</span>
+  <span className="absolute animate-zoom-develop md:ml-4" style={{ color: "#0060b5" }}>Develop</span>
+  <span className="absolute animate-zoom-deliver md:ml-4" style={{ color: "#0060b5" }}>Deliver</span>
+</h1>
+
+        </div>
       </div>
       <div className="secondary-section ">
         <div className="label text-center md:mb-10 mt-5 md:flex md:justify-center md:gap-3">
@@ -98,7 +117,7 @@ export const TechHomePage = () => {
             <span style={{ color: "#0060b5" }}>develop</span> We{" "}
             <span style={{ color: "#0060b5" }}>deliver</span>
           </h1> */}
-          <h1 className="oneliner font-extrabold text-6xl ">
+          {/* <h1 className="oneliner font-extrabold text-6xl ">
           We <span style={{ color: "#0060b5" }} 
           className=' animate-slow-blink'>Design</span>
           </h1>
@@ -109,7 +128,21 @@ export const TechHomePage = () => {
           <h1 className="oneliner font-extrabold text-6xl">
           We{" "}<span style={{ color: "#0060b5" }}
           className='animate-slow-blink'>Deliver</span>
-          </h1>
+          </h1> */}
+
+{/* <h1 className="relative font-extrabold text-6xl">
+  We
+  <span className="absolute animate-zoom-design md:ml-4" style={{ color: "#0060b5" }}>Design</span>
+  <span className="absolute animate-zoom-develop md:ml-4" style={{ color: "#0060b5" }}>Develop</span>
+  <span className="absolute animate-zoom-deliver md:ml-4" style={{ color: "#0060b5" }}>Deliver</span>
+</h1> */}
+
+
+
+
+
+
+
         </div>
         <SplitCard />
       </div>
@@ -310,15 +343,16 @@ export const TechHomePage = () => {
 <div className='md:flex md:flex-row md:justify-evenly md:ml-6  flex flex-col-reverse '>
 <div className='md:w-[50%]  space-y-4 text-[var(--secondary-color)]'>
   <h1 className='font-extrabold text-2xl bg-red-3 md:text-start text-center'>High-Quality Products</h1>
-  <p className='leading-8  md:ml-0 ml-4'>
+  {/* <p className='leading-8  md:ml-0 ml-4'>
     Clients value us for our dedication to exceptional quality, superior craftsmanship, and innovative technologies that make our products stand out. Rigorous quality control
     ensures reliability and long-term value in every product.
-  </p>
+  </p> */}
   <ul className='list-disc pl-5 space-y-2 md:ml-0 ml-4'>
-    <li>Clients receive the same high-quality experience every time.</li>
-    <li>Tailored solutions meet unique client needs.</li>
-    <li>We prioritize eco-friendly materials and processes.</li>
-    <li>Excellent customer service enhances the overall experience.</li>
+    <li>Clients value our commitment to quality, craftsmanship, and innovation.</li>
+    <li>Consistent high-quality experience for every client.</li>
+    <li>Customized solutions for unique client needs.</li>
+    <li>Focus on eco-friendly materials and processes.</li>
+    <li>Outstanding customer service enhances the overall experience.</li>
   </ul>
 </div>
 
@@ -335,15 +369,15 @@ export const TechHomePage = () => {
 </div>
 <div className='md:w-[50%]  space-y-4 text-[var(--secondary-color)] '>
   <h1 className='font-extrabold text-2xl md:text-start text-center'>On Budget, On-Time</h1>
-  <p className='leading-8 md:ml-0 ml-4'>
+  {/* <p className='leading-8 md:ml-0 ml-4'>
   Our commitment to on-time and budget-conscious project delivery sets us apart. We meet agreed specifications through clear planning, efficient management, and proactive
    communication, ensuring reliability and peace of mind for our clients.
-  </p>
+  </p> */}
   <ul className='list-disc pl-5 space-y-2 md:ml-0 ml-4'>
-    <li>We meet deadlines consistently.</li>
-    <li>Projects stay within financial limits.</li>
-    <li>Effective planning reduces risks.</li>
-    <li>Keeps clients updated at every stage.</li>
+    <li>Consistent on-time delivery.</li>
+    <li>Projects stay within budget.</li>
+    <li>Effective planning minimizes risks.</li>
+    <li>Proactive communication keeps clients updated at every stage.</li>
   </ul>
 </div>
 
