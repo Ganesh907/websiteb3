@@ -1,29 +1,16 @@
 import {useEffect}from "react";
-// import aboutus from "../../Assets/Images/information.png";
-// import devprocess from "../../Assets/Images/agile.png";
-// import support from "../../Assets/Images/industrysupports.png";
-// import technology from "../../Assets/Images/technology.png";
+import aboutus from "../../Assets/Images/information.png";
+import devprocess from "../../Assets/Images/agile.png";
+import technology from "../../Assets/Images/technology.png";
 import hamarakendra from "../../Assets/Images/hamarakendra.png";
 import ips from "../../Assets/Images/IPS_e_Services.jpg";
-<<<<<<< Updated upstream
 import suntrap from "../../Assets/Images/suntrap.83df4c98.png" ;
-//  import intertrust from "../../Assets/Images/intertrust.jpg";
 import credentials from "../../Assets/Images/certificate.png";
 import price from "../../Assets/Images/tag.png";
-// import careers1 from "../../Assets/Images/careers1.png";
 import Devsoft from "../../Assets/Images/cloud-computing.png";
-import client from "../../Assets/Images/client.jpg";
-=======
-import suntrap from "../../Assets/Images/suntrap.83df4c98.png";
  import intertrust from "../../Assets/Images/intertrust.jpg";
-// import credentials from "../../Assets/Images/certificate.png";
-// import price from "../../Assets/Images/tag.png";
-// import careers1 from "../../Assets/Images/careers1.png";
-// import Devsoft from "../../Assets/Images/cloud-computing.png";
 import client from "../../Assets/Images/clientpage.png";
->>>>>>> Stashed changes
 import Footer from "../../Components/CommonComponents/Footer";
-// import care from "../../Assets/Images/care.png";
 import qualityClient from "../../Assets/Images/qualityclient.png";
 import care from "../../Assets/Images/care.png";
 import support from "../../Assets/Images/support.png";
@@ -32,8 +19,6 @@ import innovation from "../../Assets/Images/innovation.png";
 import commitment from "../../Assets/Images/commitment.png";
 import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
 
-import Aos from "aos";
-// import 'aos/dist/aos.css';
 import { useState } from "react";
 
 export const TechClientsPage = () => {
@@ -42,7 +27,7 @@ export const TechClientsPage = () => {
   const [bottomRadius, setBottomRadius] = useState('0%');
   const [scrollHeading, setScrollHeading] = useState("");
 
-<<<<<<< Updated upstream
+
     {/* <div className='bg-white '> */}
    <marquee width="110%" direction="right" height="auto" scrollamount="20" >
 <div className='flex mt-10 gap-4 ' >
@@ -224,7 +209,6 @@ export const TechClientsPage = () => {
   </div>
 </div>
 
-=======
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
@@ -233,7 +217,7 @@ export const TechClientsPage = () => {
       setBottomRadius(`${radius}%`);
       setScrollHeading(scrollTop > 30 ? "ml-[30%]" : "ml-0");
     };
->>>>>>> Stashed changes
+
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
