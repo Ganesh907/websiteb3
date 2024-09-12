@@ -7,6 +7,7 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/Twitter';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
 // import Maps from '../Map/Maps';
 import ContactUSBg2 from '../Assets/Images/ContctUsBg.gif'
@@ -133,10 +134,10 @@ export const ContactUsPage = () => {
                                                 </div>
                                                 <div></div>
                                                 <div className='flex flex-col justify-between items-end mr-5 py-10 '>
-                                                        <Tooltip title='(+91) 022 65510355' arrow placement="top">
+                                                        <Tooltip title='Contact us through WhatsApp' arrow placement="top">
                                                                 <a href='/call' target="_blank" rel="noopener noreferrer"
                                                                         style={{ display: 'inline-block' }} >
-                                                                        <PhoneIcon className='w-8 h-8 animate-pulse hover:scale-150 hover:animate-none  transition-transform duration-300 ease-in-out' />
+                                                                        <WhatsAppIcon className='w-8 h-8 animate-pulse hover:scale-150 hover:animate-none  transition-transform duration-300 ease-in-out' />
                                                                 </a>
                                                         </Tooltip>
                                                         <Tooltip title='Email Us' arrow>

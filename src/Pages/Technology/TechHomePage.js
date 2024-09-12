@@ -51,7 +51,7 @@ export const TechHomePage = () => {
         <div className="techpage_main2   items-center md:flex md:flex-row md:w-full md:pl-10 pl-2 flex flex-col-reverse ">
           <div className=" md:w-3/6  md:flex md:flex-col md:justify-center md:items-start md:gap-2 md:mt-28 md:ml-8">
             <h1 className='home_h1 font-extrabold text-[45px] leading-[57px] text-[var(--primary-color)] font-montserrat pb-4 z-50'>Your Solution</h1>
-            <ul className='list-disc md:ml-8 font-montserrat text-[16px] leading-[28px] break-words text-[var(--secondary-color)] pr-[70px] z-50'>
+            <ul className='list-disc md:ml-8 font-montserrat text-[16px] leading-[28px] break-words text-white pr-[70px] z-50'>
               <li>Partner with us to bring your ideas to life and stay ahead in the digital world.</li>
               <li>Expertise in custom websites, mobile apps, and enterprise systems.</li>
               <li>High-quality development services tailored to your needs.</li>
@@ -137,11 +137,11 @@ export const TechHomePage = () => {
           <h1>From the cloud to customers, we bring all the answers</h1>
         </div> */}
         <div className="label text-center  mt-5 md:flex md:justify-start md:ml-20 md:gap-3">
-        <h1 className="relative font-extrabold text-6xl">
+        <h1 className="relative font-extrabold text-6xl text-white">
   We
-  <span className="absolute animate-zoom-design md:ml-4" style={{ color: "#0060b5" }}>Design</span>
-  <span className="absolute animate-zoom-develop md:ml-4" style={{ color: "#0060b5" }}>Develop</span>
-  <span className="absolute animate-zoom-deliver md:ml-4" style={{ color: "#0060b5" }}>Deliver</span>
+  <span className="absolute animate-zoom-design md:ml-4" style={{ color: 'var(--primary-color)'}}>Design</span>
+  <span className="absolute animate-zoom-develop md:ml-4" style={{ color:'var(--primary-color)' }}>Develop</span>
+  <span className="absolute animate-zoom-deliver md:ml-4" style={{ color:'var(--primary-color)' }}>Deliver</span>
 </h1>
 
         </div>
@@ -228,10 +228,10 @@ export const TechHomePage = () => {
       </div>  */}
 {/*/////////////////////////////////////////////////////////// */}
  <div className='w-[90%] h-auto' >
-      <h1 className='mainh1 text-center md:text-start md:ml-[9%] text-[var(--primary-color)]  text-[40px] font-bold m-[5px] font-montserrat md:mt-[40px] w-[110%]'>
+      <h1 className='text-center md:text-start md:ml-[9%] text-[var(--primary-color)]  text-[40px] font-bold m-[5px] font-montserrat md:mt-[40px] '>
         Industries we deal with
       </h1>
-      <div className='grid grid-cols-1 place-content-center md:grid-cols-2 md:gap-2 md:ml-20 md:w-auto w-[110%]' >
+      <div className='grid grid-cols-1 place-content-center md:grid-cols-2 md:gap-2 md:ml-20 md:w-auto w-[100%]' >
         <div>
           <div className='m-7'>
             <Accordion
@@ -385,7 +385,7 @@ export const TechHomePage = () => {
     </div>
 {/* .......................................................... */}
 <div className='w-[90%] h-auto  md:mb-20 mb-5'>
-<h1 className='mb-3  text-center md:text-start md:ml-[9%] text-[var(--primary-color)]  text-[40px] font-bold m-[5px] font-montserrat md:w-full w-[110%]  md:mt-[40px] mt-5'>
+<h1 className='mb-3  text-center md:text-start md:ml-[9%] text-[var(--primary-color)]  text-[40px] font-bold m-[5px] font-montserrat md:w-full md:mt-[40px] mt-5'>
         Why do our clients value us?
 </h1>
 <div className='md:flex md:flex-row md:justify-evenly md:ml-6  flex flex-col-reverse '>
