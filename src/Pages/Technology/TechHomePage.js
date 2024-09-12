@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import letstalk from "../../Assets/Images/letstakeicon1.png"
 import technologyhomeimg from "../../Assets/Images/technologyhomeheader2.png"
 import highquality from "../../Assets/Images/highquality.jpg"
@@ -18,6 +18,20 @@ import Footer from '../../Components/CommonComponents/Footer';
 
 export const TechHomePage = () => {
   const [expanded, setExpanded] = useState(false);
+  const [bottomRadius, setBottomRadius] = useState('0%');
+  const [scrollHeading, setScrollHeading] = useState("");
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      const maxScroll = 50; // Adjust this value for how quickly you want the border to round
+      const radius = Math.min(scrollTop / maxScroll * 50, 50); // Cap at 50% for a smooth transition
+      setBottomRadius(`${radius}%`);
+      setScrollHeading(scrollTop > 30 ? "ml-[30%]" : "ml-0");
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   // Handle accordion expansion
   const handleChange = (panel) => (event, isExpanded) => {
@@ -36,8 +50,13 @@ export const TechHomePage = () => {
       <div className="techpage md:mt-4 md:mb-16    items-center ">
         <div className="techpage_main2   items-center md:flex md:flex-row md:w-full md:pl-10 pl-2 flex flex-col-reverse ">
           <div className=" md:w-3/6  md:flex md:flex-col md:justify-center md:items-start md:gap-2 md:mt-28 md:ml-8">
-            <h1 className='home_h1 font-extrabold text-[45px] leading-[57px] text-[var(--primary-color)] font-montserrat pb-4 z-50'>Your software <br /> development company!</h1>
-            <p className='home_p font-montserrat text-[16px] leading-[28px] break-words text-[var(--secondary-color)] pr-[70px] z-50'>At BitByBit Solutions, we provide high-quality development services tailored to your needs, from custom websites and mobile apps to enterprise systems. Our expert developers use the latest technologies to deliver reliable, scalable solutions on time. Partner with us to bring your ideas to life and stay ahead in the digital world. </p>
+            <h1 className='home_h1 font-extrabold text-[45px] leading-[57px] text-[var(--primary-color)] font-montserrat pb-4 z-50'>Your Solution</h1>
+            <ul className='list-disc md:ml-8 font-montserrat text-[16px] leading-[28px] break-words text-[var(--secondary-color)] pr-[70px] z-50'>
+              <li>Partner with us to bring your ideas to life and stay ahead in the digital world.</li>
+              <li>Expertise in custom websites, mobile apps, and enterprise systems.</li>
+              <li>High-quality development services tailored to your needs.</li>
+              <li>Latest technologies ensure reliable and scalable solutions.</li>
+                </ul>
             {/* <div className='z-50  flex justify-center items-center bg-[var(--primary-color)] text-[var(--background-color)] rounded-lg  font-montserrat text-[18px] font-bold h-[44px] leading-[24px] w-2/5 gap-[10px] md:p-0 md:w-1/4'>
               <img src={letstalk} width='25px'  />
               <a href="#">Let’s talk</a>
@@ -50,8 +69,25 @@ export const TechHomePage = () => {
           src={technologyhomeimg}
           className="absolute top-0 left-0 w-full h-full object-cover transition-all duration-1000 ease-in-out"
           // style={{  }}
-          // style={{ borderRadius: `0 0 ${bottomRadius} ${bottomRadius}`}}  // Makes the entire image slightly transparent
+          style={{ borderRadius: `0 0 ${bottomRadius} ${bottomRadius}`}}  // Makes the entire image slightly transparent
         />
+        <div
+          className="absolute top-0 left-0 w-full h-full transition-all duration-1000 ease-in-out"
+          style={{
+            backgroundColor: 'rgba(0, 96, 181, 0.5)',
+            borderRadius: `0 0 ${bottomRadius} ${bottomRadius}`
+            // Transparent blue overlay
+          }}
+        ></div>
+        <div
+          className="absolute top-0 -left-2 w-full h-full transition-all duration-1000 ease-in-out"
+          style={{
+            backgroundImage: 'linear-gradient(to right, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 80%)',
+            borderRadius: `0 0 ${bottomRadius} ${bottomRadius}`,
+            filter: 'blur(5px)',
+            pointerEvents: 'none',
+          }}
+        ></div>
         </div>
 
         {/* <div class='multi_box'> */}
@@ -100,7 +136,7 @@ export const TechHomePage = () => {
           </div>
           <h1>From the cloud to customers, we bring all the answers</h1>
         </div> */}
-        <div className="label text-center md:mb-10 mt-5 md:flex md:justify-start md:ml-16 md:gap-3">
+        <div className="label text-center  mt-5 md:flex md:justify-start md:ml-20 md:gap-3">
         <h1 className="relative font-extrabold text-6xl">
   We
   <span className="absolute animate-zoom-design md:ml-4" style={{ color: "#0060b5" }}>Design</span>
@@ -110,8 +146,8 @@ export const TechHomePage = () => {
 
         </div>
       </div>
-      <div className="secondary-section ">
-        <div className="label text-center md:mb-10 mt-5 md:flex md:justify-center md:gap-3">
+      <div className="secondary-section md:mt-36">
+        <div className="label text-center md:mb-10  mt-5 md:flex md:justify-center md:gap-3">
           {/* <h1 className="oneliner font-extrabold text-6xl">
             We <span style={{ color: "#0060b5" }}>design</span> We{" "}
             <span style={{ color: "#0060b5" }}>develop</span> We{" "}
@@ -224,10 +260,13 @@ export const TechHomePage = () => {
                 </div>
               </AccordionSummary>
               <AccordionDetails>
-                <Typography className='md:pl-2'>
-                We have extensive experience in developing secure and efficient software solutions for the BFSI sector. Our services include financial transactions management, risk assessment systems, customer relationship management,
-                 and regulatory compliance solutions.
-                </Typography>
+                <ul className='md:pl-5 list-disc leading-loose '>
+                 <li>Expertise in secure and efficient software for the BFSI sector.</li>
+                 <li>Financial transactions management solutions.</li>
+                 <li>Risk assessment systems for informed decision-making.</li>
+                 <li>Customer relationship management (CRM) solutions.</li>
+                 <li>Regulatory compliance solutions to meet industry standards.</li>
+                </ul>
               </AccordionDetails>
             </Accordion>
           </div>
@@ -257,10 +296,13 @@ export const TechHomePage = () => {
                 </div>
               </AccordionSummary>
               <AccordionDetails>
-                <Typography>
-                Our hospitality software solutions include property management systems (PMS), booking and reservation systems, CRM software, and POS systems to enhance customer service and optimize operations. We use our industry expertise to provide tailored 
-                solutions and stay updated on the latest trends and technologies to keep our clients ahead of the curve.
-                </Typography>
+                <ul className='list-disc leading-loose md:ml-8 '>
+                <li>Property Management Systems (PMS) for efficient hospitality operations.</li>
+                <li>Booking and reservation systems to streamline guest management.</li>
+                <li>CRM software to enhance customer service.</li>
+                <li>POS systems for optimized transaction handling.</li>
+                <li>Tailored solutions leveraging industry expertise and latest technologies.</li>
+                </ul>
               </AccordionDetails>
             </Accordion>
           </div>
@@ -292,10 +334,13 @@ export const TechHomePage = () => {
                 </div>
               </AccordionSummary>
               <AccordionDetails>
-                <Typography>
-                We offer comprehensive e-Governance and e-Commerce solutions, including ticket booking, recharges, money transfers, Aadhaar enrolments, Amazon orders, insurance purchases, utility bill payments, and more, with features like shopping cart integration, payment gateways, customer management, 
-                and data analytics for seamless online transactions.
-                </Typography>
+                <ul className='list-disc leading-loose md:ml-8 '>
+                <li>Comprehensive e-Governance and e-Commerce solutions.</li>
+                <li>Services include ticket booking, recharges, money transfers, and Aadhaar enrolments.</li>
+                <li>Supports Amazon orders, insurance purchases, and utility bill payments.</li>
+                <li>Features shopping cart integration and payment gateways.</li>
+                <li>Customer management and data analytics for seamless online transactions.</li>
+                </ul>
               </AccordionDetails>
             </Accordion>
           </div>
@@ -325,10 +370,13 @@ export const TechHomePage = () => {
                 </div>
               </AccordionSummary>
               <AccordionDetails>
-                <Typography>
-                We offer a wide range of healthcare IT solutions including electronic health records (EHR) systems, appointment scheduling software, telemedicine platforms, and healthcare data analytics. Our solutions are designed 
-                to improve patient care and streamline healthcare operations.
-                </Typography>
+                <ul className='list-disc leading-loose md:ml-8 '>
+                <li>Wide range of healthcare IT solutions.</li>
+                <li>Electronic Health Records (EHR) systems for efficient patient data management.</li>
+                <li>Appointment scheduling software for streamlined bookings.</li>
+                <li>Telemedicine platforms for remote patient care.</li>
+                <li>Healthcare data analytics to improve patient care and operations.</li>
+                </ul>
               </AccordionDetails>
             </Accordion>
           </div>

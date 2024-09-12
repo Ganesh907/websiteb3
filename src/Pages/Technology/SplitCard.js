@@ -21,10 +21,10 @@ export default class SplitCard extends Component {
   render() {
     return (
       <div className="flex flex-col items-center min-h-screen mybg bg-[linear-gradient(135deg,_#0000_20.5%,_#ffffff_0_29.5%,_#0000_0)_0_50px,_linear-gradient(45deg,_#0000_8%,_#ffffff_0_17%,_#0000_0_58%)_100px_0,_linear-gradient(135deg,_#0000_8%,_#ffffff_0_17%,_#0000_0_58%,_#ffffff_0_67%,_#0000_0),_linear-gradient(45deg,_#0000_8%,_#ffffff_0_17%,_#0000_0_58%,_#ffffff_0_67%,_#0000_0_83%,_#ffffff_0_92%,_#0000_0),_rgba(71,74,255,0.05)] bg-[200px_200px]">
-        <h1 className="md:text-start text-center md:pr-80 heading1 font-bold text-[40px] md:mb-2 mb-10 md:ml-0 md:mt-2 mt-10">
+        <h1 className="md:text-start text-center md:pr-80 heading1 font-bold text-[40px] md:mb-2 mb-10 md:ml-0 md:mt-6 mt-10">
           Our Professional Services Portfolio
         </h1>
-        <span className="hidden relative lg:w-[8%] lg:h-[5px] lg:mr-[62%] lg:block lg:rounded-b-[5px]" style={{ backgroundColor: '#002eff' }}></span>
+        {/* <span className="hidden relative lg:w-[8%] lg:h-[5px] lg:mr-[62%] lg:block lg:rounded-b-[5px]" style={{ backgroundColor: '#002eff' }}></span> */}
 
 
         <div
@@ -55,14 +55,12 @@ export default class SplitCard extends Component {
                   <h4 className="heading font-bold text-[30px] smallcontaint my-3 ml-1">
                     Web Development
                   </h4>
-                  <p className="text-gray-700 md:font ">
-                    We offer custom web design and development, creating
-                    responsive and user-friendly interfaces tailored to your
-                    needs. We build secure and scalable architectures, ensuring
-                    your website is robust and future-proof. Regular updates and
-                    maintenance are provided to keep your site running smoothly,
-                    accompanied by comprehensive testing for quality assurance.
-                  </p>
+                  <ul className="text-gray-700 list-disc md:font md:leading-loose ">
+                    <li>Custom web design and development with responsive, user-friendly interfaces.</li>
+                    <li>Secure and scalable architectures for robust, future-proof websites.</li>
+                    <li>Regular updates and maintenance to ensure smooth operation.</li>
+                    <li>Comprehensive testing for quality assurance.</li>
+                  </ul>
                   <div className=" flex flex-row gap-4 mt-4  md:flex  md:justify-end md:items-end md:gap-3">
                   <img src={javascript} className="md:h-10 h-8 filter grayscale hover:grayscale-0 hover:scale-105 transition duration-300" />
                   <img src={reactlogo} className="md:h-10 h-8 filter grayscale hover:grayscale-0 hover:scale-105 transition duration-300" />
@@ -100,13 +98,13 @@ export default class SplitCard extends Component {
               <h4 className="heading font-bold text-[30px] smallcontaint my-3 ml-1 md:pl-6 ">
                 Mobile App Development
               </h4>
-              <p className="text-gray-700 md:h-72 ml-1 font md:p-6 md:w-[74%] ">
-                We provide custom mobile app design and development, ensuring
-                user-friendly interfaces and intuitive UX. Our solutions offer
-                cross-platform compatibility and regular updates and
-                maintenance. We implement robust security measures and seamless
-                integration with backend systems.
-              </p>
+              <ul className="text-gray-700 md:ml-8 list-disc leading-loose md:h-72 ml-1 font md:p-6 md:w-[74%] ">
+                <li>Custom mobile app design and development with user-friendly interfaces and intuitive UX.</li>
+                <li>Regular updates and maintenance to keep apps running smoothly.</li>
+                <li>Cross-platform compatibility for broader reach.</li>
+                <li>Robust security measures for data protection.</li>
+                <li>Seamless integration with backend systems.</li>
+              </ul>
               <div className=" flex flex-row gap-4 mt-4 mb-4 md:flex md:justify-end md:items-end md:gap-3 ">
 
                 <img src={javalogo} className="md:h-10 h-8 filter grayscale hover:grayscale-0 hover:scale-105 transition duration-300" />
@@ -145,14 +143,13 @@ export default class SplitCard extends Component {
                   Enterprise Application Solutions
                 </h4>
                 <div className="md:pl-2  md:flex md:justify-center   ">
-                  <p className="text-gray-700 font md:h-72 md:p-6 md:pl-80 ml-1 md:w-[100%] md:line-break:anywhere">
-                    We provide strategic consulting for enterprise application
-                    architecture and the implementation of innovative enterprise
-                    solutions. Our approach includes the utilization of scalable
-                    and intuitive design frameworks, regular code reviews for
-                    quality and optimization, and integrated DevOps for
-                    efficient workflows.
-                  </p>
+                  <ul className="text-gray-700 list-disc leading-loose font md:h-72 md:p-6 md:pl-80 ml-1 md:w-[100%] md:line-break:anywhere">
+                   <li>Implementation of innovative and scalable enterprise solutions.</li>
+                   <li>Strategic consulting for enterprise application architecture.</li>
+                   <li>Integrated DevOps for efficient and streamlined workflows.</li>
+                   <li>Regular code reviews for quality and optimization.</li>
+                   <li>Utilization of intuitive design frameworks.</li>
+                  </ul>
                   <div className="flex ml-2 mt-4 mb-4 flex-row gap-4 md:flex md:justify-end md:items-end md:gap-3 ">
 
                   <img src={enterpriselogo} className="md:h-10 h-8 filter grayscale hover:grayscale-0 hover:scale-105 transition duration-300" />
