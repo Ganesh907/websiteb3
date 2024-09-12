@@ -48,14 +48,14 @@ export const TechHomePage = () => {
       {/* </div> */}
       {/* ............................................................. */}
       <div className="techpage md:mt-4 md:mb-16    items-center ">
-        <div className="techpage_main2   items-center md:flex md:flex-row md:w-full md:pl-10 pl-2 flex flex-col-reverse ">
-          <div className=" md:w-3/6  md:flex md:flex-col md:justify-center md:items-start md:gap-2 md:mt-28 md:ml-8">
-            <h1 className='home_h1 font-extrabold text-[45px] leading-[57px] text-[var(--primary-color)] font-montserrat pb-4 z-50'>Your Solution</h1>
-            <ul className='list-disc md:ml-8 font-montserrat text-[16px] leading-[28px] break-words text-white pr-[70px] z-50'>
-              <li>Partner with us to bring your ideas to life and stay ahead in the digital world.</li>
-              <li>Expertise in custom websites, mobile apps, and enterprise systems.</li>
-              <li>High-quality development services tailored to your needs.</li>
-              <li>Latest technologies ensure reliable and scalable solutions.</li>
+        <div className="  items-center md:flex md:flex-row md:w-full md:pl-10 pl-2 flex flex-col-reverse ">
+          <div className=" md:w-3/6   md:flex md:flex-col md:justify-center md:items-start md:gap-2 md:mt-28 md:ml-8 ">
+            <h1 className={`home_h1 font-extrabold  text-[45px] leading-[57px] text-[var(--primary-color)] font-montserrat pb-4 z-50 ${scrollHeading}`} style={{ transition: 'margin-left 1s ease-in-out' }}>Your Solution</h1>
+            <ul className={`list-disc md:ml-8 font-montserrat text-[16px] leading-[28px] break-words text-white pr-[70px] z-50`}>
+              <li className={`${scrollHeading} `} style={{ transition: 'margin-left 1s ease-in-out' }}>Partner with us to bring your ideas to life and stay ahead in the digital world.</li>
+              <li className={`${scrollHeading}`} style={{ transition: 'margin-left 1s ease-in-out' }}>Expertise in custom websites, mobile apps, and enterprise systems.</li>
+              <li className={`${scrollHeading}`} style={{ transition: 'margin-left 1s ease-in-out' }}>High-quality development services tailored to your needs.</li>
+              <li className={`${scrollHeading}`} style={{ transition: 'margin-left 1s ease-in-out' }}>Latest technologies ensure reliable and scalable solutions.</li>
                 </ul>
             {/* <div className='z-50  flex justify-center items-center bg-[var(--primary-color)] text-[var(--background-color)] rounded-lg  font-montserrat text-[18px] font-bold h-[44px] leading-[24px] w-2/5 gap-[10px] md:p-0 md:w-1/4'>
               <img src={letstalk} width='25px'  />
@@ -136,8 +136,8 @@ export const TechHomePage = () => {
           </div>
           <h1>From the cloud to customers, we bring all the answers</h1>
         </div> */}
-        <div className="label text-center  mt-5 md:flex md:justify-start md:ml-20 md:gap-3">
-        <h1 className="relative font-extrabold text-6xl text-white">
+        <div className={`label text-center  mt-5 md:flex md:justify-start md:ml-20 md:gap-3 `}>
+        <h1 className={`relative font-extrabold text-6xl text-white ${scrollHeading}`} style={{ transition: 'margin-left 1s ease-in-out' }}>
   We
   <span className="absolute animate-zoom-design md:ml-4" style={{ color: 'var(--primary-color)'}}>Design</span>
   <span className="absolute animate-zoom-develop md:ml-4" style={{ color:'var(--primary-color)' }}>Develop</span>
