@@ -61,7 +61,7 @@ const TypingText = () => {
 
     <div className="  flex flex-col mx-auto my-4  text-4xl font-bold mb-20  ms-10 gap-10 text-gray-800 ">
       <h1 className="  text-blue-500 mr-2 text-7xl ">{constantText}  </h1>
-      <h2 className=" text-white bg-black max-w-max p-3 ">{displayedText}</h2>
+      <h2 className=" text-white  max-w-max p-3 ">{displayedText}</h2>
     </div>
   );
 };

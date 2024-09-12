@@ -76,9 +76,6 @@ const RecHomePage = () => {
     <div className="recrHomepageMain" >
       {/* <Header ></Header> */}
 
-
-
-
       <div className='h-[100vh] flex justify-start bg-[#0060b5] transition-all duration-1000 ease-in-out' style={{ borderRadius: `0 0 ${bottomRadius} ${bottomRadius}` }}>
       <div className='h-14 flex justify-center animate-pulse items-end text-[200px] rounded-full w-14 absolute bottom-0 left-1/2 transform -translate-x-1/2 text-white z-50' style={{ animationDuration: "4000ms" }}>
   <KeyboardDoubleArrowDownIcon className="animate-bounce" style={{ fontSize: "50px", animationDuration: "400ms", animationDelay: "3000ms" }} />
@@ -250,16 +247,16 @@ const RecHomePage = () => {
 
 
 
-<h2 className='text-center text-5xl font-bold mt-10 italic text-[var(--primary-color)]'>Related Services</h2>
+<h2 className='text-center text-5xl font-semibold mt-10 italic text-[var(--primary-color)]'>Related Services</h2>
 <div className='my-10  flex justify-around'
 >
   <div className="sm:w-[20vw] border-2 border-transparent border-gray-100 p-5 hover:translate-x-2 hover:shadow-lg rounded-lg" data-aos="zoom-in" data-aos-duration="700">
 
 <div className="p-10 h-[50%] w-[80%] m-auto sm:w-auto">
-  <img src={AboutUs4} alt="" className="hover:shadow-xl" />
+  <img src={AboutUs4} alt=""  />
 </div>
 <div className="h-[50%] ">
-  <h1 className="font-bold text-center my-2 text-xl hover:-translate-y-2 "> Permanent Placement</h1>
+  <h1 className="font-bold text-center my-2 text-xl "> Permanent Placement</h1>
   <p className='text-[var(--secondary-color)]'>  We help organisations hire expert full-time talent for middle,
   senior and top level positions across diverse sectors.</p>
 
@@ -269,10 +266,10 @@ const RecHomePage = () => {
    <div className="sm:w-[20vw] border-2 border-transparent border-gray-100 p-5 hover:translate-x-2 hover:shadow-lg rounded-lg" data-aos="zoom-in" data-aos-duration="700">
 
 <div className="p-10 h-[50%] w-[80%] m-auto sm:w-auto">
-  <img src={AboutUs4} alt="" className="hover:shadow-xl" />
+  <img src={AboutUs4} alt="" />
 </div>
 <div className="h-[50%] ">
-  <h1 className="font-bold text-center my-2 text-xl hover:-translate-y-2 "> Staffing Solutions</h1>
+  <h1 className="font-bold text-center my-2 text-xl "> Staffing Solutions</h1>
   <p className='text-[var(--secondary-color)]'>  Building an agile and flexible workforce requires an easy and fast
                         access to expert talent, available on short notice. We offer a pool of pre-screened
                         talent, hired on our rolls</p>
@@ -282,10 +279,10 @@ const RecHomePage = () => {
   <div className="sm:w-[20vw] border-2 border-transparent border-gray-100 p-5 hover:translate-x-2 hover:shadow-lg rounded-lg" data-aos="zoom-in" data-aos-duration="700">
 
 <div className="p-10 h-[50%] w-[80%] m-auto sm:w-auto">
-  <img src={AboutUs4} alt="" className="hover:shadow-xl" />
+  <img src={AboutUs4} alt="" />
 </div>
 <div className="h-[50%] ">
-  <h1 className="font-bold text-center my-2 text-xl hover:-translate-y-2 ">Contract to Hire</h1>
+  <h1 className="font-bold text-center my-2 text-xl ">Contract to Hire</h1>
   <p className='text-[var(--secondary-color)]'>  Our Temp-to-Hire services allow organisations the opportunity to
                         evaluate a candidate over a period of time before on-boarding the candidate at the end of the
                         contract period.</p>

@@ -19,7 +19,7 @@ code {
 
 body {
   background-color: var(--background-color);
-  color: var(--primary-color);
+  color: var(--secondary-color);
 }
 @tailwind base;
 @tailwind components;

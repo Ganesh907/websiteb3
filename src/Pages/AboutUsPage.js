@@ -8,7 +8,7 @@ import AboutUs1 from "../Assets/Images/AboutUs1.jpg";
 import AboutUs2 from "../Assets/Images/AboutUs2.png";
 import AboutUs3 from "../Assets/Images/AboutUs3.png";
 import AboutUs4 from "../Assets/Images/AboutUs4.jpg";
-// import ProfileImg from "../Assets/Images/ProfileImg.png";
+import ProfileImg from "../Assets/Images/ProfileImg.png";
 import ITConsulting from "../Assets/Images/ITconsulting.jpg";
 
 import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
@@ -183,7 +183,7 @@ const AboutUsPage = () => {
           </div>
           <div className="w-[50%]  flex flex-col justify-center items-center text-[var(--primary-color)]">
 
-            {/* <img src={ProfileImg} className="h-96 w-auto" /> */}
+            <img src={ProfileImg} className="h-96 w-auto" />
             <h1 className="text-xl font-bold "> FOUNDER NAME</h1>
             <h1 className="text-[var(--secondary-color)]">Founder & CEO</h1>
           </div>
@@ -352,10 +352,10 @@ const AboutUsPage = () => {
           </h1>
           <div className="px-20 sm:px-0 sm:h-[80vh] flex justify-center sm:flex-row flex-col item-center p-10 gap-10">
 
-            <div className="sm:w-[20vw] border-2  border-gray-100 bg-gray-100  hover:bg-gray-200 p-5 hover:shadow-lg rounded-lg" data-aos="zoom-in" data-aos-duration="700">
+            <div className="sm:w-[20vw] hover:border-b-4  border-[var(--primary-color)] bg-gray-100  hover:bg-gray-200 p-5 hover:shadow-lg rounded-lg" data-aos="zoom-in" data-aos-duration="700">
 
               <div className="p-10 h-[50%] w-[80%] m-auto sm:w-auto">
-                <img src={AboutUs1} alt="" className="hover:shadow-xl" />
+                <img src={AboutUs1} alt=""  />
               </div>
               <div className="h-[50%] ">
                 <h1 className="font-bold text-center my-2 text-xl  ">TRANSPARENCY</h1>
@@ -364,9 +364,9 @@ const AboutUsPage = () => {
               </div>
             </div>
 
-            <div className="sm:w-[20vw] border-2  border-gray-100 bg-gray-100  hover:bg-gray-200 p-5 hover:shadow-lg rounded-lg" data-aos="zoom-in" data-aos-duration="700">
+            <div className="sm:w-[20vw]  hover:border-b-4  border-[var(--primary-color)] bg-gray-100  hover:bg-gray-200 p-5 hover:shadow-lg rounded-lg" data-aos="zoom-in" data-aos-duration="700">
               <div className="p-10 h-[50%] w-[80%] m-auto sm:w-auto">
-                <img src={AboutUs2} alt="" className="hover:drop-shadow-xl" />
+                <img src={AboutUs2} alt=""  />
               </div>
               <div className="h-[50%]">
                 <h1 className="font-bold text-center my-2 text-xl">RESPONSIBILITY</h1>
@@ -374,9 +374,9 @@ const AboutUsPage = () => {
                   results.</p>
               </div>
             </div>
-            <div className="sm:w-[20vw] border-2  border-gray-100 bg-gray-100  hover:bg-gray-200 p-5 hover:shadow-lg rounded-lg" data-aos="zoom-in" data-aos-duration="700">
+            <div className="sm:w-[20vw]  hover:border-b-4  border-[var(--primary-color)] bg-gray-100  hover:bg-gray-200 p-5 hover:shadow-lg rounded-lg" data-aos="zoom-in" data-aos-duration="700">
               <div className="p-10 h-[50%] w-[80%] m-auto sm:w-auto">
-                <img src={AboutUs3} alt="" className="hover:drop-shadow-xl" />
+                <img src={AboutUs3} alt=""  />
               </div>
               <div className="h-[50%]">
                 <h1 className="font-bold text-center my-2 text-xl">ETHICS</h1>
@@ -384,9 +384,9 @@ const AboutUsPage = () => {
                   it,we do it in a right way.</p>
               </div>
             </div>
-            <div className="sm:w-[20vw] border-2  border-gray-100 bg-gray-100  hover:bg-gray-200 p-5 hover:shadow-lg rounded-lg" data-aos="zoom-in" data-aos-duration="700">
+            <div className="sm:w-[20vw]  hover:border-b-4  border-[var(--primary-color)] bg-gray-100  hover:bg-gray-200 p-5 hover:shadow-lg rounded-lg" data-aos="zoom-in" data-aos-duration="700">
               <div className="p-10 h-[50%] w-[80%] m-auto sm:w-auto">
-                <img src={AboutUs4} alt="" className="hover:shadow-xl" />
+                <img src={AboutUs4} alt=""  />
               </div>
               <div className="h-[50%]">
                 <h1 className="font-bold text-center my-2 text-xl">TEAMWORK</h1>
