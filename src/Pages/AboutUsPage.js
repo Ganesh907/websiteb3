@@ -398,7 +398,7 @@ const AboutUsPage = () => {
           </div>
         </div>
       </div>
-      <div className="h-[100vh]">
+      {/* <div className="h-[100vh]">
         CORE VALUES
         Intergrity
         Client First
@@ -406,7 +406,7 @@ const AboutUsPage = () => {
         Respect
         Accountability
 
-      </div>
+      </div> */}
 
       <Footer />
     </div>
