@@ -21,7 +21,7 @@ import { Padding } from '@mui/icons-material';
 import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
 import TypingText from '../../Components/CommonComponents/TypingText';
 import Footer from '../../Components/CommonComponents/Footer';
-
+import jobinterview from '../../Assets/Videos/jobinterview.mp4'
 // var target = $('canvas');
 // var targetHeight = target.outerHeight();
 
@@ -142,21 +142,36 @@ const RecHomePage = () => {
 
 
 
-        <img
+        {/* <img
           src={RecruitmentHomeBg}
           className="absolute top-0 left-0 w-full h-full object-cover transition-all duration-1000 ease-in-out"
           // style={{  }}
           style={{ borderRadius: `0 0 ${bottomRadius} ${bottomRadius}`}}  // Makes the entire image slightly transparent
-        />
-        <div
+        /> */}
+        <video
+          autoPlay
+          loop
+          muted
+          className="absolute top-0 left-0 w-full h-full object-cover  transition-all duration-1000 ease-in-out"
+          style={{
+            borderRadius: `0 0 ${bottomRadius} ${bottomRadius}`,
+            // backgroundSize: 'cover',
+            // backgroundRepeat: 'no-repeat',
+            // backgroundPosition: 'center',
+          }}
+        >
+          <source src={jobinterview} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        {/* <div
           className="absolute top-0 left-0 w-full h-full transition-all duration-1000 ease-in-out"
           style={{
             backgroundColor: 'rgba(0, 96, 181, 0.5)',
             borderRadius: `0 0 ${bottomRadius} ${bottomRadius}`
             // Transparent blue overlay
           }}
-        ></div>
-        <div
+        ></div> */}
+        {/* <div
           className="absolute top-0 -left-2 w-full h-full transition-all duration-1000 ease-in-out"
           style={{
             backgroundImage: 'linear-gradient(to right, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 80%)',
@@ -164,7 +179,7 @@ const RecHomePage = () => {
             filter: 'blur(5px)',
             pointerEvents: 'none',
           }}
-        ></div>
+        ></div> */}
 
       </div>
 
