@@ -8,7 +8,8 @@
 }
 
 .dropdown-menuu li {
-  background: white;
+  background: black;
+  padding: 10px;
   position: relative;
   overflow: hidden; /* Ensures the pseudo-element stays within bounds */
 }
@@ -41,15 +42,17 @@
 
 .dropdown-link {
   font-size: 15px;
+  text-align: center;
   display: block;
   height: 100%;
   width: 100%;
   font-family: Montserrat;
   text-decoration: none;
-  color: #0060b5;
+  color: white;
   padding: 12px 20px;
   position: relative; /* Ensure the link is positioned above the pseudo-element */
   z-index: 1; /* Ensure the link text is above the background animation */
+ 
 }
 
 @media screen and (max-width: 960px) {

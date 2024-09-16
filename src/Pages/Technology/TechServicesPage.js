@@ -22,9 +22,11 @@ import api_integration from "../../Assets/Images/api_integration.jpeg";
 import hardwaresoftware from "../../Assets/Images/Hardwaresoftware.jpg";
 import cloudandinfra from "../../Assets/Images/cloud_infra.jpg";
 import workflow from "../../Assets/Images/workflow_img.jpg";
+import TechServicesVideo from "../../Assets/Videos/TechServicesVideo.mp4";
 import "./TechServicesPage.css";
+import HeroSection from "../../Components/CommonComponents/HeroSection";
 
-import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
+import KeyboardDoubleArrowDownIcon from "@mui/icons-material/KeyboardDoubleArrowDown";
 // import "../../components/Services/TechnologyService.scss";
 // import Header from "../Header/header";
 import Footer from "../../Components/CommonComponents/Footer";
@@ -32,68 +34,26 @@ import TypingTextAnimation from "../../Components/CommonComponents/TypingTextAni
 // import techservice from "../../Assets/Images/techservice.png";
 
 export const TechServicesPage = (props) => {
-
-  const [bottomRadius, setBottomRadius] = useState('0%');
-
-  useEffect(() => {
-          const handleScroll = () => {
-                  const scrollTop = window.scrollY;
-                  const maxScroll = 50; // Adjust this value for how quickly you want the border to round
-                  const radius = Math.min(scrollTop / maxScroll * 50, 50); // Cap at 50% for a smooth transition
-                  setBottomRadius(`${radius}%`);
-          };
-
-          window.addEventListener('scroll', handleScroll);
-          return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   return (
     <>
-    <div
-          className="absolute top-0 -left-2 w-full z-10 h-full"
-          style={{
-            backgroundImage: 'linear-gradient(to right, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 80%)',
-            borderRadius: `0 0 ${bottomRadius} ${bottomRadius}`,
-            filter: 'blur(5px)',
-            pointerEvents: 'none',
-          }}
-        ></div>
-       <div className='h-14 flex justify-center animate-pulse items-end text-[200px] rounded-full w-14 absolute bottom-0 left-1/2 transform -translate-x-1/2 text-white z-50' style={{ animationDuration: "4000ms" }}>
-  <KeyboardDoubleArrowDownIcon className="animate-bounce" style={{ fontSize: "50px", animationDuration: "400ms", animationDelay: "3000ms" }} />
-</div>
-
-
-      <div className="service-div-main">
-        
-
-                <div className="w-full relative">
-  <img src={workflowimage} className="w-full h-[100vh]"   style={{
-          borderRadius: `0 0 ${bottomRadius} ${bottomRadius}`,
-  }} />
-  <div className=" w-[100vw] z-20 absolute flex justify-start items-center top-0 h-[100vh] "  style={{
-          borderRadius: `0 0 ${bottomRadius} ${bottomRadius}`,
-  }}>
-    <h1>
-      <TypingTextAnimation />
-    </h1>
-  </div>
-</div>
-
-
-                
-        {/* /////////////////////////////////////////////////////////// */}
-       
-
-        <h1
-          className="techservice_heading  md:text-start  md:ml-10 text-center"
-
+      <div className="service-div-main ">
+        <HeroSection
+          videoUrl={TechServicesVideo}
+          videoOpacity={25}
+          MarginAnimtion={true}
         >
+          <div className="h-[100vh] w-[90vw] flex flex-col justify-end items-end pb-20 ">
+            <TypingTextAnimation />
+          </div>
+        </HeroSection>
+
+        <h1 className="techservice_heading  md:text-start  md:ml-10 text-center">
           Services we provide{" "}
         </h1>
         {/* <span className="w-[8%] h-[5px] ml-[3%] hidden md:block rounded-b-[5px]" style={{backgroundColor:'#002eff'}}></span>       */}
         <section className=" flex  justify-center items-center  w-full h-auto pt-2">
           <div className="techservice_bg w-full h-auto pb-4   flex  flex-col items-center ">
-            <div
+            {/* <div
               className="techservice_p md:w-[80%] md:mb-0 mb-4 md:pl-0 pl-2 text-black"
               // data-aos="fade-up"
               // data-aos-duration="4000"
@@ -103,15 +63,13 @@ export const TechServicesPage = (props) => {
               drive efficiency and growth with a strong focus on reliability,
               security, and performance. Trust us to deliver the best software
               solutions, customized for your specific requirements.
-            </div>
+            </div> */}
 
             <div className="techservice_bgcards md:grid md:grid-cols-4 md:w-[80%] md:gap-y-4 md:mt-4 md:py-2 md:pl-2  grid grid-cols-1 gap-y-6 ">
               <div
                 className="techservice_box md:w-[90%] md:h-46 md:m-0 md:flex md:flex-col md:justify-start md:items-start
             flex flex-col justify-center items-center  "
               >
-
-
                 <div class="wrapper">
                   <div class="card">
                     <img src={ITConsulting} />
@@ -134,8 +92,6 @@ export const TechServicesPage = (props) => {
                 className="techservice_box md:w-[90%] md:h-46 md:m-0 md:flex md:flex-col md:justify-start md:items-start
             flex flex-col justify-center items-center  "
               >
-
-
                 <div class="wrapper">
                   <div class="card">
                     <img src={androiddev} />
@@ -158,7 +114,6 @@ export const TechServicesPage = (props) => {
                 className="techservice_box md:w-[90%] md:h-46 md:m-0 md:flex md:flex-col md:justify-start md:items-start
             flex flex-col justify-center items-center  "
               >
-
                 <div class="wrapper">
                   <div class="card">
                     <img src={itservice} />
@@ -534,7 +489,7 @@ export const TechServicesPage = (props) => {
          <h1 className="heading2">Wh<span className="">y</span> us</h1>
         </div> */}
 
-          {/* <div className="absolute flex items-center justify-center bg-white">
+        {/* <div className="absolute flex items-center justify-center bg-white">
             <h1 className="heading2">
               Wh<span className="under">y</span> us
             </h1>
