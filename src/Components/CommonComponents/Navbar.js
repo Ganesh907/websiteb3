@@ -3,6 +3,7 @@ import { Dropdown1, Dropdown2 } from "./Dropdown";
 // import B3logof from "../../assets/images/B3logof.png";
 import { Link } from "react-router-dom";
 import "../../CSS_Files/Navbar.css"
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 
 function Header() {
   const [click, setClick] = useState(false);
@@ -45,6 +46,22 @@ function Header() {
       setDropdown2(false);
     }
   };
+  
+  const [scrolled, setScrolled] = useState(false);
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [lastScrollY]);
+
+  
+    useEffect(() => {
+      window.addEventListener("scroll", handleScroll);
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
+    }, []);
 
   const handleScroll = () => {
     const currentScrollY = window.scrollY;
@@ -54,26 +71,29 @@ function Header() {
       setShowNavbar(false);
     }
     setLastScrollY(currentScrollY);
+    if (window.scrollY > window.innerHeight/2) {
+      setScrolled(true);
+    } else {
+      setScrolled(false);
+    }
   };
 
  
   
 
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [lastScrollY]);
+ 
 
   return (
     <>
       {/* <nav className={`header-navbar ${showNavbar ? "show" : "hide"}`}> */}
-      <nav className={`header-navbar ${showNavbar ? "show" : "hide"}`} style={{ zIndex: 100 }}>
+      <nav className={`header-navbar ${scrolled ? "scrolled" : ""} ${showNavbar ? "show" : "hide"}`} style={{ zIndex: 100 }}
+      >
 
 
 
-        <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
+        <Link to="/" className="navbar-logo flex  justify-center items-center" onClick={closeMobileMenu}>
+        <div className="h-7 w-7 bg-[#0060b5] text-white rounded-sm text-sm flex items-center justify-center me-1">B<sup>3</sup></div>
+          
           BitByBit Solutions
         </Link>
         <div className="menu-icon" onClick={handleClick}>
@@ -95,7 +115,7 @@ function Header() {
               className="nav-links"
               onClick={closeMobileMenu}
             >
-              Technology <i className="fas fa-caret-down" />
+              Technology <ArrowDropDownIcon/>
             </Link>
             {dropdown1 && <Dropdown1 />}
           </li>
@@ -109,7 +129,7 @@ function Header() {
               className="nav-links"
               onClick={closeMobileMenu}
             >
-              Recruitment <i className="fas fa-caret-down" />
+              Recruitment <ArrowDropDownIcon/>
             </Link>
             {dropdown2 && <Dropdown2 />}
           </li>
@@ -130,13 +150,13 @@ function Header() {
           </li>
           
           <li className="nav-item">
-            <Link to="/careers" className="nav-links" onClick={closeMobileMenu}>
-              Career
+            <Link to="/blogs" className="nav-links" onClick={closeMobileMenu}>
+              Blogs
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="/blogs" className="nav-links" onClick={closeMobileMenu}>
-              Blogs
+            <Link to="/careers" className="nav-links rounded-md border-2 bg-yellow-400 text-black hover:bg-transparent hover:text-yellow-400 border-black hover:border-yellow-400" onClick={closeMobileMenu}>
+              Careers
             </Link>
           </li>
         </ul>

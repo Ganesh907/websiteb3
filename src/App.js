@@ -6,7 +6,6 @@ import { TechClientsPage } from "./Pages/Technology/TechClientsPage";
 import { RecServicesPage } from "./Pages/Recruitment/RecServicesPage";
 import { RecClientsPage } from "./Pages/Recruitment/RecClientsPage";
 import { ContactUsPage } from "./Pages/ContactUsPage";
-import { CareerPage } from "./Pages/CareerPage";
 import RecHomePage from "./Pages/Recruitment/RecHomePage";
 import AboutUsPage from "./Pages/AboutUsPage";
 import { TechServicesPage } from "./Pages/Technology/TechServicesPage";
@@ -15,6 +14,7 @@ import { useEffect, useState } from "react";
 import KeyboardDoubleArrowUpIcon from '@mui/icons-material/KeyboardDoubleArrowUp';
 import { Blogs } from "./Pages/Blogs";
 import { ColorTheme } from "./Components/ColorTheme";
+import CareerPage from "./Pages/CareerPage";
 
 function App() {
   const [isVisible, setIsVisible] = useState(false);

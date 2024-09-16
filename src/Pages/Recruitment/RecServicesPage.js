@@ -1,9 +1,13 @@
 import React, { useEffect, useRef, useState } from 'react'
 import RecServiceBackground from '../../Assets/Images/RecServiceBackground.jpg'
+import OurServices from '../../Assets/Videos/OurServices.mp4'
 import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import Footer from '../../Components/CommonComponents/Footer';
+import HeroSection from '../../Components/CommonComponents/HeroSection';
+import { LockOpenOutlined } from '@mui/icons-material';
+import SearchIcon from '@mui/icons-material/Search';
 
 export const RecServicesPage = () => {
 
@@ -73,40 +77,44 @@ export const RecServicesPage = () => {
     marqueeRef2.current.start(); // Start the marquee on mouse leave
   };
 
-  const [bottomRadius, setBottomRadius] = useState('0%');
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.scrollY;
-      const maxScroll = 50; // Adjust this value for how quickly you want the border to round
-      const radius = Math.min(scrollTop / maxScroll * 50, 50); // Cap at 50% for a smooth transition
-      setBottomRadius(`${radius}%`);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
   return (
     <>
-      <div
-        className="relative h-[100vh] shadow-xl bg-[#0060b5] transition-all duration-1000 ease-in-out"
-        style={{
-          borderRadius: `0 0 ${bottomRadius} ${bottomRadius}`, // Dynamic bottom border radius
-          backgroundImage: `
-      
-      linear-gradient(rgba(0, 96, 181, 0.5), rgba(0, 96, 181, 0.5)), /* Transparent blue overlay */
-      url(${RecServiceBackground}) /* Background image */
-    `,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          // filter: 'blur(5px)',  // Adds blur effect
-        }}
+
+      <HeroSection
+        videoUrl={OurServices}
+        videoOpacity={20}
+        MarginAnimtion={false}
       >
-        <div className='h-14 flex justify-center animate-pulse items-end text-[200px] rounded-full w-14 absolute bottom-0 left-1/2 transform -translate-x-1/2 text-white z-50' style={{ animationDuration: "4000ms" }}>
-          <KeyboardDoubleArrowDownIcon className="animate-bounce" style={{ fontSize: "50px", animationDuration: "400ms", animationDelay: "3000ms" }} />
+        <div className="h-[100vh] w-[90vw] ms-[5vw] flex flex-col justify-center items-center font-bold drop-shadow-xl text-center">
+          <div className=" flex items-center">
+            <h1 className="text-[#0060b5] text-7xl font-bold drop-shadow-xl ">
+              Our Recruitment Services
+            </h1>
+          </div>
+
+
+
+          <div className=" flex items-center">
+            <h1 className="drop-shadow-lg text-yellow-400 text-4xl my-5 font-semibold border-b-4 border-[#0060b5] pb-1">
+              Tailored Solutions for Your Hiring Needs
+
+              {/* Let Us Find the <span className='text-yellow-400 text-3xl'>Perfect Fit</span> for Your Company */}
+            </h1>
+            {/* <SearchIcon className="text-[#0060b5] scale-75" sx={{ fontSize: '60px' }} /> */}
+          </div>
+          <div className="w-full flex-shrink-0  bg-transparent text-white drop-shadow-xl">
+            <ul>
+              <li>Explore how our customized recruitment strategies can help you find the perfect fit for your team</li>
+              <li>From talent acquisition to onboarding, see how our services can enhance your hiring strategy</li>
+            </ul>
+          </div>
+
         </div>
-      </div>
+
+
+      </HeroSection>
+
 
       <div className="text-center   mt-10">
         <h1 className="font-bold text-xl " style={{ color: "var(--primary-color)" }}>
@@ -136,7 +144,8 @@ export const RecServicesPage = () => {
           </div>
           <div className='h-1/2 bg-gray-100 text-black flex flex-col justify-evenly -ms-10 w-1/2 px-10 shadow-lg  '>
             <h1 className='text-2xl font-bold '>Permanent Staffing</h1>
-            <p className='text-start '>  We provide skilled, highly skilled and professional
+            <p className='text-start '>
+              {/* We provide skilled, highly skilled and professional
               recruitment services. Working closely with a wide range
               of clients as an extension of their own teams, we deliver
               bespoke recruitment solutions.Hiring the right candidates
@@ -144,7 +153,16 @@ export const RecServicesPage = () => {
               benefits over the long term. We help you find the
               best people for your projects through our
               tried-and-tested processes, with a quick
-              turn-around- time.
+              turn-around- time. */}
+              <ul className='list-disc'>
+                <li>We provide skilled, highly skilled, and professional recruitment services.</li>
+                <li>We work closely with a wide range of clients as an extension of their own teams.</li>
+                <li>We deliver bespoke recruitment solutions tailored to your specific needs.</li>
+                <li>Hiring the right candidates for permanent roles is a long-term commitment.</li>
+                <li>We find the best people for your projects through our tried-and-tested processes.</li>
+                <li>Our services provide a fast turnaround to meet your recruitment needs.</li>
+              </ul>
+
             </p></div>
         </div>
 
@@ -154,7 +172,8 @@ export const RecServicesPage = () => {
           </div>
           <div className='h-1/2 bg-gray-100  z-10 text-black flex flex-col justify-evenly  shadow-lg -me-10 w-1/2 px-10'>
             <h1 className='text-2xl font-bold '>Temporary Staffing </h1>
-            <p className='text-start'>   Our Temporary Staffing can help you save valuable
+            <p className='text-start'>
+              {/* Our Temporary Staffing can help you save valuable
               time and resources. We are equipped to handle the
               entire life cycle of the employee including the
               recruitment process, background checks, onboarding,
@@ -164,7 +183,23 @@ export const RecServicesPage = () => {
               ensuring that the team is prepared to excel in their roles.
               We understand that each business is unique, and
               we work closely with you to customize our services
-              to your specific needs.
+              to your specific needs. */}
+              <ul className='list-disc'>
+                <li>Our Temporary Staffing can help you save valuable time and resources.</li>
+
+               
+              
+               
+                <li>We handle the entire life cycle of the employee, including:</li>
+               
+               <p className='text-[#0060b5] italic'>recruitment process, background checks, onboarding,
+                placement, payroll management, monthly compliance,
+                and other staffing needs
+                </p> 
+                <li>We also assist with employee training and development.</li>
+                <li>We tailor our services to fit your unique business needs.</li>
+              </ul>
+
             </p>
           </div>
         </div>
@@ -175,12 +210,22 @@ export const RecServicesPage = () => {
           </div>
           <div className='h-1/2 bg-gray-100 text-black flex flex-col justify-evenly -ms-10 w-1/2 px-10 shadow-lg '>
             <h1 className='text-2xl font-bold '>Recruitment process outsourcing (RPO)</h1>
-            <p className='text-start '>    In our Recruitment Process Outsourcing (RPO)
+            <p className='text-start '>  
+                {/* In our Recruitment Process Outsourcing (RPO)
               service, we take up the task of identifying potential
               candidates for your recruitments. The approach aims
               to deliver well-suited candidates to you while
-              minimizing the  participation of your HR personnel.
-            </p></div>
+              minimizing the  participation of your HR personnel. */}
+              <ul className='list-disc'>
+  <li>In our Recruitment Process Outsourcing (RPO) service, we:</li>
+  <ul className='list-decimal'>
+    <li>Identify potential candidates for your recruitment needs.</li>
+    <li>Deliver well-suited candidates while minimizing HR involvement.</li>
+  </ul>
+</ul>
+
+            </p>
+            </div>
         </div>
 
 
@@ -211,7 +256,7 @@ export const RecServicesPage = () => {
         </marquee>
 
 
-        <h1 className="font-bold text-xl text-center mt-10  uppercase text-[var(--primary-color)]">
+        {/* <h1 className="font-bold text-xl text-center mt-10  uppercase text-[var(--primary-color)]">
           B3 Expertise into Contract Hiring
         </h1>
 
@@ -231,7 +276,7 @@ export const RecServicesPage = () => {
               <ArrowForwardIcon className="ml-2  text-[var(--primary-color)]" />
             </span>
           ))}
-        </marquee>
+        </marquee> */}
       </div>
 
 
@@ -257,14 +302,14 @@ export const RecServicesPage = () => {
 
             </div>
             <div className='bg-green-200 h-1/3 w-full'>
-            <img src={RecServiceBackground}  alt=""/></div>
-          </div> 
+              <img src={RecServiceBackground} alt="" /></div>
+          </div>
 
 
 
           <div className='w-full'>
             <div className='bg-green-200 h-1/3 w-full'>
-            <img src={RecServiceBackground}  alt=""/></div>
+              <img src={RecServiceBackground} alt="" /></div>
             <div className='p-5'>
               <h1 className='text-md font-bold text-[var(--primary-color)] uppercase'>
                 We assure a CLIENT to
@@ -295,7 +340,7 @@ export const RecServicesPage = () => {
               </ul>
             </div>
             <div className='bg-green-200 h-1/3 w-full'>
-            <img src={RecServiceBackground}  alt=""/></div>
+              <img src={RecServiceBackground} alt="" /></div>
           </div>
 
 
@@ -304,7 +349,7 @@ export const RecServicesPage = () => {
 
           <div className='w-full'>
             <div className='bg-green-200 h-1/3 w-full'>
-            <img src={RecServiceBackground}  alt=""/></div>
+              <img src={RecServiceBackground} alt="" /></div>
             <div className='p-4'>
               <h1 className='text-md font-bold text-[var(--primary-color)] uppercase'>
                 Competitive Rates & Delivery
@@ -329,8 +374,8 @@ export const RecServicesPage = () => {
       <div>
 
 
-        <p className='text-lg italic text-[var(--primary-color)] text-center m-5 underline pb-2'style={{ textDecorationSkip: 'ink', textDecorationThickness: '0.1em', textDecorationColor: 'currentColor', textUnderlineOffset: '0.4em' }}>
-        “At BitByBit, it’s all about YOU! Whether you’re hunting for a new full-time role or just need a temp role, our recruiters are here to help you out.”
+        <p className='text-lg italic text-[var(--primary-color)] text-center m-5 underline pb-2' style={{ textDecorationSkip: 'ink', textDecorationThickness: '0.1em', textDecorationColor: 'currentColor', textUnderlineOffset: '0.4em' }}>
+          “At BitByBit, it’s all about YOU! Whether you’re hunting for a new full-time role or just need a temp role, our recruiters are here to help you out.”
         </p>
 
 

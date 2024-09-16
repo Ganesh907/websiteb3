@@ -6,13 +6,13 @@ export const ColorTheme = () => {
 
         // Load colors from localStorage, or use default colors if not set
         const [primaryColor, setPrimaryColor] = useState(
-                localStorage.getItem("primaryColor") || "#3498db"
+                localStorage.getItem("primaryColor") || "#0060b5"
         );
         const [secondaryColor, setSecondaryColor] = useState(
-                localStorage.getItem("secondaryColor") || "#2ecc71"
+                localStorage.getItem("secondaryColor") || "black"
         );
         const [backgroundColor, setBackgroundColor] = useState(
-                localStorage.getItem("backgroundColor") || "#f5f5f5"
+                localStorage.getItem("backgroundColor") || "white"
         );
 
 
@@ -35,7 +35,7 @@ export const ColorTheme = () => {
 
         return (
               
-                                <div className="fixed top-4 right-4 flex flex-row space-x-2">
+                                <div className="fixed top-4 right-4 flex flex-col space-y-2">
                                         {/* Primary Color Picker */}
                                         <div className="relative">
                                                 <input

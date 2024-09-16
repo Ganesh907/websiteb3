@@ -1,5 +1,6 @@
 .header-navbar {
-  background: white;
+  background: transparent;
+  
   height: 65px;
   display: flex;
   justify-content: center; /* Center items horizontally */
@@ -10,19 +11,27 @@
   left: 50%;               /* Shift the navbar to the center horizontally */
   transform: translateX(-50%); /* Adjust the shift to truly center it */
   font-size: 1.2rem;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, 
-              rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-  width: 70%;              /* Set a width for the navbar */
-  border-radius: 30px;
+
+  width: 85%;              /* Set a width for the navbar */
+ 
   margin-top: 15px;         /* Add some space from the top */
 }
+.header-navbar.scrolled {
+  background-color: rgba(0, 0, 0, 0.9); /* Apply background on scroll */
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, 
+  rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  border-radius: 30px;
+}
+
 
       
       .navbar-logo {
         color: #0060b5;
+        /* font-style: oblique; */
         justify-self: start;
-        margin-left: 20px;
+        margin-left: 16px;
         cursor: pointer;
+        font-weight: 700;
         font-family: Montserrat;
         text-decoration: none;
         font-size: 1.7rem;
@@ -56,14 +65,21 @@
       }
       
       .nav-links {
-        color: #0060b5;
+        /* color: #0060b5; */
+        color:white;
         text-decoration: none;
         padding: 0.3rem 0.7rem;
         font-family: Montserrat;
-        font-size: 17px;
-        font-weight: 700;
+        font-size: 20px;
+        /* font-style: oblique; */
+        /* font-weight: 700; */
         justify-items: center;
         text-align: center;
+        border:2px solid transparent;
+      }
+      .nav-links:hover {
+        border:2px solid white;
+        border-radius: 6px;
       }
       
       .fa-bars {
