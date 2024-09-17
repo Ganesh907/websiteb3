@@ -12,7 +12,7 @@ import { Padding } from '@mui/icons-material';
 import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
 import TypingText from '../Components/CommonComponents/TypingText';
 import Footer from '../Components/CommonComponents/Footer';
-import jobinterview from '../Assets/Videos/jobinterview.mp4'
+import CareerVideo from '../Assets/Videos/CareerVideo.mp4'
 
 
 const CareerPage = () => {
@@ -57,29 +57,30 @@ const CareerPage = () => {
     <div >
 
       <HeroSection
-        videoUrl={jobinterview}
+        videoUrl={CareerVideo}
         videoOpacity={20}
         MarginAnimtion={true}
       >
 
 
-        <div className={`z-10 w-[50vw] h-[100vh] flex justify-end transition-all duration-300  items-end`}>
+        <div className={`z-10 w-[50vw] h-[100vh] flex justify-end transition-all duration-300 mt-[10%]  items-end`}>
           <div className=" w-full font-bold mx-10  my-20 drop-shadow-xl">
             <div className=" flex items-center">
               <h1 className="text-[#0060b5] text-5xl font-bold  mr-2 ">
-                Find Your Job
+                Find Your <span className='text-yellow-400'>
+                  Job</span>
               </h1>
-              <SearchIcon className="text-white scale-75" sx={{ fontSize: '60px' }} />
+              {/* <SearchIcon className="text-white scale-75" sx={{ fontSize: '60px' }} /> */}
             </div>
 
 
 
             <div className=" flex items-center">
-              <h1 className="drop-shadow-lg text-white text-5xl my-10 font-bold border-b-8 border-[#0060b5] pb-1">
-                Build Your <TypingText word="CAREER" />
+              <h1 className="drop-shadow-lg text-white text-4xl my-10 font-bold border-b-8 border-[#0060b5] pb-1">
+                Transform Your <TypingText word="CAREER"  />
               </h1>
 
-              <TrendingUpOutlinedIcon className="text-yellow-300 animate-pulse" sx={{ fontSize: '70px' }} />
+             
             </div>
 
             <div className="relative w-full h-32 overflow-hidden">
@@ -124,7 +125,7 @@ const CareerPage = () => {
 
 
 
-      <h2 className='text-center text-5xl font-semibold mt-10 italic text-[var(--primary-color)]'>Related Services</h2>
+      {/* <h2 className='text-center text-5xl font-semibold mt-10 italic text-[var(--primary-color)]'>Related Services</h2>
       <div className='my-10  flex justify-around'
       >
         <div className="sm:w-[20vw] border-2 border-transparent border-gray-100 p-5 hover:translate-x-2 hover:shadow-lg rounded-lg" data-aos="zoom-in" data-aos-duration="700">
@@ -166,8 +167,9 @@ const CareerPage = () => {
 
           </div>
         </div>
-      </div>
+      </div> */}
 
+<h1 className='h-[100vh] flex justify-center items-center text-4xl text-[var(--primary-color)]'>Work In Progress.....</h1>
 
       <div className='recr-footer'>
         <Footer /></div>

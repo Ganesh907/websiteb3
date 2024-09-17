@@ -43,8 +43,9 @@ const TypingText = ({word}) => {
 
   return (
 <>
-      <span >{displayedText}</span>
+      <span className='text-yellow-400'>{displayedText}</span>
       <span className="animate-blink">|</span>
+      
       </>
   );
 };

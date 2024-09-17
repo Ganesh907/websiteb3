@@ -84,29 +84,28 @@ export const RecServicesPage = () => {
       <HeroSection
         videoUrl={OurServices}
         videoOpacity={20}
-        MarginAnimtion={false}
+        MarginAnimtion={true}
       >
-        <div className="h-[100vh] w-[90vw] ms-[5vw] flex flex-col justify-center items-center font-bold drop-shadow-xl text-center">
-          <div className=" flex items-center">
+        <div className="h-[100vh]  ms-[2vw] flex flex-col justify-end pb-24 items-start font-bold drop-shadow-xl ">
+          {/* <div className=" flex items-center">
             <h1 className="text-[#0060b5] text-7xl font-bold drop-shadow-xl ">
               Our Recruitment Services
             </h1>
-          </div>
+          </div> */}
 
 
 
-          <div className=" flex items-center">
-            <h1 className="drop-shadow-lg text-yellow-400 text-4xl my-5 font-semibold border-b-4 border-[#0060b5] pb-1">
-              Tailored Solutions for Your Hiring Needs
-
-              {/* Let Us Find the <span className='text-yellow-400 text-3xl'>Perfect Fit</span> for Your Company */}
-            </h1>
+          <div className=" flex flex-col text-start border-b-4 border-[#0060b5] ">
+            <h1 className="drop-shadow-lg text-[#0060b5] text-6xl  font-semibold">
+              Our Solutions For 
+            </h1><br/>
+            <h1 className="drop-shadow-lg text-white text-6xl  w-auto  mb-5 font-semibold "> Your Hiring Needs</h1>
             {/* <SearchIcon className="text-[#0060b5] scale-75" sx={{ fontSize: '60px' }} /> */}
           </div>
-          <div className="w-full flex-shrink-0  bg-transparent text-white drop-shadow-xl">
-            <ul>
-              <li>Explore how our customized recruitment strategies can help you find the perfect fit for your team</li>
-              <li>From talent acquisition to onboarding, see how our services can enhance your hiring strategy</li>
+          <div className="  w-[50vw] text-white text-start drop-shadow-xl mt-5 pl-7 ">
+            <ul className='list-disc'>
+              <li>Explore how our customized recruitment strategies <br/><span className='text-yellow-400'>can help you find the perfect fit for your team</span></li>
+              <li>From talent acquisition to onboarding, see how our services<br/><span className='text-yellow-400'>can enhance your hiring strategy</span> </li>
             </ul>
           </div>
 

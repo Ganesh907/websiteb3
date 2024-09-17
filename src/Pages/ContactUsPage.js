@@ -18,57 +18,34 @@ import WaveBg from '../Assets/Images/WaveBG.jpg'
 import { ContactForm } from '../Components/ContactUsPage/ContactForm';
 import Footer from '../Components/CommonComponents/Footer';
 import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
+import HeroSection from '../Components/CommonComponents/HeroSection';
+import ContactUsVideo from '../Assets/Videos/ContactUsVideo.mp4'
 
 
 
 export const ContactUsPage = () => {
 
 
-        const [bottomRadius, setBottomRadius] = useState('0%');
 
-        useEffect(() => {
-                const handleScroll = () => {
-                        const scrollTop = window.scrollY;
-                        const maxScroll = 50; // Adjust this value for how quickly you want the border to round
-                        const radius = Math.min(scrollTop / maxScroll * 50, 50); // Cap at 50% for a smooth transition
-                        setBottomRadius(`${radius}%`);
-                };
-
-                window.addEventListener('scroll', handleScroll);
-                return () => window.removeEventListener('scroll', handleScroll);
-        }, []);
 
         return (
-                <div className=''>
+                <div>
+
                         {/* <div
-                                className="w-[100vw] relative h-[100vh] flex justify-center flex-col lg:flex-row-reverse items-center align-middle bg-[#0060b5] transition-all duration-1000 ease-in-out"
+                                className="relative h-[100vh] shadow-xl bg-[#0060b5] transition-all duration-1000 ease-in-out"
                                 style={{
-                                        borderRadius: `0 0 ${bottomRadius} ${bottomRadius}`,
+                                        borderRadius: `0 0 ${bottomRadius} ${bottomRadius}`, 
+                                        backgroundImage: `
+      linear-gradient(rgba(0, 96, 181, 0.5), rgba(0, 96, 181, 0.5)),
+      linear-gradient(to right, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 80%), 
+      url(${ContactUsHome}) 
+    `,
                                         backgroundSize: 'cover',
-                                        backgroundRepeat: 'no-repeat',
                                         backgroundPosition: 'center',
+                                        backgroundRepeat: 'no-repeat',
+
                                 }}
                         >
-                                <div className='h-14 flex justify-center animate-pulse items-end text-[200px] rounded-full w-14 absolute bottom-0 left-1/2 transform -translate-x-1/2 text-white z-50' style={{ animationDuration: "4000ms" }}>
-  <KeyboardDoubleArrowDownIcon className="animate-bounce" style={{ fontSize: "50px", animationDuration: "400ms", animationDelay: "3000ms" }} />
-</div>
-                                 <div
-          className="absolute top-0 -left-2 w-full h-full transition-all duration-1000 ease-in-out"
-          style={{
-            backgroundImage: 'linear-gradient(to right, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 80%)',
-            borderRadius: `0 0 ${bottomRadius} ${bottomRadius}`,
-            filter: 'blur(5px)',
-            pointerEvents: 'none',
-          }}
-        ></div>
-
-       <div className='flex justify-center h-full w-auto lg:w-[50%] rounded-lg p-2  align-middle'
-                                        
-                                        >
-                                                <img src={ContactUSBg2} alt='' />
-
-                                        </div>
-
                                 <div className='text-center relative z-10  text-white opacity-90 flex flex-col justify-center px-9 lg:w-[50%] w-full h-full'
                                 >
                                         <h1 className='md:text-[3vw] text-[7vw] drop-shadow-2xl mt-10  font-semibold font-serif '>
@@ -77,113 +54,106 @@ export const ContactUsPage = () => {
                                         <h2 className='md:text-[1.5vw]  text-[4vw] mt-4  drop-shadow-lg  font-semibold opacity-80'>Our friendly team is here to answer your questions and connect you with what you need.</h2>
                                 </div>
 
-                              
-
+                                <div className='h-14 flex justify-center animate-pulse items-end text-[200px] rounded-full w-14 absolute bottom-0 left-1/2 transform -translate-x-1/2 text-white z-50' style={{ animationDuration: "4000ms" }}>
+                                        <KeyboardDoubleArrowDownIcon className="animate-bounce" style={{ fontSize: "50px", animationDuration: "400ms", animationDelay: "3000ms" }} />
+                                </div>
                         </div> */}
-     <div
-  className="relative h-[100vh] shadow-xl bg-[#0060b5] transition-all duration-1000 ease-in-out"
-  style={{
-    borderRadius: `0 0 ${bottomRadius} ${bottomRadius}`, // Dynamic bottom border radius
-    backgroundImage: `
-      linear-gradient(rgba(0, 96, 181, 0.5), rgba(0, 96, 181, 0.5)), /* Blue gradient overlay */
-      linear-gradient(to right, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 80%), /* Black gradient overlay */
-      url(${ContactUsHome}) /* Background image */
-    `,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    backgroundRepeat: 'no-repeat',
-    
-  }}
->
-<div className='text-center relative z-10  text-white opacity-90 flex flex-col justify-center px-9 lg:w-[50%] w-full h-full'
+
+                        <HeroSection
+                         videoUrl={ContactUsVideo}
+                         videoOpacity={20}
+                         MarginAnimtion={true}>
+
+                         <div className='text-center relative z-10 mb-20  h-[100vh] opacity-90 flex flex-col justify-end items-start  w-full '
                                 >
-                                        <h1 className='md:text-[3vw] text-[7vw] drop-shadow-2xl mt-10  font-semibold font-serif '>
+                                        <div className='mb-20'>
+                                        <h1 className='md:text-[3vw] text-center text-[7vw] drop-shadow-2xl mt-10  text-yellow-400 font-semibold font-serif '>
                                                 Need a hand? <br />We're here to connect!
                                         </h1>
-                                        <h2 className='md:text-[1.5vw]  text-[4vw] mt-4  drop-shadow-lg  font-semibold opacity-80'>Our friendly team is here to answer your questions and connect you with what you need.</h2>
-                                </div>
-
-        <div className='h-14 flex justify-center animate-pulse items-end text-[200px] rounded-full w-14 absolute bottom-0 left-1/2 transform -translate-x-1/2 text-white z-50' style={{ animationDuration: "4000ms" }}>
-          <KeyboardDoubleArrowDownIcon className="animate-bounce" style={{ fontSize: "50px", animationDuration: "400ms", animationDelay: "3000ms" }} />
-        </div>
-      </div>
-
-                        <div className='w-[100vw] h-auto md:h-[100vh] flex justify-center  flex-col align-middle'>
-                                <div className='w-[90%] rounded-lg p-3 lg:w-[80%] m-auto flex flex-col lg:flex-row'>
-                                <div className='relative z-10 w-full lg:w-[51vw] h-full  md:mb-0 text-[var(--primary-color)] flex justify-center items-center' data-aos="zoom-in" data-aos-duration="2000">
-                                        <div className='h-full md:w-[20%] md:flex justify-center items-center  hidden '>
-                                                <h1 className='ms-[100%] text-xl font-bold drop-shadow-lg z-50 border-2 border-[var(--primary-color)] p-4 shadow-lg backdrop-blur-md' data-aos="fade-right" data-aos-duration="2000">
-
-                                                        CONTACT
-                                                </h1>
-                                        </div>
-
-                                        <div className="grid grid-cols-3 lg:mt-12 md:border-4 border-[var(--primary-color)] text-[var(--primary-color)]  md:rounded-full p-2 h-[80%] md:w-96 md:shadow-2xl md:h-96"
-                                                style={{ animationDuration: '4000ms' }}
-                                        // style={{ backgroundColor: 'rgba(0, 0, 0, 0.1)'}} 
-                                        >
-
-                                                <div></div>
-                                                <div className=' flex items-end justify-center' >
-                                                        <Tooltip title='Follow us on Facebook' arrow placement="top">
-                                                                <a href='/facebook' target="_blank" rel="noopener noreferrer"
-                                                                        style={{ display: 'inline-block' }} >
-                                                                        <FacebookIcon className='w-8 h-8 animate-pulse hover:scale-150 hover:animate-none  transition-transform duration-300 ease-in-out' />
-                                                                </a>
-                                                        </Tooltip>
-                                                </div>
-                                                <div></div>
-                                                <div className='flex flex-col justify-between items-end mr-5 py-10 '>
-                                                        <Tooltip title='Contact us through WhatsApp' arrow placement="top">
-                                                                <a href='/call' target="_blank" rel="noopener noreferrer"
-                                                                        style={{ display: 'inline-block' }} >
-                                                                        <WhatsAppIcon className='w-8 h-8 animate-pulse hover:scale-150 hover:animate-none  transition-transform duration-300 ease-in-out' />
-                                                                </a>
-                                                        </Tooltip>
-                                                        <Tooltip title='Email Us' arrow>
-                                                                <a href='/email' target="_blank" rel="noopener noreferrer"
-                                                                        style={{ display: 'inline-block' }} >
-                                                                        <EmailIcon className='w-6 h-8 animate-pulse hover:scale-150 hover:animate-none  transition-transform duration-300 ' />
-                                                                </a>
-                                                        </Tooltip>
-                                                </div>
-                                                <div className='flex items-center justify-center' >
-                                                        <div className='bg-[#0060b5] rounded-full shadow-2xl text-white' >
-                                                                <h1 className=' drop-shadow-2xl text-3xl font-bold m-10 '>B3</h1>
-                                                        </div>
-
-                                                </div>
-                                                <div className='flex flex-col justify-between items-start ml-5 py-10'>
-                                                        <Tooltip title='Follow us on Instagram' arrow placement="top">
-                                                                <a href='/instagram' target="_blank" rel="noopener noreferrer"
-                                                                        style={{ display: 'inline-block' }} >
-                                                                        <InstagramIcon className='w-8 h-8 animate-pulse hover:scale-150 hover:animate-none  transition-transform duration-300 ease-in-out' />
-                                                                </a>
-                                                        </Tooltip>
-                                                        <Tooltip title='Follow us on Linkedin' arrow>
-                                                                <a href='/linkedin' target="_blank" rel="noopener noreferrer"
-                                                                        style={{ display: 'inline-block' }} >
-                                                                        <LinkedInIcon className='w-8 h-8 animate-pulse hover:scale-150 hover:animate-none  transition-transform duration-300 ease-in-out' />
-                                                                </a>
-                                                        </Tooltip>
-                                                </div>
-                                                <div></div>
-                                                <div className=' m-1 flex items-start justify-center'>
-                                                        <Tooltip title='Follow us on Twitter' arrow>
-                                                                <a href='/twitter' target="_blank" rel="noopener noreferrer"
-                                                                        style={{ display: 'inline-block' }} >
-                                                                        <TwitterIcon className='w-8 h-8 animate-pulse hover:scale-150 hover:animate-none  transition-transform duration-300 ease-in-out' />
-                                                                </a>
-                                                        </Tooltip>
-                                                </div>
-                                                <div></div>
+                                        <h2 className='md:text-[1.5vw] text-center  w-[45vw] text-[4vw] mt-4 text-white drop-shadow-lg  font-semibold opacity-80'>Our friendly team is here to answer your questions and connect you with what you need.</h2>
                                         </div>
                                         
-                                        <div className='  h-full md:w-[20%] md:flex justify-center items-center hidden '>
-                                                <h1 className='me-[100%] text-xl font-bold drop-shadow-lg z-50  shadow-lg   p-4 backdrop-blur-md border-2 border-[var(--primary-color)] text-[var(--primary-color)]' data-aos="fade-left" data-aos-duration="2000">BITBYBIT
-                                                </h1>
-                                        </div>
                                 </div>
+
+                                </HeroSection>
+
+
+                        <div className='w-[95vw] h-auto md:h-[100vh] flex justify-center  flex-col align-middle'>
+                                <div className='w-[90%] rounded-lg p-3 lg:w-[80%] m-auto flex flex-col lg:flex-row'>
+                                        <div className='relative z-10 w-full lg:w-[51vw] h-full  md:mb-0 text-[var(--primary-color)] flex justify-center items-center' data-aos="zoom-in" data-aos-duration="2000">
+                                                <div className='h-full md:w-[20%] md:flex justify-center items-center  hidden '>
+                                                        <h1 className='ms-[100%] text-xl font-bold drop-shadow-lg z-50 border-2 border-[var(--primary-color)] p-4 shadow-lg backdrop-blur-md' data-aos="fade-right" data-aos-duration="2000">
+
+                                                                CONTACT
+                                                        </h1>
+                                                </div>
+
+                                                <div className="grid grid-cols-3 lg:mt-12 md:border-4 border-[var(--primary-color)] text-[var(--primary-color)]  md:rounded-full p-2 h-[80%] md:w-96 md:shadow-2xl md:h-96"
+                                                        style={{ animationDuration: '4000ms' }}
+                                                // style={{ backgroundColor: 'rgba(0, 0, 0, 0.1)'}} 
+                                                >
+
+                                                        <div></div>
+                                                        <div className=' flex items-end justify-center' >
+                                                                <Tooltip title='Follow us on Facebook' arrow placement="top">
+                                                                        <a href='/facebook' target="_blank" rel="noopener noreferrer"
+                                                                                style={{ display: 'inline-block' }} >
+                                                                                <FacebookIcon className='w-8 h-8 animate-pulse hover:scale-150 hover:animate-none  transition-transform duration-300 ease-in-out' />
+                                                                        </a>
+                                                                </Tooltip>
+                                                        </div>
+                                                        <div></div>
+                                                        <div className='flex flex-col justify-between items-end mr-5 py-10 '>
+                                                                <Tooltip title='Contact us through WhatsApp' arrow placement="top">
+                                                                        <a href='/call' target="_blank" rel="noopener noreferrer"
+                                                                                style={{ display: 'inline-block' }} >
+                                                                                <WhatsAppIcon className='w-8 h-8 animate-pulse hover:scale-150 hover:animate-none  transition-transform duration-300 ease-in-out' />
+                                                                        </a>
+                                                                </Tooltip>
+                                                                <Tooltip title='Email Us' arrow>
+                                                                        <a href='/email' target="_blank" rel="noopener noreferrer"
+                                                                                style={{ display: 'inline-block' }} >
+                                                                                <EmailIcon className='w-6 h-8 animate-pulse hover:scale-150 hover:animate-none  transition-transform duration-300 ' />
+                                                                        </a>
+                                                                </Tooltip>
+                                                        </div>
+                                                        <div className='flex items-center justify-center' >
+                                                                <div className='bg-[#0060b5] rounded-full shadow-2xl text-white' >
+                                                                        <h1 className=' drop-shadow-2xl text-5xl font-bold m-5 '>B<sup>3</sup></h1>
+                                                                </div>
+
+                                                        </div>
+                                                        <div className='flex flex-col justify-between items-start ml-5 py-10'>
+                                                                <Tooltip title='Follow us on Instagram' arrow placement="top">
+                                                                        <a href='/instagram' target="_blank" rel="noopener noreferrer"
+                                                                                style={{ display: 'inline-block' }} >
+                                                                                <InstagramIcon className='w-8 h-8 animate-pulse hover:scale-150 hover:animate-none  transition-transform duration-300 ease-in-out' />
+                                                                        </a>
+                                                                </Tooltip>
+                                                                <Tooltip title='Follow us on Linkedin' arrow>
+                                                                        <a href='/linkedin' target="_blank" rel="noopener noreferrer"
+                                                                                style={{ display: 'inline-block' }} >
+                                                                                <LinkedInIcon className='w-8 h-8 animate-pulse hover:scale-150 hover:animate-none  transition-transform duration-300 ease-in-out' />
+                                                                        </a>
+                                                                </Tooltip>
+                                                        </div>
+                                                        <div></div>
+                                                        <div className=' m-1 flex items-start justify-center'>
+                                                                <Tooltip title='Follow us on Twitter' arrow>
+                                                                        <a href='/twitter' target="_blank" rel="noopener noreferrer"
+                                                                                style={{ display: 'inline-block' }} >
+                                                                                <TwitterIcon className='w-8 h-8 animate-pulse hover:scale-150 hover:animate-none  transition-transform duration-300 ease-in-out' />
+                                                                        </a>
+                                                                </Tooltip>
+                                                        </div>
+                                                        <div></div>
+                                                </div>
+
+                                                <div className='  h-full md:w-[20%] md:flex justify-center items-center hidden '>
+                                                        <h1 className='me-[100%] text-xl font-bold drop-shadow-lg z-50  shadow-lg   p-4 backdrop-blur-md border-2 border-[var(--primary-color)] text-[var(--primary-color)]' data-aos="fade-left" data-aos-duration="2000">BITBYBIT
+                                                        </h1>
+                                                </div>
+                                        </div>
 
                                         <ContactForm />
                                 </div>
