@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import letstalk from "../../Assets/Images/letstakeicon1.png"
-import technologyhomeimg from "../../Assets/Images/technologyhomeheader2.png"
+import technology from "../../Assets/Videos/Technology6.mp4"
 import highquality from "../../Assets/Images/highquality.jpg"
 import onbudget from "../../Assets/Images/onbudget.png"
 import SplitCard from './SplitCard'
@@ -15,6 +15,7 @@ import Typography from '@mui/material/Typography';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import Footer from '../../Components/CommonComponents/Footer';
+import HeroSection from '../../Components/CommonComponents/HeroSection';
 
 export const TechHomePage = () => {
   const [expanded, setExpanded] = useState(false);
@@ -46,40 +47,75 @@ export const TechHomePage = () => {
       {/* <div className={`header-container ${showNavbar ? "" : "header-hidden"}`}> */}
         {/* {showNavbar && <Header />} */}
       {/* </div> */}
+      
       {/* ............................................................. */}
-      <div className="techpage md:mt-4 md:mb-16    items-center ">
-        <div className="  items-center md:flex md:flex-row md:w-full md:pl-10 pl-2 flex flex-col-reverse ">
-          <div className=" md:w-3/6   md:flex md:flex-col md:justify-center md:items-start md:gap-2 md:mt-28 md:ml-8 ">
-            <h1 className={`home_h1 font-extrabold  text-[45px] leading-[57px] text-[var(--primary-color)] font-montserrat pb-4 z-50 ${scrollHeading}`} style={{ transition: 'margin-left 1s ease-in-out' }}>Your Solution</h1>
-            <ul className={`list-disc md:ml-8 font-montserrat text-[16px] leading-[28px] break-words text-white pr-[70px] z-50`}>
+     
+      {/* <div className="techpage md:mt-4 md:mb-16  w-full h-full   ">
+        <div className="  items-center md:flex md:flex-row md:w-full md:pl-10 pl-2 flex  ">
+          <div className=" z-50 w-full md:flex md:flex-col md:justify-center md:items-start md:gap-2 md:mt-28  ">
+            <h1 className={`home_h1 font-extrabold  text-6xl leading-[57px] text-[var(--primary-color)] font-montserrat pb-4 z-50 ${scrollHeading}`} style={{ transition: 'margin-left 1s ease-in-out' }}>Your Solution</h1> */}
+            {/* <ul className={`list-disc md:ml-8 font-montserrat text-[16px] leading-[28px] break-words text-white pr-[70px] z-50`}>
               <li className={`${scrollHeading} `} style={{ transition: 'margin-left 1s ease-in-out' }}>Partner with us to bring your ideas to life and stay ahead in the digital world.</li>
               <li className={`${scrollHeading}`} style={{ transition: 'margin-left 1s ease-in-out' }}>Expertise in custom websites, mobile apps, and enterprise systems.</li>
               <li className={`${scrollHeading}`} style={{ transition: 'margin-left 1s ease-in-out' }}>High-quality development services tailored to your needs.</li>
               <li className={`${scrollHeading}`} style={{ transition: 'margin-left 1s ease-in-out' }}>Latest technologies ensure reliable and scalable solutions.</li>
-                </ul>
+                </ul> */}
             {/* <div className='z-50  flex justify-center items-center bg-[var(--primary-color)] text-[var(--background-color)] rounded-lg  font-montserrat text-[18px] font-bold h-[44px] leading-[24px] w-2/5 gap-[10px] md:p-0 md:w-1/4'>
               <img src={letstalk} width='25px'  />
               <a href="#">Let’s talk</a>
             </div> */}
-          </div>
+{/* 
+             <div className={`label text-center  mt-5 md:flex md:justify-start md:ml-3 md:gap-3 ${scrollHeading} `} style={{ transition: 'margin-left 1s ease-in-out' }}>
+        <h1 className={`relative font-extrabold text-5xl text-white ${scrollHeading}`} style={{ transition: 'margin-left 1s ease-in-out' }}>
+    We
+  <span className="absolute animate-zoom-design md:ml-4 text-white" style={{ color: 'var(--primary-color)'}}>Design</span>
+  <span className="absolute animate-zoom-develop md:ml-4 text-white" style={{ color:'var(--primary-color)' }}>Develop</span>
+  <span className="absolute animate-zoom-deliver md:ml-4 text-white" style={{ color:'var(--primary-color)' }}>Deliver</span>
+</h1>
+   </div> */}
+ {/* <p className="md:mt-8 text-white z-50 text-xl md:ml-4">Partner with us for expert, high-quality development of custom <br/> websites, 
+       mobile apps, and enterprise systems using the latest scalable technologies.</p> */}
+
+                {/* <ul className={`list-disc w-full md:mt-4 md:ml-8 font-montserrat text-[16px] leading-[28px] break-words text-white pr-[70px] z-50`}>
+              <li className={`${scrollHeading} `} style={{ transition: 'margin-left 1s ease-in-out' }}>Latest scalable technologies for reliable solutions.</li>
+              <li className={`${scrollHeading}`} style={{ transition: 'margin-left 1s ease-in-out' }}>Expert custom website, app, and system development.</li>
+              
+                </ul>
+   
+          </div> */}
           {/* <div className=" mt-6 md:w-3/6 md:flex md:justify-center md:items-center">
             <img src={technologyhomeimg} style={{}} width='90%' />
           </div> */}
-           <img
+           {/* <img
           src={technologyhomeimg}
           className="absolute top-0 left-0 w-full h-full object-cover transition-all duration-1000 ease-in-out"
           // style={{  }}
           style={{ borderRadius: `0 0 ${bottomRadius} ${bottomRadius}`}}  // Makes the entire image slightly transparent
-        />
-        <div
+        /> */}
+          {/* <video
+          autoPlay
+          loop
+          muted
+          className="absolute top-0 left-0 w-full h-full object-cover   transition-all duration-1000 ease-in-out"
+          style={{
+            borderRadius: `0 0 ${bottomRadius} ${bottomRadius}`,
+            // backgroundSize: 'cover',
+            // backgroundRepeat: 'no-repeat',
+            // backgroundPosition: 'center',
+          }}
+        > */}
+          {/* <source src={technology} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video> */}
+        {/* <div
           className="absolute top-0 left-0 w-full h-full transition-all duration-1000 ease-in-out"
           style={{
             backgroundColor: 'rgba(0, 96, 181, 0.5)',
             borderRadius: `0 0 ${bottomRadius} ${bottomRadius}`
             // Transparent blue overlay
           }}
-        ></div>
-        <div
+        ></div> */}
+        {/* <div
           className="absolute top-0 -left-2 w-full h-full transition-all duration-1000 ease-in-out"
           style={{
             backgroundImage: 'linear-gradient(to right, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 80%)',
@@ -87,97 +123,60 @@ export const TechHomePage = () => {
             filter: 'blur(5px)',
             pointerEvents: 'none',
           }}
-        ></div>
-        </div>
-
-        {/* <div class='multi_box'> */}
-        {/* <div className="boxes    md:w-[12%]  md:py-5" >
-          <div className=" flex  justify-around items-center md:flex md:flex-row md:justify-around md:items-center">
-            <p class='box_p1'>+50</p>
-            <img src={contact} className=" h-6 md:h-6" />
-          </div>
-          <p className="box_p2 md:pl-5">EMPLOYEES ON BOARD</p>
-        </div> */}
-        {/* ................................................................ */}
-
-        {/* <div className="boxes md:w-[12%]  md:py-5" >
-          <div className="flex  justify-around items-center md:flex md:flex-row md:justify-around md:items-center">
-            <p class='box_p1'>+6</p>
-            <img src={dimond} className="h-6 md:h-6" />
-          </div>
-          <p className="box_p2 md:pl-5">YEARS ON THE MARKET</p>
-        </div> */}
-        {/* ................................................................ */}
-
-        {/* <div className="boxes md:w-[12%]  md:py-5" >
-          <div className="flex  justify-around items-center md:flex md:flex-row md:justify-around md:items-center">
-            <p class='box_p1'>+50</p>
-            <img src={contact} className="h-6 md:h-6" />
-          </div>
-          <p className="box_p2 md:pl-5">ACTIVE USERS OF OUR APPS</p>
-        </div> */}
-        {/* ................................................................ */}
-
-        {/* <div className="boxes md:w-[12%]  md:py-5" >
-          <div className="flex  justify-around items-center md:flex md:flex-row md:justify-around md:items-center">
-            <p class='box_p1'>4.7</p>
-            <img src={star} className="h-6 md:h-6" />
-          </div>
-          <p className="box_p2 md:pl-5">CLUTCH RATING</p>
-        </div> */}
-        {/* ................................................................ */}
+        ></div> */}
         {/* </div> */}
-        {/* ................................ */}
-        {/* <div className="hero"> */}
-        {/* <Canvas /> */}
-        {/* <div class="content" id="techcontent">
-            <h4>BitByBit Solutions</h4>
-            <p>Development Services with cutting edge technology.</p>
-          </div>
-          <h1>From the cloud to customers, we bring all the answers</h1>
-        </div> */}
-        <div className={`label text-center  mt-5 md:flex md:justify-start md:ml-20 md:gap-3 `}>
-        <h1 className={`relative font-extrabold text-6xl text-white ${scrollHeading}`} style={{ transition: 'margin-left 1s ease-in-out' }}>
-  We
-  <span className="absolute animate-zoom-design md:ml-4" style={{ color: 'var(--primary-color)'}}>Design</span>
-  <span className="absolute animate-zoom-develop md:ml-4" style={{ color:'var(--primary-color)' }}>Develop</span>
-  <span className="absolute animate-zoom-deliver md:ml-4" style={{ color:'var(--primary-color)' }}>Deliver</span>
+
+       
+       {/* <div className={`label text-center  mt-5 md:flex md:justify-start md:ml-20 md:gap-3 `}>
+        <h1 className={`relative font-extrabold text-5xl text-white ${scrollHeading}`} style={{ transition: 'margin-left 1s ease-in-out' }}>
+    We
+  <span className="absolute animate-zoom-design md:ml-4 text-white" style={{ color: 'var(--primary-color)'}}>Design</span>
+  <span className="absolute animate-zoom-develop md:ml-4 text-white" style={{ color:'var(--primary-color)' }}>Develop</span>
+  <span className="absolute animate-zoom-deliver md:ml-4 text-white" style={{ color:'var(--primary-color)' }}>Deliver</span>
 </h1>
+   </div> */}
+       {/* <p className="md:mt-8 text-white z-50 text-xl md:ml-[88px]">Partner with us for expert, high-quality development of custom <br/> websites, 
+       mobile apps, and enterprise systems using the latest scalable technologies.</p>  */}
+      {/* </div> */}
 
+      <HeroSection  videoUrl={technology}
+      videoOpacity={30}
+      MarginAnimtion={true}
+      >
+         <div className={`techpage md:mt-4   w-full h-full ${scrollHeading}`} style={{ transition: 'margin-left 1s ease-in-out' }}>
+        <div className="  items-center md:flex md:flex-row md:w-full md:pl-10 pl-2 flex  ">
+          <div className=" z-50 w-full md:flex md:flex-col md:justify-center md:items-center md:gap-2 md:mt-44  ">
+            <h1 className={`md:w-full font-extrabold  text-6xl leading-[57px] text-[var(--primary-color)] font-montserrat pb-4 z-50 `} style={{ transition: 'margin-left 1s ease-in-out' }}>Your <span className='text-yellow-400'>Solution</span></h1>
+          
+
+             <div className={`label md:ml-3  w-full mt-5 md:flex md:justify-start  md:gap-3 `} style={{ transition: 'margin-left 1s ease-in-out' }}>
+        <h1 className={`relative w-full font-extrabold text-5xl text-white `} style={{ transition: 'margin-left 1s ease-in-out' }}>
+    We
+  <span className="absolute animate-zoom-design md:ml-4 text-yellow-400" >Design</span>
+  <span className="absolute animate-zoom-develop md:ml-4 text-yellow-400" >Develop</span>
+  <span className="absolute animate-zoom-deliver md:ml-4 text-yellow-400" >Deliver</span>
+</h1>
+   </div>
+                <ul className={`list-disc w-full md:mt-4 md:ml-16 font-montserrat text-[16px] leading-[28px] break-words text-white pr-[70px] z-50`}>
+              <li className={` w-full `} style={{ transition: 'margin-left 1s ease-in-out' }}>Latest scalable technologies for reliable solutions.</li>
+              <li className={` w-full`} style={{ transition: 'margin-left 1s ease-in-out' }}>Expert custom website, app, and system development.</li>
+              
+                </ul>
+   
+          </div>
+          
+         
         </div>
+
+       
+      
       </div>
-      <div className="secondary-section md:mt-36">
+        </HeroSection>
+
+
+      <div className="secondary-section">
         <div className="label text-center md:mb-10  mt-5 md:flex md:justify-center md:gap-3">
-          {/* <h1 className="oneliner font-extrabold text-6xl">
-            We <span style={{ color: "#0060b5" }}>design</span> We{" "}
-            <span style={{ color: "#0060b5" }}>develop</span> We{" "}
-            <span style={{ color: "#0060b5" }}>deliver</span>
-          </h1> */}
-          {/* <h1 className="oneliner font-extrabold text-6xl ">
-          We <span style={{ color: "#0060b5" }} 
-          className=' animate-slow-blink'>Design</span>
-          </h1>
-          <h1 className="oneliner font-extrabold text-6xl">
-          We{" "}<span style={{ color: "#0060b5" }} 
-          className='animate-slow-blink'>Develop</span>
-          </h1>
-          <h1 className="oneliner font-extrabold text-6xl">
-          We{" "}<span style={{ color: "#0060b5" }}
-          className='animate-slow-blink'>Deliver</span>
-          </h1> */}
-
-{/* <h1 className="relative font-extrabold text-6xl">
-  We
-  <span className="absolute animate-zoom-design md:ml-4" style={{ color: "#0060b5" }}>Design</span>
-  <span className="absolute animate-zoom-develop md:ml-4" style={{ color: "#0060b5" }}>Develop</span>
-  <span className="absolute animate-zoom-deliver md:ml-4" style={{ color: "#0060b5" }}>Deliver</span>
-</h1> */}
-
-
-
-
-
-
+         
 
         </div>
         <SplitCard />
