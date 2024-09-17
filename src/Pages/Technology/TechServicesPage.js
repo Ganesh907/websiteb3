@@ -77,7 +77,7 @@ export const TechServicesPage = (props) => {
                       <h1 className="font-bold">IT Consultation</h1>
                       <p>
                         Expert IT consultants guiding your technology decisions
-                        to meet business goals.
+                        to meet business goals
                       </p>
                     </div>
                   </div>

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 const TypingText = () => {
-  const constantText = "BitByBit Delivers"; // The constant part of the sentence
+  const constantText = "We Offers"; // The constant part of the sentence
   const phrases = [
     "Custom software solutions in e-Governance",
     "Ensuring quality and seamless service",
@@ -59,14 +59,12 @@ const TypingText = () => {
 
   return (
 
-    <div className="  flex flex-col mx-auto my-4  text-4xl font-bold mb-20  ms-10 gap-8  ">
-      <h1 className="  text-blue-700 mr-2 text-5xl underline ">{constantText}  </h1>
+    <div className="  flex flex-col mx-auto my-4  text-4xl font-bold mb-20  ms-10 gap-8 relative  w-full">
+      {/* <div className="h-20 bg-pink-100"> */}
+      <h1 className="  text-blue-700 mr-2 text-5xl underline absolute bottom-28  ">{constantText}  </h1>
+      {/* </div> */}
       <h2 className=" text-white  max-w-max  ">{displayedText}</h2>
 
-      {/* <div> */}
-      <h4 className="text-white text-xl text-balance 	">
-      At BitByBit Solutions, we deliver custom software focused on efficiency, security, and performance, tailored to your business needs.      </h4>
-    {/* </div> */}
 
     </div>
    
