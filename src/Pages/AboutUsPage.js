@@ -19,25 +19,12 @@ import vision from "../Assets/Images/vision.gif";
 
 import AboutUsBgVideo from '../Assets/Videos/AboutUsBgVideo.mp4'
 import Footer from "../Components/CommonComponents/Footer";
+import HeroSection from "../Components/CommonComponents/HeroSection";
 
 
 const AboutUsPage = () => {
 
-  const [bottomRadius, setBottomRadius] = useState('0%');
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.scrollY;
-      const maxScroll = 50; // Adjust this value for how quickly you want the border to round
-      const radius = Math.min(scrollTop / maxScroll * 50, 50); // Cap at 50% for a smooth transition
-      setBottomRadius(`${radius}%`);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const [showFirstImage, setShowFirstImage] = useState(true);
 
 
 
@@ -56,52 +43,14 @@ const AboutUsPage = () => {
   return (
     <div >
 
-
-
-      <div className="flex justify-end flex-col items-center  drop-shadow-2xl text-2xl sm:text-7xl h-[100vh]  bg-[#0060b5] font-bold text-white transition-all duration-1000 ease-in-out"
-        style={{
-          borderRadius: `0 0 ${bottomRadius} ${bottomRadius}`,
-        }}>
-        <div className='h-14 flex justify-center animate-pulse items-end text-[200px] rounded-full w-14 absolute bottom-0 left-1/2 transform -translate-x-1/2 text-white z-50' style={{ animationDuration: "4000ms" }}>
-          <KeyboardDoubleArrowDownIcon className="animate-bounce" style={{ fontSize: "50px", animationDuration: "400ms", animationDelay: "3000ms" }} />
-        </div>
-
-
-        <div
-          className="absolute top-0 -left-2 w-full h-full transition-all duration-1000 ease-in-out"
-          style={{
-            backgroundImage: 'linear-gradient(to right, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 80%)',
-            borderRadius: `0 0 ${bottomRadius} ${bottomRadius}`,
-            filter: 'blur(5px)',
-            pointerEvents: 'none',
-          }}
-        ></div>
-        {/* <video
-          autoPlay
-          loop
-          muted
-          className="absolute top-0 left-0 w-full h-full object-cover opacity-10"
+<HeroSection
+          videoUrl={AboutUsBgVideo}
+          videoOpacity={10}
+          MarginAnimtion={false}
         >
-          <source src={AboutUsBgVideo} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video> */}
-
-        <video
-          autoPlay
-          loop
-          muted
-          className="absolute top-0 left-0 w-full h-full object-cover opacity-10 transition-all duration-1000 ease-in-out"
-          style={{
-            borderRadius: `0 0 ${bottomRadius} ${bottomRadius}`,
-            // backgroundSize: 'cover',
-            // backgroundRepeat: 'no-repeat',
-            // backgroundPosition: 'center',
-          }}
-        >
-          <source src={AboutUsBgVideo} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-
+          <div className="h-[100vh] w-[98vw] flex justify-center items-center ">
+          <div className="flex justify-end flex-col items-center  drop-shadow-2xl text-2xl sm:text-7xl h-[100vh] font-bold text-white transition-all duration-1000 ease-in-out">
+        
         <div className="flex gap-2 text-center z-40  ">
           <h1 className="sm:w-[80px] sm:h-[80px] bg-gray shadow-lg rounded-full sm:border-2 border-white animate-bounce" style={{ animationDuration: '2000ms', animationDelay: '100ms' }}>A</h1>
           <h1 className="sm:w-[80px] sm:h-[80px] bg-gray shadow-lg rounded-full sm:border-2 border-white animate-bounce" style={{ animationDuration: '2000ms', animationDelay: '300ms' }}>B</h1>
@@ -113,6 +62,11 @@ const AboutUsPage = () => {
         </div>
         <div className="bg-white w-[48vw] h-1 animate-pulse  mb-32 sm:mb-32"></div>
       </div>
+          </div>
+        </HeroSection>
+
+     
+
       <div>
 
 

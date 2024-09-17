@@ -140,7 +140,7 @@ export const TechHomePage = () => {
       {/* </div> */}
 
       <HeroSection videoUrl={technology}
-        videoOpacity={30}
+        videoOpacity={40}
         MarginAnimtion={true}
       >
         <div className={`techpage md:mt-4   w-full h-full ${scrollHeading}`} style={{ transition: 'margin-left 1s ease-in-out' }}>

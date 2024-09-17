@@ -39,7 +39,7 @@ export const TechServicesPage = (props) => {
       <div className="service-div-main ">
         <HeroSection
           videoUrl={TechServicesVideo}
-          videoOpacity={25}
+          videoOpacity={20}
           MarginAnimtion={true}
         >
           <div className="h-[100vh] w-[90vw] flex flex-col justify-end items-end pb-20 ">
@@ -277,7 +277,7 @@ export const TechServicesPage = (props) => {
 
         <div className=" w-full  bg-white mt-20 h-screen justify-start ">
           <div>
-            <h1 className="text-black heading2 ml-10  ">
+            <h1 className="text-[var(--primary-color)] heading2 ml-10  ">
               Process & Methodology
             </h1>
             {/* <span className="w-[8%] h-[5px] ml-[3%] block rounded-b-[5px]" style={{backgroundColor:'#002eff'}}></span>  */}
@@ -388,7 +388,7 @@ export const TechServicesPage = (props) => {
         {/* //////////////////////////new section3///////////////////////////// */}
         <section className=" w-full md:h-screen bg-red-40 flex flex-col items-center justify-center py-4">
           <div className=" text-center w-[90%] bg-green-30 mb-10">
-            <p className="techservice_heading2">
+            <p className=" text-[var(--primary-color)] techservice_heading2 ">
               Let our experts take care of your website,
               <br />
               so that you can focus on your business
