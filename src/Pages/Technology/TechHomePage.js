@@ -27,7 +27,7 @@ export const TechHomePage = () => {
       const maxScroll = 50; // Adjust this value for how quickly you want the border to round
       const radius = Math.min(scrollTop / maxScroll * 50, 50); // Cap at 50% for a smooth transition
       setBottomRadius(`${radius}%`);
-      setScrollHeading(scrollTop > 30 ? "ml-[30%]" : "ml-0");
+      setScrollHeading(scrollTop > 30 ? true : false);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -38,12 +38,26 @@ export const TechHomePage = () => {
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
   };
+
+  const [visibleSteps, setVisibleSteps] = useState(0);
+
+  // This useEffect will add one step every second (you can adjust the timing)
+  useEffect(() => {
+    if (visibleSteps < 2) {
+      const timer = setTimeout(() => {
+        setVisibleSteps((prev) => prev + 1);
+      }, 1000); // Adjust the time for each step to appear
+      return () => clearTimeout(timer); // Clean up the timer
+    }
+  }, [visibleSteps]);
   return (
     <div className="techHomepageMain  ">
-      <div className='z-50  top-[90%] fixed  flex justify-center items-center bg-[var(--primary-color)] text-[var(--background-color)] rounded-lg  font-montserrat text-[18px] font-bold h-[44px] leading-[24px] w-2/5 gap-[10px] md:p-0 md:w-[10%] md:ml-2'>
-        <img src={letstalk} width='25px' />
-        <a href="#">Let’s talk</a>
-      </div>
+    {scrollHeading ? (
+  <div className='z-50 top-[70%] bg-blue-800 text-white fixed flex justify-center items-center rounded-lg font-montserrat text-[18px] font-bold h-[44px] leading-[24px] w-2/5 gap-[10px] md:p-0 md:w-[10%] md:ml-2'>
+    <img src={letstalk} width='25px' alt="Let's talk" />
+    <a href="#" onClick={(e) => e.preventDefault()}>Let’s talk</a>
+  </div>
+) : null} 
       {/* <div className={`header-container ${showNavbar ? "" : "header-hidden"}`}> */}
       {/* {showNavbar && <Header />} */}
       {/* </div> */}
@@ -157,26 +171,59 @@ export const TechHomePage = () => {
                   <span className="absolute animate-zoom-deliver md:ml-4 text-yellow-400" >Deliver</span>
                 </h1>
               </div>
-              <ul className={`w-full md:mt-4 md:ml-3 font-montserrat text-[16px] leading-[28px] break-words text-white pr-[70px] z-50`}>
+              {/* <ul className="list-disc w-full md:mt-4 md:ml-16 font-montserrat text-[16px] leading-[28px] break-words text-white pr-[70px] z-50">
+      <li
+        className={`w-full ${visibleSteps >= 1 ? 'opacity-100' : 'opacity-0'}`}
+        style={{ transition: 'opacity 1s ease-in-out' }}
+      >
+        Latest scalable technologies for reliable solutions.
+      </li>
+      <li
+        className={`w-full ${visibleSteps >= 2 ? 'opacity-100' : 'opacity-0'}`}
+        style={{ transition: 'opacity 1s ease-in-out' }}
+      >
+        Expert custom website, app, and system development.
+      </li>
+    </ul> */}
+
+<ul className="list-none space-y-4 text-xl font-semibold mt-1">
   <li
-    className={`w-full transition-all duration-300   text-[17px] hover:text-[20px] hover:font-bold hover:text-yellow-500`}
-    style={{ transition: 'margin-left 1s ease-in-out' }}
+    className="relative pl-4 mt-2 opacity-0 animate-fadeInRepeat text-white"
+    style={{ animationDelay: '0.5s' }} // First item appears after 0.5s
   >
-    <span className="mr-2 font-extrabold text-yellow-600 bg-clip-text bg-gradient-to-r from-blue-900  bg-[length:100%_100%]  text-[24px]">
-      {'>'}
-    </span>
+    <div className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white w-2 h-2 rounded-full"></div>
     Latest scalable technologies for reliable solutions.
   </li>
   <li
-    className={` w-full transition-all duration-300  text-[17px] hover:text-[20px] hover:font-bold hover:text-yellow-500 `}
-    style={{ transition: 'margin-left 1s ease-in-out' }}
+    className="relative pl-4 mt-4 opacity-0 animate-fadeInRepeat text-white"
+    style={{ animationDelay: '1.5s' }} // Second item appears after 1.5s
   >
-    <span className="  mr-2 text-[24px] font-extrabold bg-clip-text text-blue-900 bg-gradient-to-r from-blue-500 to-yellow-500 bg-[length:100%_100%] ">
-      {'>'}
-    </span>
+    <div className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white w-2 h-2 rounded-full"></div>
     Expert custom website, app, and system development.
   </li>
 </ul>
+
+<style>
+  {`
+    @keyframes fadeInRepeat {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      50% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      100% {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+    }
+    .animate-fadeInRepeat {
+      animation: fadeInRepeat 20s infinite; // 20s duration, infinite loop
+    }
+  `}
+</style>
 
 
 
