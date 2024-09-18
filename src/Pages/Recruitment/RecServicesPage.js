@@ -95,18 +95,58 @@ export const RecServicesPage = () => {
 
 
 
-          <div className=" flex flex-col text-start border-b-4 border-[#0060b5] ">
-            <h1 className="drop-shadow-lg text-[#0060b5] text-6xl  font-semibold">
+          <div className=" flex flex-col text-start  ">
+            <h1 className="drop-shadow-lg text-[#0060b5] text-6xl  font-extrabold">
               Our Solutions For 
             </h1><br/>
-            <h1 className="drop-shadow-lg text-white text-6xl  w-auto  mb-5 font-semibold "> Your Hiring Needs</h1>
+            <h1 className="drop-shadow-lg   text-yellow-500 text-6xl  w-auto  mb-5 font-semibold "> Your Hiring Needs
+            {/* <span className="absolute bottom-0 left-0 w-full border-b-2 border-dotted translate-y-5"
+    style={{
+      borderImage: 'linear-gradient(to right, blue, yellow) 1 ',
+    }}>
+  </span>    */}
+  <span
+  className="absolute bottom-0 left-0 w-full border-b-2 border-dotted translate-y-5"
+  style={{
+    borderImage: 'linear-gradient(to right, yellow, white, blue) 1',
+    animation: 'gradientShift 1s infinite', // Increase duration to slow down the speed
+  }}
+></span>
+
+<style>
+  {`
+    @keyframes gradientShift {
+      0% {
+        border-image-source: linear-gradient(to right, yellow,  blue);
+      }
+      100% {
+        border-image-source: linear-gradient(to right,  blue,  yellow);
+      }
+    }
+  `}
+</style>
+
+           </h1>
             {/* <SearchIcon className="text-[#0060b5] scale-75" sx={{ fontSize: '60px' }} /> */}
           </div>
           <div className="  w-[50vw] text-white text-start drop-shadow-xl mt-5 pl-7 ">
-            <ul className='list-disc'>
-              <li>Explore how our customized recruitment strategies <br/><span className='text-yellow-400'>can help you find the perfect fit for your team</span></li>
-              <li>From talent acquisition to onboarding, see how our services<br/><span className='text-yellow-400'>can enhance your hiring strategy</span> </li>
-            </ul>
+            {/* <ul className='list-disc'>
+            <li>Discover tailored recruitment strategies to perfect your team fit.</li>
+            <li>Enhance your hiring strategy with our comprehensive talent services.</li>
+
+            </ul> */}
+
+            <ul className="list-none space-y-4">
+  <li className="relative pl-4">
+    <div className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white  w-2 h-2 rounded-full"></div>
+    Discover tailored recruitment strategies to perfect your team fit.
+  </li>
+  <li className="relative pl-4">
+    <div className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white w-2 h-2 rounded-full"></div>
+    Enhance your hiring strategy with our comprehensive talent services.
+  </li>
+</ul>
+
           </div>
 
         </div>

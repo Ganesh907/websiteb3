@@ -195,48 +195,6 @@ export const TechHomePage = () => {
       </div>
 
 
-      {/* <h1 className='mainh1 text-center md:text-start md:ml-[9%] text-[#0c0042] md:w-[52%] text-[40px] font-bold m-[5px] font-montserrat md:w-full md:mt-[40px]'> Industries we deal with</h1>
-      <span className="hidden relative lg:w-[8%] lg:h-[5px] lg:ml-[9%] lg:block lg:rounded-b-[5px]" style={{ backgroundColor: '#002eff' }}></span>
-      <div className="lg:flex  lg:w-full lg:h-auto lg:p-10 mybg bg-[linear-gradient(135deg,_#0000_20.5%,_#ffffff_0_29.5%,_#0000_0)_0_50px,_linear-gradient(45deg,_#0000_8%,_#ffffff_0_17%,_#0000_0_58%)_100px_0,_linear-gradient(135deg,_#0000_8%,_#ffffff_0_17%,_#0000_0_58%,_#ffffff_0_67%,_#0000_0),_linear-gradient(45deg,_#0000_8%,_#ffffff_0_17%,_#0000_0_58%,_#ffffff_0_67%,_#0000_0_83%,_#ffffff_0_92%,_#0000_0),_rgba(71,74,255,0.05)] bg-[200px_200px]">
-        <div className=" lg:flex lg:flex-col   lg:w-auto lg:h-auto ">
-          <div className="lg:flex lg:gap-5 lg:justify-center lg:mr-[20%] "  >
-            <div className="d1 d11 bg-[#002eff] hover:bg-[#ff3b3e] hover:shadow-none transition-all duration-300 ease-in-out lg:w-[40%] bg-[#002eff] text-white lg:m-5 rounded-lg p-2 font-montserrat text-[16px] h-[95%] scale-y-[0.9] shadow-[5px_5px_rgba(255,0,0,0.4),10px_10px_rgba(247,54,54,0.3),15px_15px_rgba(248,78,78,0.2),20px_20px_rgba(221,30,30,0.1),25px_25px_rgba(218,26,26,0.05)] md:ml-[6px] md:mr-[6px]">
-              <h1 className="titleh1 text-[16px] font-bold lg:text-center lg:m-3 lg:pl-4 text-[24px] font-bold font-montserrat">Banking, Financial Services and Insurance (BFSI)</h1>
-              <div className="lg:flex lg:h-auto lg:gap-2 ">
-                <img src={bank} width='30%'  className="h-20 ml-2" />
-                <p >We have extensive experience in developing secure and efficient software solutions for the BFSI sector. Our services include financial transactions management, risk assessment systems, customer relationship management, and regulatory compliance solutions.</p>
-              </div>
-            </div>
-
-            <div className="d1 d12 bg-white hover:bg-[#ffde83] hover:shadow-none transition-all duration-300 ease-in-out lg:w-[40%] bg-white text-[#020202]  lg:m-5 rounded-lg p-2 font-montserrat text-[16px] h-[95%] scale-y-[0.9] shadow-[5px_5px_rgba(255,0,0,0.4),10px_10px_rgba(247,54,54,0.3),15px_15px_rgba(248,78,78,0.2),20px_20px_rgba(221,30,30,0.1),25px_25px_rgba(218,26,26,0.05)] md:ml-[6px] md:mr-[6px]">
-              <h1 className="titleh1 text-[16px] font-bold lg:text-center lg:m-3 lg:pl-4 text-[24px] font-bold font-montserrat">E-Gov & E-Com</h1>
-              <div className="lg:flex lg:h-auto lg:gap-3">
-                <img src={ecom} width='150%' className="lg:h-24 lg:ml-1" />
-                <p >We offer comprehensive e-Governance and e-Commerce solutions, including ticket booking, recharges, money transfers, Aadhaar enrolments, Amazon orders, insurance purchases, utility bill payments, and more, with features like shopping cart integration, payment gateways, customer management, and data analytics for seamless online transactions.</p>
-              </div>
-            </div>
-          </div>
-          {/* ........................................................ */}
-      {/* <div className="lg:flex lg:gap-5 lg:justify-end lg:mr-[10%]  "  >
-            <div className="d1 d13 bg-white hover:bg-[#136d93] hover:shadow-none transition-all duration-300 ease-in-out lg:w-[35%] bg-white text-[#020202] lg:m-5 rounded-lg p-2 font-montserrat text-[16px] h-[95%] scale-y-[0.9] shadow-[5px_5px_rgba(255,0,0,0.4),10px_10px_rgba(247,54,54,0.3),15px_15px_rgba(248,78,78,0.2),20px_20px_rgba(221,30,30,0.1),25px_25px_rgba(218,26,26,0.05)] md:ml-[6px] md:mr-[6px]">
-              <h1 className="titleh1 text-[16px] font-bold lg:text-center lg:m-3 lg:pl-4 text-[24px] font-bold font-montserrat">HealthCare</h1>
-              <div className="lg:flex lg:h-auto lg:gap-3">
-                <img src={healthcare} className="lg:h-11 lg:ml-1" />
-                <p >We offer a wide range of healthcare IT solutions including electronic health records (EHR) systems, appointment scheduling software, telemedicine platforms, and healthcare data analytics. Our solutions are designed to improve patient care and streamline healthcare operations. </p>
-
-              </div>
-            </div>
-
-            <div className="d1 d14 bg-[#002eff] hover:bg-[#ffbf00] hover:shadow-none transition-all duration-300 ease-in-out lg:w-[35%] bg-[#002eff] text-black  lg:m-5 rounded-lg p-2 font-montserrat text-[16px] h-[95%] scale-y-[0.9] shadow-[5px_5px_rgba(255,0,0,0.4),10px_10px_rgba(247,54,54,0.3),15px_15px_rgba(248,78,78,0.2),20px_20px_rgba(221,30,30,0.1),25px_25px_rgba(218,26,26,0.05)] md:ml-[6px] md:mr-[6px]">
-              <h1 className="titleh1 text-[16px] font-bold lg:text-center lg:m-3 lg:pl-4 text-[24px] font-bold font-montserrat">Hospitality</h1>
-              <div className="lg:flex lg:h-auto lg:gap-3">
-                <img src={Hospitality} className="lg:h-11 lg:ml-1" />
-                <p >Our hospitality software solutions include property management systems (PMS), booking and reservation systems, CRM software, and POS systems to enhance customer service and optimize operations. We use our industry expertise to provide tailored solutions and stay updated on the latest trends and technologies to keep our clients ahead of the curve.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>  */}
       {/*/////////////////////////////////////////////////////////// */}
       <div className='w-[90%] h-auto' >
         <h1 className='text-center md:text-start md:ml-[9%] text-[var(--primary-color)]  text-[40px] font-bold m-[5px] font-montserrat md:mt-[40px] '>
@@ -402,10 +360,7 @@ export const TechHomePage = () => {
         <div className='md:flex md:flex-row md:justify-evenly md:ml-6  flex flex-col-reverse '>
           <div className='md:w-[50%]  space-y-4 text-[var(--secondary-color)]'>
             <h1 className='font-extrabold text-2xl bg-red-3 md:text-start text-center'>High-Quality Products</h1>
-            {/* <p className='leading-8  md:ml-0 ml-4'>
-    Clients value us for our dedication to exceptional quality, superior craftsmanship, and innovative technologies that make our products stand out. Rigorous quality control
-    ensures reliability and long-term value in every product.
-  </p> */}
+          
             <ul className='list-disc pl-5 space-y-2 md:ml-0 ml-4'>
               <li>Clients value our commitment to quality, craftsmanship, and innovation.</li>
               <li>Consistent high-quality experience for every client.</li>
@@ -428,10 +383,7 @@ export const TechHomePage = () => {
           </div>
           <div className='md:w-[50%]  space-y-4 text-[var(--secondary-color)] '>
             <h1 className='font-extrabold text-2xl md:text-start text-center'>On Budget, On-Time</h1>
-            {/* <p className='leading-8 md:ml-0 ml-4'>
-  Our commitment to on-time and budget-conscious project delivery sets us apart. We meet agreed specifications through clear planning, efficient management, and proactive
-   communication, ensuring reliability and peace of mind for our clients.
-  </p> */}
+          
             <ul className='list-disc pl-5 space-y-2 md:ml-0 ml-4'>
               <li>Consistent on-time delivery.</li>
               <li>Projects stay within budget.</li>

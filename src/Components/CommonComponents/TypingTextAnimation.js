@@ -12,6 +12,7 @@ const TypingText = () => {
   ]; // Array of phrases to display
   const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0); // Track which phrase to show
   const [displayedText, setDisplayedText] = useState(""); // Text that appears on screen
+  const [isTyping, setIsTyping] = useState(true); // Track if we are typing or erasing
   const typingSpeed = 50; // Speed of typing each letter (ms)
   const displayDuration = 1500; // Duration for which the entire phrase is displayed (ms)
   const eraseSpeed = 50; // Speed of erasing each letter (ms)
@@ -24,6 +25,7 @@ const TypingText = () => {
 
     const typePhrase = () => {
       if (!erasing) {
+        setIsTyping(true); // Set typing mode to true
         if (charIndex < currentPhrase.length) {
           setDisplayedText(currentPhrase.substring(0, charIndex + 1));
           charIndex++;
@@ -32,6 +34,7 @@ const TypingText = () => {
           // Phrase fully typed, wait before erasing
           timeout = setTimeout(() => {
             erasing = true;
+            setIsTyping(false); // Set typing mode to false when erasing
             typePhrase();
           }, displayDuration);
         }
@@ -52,22 +55,56 @@ const TypingText = () => {
       }
     };
 
-    typePhrase(); // Start typing/erasing
+    typePhrase(); 
 
-    return () => clearTimeout(timeout); // Clean up the timeout when component unmounts
+    return () => clearTimeout(timeout); 
   }, [currentPhraseIndex]);
 
   return (
+    <div className="flex flex-col mx-auto  text-4xl font-bold mb-10 ms-10  relative w-full">
+      <h1 className="text-[#0060b5] mr-2 text-6xl font-extrabold  absolute bottom-36">
+        {constantText}
+        <span
+          className="absolute bottom-0 left-0 w-full border-b-2   pb-20 translate-y-5"
+          style={{
+            borderImage:
+              "linear-gradient(to right, yellow, white, blue, black) 1",
+            animation: "gradientShift 1s infinite", // Add animation here
+          }}
+        ></span>
 
-    <div className="  flex flex-col mx-auto my-4  text-4xl font-bold mb-20  ms-10 gap-8 relative  w-full">
-      {/* <div className="h-20 bg-pink-100"> */}
-      <h1 className="  text-blue-700 mr-2 text-5xl underline absolute bottom-28  ">{constantText}  </h1>
-      {/* </div> */}
-      <h2 className=" text-white  max-w-max  ">{displayedText}</h2>
+        <style>
+          {`
+    @keyframes gradientShift {
+      0% {
+        border-image-source: linear-gradient(to right, yellow, blue);
+      }
+      100% {
+        border-image-source: linear-gradient(to right, blue, yellow);
+      }
+    }
+  `}
+        </style>
+      </h1>
+      <h2
+        className={`max-w-max ${
+          isTyping ? "text-white" : "text-yellow-300"
+        } mt-20 `}
+      >
+        {displayedText}
+      </h2>
 
-
+      <ul className="list-none space-y-4 text-xl font-semibold mt-1">
+        <li className="relative pl-4 mt-2 ">
+          <div className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white w-2 h-2 rounded-full"></div>
+          Discover tailored recruitment strategies to perfect your team fit.
+        </li>
+        <li className="relative pl-4 mt-4">
+          <div className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white w-2 h-2 rounded-full"></div>
+          Enhance your hiring strategy with our comprehensive talent services.
+        </li>
+      </ul>
     </div>
-   
   );
 };
 
