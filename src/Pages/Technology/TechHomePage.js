@@ -140,28 +140,45 @@ export const TechHomePage = () => {
       {/* </div> */}
 
       <HeroSection videoUrl={technology}
-        videoOpacity={40}
+        videoOpacity={20}
         MarginAnimtion={true}
       >
         <div className={`techpage md:mt-4   w-full h-full ${scrollHeading}`} style={{ transition: 'margin-left 1s ease-in-out' }}>
           <div className="  items-end md:flex md:flex-row md:w-full md:pl-10 pl-2 flex  ">
-            <div className=" z-50 w-full md:flex md:flex-col md:justify-end md:items-center md:gap-2 md:mt-44  ">
-              <h1 className={`md:w-full font-extrabold  text-6xl leading-[57px] text-[var(--primary-color)] font-montserrat pb-4 z-50  `} style={{ transition: 'margin-left 1s ease-in-out' }}>Your <span className='text-yellow-400'>Solution</span></h1>
+            <div className=" z-50 w-full md:flex md:flex-col md:justify-end md:items-center md:gap-2 md:mt-72  ">
+              <h1 className={`md:w-full font-extrabold  text-6xl leading-[57px] font-montserrat pb-4 z-50 text-[#0060b5] `} style={{ transition: 'margin-left 1s ease-in-out' }}>Your <span className='text-[#0060b5]'>Solution</span></h1>
 
 
               <div className={`label md:ml-3  w-full mt-2 md:flex md:justify-start  md:gap-3 `} style={{ transition: 'margin-left 1s ease-in-out' }}>
-                <h1 className={`relative w-full font-extrabold text-5xl text-white `} style={{ transition: 'margin-left 1s ease-in-out' }}>
+                <h1 className={`relative w-full font-extrabold text-5xl text-yellow-400 `} style={{ transition: 'margin-left 1s ease-in-out' }}>
                   We
                   <span className="absolute animate-zoom-design md:ml-4 text-yellow-400" >Design</span>
                   <span className="absolute animate-zoom-develop md:ml-4 text-yellow-400" >Develop</span>
                   <span className="absolute animate-zoom-deliver md:ml-4 text-yellow-400" >Deliver</span>
                 </h1>
               </div>
-              <ul className={`list-disc w-full md:mt-4 md:ml-16 font-montserrat text-[16px] leading-[28px] break-words text-white pr-[70px] z-50`}>
-                <li className={` w-full `} style={{ transition: 'margin-left 1s ease-in-out' }}>Latest scalable technologies for reliable solutions.</li>
-                <li className={` w-full`} style={{ transition: 'margin-left 1s ease-in-out' }}>Expert custom website, app, and system development.</li>
+              <ul className={`w-full md:mt-4 md:ml-3 font-montserrat text-[16px] leading-[28px] break-words text-white pr-[70px] z-50`}>
+  <li
+    className={`w-full transition-all duration-300   text-[17px] hover:text-[20px] hover:font-bold hover:text-yellow-500`}
+    style={{ transition: 'margin-left 1s ease-in-out' }}
+  >
+    <span className="mr-2 font-extrabold text-yellow-600 bg-clip-text bg-gradient-to-r from-blue-900  bg-[length:100%_100%]  text-[24px]">
+      {'>'}
+    </span>
+    Latest scalable technologies for reliable solutions.
+  </li>
+  <li
+    className={` w-full transition-all duration-300  text-[17px] hover:text-[20px] hover:font-bold hover:text-yellow-500 `}
+    style={{ transition: 'margin-left 1s ease-in-out' }}
+  >
+    <span className="  mr-2 text-[24px] font-extrabold bg-clip-text text-blue-900 bg-gradient-to-r from-blue-500 to-yellow-500 bg-[length:100%_100%] ">
+      {'>'}
+    </span>
+    Expert custom website, app, and system development.
+  </li>
+</ul>
 
-              </ul>
+
 
             </div>
           </div>
