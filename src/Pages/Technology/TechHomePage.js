@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import letstalk from "../../Assets/Images/letstakeicon1.png"
-import technology from "../../Assets/Videos/Technology4y.mp4"
+import technology from "../../Assets/Videos/Technology6.mp4"
 import highquality from "../../Assets/Images/highquality.jpg"
 import onbudget from "../../Assets/Images/onbudget.png"
 import SplitCard from './SplitCard'
@@ -161,6 +161,26 @@ export const TechHomePage = () => {
           <div className="  items-end md:flex md:flex-row md:w-full md:pl-10 pl-2 flex  ">
             <div className=" z-50 w-full md:flex md:flex-col md:justify-end md:items-center md:gap-2 md:mt-72  ">
               <h1 className={`md:w-full font-extrabold  text-6xl leading-[57px] font-montserrat pb-4 z-50 text-[#0060b5] `} style={{ transition: 'margin-left 1s ease-in-out' }}>Your <span className='text-[#0060b5]'>Solution</span></h1>
+              <span
+  className="absolute bottom-44 left-12 w-[75%] border-b-2 border-dotted translate-y-5"
+  style={{
+    borderImage: 'linear-gradient(to right, yellow, white, blue) 1',
+    animation: 'gradientShift 1s infinite', // Increase duration to slow down the speed
+  }}
+></span>
+
+<style>
+  {`
+    @keyframes gradientShift {
+      0% {
+        border-image-source: linear-gradient(to right, yellow,  blue);
+      }
+      100% {
+        border-image-source: linear-gradient(to right,  blue,  yellow);
+      }
+    }
+  `}
+</style>
 
 
               <div className={`label md:ml-3  w-full mt-2 md:flex md:justify-start  md:gap-3 `} style={{ transition: 'margin-left 1s ease-in-out' }}>
