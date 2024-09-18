@@ -60,22 +60,31 @@ export const ContactUsPage = () => {
                         </div> */}
 
                         <HeroSection
-                         videoUrl={ContactUsVideo}
-                         videoOpacity={20}
-                         MarginAnimtion={true}>
+                                videoUrl={ContactUsVideo}
+                                videoOpacity={20}
+                                MarginAnimtion={true}>
 
-                         <div className='text-center relative z-10 mb-20  h-[100vh] opacity-90 flex flex-col justify-end items-start  w-full '
+                                <div className=' relative z-10 mb-20  h-[100vh] ml-10 opacity-90 flex flex-col justify-end items-start  w-full '
                                 >
                                         <div className='mb-20'>
-                                        <h1 className='md:text-[3vw] text-center text-[7vw] drop-shadow-2xl mt-10  text-yellow-400 font-semibold font-serif '>
-                                                Need a hand? <br />We're here to connect!
-                                        </h1>
-                                        <h2 className='md:text-[1.5vw] text-center  w-[45vw] text-[4vw] mt-4 text-white drop-shadow-lg  font-semibold opacity-80'>Our friendly team is here to answer your questions and connect you with what you need.</h2>
+                                                <h1 className='text-6xl drop-shadow-2xl mt-10  text-[#0060b5] font-bold'>
+                                                        Need a hand? <br />
+                                                        <span className='text-yellow-400 text-4xl font-semibold inline-block border-b-4 border-[#0060b5] pb-1 my-5'>
+                                                                We're here to connect !
+                                                        </span>
+                                                </h1>
+
+                                                <ul className='w-[45vw] text-md text-white drop-shadow-lg font-bold list-disc pl-5'>
+                                                        <li>Our friendly team is here to answer your questions.</li>
+                                                        <li>We’re dedicated to connecting you with exactly what you need.</li>
+                                                        <li>Feel free to reach out for personalized assistance and support.</li>
+                                                </ul>
+
                                         </div>
-                                        
+
                                 </div>
 
-                                </HeroSection>
+                        </HeroSection>
 
 
                         <div className='w-[95vw] h-auto md:h-[100vh] flex justify-center  flex-col align-middle'>

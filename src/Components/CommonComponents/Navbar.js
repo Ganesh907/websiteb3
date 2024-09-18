@@ -150,13 +150,13 @@ function Header() {
           </li>
           
           <li className="nav-item">
-            <Link to="/blogs" className="nav-links" onClick={closeMobileMenu}>
-              Blogs
+            <Link to="/careers" className="nav-links" onClick={closeMobileMenu}>
+            Careers
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="/careers" className="nav-links rounded-md border-2 bg-yellow-400 text-black hover:bg-transparent hover:text-yellow-400 border-black hover:border-yellow-400" onClick={closeMobileMenu}>
-              Careers
+            <Link to="/blogs" className="nav-links rounded-md italic border-2 bg-yellow-400 text-black hover:bg-transparent border-white hover:border-yellow-400" onClick={closeMobileMenu}>
+              Blogs
             </Link>
           </li>
         </ul>

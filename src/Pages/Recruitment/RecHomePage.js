@@ -110,6 +110,7 @@ const RecHomePage = () => {
 
   return (
     <div className="recrHomepageMain" >
+      
       {/* <div className='h-[100vh] flex justify-start bg-black transition-all duration-1000 ease-in-out' style={{ borderRadius: `0 0 ${bottomRadius} ${bottomRadius}` }}>
         <div className='h-14 flex justify-center animate-pulse items-end text-[200px] rounded-full w-14 absolute bottom-0 left-1/2 transform -translate-x-1/2 text-white z-50' style={{ animationDuration: "4000ms" }}>
           <KeyboardDoubleArrowDownIcon className="animate-bounce" style={{ fontSize: "50px", animationDuration: "400ms", animationDelay: "3000ms" }} />
@@ -176,19 +177,19 @@ const RecHomePage = () => {
 <div className='mt-[50%] w-[50vw]'  >
           <div className="  font-bold mx-10  my-20 drop-shadow-xl">
             <div className=" flex items-center">
-            <h1 className="text-[#0060b5] text-4xl font-bold drop-shadow-xl mr-2"
+            <h1 className="text-[#0060b5] text-5xl font-bold drop-shadow-xl mr-2"
             style={{userSelect: 'none', WebkitUserSelect: 'none', MsUserSelect: 'none' }}>
-  { "Unlock Access to".split("").map((letter, index) => (
+  { "Top Talent Access".split("").map((letter, index) => (
     <span key={index} className="hover:text-white hover:text-[4p0x] transition-opacity duration-300">
       {letter}
     </span>
   ))}
-  <span> </span>
+  {/* <span> </span>
   { "Top Talent".split("").map((letter, index) => (
     <span key={index} className="hover:text-white hover:text-[40px] transition-opacity duration-300 text-yellow-400">
       {letter}
     </span>
-  ))}
+  ))} */}
 </h1>
 
 
@@ -203,37 +204,37 @@ const RecHomePage = () => {
               </h1> */}
 
 
-<h1 className="drop-shadow-lg text-white text-2xl my-5 font-semibold border-b-4 border-[#0060b5] pb-1"
+<h1 className="drop-shadow-lg text-yellow-400 text-2xl my-5 font-semibold border-b-4 border-[#0060b5] pb-1"
  style={{ userSelect: 'none', WebkitUserSelect: 'none', MsUserSelect: 'none' }}
  >
-  { "Let Us Find the".split("").map((letter, index) => (
-    <span key={index} className="hover:text-[#0060b5] hover:text-[30px] transition-opacity duration-300">
+  { "Let Us Find the Perfect Fit for Your Company".split("").map((letter, index) => (
+    <span key={index} className="hover:text-white hover:text-[35px] transition-opacity duration-300">
       {letter}
     </span>
   ))}
 
-  <span> </span>
+  {/* <span> </span>
 
   { "Perfect Fit".split("").map((letter, index) => (
     <span key={index} className="hover:text-[#0060b5] hover:text-[30px] transition-opacity duration-300 text-yellow-400 text-3xl">
       {letter}
     </span>
-  ))}
+  ))} */}
 
-  <span> </span>
+  {/* <span> </span>
 
   { "for Your Company".split("").map((letter, index) => (
     <span key={index} className="hover:text-[#0060b5] hover:text-[30px] transition-opacity duration-300">
       {letter}
     </span>
-  ))}
+  ))} */}
 </h1>
 
 
               {/* <SearchIcon className="text-[#0060b5] scale-75" sx={{ fontSize: '60px' }} /> */}
             </div>
 
-            <div className="relative w-full h-32 overflow-hidden cursor-pointer">
+            <div className="relative w-full h-32 overflow-hidden  mr-2 cursor-pointer">
       <div
         className="absolute w-full h-full flex transition-transform duration-1000 "
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}

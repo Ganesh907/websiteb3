@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import letstalk from "../../Assets/Images/letstakeicon1.png"
-import technology from "../../Assets/Videos/Technology6.mp4"
+import technology from "../../Assets/Videos/Technology4y.mp4"
 import highquality from "../../Assets/Images/highquality.jpg"
 import onbudget from "../../Assets/Images/onbudget.png"
 import SplitCard from './SplitCard'

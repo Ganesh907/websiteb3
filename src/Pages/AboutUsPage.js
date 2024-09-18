@@ -40,15 +40,72 @@ const AboutUsPage = () => {
   };
 
 
+
+
+  const content = [
+    {
+      heading: "Transforming Ideas Into Digital Solutions",
+      paragraph: "We turn your vision into reality with custom IT solutions that drive business growth. From seamless software development to advanced data management, we deliver tech that works for you efficiently and effortlessly."
+    },
+    {
+      heading:"Talent Finders, Career Builders",
+      paragraph:"We connect the right people with the right opportunities. Whether you're hiring or job hunting, our network and expertise make it happen. Let’s build your dream team or career together"
+    }
+
+  ]
+
+
+const [currentIndex, setCurrentIndex] = useState(0);
+const [isHovered, setIsHovered] = useState(false);
+useEffect(() => {
+  let interval;
+  if (!isHovered) {
+    interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % content.length);
+    }, 3000); // Change quote every 5 seconds
+  }
+  return () => clearInterval(interval);
+}, [isHovered, content.length]);
+
+const handleMouseEnter = () => {
+  setIsHovered(true);
+};
+
+const handleMouseLeave = () => {
+  setIsHovered(false);
+};
+
   return (
-    <div >
+    <div>
+
+
 
 <HeroSection
           videoUrl={AboutUsBgVideo}
-          videoOpacity={10}
-          MarginAnimtion={false}
+          videoOpacity={20}
+          MarginAnimtion={true}
         >
-          <div className="h-[100vh] w-[98vw] flex justify-center items-center ">
+
+<div className='h-[100vh] w-[50vw] flex justify-end items-end ml-7 opac'>
+<div className="relative w-full h-52 overflow-hidden mr-2 cursor-pointer mb-16">
+  <h1 className="text-[#0060b5] text-6xl font-bold drop-shadow-xl ">Who We Are</h1>
+  <div
+    className="absolute w-full h-full flex transition-transform duration-1000 "
+    style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+    onMouseEnter={handleMouseEnter}
+    onMouseLeave={handleMouseLeave}
+  >
+    {content.map((item, index) => (
+      <div key={index} className="w-full flex-shrink-0 bg-transparent text-white drop-shadow-xl">
+       <h3 className="text-yellow-400 text-2xl font-semibold inline-block border-b-4 border-[#0060b5] pb-1 my-5">{item.heading}</h3>
+        <p className="text-white  font-bold drop-shadow-xl ">{item.paragraph}</p>
+      </div>
+    ))}
+  </div>
+</div>
+</div>
+
+          {/* <div className="h-[100vh] w-[98vw] flex justify-center items-center ">
           <div className="flex justify-end flex-col items-center  drop-shadow-2xl text-2xl sm:text-7xl h-[100vh] font-bold text-white transition-all duration-1000 ease-in-out">
         
         <div className="flex gap-2 text-center z-40  ">
@@ -62,7 +119,7 @@ const AboutUsPage = () => {
         </div>
         <div className="bg-white w-[48vw] h-1 animate-pulse  mb-32 sm:mb-32"></div>
       </div>
-          </div>
+          </div> */}
         </HeroSection>
 
      

@@ -26,10 +26,10 @@ const HeroSection = ({ videoUrl,videoOpacity,MarginAnimtion,children}) => {
                 return () => window.removeEventListener('scroll', handleScroll);
         }, []);
 
-
+        // bg-[#f5f5cc]
         return (
                 <div
-                        className="relative flex h-screen  shadow-xl bg-black transition-all duration-1000 ease-in-out"
+                        className="relative flex h-screen  shadow-xl bg-black  transition-all duration-1000 ease-in-out"
                         style={{ borderRadius: `0 0 ${bottomRadius} ${bottomRadius}` }}
                 >
                           <div className={`absolute z-20 

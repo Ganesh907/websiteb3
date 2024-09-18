@@ -52,17 +52,17 @@ export const ContactForm = () => {
                 }
         };
   return (
-        <div className='lg:w-[50%]  flex justify-center items-center w-auto'>
+        <div className='lg:w-[50%]  flex justify-center items-center w-auto bg-white p-5 rounded-md'>
 
        
         <form className=' text-center'   onSubmit={handleSubmit}
         //  data-aos="zoom-in" data-aos-duration="1000"
          >
         <h1 className='font-bold text-4xl drop-shadow-lg text-[var(--primary-color)]'>Contact Us</h1>
-        <h2 className=' font-semibold mt-2 text-base text-[var(--secondary-color)]'>
+        <h2 className=' font-semibold mt-2 text-base text-black'>
                 Any question or remarks? Just write us a message !
         </h2>
-        <p className='opacity-70 font-semibold  text-sm text-[var(--secondary-color)]'>Fill up the form and our team will get back to you within 24 hours.</p>
+        <p className='opacity-70 font-semibold  text-sm text-black'>Fill up the form and our team will get back to you within 24 hours.</p>
 
         
         <div className='grid grid-cols-2 gap-10 mt-8 mb-8 '>
