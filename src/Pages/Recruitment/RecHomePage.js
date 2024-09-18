@@ -212,6 +212,7 @@ const RecHomePage = () => {
       {letter}
     </span>
   ))}
+  
 
   {/* <span> </span>
 

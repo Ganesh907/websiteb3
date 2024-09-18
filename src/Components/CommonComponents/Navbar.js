@@ -155,7 +155,7 @@ function Header() {
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="/blogs" className="nav-links rounded-md italic border-2 bg-yellow-400 text-black hover:bg-transparent border-white hover:border-yellow-400" onClick={closeMobileMenu}>
+            <Link to="/blogs" className="nav-links rounded-md italic border-2 bg-yellow-400 text-black hover:bg-transparent border-white hover:border-yellow-400 hover:text-yellow-400" onClick={closeMobileMenu}>
               Blogs
             </Link>
           </li>

@@ -156,10 +156,10 @@ export const RecServicesPage = () => {
 
 
       <div className="text-center   mt-10">
-        <h1 className="font-bold text-xl " style={{ color: "var(--primary-color)" }}>
+        <h1 className="font-bold text-3xl " style={{ color: "var(--primary-color)" }}>
           SERVICES OFFERED
         </h1>
-        <p className='mx-20 text-md opacity-90 text-[var(--secondary-color)]'>
+        {/* <p className='mx-20 text-md opacity-90 text-[var(--secondary-color)]'>
 
 
           In a 24/7 economy, corporations have different needs.
@@ -174,7 +174,7 @@ export const RecServicesPage = () => {
           and highly experienced professionals, which are well equipped
           to offer our clients the best HR solutions in the form of
           customized delivery.
-        </p>
+        </p> */}
 
 
         <div className=' h-[80vh] flex justify-center items-center'>
