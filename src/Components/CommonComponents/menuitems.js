@@ -1,7 +1,7 @@
 export const techitems = [
 
   {
-    title: 'Home',
+    title: 'Expertise',
     path: '/technology',
     cName: 'dropdown-link'
   },
@@ -20,7 +20,7 @@ export const techitems = [
 
   export const recruitmentitems=[
     {
-      title:'Home',
+      title:'Expertise',
       path:'/recruitment',
       cName:'dropdown-link'
     },

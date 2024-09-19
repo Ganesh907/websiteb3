@@ -45,15 +45,38 @@ const AboutUsPage = () => {
   const content = [
     {
       heading: "Transforming Ideas Into Digital Solutions",
-      paragraph: "We turn your vision into reality with custom IT solutions that drive business growth. From seamless software development to advanced data management, we deliver tech that works for you efficiently and effortlessly."
+      paragraph: [
+        "From seamless software development to advanced data management, we deliver tech that works for you efficiently and effortlessly.",
+        "We turn your vision into reality with custom IT solutions that drive business growth."
+      ]
     },
     {
-      heading:"Talent Finders, Career Builders",
-      paragraph:"We connect the right people with the right opportunities. Whether you're hiring or job hunting, our network and expertise make it happen. Let’s build your dream team or career together"
+      heading: "Talent Finders, Career Builders",
+      paragraph: [
+        "Whether you're hiring or job hunting, our network and expertise make it happen.",
+        "We connect the right people with the right opportunities.",
+        "Let’s build your dream team or career together."
+      ]
     }
+  ];
+  const highlightWords = ["Idea", "Talent", "Career"];
 
-  ]
-
+  const highlightText = (text) => {
+    return text.split(" ").map((word, index) => {
+      const lowerCaseWord = word.toLowerCase();
+      const highlighted = highlightWords.some((highlight) =>
+        lowerCaseWord.includes(highlight.toLowerCase())
+      );
+      return (
+        <span
+          key={index}
+          className={highlighted ? "text-yellow-400" : "text-white"}
+        >
+          {word}{" "}
+        </span>
+      );
+    });
+  };
 
 const [currentIndex, setCurrentIndex] = useState(0);
 const [isHovered, setIsHovered] = useState(false);
@@ -88,20 +111,31 @@ const handleMouseLeave = () => {
 
 <div className='h-[100vh] w-[50vw] flex justify-end items-end ml-7 opac'>
 <div className="relative w-full h-52 overflow-hidden mr-2 cursor-pointer mb-16">
-  <h1 className="text-[#0060b5] text-6xl font-bold drop-shadow-xl ">Who We Are</h1>
+  <h1 className="text-[#0060b5] text-5xl font-bold drop-shadow-xl ">Who We Are</h1>
   <div
-    className="absolute w-full h-full flex transition-transform duration-1000 "
-    style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-    onMouseEnter={handleMouseEnter}
-    onMouseLeave={handleMouseLeave}
-  >
-    {content.map((item, index) => (
-      <div key={index} className="w-full flex-shrink-0 bg-transparent text-white drop-shadow-xl">
-       <h3 className="text-yellow-400 text-2xl font-semibold inline-block border-b-4 border-[#0060b5] pb-1 my-5">{item.heading}</h3>
-        <p className="text-white  font-bold drop-shadow-xl ">{item.paragraph}</p>
-      </div>
-    ))}
-  </div>
+  className="absolute w-full h-full flex transition-transform duration-1000 "
+  style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+  onMouseEnter={handleMouseEnter}
+  onMouseLeave={handleMouseLeave}
+>
+  {content.map((item, index) => (
+    <div
+      key={index}
+      className="w-full flex-shrink-0 bg-transparent text-white drop-shadow-xl "
+    >
+      <h3 className="text-2xl font-semibold inline-block border-b-4 border-[#0060b5] pb-1 my-4">
+        {highlightText(item.heading)}
+      </h3>
+      <ul className="list-disc pl-5 space-y-2  ">
+        {item.paragraph.map((point, idx) => (
+          <li key={idx} className="text-white font-bold drop-shadow-xl">
+            {point}
+          </li>
+        ))}
+      </ul>
+    </div>
+  ))}
+</div>
 </div>
 </div>
 

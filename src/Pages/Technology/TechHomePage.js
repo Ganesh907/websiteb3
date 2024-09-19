@@ -157,15 +157,15 @@ export const TechHomePage = () => {
         videoOpacity={20}
         MarginAnimtion={true}
       >
-        <div className={`techpage md:mt-4   w-full h-full ${scrollHeading}`} style={{ transition: 'margin-left 1s ease-in-out' }}>
-          <div className="  items-end md:flex md:flex-row md:w-full md:pl-10 pl-2 flex  ">
-            <div className=" z-50 w-full md:flex md:flex-col md:justify-end md:items-center md:gap-2 md:mt-72  ">
-              <h1 className={`md:w-full font-extrabold  text-6xl leading-[57px] font-montserrat pb-4 z-50 text-[#0060b5] `} style={{ transition: 'margin-left 1s ease-in-out' }}>Your <span className='text-[#0060b5]'>Solution</span></h1>
+        <div className={`   w-full h-full ${scrollHeading}`} style={{ transition: 'margin-left 1s ease-in-out' }}>
+          <div className="  items-end md:flex md:flex-row md:w-full  pl-2 flex  ">
+            <div className=" z-50 w-full md:flex md:flex-col md:justify-end  md:gap-2  ">
+              <h1 className={`md:w-full font-bold  text-5xl  font-montserrat pb-4 z-50 text-[#0060b5] `} style={{ transition: 'margin-left 1s ease-in-out' }}>Your <span className='text-[#0060b5]'>Solution</span></h1>
               <span
-  className="absolute bottom-44 left-12 w-[75%] border-b-2 border-dotted translate-y-5"
+  className="absolute bottom-[182px] left-50 w-[47%] border-b-2 border-dotted translate-y-5"
   style={{
     borderImage: 'linear-gradient(to right, yellow, white, blue) 1',
-    animation: 'gradientShift 1s infinite', // Increase duration to slow down the speed
+    animation: 'gradientShift 3s infinite', // Increase duration to slow down the speed
   }}
 ></span>
 
@@ -184,10 +184,10 @@ export const TechHomePage = () => {
 
 
               <div className={`label md:ml-3  w-full mt-2 md:flex md:justify-start  md:gap-3 `} style={{ transition: 'margin-left 1s ease-in-out' }}>
-                <h1 className={`relative w-full font-extrabold text-5xl text-yellow-400 `} style={{ transition: 'margin-left 1s ease-in-out' }}>
+                <h1 className={`relative w-full font-bold text-5xl text-yellow-400 `} style={{ transition: 'margin-left 1s ease-in-out' }}>
                   We
                   <span className="absolute animate-zoom-design md:ml-4 text-yellow-400" >Design</span>
-                  <span className="absolute animate-zoom-develop md:ml-4 text-yellow-400" >Develop</span>
+                  <span className="absolute animate-zoom-develop md:ml-4 text-white" >Develop</span>
                   <span className="absolute animate-zoom-deliver md:ml-4 text-yellow-400" >Deliver</span>
                 </h1>
               </div>
@@ -230,7 +230,11 @@ export const TechHomePage = () => {
         opacity: 0;
         transform: translateY(20px);
       }
-      50% {
+      30% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      70% {
         opacity: 1;
         transform: translateY(0);
       }
@@ -240,10 +244,11 @@ export const TechHomePage = () => {
       }
     }
     .animate-fadeInRepeat {
-      animation: fadeInRepeat 20s infinite; // 20s duration, infinite loop
+      animation: fadeInRepeat 15s infinite; // Long duration, stops on screen for a long time
     }
   `}
 </style>
+
 
 
 
