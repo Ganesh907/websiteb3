@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 const TypingText = () => {
-  const constantText = "We Offers"; // The constant part of the sentence
+  const constantText = "We Offer"; // The constant part of the sentence
   const phrases = [
     "Custom software solutions in e-Governance",
     "Ensuring quality and seamless service",
@@ -55,21 +55,21 @@ const TypingText = () => {
       }
     };
 
-    typePhrase(); 
+    typePhrase();
 
-    return () => clearTimeout(timeout); 
+    return () => clearTimeout(timeout);
   }, [currentPhraseIndex]);
 
   return (
-    <div className="flex flex-col mx-auto  text-4xl font-bold mb-10 ms-10  relative w-full">
-      <h1 className="text-[#0060b5] mr-2 text-6xl font-extrabold  absolute bottom-36">
+    <div className="flex flex-col mx-auto  mb-10 ms-10  relative w-full">
+      <h1 className="text-[#0060b5] mr-2 text-5xl font-bold  absolute bottom-36">
         {constantText}
         <span
           className="absolute bottom-0 left-0 w-full border-b-2   pb-20 translate-y-5"
           style={{
             borderImage:
               "linear-gradient(to right, yellow, white, blue, black) 1",
-            animation: "gradientShift 1s infinite", // Add animation here
+            animation: "gradientShift 6s infinite", // Add animation here
           }}
         ></span>
 
@@ -87,14 +87,14 @@ const TypingText = () => {
         </style>
       </h1>
       <h2
-        className={`max-w-max ${
+        className={`max-w-max text-3xl font-semibold ${
           isTyping ? "text-white" : "text-yellow-300"
         } mt-20 `}
       >
         {displayedText}
       </h2>
 
-      <ul className="list-none space-y-4 text-xl font-semibold mt-1">
+      {/* <ul className="list-none space-y-4 text-xl font-semibold mt-1">
         <li className="relative pl-4 mt-2 ">
           <div className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white w-2 h-2 rounded-full"></div>
           Discover tailored recruitment strategies to perfect your team fit.
@@ -103,7 +103,14 @@ const TypingText = () => {
           <div className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white w-2 h-2 rounded-full"></div>
           Enhance your hiring strategy with our comprehensive talent services.
         </li>
-      </ul>
+      </ul> */}
+  <div className="  w-[50vw] text-white text-xl text-start drop-shadow-xl mt-5 pl-7 "> 
+             <ul className='list-disc'>
+            <li className="mb-2">We craft custom software for efficiency, security, and performance.</li>
+            <li>Trust us for solutions that align with your business goals.</li>
+
+            </ul>
+            </div>
     </div>
   );
 };

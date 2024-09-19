@@ -64,21 +64,102 @@ export const ContactUsPage = () => {
                                 videoOpacity={20}
                                 MarginAnimtion={true}>
 
-                                <div className=' relative z-10 mb-20  h-[100vh] ml-10 opacity-90 flex flex-col justify-end items-start  w-full '
+                                <div className=' relative z-10   h-[100vh] ml-10 opacity-90 flex flex-col justify-end items-start  w-full '
                                 >
                                         <div className='mb-20'>
-                                                <h1 className='text-6xl drop-shadow-2xl mt-10  text-[#0060b5] font-bold'>
-                                                        Need a hand? <br />
-                                                        <span className='text-yellow-400 text-4xl font-semibold inline-block border-b-4 border-[#0060b5] pb-1 my-5'>
-                                                                We're here to connect !
-                                                        </span>
-                                                </h1>
+                                        <div className=" relative ">
+                                                <h1 className=' text-5xl drop-shadow-2xl   text-[#0060b5] font-bold'>
+                                                        Need Assistance ? 
 
-                                                <ul className='w-[45vw] text-md text-white drop-shadow-lg font-bold list-disc pl-5'>
+                                                        </h1>
+
+                                                        <span
+    className="absolute bottom-0 left-0 w-[60vh] border-b-2  "
+    style={{
+      borderImage: "linear-gradient(to right, yellow, white, blue, black) 1",
+      animation: "gradientShift 6s infinite", // Adjust duration as needed
+    }}
+  ></span>
+  
+  <style>
+    {`
+      .relative {
+        position: relative;
+      }
+      .absolute {
+        position: absolute;
+      }
+      @keyframes gradientShift {
+        0% {
+          border-image-source: linear-gradient(to right, yellow, blue);
+        }
+        100% {
+          border-image-source: linear-gradient(to right, blue, yellow);
+        }
+      }
+    `}
+  </style>
+  </div>
+
+
+                                                         <h2 className='text-white  text-3xl font-semibold inline-block   pb-1 my-2'> 
+                                                                We're here to <span className='text-yellow-500'>connect</span> and <span className='text-yellow-500'>assist</span>!
+                                                        </h2>
+                                                
+
+                                                {/* <ul className='w-[45vw] text-md text-white drop-shadow-lg font-bold list-disc pl-5 my-2'>
                                                         <li>Our friendly team is here to answer your questions.</li>
                                                         <li>We’re dedicated to connecting you with exactly what you need.</li>
                                                         <li>Feel free to reach out for personalized assistance and support.</li>
-                                                </ul>
+                                                </ul> */}
+
+                                                <ul className="list-none space-y-4 text-xl font-semibold mt-4">
+  <li
+    className="relative pl-4 mt-4 opacity-0 animate-fadeInRepeat"
+    style={{ animationDelay: '0.5s' }} // First item appears after 0.5s
+  >
+    <div className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white w-2 h-2 rounded-full"></div>
+    Our friendly team is here to answer your questions.
+  </li>
+  <li
+    className="relative pl-4 opacity-0 animate-fadeInRepeat"
+    style={{ animationDelay: '1.5s' }} // Second item appears after 1.5s
+  >
+    <div className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white w-2 h-2 rounded-full"></div>
+    We’re dedicated to connecting you with exactly what you need.  </li>
+    <li
+    className="relative pl-4 opacity-0 animate-fadeInRepeat"
+    style={{ animationDelay: '2s' }} // Third item appears after 1.5s
+  >
+    <div className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white w-2 h-2 rounded-full"></div>
+    Feel free to reach out for personalized assistance and support.  </li>
+</ul>
+
+<style>
+  {`
+    @keyframes fadeInRepeat {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      30% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      70% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      100% {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+    }
+    .animate-fadeInRepeat {
+      animation: fadeInRepeat 15s infinite; // Long duration, stops on screen for a long time
+    }
+  `}
+</style>
 
                                         </div>
 

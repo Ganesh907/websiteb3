@@ -96,10 +96,10 @@ export const RecServicesPage = () => {
 
 
           <div className=" flex flex-col text-start  ">
-            <h1 className="drop-shadow-lg text-[#0060b5] text-6xl  font-extrabold">
-              Our Solutions For 
+            <h1 className="drop-shadow-lg text-[#0060b5] text-5xl  font-bold">
+              Our Solutions 
             </h1><br/>
-            <h1 className="drop-shadow-lg   text-yellow-500 text-6xl  w-auto  mb-5 font-semibold "> Your Hiring Needs
+            <h1 className="drop-shadow-lg   text-white text-4xl  w-auto  mb-5 font-semibold "> Your <span className='text-yellow-500'>Hiring</span>Needs
             {/* <span className="absolute bottom-0 left-0 w-full border-b-2 border-dotted translate-y-5"
     style={{
       borderImage: 'linear-gradient(to right, blue, yellow) 1 ',
@@ -108,8 +108,8 @@ export const RecServicesPage = () => {
   <span
   className="absolute bottom-0 left-0 w-full border-b-2 border-dotted translate-y-5"
   style={{
-    borderImage: 'linear-gradient(to right, yellow, white, blue) 1',
-    animation: 'gradientShift 1s infinite', // Increase duration to slow down the speed
+    borderImage: 'linear-gradient(to right, yellow,  blue) 1',
+    animation: 'gradientShift 6s infinite', // Increase duration to slow down the speed
   }}
 ></span>
 
@@ -120,7 +120,7 @@ export const RecServicesPage = () => {
         border-image-source: linear-gradient(to right, yellow,  blue);
       }
       100% {
-        border-image-source: linear-gradient(to right,  blue,  yellow);
+        border-image-source: linear-gradient(to right, blue,  yellow);
       }
     }
   `}
@@ -129,14 +129,14 @@ export const RecServicesPage = () => {
            </h1>
             {/* <SearchIcon className="text-[#0060b5] scale-75" sx={{ fontSize: '60px' }} /> */}
           </div>
-          <div className="  w-[50vw] text-white text-start drop-shadow-xl mt-5 pl-7 ">
+          {/* <div className="  w-[50vw] text-white text-start drop-shadow-xl mt-5 pl-7 "> */}
             {/* <ul className='list-disc'>
             <li>Discover tailored recruitment strategies to perfect your team fit.</li>
             <li>Enhance your hiring strategy with our comprehensive talent services.</li>
 
             </ul> */}
 
-            <ul className="list-none space-y-4">
+            {/* <ul className="list-none space-y-4">
   <li className="relative pl-4">
     <div className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white  w-2 h-2 rounded-full"></div>
     Discover tailored recruitment strategies to perfect your team fit.
@@ -145,9 +145,96 @@ export const RecServicesPage = () => {
     <div className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white w-2 h-2 rounded-full"></div>
     Enhance your hiring strategy with our comprehensive talent services.
   </li>
+</ul> */}
+{/* <ul className="list-none space-y-4 text-xl font-semibold mt-4">
+  <li
+    className="relative pl-4 mt-10 opacity-0 animate-fadeInRepeat"
+    style={{ animationDelay: '0.5s' }} // First item appears after 0.5s
+  >
+    <div className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white w-2 h-2 rounded-full"></div>
+    Discover tailored recruitment strategies to perfect your team fit.
+  </li>
+  <li
+    className="relative pl-4 opacity-0 animate-fadeInRepeat"
+    style={{ animationDelay: '0.9s' }} // Second item appears after 1.5s
+  >
+    <div className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white w-2 h-2 rounded-full"></div>
+    Enhance your hiring strategy with our comprehensive talent services.
+  </li>
 </ul>
 
-          </div>
+<style>
+  {`
+    @keyframes fadeInRepeat {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      25% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      75% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+    }
+    .animate-fadeInRepeat {
+      animation: fadeInRepeat 2s infinite; // Long duration, quick fade-in and fade-up
+    }
+  `}
+</style> */}
+
+<ul className="list-none space-y-4 text-xl font-semibold mt-4">
+  <li
+    className="relative pl-4 mt-4 opacity-0 animate-fadeInRepeat"
+    style={{ animationDelay: '0.5s' }} // First item appears after 0.5s
+  >
+    <div className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white w-2 h-2 rounded-full"></div>
+    Discover tailored recruitment strategies to perfect your team fit.
+  </li>
+  <li
+    className="relative pl-4 opacity-0 animate-fadeInRepeat"
+    style={{ animationDelay: '1.5s' }} // Second item appears after 1.5s
+  >
+    <div className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white w-2 h-2 rounded-full"></div>
+    Enhance your hiring strategy with our comprehensive talent services.
+  </li>
+</ul>
+
+<style>
+  {`
+    @keyframes fadeInRepeat {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      30% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      70% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      100% {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+    }
+    .animate-fadeInRepeat {
+      animation: fadeInRepeat 15s infinite; // Long duration, stops on screen for a long time
+    }
+  `}
+</style>
+
+
+
+
+          {/* </div> */}
 
         </div>
 

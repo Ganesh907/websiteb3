@@ -35,7 +35,6 @@
 
 // export const TechClientsPage = () => {
 
-
 //   const [bottomRadius, setBottomRadius] = useState('0%');
 //   const [scrollHeading, setScrollHeading] = useState("");
 
@@ -43,20 +42,16 @@
 //    <marquee width="110%" direction="right" height="auto" scrollamount="20" >
 // <div className='flex mt-10 gap-4 ' >
 
-
 // {/* <img src={intertrust} className=" h-40 w-30 ml-6 shadow-2xl rounded-sm" /> */}
 
 // <img src={suntrap} className=" h-40 w-30 ml-6 shadow-2xl rounded-sm" />
 
-
 // <img src={ips} className=" h-40 w-30 ml-6 shadow-2xl rounded-sm" />
-
 
 // <img src={hamarakendra} className=" h-40 w-30 ml-6 shadow-2xl rounded-sm" />
 
 // </div>
 // </marquee>
- 
 
 //   useEffect(() => {
 //     const handleScroll = () => {
@@ -70,7 +65,6 @@
 //     window.addEventListener('scroll', handleScroll);
 //     return () => window.removeEventListener('scroll', handleScroll);
 //   }, []);
-  
 
 //   return (
 //     <>
@@ -176,9 +170,6 @@
 // </div>
 // </div>
 
-
-
-
 //         <div className="tech-footer">
 //           <Footer />
 //         </div>
@@ -187,7 +178,6 @@
 //     </>
 //   );
 // };
-
 
 import { useEffect, useState } from "react";
 import hamarakendra from "../../Assets/Images/hamarakendra.png";
@@ -201,123 +191,206 @@ import support from "../../Assets/Images/support.png";
 import personnel from "../../Assets/Images/personnel.png";
 import innovation from "../../Assets/Images/innovation.png";
 import commitment from "../../Assets/Images/commitment.png";
-import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
+import KeyboardDoubleArrowDownIcon from "@mui/icons-material/KeyboardDoubleArrowDown";
 import Aos from "aos";
 import Footer from "../../Components/CommonComponents/Footer";
-// import Counter from "../../Components/CommonComponents/Counter";
-// import counter from "../../Components/CommonComponents/Counter";
+import HeroSection from "../../Components/CommonComponents/HeroSection";
+import Techclient from "../../Assets/Videos/techclient.mp4";
 
 export const TechClientsPage = () => {
-
-  const [bottomRadius, setBottomRadius] = useState('0%');
+  const [bottomRadius, setBottomRadius] = useState("0%");
   const [scrollHeading, setScrollHeading] = useState("");
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
       const maxScroll = 50;
-      const radius = Math.min(scrollTop / maxScroll * 50, 50);
+      const radius = Math.min((scrollTop / maxScroll) * 50, 50);
       setBottomRadius(`${radius}%`);
       setScrollHeading(scrollTop > 30 ? "ml-[30%]" : "ml-0");
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <>
-    <div className="bg-white">
- <div className="relative h-[90vh]">
-        <img
-          src={client}
-          className="w-full h-full object-cover"
-          style={{ borderRadius: `0 0 ${bottomRadius} ${bottomRadius}` }}
-          alt="Client"
-        />
-        <div className="absolute inset-0 flex flex-col justify-center items-center text-white">
-          <h1 className="text-6xl font-bold" data-aos="fade-down">
-            Empower Your Journey
-          </h1>
-          <p className="text-lg mt-4" data-aos="fade-up">
-            Redefine your success with innovation and excellence.
-          </p>
-          <KeyboardDoubleArrowDownIcon
-            className="animate-bounce mt-10 text-white"
-            style={{ fontSize: "50px" }}
-            data-aos="zoom-in"
+      <HeroSection
+        videoUrl={Techclient}
+        videoOpacity={20}
+        MarginAnimtion={true}
+      >
+        <div className="">
+          <div className="relative h-[90vh]">
+            {/* <img
+              src={client}
+              className="w-full h-full object-cover"
+              style={{ borderRadius: `0 0 ${bottomRadius} ${bottomRadius}` }}
+              alt="Client"
+            /> */}
+            
+            <div className="absolute inset-0 flex flex-col justify-center items-start text-[#0060b5]">
+              <h1 className="text-5xl font-extrabold" data-aos="fade-down">
+                Empower Your Journey
+              </h1>
+              <p className="text-2xl font-bold mt-4 text-yellow-500" data-aos="fade-up">
+                Redefine Your Success With Innovation And Excellence.
+              </p>
+              {/* <KeyboardDoubleArrowDownIcon
+                className="animate-bounce mt-10 text-white"
+                style={{ fontSize: "50px" }}
+                data-aos="zoom-in"
+              /> */}
+            </div>
+          </div>
+
+          <div className="flex items-center justify-center mt-32">
+            <h1
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+              data-aos-delay="100"
+              data-aos-offset="100"
+              className="heading2 text-black text-5xl font-bold"
+            >
+              REDEFINE YOUR SUCCESS STORY WITH US
+            </h1>
+          </div>
+        </div>
+      </HeroSection>
+
+      <div className="flex w-auto gap-10 justify-center mt-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
+          {[
+            {
+              src: qualityClient,
+              title: "Quality",
+              description: "Top-tier quality in every step.",
+              number: "01",
+              bgColor: "bg-blue-700",
+            },
+            {
+              src: care,
+              title: "Client Focus",
+              description: "We prioritize client needs.",
+              number: "02",
+              bgColor: "bg-green-700",
+            },
+            {
+              src: support,
+              title: "Support",
+              description: "Continuous support for our clients.",
+              number: "03",
+              bgColor: "bg-red-700",
+            },
+            {
+              src: personnel,
+              title: "Expert Team",
+              description: "Highly skilled professionals.",
+              number: "04",
+              bgColor: "bg-yellow-700",
+            },
+            {
+              src: innovation,
+              title: "Innovation",
+              description: "Innovative solutions leading the industry.",
+              number: "05",
+              bgColor: "bg-purple-700",
+            },
+            {
+              src: commitment,
+              title: "Commitment",
+              description: "Unwavering dedication to quality.",
+              number: "06",
+              bgColor: "bg-orange-700",
+            },
+          ].map((item, index) => (
+            <div
+              key={index}
+              className="relative flex flex-col gap-2 p-4 group transition-transform duration-300 transform hover:scale-105 rounded-lg"
+            >
+              <img
+                src={item.src}
+                className="w-full h-40 object-cover rounded-lg border-none p-0 m-0 shadow-none"
+                alt={item.title}
+              />
+              <div
+                className={`absolute inset-0 flex flex-col items-start justify-center p-6 rounded-lg ${item.bgColor} text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
+              >
+                <span className="text-3xl font-bold">{item.number}</span>
+                <h1 className="text-lg font-bold mt-2">{item.title}</h1>
+                <p className="text-sm mt-2">{item.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* New Section: Our Client Journey */}
+      <div className="flex flex-col items-center justify-center  py-16 mt-20">
+        <h2 className="text-black text-4xl font-bold mb-6">
+          Our Client Journey
+        </h2>
+        <p className="text-black text-lg mb-8 px-4 text-center">
+          We partner with leading organizations to deliver world-class solutions
+          and support. Join us in shaping the future together.
+        </p>
+        <div className="flex justify-evenly w-full">
+          <img
+            src={intertrust}
+            className="h-20 w-auto  hover:scale-150 transition-all duration-300 ease-in-out"
+            alt="Intertrust"
+          />
+          <img
+            src={suntrap}
+            className="h-20 w-auto  hover:scale-150 transition-all duration-300 ease-in-out"
+            alt="Suntrap"
+          />
+          <img
+            src={ips}
+            className="h-20 w-auto  hover:scale-150 transition-all duration-300 ease-in-out"
+            alt="IPS"
+          />
+          <img
+            src={hamarakendra}
+            className="h-20 w-auto hover:scale-150 transition-all duration-300 ease-in-out"
+            alt="Hamarakendra"
           />
         </div>
       </div>
 
-        <div className="flex items-center justify-center mt-32">
-          <h1 data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100" data-aos-offset="100"
-              className="heading2 text-black text-5xl font-bold">
-            REDEFINE YOUR SUCCESS STORY WITH US
-          </h1>
-        </div>
-        <div className="flex w-auto gap-10 justify-center mt-10">
-  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
-    {[
-      { src: qualityClient, title: 'Quality', description: "Top-tier quality in every step.", number: '01', bgColor: 'bg-blue-700' },
-      { src: care, title: 'Client Focus', description: 'We prioritize client needs.', number: '02', bgColor: 'bg-green-700' },
-      { src: support, title: 'Support', description: 'Continuous support for our clients.', number: '03', bgColor: 'bg-red-700' },
-      { src: personnel, title: 'Expert Team', description: 'Highly skilled professionals.', number: '04', bgColor: 'bg-yellow-700' },
-      { src: innovation, title: 'Innovation', description: 'Innovative solutions leading the industry.', number: '05', bgColor: 'bg-purple-700' },
-      { src: commitment, title: 'Commitment', description: 'Unwavering dedication to quality.', number: '06', bgColor: 'bg-orange-700' }
-    ].map((item, index) => (
-      <div key={index} className="relative flex flex-col gap-2 p-4 group transition-transform duration-300 transform hover:scale-105 rounded-lg">
-        <img src={item.src} className="w-full h-40 object-cover rounded-lg border-none p-0 m-0 shadow-none" alt={item.title} />
-        <div className={`absolute inset-0 flex flex-col items-start justify-center p-6 rounded-lg ${item.bgColor} text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300`}>
-          <span className="text-3xl font-bold">{item.number}</span>
-          <h1 className="text-lg font-bold mt-2">{item.title}</h1>
-          <p className="text-sm mt-2">{item.description}</p>
+      {/* New Section: What Clients Say */}
+      <div className="flex flex-col items-center justify-center bg-white py-16 mt-20">
+        <h2 className="text-black text-4xl font-bold mb-6">
+          What Our Clients Say
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-4">
+          <div className="bg-yellow-700 p-6 rounded-lg shadow-lg text-bold text-xl">
+            <p className="text-white  mb-4">
+              "Partnering with them has significantly improved our project
+              efficiency."
+            </p>
+            <span className="text-white">- Hamarakendra</span>
+          </div>
+          <div className="bg-green-700 p-6 rounded-lg shadow-lg text-bold text-xl">
+            <p className="text-white  mb-4">
+              "Their dedication to quality is unmatched. Highly recommended!"
+            </p>
+            <span className="text-white">- IPS_e_Services</span>
+          </div>
+          <div className="bg-orange-700 p-6 rounded-lg shadow-lg text-bold text-xl">
+            <p className="text-white  mb-4">
+              "They deliver on time, with excellent support throughout."
+            </p>
+            <span className="text-white">- SunTrap</span>
+          </div>
         </div>
       </div>
-    ))}
-  </div>
-</div>
 
-
-
-        {/* New Section: Our Client Journey */}
-        <div className="flex flex-col items-center justify-center  py-16 mt-20">
-          <h2 className="text-black text-4xl font-bold mb-6">Our Client Journey</h2>
-          <p className="text-black text-lg mb-8 px-4 text-center">We partner with leading organizations to deliver world-class solutions and support. Join us in shaping the future together.</p>
-          <div className="flex justify-evenly w-full">
-            <img src={intertrust} className="h-20 w-auto  hover:scale-150 transition-all duration-300 ease-in-out" alt="Intertrust" />
-            <img src={suntrap} className="h-20 w-auto  hover:scale-150 transition-all duration-300 ease-in-out" alt="Suntrap" />
-            <img src={ips} className="h-20 w-auto  hover:scale-150 transition-all duration-300 ease-in-out" alt="IPS" />
-            <img src={hamarakendra} className="h-20 w-auto hover:scale-150 transition-all duration-300 ease-in-out" alt="Hamarakendra" />
-          </div>
-        </div>
-
-        {/* New Section: What Clients Say */}
-        <div className="flex flex-col items-center justify-center bg-white py-16 mt-20">
-          <h2 className="text-black text-4xl font-bold mb-6">What Our Clients Say</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-4">
-            <div className="bg-yellow-700 p-6 rounded-lg shadow-lg text-bold text-xl">
-              <p className="text-white  mb-4">"Partnering with them has significantly improved our project efficiency."</p>
-              <span className="text-white">- Hamarakendra</span>
-            </div>
-            <div className="bg-green-700 p-6 rounded-lg shadow-lg text-bold text-xl">
-              <p className="text-white  mb-4">"Their dedication to quality is unmatched. Highly recommended!"</p>
-              <span className="text-white">- IPS_e_Services</span>
-            </div>
-            <div className="bg-orange-700 p-6 rounded-lg shadow-lg text-bold text-xl">
-              <p className="text-white  mb-4">"They deliver on time, with excellent support throughout."</p>
-              <span className="text-white">- SunTrap</span>
-            </div>
-          </div>
-        </div>
-
-       
-   
-        <div className=" py-20">
-        
+      <div className=" py-20">
         <div className="flex justify-around text-black items-center">
           {[
-        //    { number: "500+", text: "Successful Projects" },
+            //    { number: "500+", text: "Successful Projects" },
             { number: "18+", text: "Skilled Experts" },
             { number: "6+", text: "Years in Business" },
             { number: "95%", text: "Client Satisfaction" },
@@ -327,7 +400,7 @@ export const TechClientsPage = () => {
               className="text-center bg-white p-6 rounded-lg shadow-md transition-transform duration-300 hover:scale-105"
               data-aos="zoom-in"
               data-aos-delay={`${index * 200}`}
-              >
+            >
               <h3 className="text-6xl font-bold text-black">{stat.number}</h3>
               <p className="text-xl font-semibold mt-4">{stat.text}</p>
             </div>
@@ -335,13 +408,8 @@ export const TechClientsPage = () => {
         </div>
       </div>
 
-
-  
-
-
-        <div className="tech-footer mt-20">
-          <Footer />
-        </div>
+      <div className="tech-footer mt-20">
+        <Footer />
       </div>
     </>
   );
