@@ -1,69 +1,95 @@
 import React, { useEffect, useState } from 'react';
-import PropTypes from 'prop-types';
-import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown'; // Ensure you have @mui/icons-material installed
+import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown'; 
 
-const HeroSection = ({ videoUrl,videoOpacity,MarginAnimtion,children}) => {
-        const [bottomRadius, setBottomRadius] = useState('0%');
-        const [scrollHeading, setScrollHeading] = useState("");
+const HeroSection = ({ videoUrl, videoOpacity, MarginAnimtion, children }) => {
+    const [bottomRadius, setBottomRadius] = useState('0%');
+    const [isCentered, setIsCentered] = useState(false);
 
-        useEffect(() => {
-                const handleScroll = () => {
-                        const scrollTop = window.scrollY;
-                        const maxScroll = 50; // Adjust this value for how quickly you want the border to round
-                        const radius = Math.min(scrollTop / maxScroll * 50, 50); // Cap at 50% for a smooth transition
-                        setBottomRadius(`${radius}%`);
-                        if(MarginAnimtion){
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollTop = window.scrollY;
+            const maxScroll = 50;
+            const radius = Math.min(scrollTop / maxScroll * 50, 50); 
+            setBottomRadius(`${radius}%`);
 
-                                setScrollHeading(scrollTop > 30 ? "ml-[30%]" : "ml-0");
-                        }
-                        else{
-                                setScrollHeading("ml-0")   ;
-                        }
-                       
-                };
+            if (MarginAnimtion) {
+                setIsCentered(scrollTop > 30); 
+            } else {
+                setIsCentered(false); 
+            }
+        };
 
-                window.addEventListener('scroll', handleScroll);
-                return () => window.removeEventListener('scroll', handleScroll);
-        }, []);
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, [MarginAnimtion]);
 
-        // bg-[#f5f5cc]
-        return (
-                <div
-                        className="relative flex h-screen  shadow-xl bg-black  transition-all duration-1000 ease-in-out"
-                        style={{ borderRadius: `0 0 ${bottomRadius} ${bottomRadius}` }}
-                >
-                          <div className={`absolute z-20 
-                        transition-all duration-300 ${scrollHeading} items-end `}  style={{ transition: 'margin-left 1s ease-in-out' }} >
-                                {children}
-                        </div>
+    useEffect(() => {
+        if (window.scrollY === 0) {
+            const timeout = setTimeout(() => {
+                window.scrollBy({
+                    top: 250, 
+                    behavior: 'smooth', 
+                });
+            }, 5000); //
+       
+        return () => clearTimeout(timeout); 
+}
+    }, []);
 
-                        <video
-                                autoPlay
-                                loop
-                                muted
-                                className={`absolute inset-0 w-full h-full object-cover opacity-${videoOpacity} transition-all duration-1000 ease-in-out`}
-                                style={{ borderRadius: `0 0 ${bottomRadius} ${bottomRadius}` }}
-                        >
-                                <source src={videoUrl} type="video/mp4" />
-                                Your browser does not support the video tag.
-                        </video>
-                        <div
-                                className="absolute bottom-0 left-1/2 flex justify-center items-end transform -translate-x-1/2 w-14 h-14 text-[200px] text-white z-50 rounded-full animate-pulse"
-                                style={{ animationDuration: "4000ms" }}
-                        >
-                                <KeyboardDoubleArrowDownIcon
-                                        className="animate-bounce"
-                                        style={{ fontSize: "50px", animationDuration: "400ms", animationDelay: "3000ms" }}
-                                />
-                        </div>
-                      
-                </div>
-        );
+    const headingStyle = {
+        transform: isCentered ? 'translateX(50%) ' : 'translateX(0)', 
+        transition: 'transform 1s ease-in-out', 
+    };
+
+    const containerStyle = {
+        borderRadius: `0 0 ${bottomRadius} ${bottomRadius}`,
+        transition: 'border-radius 1s ease-in-out', 
+    };
+
+    const ScrollFun = () => {
+        window.scrollBy({
+           top: window.innerHeight, 
+            behavior: 'smooth'
+        });
+    };
+    
+    
+    return (
+        <div
+            className={`relative flex h-[100vh] items-center  ${isCentered ? 'border-b-4 ' : 'border-b-0'} border-b-white justify-start shadow-xl bg-black transition-all duration-1000 ease-in-out`}
+            style={containerStyle}
+        >
+           <div
+    className={`text-start absolute z-20 w-[48vw] h-auto drop-shadow-xl mt-10 ${isCentered ? "ml-0" : 'ml-10'}`}
+    style={headingStyle} 
+>
+                {children}
+            </div>
+
+            <video
+                autoPlay
+                loop
+                muted
+                className={`absolute inset-0 w-full h-full object-cover opacity-${videoOpacity} transition-all duration-1000 ease-in-out`}
+                style={containerStyle}// Smooth border-radius transition
+            >
+                <source src={videoUrl} type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
+
+            <div
+                className="absolute bottom-0 left-1/2 flex flex-col justify-center items-center mb-5 transform -translate-x-1/2 h-14  text-white z-50 animate-pulse cursor-pointer"
+                style={{ animationDuration: "4000ms" }}
+            >
+                <KeyboardDoubleArrowDownIcon
+                 onClick={ScrollFun}
+                    className="animate-bounce"
+                    style={{ fontSize: "50px", animationDuration: "400ms", animationDelay: "3000ms" }}
+                />
+                <h1 className='text-xs'>Scroll for more</h1>
+            </div>
+        </div>
+    );
 };
-
-// VideoBackgroundSection.propTypes = {
-//   videoUrl: PropTypes.string.isRequired,
-//   content: PropTypes.node.isRequired,
-// };
 
 export default HeroSection;
