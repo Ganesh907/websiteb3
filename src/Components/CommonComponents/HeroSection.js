@@ -60,7 +60,7 @@ const HeroSection = ({ videoUrl, videoOpacity, MarginAnimtion, children }) => {
             style={containerStyle}
         >
            <div
-    className={`text-start absolute z-20 w-[48vw] h-auto drop-shadow-xl mt-10 ${isCentered ? "ml-0" : 'ml-10'}`}
+    className={`text-start absolute z-20 w-[50vw] h-auto drop-shadow-xl mt-10 ${isCentered ? "ml-0" : 'ml-10'}`}
     style={headingStyle} 
 >
                 {children}
@@ -70,7 +70,7 @@ const HeroSection = ({ videoUrl, videoOpacity, MarginAnimtion, children }) => {
                 autoPlay
                 loop
                 muted
-                className={`absolute inset-0 w-full h-full object-cover opacity-${videoOpacity} transition-all duration-1000 ease-in-out`}
+                className={`absolute inset-0 w-full h-full object-cover opacity-20 transition-all duration-1000 ease-in-out`}
                 style={containerStyle}// Smooth border-radius transition
             >
                 <source src={videoUrl} type="video/mp4" />

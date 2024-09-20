@@ -15,6 +15,8 @@ import KeyboardDoubleArrowUpIcon from '@mui/icons-material/KeyboardDoubleArrowUp
 import { Blogs } from "./Pages/Blogs";
 import { ColorTheme } from "./Components/ColorTheme";
 import CareerPage from "./Pages/CareerPage";
+import HorizontalPageProgress from "react-horizontal-page-progress";
+import zIndex from "@mui/material/styles/zIndex";
 
 function App() {
   const [isVisible, setIsVisible] = useState(false);
@@ -47,6 +49,19 @@ function App() {
   return (
     <Router>
       <div>
+      {/* <HorizontalPageProgress
+  height="3px"
+  backgroundColor="#0060b5"  
+  style={{
+    position: 'fixed',
+    top: 0,
+    left: 0,
+    width: '100%',
+    zIndex: 99999  
+  }}
+/> */}
+
+
         <Navbar />
         
         <Routes>
