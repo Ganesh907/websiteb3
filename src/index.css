@@ -18,8 +18,8 @@ code {
 } */
 
 body {
-  background-color: var(--background-color);
-  color: var(--secondary-color);
+  background-color: #272626;
+  color: white;
 }
 @tailwind base;
 @tailwind components;

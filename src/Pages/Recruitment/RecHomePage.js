@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState,useRef } from 'react';
 // import '../../pages/Recruitment/Recruitment.scss';
 // import Footer from '../../components/Footer/footer';
 // import Header from '../../components/Header/header';
@@ -10,6 +10,7 @@ import React, { useEffect, useState } from 'react';
 // import PremanentPlacement from '../../assets/images/premanent.png';
 // import webdevelopment from '../../../assets/images/webdevelopment.png';
 // import webdevelopment from '../../assets/images/contract-to-hire.png';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import AboutUs4 from '../../Assets/Images/AboutUs4.jpg';
 import cursorGif from '../../Assets/Images/cursorGif.gif';
 import RecruitmentHomeBg from '../../Assets/Images/RecruitmentHomeBg.jpg';
@@ -80,6 +81,34 @@ const RecHomePage = () => {
 
   ];
 
+  const jobRoles = [
+    "JAVA .NET .NET PHP Developers",
+    "Android, Kotlin, Flutter - Developer",
+    "SAP ABAP / Basis / FICO / MDG / CRM / BPC / Hana",
+    "SAP ABAP",
+    "Linux Admin / Network Engineer",
+    "Microsoft Azure / Ms Dynamic 365",
+    "Workday/ OracleES / EDM",
+    "Devops / RSA ARCHER / PAAS",
+    "C++ Programmer / Open Link",
+    "Sales Force / RED HAT",
+    "Mongo DB / Cloud contact center OPS",
+    "Google Big Query / Pega System",
+    "Service Desk / Service Now",
+    "Manual / Automation tester",
+    "B3 Angular Developer",
+    "Business Analyst",
+    "Data Scientist / Machine Learning"
+  ];
+
+  const marqueeRef = useRef(null); // Reference to the marquee element
+  const handleMouseEnter1 = () => {
+    marqueeRef.current.stop(); // Stop the marquee on hover
+  };
+
+  const handleMouseLeave1 = () => {
+    marqueeRef.current.start(); // Start the marquee on mouse leave
+  };
 
   // const quotes = [
   //   " We understand that for you, it’s never just a job. It’s your business. Thats why we Possionate about not only finding you a quality employee. But also the perfect fit."
@@ -111,9 +140,7 @@ const RecHomePage = () => {
   return (
     <div className="recrHomepageMain" >
 
-
-
-      <HeroSection videoUrl={jobinterview}
+<HeroSection videoUrl={jobinterview}
         videoOpacity={20}
         MarginAnimtion={true}
 
@@ -121,7 +148,7 @@ const RecHomePage = () => {
         <div className="font-bold drop-shadow-xl">
           <div className='' style={{ cursor: `url(${searchIconSvg}) 40 30, auto` }}>
 
-          <div className=" ">
+          {/* <div className=" ">
             <h1 className="text-[#0060b5] text-4xl font-bold drop-shadow-xl mr-2"
               style={{ userSelect: 'none', WebkitUserSelect: 'none', MsUserSelect: 'none' }}>
               {"Top Talent Access".split("").map((letter, index) => (
@@ -130,12 +157,51 @@ const RecHomePage = () => {
                 </span>
               ))}
             </h1>
-          </div>
+          </div> */}
+
+          <div className="relative">
+  <h1
+    className=" text-[#0060b5] text-5xl font-bold drop-shadow-xl mr-2 "
+    style={{ userSelect: 'none', WebkitUserSelect: 'none', MsUserSelect: 'none' }}
+  >
+    {"Top Talent Access".split("").map((letter, index) => (
+      <span key={index} className="hover:text-white transition-opacity duration-300">
+        {letter}
+      </span>
+    ))}
+  </h1>
+
+  <span
+    className="absolute bottom-0 top-7 left-0 w-[65vh] border-b-2 my-8"
+    style={{
+      borderImage: "linear-gradient(to right, yellow, white, blue, black) 1",
+      animation: "gradientShift 6s infinite",
+    }}
+  ></span>
+
+  <style jsx>{`
+    .relative {
+      position: relative;
+    }
+    .absolute {
+      position: absolute;
+    }
+    @keyframes gradientShift {
+      0% {
+        border-image-source: linear-gradient(to right, yellow, blue);
+      }
+      100% {
+        border-image-source: linear-gradient(to right, blue, yellow);
+      }
+    }
+  `}</style>
+</div>
+
 
 
           <div className=" flex items-center">
 
-            <h1 className="drop-shadow-lg text-white text-xl my-5 font-semibold border-b-4 border-[#0060b5] pb-1"
+            <h1 className="drop-shadow-lg  text-white text-3xl my-5 font-bold  pb-4"
               style={{ userSelect: 'none', WebkitUserSelect: 'none', MsUserSelect: 'none' }}
             >
               {"Let Us Find the ".split("").map((letter, index) => (
@@ -148,7 +214,7 @@ const RecHomePage = () => {
               <span> </span>
 
               {"Perfect Fit".split("").map((letter, index) => (
-                <span key={index} className="hover:text-[#0060b5] hover:text-[30px] transition-opacity duration-300 text-yellow-400 text-2xl">
+                <span key={index} className="hover:text-[#0060b5] hover:text-[30px] transition-opacity duration-300 text-yellow-500 text-3xl">
                   {letter}
                 </span>
               ))}
@@ -173,7 +239,7 @@ const RecHomePage = () => {
               onMouseLeave={handleMouseLeave}
             >
               {quotes.map((quote, index) => (
-                <div key={index} className="w-full font-semibold flex-shrink-0 bg-transparent text-white drop-shadow-xl">
+                <div key={index} className="w-full font-semibold text-xl flex-shrink-0 bg-transparent text-white drop-shadow-xl">
                   <p>{quote}</p>
                 </div>
               ))}
@@ -184,7 +250,13 @@ const RecHomePage = () => {
 
       </HeroSection>
 
-
+      <div className='h-[80vh] w-full  flex flex-col justify-center items-center'>
+        <h1 className='uppercase text-xl font-bold text-[var(--secondary-color)]'>for hiring</h1>
+        <h1 className='text-7xl mt-10 drop-shadow-xl text-[var(--primary-color)]'>Our Working Process</h1>
+        <p className='w-[50%] my-10 text-[var(--secondary-color)] text-center'>We understand that for you, it’s never just a job. It’s your business. Thats why we Possionate about not only finding you a quality employee. But also the perfect fit.</p>
+        <Button variant="contained" size="large" sx={{ borderRadius: '20px', backgroundColor: 'var(--primary-color)' }}>
+          Discover Jobs</Button>
+      </div>
 
       <h2 className='text-center text-5xl font-semibold mt-10  text-[var(--primary-color)]'>Related Services</h2>
       <div className='my-10  flex justify-around'
@@ -235,13 +307,7 @@ const RecHomePage = () => {
 
 
 
-      <div className='h-[80vh] w-full  flex flex-col justify-center items-center'>
-        <h1 className='uppercase text-xl font-bold text-[var(--secondary-color)]'>for hiring</h1>
-        <h1 className='text-7xl mt-10 drop-shadow-xl text-[var(--primary-color)]'>Our Working Process</h1>
-        <p className='w-[50%] my-10 text-[var(--secondary-color)] text-center'>We understand that for you, it’s never just a job. It’s your business. Thats why we Possionate about not only finding you a quality employee. But also the perfect fit.</p>
-        <Button variant="contained" size="large" sx={{ borderRadius: '20px', backgroundColor: 'var(--primary-color)' }}>
-          Discover Jobs</Button>
-      </div>
+    
 
 
       {/* <div className='bg-red-200 flex'>
@@ -320,9 +386,58 @@ const RecHomePage = () => {
       </ul>
 
 
+      <div className='my-10 '>
+
+<h1 className="font-bold text-xl text-center mt-10 text-[var(--primary-color)]" >
+  B3 EXPERTISE IN IT RECRUITMENT
+</h1>
+
+
+<marquee
+  className="w-full  p-5 text-black"
+  behavior="scroll"
+  direction="left"
+  scrollamount="10"
+  ref={marqueeRef}
+  onMouseEnter={handleMouseEnter1}
+  onMouseLeave={handleMouseLeave1}
+>
+  {jobRoles.map((role, index) => (
+    <span key={index} className="inline-flex items-center mx-4 rounded-lg bg-white text-black drop-shadow-lg  border-2 border-[var(--primary-color)] p-3">
+      {role}
+      <ArrowBackIcon className="ml-2 text-[var(--primary-color)]" />
+    </span>
+  ))}
+</marquee>
+
+
+{/* <h1 className="font-bold text-xl text-center mt-10  uppercase text-[var(--primary-color)]">
+  B3 Expertise into Contract Hiring
+</h1>
+
+
+<marquee
+  className="w-full p-10 text-black"
+  behavior="scroll"
+  direction="right"
+  scrollamount="10"
+  ref={marqueeRef2}
+  onMouseEnter={handleMouseEnter2}
+  onMouseLeave={handleMouseLeave2}
+>
+  {jobRoles2.map((role, index) => (
+    <span key={index} className="inline-flex items-center mx-4 rounded-lg bg-white drop-shadow-lg  text-black border-2 border-[var(--primary-color)] p-3">
+      {role}
+      <ArrowForwardIcon className="ml-2  text-[var(--primary-color)]" />
+    </span>
+  ))}
+</marquee> */}
+</div>
 
       <div className='recr-footer'>
         <Footer /></div>
+
+
     </div>
 
   );

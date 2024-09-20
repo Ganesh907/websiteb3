@@ -23,18 +23,19 @@ const HeroSection = ({ videoUrl, videoOpacity, MarginAnimtion, children }) => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, [MarginAnimtion]);
 
-    useEffect(() => {
-        if (window.scrollY === 0) {
-            const timeout = setTimeout(() => {
-                window.scrollBy({
-                    top: 250, 
-                    behavior: 'smooth', 
-                });
-            }, 5000); //
+//     useEffect(() => {
+//         if (window.scrollY === 0) {
+//             const timeout = setTimeout(() => {
+//                 window.scrollBy({
+//                     top: 250, 
+//                     behavior: 'smooth',
+                     
+//                 });
+//             }, 5000); 
        
-        return () => clearTimeout(timeout); 
-}
-    }, []);
+//         return () => clearTimeout(timeout); 
+// }
+//     }, []);
 
     const headingStyle = {
         transform: isCentered ? 'translateX(50%) ' : 'translateX(0)', 
@@ -81,7 +82,7 @@ const HeroSection = ({ videoUrl, videoOpacity, MarginAnimtion, children }) => {
     
     return (
         <div
-            className={`relative flex h-[100vh] items-center  ${isCentered ? 'border-b-4 ' : 'border-b-0'} border-b-white justify-start shadow-xl bg-black transition-all duration-1000 ease-in-out`}
+            className={`relative flex h-[100vh] items-center  ${isCentered ? 'border-b-4 ' : 'border-b-0'} border-b-yellow-400 justify-start shadow-xl bg-black transition-all duration-1000 ease-in-out`}
             style={containerStyle}
         >
            <div

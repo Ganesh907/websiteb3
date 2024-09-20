@@ -11,25 +11,7 @@ import SearchIcon from '@mui/icons-material/Search';
 
 export const RecServicesPage = () => {
 
-  const jobRoles = [
-    "JAVA .NET .NET PHP Developers",
-    "Android, Kotlin, Flutter - Developer",
-    "SAP ABAP / Basis / FICO / MDG / CRM / BPC / Hana",
-    "SAP ABAP",
-    "Linux Admin / Network Engineer",
-    "Microsoft Azure / Ms Dynamic 365",
-    "Workday/ OracleES / EDM",
-    "Devops / RSA ARCHER / PAAS",
-    "C++ Programmer / Open Link",
-    "Sales Force / RED HAT",
-    "Mongo DB / Cloud contact center OPS",
-    "Google Big Query / Pega System",
-    "Service Desk / Service Now",
-    "Manual / Automation tester",
-    "B3 Angular Developer",
-    "Business Analyst",
-    "Data Scientist / Machine Learning"
-  ];
+  
 
   const jobRoles2 = [
     ".NET DotNet Developer",
@@ -58,16 +40,10 @@ export const RecServicesPage = () => {
   ];
 
 
-  const marqueeRef = useRef(null); // Reference to the marquee element
+  
   const marqueeRef2 = useRef(null); // Reference to the marquee element
 
-  const handleMouseEnter = () => {
-    marqueeRef.current.stop(); // Stop the marquee on hover
-  };
-
-  const handleMouseLeave = () => {
-    marqueeRef.current.start(); // Start the marquee on mouse leave
-  };
+ 
 
   const handleMouseEnter2 = () => {
     marqueeRef2.current.stop(); // Stop the marquee on hover
@@ -281,54 +257,7 @@ export const RecServicesPage = () => {
 
 
       </div>
-      <div className='my-10 '>
-
-        <h1 className="font-bold text-xl text-center mt-10 text-[var(--primary-color)]" >
-          B3 EXPERTISE IN IT RECRUITMENT
-        </h1>
-
-
-        <marquee
-          className="w-full  p-5 text-black"
-          behavior="scroll"
-          direction="left"
-          scrollamount="10"
-          ref={marqueeRef}
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-        >
-          {jobRoles.map((role, index) => (
-            <span key={index} className="inline-flex items-center mx-4 rounded-lg bg-white text-black drop-shadow-lg  border-2 border-[var(--primary-color)] p-3">
-              {role}
-              <ArrowBackIcon className="ml-2 text-[var(--primary-color)]" />
-            </span>
-          ))}
-        </marquee>
-
-
-        {/* <h1 className="font-bold text-xl text-center mt-10  uppercase text-[var(--primary-color)]">
-          B3 Expertise into Contract Hiring
-        </h1>
-
-
-        <marquee
-          className="w-full p-10 text-black"
-          behavior="scroll"
-          direction="right"
-          scrollamount="10"
-          ref={marqueeRef2}
-          onMouseEnter={handleMouseEnter2}
-          onMouseLeave={handleMouseLeave2}
-        >
-          {jobRoles2.map((role, index) => (
-            <span key={index} className="inline-flex items-center mx-4 rounded-lg bg-white drop-shadow-lg  text-black border-2 border-[var(--primary-color)] p-3">
-              {role}
-              <ArrowForwardIcon className="ml-2  text-[var(--primary-color)]" />
-            </span>
-          ))}
-        </marquee> */}
-      </div>
-
+      
 
       <div>
 

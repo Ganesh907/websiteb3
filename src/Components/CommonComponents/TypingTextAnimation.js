@@ -87,7 +87,7 @@ const TypingText = () => {
         </style>
       </h1>
       <h2
-        className={`max-w-max text-3xl font-semibold ${
+        className={`absolute bottom-20 max-w-max text-3xl font-semibold ${
           isTyping ? "text-white" : "text-yellow-300"
         } mt-20 `}
       >

@@ -17,6 +17,20 @@ import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import Footer from '../../Components/CommonComponents/Footer';
 import HeroSection from '../../Components/CommonComponents/HeroSection';
 
+import requirements from "../../Assets/Images/planning requirement.gif";
+import design from "../../Assets/Images/web-design.gif";
+import development1 from "../../Assets/Images/web-developer.gif";
+import testing from "../../Assets/Images/icons8-testing.gif";
+import deployment from "../../Assets/Images/deployementgif.gif";
+import maintenance from "../../Assets/Images/programmer.gif";
+import arrow from "../../Assets/Images/Loading-Arrow.png";
+
+import techsupport from "../../Assets/Images/technical-support (1).png";
+import contentchange from "../../Assets/Images/content-writing.png";
+import hosting from "../../Assets/Images/hosting.png";
+import websecurity from "../../Assets/Images/websecurity.png";
+import databackup from "../../Assets/Images/databackup.png";
+import webmonitor from "../../Assets/Images/webmonitor.png";
 export const TechHomePage = () => {
   const [expanded, setExpanded] = useState(false);
   const [bottomRadius, setBottomRadius] = useState('0%');
@@ -157,12 +171,12 @@ export const TechHomePage = () => {
         videoOpacity={20}
         MarginAnimtion={true}
       >
-        <div className={`   w-full h-full ${scrollHeading}`} style={{ transition: 'margin-left 1s ease-in-out' }}>
-          <div className="  items-end md:flex md:flex-row md:w-full  pl-2 flex  ">
-            <div className=" z-50 w-full md:flex md:flex-col md:justify-end  md:gap-2  ">
+        
+         
+            <div className="  z-50 w-auto md:flex md:flex-col md:justify-end  md:gap-2  ">
               <h1 className={`md:w-full font-bold  text-5xl  font-montserrat pb-4 z-50 text-[#0060b5] `} style={{ transition: 'margin-left 1s ease-in-out' }}>Your <span className='text-[#0060b5]'>Solution</span></h1>
               <span
-  className="absolute bottom-[182px] left-50 w-[47%] border-b-2 border-dotted translate-y-5"
+  className="absolute bottom-[182px] left-50 w-[48%] border-b-2 border-dotted translate-y-5"
   style={{
     borderImage: 'linear-gradient(to right, yellow, white, blue) 1',
     animation: 'gradientShift 3s infinite', // Increase duration to slow down the speed
@@ -183,11 +197,11 @@ export const TechHomePage = () => {
 </style>
 
 
-              <div className={`label md:ml-3  w-full mt-2 md:flex md:justify-start  md:gap-3 `} style={{ transition: 'margin-left 1s ease-in-out' }}>
-                <h1 className={`relative w-full font-bold text-5xl text-yellow-400 `} style={{ transition: 'margin-left 1s ease-in-out' }}>
+              <div className={`label   w-full mt-2 md:flex md:justify-start  md:gap-3 `} style={{ transition: 'margin-left 1s ease-in-out' }}>
+                <h1 className={`relative w-full font-bold text-5xl text-white `} style={{ transition: 'margin-left 1s ease-in-out' }}>
                   We
                   <span className="absolute animate-zoom-design md:ml-4 text-yellow-400" >Design</span>
-                  <span className="absolute animate-zoom-develop md:ml-4 text-white" >Develop</span>
+                  <span className="absolute animate-zoom-develop md:ml-4 text-yellow-400" >Develop</span>
                   <span className="absolute animate-zoom-deliver md:ml-4 text-yellow-400" >Deliver</span>
                 </h1>
               </div>
@@ -248,13 +262,9 @@ export const TechHomePage = () => {
     }
   `}
 </style>
-
-
-
-
             </div>
-          </div>
-        </div>
+          
+       
       </HeroSection>
 
 
@@ -263,7 +273,116 @@ export const TechHomePage = () => {
 
 
         </div>
-        <SplitCard />
+        <div className=" w-full  bg-white mt-2 h-screen justify-start ">
+          <div>
+            <h1 className="text-[var(--primary-color)] heading2 ml-10  ">
+              Process & Methodology
+            </h1>
+            {/* <span className="w-[8%] h-[5px] ml-[3%] block rounded-b-[5px]" style={{backgroundColor:'#002eff'}}></span>  */}
+          </div>
+
+          <div className="flex justify-between items-center  h-[80vh] mt-4 ">
+            <ol className="flex relative  bottom-16 text-gray-500  w-full border-gray-400  dark:border-gray-700 dark:text-gray-400">
+              <li className="flex-1 mr-10 ml-10 ">
+                <span className=" absolute flex items-center justify-center w-24 h-10 bg-gray-100 rounded top-0 -mt-4  ring-blue-400 dark:ring-gray-900 dark:bg-gray-700">
+                  <img src={requirements} className="h-20 w-40" />
+                </span>
+                <div className="ml-[96px] -mt-[25px] w-80">
+                  <h3 className="font-xl font-bold text-black leading-tight">
+                    Planning and Requirement Analysis
+                  </h3>
+                  <p className="text-sm pt-1 leading-normal">
+                    We begin by understanding your business needs and defining
+                    clear project requirements.
+                  </p>
+                </div>
+              </li>
+              <li className="flex-1 mr-10  ">
+                <span className="-mt-[110px]  absolute flex items-center justify-center w-24 h-10 bg-gray-100 rounded top-0 -mt-4  ring-blue-400 dark:ring-gray-900 dark:bg-gray-700">
+                  <img src={design} className="h-20 w-40" />
+                </span>
+                <div className="ml-[95px] -mt-[120px] w-80">
+                  <h3 className="font-xl font-bold text-black leading-tight">
+                    Design
+                  </h3>
+                  <p className="text-sm pt-1">
+                    Our experienced architects design scalable and efficient
+                    software solutions tailored to your specifications.
+                  </p>
+                </div>
+              </li>
+              <li className="flex-1  ">
+                <span className="absolute flex items-center justify-center w-24 h-10 bg-gray-100 rounded top-0 -mt-4  ring-blue-400 dark:ring-gray-900 dark:bg-gray-700">
+                  <img src={development1} className=" h-20 w-40" />
+                </span>
+                <div className="ml-[95px] -mt-[25px] w-80">
+                  <h3 className="font-xl font-bold text-black leading-tight">
+                    Development
+                  </h3>
+                  <p className="text-sm pt-1">
+                    Our developers build robust software using industry-best
+                    practices and cutting-edge technologies.
+                  </p>
+                </div>
+              </li>
+            </ol>
+          </div>
+
+          <div className="flex justify-between items-center  mt-0  ">
+            <ol className="flex relative text-gray-500  w-full border-gray-400  dark:border-gray-700 dark:text-gray-400">
+              <div className="flex flex-wrap">
+                <li className="flex-1  mr-10 ml-12 ">
+                  <span className=" -mt-[160px] absolute flex items-center justify-center w-24 h-10  rounded top-0   ring-blue-400 dark:ring-gray-900 dark:bg-gray-700">
+                    <img src={testing} className=" h-20 w-40" />
+                  </span>
+                  <div className="ml-[95px] -mt-[170px] ">
+                    <h3 className="font-xl font-bold text-black leading-tight">
+                      Testing
+                    </h3>
+                    <p className="text-sm pt-1">
+                      Comprehensive testing ensures that our software is
+                      reliable, secure, and performs flawlessly.
+                    </p>
+                  </div>
+                </li>
+                <span className="absolute  bottom-[250px] left-[540px] flex items-center justify-center w-56 h-10 rounded -mt-4 ring-blue-400 ">
+                  <img src={arrow} className=" h-40 w-40" />
+                </span>
+
+                <li className="flex-1 mr-4 pb-10">
+                  <span className=" -mt-[60px] absolute flex items-center justify-center w-24 h-10 bg-gray-100 rounded top-0 -mt-4  ring-blue-400 dark:ring-gray-900 dark:bg-gray-700">
+                    <img src={deployment} className=" h-20 w-40" />
+                  </span>
+                  <div className="ml-[95px] -mt-[70px] ">
+                    <h3 className="font-xl font-bold text-black leading-tight">
+                      Deployment
+                    </h3>
+                    <p className="text-sm pt-1">
+                      We seamlessly deploy your software, ensuring minimal
+                      disruption and maximum efficiency.
+                    </p>
+                  </div>
+                </li>
+                <li className="flex-1 mr-4">
+                  <span className="-mt-[160px] absolute flex items-center justify-center w-24 h-10 bg-gray-100 rounded top-0 -mt-4  ring-blue-400 dark:ring-gray-900 dark:bg-gray-700">
+                    <img src={maintenance} className=" h-20 w-40" />
+                  </span>
+                  <div className="ml-[95px] -mt-[160px] w-80">
+                    <h3 className="font-xl font-bold text-black leading-tight">
+                      Maintenance and Support
+                    </h3>
+                    <p className="text-sm pt-1">
+                      Ongoing support and maintenance keep your software running
+                      smoothly and adapt to evolving needs.
+                    </p>
+                  </div>
+                </li>
+              </div>
+            </ol>
+          </div>
+        </div>
+
+
       </div>
 
 
@@ -425,6 +544,73 @@ export const TechHomePage = () => {
         </div>
       </div>
       {/* .......................................................... */}
+      <section className=" w-full md:h-screen bg-red-40 flex flex-col items-center justify-center py-4">
+          <div className=" text-center w-[90%] bg-green-30 mb-10">
+            <p className=" text-[var(--primary-color)] techservice_heading2 ">
+              Let our experts take care of your website,
+              <br />
+              so that you can focus on your business
+            </p>
+          </div>
+
+          <div className="md:w-[90%] md:flex md:flex-row md:justify-around flex flex-col  ">
+            <div className=" md:w-[40%] bg-yellow-40">
+              <p className="techservice_paraghap md:pl-1 p-2">
+                Five Online is a top website maintenance services company,
+                helping businesses across the globe improve the performance and
+                security of their websites. Whether you're looking for a
+                monthly, hourly, or after-hours website maintenance plan, Five
+                Online provides the experience and expertise your company
+                demands.
+              </p>
+
+              <h1 className="techservice_heading3 mt-6 mb-1 md:pl-1 p">
+                Professional Website Management{" "}
+              </h1>
+              <h1 className="techservice_heading3 bg-blue-500 text-white md:pl-1">
+                Maximize Your Website’s Potential{" "}
+              </h1>
+            </div>
+
+            <div className=" md:w-[50%] bg-orange- md:grid md:grid-cols-2 gap-6 mt-2">
+              <div className="techservice_sec2box flex items-center  gap-8 md:p-3  ">
+                <img src={webmonitor} width="20%" className=" md:h-12" />
+                <p className="techservice_sec2paraghap">
+                  24x7x365 Website Monitoring
+                </p>
+              </div>
+              {/* ............................................... */}
+              <div className="techservice_sec2box flex items-center  gap-8 md:p-3">
+                <img src={techsupport} width="20%" className=" md:h-12" />
+                <p className="techservice_sec2paraghap md:pr-2">
+                  Unlimited Technical Support
+                </p>
+              </div>
+              {/* ............................................... */}
+              <div className="techservice_sec2box flex items-center  gap-8 md:p-3 ">
+                <img src={contentchange} width="20%" className=" md:h-12" />
+                <p>Content Changes</p>
+              </div>
+              {/* ............................................... */}
+              <div className="techservice_sec2box flex items-center  gap-8 md:p-3">
+                <img src={hosting} width="20%" className=" md:h-12" />
+                <p>Hosting Support</p>
+              </div>
+              {/* ............................................... */}
+              <div className="techservice_sec2box flex items-center  gap-8 md:p-3">
+                <img src={websecurity} width="20%" className=" md:h-12" />
+                <p>Website Security</p>
+              </div>
+              {/* ............................................... */}
+              <div className="techservice_sec2box flex items-center  gap-8 md:p-3">
+                <img src={databackup} width="20%" className=" md:h-12" />
+                <p>Regular Backup</p>
+              </div>
+              {/* ............................................... */}
+            </div>
+          </div>
+        </section>
+      {/* .............................................................. */}
       <div className='w-[90%] h-auto  md:mb-20 mb-5'>
         <h1 className='mb-3  text-center md:text-start md:ml-[9%] text-[var(--primary-color)]  text-[40px] font-bold m-[5px] font-montserrat md:w-full md:mt-[40px] mt-5'>
           Why do our clients value us?

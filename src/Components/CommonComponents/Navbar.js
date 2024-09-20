@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Dropdown1, Dropdown2 } from "./Dropdown";
-// import B3logof from "../../assets/images/B3logof.png";
-import { Link } from "react-router-dom";
-import "../../CSS_Files/Navbar.css"
+import { NavLink } from "react-router-dom"; // Import NavLink
+import "../../CSS_Files/Navbar.css";
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 
 function Header() {
@@ -46,7 +45,7 @@ function Header() {
       setDropdown2(false);
     }
   };
-  
+
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -55,109 +54,85 @@ function Header() {
     };
   }, [lastScrollY]);
 
-  
-    useEffect(() => {
-      window.addEventListener("scroll", handleScroll);
-      return () => {
-        window.removeEventListener("scroll", handleScroll);
-      };
-    }, []);
-
   const handleScroll = () => {
     const currentScrollY = window.scrollY;
-    if (currentScrollY < lastScrollY || currentScrollY === 0) {
-      setShowNavbar(true);
-    } else {
-      setShowNavbar(false);
-    }
+    setShowNavbar(currentScrollY < lastScrollY || currentScrollY === 0);
     setLastScrollY(currentScrollY);
-    if (window.scrollY > window.innerHeight/2) {
-      setScrolled(true);
-    } else {
-      setScrolled(false);
-    }
+    setScrolled(window.scrollY > window.innerHeight / 2);
   };
-
- 
-  
-
- 
 
   return (
     <>
-      {/* <nav className={`header-navbar ${showNavbar ? "show" : "hide"}`}> */}
-      <nav className={`header-navbar ${scrolled ? "scrolled" : ""} ${showNavbar ? "show" : "hide"}`} style={{ zIndex: 100 }}
-      >
+      <nav className={`header-navbar ${scrolled ? "scrolled" : ""} ${showNavbar ? "show" : "hide"}`} style={{ zIndex: 100 }}>
+        <NavLink to="/" className="navbar-logo  flex justify-center items-center" onClick={closeMobileMenu}>
+        <div className="h-10 w-10 text-[#0060b5] bg-white  text-md flex items-center justify-center">
+  B<sup>3</sup>
+</div>
 
-
-
-        <Link to="/" className="navbar-logo flex  justify-center items-center" onClick={closeMobileMenu}>
-        <div className="h-7 w-7 bg-[#0060b5] text-white rounded-sm text-sm flex items-center justify-center me-1">B<sup>3</sup></div>
-          
-          BitByBit Solutions
-        </Link>
+           &nbsp;BitByBit Solutions
+        </NavLink>
         <div className="menu-icon" onClick={handleClick}>
           <i className={click ? "fas fa-times" : "fas fa-bars"} />
         </div>
         <ul className={click ? "nav-menu active" : "nav-menu"}>
           <li className="nav-item">
-            <Link to="/" className="nav-links" onClick={closeMobileMenu}>
-              Home
-            </Link>
-          </li>
-          <li
-            className="nav-item"
-            onMouseEnter={onMouseEnter1}
-            onMouseLeave={onMouseLeave1}
-          >
-            <Link
-              to="/technology"
-              className="nav-links"
+            <NavLink 
+              to="/aboutB3" 
+              className={({ isActive }) => `nav-links ${isActive ? 'active' : ''}`} 
               onClick={closeMobileMenu}
             >
-              Technology <ArrowDropDownIcon/>
-            </Link>
-            {dropdown1 && <Dropdown1 />}
+              About B3
+            </NavLink>
           </li>
-          <li
-            className="nav-item"
-            onMouseEnter={onMouseEnter2}
-            onMouseLeave={onMouseLeave2}
-          >
-            <Link
-              to="/recruitment"
-              className="nav-links"
+          <li className="nav-item" onMouseEnter={onMouseEnter1} onMouseLeave={onMouseLeave1}>
+  <span className="nav-links cursor-pointer hover:border-transparent">
+    Technology <ArrowDropDownIcon />
+  </span>
+  {dropdown1 && <Dropdown1 />}
+</li>
+
+<li className="nav-item" onMouseEnter={onMouseEnter2} onMouseLeave={onMouseLeave2}>
+  <span className="nav-links cursor-pointer hover:border-transparent">
+    Recruitment <ArrowDropDownIcon />
+  </span>
+  {dropdown2 && <Dropdown2 />}
+</li>
+
+          <li className="nav-item">
+            <NavLink 
+              to="/contactus" 
+              className={({ isActive }) => `nav-links ${isActive ? 'active' : ''}`} 
               onClick={closeMobileMenu}
             >
-              Recruitment <ArrowDropDownIcon/>
-            </Link>
-            {dropdown2 && <Dropdown2 />}
-          </li>
-          {/* <li className="nav-item">
-            <Link to="/contact" className="nav-links" onClick={closeMobileMenu}>
-              Contact
-            </Link>
-          </li> */}
-          <li className="nav-item">
-            <Link to="/contactus" className="nav-links" onClick={closeMobileMenu}>
-              Contact Us
-            </Link>
+              Contact 
+            </NavLink>
           </li>
           <li className="nav-item">
-            <Link to="/aboutus" className="nav-links" onClick={closeMobileMenu}>
-              About Us
-            </Link>
-          </li>
-          
-          <li className="nav-item">
-            <Link to="/careers" className="nav-links" onClick={closeMobileMenu}>
-            Careers
-            </Link>
+            <NavLink 
+              to="/careers" 
+              className={({ isActive }) => `nav-links ${isActive ? 'active' : ''}`} 
+              onClick={closeMobileMenu}
+            >
+              Careers
+            </NavLink>
           </li>
           <li className="nav-item">
-            <Link to="/blogs" className="nav-links rounded-md italic border-2 bg-yellow-400 text-black hover:bg-transparent border-white hover:border-yellow-400 hover:text-yellow-400" onClick={closeMobileMenu}>
+            <NavLink 
+              to="/partners" 
+              className={({ isActive }) => `nav-links ${isActive ? 'active' : ''}`} 
+              onClick={closeMobileMenu}
+            >
+              Partners
+            </NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink 
+              to="/blogs" 
+              className={({ isActive }) => `text-black nav-links rounded-md border-2 ${isActive ? 'bg-yellow-600' : 'bg-yellow-400'}  hover:bg-transparent border-white hover:border-yellow-400 hover:text-yellow-400`} 
+              onClick={closeMobileMenu}
+            >
               Blogs
-            </Link>
+            </NavLink>
           </li>
         </ul>
       </nav>
@@ -165,11 +140,17 @@ function Header() {
         .nav-links {
           position: relative;
           display: inline-block;
+          transition: all 0.3s ease; /* Smooth transition for hover effects */
+        }
+        .nav-links.active {
+          // font-weight: bold;
+          color:#facc15;
+          border:2px solid white;
+          border-radius:6px;
         }
         .nav-links:after {
           content: "";
           position: absolute;
-          // width: 100%;
           transform: scaleX(0);
           height: 3px;
           bottom: 0;
@@ -185,7 +166,6 @@ function Header() {
         .header-navbar {
           transition: top 0.3s;
           position: fixed;
-          // width 90%;
           top: 0;
           z-index: 10;
         }
@@ -201,6 +181,3 @@ function Header() {
 }
 
 export default Header;
-
-
-
