@@ -46,11 +46,36 @@ const HeroSection = ({ videoUrl, videoOpacity, MarginAnimtion, children }) => {
         transition: 'border-radius 1s ease-in-out', 
     };
 
+    // const ScrollFun = () => {
+    //     window.scrollBy({
+    //        top: window.innerHeight, 
+    //         behavior: 'smooth'
+    //     });
+    // };
+    
     const ScrollFun = () => {
-        window.scrollBy({
-           top: window.innerHeight, 
-            behavior: 'smooth'
-        });
+        const scrollDuration = 2000; // Total scroll duration in milliseconds
+        const scrollHeight = window.innerHeight; // Distance to scroll
+        const start = window.scrollY;
+        const startTime = performance.now();
+    
+        const easeInOutQuad = (t) => {
+            return t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
+        };
+    
+        const smoothScroll = (currentTime) => {
+            const timeElapsed = currentTime - startTime;
+            const progress = Math.min(timeElapsed / scrollDuration, 1); // Ensure progress doesn't exceed 1
+            const easedProgress = easeInOutQuad(progress); // Apply easing function for smoother scroll
+    
+            window.scrollTo(0, start + easedProgress * scrollHeight);
+    
+            if (timeElapsed < scrollDuration) {
+                requestAnimationFrame(smoothScroll);
+            }
+        };
+    
+        requestAnimationFrame(smoothScroll);
     };
     
     
