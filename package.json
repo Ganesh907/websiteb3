@@ -15,8 +15,10 @@
     "postcss": "^8.4.41",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-horizontal-page-progress": "^0.0.6",
     "react-router-dom": "^6.26.1",
     "react-scripts": "^5.0.1",
+    "react-scroll-progress-bar": "^2.0.3",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

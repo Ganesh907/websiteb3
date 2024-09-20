@@ -61,7 +61,7 @@ const TypingText = () => {
   }, [currentPhraseIndex]);
 
   return (
-    <div className="flex flex-col mx-auto  mb-10 ms-10  relative w-full">
+    <div className="flex flex-col mx-auto  mb-10 m relative w-full">
       <h1 className="text-[#0060b5] mr-2 text-5xl font-bold  absolute bottom-36">
         {constantText}
         <span

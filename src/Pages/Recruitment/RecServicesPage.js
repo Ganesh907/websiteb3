@@ -86,7 +86,7 @@ export const RecServicesPage = () => {
         videoOpacity={20}
         MarginAnimtion={true}
       >
-        <div className="h-[100vh]  ms-[2vw] flex flex-col justify-end pb-24 items-start font-bold drop-shadow-xl ">
+        <div className=" flex flex-col justify-end items-start font-bold drop-shadow-xl ">
           {/* <div className=" flex items-center">
             <h1 className="text-[#0060b5] text-7xl font-bold drop-shadow-xl ">
               Our Recruitment Services
@@ -99,7 +99,7 @@ export const RecServicesPage = () => {
             <h1 className="drop-shadow-lg text-[#0060b5] text-5xl  font-bold">
               Our Solutions 
             </h1><br/>
-            <h1 className="drop-shadow-lg   text-white text-4xl  w-auto  mb-5 font-semibold "> Your <span className='text-yellow-500'>Hiring</span>Needs
+            <h1 className="drop-shadow-lg   text-white text-4xl  w-auto  mb-5 font-semibold "> Your <span className='text-yellow-500'>Hiring</span> Needs
             {/* <span className="absolute bottom-0 left-0 w-full border-b-2 border-dotted translate-y-5"
     style={{
       borderImage: 'linear-gradient(to right, blue, yellow) 1 ',

@@ -130,7 +130,6 @@ const RecHomePage = () => {
                 </span>
               ))}
             </h1>
-
           </div>
 
 

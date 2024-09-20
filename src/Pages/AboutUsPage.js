@@ -100,16 +100,13 @@ const handleMouseLeave = () => {
 
   return (
     <div>
-
-
-
 <HeroSection
           videoUrl={AboutUsBgVideo}
           videoOpacity={20}
           MarginAnimtion={true}
         >
 
-<div className='h-[100vh] w-[50vw] flex justify-end items-end ml-7 opac'>
+<div className=' w-[50vw] flex justify-end items-end '>
 <div className="relative w-full h-52 overflow-hidden mr-2 cursor-pointer mb-16">
   <h1 className="text-[#0060b5] text-5xl font-bold drop-shadow-xl ">Who We Are</h1>
   <div

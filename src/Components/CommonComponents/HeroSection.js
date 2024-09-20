@@ -60,7 +60,7 @@ const HeroSection = ({ videoUrl, videoOpacity, MarginAnimtion, children }) => {
             style={containerStyle}
         >
            <div
-    className={`text-start absolute z-20 w-[48vw] h-auto drop-shadow-xl mt-10 ${isCentered ? "ml-0" : 'ml-10'}`}
+    className={`text-start absolute z-20 w-[50vw] h-auto drop-shadow-xl mt-10 ${isCentered ? "ml-0" : 'ml-10'}`}
     style={headingStyle} 
 >
                 {children}

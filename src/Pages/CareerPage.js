@@ -63,8 +63,8 @@ const CareerPage = () => {
       >
 
 
-        <div className={`z-10 w-[50vw] h-[100vh] flex justify-end transition-all duration-300 mt-[10%]  items-end`}>
-          <div className=" w-full  mx-10  my-20 drop-shadow-xl">
+        <div className={`z-10 flex justify-end transition-all duration-300  items-end`}>
+          <div className=" w-full drop-shadow-xl">
             <div className=" flex items-center">
               <h1 className="text-[#0060b5] text-5xl font-bold  mr-2 ">
                 Find Your <span className='text-yellow-400'>
@@ -83,7 +83,7 @@ const CareerPage = () => {
              
             </div>
 
-            <div className="relative w-full h-32 overflow-hidden">
+            <div className="relative w-full h-24 overflow-hidden">
               <div
                 className="absolute w-full h-full flex transition-transform duration-1000 font-bold"
                 style={{ transform: `translateX(-${currentIndex * 100}%)` }}

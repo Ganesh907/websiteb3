@@ -42,7 +42,7 @@ export const TechServicesPage = (props) => {
           videoOpacity={20}
           MarginAnimtion={true}
         >
-          <div className="h-[100vh] w-[90vw] flex flex-col justify-end items-end pb-20 ">
+          <div className=" flex flex-col justify-end items-end ">
             <TypingTextAnimation />
           </div>
         </HeroSection>
@@ -65,7 +65,7 @@ export const TechServicesPage = (props) => {
               solutions, customized for your specific requirements.
             </div> */}
 
-            <div className="techservice_bgcards md:grid md:grid-cols-4 md:w-[80%] md:gap-y-4 md:mt-4 md:py-2 md:pl-2  grid grid-cols-1 gap-y-6 ">
+            <div className="techservice_bgcards md:grid md:grid-cols-4 md:w-[80%] md:gap-y-4 md:mt-4 md:py-2  grid grid-cols-1 gap-y-6 ">
               <div
                 className="techservice_box md:w-[90%] md:h-46 md:m-0 md:flex md:flex-col md:justify-start md:items-start
             flex flex-col justify-center items-center  "

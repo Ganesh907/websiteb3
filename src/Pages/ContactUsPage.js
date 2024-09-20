@@ -64,9 +64,9 @@ export const ContactUsPage = () => {
                                 videoOpacity={20}
                                 MarginAnimtion={true}>
 
-                                <div className=' relative z-10   h-[100vh] ml-10 opacity-90 flex flex-col justify-end items-start  w-full '
+                                <div className='z-10 flex flex-col justify-end items-start '
                                 >
-                                        <div className='mb-20'>
+                                        <div className=''>
                                         <div className=" relative ">
                                                 <h1 className=' text-5xl drop-shadow-2xl   text-[#0060b5] font-bold'>
                                                         Need Assistance ? 
