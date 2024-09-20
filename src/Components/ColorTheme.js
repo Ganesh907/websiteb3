@@ -9,10 +9,10 @@ export const ColorTheme = () => {
                 localStorage.getItem("primaryColor") || "#0060b5"
         );
         const [secondaryColor, setSecondaryColor] = useState(
-                localStorage.getItem("secondaryColor") || "black"
+                localStorage.getItem("secondaryColor") || "white"
         );
         const [backgroundColor, setBackgroundColor] = useState(
-                localStorage.getItem("backgroundColor") || "white"
+                localStorage.getItem("backgroundColor") || "#272626"
         );
 
 

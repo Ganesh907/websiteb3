@@ -10,11 +10,7 @@ export const techitems = [
       path: '/technology-services',
       cName: 'dropdown-link'
     },
-    {
-      title: 'Clients',
-      path: '/technology-clients',
-      cName: 'dropdown-link'
-    },
+  
     
   ];
 
@@ -29,9 +25,5 @@ export const techitems = [
       path:'/recruitment-services',
       cName:'dropdown-link'
     },
-    {
-      title:'Clients',
-      path:'/recruitment-clients',
-      cName:'dropdown-link'
-    }
+    
   ];

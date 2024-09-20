@@ -250,7 +250,13 @@ const RecHomePage = () => {
 
       </HeroSection>
 
-
+      <div className='h-[80vh] w-full  flex flex-col justify-center items-center'>
+        <h1 className='uppercase text-xl font-bold text-[var(--secondary-color)]'>for hiring</h1>
+        <h1 className='text-7xl mt-10 drop-shadow-xl text-[var(--primary-color)]'>Our Working Process</h1>
+        <p className='w-[50%] my-10 text-[var(--secondary-color)] text-center'>We understand that for you, it’s never just a job. It’s your business. Thats why we Possionate about not only finding you a quality employee. But also the perfect fit.</p>
+        <Button variant="contained" size="large" sx={{ borderRadius: '20px', backgroundColor: 'var(--primary-color)' }}>
+          Discover Jobs</Button>
+      </div>
 
       <h2 className='text-center text-5xl font-semibold mt-10  text-[var(--primary-color)]'>Related Services</h2>
       <div className='my-10  flex justify-around'
@@ -301,13 +307,7 @@ const RecHomePage = () => {
 
 
 
-      <div className='h-[80vh] w-full  flex flex-col justify-center items-center'>
-        <h1 className='uppercase text-xl font-bold text-[var(--secondary-color)]'>for hiring</h1>
-        <h1 className='text-7xl mt-10 drop-shadow-xl text-[var(--primary-color)]'>Our Working Process</h1>
-        <p className='w-[50%] my-10 text-[var(--secondary-color)] text-center'>We understand that for you, it’s never just a job. It’s your business. Thats why we Possionate about not only finding you a quality employee. But also the perfect fit.</p>
-        <Button variant="contained" size="large" sx={{ borderRadius: '20px', backgroundColor: 'var(--primary-color)' }}>
-          Discover Jobs</Button>
-      </div>
+    
 
 
       {/* <div className='bg-red-200 flex'>

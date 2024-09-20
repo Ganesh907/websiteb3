@@ -69,12 +69,12 @@ function App() {
           <Route path="/" element={<LandingPage />} />
           <Route path="/technology" element={<TechHomePage />} />
           <Route path="/technology-services" element={<TechServicesPage />} />
-          <Route path="/technology-clients" element={<TechClientsPage />} />
+          <Route path="/partners" element={<TechClientsPage />} />
           <Route path="/recruitment" element={<RecHomePage />} />
           <Route path="/recruitment-services" element={<RecServicesPage />} />
-          <Route path="/recruitment-clients" element={<RecClientsPage />} /> 
+          {/* <Route path="/recruitment-clients" element={<RecClientsPage />} />  */}
           <Route path="/contactus" element={<ContactUsPage />} />
-          <Route path="/aboutus" element={<AboutUsPage />} />
+          <Route path="/aboutB3" element={<AboutUsPage />} />
           <Route path="/careers" element={<CareerPage />} />
           <Route path="/blogs" element={<Blogs />} />
         </Routes>
