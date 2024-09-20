@@ -113,22 +113,22 @@ export const ContactUsPage = () => {
                                                         <li>Feel free to reach out for personalized assistance and support.</li>
                                                 </ul> */}
 
-                                                <ul className="list-none space-y-4 text-xl font-semibold mt-4">
+                                                <ul className="list-none space-y-4 text-xl font-semibold mb-10">
   <li
-    className="relative pl-4 mt-4 opacity-0 animate-fadeInRepeat"
+    className="relative pl-4 my-2 opacity-0 animate-fadeInRepeat"
     style={{ animationDelay: '0.5s' }} // First item appears after 0.5s
   >
     <div className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white w-2 h-2 rounded-full"></div>
     Our friendly team is here to answer your questions.
   </li>
   <li
-    className="relative pl-4 opacity-0 animate-fadeInRepeat"
+    className="relative pl-4 my-2 opacity-0 animate-fadeInRepeat"
     style={{ animationDelay: '1.5s' }} // Second item appears after 1.5s
   >
     <div className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white w-2 h-2 rounded-full"></div>
     We’re dedicated to connecting you with exactly what you need.  </li>
     <li
-    className="relative pl-4 opacity-0 animate-fadeInRepeat"
+    className="relative pl-4 my-2 opacity-0 animate-fadeInRepeat"
     style={{ animationDelay: '2s' }} // Third item appears after 1.5s
   >
     <div className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white w-2 h-2 rounded-full"></div>

@@ -275,13 +275,13 @@ export const TechServicesPage = (props) => {
 
         {/* ////////////////////////////////////////section2//////////////////////////// */}
 
-        <div className=" w-full  bg-white mt-20 h-screen justify-start ">
+        {/* <div className=" w-full  bg-white mt-20 h-screen justify-start ">
           <div>
             <h1 className="text-[var(--primary-color)] heading2 ml-10  ">
               Process & Methodology
             </h1>
             {/* <span className="w-[8%] h-[5px] ml-[3%] block rounded-b-[5px]" style={{backgroundColor:'#002eff'}}></span>  */}
-          </div>
+          {/* </div>
 
           <div className="flex justify-between items-center  h-[80vh] mt-4 ">
             <ol className="flex relative  bottom-16 text-gray-500  w-full border-gray-400  dark:border-gray-700 dark:text-gray-400">
@@ -317,8 +317,8 @@ export const TechServicesPage = (props) => {
                 <span className="absolute flex items-center justify-center w-24 h-10 bg-gray-100 rounded top-0 -mt-4  ring-blue-400 dark:ring-gray-900 dark:bg-gray-700">
                   <img src={development1} className=" h-20 w-40" />
                 </span>
-                <div className="ml-[95px] -mt-[25px] w-80">
-                  <h3 className="font-xl font-bold text-black leading-tight">
+                <div className="ml-[95px] -mt-[25px] w-80"> */}
+                  {/* <h3 className="font-xl font-bold text-black leading-tight">
                     Development
                   </h3>
                   <p className="text-sm pt-1">
@@ -382,7 +382,114 @@ export const TechServicesPage = (props) => {
               </div>
             </ol>
           </div>
+        </div> */} 
+
+        <div className="w-full bg-white mt-20 h-full">
+  <h1 className="text-[var(--primary-color)] heading2 ml-10">
+    Process & Methodology
+  </h1>
+
+  {/* Timeline container */}
+  <div className="relative container mx-auto px-6 flex flex-col space-y-12 mt-12">
+
+    {/* Timeline step 1 */}
+    <div className="relative flex items-center">
+      <div className="w-2 h-full bg-gray-300 absolute left-1/2 transform -translate-x-1/2"></div>
+      <div className="flex items-center w-full justify-start">
+        <span className="flex items-center justify-center w-24 h-24 bg-gray-100 rounded-full ring-blue-400 dark:ring-gray-900 dark:bg-gray-700">
+          <img src={requirements} className="h-20 w-20" />
+        </span>
+        <div className="ml-10 w-[40%]">
+          <h3 className="text-xl font-bold text-black">Planning and Requirement Analysis</h3>
+          <p className="text-sm leading-normal">
+            We begin by understanding your business needs and defining clear project requirements.
+          </p>
         </div>
+      </div>
+    </div>
+
+    {/* Timeline step 2 */}
+    <div className="relative flex items-center">
+      <div className="w-2 h-full bg-gray-300 absolute left-1/2 transform -translate-x-1/2"></div>
+      <div className="flex items-center w-full justify-end">
+        <div className="mr-10 w-[40%] text-right">
+          <h3 className="text-xl font-bold text-black">Design</h3>
+          <p className="text-sm leading-normal">
+            Our experienced architects design scalable and efficient software solutions tailored to your specifications.
+          </p>
+        </div>
+        <span className="flex items-center justify-center w-24 h-24 bg-gray-100 rounded-full ring-blue-400 dark:ring-gray-900 dark:bg-gray-700">
+          <img src={design} className="h-20 w-20" />
+        </span>
+      </div>
+    </div>
+
+    {/* Timeline step 3 */}
+    <div className="relative flex items-center">
+      <div className="w-2 h-full bg-gray-300 absolute left-1/2 transform -translate-x-1/2"></div>
+      <div className="flex items-center w-full justify-start">
+        <span className="flex items-center justify-center w-24 h-24 bg-gray-100 rounded-full ring-blue-400 dark:ring-gray-900 dark:bg-gray-700">
+          <img src={development1} className="h-20 w-20" />
+        </span>
+        <div className="ml-10 w-[40%]">
+          <h3 className="text-xl font-bold text-black">Development</h3>
+          <p className="text-sm leading-normal">
+            Our developers build robust software using industry-best practices and cutting-edge technologies.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    {/* Timeline step 4 */}
+    <div className="relative flex items-center">
+      <div className="w-2 h-full bg-gray-300 absolute left-1/2 transform -translate-x-1/2"></div>
+      <div className="flex items-center w-full justify-end">
+        <div className="mr-10 w-[40%] text-right">
+          <h3 className="text-xl font-bold text-black">Testing</h3>
+          <p className="text-sm leading-normal">
+            Comprehensive testing ensures that our software is reliable, secure, and performs flawlessly.
+          </p>
+        </div>
+        <span className="flex items-center justify-center w-24 h-24 bg-gray-100 rounded-full ring-blue-400 dark:ring-gray-900 dark:bg-gray-700">
+          <img src={testing} className="h-20 w-20" />
+        </span>
+      </div>
+    </div>
+
+    {/* Timeline step 5 */}
+    <div className="relative flex items-center">
+      <div className="w-2 h-full bg-gray-300 absolute left-1/2 transform -translate-x-1/2"></div>
+      <div className="flex items-center w-full justify-start">
+        <span className="flex items-center justify-center w-24 h-24 bg-gray-100 rounded-full ring-blue-400 dark:ring-gray-900 dark:bg-gray-700">
+          <img src={deployment} className="h-20 w-20" />
+        </span>
+        <div className="ml-10 w-[40%]">
+          <h3 className="text-xl font-bold text-black">Deployment</h3>
+          <p className="text-sm leading-normal">
+            We seamlessly deploy your software, ensuring minimal disruption and maximum efficiency.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    {/* Timeline step 6 */}
+    <div className="relative flex items-center">
+      <div className="w-2 h-full bg-gray-300 absolute left-1/2 transform -translate-x-1/2"></div>
+      <div className="flex items-center w-full justify-end">
+        <div className="mr-10 w-[40%] text-right">
+          <h3 className="text-xl font-bold text-black">Maintenance and Support</h3>
+          <p className="text-sm leading-normal">
+            Ongoing support and maintenance keep your software running smoothly and adapt to evolving needs.
+          </p>
+        </div>
+        <span className="flex items-center justify-center w-24 h-24 bg-gray-100 rounded-full ring-blue-400 dark:ring-gray-900 dark:bg-gray-700">
+          <img src={maintenance} className="h-20 w-20" />
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+
 
         {/* ////////////////////////////////////////////////////////////////////// */}
         {/* //////////////////////////new section3///////////////////////////// */}
