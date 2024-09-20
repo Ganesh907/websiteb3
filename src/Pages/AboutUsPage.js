@@ -108,7 +108,37 @@ const handleMouseLeave = () => {
 
 <div className=' w-[50vw] flex justify-end items-end '>
 <div className="relative w-full h-52 overflow-hidden mr-2 cursor-pointer mb-16">
-  <h1 className="text-[#0060b5] text-5xl font-bold drop-shadow-xl ">Who We Are</h1>
+  <h1 className="text-[#0060b5] text-5xl font-bold drop-shadow-xl ">Who We Are
+
+  <span
+    className="absolute bottom-0 top-4 left-0 w-[44vh] border-b-2 my-9 "
+    style={{
+      borderImage: "linear-gradient(to right, yellow, white, blue, black) 1",
+      animation: "gradientShift 6s infinite", // Adjust duration as needed
+    }}
+  ></span>
+  
+  <style>
+    {`
+      .relative {
+        position: relative;
+      }
+      .absolute {
+        position: absolute;
+      }
+      @keyframes gradientShift {
+        0% {
+          border-image-source: linear-gradient(to right, yellow, blue);
+        }
+        100% {
+          border-image-source: linear-gradient(to right, blue, yellow);
+        }
+      }
+    `}
+  </style>
+
+  </h1>
+
   <div
   className="absolute w-full h-full flex transition-transform duration-1000 "
   style={{ transform: `translateX(-${currentIndex * 100}%)` }}
@@ -118,14 +148,14 @@ const handleMouseLeave = () => {
   {content.map((item, index) => (
     <div
       key={index}
-      className="w-full flex-shrink-0 bg-transparent text-white drop-shadow-xl "
+      className="w-full flex-shrink-0 bg-transparent font-bold text-3xl text-white drop-shadow-xl "
     >
-      <h3 className="text-2xl font-semibold inline-block border-b-4 border-[#0060b5] pb-1 my-4">
+      <h3 className="text-2xl font-semibold inline-block  pb-1 my-4">
         {highlightText(item.heading)}
       </h3>
       <ul className="list-disc pl-5 space-y-2  ">
         {item.paragraph.map((point, idx) => (
-          <li key={idx} className="text-white font-bold drop-shadow-xl">
+          <li key={idx} className="text-white font-semibold text-xl drop-shadow-xl">
             {point}
           </li>
         ))}

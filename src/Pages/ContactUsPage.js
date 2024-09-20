@@ -74,7 +74,7 @@ export const ContactUsPage = () => {
                                                         </h1>
 
                                                         <span
-    className="absolute bottom-0 left-0 w-[60vh] border-b-2  "
+    className="absolute bottom-0 top-6 left-0 w-[60vh] border-b-2  my-8 "
     style={{
       borderImage: "linear-gradient(to right, yellow, white, blue, black) 1",
       animation: "gradientShift 6s infinite", // Adjust duration as needed
@@ -102,7 +102,7 @@ export const ContactUsPage = () => {
   </div>
 
 
-                                                         <h2 className='text-white  text-3xl font-semibold inline-block   pb-1 my-2'> 
+                                                         <h2 className='text-white  text-3xl font-bold inline-block   pb-1 my-2'> 
                                                                 We're here to <span className='text-yellow-500'>connect</span> and <span className='text-yellow-500'>assist</span>!
                                                         </h2>
                                                 
