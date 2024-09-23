@@ -197,7 +197,7 @@ import Footer from "../../Components/CommonComponents/Footer";
 import HeroSection from "../../Components/CommonComponents/HeroSection";
 import Techclient from "../../Assets/Videos/techclient.mp4";
 
-export const TechClientsPage = () => {
+ const TechClientsPage = () => {
   const [bottomRadius, setBottomRadius] = useState("0%");
   const [scrollHeading, setScrollHeading] = useState("");
 
@@ -414,3 +414,5 @@ export const TechClientsPage = () => {
     </>
   );
 };
+
+export default TechClientsPage;

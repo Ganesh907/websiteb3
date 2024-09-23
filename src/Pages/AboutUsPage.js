@@ -148,7 +148,7 @@ const handleMouseLeave = () => {
   {content.map((item, index) => (
     <div
       key={index}
-      className="w-full flex-shrink-0 bg-transparent font-bold text-3xl text-white drop-shadow-xl "
+      className="w-full flex-shrink-0 bg-transparent font-bold text-3xl pl-2  text-white drop-shadow-xl "
     >
       <h3 className="text-2xl font-semibold inline-block  pb-1 my-4">
         {highlightText(item.heading)}

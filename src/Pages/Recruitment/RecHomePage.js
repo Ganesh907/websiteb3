@@ -1,44 +1,10 @@
 import React, { useEffect, useState,useRef } from 'react';
-// import '../../pages/Recruitment/Recruitment.scss';
-// import Footer from '../../components/Footer/footer';
-// import Header from '../../components/Header/header';
-// import Canvas from '../../shared/Canvas';
-// import $ from 'jquery';
-// import RecruitmentSplitCard from '../../pages/Recruitment/RecruitmentSplitCard';
-// import staff from '../../assets/images/staff.png';
-// import PremanentPlacement from '../../assets/images/erp-development.png';
-// import PremanentPlacement from '../../assets/images/premanent.png';
-// import webdevelopment from '../../../assets/images/webdevelopment.png';
-// import webdevelopment from '../../assets/images/contract-to-hire.png';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import AboutUs4 from '../../Assets/Images/AboutUs4.jpg';
-import cursorGif from '../../Assets/Images/cursorGif.gif';
-import RecruitmentHomeBg from '../../Assets/Images/RecruitmentHomeBg.jpg';
-// import RecruitmentHomeBg from '../../assets/images/RecruitmentHomeBg.jpg';
-import SearchIcon from '@mui/icons-material/Search';
-import TrendingUpOutlinedIcon from '@mui/icons-material/TrendingUpOutlined';
 import { Button } from '@mui/material';
-import { Padding } from '@mui/icons-material';
-
-import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
-import TypingText from '../../Components/CommonComponents/TypingText';
 import Footer from '../../Components/CommonComponents/Footer';
 import jobinterview from '../../Assets/Videos/jobinterview.mp4'
-import Unlock from '../../Assets/Images/Unlock.gif'
-import LockOpenOutlined from '@mui/icons-material/LockOpenOutlined';
 import HeroSection from '../../Components/CommonComponents/HeroSection';
-
-// var target = $('canvas');
-// var targetHeight = target.outerHeight();
-
-// $(window).on("load scroll", function () {
-//     var scrollPercent = (targetHeight - window.scrollY) / targetHeight;
-//     if (scrollPercent >= 0) {
-//         target.css('opacity', 0.8);
-//     }
-// });
-
-
 
 const RecHomePage = () => {
   const searchIconSvg = `data:image/svg+xml;base64,${btoa(`
@@ -50,35 +16,13 @@ const RecHomePage = () => {
 
   `)}`;
 
-  // const [bottomRadius, setBottomRadius] = useState('0%');
-  // const [scrollHeading, setScrollHeading] = useState("");
-
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     const scrollTop = window.scrollY;
-  //     const maxScroll = 50; // Adjust this value for how quickly you want the border to round
-  //     const radius = Math.min(scrollTop / maxScroll * 50, 50); // Cap at 50% for a smooth transition
-  //     setBottomRadius(`${radius}%`);
-  //     setScrollHeading(scrollTop > 30 ? "ml-[30%]" : "ml-0");
-  //   };
-
-  //   window.addEventListener('scroll', handleScroll);
-  //   return () => window.removeEventListener('scroll', handleScroll);
-  // }, []);
-
-
-
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
 
   const quotes = [
     "Your success is our priority. With our deep industry knowledge and personalized approach, we match you with top talent that drives your business forward, creating long-term value beyond just filling a position.",
 
-    // " We understand that for you, it’s never just a job. It’s your business. Thats why we Possionate about not only finding you a quality employee. But also the perfect fit.",
-
     "Your business deserves the best, and we’re here to deliver. We go beyond resumes to find candidates that align with your company’s values and goals, ensuring a perfect fit every time",
-
-
   ];
 
   const jobRoles = [
@@ -101,29 +45,21 @@ const RecHomePage = () => {
     "Data Scientist / Machine Learning"
   ];
 
-  const marqueeRef = useRef(null); // Reference to the marquee element
+  const marqueeRef = useRef(null); 
   const handleMouseEnter1 = () => {
-    marqueeRef.current.stop(); // Stop the marquee on hover
+    marqueeRef.current.stop(); 
   };
 
   const handleMouseLeave1 = () => {
-    marqueeRef.current.start(); // Start the marquee on mouse leave
+    marqueeRef.current.start(); 
   };
-
-  // const quotes = [
-  //   " We understand that for you, it’s never just a job. It’s your business. Thats why we Possionate about not only finding you a quality employee. But also the perfect fit."
-  //  "Your dream job is closer than you think, With tailored matches and expert guidance. Discover roles that align with your goals, And take the next step in your career.",
-  //   "Navigate your career journey with ease, Connect with top recruiters and opportunities. Find roles that match your skills and passions, And unlock the path to your professional success.",
-  //   "Your next career adventure starts here, With personalized job matches and support. Discover roles that align with your aspirations, And step into a role that suits your skills."
-  // ];
-
 
   useEffect(() => {
     let interval;
     if (!isHovered) {
       interval = setInterval(() => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % quotes.length);
-      }, 3000); // Change quote every 5 seconds
+      }, 3000); 
     }
     return () => clearInterval(interval);
   }, [isHovered, quotes.length]);
@@ -143,22 +79,9 @@ const RecHomePage = () => {
 <HeroSection videoUrl={jobinterview}
         videoOpacity={20}
         MarginAnimtion={true}
-
       >
         <div className="font-bold drop-shadow-xl">
           <div className='' style={{ cursor: `url(${searchIconSvg}) 40 30, auto` }}>
-
-          {/* <div className=" ">
-            <h1 className="text-[#0060b5] text-4xl font-bold drop-shadow-xl mr-2"
-              style={{ userSelect: 'none', WebkitUserSelect: 'none', MsUserSelect: 'none' }}>
-              {"Top Talent Access".split("").map((letter, index) => (
-                <span key={index} className="hover:text-white hover:text-[4p0x] transition-opacity duration-300">
-                  {letter}
-                </span>
-              ))}
-            </h1>
-          </div> */}
-
           <div className="relative">
   <h1
     className=" text-[#0060b5] text-5xl font-bold drop-shadow-xl mr-2 "
@@ -196,7 +119,6 @@ const RecHomePage = () => {
     }
   `}</style>
 </div>
-
 
 
           <div className=" flex items-center">
@@ -302,77 +224,6 @@ const RecHomePage = () => {
         </div>
       </div>
 
-
-
-
-
-
-    
-
-
-      {/* <div className='bg-red-200 flex'>
-
-        <div className=" flex bg-green-200 p-2">
-          <div className="">
-            <h2>Related Services</h2>
-            <div className="">
-              <div className="">
-                <div className="">
-                  <div className="">
-                    <img src={AboutUs4} alt="" className='h-36 w-36'></img>
-                    <div className="">
-                      <h4 className="">
-                        Permanent Placement
-                      </h4>
-                      <p className="">We help organisations hire expert full-time talent for middle,
-                        senior and top level positions across diverse sectors.
-                      </p>
-
-
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="small-12 medium-4 columns icon-card icon-card--large">
-                <div className="card-content-blue">
-                  <div className="icon-border-bottom">
-                    <img src={AboutUs4} alt="" className='h-36 w-36'></img>
-                    <div className="icon-card__description">
-                      <h4 className="icon-card__title icon-card__title--expanded">
-                        Staffing Solutions
-
-                      </h4>
-                      <p className="small text-center">Building an agile and flexible workforce requires an easy and fast
-                        access to expert talent, available on short notice. We offer a pool of pre-screened
-                        talent, hired on our rolls.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="small-12 medium-4 columns icon-card icon-card--large">
-                <div className="card-content">
-                  <div className="icon-border-bottom">
-                    <img src={AboutUs4} alt="" className='h-36 w-36'></img>
-                    <div className="icon-card__description">
-                      <h4 className="icon-card__title icon-card__title--expanded">
-                        Contract to Hire
-                      </h4>
-                      <p className="small text-center">Our Temp-to-Hire services allow organisations the opportunity to
-                        evaluate a candidate over a period of time before on-boarding the candidate at the end of the
-                        contract period.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div> */}
-
-
-
-    
 
 
 

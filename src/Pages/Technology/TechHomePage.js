@@ -3,7 +3,7 @@ import letstalk from "../../Assets/Images/letstakeicon1.png"
 import technology from "../../Assets/Videos/Technology6.mp4"
 import highquality from "../../Assets/Images/highquality.jpg"
 import onbudget from "../../Assets/Images/onbudget.png"
-import SplitCard from './SplitCard'
+import SplitCard from '../../Components/TechServicesPage/SplitCard'
 import bank from "../../Assets/Images/bankingicon.png";
 import ecom from "../../Assets/Images/egovandecomicon.png";
 import health from "../../Assets/Images/healthcare.png";
@@ -31,7 +31,7 @@ import hosting from "../../Assets/Images/hosting.png";
 import websecurity from "../../Assets/Images/websecurity.png";
 import databackup from "../../Assets/Images/databackup.png";
 import webmonitor from "../../Assets/Images/webmonitor.png";
-export const TechHomePage = () => {
+ const TechHomePage = () => {
   const [expanded, setExpanded] = useState(false);
   const [bottomRadius, setBottomRadius] = useState('0%');
   const [scrollHeading, setScrollHeading] = useState("");
@@ -666,3 +666,5 @@ export const TechHomePage = () => {
     </div>
   );
 }
+
+export default TechHomePage;

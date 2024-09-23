@@ -4,7 +4,7 @@ import HeroSection from '../Components/CommonComponents/HeroSection'
 
 import CareerVideo from '../Assets/Videos/CareerVideo.mp4'
 
-export const Blogs = () => {
+ const Blogs = () => {
   return (
   
        
@@ -28,6 +28,7 @@ export const Blogs = () => {
   )
 }
 
+export default Blogs;
  {/* <RecipeReviewCard/>
         <RecipeReviewCard/>
         <RecipeReviewCard/> */}

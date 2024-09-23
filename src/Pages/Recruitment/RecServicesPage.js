@@ -9,7 +9,7 @@ import HeroSection from '../../Components/CommonComponents/HeroSection';
 import { LockOpenOutlined } from '@mui/icons-material';
 import SearchIcon from '@mui/icons-material/Search';
 
-export const RecServicesPage = () => {
+ const RecServicesPage = () => {
 
   
 
@@ -363,3 +363,5 @@ export const RecServicesPage = () => {
     </>
   )
 }
+
+export default RecServicesPage;
