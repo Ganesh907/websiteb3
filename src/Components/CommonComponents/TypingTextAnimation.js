@@ -65,7 +65,7 @@ const TypingText = () => {
       <h1 className="text-[#0060b5] mr-2 text-5xl font-bold  absolute bottom-36">
         {constantText}
         <span
-          className="absolute bottom-0 left-0 w-full border-b-2   pb-20 translate-y-5"
+          className="absolute bottom-0 left-0 w-full border-b-2    pb-20 translate-y-5"
           style={{
             borderImage:
               "linear-gradient(to right, yellow, white, blue, black) 1",
@@ -104,7 +104,7 @@ const TypingText = () => {
           Enhance your hiring strategy with our comprehensive talent services.
         </li>
       </ul> */}
-  <div className="  w-[50vw] text-white text-xl text-start drop-shadow-xl mt-5 pl-7 "> 
+  <div className="  w-[50vw] text-white text-xl text-start font-semibold mt-10 drop-shadow-xl pl-7 "> 
              <ul className='list-disc'>
             <li className="mb-2">We craft custom software for efficiency, security, and performance.</li>
             <li>Trust us for solutions that align with your business goals.</li>

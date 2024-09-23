@@ -1,16 +1,19 @@
 .dropdown-menuu {
   width: 140px;
+  background-color: rgba(0,0,0,0.2);
   position: absolute;
-  top: 65px;
+  /* top: 50px  ; */
   list-style: none;
+  padding: 10px;
   text-align: start;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
 .dropdown-menuu li {
-  background: rgba(0,0,0, 0.25);
-  padding: 10px;
+  background: rgba(0,0,0,0.2);
+  /* margin: 5px; */
   position: relative;
+
   border:2px solid transparent;
   overflow: hidden; /* Ensures the pseudo-element stays within bounds */
 }

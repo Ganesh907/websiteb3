@@ -31,10 +31,10 @@ import KeyboardDoubleArrowDownIcon from "@mui/icons-material/KeyboardDoubleArrow
 // import Header from "../Header/header";
 import Footer from "../../Components/CommonComponents/Footer";
 import TypingTextAnimation from "../../Components/CommonComponents/TypingTextAnimation";
-import SplitCard from "./SplitCard";
+import SplitCard from "../../Components/TechServicesPage/SplitCard";
 // import techservice from "../../Assets/Images/techservice.png";
 
-export const TechServicesPage = (props) => {
+ const TechServicesPage = (props) => {
   return (
     <>
       <div className="service-div-main ">
@@ -48,6 +48,11 @@ export const TechServicesPage = (props) => {
           </div>
         </HeroSection>
 
+        <SplitCard />
+
+        {/* ////////////////////////////////////////section2//////////////////////////// */}
+
+    
         <h1 className="techservice_heading  md:text-start  md:ml-10 text-center">
           Services we provide{" "}
         </h1>
@@ -274,11 +279,6 @@ export const TechServicesPage = (props) => {
           </div>
         </section>
 
-        {/* ////////////////////////////////////////section2//////////////////////////// */}
-
-    
-        <SplitCard />
-
         {/* ////////////////////////////////////////////////////////////////////// */}
         {/* //////////////////////////new section3///////////////////////////// */}
        
@@ -384,3 +384,7 @@ export const TechServicesPage = (props) => {
     </>
   );
 };
+
+
+
+export default TechServicesPage;

@@ -23,7 +23,7 @@ import ContactUsVideo from '../Assets/Videos/ContactUsVideo.mp4'
 
 
 
-export const ContactUsPage = () => {
+ const ContactUsPage = () => {
 
 
 
@@ -293,6 +293,8 @@ export const ContactUsPage = () => {
                 </div>
         )
 }
+
+export default ContactUsPage;
 
 
 {/* <img src={ContactUSBg} alt='' className='w-24 shadow-xl bg-white hover:scale-110 hover:animate-none  h-24 p-1 rounded-full object-cover ' /> */ }
