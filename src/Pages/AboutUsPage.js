@@ -111,7 +111,7 @@ const handleMouseLeave = () => {
   <h1 className="text-[#0060b5] text-5xl font-bold drop-shadow-xl ">Who We Are
 
   <span
-    className="absolute bottom-0 top-4 left-0 w-[44vh] border-b-2 my-9 "
+    className="absolute bottom-0 top-4 left-0 w-[45vh] border-b-2 my-9 "
     style={{
       borderImage: "linear-gradient(to right, yellow, white, blue, black) 1",
       animation: "gradientShift 6s infinite", // Adjust duration as needed

@@ -74,7 +74,7 @@ export const ContactUsPage = () => {
                                                         </h1>
 
                                                         <span
-    className="absolute bottom-0 top-6 left-0 w-[60vh] border-b-2  my-8 "
+    className="absolute bottom-0 top-6 left-0 w-[62vh] border-b-2  my-8 "
     style={{
       borderImage: "linear-gradient(to right, yellow, white, blue, black) 1",
       animation: "gradientShift 6s infinite", // Adjust duration as needed
