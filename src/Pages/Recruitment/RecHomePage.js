@@ -127,7 +127,7 @@ const RecHomePage = () => {
               style={{ userSelect: 'none', WebkitUserSelect: 'none', MsUserSelect: 'none' }}
             >
               {"Let Us Find the ".split("").map((letter, index) => (
-                <span key={index} className="hover:text-white hover:text-[35px] transition-opacity duration-300">
+                <span key={index} className="hover:text-[#0060b5] hover:text-[35px] transition-opacity duration-300">
                   {letter}
                 </span>
               ))}
@@ -136,7 +136,7 @@ const RecHomePage = () => {
               <span> </span>
 
               {"Perfect Fit".split("").map((letter, index) => (
-                <span key={index} className="hover:text-[#0060b5] hover:text-[30px] transition-opacity duration-300 text-yellow-500 text-3xl">
+                <span key={index} className="hover:text-[#0060b5] hover:text-[35px] transition-opacity duration-300 text-yellow-500 text-3xl">
                   {letter}
                 </span>
               ))}
@@ -144,7 +144,7 @@ const RecHomePage = () => {
               <span> </span>
 
               {"for Your Company".split("").map((letter, index) => (
-                <span key={index} className="hover:text-white hover:text-[30px] text-white transition-opacity duration-300">
+                <span key={index} className="hover:text-[#0060b5]  hover:text-[35px] text-white transition-opacity duration-300">
                   {letter}
                 </span>
               ))}
