@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import MenuIcon from "@mui/icons-material/Menu"; // Import MUI Menu Icon
 import CloseIcon from "@mui/icons-material/Close"; // Import MUI Close Icon
+import { useLocation } from "react-router-dom";
 
 function Header() {
   const [click, setClick] = useState(false);
@@ -13,6 +14,8 @@ function Header() {
   const [lastScrollY, setLastScrollY] = useState(window.scrollY);
   const [scrolled, setScrolled] = useState(false);
 
+
+  const location = useLocation()
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
 
@@ -96,21 +99,34 @@ function Header() {
           </NavLink>
         </li>
         <li
-          className="  relative cursor-pointer"
+          className="relative cursor-pointer"
           onMouseEnter={onMouseEnter1}
           onMouseLeave={onMouseLeave1}
         >
-          <span className="text-white px-3 mx-1 py-1 text-lg flex items-center hover:border-transparent">
+          <span
+            className={`text-white px-3 mx-1 py-1 text-lg flex items-center hover:border-transparent ${
+              location.pathname === "/technology" || location.pathname === "/technology-services"
+                ? "border-white  border-2 rounded-md  font-semibold text-[#facc15]"
+                : ""
+            }`}
+          >
             Technology <ArrowDropDownIcon />
           </span>
           {dropdown1 && <Dropdown1 />}
         </li>
+        
         <li
-          className="  relative cursor-pointer"
+          className="relative cursor-pointer"
           onMouseEnter={onMouseEnter2}
           onMouseLeave={onMouseLeave2}
         >
-          <span className="text-white px-3 mx-1 py-1 text-lg flex items-center hover:border-transparent">
+          <span
+            className={`text-white px-3 mx-1 py-1 text-lg flex items-center hover:border-transparent ${
+              location.pathname === "/recruitment" || location.pathname === "/recruitment-services"
+                ? "border-white  border-2 rounded-md  font-semibold text-[#facc15]"
+                : ""
+            }`}
+          >
             Recruitment <ArrowDropDownIcon />
           </span>
           {dropdown2 && <Dropdown2 />}
