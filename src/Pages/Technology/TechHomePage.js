@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import letstalk from "../../Assets/Images/letstakeicon1.png"
 import technology from "../../Assets/Videos/Technology6.mp4"
-import highquality from "../../Assets/Images/highquality.jpg"
+import highquality from "../../Assets/Images/highquality1.png"
 import onbudget from "../../Assets/Images/onbudget.png"
 import SplitCard from '../../Components/TechServicesPage/SplitCard'
 import bank from "../../Assets/Images/bankingicon.png";
@@ -16,6 +16,7 @@ import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import Footer from '../../Components/CommonComponents/Footer';
 import HeroSection from '../../Components/CommonComponents/HeroSection';
+import "./TechServicesPage.css"
 
 import requirements from "../../Assets/Images/planning requirement.gif";
 import design from "../../Assets/Images/web-design.gif";
@@ -275,7 +276,7 @@ import webmonitor from "../../Assets/Images/webmonitor.png";
         </div>
         <div className=" w-full  bg-white mt-2 h-screen justify-start ">
           <div>
-            <h1 className="text-[var(--primary-color)] heading2 ml-10  ">
+            <h1 className="text-[var(--primary-color)] heading2 text-5xl font-bold ml-10  ">
               Process & Methodology
             </h1>
             {/* <span className="w-[8%] h-[5px] ml-[3%] block rounded-b-[5px]" style={{backgroundColor:'#002eff'}}></span>  */}
@@ -388,7 +389,7 @@ import webmonitor from "../../Assets/Images/webmonitor.png";
 
       {/*/////////////////////////////////////////////////////////// */}
       <div className='w-[90%] h-auto' >
-        <h1 className='text-center md:text-start md:ml-[9%] text-[var(--primary-color)]  text-[40px] font-bold m-[5px] font-montserrat md:mt-[40px] '>
+        <h1 className='text-center md:text-start md:ml-[9%] text-[var(--primary-color)]  text-5xl font-bold m-[5px] font-montserrat md:mt-[40px] '>
           Industries we deal with
         </h1>
         <div className='grid grid-cols-1 place-content-center md:grid-cols-2 md:gap-2 md:ml-20 md:w-auto w-[100%]' >
