@@ -48,6 +48,11 @@ import SplitCard from "../../Components/TechServicesPage/SplitCard";
           </div>
         </HeroSection>
 
+        <SplitCard />
+
+        {/* ////////////////////////////////////////section2//////////////////////////// */}
+
+    
         <h1 className="techservice_heading  md:text-start  md:ml-10 text-center">
           Services we provide{" "}
         </h1>
@@ -274,11 +279,6 @@ import SplitCard from "../../Components/TechServicesPage/SplitCard";
           </div>
         </section>
 
-        {/* ////////////////////////////////////////section2//////////////////////////// */}
-
-    
-        <SplitCard />
-
         {/* ////////////////////////////////////////////////////////////////////// */}
         {/* //////////////////////////new section3///////////////////////////// */}
        
@@ -384,5 +384,7 @@ import SplitCard from "../../Components/TechServicesPage/SplitCard";
     </>
   );
 };
+
+
 
 export default TechServicesPage;
