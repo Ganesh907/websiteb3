@@ -52,7 +52,7 @@ export const ContactForm = () => {
                 }
         };
   return (
-        <div className='lg:w-[50%]  flex justify-center items-center w-auto bg-white p-5 rounded-md'>
+        <div className=' flex justify-center items-center w-auto bg-white p-5 rounded-md'>
 
        
         <form className=' text-center'   onSubmit={handleSubmit}
@@ -108,10 +108,12 @@ export const ContactForm = () => {
                                 }
                               }}
                 />
-                <TextField
-                        id="email"
-                        name="email"
-                        label="Email Id"
+               
+              
+                  <TextField
+                        id="title"
+                        name="title"
+                        label="Company"
                         variant="standard"
                         value={formValues.email}
                         onChange={handleChange}
@@ -129,6 +131,7 @@ export const ContactForm = () => {
                                 }
                               }}
                 />
+                
                 <TextField
                         id="phone"
                         name="phone"
@@ -150,11 +153,55 @@ export const ContactForm = () => {
                                 }
                               }}
                 />
+                 
+                 <TextField
+                        id="email"
+                        name="email"
+                        label="Work Email"
+                        variant="standard"
+                        value={formValues.email}
+                        onChange={handleChange}
+                        error={!!errors.email}
+                        helperText={errors.email}
+                        InputLabelProps={{
+                                style: { color: "var(--primary-color)" },
+                              }}
+                              InputProps={{
+                                sx: {
+                                  '& .MuiInputBase-input::placeholder': {
+                                    color: 'var(--primary-color)', 
+                                  },
+                                  color: 'var(--text-color)'
+                                }
+                              }}
+                />
+                  <TextField
+                        id="title"
+                        name="title"
+                        label="Title"
+                        variant="standard"
+                        value={formValues.email}
+                        onChange={handleChange}
+                        error={!!errors.email}
+                        helperText={errors.email}
+                        InputLabelProps={{
+                                style: { color: "var(--primary-color)" },
+                              }}
+                              InputProps={{
+                                sx: {
+                                  '& .MuiInputBase-input::placeholder': {
+                                    color: 'var(--primary-color)', 
+                                  },
+                                  color: 'var(--text-color)'
+                                }
+                              }}
+                />
+               
         </div>
         <TextField
                 id="message"
                 name="message"
-                label="Message"
+                label="Requirement"
                 multiline
                 rows={2}
                 variant="standard"

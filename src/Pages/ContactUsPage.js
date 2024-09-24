@@ -12,6 +12,9 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 // import Maps from '../Map/Maps';
 import ContactUSBg2 from '../Assets/Images/ContctUsBg.gif'
 import ContactUsHome from '../Assets/Images/ContactUsHome.jpg'
+import ContactUSImg from '../Assets/Images/ContactUSImg.jpg'
+// import ContactUSImg2 from '../Assets/Images/ContactUSImg2.png'
+import ContactUSImg3 from '../Assets/Images/ContactUSImg3.jpg'
 import VideoForContact from '../Assets/Videos/VideoForContact.mp4'
 
 import WaveBg from '../Assets/Images/WaveBG.jpg'
@@ -20,10 +23,13 @@ import Footer from '../Components/CommonComponents/Footer';
 import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
 import HeroSection from '../Components/CommonComponents/HeroSection';
 import ContactUsVideo from '../Assets/Videos/ContactUsVideo.mp4'
+import Map from '../Components/ContactUsComponents/Map';
+import { ContactForm2 } from '../Components/ContactUsPage/ContactForm2';
+import ContactMap from '../Components/ContactUsComponents/Map';
 
 
 
- const ContactUsPage = () => {
+const ContactUsPage = () => {
 
 
 
@@ -59,7 +65,7 @@ import ContactUsVideo from '../Assets/Videos/ContactUsVideo.mp4'
                                 </div>
                         </div> */}
 
-                        <HeroSection
+                        {/* <HeroSection
                                 videoUrl={ContactUsVideo}
                                 videoOpacity={20}
                                 MarginAnimtion={true}>
@@ -67,22 +73,22 @@ import ContactUsVideo from '../Assets/Videos/ContactUsVideo.mp4'
                                 <div className='z-10 flex flex-col justify-end items-start '
                                 >
                                         <div className=''>
-                                        <div className=" relative ">
-                                                <h1 className=' text-5xl drop-shadow-2xl   text-[#0060b5] font-bold'>
-                                                        Need Assistance ? 
+                                                <div className=" relative ">
+                                                        <h1 className=' text-5xl drop-shadow-2xl   text-[#0060b5] font-bold'>
+                                                                Need Assistance ?
 
                                                         </h1>
 
                                                         <span
-    className="absolute bottom-0 top-6 left-0 w-[62vh] border-b-2  my-8 "
-    style={{
-      borderImage: "linear-gradient(to right, yellow, white, blue, black) 1",
-      animation: "gradientShift 6s infinite", // Adjust duration as needed
-    }}
-  ></span>
-  
-  <style>
-    {`
+                                                                className="absolute bottom-0 top-6 left-0 w-[62vh] border-b-2  my-8 "
+                                                                style={{
+                                                                        borderImage: "linear-gradient(to right, yellow, white, blue, black) 1",
+                                                                        animation: "gradientShift 6s infinite", // Adjust duration as needed
+                                                                }}
+                                                        ></span>
+
+                                                        <style>
+                                                                {`
       .relative {
         position: relative;
       }
@@ -98,45 +104,40 @@ import ContactUsVideo from '../Assets/Videos/ContactUsVideo.mp4'
         }
       }
     `}
-  </style>
-  </div>
+                                                        </style>
+                                                </div>
 
 
-                                                         <h2 className='text-white  text-3xl font-bold inline-block   pb-1 my-2'> 
-                                                                We're here to <span className='text-yellow-500'>connect</span> and <span className='text-yellow-500'>assist</span>!
-                                                        </h2>
-                                                
+                                                <h2 className='text-white  text-3xl font-bold inline-block   pb-1 my-2'>
+                                                        We're here to <span className='text-yellow-500'>connect</span> and <span className='text-yellow-500'>assist</span>!
+                                                </h2>
 
-                                                {/* <ul className='w-[45vw] text-md text-white drop-shadow-lg font-bold list-disc pl-5 my-2'>
-                                                        <li>Our friendly team is here to answer your questions.</li>
-                                                        <li>We’re dedicated to connecting you with exactly what you need.</li>
-                                                        <li>Feel free to reach out for personalized assistance and support.</li>
-                                                </ul> */}
+
 
                                                 <ul className="list-none space-y-4 text-xl font-semibold mb-10">
-  <li
-    className="relative pl-4 my-2 opacity-0 animate-fadeInRepeat"
-    style={{ animationDelay: '0.5s' }} // First item appears after 0.5s
-  >
-    <div className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white w-2 h-2 rounded-full"></div>
-    Our friendly team is here to answer your questions.
-  </li>
-  <li
-    className="relative pl-4 my-2 opacity-0 animate-fadeInRepeat"
-    style={{ animationDelay: '1.5s' }} // Second item appears after 1.5s
-  >
-    <div className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white w-2 h-2 rounded-full"></div>
-    We’re dedicated to connecting you with exactly what you need.  </li>
-    <li
-    className="relative pl-4 my-2 opacity-0 animate-fadeInRepeat"
-    style={{ animationDelay: '2s' }} // Third item appears after 1.5s
-  >
-    <div className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white w-2 h-2 rounded-full"></div>
-    Feel free to reach out for personalized assistance and support.  </li>
-</ul>
+                                                        <li
+                                                                className="relative pl-4 my-2 opacity-0 animate-fadeInRepeat"
+                                                                style={{ animationDelay: '0.5s' }}
+                                                        >
+                                                                <div className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white w-2 h-2 rounded-full"></div>
+                                                                Our friendly team is here to answer your questions.
+                                                        </li>
+                                                        <li
+                                                                className="relative pl-4 my-2 opacity-0 animate-fadeInRepeat"
+                                                                style={{ animationDelay: '1.5s' }}
+                                                        >
+                                                                <div className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white w-2 h-2 rounded-full"></div>
+                                                                We’re dedicated to connecting you with exactly what you need.  </li>
+                                                        <li
+                                                                className="relative pl-4 my-2 opacity-0 animate-fadeInRepeat"
+                                                                style={{ animationDelay: '2s' }} // Third item appears after 1.5s
+                                                        >
+                                                                <div className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white w-2 h-2 rounded-full"></div>
+                                                                Feel free to reach out for personalized assistance and support.  </li>
+                                                </ul>
 
-<style>
-  {`
+                                                <style>
+                                                        {`
     @keyframes fadeInRepeat {
       0% {
         opacity: 0;
@@ -159,28 +160,108 @@ import ContactUsVideo from '../Assets/Videos/ContactUsVideo.mp4'
       animation: fadeInRepeat 15s infinite; // Long duration, stops on screen for a long time
     }
   `}
-</style>
+                                                </style>
 
                                         </div>
 
                                 </div>
 
-                        </HeroSection>
+                        </HeroSection> */}
 
 
-                        <div className='w-[95vw] h-auto md:h-[100vh] flex justify-center  flex-col align-middle'>
-                                <div className='w-[90%] rounded-lg p-3 lg:w-[80%] m-auto flex flex-col lg:flex-row'>
-                                        <div className='relative z-10 w-full lg:w-[51vw] h-full  md:mb-0 text-[var(--primary-color)] flex justify-center items-center' data-aos="zoom-in" data-aos-duration="2000">
+
+
+
+                        <div className=' flex justify-center items-end h-screen w-[99vw] bg-black/30  mx-auto'
+                            style={{
+
+                                backgroundImage: `
+url(${ContactUSImg3}) 
+`,
+                                backgroundSize: 'cover',
+                                backgroundPosition: 'center',
+                                backgroundRepeat: 'no-repeat',
+                                backgroundBlendMode: 'overlay',
+                        }}>
+                                <div className=' h-[90vh] w-[100vw] flex justify-center items-center p-20  bg-transparent '>
+
+
+                                        <div className=' rounded-lg w-[40%]  flex  flex-col justify-center '
+                                        data-aos="fade-up" data-aos-duration="1000"
+                                        
+                                        style={{
+                                                // backgroundColor:'rgba(0,0,0,0.)'
+                                        }}>
+
+
+                                                <ContactForm2 />
+                                                {/* <div className='w-full scale-90 flex justify-around mb-5 text-white'>
+                                                <a href='/facebook' target="_blank" rel="noopener noreferrer"
+                                                                                style={{ display: 'inline-block' }} >
+                                                                                <FacebookIcon className='w-8 h-8 animate-pulse hover:scale-150 hover:animate-none  transition-transform duration-300 ease-in-out' />
+                                                                        </a>
+                                                                        <a href='/facebook' target="_blank" rel="noopener noreferrer"
+                                                                                style={{ display: 'inline-block' }} >
+                                                                                <InstagramIcon className='w-8 h-8 animate-pulse hover:scale-150 hover:animate-none  transition-transform duration-300 ease-in-out' />
+                                                                        </a>
+                                                                        <a href='/facebook' target="_blank" rel="noopener noreferrer"
+                                                                                style={{ display: 'inline-block' }} >
+                                                                                <TwitterIcon className='w-8 h-8 animate-pulse hover:scale-150 hover:animate-none  transition-transform duration-300 ease-in-out' />
+                                                                        </a>
+                                                                        <a href='/facebook' target="_blank" rel="noopener noreferrer"
+                                                                                style={{ display: 'inline-block' }} >
+                                                                                <LinkedInIcon className='w-8 h-8 animate-pulse hover:scale-150 hover:animate-none  transition-transform duration-300 ease-in-out' />
+                                                                        </a>
+                                                </div> */}
+
+                                              
+                                        </div>
+
+                                        <div className='w-[60%]  p-4 ms-5 rounded-r-lg'  data-aos="zoom-in" data-aos-duration="1000"
+                                        style={{
+                                                backgroundColor:'rgb(0,0,0,0.4)'
+                                        }}>
+                                             
+                                                {/* <Map /> */}
+                                                <ContactMap/>
+                                                      {/* <iframe
+            title="Google Map"
+            className="w-full h-full"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d144.95373531531864!3d-37.81720997975195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577fb68b55c2a0!2sFederation%20Square!5e0!3m2!1sen!2sus!4v1631012902936!5m2!1sen!2sus"
+            allowFullScreen=""
+            loading="lazy"
+          ></iframe> */}
+                                        </div>
+                                </div>
+                        </div>
+
+
+
+
+
+                        
+                        {/* <div className='h-auto md:h-[100vh] mt-20 flex justify-center  flex-col align-middle'
+                                style={{
+
+                                        backgroundImage: `
+url(${ContactUSImg}) 
+`,
+                                        backgroundSize: 'cover',
+                                        backgroundPosition: 'center',
+                                        backgroundRepeat: 'no-repeat'
+                                }}>
+                                <div className='w-[90%] rounded-lg p-3 lg:w-[95%] m-auto flex  flex-col lg:flex-row'>
+                                        <div className='relative z-10 w-full lg:w-[50vw] h-full  md:mb-0 text-yellow-400 flex justify-center items-center' data-aos="zoom-in" data-aos-duration="2000">
                                                 <div className='h-full md:w-[20%] md:flex justify-center items-center  hidden '>
-                                                        <h1 className='ms-[100%] text-xl font-bold drop-shadow-lg z-50 border-2 border-[var(--primary-color)] p-4 shadow-lg backdrop-blur-md' data-aos="fade-right" data-aos-duration="2000">
+                                                        <h1 className='ms-[100%] text-xl font-bold drop-shadow-lg z-50 border-2 border-yellow-400 p-4 shadow-lg backdrop-blur-md' data-aos="fade-right" data-aos-duration="2000">
 
                                                                 CONTACT
                                                         </h1>
                                                 </div>
 
-                                                <div className="grid grid-cols-3 lg:mt-12 md:border-4 border-[var(--primary-color)] text-[var(--primary-color)]  md:rounded-full p-2 h-[80%] md:w-96 md:shadow-2xl md:h-96"
+                                                <div className="grid grid-cols-3 lg:mt-12 md:border-4 border-yellow-400 text-[#0060b5] md:rounded-full p-2 h-[80%] md:w-96 md:shadow-2xl md:h-96"
                                                         style={{ animationDuration: '4000ms' }}
-                                                // style={{ backgroundColor: 'rgba(0, 0, 0, 0.1)'}} 
+
                                                 >
 
                                                         <div></div>
@@ -208,7 +289,7 @@ import ContactUsVideo from '../Assets/Videos/ContactUsVideo.mp4'
                                                                 </Tooltip>
                                                         </div>
                                                         <div className='flex items-center justify-center' >
-                                                                <div className='bg-[#0060b5] rounded-full shadow-2xl text-white' >
+                                                                <div className='text-[#0060b5] rounded-full  border-2 border-yellow-400 shadow-2xl bg-white' >
                                                                         <h1 className=' drop-shadow-2xl text-5xl font-bold m-5 '>B<sup>3</sup></h1>
                                                                 </div>
 
@@ -240,7 +321,7 @@ import ContactUsVideo from '../Assets/Videos/ContactUsVideo.mp4'
                                                 </div>
 
                                                 <div className='  h-full md:w-[20%] md:flex justify-center items-center hidden '>
-                                                        <h1 className='me-[100%] text-xl font-bold drop-shadow-lg z-50  shadow-lg   p-4 backdrop-blur-md border-2 border-[var(--primary-color)] text-[var(--primary-color)]' data-aos="fade-left" data-aos-duration="2000">BITBYBIT
+                                                        <h1 className='me-[100%] text-xl font-bold drop-shadow-lg z-50  shadow-lg   p-4 backdrop-blur-md border-2 border-yellow-400 text-yellow-400' data-aos="fade-left" data-aos-duration="2000">BITBYBIT
                                                         </h1>
                                                 </div>
                                         </div>
@@ -248,7 +329,12 @@ import ContactUsVideo from '../Assets/Videos/ContactUsVideo.mp4'
                                         <ContactForm />
                                 </div>
 
-                        </div>
+                        </div> */}
+
+
+
+
+                        
                         {/* <div className='flex justify-center items-center h-[100vh] bg-[#0060b5]'>
                                 <div className='bg-white w-[80%] shadow-2xl h-auto rounded-lg p-3 flex flex-col lg:flex-row'>
 
@@ -289,6 +375,11 @@ import ContactUsVideo from '../Assets/Videos/ContactUsVideo.mp4'
                                         </div>
                                 </div>
                         </div> */}
+
+
+
+
+                       
                         <Footer />
                 </div>
         )
@@ -310,3 +401,13 @@ export default ContactUsPage;
                                                   </div>
                                                
                                                  </div> */}
+
+
+
+                                                    {/* <iframe
+            title="Google Map"
+            className="w-full h-full"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d144.95373531531864!3d-37.81720997975195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577fb68b55c2a0!2sFederation%20Square!5e0!3m2!1sen!2sus!4v1631012902936!5m2!1sen!2sus"
+            allowFullScreen=""
+            loading="lazy"
+          ></iframe> */}

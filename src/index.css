@@ -18,7 +18,7 @@ code {
 } */
 
 body {
-  background-color: #272626;
+  background-color: var(--background-color);
   color: white;
 }
 @tailwind base;
