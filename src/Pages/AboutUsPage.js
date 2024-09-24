@@ -172,43 +172,95 @@ const AboutUsPage = () => {
         </div>
       </HeroSection>
 
-      <section className="bg-white my-5 h-screen">
-        <h1 className="text-black text-5xl font-bold text-center  pt-5 m-4">About B3</h1>
-        <Box sx={{ width: '100%' }} className='flex flex-col justify-center items-center'>
-          <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-            <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-              <Tab label="OverView" {...a11yProps(0)} />
-              <Tab label="Mission" {...a11yProps(1)} />
-              <Tab label="Vission" {...a11yProps(2)} />
-              <Tab label="Core Values" {...a11yProps(3)} />
-              <Tab label="Candidate" {...a11yProps(4)} />
-              <Tab label="Patner" {...a11yProps(5)} />
-              <Tab label="B3 Family" {...a11yProps(6)} />
-            </Tabs>
-          </Box>
-          <CustomTabPanel value={value} index={0} className=''>
-           <Overview/>
-          </CustomTabPanel>
-          <CustomTabPanel value={value} index={1} className='text-blue-600'>
-           <Mission/>
-          </CustomTabPanel>
-          <CustomTabPanel value={value} index={2} className='text-blue-600'>
-            <Vission/>
-          </CustomTabPanel>
-          <CustomTabPanel value={value} index={3} className='text-blue-600'>
-           <Corevalues/>
-          </CustomTabPanel>
-          <CustomTabPanel value={value} index={4} className='text-blue-600'>
-            <Candidate/>
-          </CustomTabPanel>
-          <CustomTabPanel value={value} index={5} className='text-blue-600'>
-           <Partner/>
-          </CustomTabPanel>
-          <CustomTabPanel value={value} index={6} className='text-blue-600'>
-           <Family/>
-          </CustomTabPanel>
-        </Box>
-      </section>
+      <section className=" h-auto min-h-screen">
+  <h1 className="text-yellow-400 h-[10vh] text-5xl font-bold text-center pt-10 mb-6">About B3</h1>
+  
+  <Box sx={{ width: '100%' ,height:'90vh'}} className="flex flex-col justify-start items-center">
+    <Box sx={{ borderBottom: 2,paddingBottom:'3px', borderColor: 'white',width:'100vw', }} className=" w-full max-w-4xl">
+      <Tabs 
+        value={value} 
+        onChange={handleChange} 
+        aria-label="basic tabs example" 
+        className="flex justify-center"
+        TabIndicatorProps={{ sx: { backgroundColor: '#3b82f6' } }} // Custom indicator color
+      >
+        <Tab 
+          label="Overview" 
+          {...a11yProps(0)} 
+          className={`tabStyle ${value === 0 ? 'tabActive' : ''}`} 
+        />
+        <Tab 
+          label="Mission" 
+          {...a11yProps(1)} 
+          className={`tabStyle ${value === 1 ? 'tabActive' : ''}`} 
+        />
+        <Tab 
+          label="Vision" 
+          {...a11yProps(2)} 
+          className={`tabStyle ${value === 2 ? 'tabActive' : ''}`} 
+        />
+        <Tab 
+          label="Core Values" 
+          {...a11yProps(3)} 
+          className={`tabStyle ${value === 3 ? 'tabActive' : ''}`} 
+        />
+        <Tab 
+          label="Candidate" 
+          {...a11yProps(4)} 
+          className={`tabStyle ${value === 4 ? 'tabActive' : ''}`} 
+        />
+        <Tab 
+          label="Partner" 
+          {...a11yProps(5)} 
+          className={`tabStyle ${value === 5 ? 'tabActive' : ''}`} 
+        />
+        <Tab 
+          label="B3 Family" 
+          {...a11yProps(6)} 
+          className={`tabStyle ${value === 6 ? 'tabActive' : ''}`} 
+        />
+      </Tabs>
+    </Box>
+
+    {/* Tab Content Panels */}
+    <CustomTabPanel value={value} index={0}>
+      <Overview />
+    </CustomTabPanel>
+    <CustomTabPanel value={value} index={1} className="text-blue-600">
+      <Mission />
+    </CustomTabPanel>
+    <CustomTabPanel value={value} index={2} className="text-blue-600">
+      <Vission/>
+    </CustomTabPanel>
+    <CustomTabPanel value={value} index={3} className="text-blue-600">
+      <Corevalues/>
+    </CustomTabPanel>
+    <CustomTabPanel value={value} index={4} className="text-blue-600">
+      <Candidate />
+    </CustomTabPanel>
+    <CustomTabPanel value={value} index={5} className="text-blue-600">
+      <Partner />
+    </CustomTabPanel>
+    <CustomTabPanel value={value} index={6} className="text-blue-600">
+      <Family />
+    </CustomTabPanel>
+  </Box>
+
+  <style jsx>{`
+  .tabStyle {
+    font-size: 1.125rem; /* text-lg */
+    font-weight: 500; /* font-medium */
+    color: white;
+  }
+
+  .tabStyle.tabActive {
+    color: #facc15 !important;
+    border-bottom: 2px solid #2563eb !important;
+    // background-color: white !important;
+  }
+`}</style>
+</section>
+
 
       <Footer />
     </div>
