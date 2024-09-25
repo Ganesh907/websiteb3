@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from "react";
 import PropTypes from 'prop-types';
 import Tabs from '@mui/material/Tabs';
@@ -172,93 +173,101 @@ const AboutUsPage = () => {
         </div>
       </HeroSection>
 
-      <section className=" h-auto min-h-screen">
-  <h1 className="text-yellow-400 h-[10vh] text-5xl font-bold text-center pt-10 mb-6">About B3</h1>
-  
-  <Box sx={{ width: '100%' ,height:'90vh'}} className="flex flex-col justify-start items-center">
-    <Box sx={{ borderBottom: 2,paddingBottom:'3px', borderColor: 'white',width:'100vw', }} className=" w-full max-w-4xl">
-      <Tabs 
-        value={value} 
-        onChange={handleChange} 
-        aria-label="basic tabs example" 
-        className="flex justify-center"
-        TabIndicatorProps={{ sx: { backgroundColor: '#3b82f6' } }} // Custom indicator color
+
+      <section className="h-auto min-h-screen">
+  <h1 className="text-yellow-400 h-[10vh] text-5xl font-bold text-center pt-10 mb-10">About B3</h1>
+
+  <Box sx={{ width: '100%', height: '90vh' }} className="flex justify-center items-center ">
+    <Box sx={{ borderRight: 2, paddingRight: '0px', borderColor: '#808080', height: 'auto',width:'180px' }} className="flex italic flex-col  justify-center w-[15%]">
+      <Tabs
+        orientation="vertical"
+        value={value}
+        onChange={handleChange}
+        aria-label="vertical tabs example"
+        // className="w-full"
+        TabIndicatorProps={{ sx: { backgroundColor: '#facc15', left: 0 } }} // Adjust indicator to left side for vertical
       >
-        <Tab 
-          label="Overview" 
-          {...a11yProps(0)} 
-          className={`tabStyle ${value === 0 ? 'tabActive' : ''}`} 
+        <Tab
+          label="Overview"
+          {...a11yProps(0)}
+          className={`tabStyle ${value === 0 ? 'tabActive' : ''}`}
         />
-        <Tab 
-          label="Mission" 
-          {...a11yProps(1)} 
-          className={`tabStyle ${value === 1 ? 'tabActive' : ''}`} 
+        <Tab
+          label="Mission"
+          {...a11yProps(1)}
+          className={`tabStyle ${value === 1 ? 'tabActive' : ''}`}
         />
-        <Tab 
-          label="Vision" 
-          {...a11yProps(2)} 
-          className={`tabStyle ${value === 2 ? 'tabActive' : ''}`} 
+        <Tab
+          label="Vision"
+          {...a11yProps(2)}
+          className={`tabStyle ${value === 2 ? 'tabActive' : ''}`}
         />
-        <Tab 
-          label="Core Values" 
-          {...a11yProps(3)} 
-          className={`tabStyle ${value === 3 ? 'tabActive' : ''}`} 
+        <Tab
+          label="Core Values"
+          {...a11yProps(3)}
+          className={`tabStyle ${value === 3 ? 'tabActive' : ''}`}
         />
-        <Tab 
-          label="Candidate" 
-          {...a11yProps(4)} 
-          className={`tabStyle ${value === 4 ? 'tabActive' : ''}`} 
+        <Tab
+          label="Candidate"
+          {...a11yProps(4)}
+          className={`tabStyle ${value === 4 ? 'tabActive' : ''}`}
         />
-        <Tab 
-          label="Partner" 
-          {...a11yProps(5)} 
-          className={`tabStyle ${value === 5 ? 'tabActive' : ''}`} 
+        <Tab
+          label="Partner"
+          {...a11yProps(5)}
+          className={`tabStyle ${value === 5 ? 'tabActive' : ''}`}
         />
-        <Tab 
-          label="B3 Family" 
-          {...a11yProps(6)} 
-          className={`tabStyle ${value === 6 ? 'tabActive' : ''}`} 
+        <Tab
+          label="B3 Family"
+          {...a11yProps(6)}
+          className={`tabStyle ${value === 6 ? 'tabActive' : ''}`}
         />
       </Tabs>
     </Box>
 
     {/* Tab Content Panels */}
-    <CustomTabPanel value={value} index={0}>
-      <Overview />
-    </CustomTabPanel>
-    <CustomTabPanel value={value} index={1} className="text-blue-600">
-      <Mission />
-    </CustomTabPanel>
-    <CustomTabPanel value={value} index={2} className="text-blue-600">
-      <Vission/>
-    </CustomTabPanel>
-    <CustomTabPanel value={value} index={3} className="text-blue-600">
-      <Corevalues/>
-    </CustomTabPanel>
-    <CustomTabPanel value={value} index={4} className="text-blue-600">
-      <Candidate />
-    </CustomTabPanel>
-    <CustomTabPanel value={value} index={5} className="text-blue-600">
-      <Partner />
-    </CustomTabPanel>
-    <CustomTabPanel value={value} index={6} className="text-blue-600">
-      <Family />
-    </CustomTabPanel>
+    <Box className="w-[80%] p-10 h-[90vh] flex justify-center items-center">
+      <CustomTabPanel value={value} index={0}>
+        <Overview />
+      </CustomTabPanel>
+      <CustomTabPanel value={value} index={1} className="text-blue-600">
+        <Mission />
+      </CustomTabPanel>
+      <CustomTabPanel value={value} index={2} className="text-blue-600">
+        <Vission />
+      </CustomTabPanel>
+      <CustomTabPanel value={value} index={3} className="text-blue-600">
+        <Corevalues />
+      </CustomTabPanel>
+      <CustomTabPanel value={value} index={4} className="text-blue-600">
+        <Candidate />
+      </CustomTabPanel>
+      <CustomTabPanel value={value} index={5} className="text-blue-600">
+        <Partner />
+      </CustomTabPanel>
+      <CustomTabPanel value={value} index={6} className="text-blue-600">
+        <Family />
+      </CustomTabPanel>
+    </Box>
   </Box>
 
   <style jsx>{`
-  .tabStyle {
-    font-size: 1.125rem; /* text-lg */
-    font-weight: 500; /* font-medium */
-    color: white;
-  }
+    .tabStyle {
+      font-size: 1.125rem; /* text-lg */
+      font-weight: 500; /* font-medium */
+      color: white;
+      text-align: left;
+      // font-family: Garamond, serif;
+      width: 80%;
+      align-items: flex-start;
+      //  letter-spacing: 0.1em;
+        text-transform: none;
+    }
 
-  .tabStyle.tabActive {
-    color: #facc15 !important;
-    border-bottom: 2px solid #2563eb !important;
-    // background-color: white !important;
-  }
-`}</style>
+    .tabStyle.tabActive {
+      color: #facc15 !important;
+    }
+  `}</style>
 </section>
 
 

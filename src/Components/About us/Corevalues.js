@@ -5,9 +5,9 @@ import SecurityOutlinedIcon from '@mui/icons-material/SecurityOutlined';
 import ArrowDropDownOutlinedIcon from '@mui/icons-material/ArrowDropDownOutlined';
 function Corevalues() {
   return (
-    <div className='text-white h-full flex w-[95vw] p-10 justify-between items-center text-center'>
+    <div className='text-white h-full  flex w-[70vw] justify-between items-center text-center'>
 
-      <div className='w-[18%] h-[50vh] flex flex-col justify-start items-center gap-[1%]  '>
+      <div className='w-[18%] h-[50vh]  flex flex-col justify-start items-center gap-[1%]  '>
         <div className='h-28 w-28 rounded-full bg-white shadow-xl shadow-black flex justify-center items-center'><SecurityOutlinedIcon sx={{ color: 'black', fontSize: '90px',border:'6px solid #0060b5', borderRadius:'50px',padding:'10px'}} /></div>
         <div className='h-32 w-1 bg-transparent border-l-2 border-dotted border-white'></div>
         <div className='h-10 w-10 flex justify-center items-center rounded-full bg-[#0060b5] font-bold text-white border-2 border-white shadow-2xl shadow-black'>1</div>
