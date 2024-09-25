@@ -196,6 +196,8 @@ import Aos from "aos";
 import Footer from "../../Components/CommonComponents/Footer";
 import HeroSection from "../../Components/CommonComponents/HeroSection";
 import Techclient from "../../Assets/Videos/techclient.mp4";
+import highquality from "../../Assets/Images/highquality.jpg"
+import onbudget from "../../Assets/Images/onbudget.png"
 
  const TechClientsPage = () => {
   const [bottomRadius, setBottomRadius] = useState("0%");
@@ -407,6 +409,50 @@ import Techclient from "../../Assets/Videos/techclient.mp4";
           ))}
         </div>
       </div>
+
+      <div className='w-[90%] h-auto  md:mb-20 mb-5'>
+        <h1 className='mb-3  text-center md:text-start md:ml-[9%] text-[var(--primary-color)]  text-[40px] font-bold m-[5px] font-montserrat md:w-full md:mt-[40px] mt-5'>
+          Why do our clients value us?
+        </h1>
+        <div className='md:flex md:flex-row md:justify-evenly md:ml-6  flex flex-col-reverse '>
+          <div className='md:w-[50%]  space-y-4 text-[var(--secondary-color)]'>
+            <h1 className='font-extrabold text-2xl bg-red-3 md:text-start text-center'>High-Quality Products</h1>
+          
+            <ul className='list-disc pl-5 space-y-2 md:ml-0 ml-4'>
+              <li>Clients value our commitment to quality, craftsmanship, and innovation.</li>
+              <li>Consistent high-quality experience for every client.</li>
+              <li>Customized solutions for unique client needs.</li>
+              <li>Focus on eco-friendly materials and processes.</li>
+              <li>Outstanding customer service enhances the overall experience.</li>
+            </ul>
+          </div>
+
+          <div>
+            <img src={highquality} className='h-[50vh] md:ml-0 ml-5' />
+          </div>
+        </div>
+
+
+
+        <div className='md:flex md:justify-around md:gap-24 md:ml-6 md:mt-8'>
+          <div>
+            <img src={onbudget} className='h-[50vh] ml-6' />
+          </div>
+          <div className='md:w-[50%]  space-y-4 text-[var(--secondary-color)] '>
+            <h1 className='font-extrabold text-2xl md:text-start text-center'>On Budget, On-Time</h1>
+          
+            <ul className='list-disc pl-5 space-y-2 md:ml-0 ml-4'>
+              <li>Consistent on-time delivery.</li>
+              <li>Projects stay within budget.</li>
+              <li>Effective planning minimizes risks.</li>
+              <li>Proactive communication keeps clients updated at every stage.</li>
+            </ul>
+          </div>
+
+
+        </div>
+      </div>
+
 
       <div className="tech-footer mt-20">
         <Footer />
