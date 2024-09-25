@@ -3,7 +3,7 @@ import vission from "../../Assets/Images/vissionimg.jpg";
 function Vission() {
   return (
     <>
-      <div className='text-white '> {/* Updated: added h-screen */}
+      <div className='text-black '> {/* Updated: added h-screen */}
         <div className='flex min-w-[50%] justify-center items-center  gap-10 '> {/* Updated: added max-w-4xl */}
           <div className=''> {/* Updated: added text-center */}
             <h1 className='text-2xl font-bold mb-4'>Our Mission</h1> {/* Updated: font size and margin */}

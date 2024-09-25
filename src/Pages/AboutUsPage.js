@@ -175,9 +175,9 @@ const AboutUsPage = () => {
 
 
       <section className="h-auto min-h-screen">
-  <h1 className="text-yellow-400 h-[10vh] text-5xl font-bold text-center pt-10 mb-10">About B3</h1>
+  <h1 className="text-yellow-400 h-[20vh] text-5xl font-bold text-center pt-10 ">About B3</h1>
 
-  <Box sx={{ width: '100%', height: '90vh' }} className="flex justify-center items-center ">
+  <Box sx={{ width: '100%', height: '80vh' }} className="flex justify-center  bg-yellow-100 items-center ">
     <Box sx={{ borderRight: 2, paddingRight: '0px', borderColor: '#808080', height: 'auto',width:'180px' }} className="flex italic flex-col  justify-center w-[15%]">
       <Tabs
         orientation="vertical"
@@ -185,7 +185,7 @@ const AboutUsPage = () => {
         onChange={handleChange}
         aria-label="vertical tabs example"
         // className="w-full"
-        TabIndicatorProps={{ sx: { backgroundColor: '#facc15', left: 0 } }} // Adjust indicator to left side for vertical
+        TabIndicatorProps={{ sx: { backgroundColor: '#0060b5', left: 0 } }} // Adjust indicator to left side for vertical
       >
         <Tab
           label="Overview"
@@ -255,7 +255,7 @@ const AboutUsPage = () => {
     .tabStyle {
       font-size: 1.125rem; /* text-lg */
       font-weight: 500; /* font-medium */
-      color: white;
+      color: black;
       text-align: left;
       // font-family: Garamond, serif;
       width: 80%;
@@ -265,7 +265,9 @@ const AboutUsPage = () => {
     }
 
     .tabStyle.tabActive {
-      color: #facc15 !important;
+      color: white !important;
+    background:#0060b5;
+    margin-left:10px;
     }
   `}</style>
 </section>
