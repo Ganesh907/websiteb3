@@ -183,6 +183,9 @@ import { useEffect, useState } from "react";
 import hamarakendra from "../../Assets/Images/hamarakendra.png";
 import ips from "../../Assets/Images/IPS_e_Services.jpg";
 import suntrap from "../../Assets/Images/suntrap.83df4c98.png";
+import publicis from "../../Assets/Images/publicis-sapient.jpg";
+import accenture from "../../Assets/Images/Accenture.png";
+import capgemini from "../../Assets/Images/capgemini.png";
 import intertrust from "../../Assets/Images/intertrust.jpg";
 import client from "../../Assets/Images/clientpage.png";
 import qualityClient from "../../Assets/Images/qualityclient.png";
@@ -196,8 +199,8 @@ import Aos from "aos";
 import Footer from "../../Components/CommonComponents/Footer";
 import HeroSection from "../../Components/CommonComponents/HeroSection";
 import Techclient from "../../Assets/Videos/techclient.mp4";
-import highquality from "../../Assets/Images/highquality.jpg"
-import onbudget from "../../Assets/Images/onbudget.png"
+import highquality from "../../Assets/Images/highquality3.jpeg"
+import onbudget from "../../Assets/Images/ontime.jpeg"
 
  const TechClientsPage = () => {
   const [bottomRadius, setBottomRadius] = useState("0%");
@@ -215,6 +218,7 @@ import onbudget from "../../Assets/Images/onbudget.png"
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+  
 
   return (
     <>
@@ -247,27 +251,99 @@ import onbudget from "../../Assets/Images/onbudget.png"
             </div>
           </div>
 
-          <div className="flex items-center justify-center mt-32">
+          
+        </div>
+      </HeroSection>
+         
+     {/* New Section: Our Client Journey */}
+     <div className="flex flex-col items-center justify-center  py-10 mt-0">
+        <h2 className="text-black text-4xl font-bold mb-6">
+        Our Reputed Client
+        </h2>
+        <p className="text-white text-lg mb-8 px-4 text-center">
+          We partner with leading organizations to deliver world-class solutions
+          and support. Join us in shaping the future together.
+        </p>
+        <div className="flex justify-evenly w-full" data-aos-offset="600" data-aos-easing="ease-in-sine">
+  <img
+    src={intertrust}
+    className="h-20 w-auto hover:scale-150 transition-all duration-700 ease-in-out"
+    alt="Intertrust"
+    data-aos="fade-left"   // Slide in from right
+    data-aos-delay="100"     // Delay to create sequential effect
+     data-aos-duration="1500"
+  />
+  <img
+    src={suntrap}
+    className="h-20 w-auto hover:scale-150 transition-all duration-700 ease-in-out"
+    alt="Suntrap"
+    data-aos="fade-left"
+    data-aos-delay="500"
+     data-aos-duration="1500"
+  />
+  <img
+    src={ips}
+    className="h-20 w-auto hover:scale-150 transition-all duration-700 ease-in-out"
+    alt="IPS"
+    data-aos="fade-left"
+    data-aos-delay="1000"
+     data-aos-duration="1500"
+  />
+  <img
+    src={hamarakendra}
+    className="h-20 w-auto hover:scale-150 transition-all duration-700 ease-in-out"
+    alt="Hamarakendra"
+    data-aos="fade-left"
+    data-aos-delay="1500"
+     data-aos-duration="1500"
+  />
+  <img
+    src={publicis}
+    className="h-20 w-auto hover:scale-150 transition-all duration-700 ease-in-out"
+    alt="publicis"
+    data-aos="fade-left"
+    data-aos-delay="2000"
+     data-aos-duration="1500"
+  />
+  <img
+    src={accenture}
+    className="h-20 w-auto hover:scale-150 transition-all duration-700 ease-in-out"
+    alt="accenture"
+    data-aos="fade-left"
+    data-aos-delay="2500"
+     data-aos-duration="1500"
+  />
+  <img
+    src={capgemini}
+    className="h-20 w-auto hover:scale-150 transition-all duration-700 ease-in-out"
+    alt="accenture"
+    data-aos="fade-left"
+    data-aos-delay="3000"
+     data-aos-duration="1500"
+  />
+</div>
+
+      </div>
+{/* ............................... */}
+      <div className="flex items-center justify-center mt-12">
             <h1
               data-aos="zoom-in"
               data-aos-duration="1000"
               data-aos-delay="100"
               data-aos-offset="100"
-              className="heading2 text-black text-5xl font-bold"
+              className="heading2 text-white text-5xl font-bold"
             >
               REDEFINE YOUR SUCCESS STORY WITH US
             </h1>
-          </div>
-        </div>
-      </HeroSection>
-
-      <div className="flex w-auto gap-10 justify-center mt-10">
+          </div> 
+        
+          <div className="flex w-auto gap-10 justify-center mt-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
           {[
             {
               src: qualityClient,
-              title: "Quality",
-              description: "Top-tier quality in every step.",
+              title: "Client Satisfaction",
+              description: "Clients appreciate us for our commitment to excellence and their satisfaction.",
               number: "01",
               bgColor: "bg-blue-700",
             },
@@ -306,60 +382,51 @@ import onbudget from "../../Assets/Images/onbudget.png"
               number: "06",
               bgColor: "bg-orange-700",
             },
+            {
+              src:highquality ,
+              title: "High-Quality Products",
+              description: "Our clients value us for consistently delivering high-quality products.",
+              number: "07",
+              bgColor: "bg-orange-700",
+            },
+            {
+              src: onbudget,
+              title: "On Budget, On-Time",
+              description: "Clients trust us for our reliability in delivering on time and within budget.",
+              number: "08",
+              bgColor: "bg-orange-700",
+            },
           ].map((item, index) => (
             <div
               key={index}
-              className="relative flex flex-col gap-2 p-4 group transition-transform duration-300 transform hover:scale-105 rounded-lg"
+              className="relative flex flex-col shadow-lg shadow-indigo-500/40 gap-2 p-4 group transition-transform duration-300 transform hover:scale-105 rounded-lg"
             >
+              <div>
               <img
                 src={item.src}
-                className="w-full h-40 object-cover rounded-lg border-none p-0 m-0 shadow-none"
+                className="w-full h-[185px] object-cover rounded-lg border-none p-0 m-0 shadow-none opacity-40"
                 alt={item.title}
               />
               <div
+                className={`absolute inset-0 flex flex-col items-start justify-center p-6 rounded-lg  text-white  `}
+              >
+                {/* <span className="text-3xl font-bold">{item.number}</span> */}
+                <h1 className="text-lg font-bold mt-2">{item.title}</h1>
+                <p className="text-sm mt-2">{item.description}</p>
+              </div>
+              </div>
+              {/* <div
                 className={`absolute inset-0 flex flex-col items-start justify-center p-6 rounded-lg ${item.bgColor} text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
               >
                 <span className="text-3xl font-bold">{item.number}</span>
                 <h1 className="text-lg font-bold mt-2">{item.title}</h1>
                 <p className="text-sm mt-2">{item.description}</p>
-              </div>
+              </div> */}
             </div>
           ))}
         </div>
       </div>
 
-      {/* New Section: Our Client Journey */}
-      <div className="flex flex-col items-center justify-center  py-16 mt-20">
-        <h2 className="text-black text-4xl font-bold mb-6">
-          Our Client Journey
-        </h2>
-        <p className="text-black text-lg mb-8 px-4 text-center">
-          We partner with leading organizations to deliver world-class solutions
-          and support. Join us in shaping the future together.
-        </p>
-        <div className="flex justify-evenly w-full">
-          <img
-            src={intertrust}
-            className="h-20 w-auto  hover:scale-150 transition-all duration-300 ease-in-out"
-            alt="Intertrust"
-          />
-          <img
-            src={suntrap}
-            className="h-20 w-auto  hover:scale-150 transition-all duration-300 ease-in-out"
-            alt="Suntrap"
-          />
-          <img
-            src={ips}
-            className="h-20 w-auto  hover:scale-150 transition-all duration-300 ease-in-out"
-            alt="IPS"
-          />
-          <img
-            src={hamarakendra}
-            className="h-20 w-auto hover:scale-150 transition-all duration-300 ease-in-out"
-            alt="Hamarakendra"
-          />
-        </div>
-      </div>
 
       {/* New Section: What Clients Say */}
       <div className="flex flex-col items-center justify-center bg-white py-16 mt-20">
@@ -389,7 +456,7 @@ import onbudget from "../../Assets/Images/onbudget.png"
         </div>
       </div>
 
-      <div className=" py-20">
+      {/* <div className=" py-20">
         <div className="flex justify-around text-black items-center">
           {[
             //    { number: "500+", text: "Successful Projects" },
@@ -408,9 +475,9 @@ import onbudget from "../../Assets/Images/onbudget.png"
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
 
-      <div className='w-[90%] h-auto  md:mb-20 mb-5'>
+      {/* <div className='w-[90%] h-auto  md:mb-20 mb-5'>
         <h1 className='mb-3  text-center md:text-start md:ml-[9%] text-[var(--primary-color)]  text-[40px] font-bold m-[5px] font-montserrat md:w-full md:mt-[40px] mt-5'>
           Why do our clients value us?
         </h1>
@@ -451,7 +518,7 @@ import onbudget from "../../Assets/Images/onbudget.png"
 
 
         </div>
-      </div>
+      </div> */}
 
 
       <div className="tech-footer mt-20">
