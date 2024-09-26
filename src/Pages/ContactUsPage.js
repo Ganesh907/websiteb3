@@ -14,7 +14,8 @@ import ContactUSBg2 from '../Assets/Images/ContctUsBg.gif'
 import ContactUsHome from '../Assets/Images/ContactUsHome.jpg'
 import ContactUSImg from '../Assets/Images/ContactUSImg.jpg'
 // import ContactUSImg2 from '../Assets/Images/ContactUSImg2.png'
-import ContactUSImg3 from '../Assets/Images/ContactUSImg3.jpg'
+// import ContactUSImg3 from '../Assets/Images/ContactUSImg3.jpg'
+import ContactUSImg3 from '../Assets/Images/ContactUSImg4.jpg'
 import VideoForContact from '../Assets/Videos/VideoForContact.mp4'
 
 import WaveBg from '../Assets/Images/WaveBG.jpg'
@@ -172,7 +173,7 @@ const ContactUsPage = () => {
 
 
 
-                        <div className=' flex justify-center items-end h-screen w-[99vw] bg-black/30  mx-auto'
+                        <div className=' flex justify-center items-end h-screen w-[99vw] bg-black/40  mx-auto'
                             style={{
 
                                 backgroundImage: `

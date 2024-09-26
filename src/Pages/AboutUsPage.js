@@ -7,10 +7,13 @@ import Box from '@mui/material/Box';
 import Footer from "../Components/CommonComponents/Footer";
 import HeroSection from "../Components/CommonComponents/HeroSection";
 import AboutUsBgVideo from '../Assets/Videos/AboutUsBgVideo.mp4';
+
+import mission from "../Assets/Images/mission.gif";
+import vision from "../Assets/Images/vision.gif";
 import Overview from "../Components/About us/Overview";
 import Mission from "../Components/About us/Mission";
 import Vission from "../Components/About us/Vission";
-import Corevalues from "../Components/About us/Corevalues";
+import Corevalues from "../Components/About us/Corevalues"; 
 import Partner from "../Components/About us/Partner";
 import Family from "../Components/About us/Family";
 import Candidate from "../Components/About us/Candidate";
@@ -29,18 +32,24 @@ const AboutUsPage = () => {
 
   const content = [
     {
-      heading: "Transforming Ideas Into Digital Solutions",
+      heading: "Turning Ideas Into Digital Solutions",
       paragraph: [
+      
+// "BitByBit Solutions is a dynamic and rapidly growing technology startup based in Mumbai, India’s commercial hub.",
+// "Since our inception in 2018, we’ve specialized in delivering high-quality IT solutions to esteemed clients across India and the Indo-Pacific region.",
+// "Our expertise spans custom software development, data management, and digital transformation.",
+// "We are driven by a young and passionate team with diverse experience across multiple industries, enabling us to craft innovative solutions that meet the unique needs of each client.",
+
         "From seamless software development to advanced data management, we deliver tech that works for you efficiently and effortlessly.",
-        "We turn your vision into reality with custom IT solutions that drive business growth."
+        "We bring your vision to life with IT solutions designed to drive results and keep you ahead in the digital world."
       ]
     },
     {
-      heading: "Talent Finders, Career Builders",
+      heading: "Connecting Talent, Building Careers",
       paragraph: [
-        "Whether you're hiring or job hunting, our network and expertise make it happen.",
-        "We connect the right people with the right opportunities.",
-        "Let’s build your dream team or career together."
+        "Whether you’re looking to hire or find your next job, we’ve got the network and know-how to make it happen",
+        "We match the right people with the right opportunities.",
+        // "Let’s build your dream team or career together."
       ]
     }
   ];
@@ -174,18 +183,17 @@ const AboutUsPage = () => {
       </HeroSection>
 
 
-      <section className="h-auto min-h-screen">
-  <h1 className="text-yellow-400 h-[20vh] text-5xl font-bold text-center pt-10 ">About B3</h1>
+      {/* <section className="h-auto min-h-screen">
+  <h1 className="text-yellow-400 h-[20vh] text-5xl font-bold text-center pt-10">About B3</h1>
 
-  <Box sx={{ width: '100%', height: '80vh' }} className="flex justify-center  bg-yellow-100 items-center ">
-    <Box sx={{ borderRight: 2, paddingRight: '0px', borderColor: '#808080', height: 'auto',width:'180px' }} className="flex italic flex-col  justify-center w-[15%]">
+  <Box sx={{ width: '100%', height: '80vh' }} className="flex justify-center bg-yellow-100 items-center">
+    <Box sx={{ borderRight: 2, paddingRight: '0px', borderColor: '#808080', height: 'auto', width: '180px' }} className="flex italic flex-col justify-center w-[15%]">
       <Tabs
         orientation="vertical"
         value={value}
         onChange={handleChange}
         aria-label="vertical tabs example"
-        // className="w-full"
-        TabIndicatorProps={{ sx: { backgroundColor: '#0060b5', left: 0 } }} // Adjust indicator to left side for vertical
+        TabIndicatorProps={{ sx: { backgroundColor: '#0060b5', left: 0 } }}
       >
         <Tab
           label="Overview"
@@ -225,7 +233,6 @@ const AboutUsPage = () => {
       </Tabs>
     </Box>
 
-    {/* Tab Content Panels */}
     <Box className="w-[80%] p-10 h-[90vh] flex justify-center items-center">
       <CustomTabPanel value={value} index={0}>
         <Overview />
@@ -253,24 +260,73 @@ const AboutUsPage = () => {
 
   <style jsx>{`
     .tabStyle {
-      font-size: 1.125rem; /* text-lg */
-      font-weight: 500; /* font-medium */
+      font-size: 1.125rem;
+      font-weight: 500;
       color: black;
       text-align: left;
-      // font-family: Garamond, serif;
       width: 80%;
       align-items: flex-start;
-      //  letter-spacing: 0.1em;
-        text-transform: none;
+      text-transform: none;
     }
 
     .tabStyle.tabActive {
       color: white !important;
-    background:#0060b5;
-    margin-left:10px;
+      background: #0060b5;
+      margin-left: 10px;
     }
   `}</style>
-</section>
+</section> */}
+
+
+
+
+<div className="grid md:grid-cols-2 h-[70vh] mt-20 p-10">
+
+<div className="md:h-[50vh] w-full flex flex-col justify-center items-center  ">
+  <div className="flex flex-col justify-between items-center  w-[75%] p-5">
+    <img src={mission} className="h-32 w-32 bg-red-200" />
+    <div>
+      <h1 className="text-center text-2xl font-bold">
+        OUR MISSION
+      </h1>
+      <h2 className="mt-4 border-2 border-[#0060b5]  text-[var(--secondary-color)] rounded-lg p-3">
+        {
+          "We strive to provide a tailored, end to end services to our clients and establishing strong partnerships to ensure we understand each others goals and deadlines, without compromising our professional and ethical standards."
+        }
+      </h2>
+    </div>
+  </div>
+</div>
+
+
+<div className="md:h-[50vh] w-full flex flex-col justify-center items-center  ">
+  <div className="flex flex-col justify-between items-center  w-[70%] p-5">
+    <img src={vision} className="h-32 w-32 bg-red-200" />
+    <div>
+      <h1 className="text-center text-2xl font-bold">
+        OUR VISION
+      </h1>
+      <h2 className="mt-4 border-2 border-[#0060b5] rounded-lg p-3  text-[var(--secondary-color)] ">
+        {
+          "To build trust by establishing a winning value chain system based on the ever changing surroundings, with the utmost focus on transforming lives and providing solutions."
+        }
+      </h2>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+</div>
+<Corevalues/>
+
+        
 
 
       <Footer />

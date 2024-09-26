@@ -5,6 +5,7 @@ import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import MenuIcon from "@mui/icons-material/Menu"; // Import MUI Menu Icon
 import CloseIcon from "@mui/icons-material/Close"; // Import MUI Close Icon
 import { useLocation } from "react-router-dom";
+ import Logo from '../../Assets/Images/B3logo.png'
 
 function Header() {
   const [click, setClick] = useState(false);
@@ -35,19 +36,30 @@ function Header() {
 
   const onMouseLeave2 = () => setDropdown2(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      setShowNavbar(currentScrollY < lastScrollY || currentScrollY === 0);
-      setLastScrollY(currentScrollY);
-      setScrolled(window.scrollY > window.innerHeight / 2);
-    };
+ useEffect(() => {
+  const handleScroll = () => {
+    const currentScrollY = window.scrollY;
+    const triggerHeight = window.innerHeight * 0.05; // 5vh
 
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [lastScrollY]);
+    // Show navbar when user scrolls up or hasn't scrolled past 5vh
+    setShowNavbar(currentScrollY < lastScrollY || currentScrollY <= triggerHeight);
+
+    // Save the current scroll position to compare on the next scroll
+    setLastScrollY(currentScrollY);
+
+    // Set the "scrolled" state if the user scrolls more than 5vh
+    setScrolled(currentScrollY > triggerHeight);
+  };
+
+  // Attach scroll event listener
+  window.addEventListener("scroll", handleScroll);
+
+  // Cleanup event listener on component unmount
+  return () => {
+    window.removeEventListener("scroll", handleScroll);
+  };
+}, [lastScrollY]);
+
 
   return (
     <nav
@@ -59,12 +71,13 @@ function Header() {
       {/* Logo */}
       <NavLink
         to="/"
-        className="flex items-center text-[#0060b5] font-bold text-xl"
+        className="flex items-center text-[#0060b5] font-bold text-2xl"
         onClick={closeMobileMenu}
       >
-        <div className="h-10 w-10 text-[#0060b5] bg-white rounded-md  flex items-center justify-center font-semibold">
+        {/* <div className="h-10 w-10 text-[#0060b5] bg-white rounded-md  flex items-center justify-center font-semibold">
           B<sup>3</sup>
-        </div>
+        </div> */}
+        <img src={Logo} alt="logo" className="w-10 h-10"/>
         &nbsp;BitByBit Solutions
       </NavLink>
 
@@ -131,17 +144,19 @@ function Header() {
           </span>
           {dropdown2 && <Dropdown2 />}
         </li>
+       
+        
         <li className=" ">
           <NavLink
-            to="/contactus"
+            to="/clients"
             className={({ isActive }) =>
-              `nav-links text-white px-3 mx-1 py-1 border-2 border-transparent hover:border-white rounded-md text-lg ${
+              `nav-links text-white px-3 mx-1 py-1 text-lg border-2 border-transparent hover:border-white rounded-md  ${
                 isActive ? "border-white rounded-md  font-semibold text-[#facc15]" : ""
               }`
             }
             onClick={closeMobileMenu}
           >
-            Contact
+            Clients
           </NavLink>
         </li>
         <li className=" ">
@@ -159,15 +174,15 @@ function Header() {
         </li>
         <li className=" ">
           <NavLink
-            to="/partners"
+            to="/contactus"
             className={({ isActive }) =>
-              `nav-links text-white px-3 mx-1 py-1 text-lg border-2 border-transparent hover:border-white rounded-md  ${
+              `nav-links text-white px-3 mx-1 py-1 border-2 border-transparent hover:border-white rounded-md text-lg ${
                 isActive ? "border-white rounded-md  font-semibold text-[#facc15]" : ""
               }`
             }
             onClick={closeMobileMenu}
           >
-            Partners
+            Contact
           </NavLink>
         </li>
         <li className=" ">
