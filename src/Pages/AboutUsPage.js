@@ -18,6 +18,11 @@ import Corevalues from "../Components/About us/Corevalues";
 import Partner from "../Components/About us/Partner";
 import Family from "../Components/About us/Family";
 import Candidate from "../Components/About us/Candidate";
+import MissionVisionGif from "../Assets/Images/MissionVisionGif.gif"
+import TypingText from "../Components/CommonComponents/TypingText";
+import MissionNew from "../Assets/Images/MissionNew.gif"
+import B3Banner from "../Assets/Images/B3Banner.jpg"
+import B3Img from "../Assets/Images/1690.jpg"
 
 const AboutUsPage = () => {
   const textStyle = {
@@ -282,19 +287,10 @@ const AboutUsPage = () => {
 
 
 
-<div className="relative grid md:grid-cols-2 h-[100vh] overflow-hidden">
-  <video
-    autoPlay
-    loop
-    muted
-    className="absolute inset-0 w-full h-full object-cover opacity-80"
-  >
-    <source src={MissionVisionVideo} type="video/mp4" />
-    Your browser does not support the video tag.
-  </video>
-<div className="md:h-full w-full flex flex-col justify-start z-10 items-start  ">
+{/* <div className="relative grid md:grid-cols-2 h-[100vh] overflow-hidden">
+<div className="md:h-full w-full flex flex-col justify-center z-10 items-start  ">
   <div className="flex flex-col justify-between items-center  w-[75%] p-5">
-    <img src={mission} className="h-32 w-32  bg-red-200" />
+    <img src={MissionNew} className="h-32 w-32  bg-red-200 " />
     <div>
       <h1 className="text-center text-2xl font-bold">
         OUR MISSION
@@ -309,7 +305,7 @@ const AboutUsPage = () => {
 </div>
 
 
-<div className="md:h-full w-full flex flex-col justify-end z-10   items-end  ">
+<div className="md:h-full w-full flex flex-col justify-center z-10   items-end  ">
   <div className="flex flex-col justify-between items-center  w-[70%] p-5">
     <img src={vision} className="h-32 w-32 bg-red-200" />
     <div>
@@ -325,15 +321,98 @@ const AboutUsPage = () => {
   </div>
 </div>
 
+</div> */}
 
 
 
+{/* <div className="relative h-[78vh] my-10 flex pb-2  justify-end items-center px-10">
+  <div
+    className="absolute inset-0 bg-black opacity-20 "
+    style={{
+      backgroundImage: `url(${B3Banner})`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'top',
+      zIndex: '-1', 
+    }}
+  />
+  <div className="h-[40vh] w-[82vw] m-10">
+<img src={B3Img} alt="" className="rounded-lg shadow-2xl shadow-black"/>
+  </div>
+  
+  <div className="relative z-2  flex flex-col border-l-2 border-white rounded-lg justify-center italic items-center drop-shadow-lg text-lg p-5 "
+  style={{backgroundColor:"rgb(0,0,0,0.8)"}}>
+    <h1 className="w-[50%] text-5xl drop-shadow-lg text-center mb-10  font-bold text-[#0060b5] pb-2 border-b-2 border-white "
+    data-aos="fade-up" data-aos-duration="3000" 
+    >Discover <span className="text-white">B3</span></h1>
+  <p>
+
+    "BitByBit Solutions is a dynamic and rapidly growing technology startup based in Mumbai, India’s commercial hub. Since our inception in 2018, we’ve specialized in delivering high-quality IT solutions to esteemed clients across India and the Indo-Pacific region.<br/><br/>
+Our expertise spans custom software development, data management, and digital transformation. We are driven by a young and passionate team with diverse experience across multiple industries, enabling us to craft innovative solutions that meet the unique needs of each client.<br/><br/>
+At BitByBit Solutions, we’re committed to excellence, ensuring that every project we deliver helps businesses streamline operations, enhance efficiency, and achieve their digital goals.” 
+
+    </p>
+  </div>
+</div> */}
 
 
 
+<div className="h-[100vh] w-full flex justify-between">
+<div className="md:h-full  w-[45%] flex flex-col justify-start z-2 items-start  " 
+data-aos="fade-left" data-aos-duration="3000" 
+>
+  <div className="flex flex-col justify-between items-center  w-full p-5"
+  >
+    <img src={mission} className="h-28 w-28 p-1  hover:rounded-none border-4 rounded-full border-[#0060b5] transition-all ease-in-out duration-600" />
+    <div>
 
-
+      <div className="text-center text-2xl text-[#0060b5] font-bold mt-10">
+        OUR
+        <TypingText word=" MISSION"/>
+      
+      </div>
+      <h2 className="mt-4 rounded-2xl  p-3  text-[var(--secondary-color)] drop-shadow-xl border-b-0 italic border-t-4  border-[#0060b5]  "
+       style={{backgroundColor:'rgb(0,0,0,0.3)'}}>
+        {
+          "We strive to provide a tailored, end to end services to our clients and establishing strong partnerships to ensure we understand each others goals and deadlines, without compromising our professional and ethical standards."
+        }
+      </h2>
+    </div>
+  </div>
 </div>
+
+
+<div className="flex justify-center w-[40%] items-center"
+ data-aos="zoom-in" data-aos-duration="3000" >
+  <img src={MissionVisionGif} alt="" className="scale-150 "/>
+</div>
+
+<div className="md:h-full w-[45%]  flex flex-col justify-end z-2   items-end  "
+data-aos="fade-right" data-aos-duration="3000" 
+>
+  <div className="flex flex-col  justify-between items-center  w-full p-5">
+    
+    <img src={vision}className="h-28 w-28 p-1  border-4 rounded-full border-[#0060b5]"  />
+    <div>
+      <h1 className="text-center text-2xl mt-10 text-[#0060b5] font-bold">
+        OUR   <TypingText word=" VISION"/>
+      </h1>
+      <h2 className="mt-4 rounded-2xl  p-3  text-[var(--secondary-color)] drop-shadow-xl border-b-0  border-t-4 hover:border-t-0 italic  border-[#0060b5] hover:border-b-4 "
+       style={{backgroundColor:'rgb(0,0,0,0.3)'}}>
+        {
+          "To build trust by establishing a winning value chain system based on the ever changing surroundings, with the utmost focus on transforming lives and providing solutions."
+        }
+      </h2>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+
 <Corevalues/>
 
         

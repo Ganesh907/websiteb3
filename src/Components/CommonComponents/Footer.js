@@ -162,36 +162,101 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/Twitter';
+import '../../CSS_Files/NotFoundPage.css'; // Import custom CSS
+
+
+
 
 const Footer = () => {
+
+  const dots = Array.from({ length: 3 }, (_, index) => (
+    <div
+      key={index}
+      className="h-5 w-5 bg-white rounded-md mx-1 animate-spin"
+    />
+  ));
+
   return (
-    <footer className="bg-gray-900 text-white py-12">
-      <div className="container mx-auto px-6 md:px-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+    <footer className="bg-gray-900 flex justify-center items-center text-white py-5 ">
+      <div className="container ">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-2 p-10 mx-10 rounded-md border-2 shadow-lg shadow-black border-[#0060b5]">
           <div>
-            <a href="/" className="flex items-center mb-4">
+
+
+
+
+
+            {/* <a href="/" className="flex items-center mb-4">
               <img src={Imagelogo} alt="Imagelogo" className="w-24 h-24" />
-            </a>
-            <ul className="space-y-2">
-              <li><a href="/" className="hover:text-teal-400 transition-colors duration-300">Home</a></li>
-              <li><a href="/technology" className="hover:text-teal-400 transition-colors duration-300">Technology</a></li>
-              <li><a href="/recruitment" className="hover:text-teal-400 transition-colors duration-300">Recruitment</a></li>
+            </a> */}
+
+
+
+    
+        <div className='p-2 flex flex-col items-start '>
+          <div className="animate-bounce  flex duration-1000 justify-center items-end h-24 w-24">
+            <div
+              className="bg-white rounded-md p-5 animate-alternate-colors"
+              style={{ boxShadow: "0 4px 0 rgba(0, 0, 0, 0.2)" }}
+            >
+              <h1 className='font-bold text-alternate-colors text-4xl '>B<sup>3</sup></h1>
+            </div>
+          </div>
+
+          <div className='h-10 flex justify-center items-center '>
+            {/* <h1 className='font-bold text-white ml-2'>B &nbsp;</h1> */}
+            {dots}
+            {/* <h1 className='font-bold text-white ml-2'>3</h1> */}
+          </div>
+        </div>
+
+
+
+
+            <ul className="space-y-2 mt-2">
+              {/* <li><a href="/" className="hover:text-teal-400 transition-colors duration-300">Home</a></li> */}
+              <li><a href="/technology" className="hover:text-teal-400 transition-colors duration-300 ">Technology Home &rarr;</a></li>
+              <li><a href="/recruitment" className="hover:text-teal-400 transition-colors duration-300">Recruitment Home &rarr;</a></li>
             </ul>
           </div>
           <div>
-            <h4 className="text-lg font-semibold mb-4 border-b border-gray-700 pb-2">Company</h4>
+            <h4 className="text-lg font-semibold mb-4 border-b border-gray-700 pb-2">Company </h4>
             <ul className="space-y-2">
-              <li><a href="/Contact" className="hover:text-teal-400 transition-colors duration-300">Contact</a></li>
-              <li><a href="/Careers" className="hover:text-teal-400 transition-colors duration-300">Careers</a></li>
-              <li><a href="/technology-clients" className="hover:text-teal-400 transition-colors duration-300">Technology Clients</a></li>
-              <li><a href="/recruitment-clients" className="hover:text-teal-400 transition-colors duration-300">Recruitment Clients</a></li>
+
+
+
+              <li><a href="/contactus" className="hover:text-teal-400 transition-colors duration-300">Contact &rarr;</a></li>
+
+              <li>
+      <a
+        href="/contactus"
+        className="group relative inline-flex items-center overflow-hidden px-2 py-2 transition-colors duration-300 border-l-2 border-white "
+      >
+        <span className="relative z-10 transition-colors duration-300 group-hover:text-white  ">
+          Contact
+        </span>
+        <span className="ml-2 relative z-10 transition-transform  duration-300 group-hover:translate-x-1">
+          &rarr;
+        </span>
+
+        {/* Looping animation arrow from left to right */}
+        <span className="absolute inset-y-0 left-0 w-full bg-[#0060b5] translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500 ease-in-out"></span>
+      </a>
+    </li>
+
+
+
+              <li><a href="/Careers" className="hover:text-teal-400 transition-colors duration-300">Careers &rarr;</a></li>
+              <li><a href="/clients" className="hover:text-teal-400 transition-colors duration-300">Clients &rarr;</a></li>
+              {/* <li><a href="/technology-clients" className="hover:text-teal-400 transition-colors duration-300">Technology Clients &rarr;</a></li>
+              <li><a href="/recruitment-clients" className="hover:text-teal-400 transition-colors duration-300">Recruitment Clients &rarr;</a></li> */}
             </ul>
           </div>
           <div>
             <h4 className="text-lg font-semibold mb-4 border-b border-gray-700 pb-2">Quick Links</h4>
             <ul className="space-y-2">
-              <li><a href="/technology-services" className="hover:text-teal-400 transition-colors duration-300">Technology Services</a></li>
-              <li><a href="/recruitment-services" className="hover:text-teal-400 transition-colors duration-300">Recruitment Services</a></li>
+              <li><a href="/technology-services" className="hover:text-teal-400 transition-colors duration-300">Technology Services &rarr;</a></li>
+              <li><a href="/recruitment-services" className="hover:text-teal-400 transition-colors duration-300">Recruitment Services &rarr;</a></li>
             </ul>
           </div>
           <div>
@@ -200,7 +265,7 @@ const Footer = () => {
             <p className="mb-4">
               912 | 1st Floor | Building No 9 | Solitaire Corporate Park | Andheri Kurla Road | Chakala | Andheri (East) | Mumbai - 400 093
             </p>
-            <div className="flex space-x-4 items-end mt-8">
+            <div className="flex space-x-4 items-end mt-8 animate-pulse">
      <div className="relative group">
     <a href="/facebook" className="text-blue-600 hover:text-blue-400 transition-colors duration-300">
       <FacebookIcon />
@@ -210,7 +275,7 @@ const Footer = () => {
     </span>
   </div>
 
-  <div className="relative group">
+  <div className="relative group ">
     <a href="/instagram" className="text-pink-500 hover:text-pink-400 transition-colors duration-300">
       <InstagramIcon />
     </a>
@@ -240,9 +305,9 @@ const Footer = () => {
 
           </div>
         </div>
-        <div className="text-center text-sm py-4 bg-gray-800">
+        {/* <div className="text-center text-sm py-4 bg-gray-800">
           <p>©2024 BitByBit Solutions. All rights reserved.</p>
-        </div>
+        </div> */}
       </div>
     </footer>
   );

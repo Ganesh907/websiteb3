@@ -1,10 +1,11 @@
 import React from 'react'
 import SecurityOutlinedIcon from '@mui/icons-material/SecurityOutlined';
+import TypingText from '../CommonComponents/TypingText';
 
 function Corevalues() {
   return (
     <div className=' flex flex-col justify-center items-center'>
-      <h1 className='text-white text-5xl font-semibold text-center my-10'> Core Values</h1>
+      <h1 className='text-[#0060b5] text-3xl font-bold uppercase text-center my-10'> COre <span className='text-yellow-400'> Values</span></h1>
       <div className='text-white h-[70vh] w-[80vw]  flex justify-between items-center text-center'>
         
         <div className='w-[18%] h-[50vh]  flex flex-col justify-start items-center gap-[1%]'
