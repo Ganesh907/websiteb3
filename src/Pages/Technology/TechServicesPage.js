@@ -6,6 +6,7 @@ import React, { useEffect, useState } from "react";
 // import databackup from "../../Assets/Images/databackup.png";
 // import webmonitor from "../../Assets/Images/webmonitor.png";
 import techservice from "../../Assets/Images/techservice.png";
+
 // import requirements from "../../Assets/Images/planning requirement.gif";
 // import design from "../../Assets/Images/web-design.gif";
 // import development1 from "../../Assets/Images/web-developer.gif";
@@ -36,7 +37,7 @@ import SplitCard from "../../Components/TechServicesPage/SplitCard";
 
  const TechServicesPage = (props) => {
   return (
-    <>
+    // <>
       <div className="service-div-main ">
         <HeroSection
           videoUrl={TechServicesVideo}
@@ -52,13 +53,13 @@ import SplitCard from "../../Components/TechServicesPage/SplitCard";
 
         {/* ////////////////////////////////////////section2//////////////////////////// */}
 
-    
+{/*     
         <h1 className="techservice_heading  md:text-start  md:ml-10 text-center">
           Services we provide{" "}
-        </h1>
+        </h1> */}
         {/* <span className="w-[8%] h-[5px] ml-[3%] hidden md:block rounded-b-[5px]" style={{backgroundColor:'#002eff'}}></span>       */}
-        <section className=" flex  justify-center items-center  w-full h-auto pt-2">
-          <div className="techservice_bg w-full h-auto pb-4   flex  flex-col items-center ">
+        {/* <section className=" flex  justify-center items-center  w-full h-auto pt-2">
+          <div className="techservice_bg w-full h-auto pb-4   flex  flex-col items-center "> */}
             {/* <div
               className="techservice_p md:w-[80%] md:mb-0 mb-4 md:pl-0 pl-2 text-black"
               // data-aos="fade-up"
@@ -70,7 +71,7 @@ import SplitCard from "../../Components/TechServicesPage/SplitCard";
               security, and performance. Trust us to deliver the best software
               solutions, customized for your specific requirements.
             </div> */}
-
+{/* 
             <div className="techservice_bgcards md:grid md:grid-cols-4 md:w-[80%] md:gap-y-4 md:mt-4 md:py-2  grid grid-cols-1 gap-y-6 ">
               <div
                 className="techservice_box md:w-[90%] md:h-46 md:m-0 md:flex md:flex-col md:justify-start md:items-start
@@ -91,10 +92,10 @@ import SplitCard from "../../Components/TechServicesPage/SplitCard";
                 <h1 className="style_h1 text-center  w-full ">
                   IT Consultation
                 </h1>
-              </div>
+              </div> */}
 
               {/* ........................1........................................... */}
-              <div
+              {/* <div
                 className="techservice_box md:w-[90%] md:h-46 md:m-0 md:flex md:flex-col md:justify-start md:items-start
             flex flex-col justify-center items-center  "
               >
@@ -113,10 +114,10 @@ import SplitCard from "../../Components/TechServicesPage/SplitCard";
                 <h1 className="style_h1 text-center  w-full ">
                   Mobile Development
                 </h1>
-              </div>
+              </div> */}
 
               {/* ..........................2......................................... */}
-              <div
+              {/* <div
                 className="techservice_box md:w-[90%] md:h-46 md:m-0 md:flex md:flex-col md:justify-start md:items-start
             flex flex-col justify-center items-center  "
               >
@@ -135,18 +136,18 @@ import SplitCard from "../../Components/TechServicesPage/SplitCard";
                 <h1 className="style_h1 text-center  w-full ">
                   Managed IT Services
                 </h1>
-              </div>
+              </div> */}
               {/* ..........................3......................................... */}
 
               {/* ..........................4......................................... */}
-              <div
+              {/* <div
                 className="techservice_box md:w-[90%] md:h-46 md:m-0 md:flex md:flex-col md:justify-start md:items-start
             flex flex-col justify-center items-center   "
-              >
+              > */}
                 {/* <img src={transactions} width='27%' className="md:h-12 md:ml-1"/>
             <h3 className="techservice_title md:m-2 md:text-left text-center">Financial Transactions Management</h3>
             <p className="techservice_content md:ml-2">Streamline financial transactions with our secure solutions, from payment integration to data management.</p> */}
-
+{/* 
                 <div class="wrapper">
                   <div class="card">
                     <img src={finance} />
@@ -164,17 +165,17 @@ import SplitCard from "../../Components/TechServicesPage/SplitCard";
                 <h1 className="style_h1 text-center  w-full ">
                   Financial Transactions Management
                 </h1>
-              </div>
+              </div> */}
 
               {/* ..........................5......................................... */}
-              <div
+              {/* <div
                 className="techservice_box md:w-[90%] md:h-46 md:m-0 md:flex md:flex-col md:justify-start md:items-start
             flex flex-col justify-center items-center"
-              >
+              > */}
                 {/* <img src={api} width='25%' className="md:h-12 md:ml-1"/>
             <h3 className="techservice_title md:m-2">Third Party API Integration</h3>
             <p className="techservice_content md:ml-2">Enhance your systems with our third-party API integrations for payments, social media, Google services, and more.</p> */}
-
+{/* 
                 <div class="wrapper">
                   <div class="card">
                     <img src={api_integration} />
@@ -191,9 +192,9 @@ import SplitCard from "../../Components/TechServicesPage/SplitCard";
                 <h1 className="style_h1 text-center  w-full ">
                   Third Party API Integration
                 </h1>
-              </div>
+              </div> */}
               {/* ...........................6................................... */}
-              <div
+              {/* <div
                 className="techservice_box md:w-[90%] md:h-46 md:m-0 md:flex md:flex-col md:justify-start md:items-start
             flex flex-col justify-center items-center "
               >
@@ -201,7 +202,7 @@ import SplitCard from "../../Components/TechServicesPage/SplitCard";
             <h3 className="techservice_title md:m-2">Hardware/Software Support</h3>
             <p className="techservice_content md:ml-2 md:pr-2">Ensure smooth operations with our expert hardware and software support services.</p> */}
 
-                <div class="wrapper">
+                {/* <div class="wrapper">
                   <div class="card">
                     <img src={hardwaresoftware} />
                     <div class="info">
@@ -216,19 +217,19 @@ import SplitCard from "../../Components/TechServicesPage/SplitCard";
                 <h1 className="style_h1 text-center  w-full ">
                     Software Support
                 </h1>
-              </div>
+              </div>  */}
               {/* ...........................7........................... */}
 
               {/* ...........................8................................ */}
-              <div
+              {/* <div
                 className="techservice_box md:w-[90%] md:h-46 md:m-0 md:flex md:flex-col md:justify-start md:items-start
             flex flex-col justify-center items-center"
-              >
+              > */}
                 {/* <img src={cloud} width='25%' className="md:h-12 md:ml-1"/>
             <h3 className="techservice_title md:m-2 md:text-left text-center">Cloud & Infrastructure as a Service (IaaS)</h3>
             <p className="techservice_content md:ml-2">Skyrocket your business with our IaaS solutions, offering consulting, migration, and managed services for AWS, Google Cloud, and Azure.</p> */}
 
-                <div class="wrapper">
+                {/* <div class="wrapper">
                   <div class="card">
                     <img src={cloudandinfra} />
                     <div class="info">
@@ -246,11 +247,11 @@ import SplitCard from "../../Components/TechServicesPage/SplitCard";
                 <h1 className="style_h1 text-center  w-full ">
                   Cloud & Infrastructure as a Service
                 </h1>
-              </div>
+              </div> */}
               {/* ...........................9............................ */}
 
               {/* ...........................10.......................... */}
-              <div
+              {/* <div
                 className="techservice_box md:w-[90%] md:h-46 md:m-0 md:flex md:flex-col md:justify-start md:items-start
             flex flex-col justify-center items-center  "
               >
@@ -258,7 +259,7 @@ import SplitCard from "../../Components/TechServicesPage/SplitCard";
             <h3 className="techservice_title md:m-2  md:text-left text-center">Workflow Management System</h3>
             <p className="techservice_content md:ml-2">Boost productivity with our workflow management systems, streamlining business processes for greater efficiency.</p> */}
 
-                <div class="wrapper">
+                {/* <div class="wrapper">
                   <div class="card">
                     <img src={workflow} />
                     <div class="info">
@@ -273,11 +274,11 @@ import SplitCard from "../../Components/TechServicesPage/SplitCard";
                 <h1 className="style_h1 text-center  w-full ">
                   Workflow Management System
                 </h1>
-              </div>
+              </div>  */}
               {/* ..........................11.............................. */}
-            </div>
+            {/* </div>
           </div>
-        </section>
+        </section> */}
 
         {/* ////////////////////////////////////////////////////////////////////// */}
         {/* //////////////////////////new section3///////////////////////////// */}
@@ -371,7 +372,7 @@ import SplitCard from "../../Components/TechServicesPage/SplitCard";
 <TypingText word= "BitByBit delivers cutting-edge, custom software solutions in e-Governance, Fintech, Healthcare, and Technology, ensuring quality and seamless service."
 /> */}
         {/* BitByBit delivers cutting-edge, custom software solutions in e-Governance, Fintech, Healthcare, and Technology, ensuring quality and seamless service. */}
-      </div>
+      {/* </div> */}
 
       {/* </div> */}
       {/* </section>  */}
@@ -381,7 +382,8 @@ import SplitCard from "../../Components/TechServicesPage/SplitCard";
       <div className="tech-footer">
         <Footer />
       </div>
-    </>
+      </div>
+    // {/* </> */}
   );
 };
 

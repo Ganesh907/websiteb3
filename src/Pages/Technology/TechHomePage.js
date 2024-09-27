@@ -1,22 +1,23 @@
-import React, { useEffect, useState } from 'react'
-import letstalk from "../../Assets/Images/letstakeicon1.png"
-import technology from "../../Assets/Videos/Technology6.mp4"
-import highquality from "../../Assets/Images/highquality1.png"
-import onbudget from "../../Assets/Images/onbudget.png"
-import SplitCard from '../../Components/TechServicesPage/SplitCard'
+import React, { useEffect, useState } from "react";
+import letstalk from "../../Assets/Images/letstakeicon1.png";
+import technology from "../../Assets/Videos/Technology6.mp4";
+import highquality from "../../Assets/Images/highquality1.png";
+import onbudget from "../../Assets/Images/onbudget.png";
+import SplitCard from "../../Components/TechServicesPage/SplitCard";
 import bank from "../../Assets/Images/bankingicon.png";
 import ecom from "../../Assets/Images/egovandecomicon.png";
 import health from "../../Assets/Images/healthcare.png";
 import hospitality from "../../Assets/Images/hospitality.png";
-import Accordion from '@mui/material/Accordion';
-import AccordionSummary from '@mui/material/AccordionSummary';
-import AccordionDetails from '@mui/material/AccordionDetails';
-import Typography from '@mui/material/Typography';
-import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
-import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
-import Footer from '../../Components/CommonComponents/Footer';
-import HeroSection from '../../Components/CommonComponents/HeroSection';
-import "./TechServicesPage.css"
+import Accordion from "@mui/material/Accordion";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import Typography from "@mui/material/Typography";
+import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
+import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
+import Footer from "../../Components/CommonComponents/Footer";
+import HeroSection from "../../Components/CommonComponents/HeroSection";
+import "./TechServicesPage.css";
+
 
 import requirements from "../../Assets/Images/planning requirement.gif";
 import design from "../../Assets/Images/web-design.gif";
@@ -61,16 +62,104 @@ const TechHomePage = () => {
   };
 
   const [visibleSteps, setVisibleSteps] = useState(0);
+  const [visibleLines, setVisibleLines] = useState(0); // Track how many lines are visible
+  const [visibleItems, setVisibleItems] = useState({});
+  const [hoverDelay, setHoverDelay] = useState(null);
+
 
   // This useEffect will add one step every second (you can adjust the timing)
   useEffect(() => {
     if (visibleSteps < 2) {
       const timer = setTimeout(() => {
         setVisibleSteps((prev) => prev + 1);
-      }, 1000); // Adjust the time for each step to appear
+      }, 100); // Adjust the time for each step to appear
       return () => clearTimeout(timer); // Clean up the timer
     }
   }, [visibleSteps]);
+  // const [expanded, setExpanded] = useState(false);
+
+
+  const linesBank = [
+    'Expertise in secure and efficient software for the BFSI sector.',
+    'Financial transactions management solutions.',
+    'Risk assessment systems for informed decision-making.',
+    'Customer relationship management (CRM) solutions.',
+    'Regulatory compliance solutions to meet industry standards.',
+  ];
+  const linesHospitality = [
+    'Property Management Systems (PMS) for efficient hospitality operations.',
+    'Booking and reservation systems to streamline guest management.',
+    'CRM software to enhance customer service.',
+    'POS systems for optimized transaction handling.',
+    'Tailored solutions leveraging industry expertise and latest technologies.',
+  ];
+  const linesGov = [
+    'Comprehensive e-Governance and e-Commerce solutions.',
+    'Services include ticket booking, recharges, money transfers, and Aadhaar enrolments.',
+    'Supports Amazon orders, insurance purchases, and utility bill payments.',
+    'Features shopping cart integration and payment gateways.',
+    'Customer management and data analytics for seamless online transactions.',
+  ];
+  const linesHealth = [
+    'Wide range of healthcare IT solutions.',
+    'Electronic Health Records (EHR) systems for efficient patient data management.',
+    'Appointment scheduling software for streamlined bookings.',
+    'Telemedicine platforms for remote patient care.',
+    'Healthcare data analytics to improve patient care and operations.',
+  ];
+
+
+
+  // const handleMouseEnter = (panel) => {
+  //   setExpanded(panel);
+  // };
+
+  // const handleMouseLeave = () => {
+  //   setExpanded(false); // Collapse the accordion when the mouse leaves
+  //   setVisibleLines(0); // Reset visible lines when closed
+
+  // }
+
+  const handleMouseEnter = (panel, lines) => {
+    setExpanded(panel);
+    setVisibleItems((prevState) => ({ ...prevState, [panel]: 0 }));
+
+    if (hoverDelay) clearTimeout(hoverDelay);
+    
+    // Reveal list items one by one
+    lines.forEach((_, index) => {
+      setTimeout(() => {
+        setVisibleItems((prevState) => ({
+          ...prevState,
+          [panel]: index + 1,
+        }));
+      }, index * 300); // Adjust delay for each list item (300ms)
+    });
+  };
+
+  const handleMouseLeave = () => {
+    setExpanded(false);
+    setVisibleItems({});
+    if (hoverDelay) clearTimeout(hoverDelay);
+  };
+
+  // useEffect(() => {
+  //   if (expanded) {
+  //     let lineIndex = 0;
+  //     const currentLines = expanded === 'panel1' ? lines : lines1;
+
+  //     const typingInterval = setInterval(() => {
+  //       if (lineIndex < currentLines.length) {
+  //         setVisibleLines((prev) => prev + 1);
+  //         lineIndex++;
+  //       } else {
+  //         clearInterval(typingInterval);
+  //       }
+  //     }, 300);
+
+  //     return () => clearInterval(typingInterval);
+  //   }
+  // }, [expanded, lines, lines1]);
   return (
     <div className="techHomepageMain  ">
       {/* {scrollHeading ? (
@@ -418,8 +507,8 @@ const TechHomePage = () => {
       {/* </div> */}
 
       {/*/////////////////////////////////////////////////////////// */}
-      <div className='w-[90%] h-auto' >
-        <h1 className='text-center md:text-start md:ml-[9%] text-[var(--primary-color)]  text-5xl font-bold m-[5px] font-montserrat md:mt-[40px] '>
+      {/* <div className="w-[90%] h-auto">
+        <h1 className="text-center md:text-start md:ml-[9%] text-[var(--primary-color)]  text-5xl font-bold m-[5px] font-montserrat md:mt-[40px] ">
           Industries we deal with
         </h1>
         <div className="grid grid-cols-1 place-content-center md:grid-cols-2 md:gap-2 md:ml-20 md:w-auto w-[100%]">
@@ -604,7 +693,204 @@ const TechHomePage = () => {
             </div>
           </div>
         </div>
+      </div> */}
+{/* 
+      <div className='w-[90%] h-auto'>
+      <h1 className='text-center md:text-start md:ml-[9%] text-[var(--primary-color)] text-5xl font-bold m-[5px] font-montserrat md:mt-[40px]'>
+        Industries we deal with
+      </h1>
+
+      <div className='grid grid-cols-1 place-content-center md:grid-cols-2 md:gap-2 md:ml-20 md:w-auto w-[100%]'> */}
+
+      <div className='w-[90%] h-auto'>
+      <h1 className='text-center md:text-start md:ml-[9%] text-[var(--primary-color)] text-5xl font-bold m-[5px] font-montserrat md:mt-[40px]'>
+        Industries we deal with
+      </h1>
+
+      <div className='grid grid-cols-1 place-content-center md:grid-cols-2 md:gap-2 md:ml-20 md:w-auto w-[100%]'>
+
+        {/* Banking, Financial Services and Insurance Card */}
+        <div className='m-7'>
+          <Accordion
+            expanded={expanded === 'panel1'}
+            onMouseEnter={() => handleMouseEnter('panel1', linesBank)}
+            onMouseLeave={handleMouseLeave}
+            className='p-2 bg-[#1a1a1a] border  hover:border-blue-600 shadow-lg transition-shadow duration-300'
+          >
+            <AccordionSummary
+              expandIcon={
+                <ArrowDownwardIcon
+                  style={{
+                    color: 'blue',
+                    fontWeight: 'bold',
+                    fontSize: '1.6rem',
+                    animation: 'bounce 1s infinite',
+                  }}
+                />
+              }
+              aria-controls='panel1-content'
+            >
+              <div className='flex items-center justify-center gap-2'>
+                <img src={bank} className='md:h-12' alt='Banking' />
+                <div className='font-bold pt-1 text-lg text-[#00bfff]'>
+                  Banking, Financial Services and Insurance
+                </div>
+              </div>
+            </AccordionSummary>
+            <AccordionDetails>
+              <ul className='list-disc leading-loose md:ml-8 text-white'>
+                {linesBank.map((line, index) => (
+                  <li
+                    key={index}
+                    style={{
+                      opacity: visibleItems['panel1'] > index ? 1 : 0,
+                      transition: 'opacity 0.5s',
+                    }}
+                  >
+                    {line}
+                  </li>
+                ))}
+              </ul>
+            </AccordionDetails>
+          </Accordion>
+        </div>
+
+        {/* Hospitality Card */}
+        <div className='m-7'>
+          <Accordion
+            expanded={expanded === 'panel2'}
+            onMouseEnter={() => handleMouseEnter('panel2', linesHospitality)}
+            onMouseLeave={handleMouseLeave}
+            className='p-2 bg-[#1a1a1a] border  hover:border-blue-600 shadow-lg transition-shadow duration-300'
+          >
+            <AccordionSummary
+              expandIcon={
+                <ArrowDownwardIcon
+                  style={{
+                    color: 'blue',
+                    fontWeight: 'bold',
+                    fontSize: '1.6rem',
+                    animation: 'bounce 1s infinite',
+                  }}
+                />
+              }
+              aria-controls='panel2-content'
+            >
+              <div className='flex items-center justify-center gap-2'>
+                <img src={hospitality} className='md:h-12' alt='Hospitality' />
+                <div className='font-bold pt-1 text-lg text-[#00bfff]'>
+                  Hospitality
+                </div>
+              </div>
+            </AccordionSummary>
+            <AccordionDetails>
+              <ul className='list-disc leading-loose md:ml-8 text-white'>
+                {linesHospitality.map((line, index) => (
+                  <li
+                    key={index}
+                    style={{
+                      opacity: visibleItems['panel2'] > index ? 1 : 0,
+                      transition: 'opacity 0.5s',
+                    }}
+                  >
+                    {line}
+                  </li>
+                ))}
+              </ul>
+            </AccordionDetails>
+          </Accordion>
+        </div>
+
+        {/* E-Gov & E-Com Card */}
+        <div className='m-7'>
+          <Accordion
+            expanded={expanded === 'panel3'}
+            onMouseEnter={() => handleMouseEnter('panel3', linesGov)}
+            onMouseLeave={handleMouseLeave}
+            className='p-2 bg-[#1a1a1a] border  hover:border-blue-600 shadow-lg transition-shadow duration-300'
+          >
+            <AccordionSummary
+              expandIcon={
+                <ArrowDownwardIcon
+                  style={{
+                    color: 'blue',
+                    fontWeight: 'bold',
+                    fontSize: '1.6rem',
+                    animation: 'bounce 1s infinite',
+                  }}
+                />
+              }
+              aria-controls='panel3-content'
+            >
+              <div className='flex items-center justify-center gap-2'>
+                <img src={ecom} className='md:h-12' alt='E-Gov & E-Com' />
+                <div className='font-bold pt-1 text-lg text-[#00bfff]'>E-Gov & E-Com</div>
+              </div>
+            </AccordionSummary>
+            <AccordionDetails>
+              <ul className='list-disc leading-loose md:ml-8 text-white'>
+                {linesGov.map((line, index) => (
+                  <li
+                    key={index}
+                    style={{
+                      opacity: visibleItems['panel3'] > index ? 1 : 0,
+                      transition: 'opacity 0.5s',
+                    }}
+                  >
+                    {line}
+                  </li>
+                ))}
+              </ul>
+            </AccordionDetails>
+          </Accordion>
+        </div>
+
+        {/* HealthCare Card */}
+        <div className='m-7'>
+          <Accordion
+            expanded={expanded === 'panel4'}
+            onMouseEnter={() => handleMouseEnter('panel4', linesHealth)}
+            onMouseLeave={handleMouseLeave}
+            className='p-2 bg-[#1a1a1a] border  hover:border-blue-600 shadow-lg transition-shadow duration-300'
+          >
+            <AccordionSummary
+              expandIcon={
+                <ArrowDownwardIcon
+                  style={{
+                    color: 'blue',
+                    fontWeight: 'bold',
+                    fontSize: '1.6rem',
+                    animation: 'bounce 1s infinite',
+                  }}
+                />
+              }
+              aria-controls='panel4-content'
+            >
+              <div className='flex items-center justify-center gap-2'>
+                <img src={health} className='md:h-12' alt='HealthCare' />
+                <div className='font-bold pt-1 text-lg text-[#00bfff]'>HealthCare</div>
+              </div>
+            </AccordionSummary>
+            <AccordionDetails>
+              <ul className='list-disc leading-loose md:ml-8 text-white'>
+                {linesHealth.map((line, index) => (
+                  <li
+                    key={index}
+                    style={{
+                      opacity: visibleItems['panel4'] > index ? 1 : 0,
+                      transition: 'opacity 0.5s',
+                    }}
+                  >
+                    {line}
+                  </li>
+                ))}
+              </ul>
+            </AccordionDetails>
+          </Accordion>
+        </div>
       </div>
+    </div>
+
 
       {/* .......................................................... */}
       {/* <section className=" w-full md:h-screen bg-red-40 flex flex-col items-center  justify-center py-4">
@@ -673,12 +959,12 @@ const TechHomePage = () => {
         </div>
       </section>  */}
 
-      <section className="relative w-full min-h-screen mt-10 py-16 overflow-hidden">
+      {/* <section className="relative w-full min-h-screen mt-10 py-16 overflow-hidden"> */}
         {/* Diagonal White Shape for Contrast */}
         {/* <div className="absolute top-0 left-0 w-full h-[20%] bg-white transform -skew-y-6"></div> */}
 
         {/* Main Heading with Blue and Yellow */}
-        <div className="relative z-10 text-center w-[90%] mb-12">
+        {/* <div className="relative z-10 text-center w-[90%] mb-12">
           <p className="text-[var(--primary-color)] text-5xl md:text-[40px] font-bold font-montserrat tracking-wide leading-tight">
             Expert Website Solutions
           </p>
@@ -688,10 +974,10 @@ const TechHomePage = () => {
         </div>
 
         {/* Section Content */}
-        <div className="relative md:w-[90%] flex flex-col md:flex-row justify-between items-center z-10">
+        {/* <div className="relative md:w-[90%] flex flex-col md:flex-row justify-between items-center z-10"> */}
           {/* Left Floating Content */}
-          <div className="md:w-[40%] ml-10 bg-gradient-to-r from-blue-500 via-yellow-400 to-yellow-500 p-10 rounded-lg shadow-2xl transform   transition-all duration-500 ease-in-out">
-            <p className="text-black text-lg leading-relaxed mb-6">
+          {/* <div className="md:w-[40%] ml-10 bg-gradient-to-r from-blue-500 to-[#222020] p-10 shadow-2xltransform   transition-all duration-500 ease-in-out">
+            <p className="text-white text-lg leading-relaxed mb-6">
               Five Online offers high-quality website maintenance services,
               tailored to improve your site's performance and security. Our
               plans cater to businesses of all sizes, ensuring professional
@@ -706,7 +992,7 @@ const TechHomePage = () => {
           </div>
 
           {/* Right Side Features - Minimalistic and Clean */}
-          <div className="md:w-[50%] grid grid-cols-2 gap-8 mt-12 md:mt-0">
+          {/* <div className="md:w-[50%] grid grid-cols-2 gap-8 mt-12 md:mt-0">
             {[
               { src: webmonitor, label: "24/7 Website Monitoring" },
               { src: techsupport, label: "Unlimited Tech Support" },
@@ -717,7 +1003,7 @@ const TechHomePage = () => {
             ].map((item, index) => (
               <div
                 key={index}
-                className="flex items-center gap-4 p-6 bg-white rounded-full shadow-lg transform hover:scale-110 transition-transform duration-500 hover:bg-blue-700"
+                className="flex items-center gap-4 p-6 bg-yellow-100 rounded-full shadow-lg transform hover:scale-110 transition-transform duration-500 hover:bg-blue-700"
               >
                 <img
                   src={item.src}
@@ -730,11 +1016,11 @@ const TechHomePage = () => {
               </div>
             ))}
           </div>
-        </div>
+        </div>  */}
 
         {/* Decorative Background Elements */}
         {/* <div className="absolute bottom-0 right-0 w-[30%] h-[30%] bg-blue-400 opacity-30 rounded-full transform rotate-12"></div> */}
-      </section>
+      {/* </section> */}
 
       {/* .............................................................. */}
       {/* <div className='w-[90%] h-auto  md:mb-20 mb-5'>
@@ -779,7 +1065,7 @@ const TechHomePage = () => {
 
         </div>
       </div> */}
-      <div className=" ">
+      {/* <div className=" ">
         <h1 className="font-bold text-[40px] text-[var(--primary-color)] flex justify-center items-center ">
           Driving Success Through Strategic Partnerships and Innovation
         </h1>
@@ -837,7 +1123,7 @@ const TechHomePage = () => {
 
           <div className=" text-white p-6 flex flex-col justify-between  h-[360px] ">
             <img src={deliver} className="h-20 w-20" />
-            <h3 className="text-lg font-semibold mb-2 text-[#00bfff]">
+            <h3 className="text-lg font-normal mb-2 my-4 text-[#00bfff]">
               Pragmatic Innovators
             </h3>
             <p
@@ -867,7 +1153,89 @@ const TechHomePage = () => {
             </p>{" "}
           </div>
         </div>
-      </div>
+      </div> */}
+
+      <div className="w-[90%] mx-auto my-10">
+  <h1 className="text-center md:text-start text-5xl font-extrabold  bg-clip-text text-[var(--primary-color)] drop-shadow-lg md:ml-[9%]">
+    Our Promise
+  </h1>
+  <div className="text-lg leading-relaxed mt-8 space-y-6">
+  {/* <div className=" flex flex-row justify-center items-center bg-yellow-100 gap-6 ">
+    <div className="text-white w-40 h-40  font-medium bg-green-400 ">
+      <h2 className="font-semibold text-blue-500">Innovative Solutions</h2>
+      {/* <p> We pledge to bring creativity and innovation to every project. Expect software solutions that not only meet your current needs but also position you for future growth and adaptability in a rapidly evolving digital landscape.</p> */}
+{/*       
+    </div>
+    <div className="text-white w-40 h-40  font-medium bg-red-400">
+      <h2 className="font-semibold text-blue-500">Transparency and Communication</h2>
+      {/* <p>Communication is at the heart of a successful partnership. We promise clear, timely, and honest communication throughout the development process. You will be informed at every stage, and your feedback will be actively sought and valued.</p> */}
+      
+    {/* </div>
+    
+    </div>   */}
+
+    <div className="flex flex-row justify-center items-center bg-yellow-100 gap-6">
+  {/* Green Box with Expanding Effect */}
+  <div class="relative w-40 h-40 group">
+    {/* Green Box */}
+    <div class="w-full h-full  items-end bg-green-200  font-medium transition-all duration-500 transform group-hover:-translate-x-80 group-hover:-translate-y-10 group-hover:z-0 z-20">
+      <h2 class="font-semibold  text-white  ">Innovative Solutions</h2>
+    </div>
+
+    {/* Expanding Box */}
+    <div class="absolute left-full top-0 w-0 group-hover:w-96 h-full bg-white text-black opacity-0 group-hover:opacity-100 transition-all duration-500 shadow-lg p-4 z-10 -translate-x-full">
+      <p>
+        We pledge to bring creativity and innovation to every project. Expect software solutions that not only meet your current needs but also position you for future growth and adaptability in a rapidly evolving digital landscape.
+      </p>
+    </div>
+  </div>
+
+  {/* Red Box */}
+  <div class="w-40 h-40 font-medium bg-red-400 text-white flex flex-col justify-center items-center relative z-20">
+    <h2 class="font-semibold text-blue-500 p-2 text-center">
+      Transparency and Communication
+    </h2>
+  </div>
+</div>
+
+     <div className="flex flex-row  bg-blue-400 justify-center items-center gap-4">
+    <div className="text-white w-40 h-40  font-medium bg-red-400">
+      <h2 className="font-semibold text-blue-500">Customization as per Your Needs</h2>
+      {/* <p>Your business is unique, and so should be your software. We commit to understanding your specific requirements and delivering tailor-made solutions that align precisely with your goals, ensuring maximum impact on your operations.</p> */}
+      
+    </div>
+
+    <div className="text-white w-40 h-40  font-medium bg-red-400">
+      <h2 className="font-semibold text-blue-500">On-Time Delivery</h2>
+      {/* <p>Time is of the essence, and we respect yours. Our promise includes delivering projects on time without compromising quality. We understand the importance of meeting deadlines to keep your business on track.</p> */}
+      
+    </div>
+    
+
+    </div>
+
+    <div className="flex flex-row  bg-blue-400 justify-center items-center gap-4">
+    <div className="text-white w-40 h-40  font-medium bg-red-400">
+      <h2 className="font-semibold text-blue-500">Quality Assurance</h2>
+      {/* <p>Your business is unique, and so should be your software. We commit to understanding your specific requirements and delivering tailor-made solutions that align precisely with your goals, ensuring maximum impact on your operations.</p> */}
+      
+    </div>
+
+    <div className="text-white w-40 h-40  font-medium bg-red-400">
+      <h2 className="font-semibold text-blue-500">Scalability and Future-Proofing</h2>
+      {/* <p>Time is of the essence, and we respect yours. Our promise includes delivering projects on time without compromising quality. We understand the importance of meeting deadlines to keep your business on track.</p> */}
+      
+    </div>
+    
+
+    </div>
+
+   
+  </div>
+</div>
+ 
+
+
       <div className=" tech-footer">
         <Footer />
       </div>
