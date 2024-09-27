@@ -38,7 +38,7 @@ export default class SplitCard extends Component {
             data-aos-duration="4000"
             className="relative z-50"
           >
-            <div className="md:absolute hidden  md:left-10 md:top-10 md:z-10  bg-cover bg-center  md:text-2xl md:font-bold md:flex p-3  	 customborder border-[4px] border-transparent rounded-[10%] max-w-[23em] custom-border relative border-[4px] border-transparent rounded-[10%] max-w-[23em] custom-border md:justify-center   md:h-72 lg:h-72 md:w-72 lg:w-1/4 hover:-translate-y-6  md:transition-all md:duration-500">
+            <div className="md:absolute hidden  md:left-10 md:top-10 md:z-10  bg-cover bg-center  md:text-2xl md:font-bold md:flex p-3  	 customborder   custom-border relative border-[4px] border-transparent rounded-[10%] max-w-[23em] custom-border md:justify-center   md:h-72 lg:h-72 md:w-72 lg:w-1/4 hover:-translate-y-6  md:transition-all md:duration-500">
               <img
                 src={WebDevelopment}
                 className="object-cover Imagescss rounded-[20px] shadow-[0px_13px_27px_-5px_rgba(50,50,93,0.25),_0px_8px_16px_-8px_rgba(0,0,0,0.3)] "
@@ -47,14 +47,14 @@ export default class SplitCard extends Component {
               <div className=" bg-opacity-75  rounded  "></div>
             </div>
           </div>
-          <div className="bg-white m-2 md:border-none border-2 border-sky-600 rounded-2xl parentDiv md:w-[90%] shadow-xl parentDiv md:relative md:left-20 md:shadow-2xl  md:p-5 md:rounded-xl md:mb-5 md:transform md:transition-all  md:border ">
+          <div className="bg-[#0060b5] m-2 md:border-none border-2 border-sky-600 rounded-2xl parentDiv md:w-[90%] shadow-xl parentDiv md:relative md:left-20 md:shadow-2xl  md:p-5 md:rounded-xl md:mb-5 md:transform md:transition-all  md:border ">
             <div className="md:flex   md:h-80 md:pl-72 md:flex-col md:items-center     ">
               <div className=" md:h-full  md:flex md:flex-col md:justify-between md:w-full ">
                 <div className="md:pl-2 md:flex md:flex-col p-4 md:justify-between ">
-                  <h4 className="heading font-bold text-[30px] smallcontaint my-3 ml-1  text-black ">
+                  <h4 className="heading font-bold text-[30px] smallcontaint my-3 ml-1  text-white ">
                     Web Development
                   </h4>
-                  <ul className="text-black list-disc md:pt-6 md:font md:leading-loose ">
+                  <ul className="text-white list-disc md:pt-6 md:font md:leading-loose ">
                     <li>
                       Enhancing website visibility and search engine ranking for
                       better online presence.
@@ -73,18 +73,18 @@ export default class SplitCard extends Component {
                     </li>
                   </ul>
                 </div>
-                <div className=" flex flex-row gap-4 mt-4  md:flex  md:justify-end md:items-end md:gap-3">
+                <div className=" flex flex-row gap-4 mt-4 shadow-2xl shadow-transparent md:flex  md:justify-end md:items-end md:gap-3">
                   <img
                     src={javascript}
-                    className="md:h-10 h-8 filter  hover:grayscale-0 hover:scale-105 transition duration-300"
+                    className="md:h-10 h-8 filter   hover:scale-105 transition duration-300"
                   />
                   <img
                     src={reactlogo}
-                    className="md:h-10 h-8 filter  hover:grayscale-0 hover:scale-105 transition duration-300"
+                    className="md:h-10 h-8 filter   hover:scale-105 transition duration-300"
                   />
                   <img
                     src={nodelogo}
-                    className="md:h-10 h-8 filter  hover:grayscale-0 hover:scale-105 transition duration-300"
+                    className="md:h-10 h-8 filter   hover:scale-105 transition duration-300"
                   />
                 </div>
               </div>
@@ -140,7 +140,7 @@ export default class SplitCard extends Component {
                 <li> Robust security measures for data protection.</li>
                 <li> Seamless integration with backend systems.</li>
               </ul>
-              <div className=" flex flex-row gap-4 ml-3 mt-2 md:flex md:justify-end md:items-end md:gap-3 ">
+              <div className=" flex flex-row gap-4 ml-3 mt-2 shadow-2xl shadow-transparent md:flex md:justify-end md:items-end md:gap-3 ">
                 <img
                   src={javalogo}
                   className="md:h-10 h-8  filter  hover:grayscale-0 hover:scale-105 transition duration-300"
@@ -205,18 +205,18 @@ export default class SplitCard extends Component {
                     <li>Utilization of intuitive design frameworks.</li>
                   </ul>
                 </div>
-                <div className=" flex mr-6    flex-row gap-4 md:flex md:justify-end  md:gap-3 ">
+                <div className=" flex mr-6  shadow-2xl shadow-transparent  flex-row gap-4 md:flex md:justify-end  md:gap-3 ">
                   <img
                     src={enterpriselogo}
-                    className="md:h-10 h-8 filter  hover:grayscale-0 hover:scale-105 transition duration-300"
+                    className="md:h-10 h-8 filter   hover:scale-105 transition duration-300"
                   />
                   <img
                     src={digital}
-                    className="md:h-10 h-8 filter  hover:grayscale-0 hover:scale-105 transition duration-300"
+                    className="md:h-10 h-8 filter  hover:scale-105 transition duration-300"
                   />
                   <img
                     src={solution}
-                    className="md:h-10 h-8 filter  hover:grayscale-0 hover:scale-105 transition duration-300"
+                    className="md:h-10 h-8 filter   hover:scale-105 transition duration-300"
                   />
                 </div>
               </div>
@@ -233,22 +233,22 @@ export default class SplitCard extends Component {
             data-aos-duration="4000"
             className="relative z-50"
           >
-            <div className="md:absolute hidden rounded-2xl  md:right-[-0.75rem] md:top-10 md:z-10   bg-cover bg-center  md:text-2xl md:font-bold md:flex p-3  	 customborder  md:justify-center  md:h-72 lg:h-72 md:w-72 lg:w-1/4 hover:-translate-y-6  md:transition-all md:duration-500">
+            <div className="md:absolute hidden shadow-2xl shadow-transparent rounded-2xl  md:right-[-0.75rem] md:top-10 md:z-10   bg-cover bg-center  md:text-2xl md:font-bold md:flex p-3  	 customborder  md:justify-center  md:h-72 lg:h-72 md:w-72 lg:w-1/4 hover:-translate-y-6  md:transition-all md:duration-500">
               <img
                 src={itmanaged}
-                className="Imagescss  object-cover rounded-[20px] border-[#0060b5]  border-4 shadow-[0px_13px_27px_-5px_rgba(50,50,93,0.25),_0px_8px_16px_-8px_rgba(0,0,0,0.3)]"
+                className="Imagescss  object-cover rounded-[20px]  shadow-[0px_13px_27px_-5px_rgba(50,50,93,0.25),_0px_8px_16px_-8px_rgba(0,0,0,0.3)]"
                 alt=""
               />
               <div className=" bg-opacity-75  rounded  "></div>
             </div>
           </div>
 
-          <div className="bg-blue-100  m-2  parentDiv md:w-[90%] mt-2  md:relative md:left-20 border-[#0060b5] border-4 md:shadow-2xl md:p-6 rounded-2xl  md:transform md:transition-all ">
+          <div className=" bg-white m-2  parentDiv md:w-[90%] mt-2  md:relative md:left-20   md:shadow-2xl md:p-6 rounded-2xl  md:transform md:transition-all ">
             <div className="md:flex md:flex-col md:h-80 md:items-start">
-              <h4 className="heading font-bold text-[30px] smallcontaint my-3 ml-1 md:pl-14 text-black">
+              <h4 className="heading font-bold text-[30px] smallcontaint my-3 ml-1 md:pl-14 text-[#0060b5]">
                 Managed IT Services
               </h4>
-              <ul className="text-black  md:ml-8 list-disc leading-loose md:h-72 ml-1 font md:p-6 md:w-[74%] ">
+              <ul className=" text-black  md:ml-8 list-disc leading-loose md:h-72 ml-1 font md:p-6 md:w-[74%] ">
                 {/* <li>
                   Custom mobile app design and development with user-friendly
                   interfaces and intuitive UX.
@@ -272,7 +272,7 @@ export default class SplitCard extends Component {
                   for seamless operations.
                 </li>
               </ul>
-              <div className=" flex flex-row gap-4 ml-3 mt-2  md:flex md:justify-end md:items-end md:gap-3 ">
+              <div className=" flex flex-row gap-4 ml-3 mt-2 shadow-2xl shadow-transparent md:flex md:justify-end md:items-end md:gap-3 ">
                 <img
                   src={service}
                   className="md:h-10 h-8  filter  hover:grayscale-0 hover:scale-105 transition duration-300"
