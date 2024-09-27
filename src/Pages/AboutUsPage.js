@@ -7,6 +7,7 @@ import Box from '@mui/material/Box';
 import Footer from "../Components/CommonComponents/Footer";
 import HeroSection from "../Components/CommonComponents/HeroSection";
 import AboutUsBgVideo from '../Assets/Videos/AboutUsBgVideo.mp4';
+import MissionVisionVideo from '../Assets/Videos/MissionVisionVideo.mp4';
 
 import mission from "../Assets/Images/mission.gif";
 import vision from "../Assets/Images/vision.gif";
@@ -280,16 +281,25 @@ const AboutUsPage = () => {
 
 
 
-<div className="grid md:grid-cols-2 h-[70vh] mt-20 p-10">
 
-<div className="md:h-[50vh] w-full flex flex-col justify-center items-center  ">
+<div className="relative grid md:grid-cols-2 h-[100vh] overflow-hidden">
+  <video
+    autoPlay
+    loop
+    muted
+    className="absolute inset-0 w-full h-full object-cover opacity-80"
+  >
+    <source src={MissionVisionVideo} type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+<div className="md:h-full w-full flex flex-col justify-start z-10 items-start  ">
   <div className="flex flex-col justify-between items-center  w-[75%] p-5">
-    <img src={mission} className="h-32 w-32 bg-red-200" />
+    <img src={mission} className="h-32 w-32  bg-red-200" />
     <div>
       <h1 className="text-center text-2xl font-bold">
         OUR MISSION
       </h1>
-      <h2 className="mt-4 border-2 border-[#0060b5]  text-[var(--secondary-color)] rounded-lg p-3">
+      <h2 className="mt-4 text-[var(--secondary-color)] rounded-lg p-3">
         {
           "We strive to provide a tailored, end to end services to our clients and establishing strong partnerships to ensure we understand each others goals and deadlines, without compromising our professional and ethical standards."
         }
@@ -299,14 +309,14 @@ const AboutUsPage = () => {
 </div>
 
 
-<div className="md:h-[50vh] w-full flex flex-col justify-center items-center  ">
+<div className="md:h-full w-full flex flex-col justify-end z-10   items-end  ">
   <div className="flex flex-col justify-between items-center  w-[70%] p-5">
     <img src={vision} className="h-32 w-32 bg-red-200" />
     <div>
       <h1 className="text-center text-2xl font-bold">
         OUR VISION
       </h1>
-      <h2 className="mt-4 border-2 border-[#0060b5] rounded-lg p-3  text-[var(--secondary-color)] ">
+      <h2 className="mt-4 rounded-lg p-3  text-[var(--secondary-color)] ">
         {
           "To build trust by establishing a winning value chain system based on the ever changing surroundings, with the utmost focus on transforming lives and providing solutions."
         }

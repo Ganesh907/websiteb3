@@ -173,7 +173,7 @@ const ContactUsPage = () => {
 
 
 
-                        <div className=' flex justify-center items-end h-screen w-[99vw] bg-black/40  mx-auto'
+                        <div className=' flex justify-center items-end h-screen w-[99vw] bg-black/50  mx-auto'
                             style={{
 
                                 backgroundImage: `
