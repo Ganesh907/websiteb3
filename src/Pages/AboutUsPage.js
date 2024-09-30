@@ -356,8 +356,8 @@ At BitByBit Solutions, we’re committed to excellence, ensuring that every proj
 
 
 
-<div className="h-[100vh] w-full flex justify-between">
-<div className="md:h-full  w-[45%] flex flex-col justify-start z-2 items-start  " 
+<div className="h-[100vh] w-full flex md:flex-row flex-col px-5 md:px-0 justify-between">
+<div className="md:h-full  md:w-[45%] flex flex-col justify-center md:justify-start z-2 items-start  " 
 data-aos="fade-left" data-aos-duration="3000" 
 >
   <div className="flex flex-col justify-between items-center  w-full p-5"
@@ -381,12 +381,12 @@ data-aos="fade-left" data-aos-duration="3000"
 </div>
 
 
-<div className="flex justify-center w-[40%] items-center"
+<div className="flex justify-center md:w-[40%] items-center"
  data-aos="zoom-in" data-aos-duration="3000" >
   <img src={MissionVisionGif} alt="" className="scale-150 "/>
 </div>
 
-<div className="md:h-full w-[45%]  flex flex-col justify-end z-2   items-end  "
+<div className="md:h-full md:w-[45%]  flex flex-col justify-end z-2   items-end  "
 data-aos="fade-right" data-aos-duration="3000" 
 >
   <div className="flex flex-col  justify-between items-center  w-full p-5">

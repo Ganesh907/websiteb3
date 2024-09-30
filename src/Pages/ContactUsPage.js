@@ -173,7 +173,7 @@ const ContactUsPage = () => {
 
 
 
-                        <div className=' flex justify-center items-end h-screen w-[99vw] bg-black/50  mx-auto'
+                        <div className=' flex justify-center items-end md:h-screen w-[99vw] bg-black/50  mx-auto'
                             style={{
 
                                 backgroundImage: `
@@ -184,10 +184,10 @@ url(${ContactUSImg3})
                                 backgroundRepeat: 'no-repeat',
                                 backgroundBlendMode: 'overlay',
                         }}>
-                                <div className=' h-[90vh] w-[100vw] flex justify-center items-center p-20  bg-transparent '>
+                                <div className=' md:h-[90vh] w-[100vw] mt-20 bg-red-200 md:mt-0 flex justify-center flex-col md:flex-row  items-center p-4 md:p-20  bg-transparent '>
 
 
-                                        <div className=' rounded-lg w-[40%]  flex  flex-col justify-center '
+                                        <div className=' rounded-lg w-full md:w-[40%]  flex  flex-col justify-center '
                                         data-aos="fade-up" data-aos-duration="1000"
                                         
                                         style={{
@@ -218,7 +218,7 @@ url(${ContactUSImg3})
                                               
                                         </div>
 
-                                        <div className='w-[60%]  p-4 ms-5 rounded-r-lg'  data-aos="zoom-in" data-aos-duration="1000"
+                                        <div className='md:w-[60%] w-[98%] mt-10 md:mt-0 p-4 md:ms-5 rounded-r-lg'  data-aos="zoom-in" data-aos-duration="1000"
                                         style={{
                                                 backgroundColor:'rgb(0,0,0,0.4)'
                                         }}>

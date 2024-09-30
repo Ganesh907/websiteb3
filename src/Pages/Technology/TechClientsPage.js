@@ -389,7 +389,7 @@ const TechClientsPage = () => {
   </p>
 
   <div className="flex items-center justify-center bg-white p-10 rounded-md shadow-inner w-[95vw]">
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-20 gap-y-12 w-11/12 max-w-4xl">
+    <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-x-20 gap-y-12 w-11/12 max-w-4xl">
       {/* Wrap each img in a div and apply hover:scale on the div */}
       <div className="transition-all duration-700 ease-in-out hover:scale-110">
         <img

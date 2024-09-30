@@ -59,7 +59,7 @@ export const ContactForm2 = () => {
     };
 
     return (
-        <div className='flex justify-center py-5 items-center w-auto scale-90 text-white rounded-md'
+        <div className='flex justify-center p-5 md:p-0 md:py-5 items-center w-auto md:scale-90 text-white rounded-md'
             style={{
                 backgroundColor: 'rgb(0,0,0,0.4)'
             }}>
@@ -185,7 +185,7 @@ export const ContactForm2 = () => {
 
                 <Button
                     variant="contained"
-                    sx={{ backgroundColor: "var(--primary-color)" }}
+                    sx={{ backgroundColor: "#0060b5" }}
                     type="submit"
                     fullWidth
                 >

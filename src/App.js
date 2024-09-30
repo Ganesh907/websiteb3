@@ -45,7 +45,7 @@ function App() {
           />
         </button>
       </div>
-      <ColorTheme />
+      {/* <ColorTheme /> */}
     </Router>
   );
 }
