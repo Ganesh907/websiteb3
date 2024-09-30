@@ -10,6 +10,8 @@ import HeroSection from '../../Components/CommonComponents/HeroSection';
 import { LockOpenOutlined } from '@mui/icons-material';
 import SearchIcon from '@mui/icons-material/Search';
 import EnterpriseSolution from "../../Assets/Videos/enterprisesolution.mp4";
+import Permanent from "../../Assets/Videos/temporary staffing.mp4";
+import Recruiters from "../../Assets/Videos/Recruitment.mp4";
 
  const RecServicesPage = () => {
 
@@ -114,6 +116,36 @@ import EnterpriseSolution from "../../Assets/Videos/enterprisesolution.mp4";
   //   // Cleanup observer on unmount
   //   return () => observer.disconnect();
   // }, [visibleItems]);
+
+  const jobRoles = [
+    "JAVA .NET .NET PHP Developers",
+    "Android, Kotlin, Flutter - Developer",
+    "SAP ABAP / Basis / FICO / MDG / CRM / BPC / Hana",
+    "SAP ABAP",
+    "Linux Admin / Network Engineer",
+    "Microsoft Azure / Ms Dynamic 365",
+    "Workday/ OracleES / EDM",
+    "Devops / RSA ARCHER / PAAS",
+    "C++ Programmer / Open Link",
+    "Sales Force / RED HAT",
+    "Mongo DB / Cloud contact center OPS",
+    "Google Big Query / Pega System",
+    "Service Desk / Service Now",
+    "Manual / Automation tester",
+    "B3 Angular Developer",
+    "Business Analyst",
+    "Data Scientist / Machine Learning"
+  ];
+
+  const marqueeRef = useRef(null); 
+  const handleMouseEnter1 = () => {
+    marqueeRef.current.stop(); 
+  };
+
+  const handleMouseLeave1 = () => {
+    marqueeRef.current.start(); 
+  };
+
   return (
     <>
 
@@ -332,7 +364,7 @@ import EnterpriseSolution from "../../Assets/Videos/enterprisesolution.mp4";
                 loop
                 muted
               >
-                <source src={EnterpriseSolution} type="video/mp4" />
+                <source src={Permanent} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
               <div className=" bg-opacity-75  rounded  "></div>
@@ -482,7 +514,7 @@ import EnterpriseSolution from "../../Assets/Videos/enterprisesolution.mp4";
                 loop
                 muted
               >
-                <source src={EnterpriseSolution} type="video/mp4" />
+                <source src={Recruiters} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
               <div className=" bg-opacity-75  rounded  "></div>
@@ -537,41 +569,55 @@ import EnterpriseSolution from "../../Assets/Videos/enterprisesolution.mp4";
           </div>
         </div> 
 {/* //////////////////////////////////////////////////// */}
-      
+<div className='my-10 '>
+
+<h1 className="font-bold text-xl text-center mt-10 text-[#0060b5]" >
+  B3 EXPERTISE IN IT RECRUITMENT
+</h1>
+
+
+<marquee
+  className="w-full  p-5 text-black"
+  behavior="scroll"
+  direction="left"
+  scrollamount="10"
+  ref={marqueeRef}
+  onMouseEnter={handleMouseEnter1}
+  onMouseLeave={handleMouseLeave1}
+>
+  {jobRoles.map((role, index) => (
+    <span key={index} className="inline-flex items-center mx-4 rounded-lg bg-white text-black drop-shadow-lg  border-4 border-[#0060b5] p-3">
+      {role}
+      <ArrowBackIcon className="ml-2 text-[#0060b5]" />
+    </span>
+  ))}
+</marquee>
+
+
+{/* <h1 className="font-bold text-xl text-center mt-10  uppercase text-[var(--primary-color)]">
+  B3 Expertise into Contract Hiring
+</h1>
+
+
+<marquee
+  className="w-full p-10 text-black"
+  behavior="scroll"
+  direction="right"
+  scrollamount="10"
+  ref={marqueeRef2}
+  onMouseEnter={handleMouseEnter2}
+  onMouseLeave={handleMouseLeave2}
+>
+  {jobRoles2.map((role, index) => (
+    <span key={index} className="inline-flex items-center mx-4 rounded-lg bg-white drop-shadow-lg  text-black border-2 border-[var(--primary-color)] p-3">
+      {role}
+      <ArrowForwardIcon className="ml-2  text-[var(--primary-color)]" />
+    </span>
+  ))}
+</marquee> */}
+</div>      
 
       <div>
-
-
-       
-
-
-        {/*.............card-incomplete........  */}
-        {/* <div>
-        <div className="flex flex-wrap justify-center items-center min-h-screen bg-gray-200">
-      
-      <div className="relative w-80 min-w-[275px] m-5 bg-white transition-all duration-300 hover:shadow-lg hover:scale-105">
-        <div 
-          className="w-full h-52 bg-cover bg-center" 
-          style={{ backgroundImage: `url(${RecServiceBackground})` }} // Set Background Image
-        ></div>
-        <a href="#" className="absolute top-0 left-0 w-full h-52">
-          <div 
-            className="absolute top-0 left-0 w-full h-full bg-cover bg-center transition-all duration-350" 
-            style={{ backgroundImage: `url(${RecServiceBackground})` }}
-          ></div>
-        </a>
-        <div className="relative p-4 transition-all duration-200">
-          <div className="flex justify-between items-center pb-2">
-            <a className="inline-block px-2 py-1 text-xs text-white uppercase bg-blue-800 rounded">NEWS</a>
-            <div className="text-xs">6/11/2018</div>
-          </div>
-          <h1 className="text-xl font-serif pb-2 transition-transform duration-350 hover:text-gray-300">There have been big Tesla accident at New Jersey</h1>
-          <div className="pb-2">by <a href="#" className="text-blue-800">Sardorbek Usmonov</a></div>
-        </div>
-      </div>
-    </div>
-        </div> */}
-
         <Footer />
       </div>
     </>

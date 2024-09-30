@@ -195,53 +195,7 @@ const RecHomePage = () => {
       </ul> */}
 
 {/* ............................ */}
-      <div className='my-10 '>
-
-<h1 className="font-bold text-xl text-center mt-10 text-[#0060b5]" >
-  B3 EXPERTISE IN IT RECRUITMENT
-</h1>
-
-
-<marquee
-  className="w-full  p-5 text-black"
-  behavior="scroll"
-  direction="left"
-  scrollamount="10"
-  ref={marqueeRef}
-  onMouseEnter={handleMouseEnter1}
-  onMouseLeave={handleMouseLeave1}
->
-  {jobRoles.map((role, index) => (
-    <span key={index} className="inline-flex items-center mx-4 rounded-lg bg-white text-black drop-shadow-lg  border-4 border-[#0060b5] p-3">
-      {role}
-      <ArrowBackIcon className="ml-2 text-[#0060b5]" />
-    </span>
-  ))}
-</marquee>
-
-
-{/* <h1 className="font-bold text-xl text-center mt-10  uppercase text-[var(--primary-color)]">
-  B3 Expertise into Contract Hiring
-</h1>
-
-
-<marquee
-  className="w-full p-10 text-black"
-  behavior="scroll"
-  direction="right"
-  scrollamount="10"
-  ref={marqueeRef2}
-  onMouseEnter={handleMouseEnter2}
-  onMouseLeave={handleMouseLeave2}
->
-  {jobRoles2.map((role, index) => (
-    <span key={index} className="inline-flex items-center mx-4 rounded-lg bg-white drop-shadow-lg  text-black border-2 border-[var(--primary-color)] p-3">
-      {role}
-      <ArrowForwardIcon className="ml-2  text-[var(--primary-color)]" />
-    </span>
-  ))}
-</marquee> */}
-</div>
+     
 
 {/* ....................... */}
 <div>
@@ -387,7 +341,7 @@ style={{
 </div>
 
 {/* Underline at the bottom of the card */}
-<div className="absolute bottom-0 left-6 w-[80%] h-1 bg-transparent group-hover:bg-blue-500 transition-all duration-500"></div>
+<div className="absolute bottom-0 left-6 w-[80%] h-1 m-2 bg-transparent group-hover:bg-white transition-all duration-500"></div>
 </div>
 {/* .................................. */}
 <div className="border rounded-[10px] border-black w-[22%] h-[520px] p-4 bg-white transform transition-all duration-500 hover:-translate-y-3 hover:shadow-lg group relative" style={{ perspective: '1000px' }}>
@@ -438,11 +392,11 @@ style={{
 </div>
 
 {/* Underline at the bottom of the card */}
-<div className="absolute bottom-0 left-6 w-[80%] h-1 bg-transparent group-hover:bg-[#0060b5] transition-all duration-500"></div>
+<div className="absolute bottom-0 left-6 w-[80%] h-1 bg-transparent m-2 group-hover:bg-[#0060b5] transition-all duration-500"></div>
 </div>
 {/* ........................... */}
 
-<div className="border rounded-[10px] border-black w-[22%] h-[520px] p-4 bg-white hover:bg-[#0060b5] transform transition-all duration-500 hover:-translate-y-3 hover:shadow-lg group relative" style={{ perspective: '1000px' }}>
+<div className="border rounded-[10px] border-black w-[22%] h-[520px] p-4 bg-[#0060b5] transform transition-all duration-500 hover:-translate-y-3 hover:shadow-lg group relative" style={{ perspective: '1000px' }}>
 <style jsx>{`
 .rotate-y-360 {
 transform: rotateY(0deg);
@@ -465,7 +419,7 @@ transform: rotateY(360deg);
 <h1
 className="
   text-6xl font-bold bg-clip-text
-  text-transparent group-hover:text-white
+  text-transparent text-white
 "
 style={{
   WebkitTextStroke: '2px blue',
@@ -477,18 +431,18 @@ style={{
 </div>
 
 <div className='group-hover:text-white'>
-<h1 className="my-2 text-black font-bold group-hover:text-white"> We assure a CANDIDATE to</h1>
-<ul className="list-disc leading-loose text-black ml-4 group-hover:text-white" style={{ '--tw-marker-color': 'blue' }}>
-<li className="marker:text-blue-500">Recruiters manage the entire end-to-end delivery process.</li>
-<li className="marker:text-blue-500">Standardized process ensures better candidate presentation.</li>
-<li className="marker:text-blue-500">Recruiters handle requirements gathering to candidate start date.</li>
-<li className="marker:text-blue-500">Workflow prevents information loss during translation.</li>
-<li className="marker:text-blue-500">Streamlined process ensures faster delivery.</li>
+<h1 className="my-2  font-bold text-white"> We assure a CANDIDATE to</h1>
+<ul className="list-disc leading-loose  ml-4 text-white" style={{ '--tw-marker-color': 'blue' }}>
+<li className="marker:text-white">Recruiters manage the entire end-to-end delivery process.</li>
+<li className="marker:text-white">Standardized process ensures better candidate presentation.</li>
+<li className="marker:text-white">Recruiters handle requirements gathering to candidate start date.</li>
+<li className="marker:text-white">Workflow prevents information loss during translation.</li>
+<li className="marker:text-white">Streamlined process ensures faster delivery.</li>
 </ul>
 </div>
 
 {/* Underline at the bottom of the card */}
-<div className="absolute bottom-0 left-6 w-[80%] h-1 bg-transparent group-hover:bg-blue-500 transition-all duration-500"></div>
+<div className="absolute bottom-0 left-6 w-[80%] h-1 m-2 bg-transparent group-hover:bg-white transition-all duration-500"></div>
 </div>
 
 
@@ -543,7 +497,7 @@ style={{
 </div>
 
 {/* Underline at the bottom of the card */}
-<div className="absolute bottom-0 left-6 w-[80%] h-1 bg-transparent group-hover:bg-blue-500 transition-all duration-500"></div>
+<div className="absolute bottom-0 left-6 w-[80%] h-1 m-1 bg-transparent group-hover:bg-blue-500 transition-all duration-500"></div>
 </div>
 </div>
 
