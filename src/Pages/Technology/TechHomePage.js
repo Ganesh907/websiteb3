@@ -1,9 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import letstalk from "../../Assets/Images/letstakeicon1.png";
 import technology from "../../Assets/Videos/Technology6.mp4";
-import highquality from "../../Assets/Images/highquality1.png";
-import onbudget from "../../Assets/Images/onbudget.png";
-import SplitCard from "../../Components/TechServicesPage/SplitCard";
+
 import bank from "../../Assets/Images/bankingicon.png";
 import ecom from "../../Assets/Images/egovandecomicon.png";
 import health from "../../Assets/Images/healthcare.png";
@@ -17,27 +15,10 @@ import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import Footer from "../../Components/CommonComponents/Footer";
 import HeroSection from "../../Components/CommonComponents/HeroSection";
 import "./TechServicesPage.css";
+import delivery from "../../Assets/Images/delivery.png";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
-
-import requirements from "../../Assets/Images/planning requirement.gif";
-import design from "../../Assets/Images/web-design.gif";
-import development1 from "../../Assets/Images/web-developer.gif";
-import testing from "../../Assets/Images/icons8-testing.gif";
-import deployment from "../../Assets/Images/deployementgif.gif";
-import maintenance from "../../Assets/Images/programmer.gif";
-import arrow from "../../Assets/Images/Loading-Arrow.png";
-
-import techsupport from "../../Assets/Images/technical-support (1).png";
-import contentchange from "../../Assets/Images/content-writing.png";
-import hosting from "../../Assets/Images/hosting.png";
-import websecurity from "../../Assets/Images/websecurity.png";
-import databackup from "../../Assets/Images/databackup.png";
-import webmonitor from "../../Assets/Images/webmonitor.png";
 import "./TechServicesPage.css";
-import team from "../../Assets/Images/participation.png";
-import deliver from "../../Assets/Images/saas.png";
-import colaborate from "../../Assets/Images/communications.png";
-import worker from "../../Assets/Images/workers.png";
 
 const TechHomePage = () => {
   const [expanded, setExpanded] = useState(false);
@@ -56,21 +37,11 @@ const TechHomePage = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Handle accordion expansion
-  // const handleChange = (panel) => (event, isExpanded) => {
-  //   setExpanded(isExpanded ? panel : false);
-  // };
-
   const [visibleSteps, setVisibleSteps] = useState(0);
   const [visibleLines, setVisibleLines] = useState(0); // Track how many lines are visible
   const [visibleItems, setVisibleItems] = useState({});
   const [hoverDelay, setHoverDelay] = useState(null);
-  // const hoverTimeout = useRef(null); // Use useRef to store timeout IDs
-  // const [cardHeight, setCardHeight] = useState('50px'); // Initial card height
-  // const [visibleLines, setVisibleLines] = useState(0); // Track how many lines are visible
 
-
-  // This useEffect will add one step every second (you can adjust the timing)
   useEffect(() => {
     if (visibleSteps < 2) {
       const timer = setTimeout(() => {
@@ -80,7 +51,6 @@ const TechHomePage = () => {
     }
   }, [visibleSteps]);
   // const [expanded, setExpanded] = useState(false);
-
 
   const sectionRef = useRef(null);
   const [inView, setInView] = useState(false);
@@ -104,61 +74,36 @@ const TechHomePage = () => {
   }, []);
 
 
-
   const linesBank = [
-    'Expertise in secure and efficient software for the BFSI sector.',
-    'Financial transactions management solutions.',
-    'Risk assessment systems for informed decision-making.',
-    'Customer relationship management (CRM) solutions.',
-    'Regulatory compliance solutions to meet industry standards.',
+    "Expertise in secure and efficient software for the BFSI sector.",
+    "Financial transactions management solutions.",
+    "Risk assessment systems for informed decision-making.",
+    "Customer relationship management (CRM) solutions.",
+    "Regulatory compliance solutions to meet industry standards.",
   ];
   const linesHospitality = [
-    'Property Management Systems (PMS) for efficient hospitality operations.',
-    'Booking and reservation systems to streamline guest management.',
-    'CRM software to enhance customer service.',
-    'POS systems for optimized transaction handling.',
-    'Tailored solutions leveraging industry expertise and latest technologies.',
+    "Property Management Systems (PMS) for efficient hospitality operations.",
+    "Booking and reservation systems to streamline guest management.",
+    "CRM software to enhance customer service.",
+    "POS systems for optimized transaction handling.",
+    "Tailored solutions leveraging industry expertise and latest technologies.",
   ];
   const linesGov = [
-    'Comprehensive e-Governance and e-Commerce solutions.',
-    'Services include ticket booking, recharges, money transfers, and Aadhaar enrolments.',
-    'Supports Amazon orders, insurance purchases, and utility bill payments.',
-    'Features shopping cart integration and payment gateways.',
-    'Customer management and data analytics for seamless online transactions.',
+    "Comprehensive e-Governance and e-Commerce solutions.",
+    "Services include ticket booking, recharges, money transfers, and Aadhaar enrolments.",
+    "Supports Amazon orders, insurance purchases, and utility bill payments.",
+    "Features shopping cart integration and payment gateways.",
+    "Customer management and data analytics for seamless online transactions.",
   ];
   const linesHealth = [
-    'Wide range of healthcare IT solutions.',
-    'Electronic Health Records (EHR) systems for efficient patient data management.',
-    'Appointment scheduling software for streamlined bookings.',
-    'Telemedicine platforms for remote patient care.',
-    'Healthcare data analytics to improve patient care and operations.',
+    "Wide range of healthcare IT solutions.",
+    "Electronic Health Records (EHR) systems for efficient patient data management.",
+    "Appointment scheduling software for streamlined bookings.",
+    "Telemedicine platforms for remote patient care.",
+    "Healthcare data analytics to improve patient care and operations.",
   ];
 
-
-
-
-  // const handleMouseEnter = (panel, lines) => {
-  //   setExpanded(panel);
-  //   setVisibleItems((prevState) => ({ ...prevState, [panel]: 0 }));
-
-  //   if (hoverDelay) clearTimeout(hoverDelay);
-    
-  //   // Reveal list items one by one
-  //   lines.forEach((_, index) => {
-  //     setTimeout(() => {
-  //       setVisibleItems((prevState) => ({
-  //         ...prevState,
-  //         [panel]: index + 1,
-  //       }));
-  //     }, index * 300); // Adjust delay for each list item (300ms)
-  //   });
-  // };
-
-  // const handleMouseLeave = () => {
-  //   setExpanded(false);
-  //   setVisibleItems({});
-  //   if (hoverDelay) clearTimeout(hoverDelay);
-  // };
+  
 
   const handleMouseEnter = (panel) => {
     setExpanded(panel); // Expand the accordion on hover
@@ -174,13 +119,13 @@ const TechHomePage = () => {
       let currentLines = []; // Declare currentLines here
 
       // Assign the correct lines based on the expanded panel
-      if (expanded === 'panel1') {
+      if (expanded === "panel1") {
         currentLines = linesBank;
-      } else if (expanded === 'panel2') {
+      } else if (expanded === "panel2") {
         currentLines = linesHospitality;
-      } else if (expanded === 'panel3') {
+      } else if (expanded === "panel3") {
         currentLines = linesGov;
-      } else if (expanded === 'panel4') {
+      } else if (expanded === "panel4") {
         currentLines = linesHealth;
       }
 
@@ -197,11 +142,8 @@ const TechHomePage = () => {
     }
   }, [expanded, linesBank, linesHospitality, linesGov, linesHealth]);
 
-
   return (
     <div className="techHomepageMain  ">
-    
-
       {scrollHeading ? (
         <div
           className="z-50 bg-blue-800 text-white fixed flex justify-center items-center rounded-lg font-montserrat text-[18px] font-bold h-[44px] leading-[24px] w-2/5 gap-[10px] md:p-0 md:w-[10%] md:ml-2"
@@ -215,7 +157,6 @@ const TechHomePage = () => {
           </a>
         </div>
       ) : null}
-
 
       <HeroSection
         videoUrl={technology}
@@ -270,7 +211,6 @@ const TechHomePage = () => {
               </span>
             </h1>
           </div>
-         
 
           <ul className="list-none space-y-4 text-xl font-semibold mt-1">
             <li
@@ -317,193 +257,621 @@ const TechHomePage = () => {
         </div>
       </HeroSection>
 
-     
+      <div className="w-[90%] h-auto">
+        <h1 className="text-center md:text-center md:ml-[9%] text-white text-5xl italic m-[5px] font-montserrat md:mt-[40px]">
+          Industries we deal with
+        </h1>
 
-
-          <div className='w-[90%] h-auto'>
-      <h1 className='text-center  md:text-start md:ml-[9%] text-white italic text-5xl  m-[5px]  md:mt-[40px]'>
-        Industries we deal with
-      </h1>
-
-      <div className='grid grid-cols-1 place-content-center md:grid-cols-2 md:gap-2 md:ml-20 md:w-auto w-[100%]'> 
-    <div className='m-7'>
-      <Accordion
-           expanded={expanded === 'panel1'}
-           onMouseEnter={() => handleMouseEnter('panel1')}
-        onMouseLeave={handleMouseLeave}
-        className='p-2 bg-[#1a1a1a] border border-[#333] border-spacing-4 hover:border-blue-600 shadow-lg transition-shadow duration-300'
-      >
-        {/* <AccordionSummary
+        <div className="grid grid-cols-1 place-content-center md:grid-cols-2 md:gap-2 md:ml-20 md:w-auto w-[100%]">
+          <div className="m-7">
+            <Accordion
+              expanded={expanded === "panel1"}
+              onMouseEnter={() => handleMouseEnter("panel1")}
+              onMouseLeave={handleMouseLeave}
+              style={{ backgroundColor: "#1a1a1a" }}
+              className="p-2 border border-[#333] border-spacing-4 hover:border-blue-600 shadow-lg transition-shadow duration-300"
+            >
+              {/* <AccordionSummary
           aria-controls='panel1-content'
         > */}
-        <AccordionSummary
-              expandIcon={
-                <ArrowDownwardIcon
-                  style={{
-                    color: 'blue',
-                    fontWeight: 'bold',
-                    fontSize: '1.6rem',
-                    animation: 'bounce 1s infinite',
-                  }}
-                />
-              }
-              aria-controls='panel1-content'
-            >
-          <div className='flex items-center justify-center gap-2'>
-            <img src={bank} className='md:h-12' alt='Banking' />
-            <div className='font-bold pt-1 text-lg text-[#00bfff]'>
-              Banking, Financial Services and Insurance
-            </div>
+              <AccordionSummary
+                expandIcon={
+                  <ArrowDownwardIcon
+                    style={{
+                      color: "blue",
+                      fontWeight: "bold",
+                      fontSize: "1.6rem",
+                      animation: "bounce 1s infinite",
+                    }}
+                  />
+                }
+                aria-controls="panel1-content"
+              >
+                <div className="flex items-center justify-center gap-2">
+                  <img src={bank} className="md:h-12" alt="Banking" />
+                  <div className="font-bold pt-1 text-lg text-[#00bfff]">
+                    Banking, Financial Services and Insurance
+                  </div>
+                </div>
+              </AccordionSummary>
+              <AccordionDetails>
+                <ul className="md:pl-5 list-disc leading-loose text-white">
+                  {linesBank.slice(0, visibleLines).map((line, index) => (
+                    <li key={index}>{line}</li>
+                  ))}
+                </ul>
+              </AccordionDetails>
+            </Accordion>
           </div>
-        </AccordionSummary>
-        <AccordionDetails>
-          <ul className='md:pl-5 list-disc leading-loose text-white'>
-            {linesBank.slice(0, visibleLines).map((line, index) => (
-              <li key={index}>{line}</li>
-            ))}
-          </ul>
-        </AccordionDetails>
-      </Accordion>
-    </div>
 
-    <div className='m-7'>
-      <Accordion
-             expanded={expanded === 'panel2'}
-             onMouseEnter={() => handleMouseEnter('panel2')}
-        onMouseLeave={handleMouseLeave}
-        className='p-2 bg-[#1a1a1a] border border-[#333] border-spacing-4 hover:border-blue-600 shadow-lg transition-shadow duration-300'
-      >
-        {/* <AccordionSummary
+          <div className="m-7">
+            <Accordion
+              expanded={expanded === "panel2"}
+              onMouseEnter={() => handleMouseEnter("panel2")}
+              onMouseLeave={handleMouseLeave}
+              style={{ backgroundColor: "#1a1a1a" }}
+              className="p-2 bg-[#1a1a1a] border border-[#333] border-spacing-4 hover:border-blue-600 shadow-lg transition-shadow duration-300"
+            >
+              {/* <AccordionSummary
           aria-controls='panel2-content'
         > */}
 
-        <AccordionSummary
-              expandIcon={
-                <ArrowDownwardIcon
-                  style={{
-                    color: 'blue',
-                    fontWeight: 'bold',
-                    fontSize: '1.6rem',
-                    animation: 'bounce 1s infinite',
-                  }}
-                />
-              }
-              aria-controls='panel2-content'
-            >
-          <div className='flex items-center justify-center gap-2'>
-            {/* <img src={bank} className='md:h-12' alt='Banking' /> */}
-            <img src={hospitality} className='md:h-12' alt='Hospitality' />
-            <div className='font-bold pt-1 text-lg text-[#00bfff]'>
-            Hospitality
-            </div>
+              <AccordionSummary
+                expandIcon={
+                  <ArrowDownwardIcon
+                    style={{
+                      color: "blue",
+                      fontWeight: "bold",
+                      fontSize: "1.6rem",
+                      animation: "bounce 1s infinite",
+                    }}
+                  />
+                }
+                aria-controls="panel2-content"
+              >
+                <div className="flex items-center justify-center gap-2">
+                  {/* <img src={bank} className='md:h-12' alt='Banking' /> */}
+                  <img
+                    src={hospitality}
+                    className="md:h-12"
+                    alt="Hospitality"
+                  />
+                  <div className="font-bold pt-1 text-lg text-[#00bfff]">
+                    Hospitality
+                  </div>
+                </div>
+              </AccordionSummary>
+              <AccordionDetails>
+                <ul className="md:pl-5 list-disc leading-loose text-white">
+                  {linesHospitality
+                    .slice(0, visibleLines)
+                    .map((line, index) => (
+                      <li key={index}>{line}</li>
+                    ))}
+                </ul>
+              </AccordionDetails>
+            </Accordion>
           </div>
-        </AccordionSummary>
-        <AccordionDetails>
-          <ul className='md:pl-5 list-disc leading-loose text-white'>
-            {linesHospitality.slice(0, visibleLines).map((line, index) => (
-              <li key={index}>{line}</li>
-            ))}
-          </ul>
-        </AccordionDetails>
-      </Accordion>
-    </div>
 
-    <div className='m-7'>
-      <Accordion
-              expanded={expanded === 'panel3'}
-              onMouseEnter={() => handleMouseEnter('panel3')}
-        onMouseLeave={handleMouseLeave}
-        className='p-2 bg-[#1a1a1a] border border-[#333] border-spacing-4 hover:border-blue-600 shadow-lg transition-shadow duration-300'
-      >
-        {/* <AccordionSummary
+          <div className="m-7">
+            <Accordion
+              expanded={expanded === "panel3"}
+              onMouseEnter={() => handleMouseEnter("panel3")}
+              onMouseLeave={handleMouseLeave}
+              style={{ backgroundColor: "#1a1a1a" }}
+              className="p-2 bg-[#1a1a1a] border border-[#333] border-spacing-4 hover:border-blue-600 shadow-lg transition-shadow duration-300"
+            >
+              {/* <AccordionSummary
           aria-controls='panel2-content'
         > */}
 
-        <AccordionSummary
-              expandIcon={
-                <ArrowDownwardIcon
-                  style={{
-                    color: 'blue',
-                    fontWeight: 'bold',
-                    fontSize: '1.6rem',
-                    animation: 'bounce 1s infinite',
-                  }}
-                />
-              }
-              aria-controls='panel3-content'
-            >
-          <div className='flex items-center justify-center gap-2'>
-          
-            <img src={ecom} className='md:h-12' alt='E-Gov & E-Com' />
-            <div className='font-bold pt-1 text-lg text-[#00bfff]'>
-            E-Gov & E-Com
-            </div>
+              <AccordionSummary
+                expandIcon={
+                  <ArrowDownwardIcon
+                    style={{
+                      color: "blue",
+                      fontWeight: "bold",
+                      fontSize: "1.6rem",
+                      animation: "bounce 1s infinite",
+                    }}
+                  />
+                }
+                aria-controls="panel3-content"
+              >
+                <div className="flex items-center justify-center gap-2">
+                  <img src={ecom} className="md:h-12" alt="E-Gov & E-Com" />
+                  <div className="font-bold pt-1 text-lg text-[#00bfff]">
+                    E-Gov & E-Com
+                  </div>
+                </div>
+              </AccordionSummary>
+              <AccordionDetails>
+                <ul className="md:pl-5 list-disc leading-loose text-white">
+                  {linesGov.slice(0, visibleLines).map((line, index) => (
+                    <li key={index}>{line}</li>
+                  ))}
+                </ul>
+              </AccordionDetails>
+            </Accordion>
           </div>
-        </AccordionSummary>
-        <AccordionDetails>
-          <ul className='md:pl-5 list-disc leading-loose text-white'>
-            {linesGov.slice(0, visibleLines).map((line, index) => (
-              <li key={index}>{line}</li>
-            ))}
-          </ul>
-        </AccordionDetails>
-      </Accordion>
-    </div>
-     
-    <div className='m-7'>
-      <Accordion
-             expanded={expanded === 'panel4'}
-             onMouseEnter={() => handleMouseEnter('panel4')}
-        onMouseLeave={handleMouseLeave}
-        className='p-2 bg-[#1a1a1a] border border-[#333] border-spacing-4 hover:border-blue-600 shadow-lg transition-shadow duration-300'
-      >
-       
 
-        <AccordionSummary
-              expandIcon={
-                <ArrowDownwardIcon
-                  style={{
-                    color: 'blue',
-                    fontWeight: 'bold',
-                    fontSize: '1.6rem',
-                    animation: 'bounce 1s infinite',
-                  }}
-                />
-              }
-              aria-controls='panel4-content'
+          <div className="m-7">
+            <Accordion
+              expanded={expanded === "panel4"}
+              onMouseEnter={() => handleMouseEnter("panel4")}
+              onMouseLeave={handleMouseLeave}
+              style={{ backgroundColor: "#1a1a1a" }}
+              className="p-2 bg-[#1a1a1a] border border-[#333] border-spacing-4 hover:border-blue-600 shadow-lg transition-shadow duration-300"
             >
-          <div className='flex items-center justify-center gap-2'>
-
-            <img src={health} className='md:h-12' alt='HealthCare' />
-            <div className='font-bold pt-1 text-lg text-[#00bfff]'>
-            HealthCare
-            </div>
+              <AccordionSummary
+                expandIcon={
+                  <ArrowDownwardIcon
+                    style={{
+                      color: "blue",
+                      fontWeight: "bold",
+                      fontSize: "1.6rem",
+                      animation: "bounce 1s infinite",
+                    }}
+                  />
+                }
+                aria-controls="panel4-content"
+              >
+                <div className="flex items-center justify-center gap-2">
+                  <img src={health} className="md:h-12" alt="HealthCare" />
+                  <div className="font-bold pt-1 text-lg text-[#00bfff]">
+                    HealthCare
+                  </div>
+                </div>
+              </AccordionSummary>
+              <AccordionDetails>
+                <ul className="md:pl-5 list-disc leading-loose text-white">
+                  {linesHealth.slice(0, visibleLines).map((line, index) => (
+                    <li key={index}>{line}</li>
+                  ))}
+                </ul>
+              </AccordionDetails>
+            </Accordion>
           </div>
-        </AccordionSummary>
-        <AccordionDetails>
-          <ul className='md:pl-5 list-disc leading-loose text-white'>
-            {linesHealth.slice(0, visibleLines).map((line, index) => (
-              <li key={index}>{line}</li>
-            ))}
-          </ul>
-        </AccordionDetails>
-      </Accordion>
-    </div>
-    
-   
-       
-     </div>
-     </div>
+        </div>
+      </div>
 
-    
+      <div className="flex-col">
+        <h1 className=" text-center h-[10vh] my-4 text-white text-5xl italic m-[5px] font-montserrat md:mt-[40px]">
+          Our Promise
+        </h1>
 
-      <div className="w-[90%] mx-auto ">
-  <h1 className="text-center md:text-start my-10 text-5xl italic  bg-clip-text text-[var(--primary-color)] drop-shadow-lg md:ml-[5%]">
-    Our Promise
-  </h1>
-  </div>
- 
+        {/* ....................... */}
+        <div className="flex justify-evenly">
+          <div
+            className="border rounded-[10px] border-black w-[22%] h-[520px] p-4 bg-[#0060b5] transform transition-all duration-500 hover:-translate-y-3 hover:shadow-lg group relative"
+            style={{ perspective: "1000px" }}
+          >
+            <style jsx>{`
+              .rotate-y-360 {
+                transform: rotateY(0deg);
+                transition: transform 0.5s;
+                transform-style: preserve-3d;
+              }
+              .group:hover .rotate-y-360 {
+                transform: rotateY(360deg);
+              }
+            `}</style>
+            <div>
+              <div className="flex justify-between items-center">
+                <div className="relative w-[100px] h-[100px]">
+                  <div className="absolute inset-0 rotate-y-360">
+                    <img
+                      src={delivery}
+                      className="w-full h-full object-cover border-r-[50%] rounded"
+                    />
+                  </div>
+                </div>
 
+                <h1
+                  className="
+  text-6xl font-bold text-white
+  bg-clip-text
+  text-transparent
+  "
+                  style={{
+                    WebkitTextStroke: "2px white",
+                  }}
+                >
+                  01
+                </h1>
+              </div>
+            </div>
+
+            <div>
+              <h1 className="my-2 text-white font-bold">
+                {" "}
+                Innovative Solutions
+              </h1>
+              <ul
+                className="list-disc leading-loose text-white ml-4"
+                style={{ "--tw-marker-color": "blue" }}
+              >
+                <li className="marker:text-white">
+                  We infuse innovation into every project we undertake.
+                </li>
+                <li className="marker:text-white">
+                  {" "}
+                  Our software is designed to meet today’s needs and tomorrow’s
+                  challenges.
+                </li>
+                <li className="marker:text-white">
+                  Solutions that evolve with your business in a rapidly changing
+                  digital world.
+                </li>
+                <li className="marker:text-white">
+                  Stay ahead of the competition with cutting-edge technology and
+                  forward-thinking approaches.
+                </li>
+                {/* <li className="marker:text-white">Streamlined process ensures faster delivery.</li> */}
+              </ul>
+            </div>
+
+            {/* Underline at the bottom of the card */}
+            <div className="absolute bottom-0 left-6 w-[80%] h-1 bg-transparent group-hover:bg-white transition-all duration-500"></div>
+          </div>
+          {/* .................................. */}
+          <div
+            className="border rounded-[10px] border-black w-[22%] h-[520px] p-4 bg-white transform transition-all duration-500 hover:-translate-y-3 hover:shadow-lg group relative"
+            style={{ perspective: "1000px" }}
+          >
+            <style jsx>{`
+              .rotate-y-360 {
+                transform: rotateY(0deg);
+                transition: transform 0.5s;
+                transform-style: preserve-3d;
+              }
+              .group:hover .rotate-y-360 {
+                transform: rotateY(360deg);
+              }
+            `}</style>
+            <div>
+              <div className="flex justify-between items-center">
+                {/* Image flipping 360 degrees from right to left on hover */}
+                <div className="relative w-[100px] h-[100px]">
+                  <div className="absolute inset-0 rotate-y-360">
+                    <img
+                      src={delivery}
+                      className="w-full h-full object-cover border-r-[50%] rounded"
+                    />
+                  </div>
+                </div>
+
+                <h1
+                  className="
+  text-6xl font-bold text-white
+  bg-clip-text
+  text-transparent
+  "
+                  style={{
+                    WebkitTextStroke: "2px blue",
+                  }}
+                >
+                  02
+                </h1>
+              </div>
+            </div>
+
+            <div>
+              <h1 className="my-2 text-black font-bold">
+                Transparency and Communication
+              </h1>
+              <ul
+                className="list-disc leading-loose text-black ml-4"
+                style={{ "--tw-marker-color": "blue" }}
+              >
+                <li className="marker:text-blue-500">
+                  Transparent and timely updates throughout the process.
+                </li>
+                <li className="marker:text-blue-500">
+                  We ensure open, honest communication at every step.
+                </li>
+                <li className="marker:text-blue-500">
+                  You'll be kept in the loop at every stage of development.
+                </li>
+                <li className="marker:text-blue-500">
+                  Your input is essential, and we actively seek and value it.
+                </li>
+                <li className="marker:text-blue-500">
+                  A strong partnership through reliable and consistent
+                  collaboration.
+                </li>
+              </ul>
+            </div>
+
+            {/* Underline at the bottom of the card */}
+            <div className="absolute bottom-0 left-6 w-[80%] h-1 bg-transparent group-hover:bg-[#0060b5] transition-all duration-500"></div>
+          </div>
+          {/* ........................... */}
+
+          <div
+            className="border rounded-[10px] border-black w-[22%] h-[520px] p-4 bg-[#0060b5]  transform transition-all duration-500 hover:-translate-y-3 hover:shadow-lg group relative"
+            style={{ perspective: "1000px" }}
+          >
+            <style jsx>{`
+              .rotate-y-360 {
+                transform: rotateY(0deg);
+                transition: transform 0.5s;
+                transform-style: preserve-3d;
+              }
+              .group:hover .rotate-y-360 {
+                transform: rotateY(360deg);
+              }
+            `}</style>
+            <div>
+              <div className="flex justify-between items-center">
+                {/* Image flipping 360 degrees from right to left on hover */}
+                <div className="relative w-[100px] h-[100px]">
+                  <div className="absolute inset-0 rotate-y-360">
+                    <img
+                      src={delivery}
+                      className="w-full h-full object-cover border-r-[50%] rounded"
+                    />
+                  </div>
+                </div>
+
+                <h1
+                  className="
+  text-6xl font-bold bg-clip-text
+  text-transparent text-white
+"
+                  style={{
+                    WebkitTextStroke: "2px white",
+                  }}
+                >
+                  03
+                </h1>
+              </div>
+            </div>
+
+            <div>
+              <h1 className=" text-white font-bold my-2">
+                Customization as per Your Needs
+              </h1>
+              <ul
+                className="list-disc leading-loose text-white ml-4"
+                style={{ "--tw-marker-color": "blue" }}
+              >
+                <li className="text-white">
+                  We tailor software to fit the unique needs of your business.
+                </li>
+                <li className="text-white">
+                  We invest time in understanding your specific requirements.
+                </li>
+                <li className="text-white">
+                  {" "}
+                  Delivering personalized software that aligns perfectly with
+                  your goals.
+                </li>
+                <li className="text-white">
+                  Ensuring solutions that drive the highest efficiency in your
+                  operations.
+                </li>
+                {/* <li className="text-white">Streamlined process ensures faster delivery.</li> */}
+              </ul>
+            </div>
+
+            {/* Underline at the bottom of the card */}
+            <div className="absolute bottom-0 left-6 w-[80%] h-1 bg-transparent group-hover:bg-white transition-all duration-500"></div>
+          </div>
+
+          {/* ................ */}
+        </div>
+
+        <div className="flex justify-evenly my-8">
+          <div
+            className="border rounded-[10px] border-black w-[22%] h-[520px] p-4 bg-white transform transition-all duration-500 hover:-translate-y-3 hover:shadow-lg group relative"
+            style={{ perspective: "1000px" }}
+          >
+            <style jsx>{`
+              .rotate-y-360 {
+                transform: rotateY(0deg);
+                transition: transform 0.5s;
+                transform-style: preserve-3d;
+              }
+              .group:hover .rotate-y-360 {
+                transform: rotateY(360deg);
+              }
+            `}</style>
+            <div>
+              <div className="flex justify-between items-center">
+                {/* Image flipping 360 degrees from right to left on hover */}
+                <div className="relative w-[100px] h-[100px]">
+                  <div className="absolute inset-0 rotate-y-360">
+                    <img
+                      src={delivery}
+                      className="w-full h-full object-cover border-r-[50%] rounded"
+                    />
+                  </div>
+                </div>
+
+                <h1
+                  className="
+  text-6xl font-bold text-white
+  bg-clip-text
+  text-transparent
+  "
+                  style={{
+                    WebkitTextStroke: "2px blue",
+                  }}
+                >
+                  04
+                </h1>
+              </div>
+            </div>
+
+            <div>
+              <h1 className="my-2 text-black font-bold">On-Time Delivery</h1>
+              <ul
+                className="list-disc leading-loose text-black ml-4"
+                style={{ "--tw-marker-color": "blue" }}
+              >
+                <li className="marker:text-blue-500">
+                  We value your time and make it a priority.
+                </li>
+                <li className="marker:text-blue-500">
+                  {" "}
+                  Projects completed on schedule without sacrificing quality.
+                </li>
+                <li className="marker:text-blue-500">
+                  We ensure top-tier results while meeting deadlines.
+                </li>
+                <li className="marker:text-blue-500">
+                  {" "}
+                  Timely delivery to help your business stay on course.
+                </li>
+                <li className="marker:text-blue-500">
+                  {" "}
+                  Our focus is on delivering high-quality solutions, fast and
+                  efficiently.
+                </li>
+              </ul>
+            </div>
+
+            <div className="absolute bottom-0 left-6 w-[80%] h-1 bg-transparent group-hover:bg-blue-500  transition-all duration-500"></div>
+          </div>
+
+          <div
+            className="border rounded-[10px] border-black w-[22%] bg-[#0060b5] h-[520px] p-4 transform transition-all duration-500 hover:-translate-y-3 hover:shadow-lg group relative"
+            style={{ perspective: "1000px" }}
+          >
+            <style jsx>{`
+              .rotate-y-360 {
+                transform: rotateY(0deg);
+                transition: transform 0.5s;
+                transform-style: preserve-3d;
+              }
+              .group:hover .rotate-y-360 {
+                transform: rotateY(360deg);
+              }
+            `}</style>
+            <div>
+              <div className="flex justify-between items-center">
+                <div className="relative w-[100px] h-[100px]">
+                  <div className="absolute inset-0 rotate-y-360">
+                    <img
+                      src={delivery}
+                      className="w-full h-full object-cover border-r-[50%] rounded"
+                    />
+                  </div>
+                </div>
+
+                <h1
+                  className="
+  text-6xl font-bold text-white
+  bg-clip-text
+  text-transparent
+  "
+                  style={{
+                    WebkitTextStroke: "2px white",
+                  }}
+                >
+                  05
+                </h1>
+              </div>
+            </div>
+
+            <div>
+              <h1 className="my-2 text-white font-bold">Quality Assurance</h1>
+              <ul
+                className="list-disc leading-loose text-white ml-4"
+                style={{ "--tw-marker-color": "blue" }}
+              >
+                <li className="text-white">
+                  We put your needs at the heart of everything we do.
+                </li>
+                <li className="text-white">
+                  Rigorous quality assurance to ensure robust performance.
+                </li>
+                <li className="text-white">
+                  Delivering software that is dependable and flawless.
+                </li>
+                <li className="text-white">
+                  We measure our success by your achievements.
+                </li>
+                <li className="text-white">
+                  Committed to evolving our processes for even better results.
+                </li>
+              </ul>
+            </div>
+
+            <div className="absolute bottom-0 left-6 w-[80%] h-1 bg-transparent group-hover:bg-white transition-all duration-500"></div>
+          </div>
+
+          <div
+            className="border rounded-[10px] border-black w-[22%] h-[520px] p-4 bg-white transform transition-all duration-500 hover:-translate-y-3 hover:shadow-lg group relative"
+            style={{ perspective: "1000px" }}
+          >
+            <style jsx>{`
+              .rotate-y-360 {
+                transform: rotateY(0deg);
+                transition: transform 0.5s;
+                transform-style: preserve-3d;
+              }
+              .group:hover .rotate-y-360 {
+                transform: rotateY(360deg);
+              }
+            `}</style>
+            <div>
+              <div className="flex justify-between items-center">
+                <div className="relative w-[100px] h-[100px]">
+                  <div className="absolute inset-0 rotate-y-360">
+                    <img
+                      src={delivery}
+                      className="w-full h-full object-cover border-r-[50%] rounded"
+                    />
+                  </div>
+                </div>
+
+                <h1
+                  className="
+  text-6xl font-bold text-white
+  bg-clip-text
+  text-transparent
+  "
+                  style={{
+                    WebkitTextStroke: "2px blue",
+                  }}
+                >
+                  06
+                </h1>
+              </div>
+            </div>
+
+            <div>
+              <h1 className="my-2 text-black font-bold">
+                Scalability and Future-Proofing
+              </h1>
+              <ul
+                className="list-disc leading-loose text-black ml-4"
+                style={{ "--tw-marker-color": "blue" }}
+              >
+                <li className="marker:text-blue-500">
+                  Our software seamlessly adapts as your business grows.
+                </li>
+                <li className="marker:text-blue-500">
+                  {" "}
+                  Scalable systems designed to expand with your needs.
+                </li>
+                <li className="marker:text-blue-500">
+                  Stay ahead with technology that embraces innovation.
+                </li>
+                <li className="marker:text-blue-500">
+                  {" "}
+                  Protect your investment with adaptable, forward-thinking
+                  solutions.
+                </li>
+              </ul>
+            </div>
+
+            <div className="absolute bottom-0 left-6 w-[80%] h-1 bg-transparent group-hover:bg-blue-500 transition-all duration-500"></div>
+          </div>
+        </div>
+      </div>
 
       <div className=" tech-footer">
         <Footer />

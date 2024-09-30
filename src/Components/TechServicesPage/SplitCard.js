@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 
 import "tailwindcss/tailwind.css";
-import Aos from "aos";
-import webDevelopment from "../../Assets/Images/web development.png";
+// import Aos from "aos";
+// import webDevelopment from "../../Assets/Images/web development.png";
 import javascript from "../../Assets/Images/javascript.png";
 import reactlogo from "../../Assets/Images/reactjs.png";
 import nodelogo from "../../Assets/Images/nodejs .png";
@@ -13,17 +13,20 @@ import enterpriselogo from "../../Assets/Images/computer.png";
 import digital from "../../Assets/Images/digital (1).png";
 import solution from "../../Assets/Images/solution1.png";
 import WebDevelopment from "../../Assets/Images/TechWebDev.png";
-import AndroidDevlopment from "../../Assets/Images/TechAppDev.png";
+// import AndroidDevlopment from "../../Assets/Images/TechAppDev.png";
 import EnterpriseSolution from "../../Assets/Videos/enterprisesolution.mp4";
 import service from "../../Assets/Images/service.png";
 import itservice from "../../Assets/Images/itservice.png";
 import software from "../../Assets/Images/software.png";
 import itmanaged from "../../Assets/Images/itmanagemnet.jpg";
+import itteamSolution from "../../Assets/Videos/itteam.mp4";
+import webdevelopment from "../../Assets/Videos/webdevelopment.mp4";
+// import javascript from "../../Assets/Images/javascript.png";
 export default class SplitCard extends Component {
   render() {
     return (
       <div className="  flex flex-col items-center  min-h-screen  bg-[linear-gradient(135deg,_#0000_20.5%,_#ffffff_0_29.5%,_#0000_0)_0_50px,_linear-gradient(45deg,_#0000_8%,_#ffffff_0_17%,_#0000_0_58%)_100px_0,_linear-gradient(135deg,_#0000_8%,_#ffffff_0_17%,_#0000_0_58%,_#ffffff_0_67%,_#0000_0),_linear-gradient(45deg,_#0000_8%,_#ffffff_0_17%,_#0000_0_58%,_#ffffff_0_67%,_#0000_0_83%,_#ffffff_0_92%,_#0000_0),_rgba(71,74,255,0.05)] bg-[200px_200px]">
-        <h1 className=" md:text-start text-center md:pr-80 heading1 font-bold text-[40px] md:mb-2 mb-10 md:ml-0  ">
+        <h1 className=" md:text-start text-center  heading1 italic text-[40px] md:mb-2 mb-10 md:ml-0  ">
           Our Professional Services Portfolio
         </h1>
         {/* <span className="hidden relative lg:w-[8%] lg:h-[5px] lg:mr-[62%] lg:block lg:rounded-b-[5px]" style={{ backgroundColor: '#002eff' }}></span> */}
@@ -39,11 +42,22 @@ export default class SplitCard extends Component {
             className="relative z-50"
           >
             <div className="md:absolute hidden  md:left-10 md:top-10 md:z-10  bg-cover bg-center  md:text-2xl md:font-bold md:flex p-3  	 customborder   custom-border relative border-[4px] border-transparent rounded-[10%] max-w-[23em] custom-border md:justify-center   md:h-72 lg:h-72 md:w-72 lg:w-1/4 hover:-translate-y-6  md:transition-all md:duration-500">
-              <img
+              {/* <img
                 src={WebDevelopment}
                 className="object-cover Imagescss rounded-[20px] shadow-[0px_13px_27px_-5px_rgba(50,50,93,0.25),_0px_8px_16px_-8px_rgba(0,0,0,0.3)] "
                 alt=""
-              />
+              /> */}
+
+              <video
+                className="Imagescss rounded-[20px] object-cover h-full w-full  shadow-[0px_13px_27px_-5px_rgba(50,50,93,0.25),_0px_8px_16px_-8px_rgba(0,0,0,0.3)]"
+                autoPlay
+                loop
+                muted
+              >
+                <source src={webdevelopment} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+
               <div className=" bg-opacity-75  rounded  "></div>
             </div>
           </div>
@@ -234,11 +248,21 @@ export default class SplitCard extends Component {
             className="relative z-50"
           >
             <div className="md:absolute hidden shadow-2xl shadow-transparent rounded-2xl  md:right-[-0.75rem] md:top-10 md:z-10   bg-cover bg-center  md:text-2xl md:font-bold md:flex p-3  	 customborder  md:justify-center  md:h-72 lg:h-72 md:w-72 lg:w-1/4 hover:-translate-y-6  md:transition-all md:duration-500">
-              <img
+              {/* <img
                 src={itmanaged}
                 className="Imagescss  object-cover rounded-[20px]  shadow-[0px_13px_27px_-5px_rgba(50,50,93,0.25),_0px_8px_16px_-8px_rgba(0,0,0,0.3)]"
                 alt=""
-              />
+              /> */}
+
+              <video
+                className="Imagescss rounded-[20px] object-cover h-full w-full  shadow-[0px_13px_27px_-5px_rgba(50,50,93,0.25),_0px_8px_16px_-8px_rgba(0,0,0,0.3)]"
+                autoPlay
+                loop
+                muted
+              >
+                <source src={itteamSolution} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
               <div className=" bg-opacity-75  rounded  "></div>
             </div>
           </div>
