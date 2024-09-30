@@ -173,11 +173,11 @@ const RecHomePage = () => {
       </HeroSection>
 
       <div className='h-[80vh] w-full  flex flex-col justify-center items-center'>
-        <h1 className='uppercase text-xl font-bold text-[var(--secondary-color)]'>for hiring</h1>
-        <h1 className='text-7xl mt-10 drop-shadow-xl text-[var(--primary-color)]'>Our Working Process</h1>
+        <h1 className='uppercase text-xl font-bold '>for hiring</h1>
+        <h1 className='text-7xl mt-10 drop-shadow-xl text-[#0060b5]'>Our Working Process</h1>
         <p className='w-[50%] my-10 text-[var(--secondary-color)] text-center'>We understand that for you, it’s never just a job. It’s your business. Thats why we Possionate about not only finding you a quality employee. But also the perfect fit.</p>
-        <Button variant="contained" size="large" sx={{ borderRadius: '20px', backgroundColor: 'var(--primary-color)' }}>
-          Discover Jobs</Button>
+        {/* <Button variant="contained" size="large" sx={{ borderRadius: '20px', backgroundColor: 'var(--primary-color)' }}>
+          Discover Jobs</Button> */}
       </div>
 
      
@@ -197,7 +197,7 @@ const RecHomePage = () => {
 {/* ............................ */}
       <div className='my-10 '>
 
-<h1 className="font-bold text-xl text-center mt-10 text-[var(--primary-color)]" >
+<h1 className="font-bold text-xl text-center mt-10 text-[#0060b5]" >
   B3 EXPERTISE IN IT RECRUITMENT
 </h1>
 
@@ -212,9 +212,9 @@ const RecHomePage = () => {
   onMouseLeave={handleMouseLeave1}
 >
   {jobRoles.map((role, index) => (
-    <span key={index} className="inline-flex items-center mx-4 rounded-lg bg-white text-black drop-shadow-lg  border-2 border-[var(--primary-color)] p-3">
+    <span key={index} className="inline-flex items-center mx-4 rounded-lg bg-white text-black drop-shadow-lg  border-4 border-[#0060b5] p-3">
       {role}
-      <ArrowBackIcon className="ml-2 text-[var(--primary-color)]" />
+      <ArrowBackIcon className="ml-2 text-[#0060b5]" />
     </span>
   ))}
 </marquee>
@@ -246,7 +246,7 @@ const RecHomePage = () => {
 {/* ....................... */}
 <div>
 
-<h1 className="font-bold text-4xl text-center h-[10vh]" style={{ color: "var(--primary-color)" }}>
+<h1 className="font-bold text-4xl text-center h-[10vh] text-[#0060b5]">
   Our Promise
 </h1>
 
