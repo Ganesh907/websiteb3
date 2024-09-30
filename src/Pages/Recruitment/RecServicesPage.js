@@ -632,7 +632,7 @@ import EnterpriseSolution from "../../Assets/Videos/enterprisesolution.mp4";
 
         {/* ....................... */}
         <div className='flex justify-evenly'>
-        <div className="border rounded-[10px] border-black w-[20%] h-auto p-4 bg-[#0060b5] transform transition-all duration-500 hover:-translate-y-3 hover:shadow-lg group relative" style={{ perspective: '1000px' }}>
+        <div className="border rounded-[10px] border-black w-[22%] h-[520px] p-4 bg-[#0060b5] transform transition-all duration-500 hover:-translate-y-3 hover:shadow-lg group relative" style={{ perspective: '1000px' }}>
   <style jsx>{`
     .rotate-y-360 {
       transform: rotateY(0deg);
@@ -683,7 +683,7 @@ import EnterpriseSolution from "../../Assets/Videos/enterprisesolution.mp4";
   <div className="absolute bottom-0 left-6 w-[80%] h-1 bg-transparent group-hover:bg-blue-500 transition-all duration-500"></div>
        </div>
        {/* .................................. */}
-       <div className="border rounded-[10px] border-black w-[20%] h-auto p-4 bg-white transform transition-all duration-500 hover:-translate-y-3 hover:shadow-lg group relative" style={{ perspective: '1000px' }}>
+       <div className="border rounded-[10px] border-black w-[22%] h-[520px] p-4 bg-white transform transition-all duration-500 hover:-translate-y-3 hover:shadow-lg group relative" style={{ perspective: '1000px' }}>
   <style jsx>{`
     .rotate-y-360 {
       transform: rotateY(0deg);
@@ -735,7 +735,7 @@ import EnterpriseSolution from "../../Assets/Videos/enterprisesolution.mp4";
        </div>
        {/* ........................... */}
         
-      <div className="border rounded-[10px] border-black w-[20%] h-auto p-4 bg-white hover:bg-[#0060b5] transform transition-all duration-500 hover:-translate-y-3 hover:shadow-lg group relative" style={{ perspective: '1000px' }}>
+      <div className="border rounded-[10px] border-black w-[22%] h-[520px] p-4 bg-white hover:bg-[#0060b5] transform transition-all duration-500 hover:-translate-y-3 hover:shadow-lg group relative" style={{ perspective: '1000px' }}>
   <style jsx>{`
     .rotate-y-360 {
       transform: rotateY(0deg);
@@ -788,7 +788,7 @@ import EnterpriseSolution from "../../Assets/Videos/enterprisesolution.mp4";
 
        {/* ................ */}
 
-       <div className="border rounded-[10px] border-black w-[20%] h-auto p-4 bg-white transform transition-all duration-500 hover:-translate-y-3 hover:shadow-lg group relative" style={{ perspective: '1000px' }}>
+       <div className="border rounded-[10px] border-black w-[22%] h-[520px] p-4 bg-white transform transition-all duration-500 hover:-translate-y-3 hover:shadow-lg group relative" style={{ perspective: '1000px' }}>
   <style jsx>{`
     .rotate-y-360 {
       transform: rotateY(0deg);
@@ -830,7 +830,7 @@ import EnterpriseSolution from "../../Assets/Videos/enterprisesolution.mp4";
   <li className="marker:text-blue-500">Known for fast and accurate delivery without compromising quality standards.</li>
   <li className="marker:text-blue-500">At BitByBit, we offer the best industry rates, ensuring cost-effectiveness.</li>
   <li className="marker:text-blue-500">Committed to building long-term relationships with our clients.</li>
-  <li className="marker:text-blue-500">Recognized as one of the best value-for-money TECHNOLOGY and HR agencies in a short span.</li>
+  {/* <li className="marker:text-blue-500">Recognized as one of the best value-for-money TECHNOLOGY and HR agencies in a short span.</li> */}
 </ul>
 
   </div>
@@ -852,6 +852,33 @@ import EnterpriseSolution from "../../Assets/Videos/enterprisesolution.mp4";
           “At BitByBit, it’s all about YOU! Whether you’re hunting for a new full-time role or just need a temp role, our recruiters are here to help you out.”
         </p>
 
+
+        {/*.............card-incomplete........  */}
+        {/* <div>
+        <div className="flex flex-wrap justify-center items-center min-h-screen bg-gray-200">
+      
+      <div className="relative w-80 min-w-[275px] m-5 bg-white transition-all duration-300 hover:shadow-lg hover:scale-105">
+        <div 
+          className="w-full h-52 bg-cover bg-center" 
+          style={{ backgroundImage: `url(${RecServiceBackground})` }} // Set Background Image
+        ></div>
+        <a href="#" className="absolute top-0 left-0 w-full h-52">
+          <div 
+            className="absolute top-0 left-0 w-full h-full bg-cover bg-center transition-all duration-350" 
+            style={{ backgroundImage: `url(${RecServiceBackground})` }}
+          ></div>
+        </a>
+        <div className="relative p-4 transition-all duration-200">
+          <div className="flex justify-between items-center pb-2">
+            <a className="inline-block px-2 py-1 text-xs text-white uppercase bg-blue-800 rounded">NEWS</a>
+            <div className="text-xs">6/11/2018</div>
+          </div>
+          <h1 className="text-xl font-serif pb-2 transition-transform duration-350 hover:text-gray-300">There have been big Tesla accident at New Jersey</h1>
+          <div className="pb-2">by <a href="#" className="text-blue-800">Sardorbek Usmonov</a></div>
+        </div>
+      </div>
+    </div>
+        </div> */}
 
         <Footer />
       </div>
