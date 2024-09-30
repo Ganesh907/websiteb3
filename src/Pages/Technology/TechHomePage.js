@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import letstalk from "../../Assets/Images/letstakeicon1.png";
 import technology from "../../Assets/Videos/Technology6.mp4";
 import highquality from "../../Assets/Images/highquality1.png";
@@ -80,6 +80,29 @@ const TechHomePage = () => {
     }
   }, [visibleSteps]);
   // const [expanded, setExpanded] = useState(false);
+
+
+  const sectionRef = useRef(null);
+  const [inView, setInView] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setInView(true);
+          observer.disconnect(); // Stop observing once it's in view
+        }
+      },
+      { threshold: 0.3 } // Trigger when 30% of the section is in view
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
 
 
   const linesBank = [
@@ -410,8 +433,7 @@ const TechHomePage = () => {
               aria-controls='panel3-content'
             >
           <div className='flex items-center justify-center gap-2'>
-            {/* <img src={bank} className='md:h-12' alt='Banking' /> */}
-            {/* <img src={hospitality} className='md:h-12' alt='Hospitality' /> */}
+          
             <img src={ecom} className='md:h-12' alt='E-Gov & E-Com' />
             <div className='font-bold pt-1 text-lg text-[#00bfff]'>
             E-Gov & E-Com
@@ -435,9 +457,7 @@ const TechHomePage = () => {
         onMouseLeave={handleMouseLeave}
         className='p-2 bg-[#1a1a1a] border border-[#333] border-spacing-4 hover:border-blue-600 shadow-lg transition-shadow duration-300'
       >
-        {/* <AccordionSummary
-          aria-controls='panel2-content'
-        > */}
+       
 
         <AccordionSummary
               expandIcon={
@@ -477,72 +497,11 @@ const TechHomePage = () => {
 
     
 
-      <div className="w-[90%] mx-auto my-10">
-  <h1 className="text-center md:text-start text-5xl font-extrabold  bg-clip-text text-[var(--primary-color)] drop-shadow-lg md:ml-[9%]">
+      <div className="w-[90%] mx-auto ">
+  <h1 className="text-center md:text-start my-10 text-5xl font-extrabold  bg-clip-text text-[var(--primary-color)] drop-shadow-lg md:ml-[9%]">
     Our Promise
   </h1>
-  <div className="text-lg leading-relaxed mt-8 space-y-6">
- 
-
-    <div className="flex flex-row justify-center items-center bg-yellow-100 gap-6">
-  {/* Green Box with Expanding Effect */}
-  <div class="relative w-40 h-40 group">
-    {/* Green Box */}
-    <div class="w-full h-full  items-end bg-green-200  font-medium transition-all duration-500 transform group-hover:-translate-x-80 group-hover:-translate-y-10 group-hover:z-0 z-20">
-      <h2 class="font-semibold  text-white  ">Innovative Solutions</h2>
-    </div>
-
-    {/* Expanding Box */}
-    <div class="absolute left-full top-0 w-0 group-hover:w-96 h-full bg-white text-black opacity-0 group-hover:opacity-100 transition-all duration-500 shadow-lg p-4 z-10 -translate-x-full">
-      <p>
-        We pledge to bring creativity and innovation to every project. Expect software solutions that not only meet your current needs but also position you for future growth and adaptability in a rapidly evolving digital landscape.
-      </p>
-    </div>
   </div>
-
-  {/* Red Box */}
-  <div class="w-40 h-40 font-medium bg-red-400 text-white flex flex-col justify-center items-center relative z-20">
-    <h2 class="font-semibold text-blue-500 p-2 text-center">
-      Transparency and Communication
-    </h2>
-  </div>
-</div>
-
-     <div className="flex flex-row  bg-blue-400 justify-center items-center gap-4">
-    <div className="text-white w-40 h-40  font-medium bg-red-400">
-      <h2 className="font-semibold text-blue-500">Customization as per Your Needs</h2>
-      {/* <p>Your business is unique, and so should be your software. We commit to understanding your specific requirements and delivering tailor-made solutions that align precisely with your goals, ensuring maximum impact on your operations.</p> */}
-      
-    </div>
-
-    <div className="text-white w-40 h-40  font-medium bg-red-400">
-      <h2 className="font-semibold text-blue-500">On-Time Delivery</h2>
-      {/* <p>Time is of the essence, and we respect yours. Our promise includes delivering projects on time without compromising quality. We understand the importance of meeting deadlines to keep your business on track.</p> */}
-      
-    </div>
-    
-
-    </div>
-
-    <div className="flex flex-row  bg-blue-400 justify-center items-center gap-4">
-    <div className="text-white w-40 h-40  font-medium bg-red-400">
-      <h2 className="font-semibold text-blue-500">Quality Assurance</h2>
-      {/* <p>Your business is unique, and so should be your software. We commit to understanding your specific requirements and delivering tailor-made solutions that align precisely with your goals, ensuring maximum impact on your operations.</p> */}
-      
-    </div>
-
-    <div className="text-white w-40 h-40  font-medium bg-red-400">
-      <h2 className="font-semibold text-blue-500">Scalability and Future-Proofing</h2>
-      {/* <p>Time is of the essence, and we respect yours. Our promise includes delivering projects on time without compromising quality. We understand the importance of meeting deadlines to keep your business on track.</p> */}
-      
-    </div>
-    
-
-    </div>
-
-   
-  </div>
-</div>
  
 
 
