@@ -396,7 +396,7 @@ data-aos="fade-right" data-aos-duration="3000"
       <h1 className="text-center text-2xl mt-10 text-[#0060b5] font-bold">
         OUR   <TypingText word=" VISION"/>
       </h1>
-      <h2 className="mt-4 rounded-2xl  p-3  text-[var(--secondary-color)] drop-shadow-xl border-b-0  border-t-4 hover:border-t-0 italic  border-[#0060b5] hover:border-b-4 "
+      <h2 className="mt-4 rounded-2xl  p-3 drop-shadow-xl  border-t-4 italic  border-[#0060b5] "
        style={{backgroundColor:'rgb(0,0,0,0.3)'}}>
         {
           "To build trust by establishing a winning value chain system based on the ever changing surroundings, with the utmost focus on transforming lives and providing solutions."

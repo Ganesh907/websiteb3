@@ -126,10 +126,10 @@ const CareerPage = () => {
 
 
       <div className='h-[80vh] w-full  flex flex-col justify-center items-center'>
-        <h1 className='uppercase text-xl font-bold text-[var(--secondary-color)]'>for Job seekers</h1>
-        <h1 className='text-7xl mt-10 drop-shadow-xl text-[var(--primary-color)]'>Our Seeking Process</h1>
-        <p className='w-[50%] my-10 text-[var(--secondary-color)]'>Find jobs by checking job vacancy and recruitment websites, social media, professional and industry journals, and by going to career expos or promoting yourself at industry networking events.</p>
-        <Button variant="contained" size="large" sx={{ borderRadius: '20px', backgroundColor: 'var(--primary-color)' }}>
+        <h1 className='uppercase text-xl font-bold text-white'>for Job seekers</h1>
+        <h1 className='text-7xl mt-10 drop-shadow-xl text-[#0060b5]'>Our Seeking Process</h1>
+        <p className='w-[50%] my-10'>Find jobs by checking job vacancy and recruitment websites, social media, professional and industry journals, and by going to career expos or promoting yourself at industry networking events.</p>
+        <Button variant="contained" size="large" sx={{ borderRadius: '20px', backgroundColor: '#0060b5' }}>
           Discover Jobs</Button>
       </div>
 

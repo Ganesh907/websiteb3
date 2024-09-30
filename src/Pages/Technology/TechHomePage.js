@@ -321,7 +321,7 @@ const TechHomePage = () => {
 
 
           <div className='w-[90%] h-auto'>
-      <h1 className='text-center md:text-start md:ml-[9%] text-[var(--primary-color)] text-5xl font-bold m-[5px] font-montserrat md:mt-[40px]'>
+      <h1 className='text-center  md:text-start md:ml-[9%] text-white italic text-5xl  m-[5px]  md:mt-[40px]'>
         Industries we deal with
       </h1>
 
@@ -498,7 +498,7 @@ const TechHomePage = () => {
     
 
       <div className="w-[90%] mx-auto ">
-  <h1 className="text-center md:text-start my-10 text-5xl font-extrabold  bg-clip-text text-[var(--primary-color)] drop-shadow-lg md:ml-[9%]">
+  <h1 className="text-center md:text-start my-10 text-5xl italic  bg-clip-text text-[var(--primary-color)] drop-shadow-lg md:ml-[5%]">
     Our Promise
   </h1>
   </div>
