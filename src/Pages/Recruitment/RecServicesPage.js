@@ -340,13 +340,13 @@ import EnterpriseSolution from "../../Assets/Videos/enterprisesolution.mp4";
           </div>
 
           <div className="bg-[#0060b5]   m-2 mt-2 parentDiv md:w-[90%] border-sky-600 border-2 rounded-2xl md:h-96 md:relative md:left-20 md:shadow-2xl  md:p-3 md:rounded-xl md:mb-5 md:mt-5 md:transform md:transition-all  md:border-none ">
-            <div className="md:flex md:flex-col  ">
-              <div className="  ">
+            <div className="absolute left-16 top-16 ">
+              <div className="  flex flex-col justify-end items-center ">
                 <h4 className=" md:text-center heading border-solid border-black font-bold text-[30px] smallcontaint ml-1  md:pl-60 md:pr-32 text-white ">
                 Permanent Staffing
                 </h4>
                 <div className="md:pl-2  md:flex   ">
-                  <ul className="text-white list-disc leading-loose font md:h-[275px] md:pt-10 md:pl-80 ml-1 md:w-[100%] md:line-break:anywhere">
+                  <ul className="text-white list-disc leading-loose font md:h-[275px] md:pt-8 md:pl-80 ml-1 md:w-[100%] md:line-break:anywhere">
                   <li>We provide skilled, highly skilled, and professional recruitment services.</li>
                 <li>We work closely with a wide range of clients as an extension of their own teams.</li>
                 {/* <li>We deliver bespoke recruitment solutions tailored to your specific needs.</li> */}
@@ -422,11 +422,11 @@ import EnterpriseSolution from "../../Assets/Videos/enterprisesolution.mp4";
           </div>
 
           <div className="bg-white m-2  parentDiv md:w-[90%] mt-2  md:relative md:left-20 border-sky-600 border-2 md:shadow-2xl md:p-6 rounded-2xl  md:transform md:transition-all  md:border-none ">
-            <div className="md:flex md:flex-col md:h-80 md:items-start">
-              <h4 className="heading font-bold text-[30px] smallcontaint my-3 ml-1 md:pl-14 text-[#0060b5]">
+            <div className=" md:flex md:flex-col md:h-80 md:items-start md:justify-end ">
+              <h4 className="heading font-bold text-[30px] smallcontaint mt-6  ml-1 md:pl-14 text-[#0060b5]">
               Temporary Staffing
               </h4>
-              <ul className="text-black md:ml-8 list-disc leading-loose md:h-72 ml-1 font md:p-6 md:w-[74%] ">
+              <ul className="text-black md:ml-8  md:flex md:justify-start md:mt-6  md:flex-col list-disc leading-loose md:h-[200px] ml-1 font md:px-6 md:py-0 md:w-[74%] ">
               <li>Our Temporary Staffing can help you save valuable time and resources.</li>
               <li>Recruitment process, background checks, onboarding, and placement.</li>
               <li>Payroll management, monthly compliance, and other staffing needs.</li>
@@ -491,12 +491,12 @@ import EnterpriseSolution from "../../Assets/Videos/enterprisesolution.mp4";
 
           <div className="bg-[#0060b5]   m-2 mt-2 parentDiv md:w-[90%] border-sky-600 border-2 rounded-2xl md:h-96 md:relative md:left-20 md:shadow-2xl  md:p-3 md:rounded-xl md:mb-5 md:mt-5 md:transform md:transition-all  md:border-none ">
             <div className="md:flex md:flex-col  ">
-              <div className="  ">
-                <h4 className=" md:text-end border-solid border-black font-bold text-[30px] smallcontaint ml-1 md:ml-0  md:pl-56 md:pr-[110px] text-white ">
+              <div className="  absolute left-16 top-16">
+                <h4 className=" md:text-end border-solid border-black font-bold text-end text-[30px] smallcontaint ml-1 md:ml-0  md:pl-56 md:pr-[30px] text-white ">
                 Recruitment process outsourcing (RPO)
                 </h4>
                 <div className="md:pl-2  md:flex   ">
-                  <ul className="text-white list-disc leading-loose font md:h-[275px] md:pt-10 md:pl-80 ml-1 md:w-[100%] md:line-break:anywhere">
+                  <ul className="text-white list-disc  leading-loose font md:h-[275px] md:pt-8 md:pl-80 ml-1 md:w-[100%] md:line-break:anywhere">
                    <li>We offer Recruitment Process Outsourcing (RPO) services.</li>
                    <li>We take on the task of identifying potential candidates for your recruitment needs.</li>
                    <li>Our approach focuses on delivering well-suited candidates.</li>
@@ -537,320 +537,12 @@ import EnterpriseSolution from "../../Assets/Videos/enterprisesolution.mp4";
           </div>
         </div> 
 {/* //////////////////////////////////////////////////// */}
-      <div>
-
-        <h1 className="font-bold text-4xl text-center h-[10vh]" style={{ color: "var(--primary-color)" }}>
-          Our Promise
-        </h1>
-
-        {/* <div className='h-[90vh]  gap-10 flex p-10'>
-          <div className='w-full '>
-            <div className='p-5'  data-aos="fade-down"
-     data-aos-easing="linear"
-     data-aos-duration="1500">
-              <h1 className='text-md font-bold text-[var(--primary-color)] uppercase'>
-                Full End to end Delivery
-              </h1>
-
-              <ul className='list-disc'>
-                <li>Recruiters work closely with supervisors, handling end-to-end delivery.</li>
-                <li>Standardized process improves candidate presentation.</li>
-                <li>Responsibilities span from gathering requirements to candidate start date.</li>
-                <li>Prevents miscommunication and ensures faster delivery.</li>
-              </ul>
-
-            </div>
-            <div className='bg-green-200 h-1/3 w-full'  data-aos="fade-up"
-     data-aos-duration="3000">
-              <img src={RecServiceBackground} alt="" /></div>
-          </div>
-
-
-
-          <div className='w-full'>
-            <div className='bg-green-200 h-1/3 w-full'>
-              <img src={RecServiceBackground} alt="" /></div>
-            <div className='p-5'>
-              <h1 className='text-md font-bold text-[var(--primary-color)] uppercase'>
-                We assure a CLIENT to
-              </h1>
-              <ul className='list-disc'>
-                <li>Know what they need before any action.</li>
-                <li>Deploy right recruiters, right quantity for the right period.</li>
-                <li>Maintain confidentiality in all dealings across the value chain.</li>
-                <li>Meet their expectations perfectly.</li>
-              </ul>
-            </div>
-          </div>
-
-
-
-
-          <div className='w-full'>
-            <div className='p-5'>
-              <h1 className='text-md font-bold text-[var(--primary-color)] uppercase'>
-                We assure a CANDIDATE to
-              </h1>
-
-              <ul className='list-disc '>
-                <li>Take the time to understand your needs.</li>
-                <li>Refer only to genuine positions that suit your qualifications and experience.</li>
-                <li>Maintain confidentiality in all dealings.</li>
-                <li>Provide tailored recommendations based on your profile.</li>
-              </ul>
-            </div>
-            <div className='bg-green-200 h-1/3 w-full'>
-              <img src={RecServiceBackground} alt="" /></div>
-          </div>
-
-
-
-
-
-          <div className='w-full'>
-            <div className='bg-green-200 h-1/3 w-full'>
-              <img src={RecServiceBackground} alt="" /></div>
-            <div className='p-4'>
-              <h1 className='text-md font-bold text-[var(--primary-color)] uppercase'>
-                Competitive Rates & Delivery
-              </h1>
-
-              <ul className='list-disc'>
-                <li>Fast, accurate delivery in technology and HR solutions.</li>
-                <li>High standards with extra effort.</li>
-                <li>Best industry rates and long-term client focus.</li>
-                <li>Top value-for-money agency in a short time.</li>
-              </ul>
-
-            </div>
-
-          </div>
-
-
-
-        </div> */}
-
-        {/* ....................... */}
-        <div className='flex justify-evenly'>
-        <div className="border rounded-[10px] border-black w-[22%] h-[520px] p-4 bg-[#0060b5] transform transition-all duration-500 hover:-translate-y-3 hover:shadow-lg group relative" style={{ perspective: '1000px' }}>
-  <style jsx>{`
-    .rotate-y-360 {
-      transform: rotateY(0deg);
-      transition: transform 0.5s;
-      transform-style: preserve-3d;
-    }
-    .group:hover .rotate-y-360 {
-      transform: rotateY(360deg);
-    }
-  `}</style>
-  <div>
-    <div className="flex justify-between items-center">
-      {/* Image flipping 360 degrees from right to left on hover */}
-      <div className="relative w-[100px] h-[100px]">
-        <div className="absolute inset-0 rotate-y-360">
-          <img src={delivery} className="w-full h-full object-cover border-r-[50%] rounded" />
-        </div>
-      </div>
       
-      <h1
-        className="
-          text-6xl font-bold text-white
-          bg-clip-text
-          text-transparent
-          "
-        style={{
-          WebkitTextStroke: '2px white',
-        }}
-      >
-        01
-      </h1>
-    </div>
-  </div>
-
-  <div>
-    <h1 className="my-2 text-white font-bold">Full End to end Delivery</h1>
-    <ul className="list-disc leading-loose text-white ml-4" style={{ '--tw-marker-color': 'blue' }}>
-  <li className="marker:text-white">Recruiters manage the entire end-to-end delivery process.</li>
-  <li className="marker:text-white">Standardized process ensures better candidate presentation.</li>
-  <li className="marker:text-white">Recruiters handle requirements gathering to candidate start date.</li>
-  <li className="marker:text-white">Workflow prevents information loss during translation.</li>
-  <li className="marker:text-white">Streamlined process ensures faster delivery.</li>
-</ul>
-
-  </div>
-
-  {/* Underline at the bottom of the card */}
-  <div className="absolute bottom-0 left-6 w-[80%] h-1 bg-transparent group-hover:bg-blue-500 transition-all duration-500"></div>
-       </div>
-       {/* .................................. */}
-       <div className="border rounded-[10px] border-black w-[22%] h-[520px] p-4 bg-white transform transition-all duration-500 hover:-translate-y-3 hover:shadow-lg group relative" style={{ perspective: '1000px' }}>
-  <style jsx>{`
-    .rotate-y-360 {
-      transform: rotateY(0deg);
-      transition: transform 0.5s;
-      transform-style: preserve-3d;
-    }
-    .group:hover .rotate-y-360 {
-      transform: rotateY(360deg);
-    }
-  `}</style>
-  <div>
-    <div className="flex justify-between items-center">
-      {/* Image flipping 360 degrees from right to left on hover */}
-      <div className="relative w-[100px] h-[100px]">
-        <div className="absolute inset-0 rotate-y-360">
-          <img src={delivery} className="w-full h-full object-cover border-r-[50%] rounded" />
-        </div>
-      </div>
-      
-      <h1
-        className="
-          text-6xl font-bold text-white
-          bg-clip-text
-          text-transparent
-          "
-        style={{
-          WebkitTextStroke: '2px blue',
-        }}
-      >
-        02
-      </h1>
-    </div>
-  </div>
-
-  <div>
-    <h1 className="my-2 text-black font-bold"> We assure a CLIENT to</h1>
-    <ul className="list-disc leading-loose text-black ml-4" style={{ '--tw-marker-color': 'blue' }}>
-  <li className="marker:text-blue-500">Understand their requirements in detail before taking any action.</li>
-  <li className="marker:text-blue-500">Deploy the right recruiters, in the right quantity, for the right duration.</li>
-  <li className="marker:text-blue-500">Maintain confidentiality throughout all dealings across the value chain.</li>
-  <li className="marker:text-blue-500">Fulfill their requirements exactly as per their expectations.</li>
- 
-</ul>
-
-  </div>
-
-  {/* Underline at the bottom of the card */}
-  <div className="absolute bottom-0 left-6 w-[80%] h-1 bg-transparent group-hover:bg-[#0060b5] transition-all duration-500"></div>
-       </div>
-       {/* ........................... */}
-        
-      <div className="border rounded-[10px] border-black w-[22%] h-[520px] p-4 bg-white hover:bg-[#0060b5] transform transition-all duration-500 hover:-translate-y-3 hover:shadow-lg group relative" style={{ perspective: '1000px' }}>
-  <style jsx>{`
-    .rotate-y-360 {
-      transform: rotateY(0deg);
-      transition: transform 0.5s;
-      transform-style: preserve-3d;
-    }
-    .group:hover .rotate-y-360 {
-      transform: rotateY(360deg);
-    }
-  `}</style>
-  <div>
-    <div className="flex justify-between items-center">
-      {/* Image flipping 360 degrees from right to left on hover */}
-      <div className="relative w-[100px] h-[100px]">
-        <div className="absolute inset-0 rotate-y-360">
-          <img src={delivery} className="w-full h-full object-cover border-r-[50%] rounded" />
-        </div>
-      </div>
-      
-      <h1
-        className="
-          text-6xl font-bold bg-clip-text
-          text-transparent group-hover:text-white
-        "
-        style={{
-          WebkitTextStroke: '2px blue',
-        }}
-      >
-        03
-      </h1>
-    </div>
-  </div>
-
-  <div className='group-hover:text-white'>
-    <h1 className="my-2 text-black font-bold group-hover:text-white"> We assure a CANDIDATE to</h1>
-    <ul className="list-disc leading-loose text-black ml-4 group-hover:text-white" style={{ '--tw-marker-color': 'blue' }}>
-      <li className="marker:text-blue-500">Recruiters manage the entire end-to-end delivery process.</li>
-      <li className="marker:text-blue-500">Standardized process ensures better candidate presentation.</li>
-      <li className="marker:text-blue-500">Recruiters handle requirements gathering to candidate start date.</li>
-      <li className="marker:text-blue-500">Workflow prevents information loss during translation.</li>
-      <li className="marker:text-blue-500">Streamlined process ensures faster delivery.</li>
-    </ul>
-  </div>
-
-  {/* Underline at the bottom of the card */}
-  <div className="absolute bottom-0 left-6 w-[80%] h-1 bg-transparent group-hover:bg-blue-500 transition-all duration-500"></div>
-</div>
-
-
-
-       {/* ................ */}
-
-       <div className="border rounded-[10px] border-black w-[22%] h-[520px] p-4 bg-white transform transition-all duration-500 hover:-translate-y-3 hover:shadow-lg group relative" style={{ perspective: '1000px' }}>
-  <style jsx>{`
-    .rotate-y-360 {
-      transform: rotateY(0deg);
-      transition: transform 0.5s;
-      transform-style: preserve-3d;
-    }
-    .group:hover .rotate-y-360 {
-      transform: rotateY(360deg);
-    }
-  `}</style>
-  <div>
-    <div className="flex justify-between items-center">
-      {/* Image flipping 360 degrees from right to left on hover */}
-      <div className="relative w-[100px] h-[100px]">
-        <div className="absolute inset-0 rotate-y-360">
-          <img src={delivery} className="w-full h-full object-cover border-r-[50%] rounded" />
-        </div>
-      </div>
-      
-      <h1
-        className="
-          text-6xl font-bold text-white
-          bg-clip-text
-          text-transparent
-          "
-        style={{
-          WebkitTextStroke: '2px blue',
-        }}
-      >
-        04
-      </h1>
-    </div>
-  </div>
-
-  <div>
-    <h1 className="my-2 text-black font-bold">Competitive Rates & Delivery</h1>
-    <ul className="list-disc leading-loose text-black ml-4" style={{ '--tw-marker-color': 'blue' }}>
-  <li className="marker:text-blue-500">We are a delivery-based TECHNOLOGY and HR solutions startup that goes the extra mile.</li>
-  <li className="marker:text-blue-500">Known for fast and accurate delivery without compromising quality standards.</li>
-  <li className="marker:text-blue-500">At BitByBit, we offer the best industry rates, ensuring cost-effectiveness.</li>
-  <li className="marker:text-blue-500">Committed to building long-term relationships with our clients.</li>
-  {/* <li className="marker:text-blue-500">Recognized as one of the best value-for-money TECHNOLOGY and HR agencies in a short span.</li> */}
-</ul>
-
-  </div>
-
-  {/* Underline at the bottom of the card */}
-  <div className="absolute bottom-0 left-6 w-[80%] h-1 bg-transparent group-hover:bg-blue-500 transition-all duration-500"></div>
-       </div>
-        </div>
-        
-
-
-
-      </div>
 
       <div>
 
 
-        <p className='text-lg italic text-[var(--primary-color)] text-center m-5 underline pb-2' style={{ textDecorationSkip: 'ink', textDecorationThickness: '0.1em', textDecorationColor: 'currentColor', textUnderlineOffset: '0.4em' }}>
-          “At BitByBit, it’s all about YOU! Whether you’re hunting for a new full-time role or just need a temp role, our recruiters are here to help you out.”
-        </p>
+       
 
 
         {/*.............card-incomplete........  */}

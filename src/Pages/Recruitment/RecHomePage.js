@@ -5,7 +5,7 @@ import { Button } from '@mui/material';
 import Footer from '../../Components/CommonComponents/Footer';
 import jobinterview from '../../Assets/Videos/jobinterview.mp4'
 import HeroSection from '../../Components/CommonComponents/HeroSection';
-
+import delivery from '../../Assets/Images/delivery.png'
 const RecHomePage = () => {
   const searchIconSvg = `data:image/svg+xml;base64,${btoa(`
 
@@ -180,63 +180,21 @@ const RecHomePage = () => {
           Discover Jobs</Button>
       </div>
 
-      <h2 className='text-center text-5xl font-semibold mt-10  text-[var(--primary-color)]'>Related Services</h2>
-      <div className='my-10  flex justify-around'
-      >
-        <div className="sm:w-[20vw] border-2 shadow-md  border-white p-5 hover:translate-x-2 hover:shadow-lg rounded-lg" data-aos="zoom-in" data-aos-duration="700">
-
-          <div className="p-10 h-[50%] w-[80%] m-auto sm:w-auto">
-            <img src={AboutUs4} alt="" />
-          </div>
-          <div className="h-[50%] ">
-            <h1 className="font-bold text-center my-2 text-xl text-[var(--primary-color)]"> Permanent Placement</h1>
-            <p className='text-[var(--secondary-color)]'>  We help organisations hire expert full-time talent for middle,
-              senior and top level positions across diverse sectors.</p>
-
-          </div>
-        </div>
-
-        <div className="sm:w-[20vw] border-2 border-white shadow-md p-5 hover:translate-x-2 hover:shadow-lg rounded-lg" data-aos="zoom-in" data-aos-duration="700">
-
-          <div className="p-10 h-[50%] w-[80%] m-auto sm:w-auto">
-            <img src={AboutUs4} alt="" />
-          </div>
-          <div className="h-[50%] ">
-            <h1 className="font-bold text-center my-2 text-xl text-[var(--primary-color)]"> Staffing Solutions</h1>
-            <p className='text-[var(--secondary-color)]'>  Building an agile and flexible workforce requires an easy and fast
-              access to expert talent, available on short notice. We offer a pool of pre-screened
-              talent, hired on our rolls</p>
-
-          </div>
-        </div>
-        <div className="sm:w-[20vw] border-2 border-white p-5 shadow-md hover:translate-x-2 hover:shadow-lg rounded-lg" data-aos="zoom-in" data-aos-duration="700">
-
-          <div className="p-10 h-[50%] w-[80%] m-auto sm:w-auto">
-            <img src={AboutUs4} alt="" />
-          </div>
-          <div className="h-[50%] ">
-            <h1 className="font-bold text-center my-2 text-xl text-[var(--primary-color)]">Contract to Hire</h1>
-            <p className='text-[var(--secondary-color)]'>  Our Temp-to-Hire services allow organisations the opportunity to
-              evaluate a candidate over a period of time before on-boarding the candidate at the end of the
-              contract period.</p>
-
-          </div>
-        </div>
-      </div>
+     
 
 
 
 
-      <ul className='list-disc grid grid-cols-2 p-10 gap-3 '>
+      {/* <ul className='list-disc grid grid-cols-2 p-10 gap-3 '>
         <li>In a 24/7 economy, corporations have different needs.</li>
         <li>The way they work is changing and this also influences the skills and talent they need.</li>
         <li>Digital HR, new solutions, and tools are disrupting our market by drastically changing the way people connect to jobs and the role BitByBit plays in this space.</li>
         <li>Our approach embraces continuous innovation to stay ahead in a rapidly evolving job market, ensuring we meet emerging demands with agility and expertise.</li>
         <li>We have a team of young but highly knowledgeable and highly experienced professionals, which are well equipped to offer our clients the best HR solutions in the form of customized delivery.</li>
         <li>Clients and candidates expect to be served anywhere anytime and through various devices, in a way we never imagined it was possible earlier, ultimately influencing the way we work for our clients.</li>
-      </ul>
+      </ul> */}
 
-
+{/* ............................ */}
       <div className='my-10 '>
 
 <h1 className="font-bold text-xl text-center mt-10 text-[var(--primary-color)]" >
@@ -285,6 +243,319 @@ const RecHomePage = () => {
 </marquee> */}
 </div>
 
+{/* ....................... */}
+<div>
+
+<h1 className="font-bold text-4xl text-center h-[10vh]" style={{ color: "var(--primary-color)" }}>
+  Our Promise
+</h1>
+
+{/* <div className='h-[90vh]  gap-10 flex p-10'>
+  <div className='w-full '>
+    <div className='p-5'  data-aos="fade-down"
+data-aos-easing="linear"
+data-aos-duration="1500">
+      <h1 className='text-md font-bold text-[var(--primary-color)] uppercase'>
+        Full End to end Delivery
+      </h1>
+
+      <ul className='list-disc'>
+        <li>Recruiters work closely with supervisors, handling end-to-end delivery.</li>
+        <li>Standardized process improves candidate presentation.</li>
+        <li>Responsibilities span from gathering requirements to candidate start date.</li>
+        <li>Prevents miscommunication and ensures faster delivery.</li>
+      </ul>
+
+    </div>
+    <div className='bg-green-200 h-1/3 w-full'  data-aos="fade-up"
+data-aos-duration="3000">
+      <img src={RecServiceBackground} alt="" /></div>
+  </div>
+
+
+
+  <div className='w-full'>
+    <div className='bg-green-200 h-1/3 w-full'>
+      <img src={RecServiceBackground} alt="" /></div>
+    <div className='p-5'>
+      <h1 className='text-md font-bold text-[var(--primary-color)] uppercase'>
+        We assure a CLIENT to
+      </h1>
+      <ul className='list-disc'>
+        <li>Know what they need before any action.</li>
+        <li>Deploy right recruiters, right quantity for the right period.</li>
+        <li>Maintain confidentiality in all dealings across the value chain.</li>
+        <li>Meet their expectations perfectly.</li>
+      </ul>
+    </div>
+  </div>
+
+
+
+
+  <div className='w-full'>
+    <div className='p-5'>
+      <h1 className='text-md font-bold text-[var(--primary-color)] uppercase'>
+        We assure a CANDIDATE to
+      </h1>
+
+      <ul className='list-disc '>
+        <li>Take the time to understand your needs.</li>
+        <li>Refer only to genuine positions that suit your qualifications and experience.</li>
+        <li>Maintain confidentiality in all dealings.</li>
+        <li>Provide tailored recommendations based on your profile.</li>
+      </ul>
+    </div>
+    <div className='bg-green-200 h-1/3 w-full'>
+      <img src={RecServiceBackground} alt="" /></div>
+  </div>
+
+
+
+
+
+  <div className='w-full'>
+    <div className='bg-green-200 h-1/3 w-full'>
+      <img src={RecServiceBackground} alt="" /></div>
+    <div className='p-4'>
+      <h1 className='text-md font-bold text-[var(--primary-color)] uppercase'>
+        Competitive Rates & Delivery
+      </h1>
+
+      <ul className='list-disc'>
+        <li>Fast, accurate delivery in technology and HR solutions.</li>
+        <li>High standards with extra effort.</li>
+        <li>Best industry rates and long-term client focus.</li>
+        <li>Top value-for-money agency in a short time.</li>
+      </ul>
+
+    </div>
+
+  </div>
+
+
+
+</div> */}
+
+{/* ....................... */}
+<div className='flex justify-evenly'>
+<div className="border rounded-[10px] border-black w-[22%] h-[520px] p-4 bg-[#0060b5] transform transition-all duration-500 hover:-translate-y-3 hover:shadow-lg group relative" style={{ perspective: '1000px' }}>
+<style jsx>{`
+.rotate-y-360 {
+transform: rotateY(0deg);
+transition: transform 0.5s;
+transform-style: preserve-3d;
+}
+.group:hover .rotate-y-360 {
+transform: rotateY(360deg);
+}
+`}</style>
+<div>
+<div className="flex justify-between items-center">
+{/* Image flipping 360 degrees from right to left on hover */}
+<div className="relative w-[100px] h-[100px]">
+<div className="absolute inset-0 rotate-y-360">
+  <img src={delivery} className="w-full h-full object-cover border-r-[50%] rounded" />
+</div>
+</div>
+
+<h1
+className="
+  text-6xl font-bold text-white
+  bg-clip-text
+  text-transparent
+  "
+style={{
+  WebkitTextStroke: '2px white',
+}}
+>
+01
+</h1>
+</div>
+</div>
+
+<div>
+<h1 className="my-2 text-white font-bold">Full End to end Delivery</h1>
+<ul className="list-disc leading-loose text-white ml-4" style={{ '--tw-marker-color': 'blue' }}>
+<li className="marker:text-white">Recruiters manage the entire end-to-end delivery process.</li>
+<li className="marker:text-white">Standardized process ensures better candidate presentation.</li>
+<li className="marker:text-white">Recruiters handle requirements gathering to candidate start date.</li>
+<li className="marker:text-white">Workflow prevents information loss during translation.</li>
+<li className="marker:text-white">Streamlined process ensures faster delivery.</li>
+</ul>
+
+</div>
+
+{/* Underline at the bottom of the card */}
+<div className="absolute bottom-0 left-6 w-[80%] h-1 bg-transparent group-hover:bg-blue-500 transition-all duration-500"></div>
+</div>
+{/* .................................. */}
+<div className="border rounded-[10px] border-black w-[22%] h-[520px] p-4 bg-white transform transition-all duration-500 hover:-translate-y-3 hover:shadow-lg group relative" style={{ perspective: '1000px' }}>
+<style jsx>{`
+.rotate-y-360 {
+transform: rotateY(0deg);
+transition: transform 0.5s;
+transform-style: preserve-3d;
+}
+.group:hover .rotate-y-360 {
+transform: rotateY(360deg);
+}
+`}</style>
+<div>
+<div className="flex justify-between items-center">
+{/* Image flipping 360 degrees from right to left on hover */}
+<div className="relative w-[100px] h-[100px]">
+<div className="absolute inset-0 rotate-y-360">
+  <img src={delivery} className="w-full h-full object-cover border-r-[50%] rounded" />
+</div>
+</div>
+
+<h1
+className="
+  text-6xl font-bold text-white
+  bg-clip-text
+  text-transparent
+  "
+style={{
+  WebkitTextStroke: '2px blue',
+}}
+>
+02
+</h1>
+</div>
+</div>
+
+<div>
+<h1 className="my-2 text-black font-bold"> We assure a CLIENT to</h1>
+<ul className="list-disc leading-loose text-black ml-4" style={{ '--tw-marker-color': 'blue' }}>
+<li className="marker:text-blue-500">Understand their requirements in detail before taking any action.</li>
+<li className="marker:text-blue-500">Deploy the right recruiters, in the right quantity, for the right duration.</li>
+<li className="marker:text-blue-500">Maintain confidentiality throughout all dealings across the value chain.</li>
+<li className="marker:text-blue-500">Fulfill their requirements exactly as per their expectations.</li>
+
+</ul>
+
+</div>
+
+{/* Underline at the bottom of the card */}
+<div className="absolute bottom-0 left-6 w-[80%] h-1 bg-transparent group-hover:bg-[#0060b5] transition-all duration-500"></div>
+</div>
+{/* ........................... */}
+
+<div className="border rounded-[10px] border-black w-[22%] h-[520px] p-4 bg-white hover:bg-[#0060b5] transform transition-all duration-500 hover:-translate-y-3 hover:shadow-lg group relative" style={{ perspective: '1000px' }}>
+<style jsx>{`
+.rotate-y-360 {
+transform: rotateY(0deg);
+transition: transform 0.5s;
+transform-style: preserve-3d;
+}
+.group:hover .rotate-y-360 {
+transform: rotateY(360deg);
+}
+`}</style>
+<div>
+<div className="flex justify-between items-center">
+{/* Image flipping 360 degrees from right to left on hover */}
+<div className="relative w-[100px] h-[100px]">
+<div className="absolute inset-0 rotate-y-360">
+  <img src={delivery} className="w-full h-full object-cover border-r-[50%] rounded" />
+</div>
+</div>
+
+<h1
+className="
+  text-6xl font-bold bg-clip-text
+  text-transparent group-hover:text-white
+"
+style={{
+  WebkitTextStroke: '2px blue',
+}}
+>
+03
+</h1>
+</div>
+</div>
+
+<div className='group-hover:text-white'>
+<h1 className="my-2 text-black font-bold group-hover:text-white"> We assure a CANDIDATE to</h1>
+<ul className="list-disc leading-loose text-black ml-4 group-hover:text-white" style={{ '--tw-marker-color': 'blue' }}>
+<li className="marker:text-blue-500">Recruiters manage the entire end-to-end delivery process.</li>
+<li className="marker:text-blue-500">Standardized process ensures better candidate presentation.</li>
+<li className="marker:text-blue-500">Recruiters handle requirements gathering to candidate start date.</li>
+<li className="marker:text-blue-500">Workflow prevents information loss during translation.</li>
+<li className="marker:text-blue-500">Streamlined process ensures faster delivery.</li>
+</ul>
+</div>
+
+{/* Underline at the bottom of the card */}
+<div className="absolute bottom-0 left-6 w-[80%] h-1 bg-transparent group-hover:bg-blue-500 transition-all duration-500"></div>
+</div>
+
+
+
+{/* ................ */}
+
+<div className="border rounded-[10px] border-black w-[22%] h-[520px] p-4 bg-white transform transition-all duration-500 hover:-translate-y-3 hover:shadow-lg group relative" style={{ perspective: '1000px' }}>
+<style jsx>{`
+.rotate-y-360 {
+transform: rotateY(0deg);
+transition: transform 0.5s;
+transform-style: preserve-3d;
+}
+.group:hover .rotate-y-360 {
+transform: rotateY(360deg);
+}
+`}</style>
+<div>
+<div className="flex justify-between items-center">
+{/* Image flipping 360 degrees from right to left on hover */}
+<div className="relative w-[100px] h-[100px]">
+<div className="absolute inset-0 rotate-y-360">
+  <img src={delivery} className="w-full h-full object-cover border-r-[50%] rounded" />
+</div>
+</div>
+
+<h1
+className="
+  text-6xl font-bold text-white
+  bg-clip-text
+  text-transparent
+  "
+style={{
+  WebkitTextStroke: '2px blue',
+}}
+>
+04
+</h1>
+</div>
+</div>
+
+<div>
+<h1 className="my-2 text-black font-bold">Competitive Rates & Delivery</h1>
+<ul className="list-disc leading-loose text-black ml-4" style={{ '--tw-marker-color': 'blue' }}>
+<li className="marker:text-blue-500">We are a delivery-based TECHNOLOGY and HR solutions startup that goes the extra mile.</li>
+<li className="marker:text-blue-500">Known for fast and accurate delivery without compromising quality standards.</li>
+<li className="marker:text-blue-500">At BitByBit, we offer the best industry rates, ensuring cost-effectiveness.</li>
+<li className="marker:text-blue-500">Committed to building long-term relationships with our clients.</li>
+{/* <li className="marker:text-blue-500">Recognized as one of the best value-for-money TECHNOLOGY and HR agencies in a short span.</li> */}
+</ul>
+
+</div>
+
+{/* Underline at the bottom of the card */}
+<div className="absolute bottom-0 left-6 w-[80%] h-1 bg-transparent group-hover:bg-blue-500 transition-all duration-500"></div>
+</div>
+</div>
+
+
+
+
+</div>
+
+<p className='text-lg italic text-white text-[var(--primary-color)] text-center m-5 underline pb-2' style={{ textDecorationSkip: 'ink', textDecorationThickness: '0.1em', textDecorationColor: 'currentColor', textUnderlineOffset: '0.4em' }}>
+          “At BitByBit, it’s all about YOU! Whether you’re hunting for a new full-time role or just need a temp role, our recruiters are here to help you out.”
+        </p>
+{/* .......................... */}
       <div className='recr-footer'>
         <Footer /></div>
 
