@@ -8,6 +8,7 @@ import Footer from "../../Components/CommonComponents/Footer";
 import TypingTextAnimation from "../../Components/CommonComponents/TypingTextAnimation";
 import SplitCard from "../../Components/TechServicesPage/SplitCard";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+// import javalogo from "../../Assets/Images/java1.png";
 
 
 

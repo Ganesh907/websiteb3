@@ -200,7 +200,7 @@ const RecHomePage = () => {
 {/* ....................... */}
 <div>
 
-<h1 className="font-bold text-4xl text-center h-[10vh] text-[#0060b5]">
+<h1 className=" italic text-5xl mb-8 text-center h-[10vh] text-white">
   Our Promise
 </h1>
 

@@ -512,7 +512,7 @@ const TechHomePage = () => {
             </div>
 
             {/* Underline at the bottom of the card */}
-            <div className="absolute bottom-0 left-6 w-[80%] h-1 bg-transparent group-hover:bg-white transition-all duration-500"></div>
+            <div className="absolute bottom-0 left-6 w-[80%] m-2 h-1 bg-transparent group-hover:bg-white transition-all duration-500"></div>
           </div>
           {/* .................................. */}
           <div
@@ -584,7 +584,7 @@ const TechHomePage = () => {
             </div>
 
             {/* Underline at the bottom of the card */}
-            <div className="absolute bottom-0 left-6 w-[80%] h-1 bg-transparent group-hover:bg-[#0060b5] transition-all duration-500"></div>
+            <div className="absolute bottom-0 m-2 left-6 w-[80%] h-1 bg-transparent group-hover:bg-[#0060b5] transition-all duration-500"></div>
           </div>
           {/* ........................... */}
 
@@ -656,7 +656,7 @@ const TechHomePage = () => {
             </div>
 
             {/* Underline at the bottom of the card */}
-            <div className="absolute bottom-0 left-6 w-[80%] h-1 bg-transparent group-hover:bg-white transition-all duration-500"></div>
+            <div className="absolute bottom-0 left-6 w-[80%] h-1 m-2 bg-transparent group-hover:bg-white transition-all duration-500"></div>
           </div>
 
           {/* ................ */}
@@ -732,7 +732,7 @@ const TechHomePage = () => {
               </ul>
             </div>
 
-            <div className="absolute bottom-0 left-6 w-[80%] h-1 bg-transparent group-hover:bg-blue-500  transition-all duration-500"></div>
+            <div className="absolute bottom-0 left-6 w-[80%] h-1 m-2 bg-transparent group-hover:bg-blue-500  transition-all duration-500"></div>
           </div>
 
           <div
@@ -799,7 +799,7 @@ const TechHomePage = () => {
               </ul>
             </div>
 
-            <div className="absolute bottom-0 left-6 w-[80%] h-1 bg-transparent group-hover:bg-white transition-all duration-500"></div>
+            <div className="absolute bottom-0 left-6 w-[80%] h-1 m-2 bg-transparent group-hover:bg-white transition-all duration-500"></div>
           </div>
 
           <div
@@ -868,7 +868,7 @@ const TechHomePage = () => {
               </ul>
             </div>
 
-            <div className="absolute bottom-0 left-6 w-[80%] h-1 bg-transparent group-hover:bg-blue-500 transition-all duration-500"></div>
+            <div className="absolute bottom-0 left-6 w-[80%] h-1 m-2 bg-transparent group-hover:bg-blue-500 transition-all duration-500"></div>
           </div>
         </div>
       </div>

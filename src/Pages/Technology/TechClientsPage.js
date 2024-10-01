@@ -377,10 +377,10 @@ const TechClientsPage = () => {
 
 
       <div className="flex flex-col items-center justify-center py-10">
-  <h2 className="text-[#0060b5] text-5xl font-bold my-6 drop-shadow-lg">
+  <h2 className="text-white text-5xl italic my-6 drop-shadow-lg">
     Our Reputed Client
   </h2>
-  <p className="text-white italic text-lg mb-8 text-center">
+  <p className="text-[#0060b5] italic text-lg mb-8 text-center">
     We partner with leading organizations to deliver world-class solutions and
     support. <br />
     <span className="text-yellow-400 text-xl">
@@ -538,7 +538,7 @@ const TechClientsPage = () => {
           data-aos-duration="1000"
           data-aos-delay="100"
           data-aos-offset="100"
-          className="heading2 text-[#0060b5] text-4xl font-bold"
+          className=" text-white text-5xl italic "
         >
           REDEFINE YOUR SUCCESS STORY WITH US
         </h1>
