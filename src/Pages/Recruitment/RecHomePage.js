@@ -5,7 +5,10 @@ import { Button } from '@mui/material';
 import Footer from '../../Components/CommonComponents/Footer';
 import jobinterview from '../../Assets/Videos/jobinterview.mp4'
 import HeroSection from '../../Components/CommonComponents/HeroSection';
-import delivery from '../../Assets/Images/delivery.png'
+import delivery from '../../Assets/Images/deliveryicon.png'
+import clienticon from '../../Assets/Images/clienticon1.png'
+import candidate from '../../Assets/Images/candidateicon.png'
+import rating from '../../Assets/Images/ratingicon.png'
 const RecHomePage = () => {
   const searchIconSvg = `data:image/svg+xml;base64,${btoa(`
 
@@ -292,8 +295,8 @@ data-aos-duration="3000">
 </div> */}
 
 {/* ....................... */}
-<div className='flex justify-evenly'>
-<div className="border rounded-[10px] border-black w-[22%] h-[520px] p-4 bg-[#0060b5] transform transition-all duration-500 hover:-translate-y-3 hover:shadow-lg group relative" style={{ perspective: '1000px' }}>
+<div className='md:flex md:justify-evenly md:flex-row md:gap-0 gap-2 md:p-0 p-2 flex flex-col justify-center items-center'>
+<div className="border rounded-[10px] border-black w-full  md:w-[22%] h-[520px] p-4 bg-[#0060b5] transform transition-all duration-500 hover:-translate-y-3 hover:shadow-lg group relative" style={{ perspective: '1000px' }}>
 <style jsx>{`
 .rotate-y-360 {
 transform: rotateY(0deg);
@@ -309,13 +312,13 @@ transform: rotateY(360deg);
 {/* Image flipping 360 degrees from right to left on hover */}
 <div className="relative w-[100px] h-[100px]">
 <div className="absolute inset-0 rotate-y-360">
-  <img src={delivery} className="w-full h-full object-cover border-r-[50%] rounded" />
+  <img src={delivery} className="w-24 h-24 object-cover border-r-[50%] rounded" />
 </div>
 </div>
 
 <h1
 className="
-  text-6xl font-bold text-white
+  text-6xl font-bold text-[#0060B5]
   bg-clip-text
   text-transparent
   "
@@ -344,7 +347,7 @@ style={{
 <div className="absolute bottom-0 left-6 w-[80%] h-1 m-2 bg-transparent group-hover:bg-white transition-all duration-500"></div>
 </div>
 {/* .................................. */}
-<div className="border rounded-[10px] border-black w-[22%] h-[520px] p-4 bg-white transform transition-all duration-500 hover:-translate-y-3 hover:shadow-lg group relative" style={{ perspective: '1000px' }}>
+<div className="border rounded-[10px] border-black md:w-[22%] h-[520px] p-4 bg-white transform transition-all duration-500 hover:-translate-y-3 hover:shadow-lg group relative" style={{ perspective: '1000px' }}>
 <style jsx>{`
 .rotate-y-360 {
 transform: rotateY(0deg);
@@ -360,7 +363,7 @@ transform: rotateY(360deg);
 {/* Image flipping 360 degrees from right to left on hover */}
 <div className="relative w-[100px] h-[100px]">
 <div className="absolute inset-0 rotate-y-360">
-  <img src={delivery} className="w-full h-full object-cover border-r-[50%] rounded" />
+  <img src={clienticon} className="w-full h-full object-cover rounded-full " />
 </div>
 </div>
 
@@ -371,7 +374,7 @@ className="
   text-transparent
   "
 style={{
-  WebkitTextStroke: '2px blue',
+  WebkitTextStroke: '2px #0060B5',
 }}
 >
 02
@@ -396,7 +399,7 @@ style={{
 </div>
 {/* ........................... */}
 
-<div className="border rounded-[10px] border-black w-[22%] h-[520px] p-4 bg-[#0060b5] transform transition-all duration-500 hover:-translate-y-3 hover:shadow-lg group relative" style={{ perspective: '1000px' }}>
+<div className="border rounded-[10px] border-black md:w-[22%] h-[520px] p-4 bg-[#0060b5] transform transition-all duration-500 hover:-translate-y-3 hover:shadow-lg group relative" style={{ perspective: '1000px' }}>
 <style jsx>{`
 .rotate-y-360 {
 transform: rotateY(0deg);
@@ -412,17 +415,18 @@ transform: rotateY(360deg);
 {/* Image flipping 360 degrees from right to left on hover */}
 <div className="relative w-[100px] h-[100px]">
 <div className="absolute inset-0 rotate-y-360">
-  <img src={delivery} className="w-full h-full object-cover border-r-[50%] rounded" />
+  <img src={candidate} className="w-24 h-24 object-cover  rounded-full " />
 </div>
 </div>
 
 <h1
 className="
-  text-6xl font-bold bg-clip-text
-  text-transparent text-white
-"
+  text-6xl font-bold text-[#0060B5]
+  bg-clip-text
+  text-transparent
+  "
 style={{
-  WebkitTextStroke: '2px blue',
+  WebkitTextStroke: '2px white',
 }}
 >
 03
@@ -449,7 +453,7 @@ style={{
 
 {/* ................ */}
 
-<div className="border rounded-[10px] border-black w-[22%] h-[520px] p-4 bg-white transform transition-all duration-500 hover:-translate-y-3 hover:shadow-lg group relative" style={{ perspective: '1000px' }}>
+<div className="border rounded-[10px] border-black md:w-[22%] h-[520px] p-4 bg-white transform transition-all duration-500 hover:-translate-y-3 hover:shadow-lg group relative" style={{ perspective: '1000px' }}>
 <style jsx>{`
 .rotate-y-360 {
 transform: rotateY(0deg);
@@ -465,7 +469,7 @@ transform: rotateY(360deg);
 {/* Image flipping 360 degrees from right to left on hover */}
 <div className="relative w-[100px] h-[100px]">
 <div className="absolute inset-0 rotate-y-360">
-  <img src={delivery} className="w-full h-full object-cover border-r-[50%] rounded" />
+  <img src={rating} className="w-24 h-24 object-cover bg-[#0060b5] rounded-full p-3" />
 </div>
 </div>
 
@@ -476,7 +480,7 @@ className="
   text-transparent
   "
 style={{
-  WebkitTextStroke: '2px blue',
+  WebkitTextStroke: '2px #0060B5',
 }}
 >
 04

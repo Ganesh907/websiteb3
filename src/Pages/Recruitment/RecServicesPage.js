@@ -359,7 +359,7 @@ import Recruitericon3 from "../../Assets/Images/Recruitment3.png";
 <div
           // data-aos="fade-up"
           data-aos-duration="4000"
-          className="md:mx-auto md:w-10/12  md:relative containt "
+          className="md:mx-auto md:w-10/12  md:relative containt  "
         >
           <div
             data-aos="fade-right"
@@ -580,8 +580,8 @@ import Recruitericon3 from "../../Assets/Images/Recruitment3.png";
 {/* //////////////////////////////////////////////////// */}
 <div className='my-10 '>
 
-<h1 className="italic text-5xl text-center mt-10 text-white" >
-  B3 EXPERTISE IN IT RECRUITMENT
+<h1 className="italic text-5xl text-center mt-14 mb-5 text-white" >
+  B3 Expertise In IT Recruitment
 </h1>
 
 
