@@ -69,7 +69,7 @@ function Corevalues() {
           <div className='h-10 w-10 flex justify-center items-center font-bold rounded-full bg-[#0060b5] border-2 border-white shadow-sm shadow-black text-white animate-pulse '>5</div>
           <h1 className='text-xl uppercase my-2 font-semibold  '>Accountability</h1>
           <p className='italic border-t-2  border-[#0060b5] rounded-2xl py-2'
-            style={{backgroundColor:'rgb(0,0,0,0.3)'}}>We take responsibility for our actions and deliver on our promisesr every time.</p>
+            style={{backgroundColor:'rgb(0,0,0,0.3)'}}>We take responsibility for our actions and deliver on our promises every time.</p>
         </div>
 
       </div>

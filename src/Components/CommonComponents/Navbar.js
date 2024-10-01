@@ -63,8 +63,8 @@ function Header() {
 
   return (
     <nav
-      className={`fixed top-2 left-1/2 transform -translate-x-1/2 z-50 transition-all px-10 duration-300 w-[85%] flex justify-between items-center h-[65px] ${
-        scrolled ? "bg-black shadow-lg rounded-lg" : "bg-transparent"
+      className={`fixed top-0 left-1/2 transform -translate-x-1/2 z-50 transition-all px-5 duration-300 w-[100vw]   flex justify-between items-center h-[65px] ${
+        scrolled ? "bg-black shadow-lg  border-b-[1px] border-white" : "bg-transparent border-b-[1px] border-transparent"
       } ${showNavbar ? "top-0" : "-top-[100px]"}`}
       style={{ zIndex: 100 }}
     >
