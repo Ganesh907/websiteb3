@@ -57,20 +57,22 @@ export const ContactForm2 = () => {
             });
         }
     };
+    const linkClass = "group relative inline-flex items-center overflow-hidden px-2 py-2 transition-colors duration-300 ";
+
 
     return (
-        <div className='flex justify-center p-5 md:p-0 md:py-5 items-center w-auto  text-white rounded-md'
+        <div className='flex justify-center p-5 md:p-0 md:py-5 items-center w-auto md:scale-95  text-white rounded-md'
             style={{
                 backgroundColor: 'rgb(0,0,0,0.4)'
             }}>
             <form className='text-center text-white' onSubmit={handleSubmit}>
-                <h1 className='font-bold text-4xl drop-shadow-lg text-yellow-400'>Contact Us</h1>
+                <h1 className='font-bold text-4xl drop-shadow-lg text-yellow-400 '>Contact Us</h1>
                 <h2 className='font-semibold mt-2 text-base text-white'>
                     Any question or remarks? Just write us a message!
                 </h2>
-                <p className='font-semibold text-sm text-yellow-400'>Fill up the form and our team will get back to you within 24 hours.</p>
+                {/* <p className='font-semibold text-sm text-yellow-400'>Fill up the form and our team will get back to you within 24 hours.</p> */}
 
-                <div className='grid grid-cols-1 gap-10 mt-8 mb-8'>
+                <div className='grid grid-cols-1 gap-10 mt-4 mb-8'>
                     {/* Full Name Field */}
                     <Box display="flex" alignItems="center">
                         <PersonIcon style={{ color: 'white', marginRight: '10px', marginTop: '14px' }} />
@@ -182,7 +184,7 @@ export const ContactForm2 = () => {
                         }}
                     />
                 </Box>
-
+{/* 
                 <Button
                     variant="contained"
                     sx={{ backgroundColor: "#0060b5" }}
@@ -190,7 +192,25 @@ export const ContactForm2 = () => {
                     fullWidth
                 >
                     SEND MESSAGE
-                </Button>
+                </Button> */}
+
+
+
+
+<button
+  className={`group relative border-transparent font-semibold rounded-md bg-yellow-400 text-blacktransition-all duration-300 ${linkClass}`}
+>
+  <span className="relative z-10 text-black  group-hover:text-white">Send Message</span>
+  <span className="absolute inset-y-0 -left-1 w-full bg-[#0060b5] translate-x-[-100%] group-hover:translate-x-1 transition-transform duration-500 ease-in-out z-0"></span>
+</button>
+
+      
+             
+                {/* <span className="ml-2 relative z-10 transition-transform group-hover:translate-x-1">&rarr;</span> */}
+      
+  
+  
+
             </form>
         </div>
     );
