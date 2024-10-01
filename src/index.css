@@ -30,7 +30,8 @@ body {
 
 /* Width of the scrollbar */
 ::-webkit-scrollbar {
-  width: 5px; /* Change the width */
+  width: 4px; /* Change the width */
+  height: 4px;
 }
 
 /* Track of the scrollbar */
@@ -47,7 +48,8 @@ body {
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background-color: blue; /* Darker scrollbar on hover */
+  background-color: #0060b5;
+   /* Darker scrollbar on hover */
 }
 
 
