@@ -17,7 +17,12 @@ import HeroSection from "../../Components/CommonComponents/HeroSection";
 import "./TechServicesPage.css";
 import delivery from "../../Assets/Images/delivery.png";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
-
+import innovative from "../../Assets/Images/innovative.png";
+import transperency from "../../Assets/Images/transparency.png";
+import customization from "../../Assets/Images/customization.png";
+import ontimedelivery from "../../Assets/Images/ontime (2).png";
+import Quality from "../../Assets/Images/quality.png";
+import scalable from "../../Assets/Images/scalable (2).png";
 import "./TechServicesPage.css";
 
 const TechHomePage = () => {
@@ -73,7 +78,6 @@ const TechHomePage = () => {
     return () => observer.disconnect();
   }, []);
 
-
   const linesBank = [
     "Expertise in secure and efficient software for the BFSI sector.",
     "Financial transactions management solutions.",
@@ -102,8 +106,6 @@ const TechHomePage = () => {
     "Telemedicine platforms for remote patient care.",
     "Healthcare data analytics to improve patient care and operations.",
   ];
-
-  
 
   const handleMouseEnter = (panel) => {
     setExpanded(panel); // Expand the accordion on hover
@@ -461,15 +463,15 @@ const TechHomePage = () => {
                 <div className="relative w-[100px] h-[100px]">
                   <div className="absolute inset-0 rotate-y-360">
                     <img
-                      src={delivery}
-                      className="w-full h-full object-cover border-r-[50%] rounded"
+                      src={innovative}
+                      className="w-full h-full p-2 object-cover border-r-[50%] "
                     />
                   </div>
                 </div>
 
                 <h1
                   className="
-  text-6xl font-bold text-white
+  text-6xl font-bold 
   bg-clip-text
   text-transparent
   "
@@ -535,8 +537,8 @@ const TechHomePage = () => {
                 <div className="relative w-[100px] h-[100px]">
                   <div className="absolute inset-0 rotate-y-360">
                     <img
-                      src={delivery}
-                      className="w-full h-full object-cover border-r-[50%] rounded"
+                      src={transperency}
+                      className="w-24 h-24 p-2 mt-1 object-cover border-r-[50%] "
                     />
                   </div>
                 </div>
@@ -548,7 +550,7 @@ const TechHomePage = () => {
   text-transparent
   "
                   style={{
-                    WebkitTextStroke: "2px blue",
+                    WebkitTextStroke: "2px #0060b5",
                   }}
                 >
                   02
@@ -608,17 +610,18 @@ const TechHomePage = () => {
                 <div className="relative w-[100px] h-[100px]">
                   <div className="absolute inset-0 rotate-y-360">
                     <img
-                      src={delivery}
-                      className="w-full h-full object-cover border-r-[50%] rounded"
+                      src={customization}
+                      className="w-full h-full p-2  object-cover border-r-[50%] rounded-full"
                     />
                   </div>
                 </div>
 
                 <h1
                   className="
-  text-6xl font-bold bg-clip-text
-  text-transparent text-white
-"
+  text-6xl font-bold 
+  bg-clip-text
+  text-transparent
+  "
                   style={{
                     WebkitTextStroke: "2px white",
                   }}
@@ -683,8 +686,8 @@ const TechHomePage = () => {
                 <div className="relative w-[100px] h-[100px]">
                   <div className="absolute inset-0 rotate-y-360">
                     <img
-                      src={delivery}
-                      className="w-full h-full object-cover border-r-[50%] rounded"
+                      src={ontimedelivery}
+                      className="w-full h-full p-2  object-cover border-r-[50%] "
                     />
                   </div>
                 </div>
@@ -696,7 +699,7 @@ const TechHomePage = () => {
   text-transparent
   "
                   style={{
-                    WebkitTextStroke: "2px blue",
+                    WebkitTextStroke: "2px #0060b5",
                   }}
                 >
                   04
@@ -754,15 +757,15 @@ const TechHomePage = () => {
                 <div className="relative w-[100px] h-[100px]">
                   <div className="absolute inset-0 rotate-y-360">
                     <img
-                      src={delivery}
-                      className="w-full h-full object-cover border-r-[50%] rounded"
+                      src={Quality}
+                      className="w-full h-full p-2 object-cover border-r-[50%] rounded-full"
                     />
                   </div>
                 </div>
 
                 <h1
                   className="
-  text-6xl font-bold text-white
+  text-6xl font-bold 
   bg-clip-text
   text-transparent
   "
@@ -821,8 +824,8 @@ const TechHomePage = () => {
                 <div className="relative w-[100px] h-[100px]">
                   <div className="absolute inset-0 rotate-y-360">
                     <img
-                      src={delivery}
-                      className="w-full h-full object-cover border-r-[50%] rounded"
+                      src={scalable}
+                      className="w-22 h-22 p-2 mt-2 object-cover border-r-[50%]  "
                     />
                   </div>
                 </div>
@@ -834,7 +837,7 @@ const TechHomePage = () => {
   text-transparent
   "
                   style={{
-                    WebkitTextStroke: "2px blue",
+                    WebkitTextStroke: "2px #0060b5",
                   }}
                 >
                   06

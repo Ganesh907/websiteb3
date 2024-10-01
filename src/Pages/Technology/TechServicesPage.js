@@ -62,7 +62,7 @@ const TechServicesPage = (props) => {
 
       <div className="my-10">
         <h1 className="italic text-center mt-10 text-white text-5xl m-[5px] md:mt-[40px]">
-          B3 Expertise In IT Skills
+        Redefining IT Skill Expertise
         </h1>
 
         <marquee

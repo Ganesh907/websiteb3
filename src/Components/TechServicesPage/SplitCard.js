@@ -9,14 +9,14 @@ import nodelogo from "../../Assets/Images/nodejs .png";
 import javalogo from "../../Assets/Images/java1.png";
 import kotline from "../../Assets/Images/Kotlin_Icon.png";
 import flutter from "../../Assets/Images/flutter.png";
-import enterpriselogo from "../../Assets/Images/computer.png";
-import digital from "../../Assets/Images/digital (1).png";
-import solution from "../../Assets/Images/solution1.png";
+import enterpriselogo from "../../Assets/Images/enterp.png";
+import digital from "../../Assets/Images/enterprisesol.png";
+import solution from "../../Assets/Images/architecture (2).png";
 import WebDevelopment from "../../Assets/Images/TechWebDev.png";
 // import AndroidDevlopment from "../../Assets/Images/TechAppDev.png";
 import EnterpriseSolution from "../../Assets/Videos/enterprisesolution.mp4";
-import service from "../../Assets/Images/service.png";
-import itservice from "../../Assets/Images/itservice.png";
+import service from "../../Assets/Images/devops.png";
+import itservice from "../../Assets/Images/it-systems.png";
 import software from "../../Assets/Images/software.png";
 import itmanaged from "../../Assets/Images/itmanagemnet.jpg";
 import itteamSolution from "../../Assets/Videos/itteam.mp4";
@@ -61,7 +61,9 @@ export default class SplitCard extends Component {
               <div className=" bg-opacity-75  rounded  "></div>
             </div>
           </div>
+          {/* <div className="bg-gradient-to-r from-[rgba(220,220,220,0.4)] to-[#0060b5] m-2 md:border-none border-2 border-sky-600 rounded-2xl parentDiv md:w-[90%] shadow-xl parentDiv md:relative md:left-20 md:shadow-2xl  md:p-5 md:rounded-xl md:mb-5 md:transform md:transition-all  md:border "> */}
           <div className="bg-[#0060b5] m-2 md:border-none border-2 border-sky-600 rounded-2xl parentDiv md:w-[90%] shadow-xl parentDiv md:relative md:left-20 md:shadow-2xl  md:p-5 md:rounded-xl md:mb-5 md:transform md:transition-all  md:border ">
+
             <div className="md:flex   md:h-80 md:pl-72 md:flex-col md:items-center     ">
               <div className=" md:h-full  md:flex md:flex-col md:justify-between md:w-full ">
                 <div className="md:pl-2 md:flex md:flex-col p-4 md:justify-between ">
