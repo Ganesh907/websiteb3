@@ -12,7 +12,16 @@ import SearchIcon from '@mui/icons-material/Search';
 import EnterpriseSolution from "../../Assets/Videos/enterprisesolution.mp4";
 import Permanent from "../../Assets/Videos/temporary staffing.mp4";
 import Recruiters from "../../Assets/Videos/Recruitment.mp4";
-
+import Temporary from "../../Assets/Videos/permanent staffing.mp4";
+import Permanenticon from "../../Assets/Images/Permanent1.png";
+import Permanenticon2 from "../../Assets/Images/Permanent2.png";
+import Permanenticon3 from "../../Assets/Images/Permanent3.png";
+import Temporaryicon from "../../Assets/Images/temporary.png";
+import Temporaryicon2 from "../../Assets/Images/temporary2.png";
+import Temporaryicon3 from "../../Assets/Images/temporary3.png";
+import Recruitericon from "../../Assets/Images/Recruitment.png";
+import Recruitericon2 from "../../Assets/Images/Recruitment2.png";
+import Recruitericon3 from "../../Assets/Images/Recruitment3.png";
  const RecServicesPage = () => {
 
   
@@ -250,8 +259,8 @@ import Recruiters from "../../Assets/Videos/Recruitment.mp4";
 
 
       <div className="   mt-10">
-        <h1 className="font-bold text-3xl text-center " style={{ color: "var(--primary-color)" }}>
-          SERVICES OFFERED
+        <h1 className="italic text-5xl text-center " >
+          Services Offered
         </h1>
        
 
@@ -401,20 +410,20 @@ import Recruiters from "../../Assets/Videos/Recruitment.mp4";
       ))} */}
                   </ul>
                 </div>
-                {/* <div className=" flex mr-6    flex-row gap-4 md:flex md:justify-end  md:gap-3 ">
+                <div className=" flex mr-0  absolute right-0 bottom-2  flex-row gap-4 md:flex md:justify-end  md:gap-3 ">
                   <img
-                    src={enterpriselogo}
+                    src={Permanenticon}
                     className="md:h-10 h-8 filter  hover:grayscale-0 hover:scale-105 transition duration-300"
                   />
                   <img
-                    src={digital}
+                    src={Permanenticon2}
                     className="md:h-10 h-8 filter  hover:grayscale-0 hover:scale-105 transition duration-300"
                   />
                   <img
-                    src={solution}
+                    src={Permanenticon3}
                     className="md:h-10 h-8 filter  hover:grayscale-0 hover:scale-105 transition duration-300"
                   />
-                </div> */}
+                </div>
               </div>
             </div>
           </div>
@@ -445,7 +454,7 @@ import Recruiters from "../../Assets/Videos/Recruitment.mp4";
                 loop
                 muted
               >
-                <source src={EnterpriseSolution} type="video/mp4" />
+                <source src={Temporary} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
 
@@ -479,20 +488,20 @@ import Recruiters from "../../Assets/Videos/Recruitment.mp4";
         </li>
       ))} */}
               </ul>
-              {/* <div className=" flex flex-row gap-4 ml-3 mt-2 md:flex md:justify-end md:items-end md:gap-3 ">
+              <div className=" flex flex-row gap-4 ml-3 mt-2 md:flex md:justify-end md:items-end md:gap-3 ">
                 <img
-                  src={javalogo}
+                  src={Temporaryicon}
                   className="md:h-10 h-8  filter  hover:grayscale-0 hover:scale-105 transition duration-300"
                 />
                 <img
-                  src={kotline}
+                  src={Temporaryicon2}
                   className="md:h-10 h-8 filter  hover:grayscale-0 hover:scale-105 transition duration-300"
                 />
                 <img
-                  src={flutter}
+                  src={Temporaryicon3}
                   className="md:h-10 h-8 filter  hover:grayscale-0 hover:scale-105 transition duration-300"
                 />
-              </div> */}
+              </div>
             </div>
           </div>
         </div>
@@ -550,20 +559,20 @@ import Recruiters from "../../Assets/Videos/Recruitment.mp4";
       ))} */}
                   </ul>
                 </div>
-                {/* <div className=" flex mr-6    flex-row gap-4 md:flex md:justify-end  md:gap-3 ">
+                <div className=" flex mr-0  absolute right-0 bottom-3  flex-row gap-4 md:flex md:justify-end  md:gap-3 ">
                   <img
-                    src={enterpriselogo}
+                    src={Recruitericon}
                     className="md:h-10 h-8 filter  hover:grayscale-0 hover:scale-105 transition duration-300"
                   />
                   <img
-                    src={digital}
+                    src={Recruitericon2}
                     className="md:h-10 h-8 filter  hover:grayscale-0 hover:scale-105 transition duration-300"
                   />
                   <img
-                    src={solution}
+                    src={Recruitericon3}
                     className="md:h-10 h-8 filter  hover:grayscale-0 hover:scale-105 transition duration-300"
                   />
-                </div> */}
+                </div>
               </div>
             </div>
           </div>
@@ -571,7 +580,7 @@ import Recruiters from "../../Assets/Videos/Recruitment.mp4";
 {/* //////////////////////////////////////////////////// */}
 <div className='my-10 '>
 
-<h1 className="font-bold text-xl text-center mt-10 text-[#0060b5]" >
+<h1 className="italic text-5xl text-center mt-10 text-white" >
   B3 EXPERTISE IN IT RECRUITMENT
 </h1>
 
@@ -586,7 +595,7 @@ import Recruiters from "../../Assets/Videos/Recruitment.mp4";
   onMouseLeave={handleMouseLeave1}
 >
   {jobRoles.map((role, index) => (
-    <span key={index} className="inline-flex items-center mx-4 rounded-lg bg-white text-black drop-shadow-lg  border-4 border-[#0060b5] p-3">
+    <span key={index} className="inline-flex items-center mx-4 rounded-lg bg-white text-black drop-shadow-lg  border-2 border-[#0060b5] p-3">
       {role}
       <ArrowBackIcon className="ml-2 text-[#0060b5]" />
     </span>
