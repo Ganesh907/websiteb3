@@ -24,9 +24,8 @@ import Footer from '../Components/CommonComponents/Footer';
 import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
 import HeroSection from '../Components/CommonComponents/HeroSection';
 import ContactUsVideo from '../Assets/Videos/ContactUsVideo.mp4'
-import Map from '../Components/ContactUsComponents/Map';
-import { ContactForm2 } from '../Components/ContactUsPage/ContactForm2';
-import ContactMap from '../Components/ContactUsComponents/Map';
+import Map from '../Components/ContactUsPage/Map';
+import ContactMap from '../Components/ContactUsPage/Map';
 
 
 
@@ -184,10 +183,10 @@ url(${ContactUSImg3})
                                 backgroundRepeat: 'no-repeat',
                                 backgroundBlendMode: 'overlay',
                         }}>
-                                <div className=' md:h-[90vh] w-[100vw] mt-20 bg-red-200 md:mt-0 flex justify-center flex-col md:flex-row  items-center p-4 md:p-20  bg-transparent '>
+                                <div className=' md:h-[90vh] w-[100vw] mt-20 bg-red-200 lg:mt-0 flex justify-center flex-col lg:flex-row  items-center p-4 lg:p-20  bg-transparent '>
 
 
-                                        <div className=' rounded-lg w-full md:w-[40%]  flex  flex-col justify-center '
+                                        <div className=' rounded-lg w-full lg:w-[40%]  flex  flex-col justify-center '
                                         data-aos="fade-up" data-aos-duration="1000"
                                         
                                         style={{
@@ -195,7 +194,7 @@ url(${ContactUSImg3})
                                         }}>
 
 
-                                                <ContactForm2 />
+                                                <ContactForm />
                                                 {/* <div className='w-full scale-90 flex justify-around mb-5 text-white'>
                                                 <a href='/facebook' target="_blank" rel="noopener noreferrer"
                                                                                 style={{ display: 'inline-block' }} >
@@ -218,7 +217,7 @@ url(${ContactUSImg3})
                                               
                                         </div>
 
-                                        <div className='md:w-[60%] w-[98%] mt-10 md:mt-0 p-4 md:ms-5 rounded-r-lg'  data-aos="zoom-in" data-aos-duration="1000"
+                                        <div className='lg:w-[60%] w-[98%] mt-10 lg:mt-0 p-4 lg:ms-5 rounded-r-lg'  data-aos="zoom-in" data-aos-duration="1000"
                                         style={{
                                                 backgroundColor:'rgb(0,0,0,0.4)'
                                         }}>

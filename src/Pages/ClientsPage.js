@@ -1,215 +1,40 @@
-// import {useEffect}from "react";
-// // import aboutus from "../../Assets/Images/information.png";
-// // import devprocess from "../../Assets/Images/agile.png";
-// // import support from "../../Assets/Images/industrysupports.png";
-// // import technology from "../../Assets/Images/technology.png";
-// import hamarakendra from "../../Assets/Images/hamarakendra.png";
-// import ips from "../../Assets/Images/IPS_e_Services.jpg";
-// import suntrap from "../../Assets/Images/suntrap.83df4c98.png" ;
-// //  import intertrust from "../../Assets/Images/intertrust.jpg";
-// import credentials from "../../Assets/Images/certificate.png";
-// import price from "../../Assets/Images/tag.png";
-// // import careers1 from "../../Assets/Images/careers1.png";
-// import Devsoft from "../../Assets/Images/cloud-computing.png";
-// // import client from "../../Assets/Images/client.jpg";
-// // import suntrap from "../../Assets/Images/suntrap.83df4c98.png";
-//  import intertrust from "../../Assets/Images/intertrust.jpg";
-// // import credentials from "../../Assets/Images/certificate.png";
-// // import price from "../../Assets/Images/tag.png";
-// // import careers1 from "../../Assets/Images/careers1.png";
-// // import Devsoft from "../../Assets/Images/cloud-computing.png";
-// import client from "../../Assets/Images/clientpage.png";
-// import Footer from "../../Components/CommonComponents/Footer";
-// // import care from "../../Assets/Images/care.png";
-// import qualityClient from "../../Assets/Images/qualityclient.png";
-// import care from "../../Assets/Images/care.png";
-// import support from "../../Assets/Images/support.png";
-// import personnel from "../../Assets/Images/personnel.png";
-// import innovation from "../../Assets/Images/innovation.png";
-// import commitment from "../../Assets/Images/commitment.png";
-// import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
-
-// import Aos from "aos";
-// // import 'aos/dist/aos.css';
-// import { useState } from "react";
-
-// export const TechClientsPage = () => {
-
-//   const [bottomRadius, setBottomRadius] = useState('0%');
-//   const [scrollHeading, setScrollHeading] = useState("");
-
-//     {/* <div className='bg-white '> */}
-//    <marquee width="110%" direction="right" height="auto" scrollamount="20" >
-// <div className='flex mt-10 gap-4 ' >
-
-// {/* <img src={intertrust} className=" h-40 w-30 ml-6 shadow-2xl rounded-sm" /> */}
-
-// <img src={suntrap} className=" h-40 w-30 ml-6 shadow-2xl rounded-sm" />
-
-// <img src={ips} className=" h-40 w-30 ml-6 shadow-2xl rounded-sm" />
-
-// <img src={hamarakendra} className=" h-40 w-30 ml-6 shadow-2xl rounded-sm" />
-
-// </div>
-// </marquee>
-
-//   useEffect(() => {
-//     const handleScroll = () => {
-//       const scrollTop = window.scrollY;
-//       const maxScroll = 50; // Adjust this value for how quickly you want the border to round
-//       const radius = Math.min(scrollTop / maxScroll * 50, 50); // Cap at 50% for a smooth transition
-//       setBottomRadius(`${radius}%`);
-//       setScrollHeading(scrollTop > 30 ? "ml-[30%]" : "ml-0");
-//     };
-
-//     window.addEventListener('scroll', handleScroll);
-//     return () => window.removeEventListener('scroll', handleScroll);
-//   }, []);
-
-//   return (
-//     <>
-//           <div className="bg-white h-auto">
-
-//     <div className='h-[90vh] flex justify-start transition-all duration-1000 ease-in-out' style={{ borderRadius: `0 0 ${bottomRadius} ${bottomRadius}` }}>
-//       <div className='h-14 flex justify-center animate-pulse items-end text-[200px] rounded-full w-14 absolute bottom-0 left-1/2 transform -translate-x-1/2 text-white z-50' style={{ animationDuration: "4000ms" }}>
-//   <KeyboardDoubleArrowDownIcon className="animate-bounce" style={{ fontSize: "50px", animationDuration: "400ms", animationDelay: "3000ms" }} />
-// </div>
-//       {/* <div className="bg-white h-auto"> */}
-//         <div>
-//           {/* <img src={client} className="w-full h-auto" /> */}
-//           <img
-//           src={client}
-//           className="absolute top-0 left-0 w-full h-full object-cover transition-all duration-1000 ease-in-out"
-//           // style={{  }}
-//           style={{ borderRadius: `0 0 ${bottomRadius} ${bottomRadius}`}}  // Makes the entire image slightly transparent
-//         />
-//         </div>
-//         {/* </div> */}
-//         </div>
-
-//         <div className=" flex items-center justify-center  mt-32 ">
-//   <h1
-//     data-aos="zoom-in"
-//     data-aos-duration="1000"
-//     data-aos-delay="100"
-//     data-aos-offset="100"
-//     className="heading2 text-black text-5xl  "
-//   >
-//     REDEFINE YOUR SUCCESS STORY WITH US
-//   </h1>
-//   </div>
-
-//   <div className="flex  w-auto gap-10 justify-center ">
-//   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
-//   {[
-//     { src: qualityClient, title: 'Quality', description: "We ensure top-tier quality in everything we do, every step of the way.", number: '01', bgColor: 'bg-blue-700' },
-//     { src: care,   title: 'Client Focus', description: 'We strive to ensure there is Quality in everything we do.', number: '02', bgColor: 'bg-green-700' },
-//     { src: support, title: 'Support', description: 'We strive to ensure there is Quality in everything we do.', number: '03', bgColor: 'bg-red-700' },
-//     { src: personnel, title: 'ExpertTeam', description: 'Our team is composed of highly skilled professionals who are passionate about delivering exceptional results.', number: '04', bgColor: 'bg-yellow-700' },
-//     { src: innovation, title: 'Innovation', description: 'We embrace the future with innovative solutions that lead the industry and deliver exceptional results.', number: '05', bgColor: 'bg-purple-700' },
-//     { src: commitment, title: 'Commitment', description: 'Our unwavering dedication drives us to deliver superior quality in every project.', number: '06', bgColor: 'bg-orange-700' }
-//   ].map((item, index) => (
-//     <div key={index} className="relative flex flex-col gap-2 p-4 group transition-transform duration-300 transform hover:scale-105">
-//       {/* Image container */}
-//       <img src={item.src} className="w-full h-40 object-cover rounded-lg" alt={item.title} />
-
-//       {/* Text content */}
-//       <div className={`absolute inset-0 flex flex-col items-start justify-center p-6 rounded-lg ${item.bgColor} text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300`}>
-//         <span className="text-3xl font-bold">{item.number}</span>
-//         <h1 className="text-lg font-bold mt-2">{item.title}</h1>
-//         <p className="text-sm mt-2">{item.description}</p>
-//       </div>
-//     </div>
-//   ))}
-// </div>
-
-//   </div>
-// {/* // </div> */}
-
-// <div className="flex flex-col items-center justify-center h-full p-6">
-//   <h1
-
-//     className="text-2xl font-bold text-black mb-8"
-//   >
-// OUR PRESTIGIOUS ASSOCIATES
-//   </h1>
-
-//   {/* <div className="w-full"> */}
-//     {/* <div
-//       className="flex justify-evenly w-full"
-//     >
-//       <img src={intertrust} className="h-20 w-auto" alt="Intertrust" />
-//       <img src={suntrap} className="h-20 w-auto" alt="Suntrap" />
-//       <img src={ips} className="h-20 w-auto" alt="IPS" />
-//       <img src={hamarakendra} className="h-20 w-auto" alt="Hamarakendra" />
-//     </div>
-//   {/* </div> */}
-//  {/* </div>  */}
-
-//  <div className="flex justify-evenly w-full">
-//   <img
-//     src={intertrust}
-//     className="h-20 w-auto grayscale hover:grayscale-0 hover:scale-150 transition-all duration-300 ease-in-out"
-//     alt="Intertrust"
-//   />
-//   <img
-//     src={suntrap}
-//     className="h-20 w-auto grayscale hover:grayscale-0 hover:scale-150 transition-all duration-300 ease-in-out"
-//     alt="Suntrap"
-//   />
-//   <img
-//     src={ips}
-//     className="h-20 w-auto grayscale hover:grayscale-0 hover:scale-150 transition-all duration-300 ease-in-out"
-//     alt="IPS"
-//   />
-//   <img
-//     src={hamarakendra}
-//     className="h-20 w-auto grayscale hover:grayscale-0 hover:scale-150 transition-all duration-300 ease-in-out"
-//     alt="Hamarakendra"
-//   />
-// </div>
-// </div>
-
-//         <div className="tech-footer">
-//           <Footer />
-//         </div>
-//       </div>
-
-//     </>
-//   );
-// };
 
 import { useEffect, useState } from "react";
-import hamarakendra from "../../Assets/Images/hamarakendra.png";
-import ips from "../../Assets/Images/IPS_e_Services.jpg";
-import suntrap from "../../Assets/Images/suntrap.83df4c98.png";
-import publicis from "../../Assets/Images/publicis-sapient.jpg";
-import accenture from "../../Assets/Images/Accenture.png";
-import capgemini from "../../Assets/Images/Client 3.png";
-import intertrust from "../../Assets/Images/intertrust.jpg";
-import client from "../../Assets/Images/clientpage.png";
-import qualityClient from "../../Assets/Images/qualityclient.png";
-import care from "../../Assets/Images/care.png";
-import support from "../../Assets/Images/support.png";
-import personnel from "../../Assets/Images/personnel.png";
-import innovation from "../../Assets/Images/innovation.png";
-import commitment from "../../Assets/Images/commitment.png";
+import hamarakendra from "../Assets/Images/hamarakendra.png";
+// import ips from "../Assets/Images/IPS_e_Services.jpg";
+import ips from "../Assets/Images/IpsNewLogo.png";
+import suntrap from "../Assets/Images/suntrap.83df4c98.png";
+import publicis from "../Assets/Images/publicis-sapient.jpg";
+import accenture from "../Assets/Images/Accenture.png";
+// import capgemini from "../Assets/Images/Client 3.png";
+import capgemini from "../Assets/Images/CapgeminiLogo.svg";
+import intertrust from "../Assets/Images/intertrust.jpg";
+import client from "../Assets/Images/clientpage.png";
+import qualityClient from "../Assets/Images/qualityclient.png";
+import care from "../Assets/Images/care.png";
+import support from "../Assets/Images/support.png";
+import personnel from "../Assets/Images/personnel.png";
+import innovation from "../Assets/Images/innovation.png";
+import commitment from "../Assets/Images/commitment.png";
 import KeyboardDoubleArrowDownIcon from "@mui/icons-material/KeyboardDoubleArrowDown";
 import Aos from "aos";
-import Footer from "../../Components/CommonComponents/Footer";
-import HeroSection from "../../Components/CommonComponents/HeroSection";
-import Techclient from "../../Assets/Videos/techclient.mp4";
-import highquality from "../../Assets/Images/highquality3.jpeg"
-import onbudget from "../../Assets/Images/ontime.jpeg"
-import B3Banner from "../../Assets/Images/B3Banner.jpg"
-import CitiusTech from "../../Assets/Images/CitiusTech.webp"
-import AQM from "../../Assets/Images/AQM.png"
-import greenland from "../../Assets/Images/greenland.jpg"
-import NSE from "../../Assets/Images/NSE.jpg"
-import SSC from "../../Assets/Images/SSandC.png"
+import Footer from "../Components/CommonComponents/Footer";
+import HeroSection from "../Components/CommonComponents/HeroSection";
+import Techclient from "../Assets/Videos/techclient.mp4";
+import highquality from "../Assets/Images/highquality3.jpeg"
+import onbudget from "../Assets/Images/ontime.jpeg"
+import B3Banner from "../Assets/Images/B3Banner.jpg"
+// import CitiusTech from "../Assets/Images/CitiusTech.webp"
+import CitiusTech from "../Assets/Images/CitiusTechLogo.jpg"
+// import AQM from "../Assets/Images/AQM.png"
+import AQM from "../Assets/Images/AQMNewLogo.jpg"
+import greenland from "../Assets/Images/greenland.jpg"
+// import NSE from "../Assets/Images/NSE.jpg"
+import NSE from "../Assets/Images/NSE_Logo.svg"
+import SSC from "../Assets/Images/SSandC.png"
 
 
-const TechClientsPage = () => {
+const ClientsPage = () => {
   const [bottomRadius, setBottomRadius] = useState("0%");
   const [scrollHeading, setScrollHeading] = useState("");
   const [value, setValue] = useState(0);
@@ -296,12 +121,12 @@ const TechClientsPage = () => {
       </HeroSection> */}
 
       <HeroSection videoUrl={Techclient} videoOpacity={20} MarginAnimtion={true}>
-        <div className='w-[50vw] flex justify-end items-end'>
-          <div className="relative w-full h-72 overflow-hidden mr-2 cursor-pointer mb-16">
-            <h1 className="text-[#0060b5] text-5xl font-bold drop-shadow-xl">
+        <div className='lg:w-[50vw] w-[90vw] flex justify-end items-end'>
+          <div className="relative w-full md:h-80 h-96  overflow-hidden mr-2 cursor-pointer mb-16">
+            <h1 className="text-[#0060b5]  text-3xl lg:text-5xl font-bold drop-shadow-xl">
               Empower Your Journey
               <span
-                className="absolute bottom-0 top-4 left-0 w-[40vw] border-b-2 my-9"
+                className="absolute bottom-0 top-4 left-0 lg:w-[40vw] w-[90vw] lg:border-b-2 border-b-4 my-9"
                 style={{
                   borderImage: "linear-gradient(to right, yellow, white, blue, black) 1",
                   animation: "gradientShift 6s infinite",
@@ -309,7 +134,7 @@ const TechClientsPage = () => {
               ></span>
             </h1>
 
-            <p className="text-2xl font-bold mt-4 text-white" data-aos="fade-up">
+            <p className="md:text-2xl text-xl font-bold md:mt-4 mt-10 text-white" data-aos="fade-up">
               Redefine Your <span className="text-yellow-400">Success</span> With Innovation And Excellence.
             </p>
 
@@ -377,7 +202,7 @@ const TechClientsPage = () => {
 
 
       <div className="flex flex-col items-center justify-center py-10">
-  <h2 className=" text-5xl text-[#0060b5] my-6 font-semibold drop-shadow-lg">
+  <h2 className=" text-3xl md:text-5xl text-[#0060b5] my-6 font-semibold drop-shadow-lg">
     Our Reputed Clients
   </h2>
   <p className=" italic text-lg mb-8 text-center">
@@ -388,136 +213,137 @@ const TechClientsPage = () => {
     </span>
   </p>
 
-  <div className="flex items-center justify-center bg-white p-10 rounded-md shadow-inner w-[95vw]">
-    <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-x-20 gap-y-12 w-11/12 max-w-4xl">
+  <div className="flex items-center justify-center bg-white md:p-10 p-5 mx-10 md:mx-0  rounded-md shadow-inner w-[95vw]">
+    <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-x-4 md:gap-x-20 gap-y-12 w-11/12 max-w-4xl">
       {/* Wrap each img in a div and apply hover:scale on the div */}
-      <div className="transition-all duration-700 ease-in-out hover:scale-110">
+      <div className="flex justify-center items-center h-20 p-2 border-black border-2 rounded-md  transition-all duration-700 ease-in-out hover:scale-110">
         <img
           src={ips}
-          className="h-20 w-auto"
+          className="w-auto h-16"
           alt="IPS"
-          data-aos="fade-left"
+          // data-aos="fade-left"
           data-aos-delay=""
           data-aos-duration="1500"
+          data-aos={window.innerWidth <= 768 ? "fade-up" : "fade-left"}
         />
       </div>
       
-      <div className="transition-all duration-700 ease-in-out hover:scale-110">
+      <div className="flex justify-center items-center h-20 p-2 border-black border-2 rounded-md  transition-all duration-700 ease-in-out hover:scale-110">
         <img
           src={capgemini}
-          className="h-20 w-auto"
+          className="w-auto "
           alt="Capgemini"
-          data-aos="fade-left"
+          data-aos={window.innerWidth <= 768 ? "fade-up" : "fade-left"}
           data-aos-delay="400"
           data-aos-duration="1500"
         />
       </div>
       
-      <div className="transition-all duration-700 ease-in-out hover:scale-110">
+      <div className="flex justify-center items-center h-20 p-2 border-black border-2 rounded-md  transition-all duration-700 ease-in-out hover:scale-110">
         <img
           src={accenture}
-          className="h-20 w-auto"
+          className="w-auto "
           alt="Accenture"
-          data-aos="fade-left"
+          data-aos={window.innerWidth <= 768 ? "fade-up" : "fade-left"}
           data-aos-delay="800"
           data-aos-duration="1500"
         />
       </div>
       
-      <div className="transition-all duration-700 ease-in-out hover:scale-110">
+      <div className="flex justify-center items-center h-20 p-2 border-black border-2 rounded-md  transition-all duration-700 ease-in-out hover:scale-110">
         <img
           src={hamarakendra}
-          className="h-20 w-auto"
+          className="w-auto h-16"
           alt="Hamarakendra"
-          data-aos="fade-left"
+          data-aos={window.innerWidth <= 768 ? "fade-up" : "fade-left"}
           data-aos-delay="1200"
           data-aos-duration="1500"
         />
       </div>
       
-      <div className="transition-all duration-700 ease-in-out hover:scale-110">
+      <div className="flex justify-center items-center h-20 p-2 border-black border-2 rounded-md  transition-all duration-700 ease-in-out hover:scale-110">
         <img
           src={NSE}
-          className="h-28 w-auto"
+          className="w-auto h-16"
           alt="NSE"
-          data-aos="fade-left"
+          data-aos={window.innerWidth <= 768 ? "fade-up" : "fade-left"}
           data-aos-delay="100"
           data-aos-duration="1500"
         />
       </div>
       
-      <div className="transition-all duration-700 ease-in-out hover:scale-110">
+      <div className="flex justify-center items-center h-20 p-2 border-black border-2 rounded-md  transition-all duration-700 ease-in-out hover:scale-110">
         <img
           src={intertrust}
-          className="h-20 w-auto"
+          className="w-auto h-16"
           alt="Intertrust"
-          data-aos="fade-left"
+          data-aos={window.innerWidth <= 768 ? "fade-up" : "fade-left"}
           data-aos-delay="500"
           data-aos-duration="1500"
         />
       </div>
       
-      <div className="transition-all duration-700 ease-in-out hover:scale-110">
+      <div className="flex justify-center items-center h-20 p-2 border-black border-2 rounded-md  transition-all duration-700 ease-in-out hover:scale-110">
         <img
           src={suntrap}
-          className="h-20 w-auto"
+          className=" w-auto"
           alt="Suntrap"
-          data-aos="fade-left"
+          data-aos={window.innerWidth <= 768 ? "fade-up" : "fade-left"}
           data-aos-delay="900"
           data-aos-duration="1500"
         />
       </div>
       
-      <div className="transition-all duration-700 ease-in-out hover:scale-110">
+      <div className="flex justify-center items-center h-20 p-2 border-black border-2 rounded-md  transition-all duration-700 ease-in-out hover:scale-110">
         <img
           src={publicis}
-          className="h-20 w-auto"
+          className="w-auto h-16"
           alt="Publicis"
-          data-aos="fade-left"
+          data-aos={window.innerWidth <= 768 ? "fade-up" : "fade-left"}
           data-aos-delay="1300"
           data-aos-duration="1500"
         />
       </div>
       
-      <div className="transition-all duration-700 ease-in-out hover:scale-110">
+      <div className="flex justify-center items-center h-20 p-2 border-black border-2 rounded-md  transition-all duration-700 ease-in-out hover:scale-110">
         <img
           src={AQM}
-          className="h-28 w-auto"
+          className="w-auto"
           alt="AQM"
-          data-aos="fade-left"
+          data-aos={window.innerWidth <= 768 ? "fade-up" : "fade-left"}
           data-aos-delay="200"
           data-aos-duration="1500"
         />
       </div>
       
-      <div className="transition-all duration-700 ease-in-out hover:scale-110">
+      <div className="flex justify-center items-center h-20 p-2 border-black border-2 rounded-md transition-all duration-700 ease-in-out hover:scale-110">
         <img
           src={SSC}
-          className="h-20 w-auto"
+          className="w-auto "
           alt="SSC"
-          data-aos="fade-left"
+          data-aos={window.innerWidth <= 768 ? "fade-up" : "fade-left"}
           data-aos-delay="600"
           data-aos-duration="1500"
         />
       </div>
       
-      <div className="transition-all duration-700 ease-in-out hover:scale-110">
+      <div className="flex justify-center items-center h-20 p-2 border-black border-2 rounded-md transition-all  duration-700 ease-in-out hover:scale-110">
         <img
           src={CitiusTech}
-          className="h-20 w-auto"
+          className=" w-auto"
           alt="CitiusTech"
-          data-aos="fade-left"
+          data-aos={window.innerWidth <= 768 ? "fade-up" : "fade-left"}
           data-aos-delay="1000"
           data-aos-duration="1500"
         />
       </div>
       
-      <div className="transition-all duration-700 ease-in-out hover:scale-110">
+      <div className="flex justify-center items-center h-20 p-2 border-black border-2 rounded-md transition-all  duration-700 ease-in-out hover:scale-110">
         <img
           src={greenland}
-          className="h-14 w-auto"
+          className="w-auto bg-red-200"
           alt="Greenland"
-          data-aos="fade-left"
+          data-aos={window.innerWidth <= 768 ? "fade-up" : "fade-left"}
           data-aos-delay="1400"
           data-aos-duration="1500"
         />
@@ -538,7 +364,7 @@ const TechClientsPage = () => {
           data-aos-duration="1000"
           data-aos-delay="100"
           data-aos-offset="100"
-          className=" text-[#0060b5] text-5xl  font-semibold"
+          className=" text-[#0060b5]  text-xl md:text-5xl  font-semibold"
         >
           Redefine Your Success Story With Us
         </h1>
@@ -744,4 +570,4 @@ const TechClientsPage = () => {
   );
 };
 
-export default TechClientsPage;
+export default ClientsPage;

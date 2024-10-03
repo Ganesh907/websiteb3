@@ -5,7 +5,7 @@ import Spinner from "../Components/CommonComponents/Spinner";
 // Lazy load components
 const Homepage = lazy(() => import("../Pages/Homepage"));
 const TechHomePage = lazy(() => import("../Pages/Technology/TechHomePage"));
-const TechClientsPage = lazy(() => import("../Pages/Technology/TechClientsPage"));
+const ClientsPage = lazy(() => import("../Pages/ClientsPage"));
 const RecServicesPage = lazy(() => import("../Pages/Recruitment/RecServicesPage"));
 const RecClientsPage = lazy(() => import("../Pages/Recruitment/RecClientsPage"));
 const ContactUsPage = lazy(() => import("../Pages/ContactUsPage"));
@@ -25,7 +25,7 @@ const AppRoutes = () => {
         <Route path="/" element={<LandingPage />} />
         <Route path="/technology" element={<TechHomePage />} />
         <Route path="/technology-services" element={<TechServicesPage />} />
-        <Route path="/clients" element={<TechClientsPage />} />
+        <Route path="/clients" element={<ClientsPage />} />
         <Route path="/recruitment" element={<RecHomePage />} />
         <Route path="/recruitment-services" element={<RecServicesPage />} />
         <Route path="/contactus" element={<ContactUsPage />} />
