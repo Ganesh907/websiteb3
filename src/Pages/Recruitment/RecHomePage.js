@@ -1,14 +1,17 @@
 import React, { useEffect, useState,useRef } from 'react';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import AboutUs4 from '../../Assets/Images/AboutUs4.jpg';
-import { Button } from '@mui/material';
+import { Accordion, AccordionDetails, AccordionSummary, Button } from '@mui/material';
+import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 import Footer from '../../Components/CommonComponents/Footer';
 import jobinterview from '../../Assets/Videos/jobinterview.mp4'
 import HeroSection from '../../Components/CommonComponents/HeroSection';
-import delivery from '../../Assets/Images/deliveryicon.png'
-import clienticon from '../../Assets/Images/clienticon1.png'
-import candidate from '../../Assets/Images/candidateicon.png'
+import delivery from '../../Assets/Images/deliveryicon1.png'
+import clienticon from '../../Assets/Images/clienticon2.png'
+import candidate from '../../Assets/Images/candidateicon1.png'
 import rating from '../../Assets/Images/ratingicon.png'
+import ITicon from '../../Assets/Images/information.png'
+import software from '../../Assets/Images/softwareicon.png'
 const RecHomePage = () => {
   const searchIconSvg = `data:image/svg+xml;base64,${btoa(`
 
@@ -75,6 +78,109 @@ const RecHomePage = () => {
     setIsHovered(false);
   };
 
+  const [expanded, setExpanded] = useState(false);
+  const [visibleSteps, setVisibleSteps] = useState(0);
+  const [visibleLines, setVisibleLines] = useState(0); // Track how many lines are visible
+  const [visibleItems, setVisibleItems] = useState({});
+  const [hoverDelay, setHoverDelay] = useState(null);
+
+  useEffect(() => {
+    if (visibleSteps < 2) {
+      const timer = setTimeout(() => {
+        setVisibleSteps((prev) => prev + 1);
+      }, 100); // Adjust the time for each step to appear
+      return () => clearTimeout(timer); // Clean up the timer
+    }
+  }, [visibleSteps]);
+  // const [expanded, setExpanded] = useState(false);
+
+  const sectionRef = useRef(null);
+  const [inView, setInView] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setInView(true);
+          observer.disconnect(); // Stop observing once it's in view
+        }
+      },
+      { threshold: 0.3 } // Trigger when 30% of the section is in view
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  const IT = [
+    "We specialize in sourcing top-tier talent for various IT roles.",
+    "Expertise in Java, .NET, and Android development.",
+    "Proficiency in SAP and DevOps.",
+    "Skilled in machine learning and cloud services.",
+    "Focus on cybersecurity solutions.",
+  ];
+  const Software = [
+    "Expertise in recruiting for software development roles.",
+    "Specialization in front-end, back-end, and full-stack positions.",
+    "Successful placements in Angular and React development.",
+    "Skilled developers in Python, PHP, and C++.",
+    "Broad coverage of additional software technologies.",
+  ];
+  const Cloud = [
+    "Skilled in recruiting specialists for cloud infrastructure.",
+    "Expertise in AWS, Azure, and Google Cloud platforms.",
+    "Focus on hiring data scientists.",
+    "Experience in sourcing machine learning experts.",
+    "Supporting businesses in adopting data-driven strategies.",
+  ];
+  const Enterprise  = [
+    "Specialize in recruiting talent for enterprise-level technologies.",
+    "Expertise in SAP, Oracle, Workday, and Microsoft Dynamics.",
+    "Provide customized staffing solutions for businesses in these sectors.",
+    "Address dynamic demands of enterprise-level industries.",
+    "Focus on ensuring optimal results and long-term success for clients.",
+  ];
+
+  const handleMouseEnter2 = (panel) => {
+    setExpanded(panel); // Expand the accordion on hover
+  };
+
+  const handleMouseLeave2 = () => {
+    setExpanded(false); // Collapse the accordion when the mouse leaves
+    setVisibleLines(0); // Reset visible lines when closed
+  };
+  useEffect(() => {
+    if (expanded) {
+      let lineIndex = 0;
+      let currentLines = []; // Declare currentLines here
+
+      // Assign the correct lines based on the expanded panel
+      if (expanded === "panel1") {
+        currentLines = IT;
+      } else if (expanded === "panel2") {
+        currentLines = Software;
+      } else if (expanded === "panel3") {
+        currentLines = Cloud;
+      } else if (expanded === "panel4") {
+        currentLines = Enterprise;
+      }
+
+      const typingInterval = setInterval(() => {
+        if (lineIndex < currentLines.length) {
+          setVisibleLines((prev) => prev + 1); // Show next line
+          lineIndex++;
+        } else {
+          clearInterval(typingInterval); // Clear interval when done
+        }
+      }, 300); // Adjust the speed of typing here (1000ms = 1 second)
+
+      return () => clearInterval(typingInterval); // Cleanup
+    }
+  }, [expanded, IT, Software, Cloud, Enterprise]);
+
 
   return (
     <div className="recrHomepageMain" >
@@ -98,7 +204,7 @@ const RecHomePage = () => {
   </h1>
 
   <span
-    className="absolute bottom-0 top-7 left-0 w-[65vh] border-b-2 my-8"
+    className="absolute bottom-0 md:top-7 top-[120px] left-0 md:w-[65vh] w-[20vh] border-b-2 my-8"
     style={{
       borderImage: "linear-gradient(to right, yellow, white, blue, black) 1",
       animation: "gradientShift 6s infinite",
@@ -175,13 +281,13 @@ const RecHomePage = () => {
 
       </HeroSection>
 
-      <div className='h-[80vh] w-full  flex flex-col justify-center items-center'>
+      {/* <div className='h-[80vh] w-full  flex flex-col justify-center items-center'>
         <h1 className='uppercase text-xl font-bold '>for hiring</h1>
         <h1 className='text-7xl mt-10 drop-shadow-xl text-[#0060b5]'>Our Working Process</h1>
-        <p className='w-[50%] my-10 text-[var(--secondary-color)] text-center'>We understand that for you, it’s never just a job. It’s your business. Thats why we Possionate about not only finding you a quality employee. But also the perfect fit.</p>
+        <p className='w-[50%] my-10 text-[var(--secondary-color)] text-center'>We understand that for you, it’s never just a job. It’s your business. Thats why we Possionate about not only finding you a quality employee. But also the perfect fit.</p> */}
         {/* <Button variant="contained" size="large" sx={{ borderRadius: '20px', backgroundColor: 'var(--primary-color)' }}>
           Discover Jobs</Button> */}
-      </div>
+      {/* </div> */}
 
      
 
@@ -198,7 +304,183 @@ const RecHomePage = () => {
       </ul> */}
 
 {/* ............................ */}
-     
+<div className="w-[90%] h-auto">
+        <h1 className="text-center md:text-center md:ml-[9%] text-white text-5xl italic m-[5px] font-montserrat md:mt-[40px]">
+        Industry Specialization
+        </h1>
+
+        <div className="grid grid-cols-1 place-content-center md:grid-cols-2 md:gap-2 md:ml-20 md:w-auto w-[100%]">
+          <div className="m-7">
+            <Accordion
+              expanded={expanded === "panel1"}
+              onMouseEnter={() => handleMouseEnter2("panel1")}
+              onMouseLeave={handleMouseLeave2}
+              style={{ backgroundColor: "#1a1a1a" }}
+              className="p-2 border border-[#333] border-spacing-4 hover:border-blue-600 shadow-lg transition-shadow duration-300"
+            >
+              {/* <AccordionSummary
+          aria-controls='panel1-content'
+        > */}
+              <AccordionSummary
+                expandIcon={
+                  <ArrowDownwardIcon
+                    style={{
+                      color: "blue",
+                      fontWeight: "bold",
+                      fontSize: "1.6rem",
+                      animation: "bounce 1s infinite",
+                    }}
+                  />
+                }
+                aria-controls="panel1-content"
+              >
+                <div className="flex items-center justify-center gap-2">
+                  <img src={ITicon} className="md:h-12" alt="IT" />
+                  <div className="font-bold pt-1 text-lg text-[#00bfff]">
+                  Information Technology (IT)
+                  </div>
+                </div>
+              </AccordionSummary>
+              <AccordionDetails>
+                <ul className="md:pl-5 list-disc leading-loose text-white">
+                  {IT.slice(0, visibleLines).map((line, index) => (
+                    <li key={index}>{line}</li>
+                  ))}
+                </ul>
+              </AccordionDetails>
+            </Accordion>
+          </div>
+
+          <div className="m-7">
+            <Accordion
+              expanded={expanded === "panel2"}
+              onMouseEnter={() => handleMouseEnter2("panel2")}
+              onMouseLeave={handleMouseLeave2}
+              style={{ backgroundColor: "#1a1a1a" }}
+              className="p-2 bg-[#1a1a1a] border border-[#333] border-spacing-4 hover:border-blue-600 shadow-lg transition-shadow duration-300"
+            >
+              {/* <AccordionSummary
+          aria-controls='panel2-content'
+        > */}
+
+              <AccordionSummary
+                expandIcon={
+                  <ArrowDownwardIcon
+                    style={{
+                      color: "blue",
+                      fontWeight: "bold",
+                      fontSize: "1.6rem",
+                      animation: "bounce 1s infinite",
+                    }}
+                 />
+                }
+                aria-controls="panel2-content"
+              >
+                <div className="flex items-center justify-center gap-2">
+                 
+                  <img
+                    src={software}
+                    className="md:h-12"
+                    alt="Software"
+                  />
+                  <div className="font-bold pt-1 text-lg text-[#00bfff]">
+                  Software Development & Engineering
+                  </div>
+                </div>
+              </AccordionSummary>
+              <AccordionDetails>
+                <ul className="md:pl-5 list-disc leading-loose text-white">
+                  {Software
+                    .slice(0, visibleLines)
+                    .map((line, index) => (
+                      <li key={index}>{line}</li>
+                    ))}
+                </ul>
+              </AccordionDetails>
+            </Accordion>
+          </div>
+
+          <div className="m-7">
+            <Accordion
+              expanded={expanded === "panel3"}
+              onMouseEnter={() => handleMouseEnter2("panel3")}
+              onMouseLeave={handleMouseLeave2}
+              style={{ backgroundColor: "#1a1a1a" }}
+              className="p-2 bg-[#1a1a1a] border border-[#333] border-spacing-4 hover:border-blue-600 shadow-lg transition-shadow duration-300"
+            >
+              {/* <AccordionSummary
+          aria-controls='panel2-content'
+        > */}
+
+              <AccordionSummary
+                expandIcon={
+                  <ArrowDownwardIcon
+                    style={{
+                      color: "blue",
+                      fontWeight: "bold",
+                      fontSize: "1.6rem",
+                      animation: "bounce 1s infinite",
+                    }}
+                  />
+                }
+                aria-controls="panel3-content"
+              >
+                <div className="flex items-center justify-center gap-2">
+                  {/* <img src={ecom} className="md:h-12" alt="E-Gov & E-Com" /> */}
+                  <div className="font-bold pt-1 text-lg text-[#00bfff]">
+                  Cloud Computing & Data Science
+                  </div>
+                </div>
+              </AccordionSummary>
+              <AccordionDetails>
+                <ul className="md:pl-5 list-disc leading-loose text-white">
+                  {Cloud.slice(0, visibleLines).map((line, index) => (
+                    <li key={index}>{line}</li>
+                  ))}
+                </ul>
+              </AccordionDetails>
+            </Accordion>
+          </div>
+
+          <div className="m-7">
+            <Accordion
+              expanded={expanded === "panel4"}
+              onMouseEnter={() => handleMouseEnter2("panel4")}
+              onMouseLeave={handleMouseLeave2}
+              style={{ backgroundColor: "#1a1a1a" }}
+              className="p-2 bg-[#1a1a1a] border border-[#333] border-spacing-4 hover:border-blue-600 shadow-lg transition-shadow duration-300"
+            >
+              <AccordionSummary
+                expandIcon={
+                  <ArrowDownwardIcon
+                    style={{
+                      color: "blue",
+                      fontWeight: "bold",
+                      fontSize: "1.6rem",
+                      animation: "bounce 1s infinite",
+                    }}
+                  />
+                }
+                aria-controls="panel4-content"
+              >
+                <div className="flex items-center justify-center gap-2">
+                  {/* <img src={health} className="md:h-12" alt="HealthCare" /> */}
+                  <div className="font-bold pt-1 text-lg text-[#00bfff]">
+                  Enterprise Solutions
+                  </div>
+                </div>
+              </AccordionSummary>
+              <AccordionDetails>
+                <ul className="md:pl-5 list-disc leading-loose text-white">
+                  {Enterprise.slice(0, visibleLines).map((line, index) => (
+                    <li key={index}>{line}</li>
+                  ))}
+                </ul>
+              </AccordionDetails>
+            </Accordion>
+          </div>
+        </div>
+      </div>
 
 {/* ....................... */}
 <div>
@@ -312,7 +594,7 @@ transform: rotateY(360deg);
 {/* Image flipping 360 degrees from right to left on hover */}
 <div className="relative w-[100px] h-[100px]">
 <div className="absolute inset-0 rotate-y-360">
-  <img src={delivery} className="w-24 h-24 object-cover border-r-[50%] rounded" />
+  <img src={delivery} className="w-24 h-24 object-cover " />
 </div>
 </div>
 
@@ -363,7 +645,7 @@ transform: rotateY(360deg);
 {/* Image flipping 360 degrees from right to left on hover */}
 <div className="relative w-[100px] h-[100px]">
 <div className="absolute inset-0 rotate-y-360">
-  <img src={clienticon} className="w-full h-full object-cover rounded-full " />
+  <img src={clienticon} className="w-24 h-24 object-cover  " />
 </div>
 </div>
 
@@ -415,7 +697,7 @@ transform: rotateY(360deg);
 {/* Image flipping 360 degrees from right to left on hover */}
 <div className="relative w-[100px] h-[100px]">
 <div className="absolute inset-0 rotate-y-360">
-  <img src={candidate} className="w-24 h-24 object-cover  rounded-full " />
+  <img src={candidate} className="w-24 h-24 object-cover   " />
 </div>
 </div>
 
@@ -469,7 +751,7 @@ transform: rotateY(360deg);
 {/* Image flipping 360 degrees from right to left on hover */}
 <div className="relative w-[100px] h-[100px]">
 <div className="absolute inset-0 rotate-y-360">
-  <img src={rating} className="w-24 h-24 object-cover bg-[#0060b5] rounded-full p-3" />
+  <img src={rating} className="w-24 h-24 object-cover  p-3" />
 </div>
 </div>
 
