@@ -217,7 +217,7 @@ url(${ContactUSImg3})
                                               
                                         </div>
 
-                                        <div className='lg:w-[60%] w-[98%] mt-10 lg:mt-0 p-4 lg:ms-5 rounded-r-lg'  data-aos="zoom-in" data-aos-duration="1000"
+                                        <div className='lg:w-[60%] w-[98%] mt-10 lg:mt-0 lg:p-4 p-0 lg:ms-5 rounded-r-lg'  data-aos="zoom-in" data-aos-duration="1000"
                                         style={{
                                                 backgroundColor:'rgb(0,0,0,0.4)'
                                         }}>

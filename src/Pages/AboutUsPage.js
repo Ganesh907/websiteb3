@@ -356,7 +356,7 @@ At BitByBit Solutions, we’re committed to excellence, ensuring that every proj
 
 
 
-<div className="h-[100vh] w-full flex md:flex-row flex-col px-5 md:px-0 justify-between">
+<div className="lg:h-[100vh] w-full flex md:flex-row flex-col px-5 md:px-0 justify-between">
 <div className="md:h-full  md:w-[45%] flex flex-col justify-center md:justify-start z-2 items-start  " 
 data-aos="fade-left" data-aos-duration="3000" 
 >

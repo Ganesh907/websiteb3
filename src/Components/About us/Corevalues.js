@@ -5,8 +5,8 @@ import TypingText from '../CommonComponents/TypingText';
 function Corevalues() {
   return (
     <div className=' flex flex-col justify-center items-center'>
-      <h1 className='text-[#0060b5] text-3xl font-bold uppercase text-center my-10'> Core <span className='text-yellow-400'> Values</span></h1>
-      <div className='text-white h-[80vh] w-[90vw]  flex justify-between items-center text-center'>
+      <h1 className='text-[#0060b5] text-3xl font-bold uppercase text-center mt-16 mb-5 border-y-2 py-2 px-5 border-white'> Core <span className='text-yellow-400'> Values</span></h1>
+      <div className='text-white lg:h-[80vh] w-[90vw]  flex flex-col lg:flex-row justify-between items-center text-center'>
         
         <div className='w-[19%] h-[67vh]  flex flex-col justify-between items-center gap-x-[2%]'
           data-aos="fade-up" data-aos-duration="2000" data-aos-delay="100">
