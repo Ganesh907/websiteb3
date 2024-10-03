@@ -265,7 +265,7 @@ const TechHomePage = () => {
         </h1>
 
         <div className="grid grid-cols-1 place-content-center md:grid-cols-2 md:gap-2 md:ml-20 md:w-auto w-[100%]">
-          <div className="m-7">
+          <div className="m-7 ">
             <Accordion
               expanded={expanded === "panel1"}
               onMouseEnter={() => handleMouseEnter("panel1")}
@@ -280,7 +280,7 @@ const TechHomePage = () => {
                 expandIcon={
                   <ArrowDownwardIcon
                     style={{
-                      color: "blue",
+                      color: "white",
                       fontWeight: "bold",
                       fontSize: "1.6rem",
                       animation: "bounce 1s infinite",
@@ -289,9 +289,9 @@ const TechHomePage = () => {
                 }
                 aria-controls="panel1-content"
               >
-                <div className="flex items-center justify-center gap-2">
+                <div className="flex items-center justify-center gap-2 ">
                   <img src={bank} className="md:h-12" alt="Banking" />
-                  <div className="font-bold pt-1 text-lg text-[#00bfff]">
+                  <div className="font-bold pt-1 text-lg text-[#0060b5]">
                     Banking, Financial Services and Insurance
                   </div>
                 </div>
@@ -322,7 +322,7 @@ const TechHomePage = () => {
                 expandIcon={
                   <ArrowDownwardIcon
                     style={{
-                      color: "blue",
+                      color: "white",
                       fontWeight: "bold",
                       fontSize: "1.6rem",
                       animation: "bounce 1s infinite",
@@ -338,7 +338,7 @@ const TechHomePage = () => {
                     className="md:h-12"
                     alt="Hospitality"
                   />
-                  <div className="font-bold pt-1 text-lg text-[#00bfff]">
+                  <div className="font-bold pt-1 text-lg text-[#0060b5]">
                     Hospitality
                   </div>
                 </div>
@@ -354,7 +354,8 @@ const TechHomePage = () => {
               </AccordionDetails>
             </Accordion>
           </div>
-
+          </div>
+          <div className="grid grid-cols-1 place-content-center md:grid-cols-2 md:gap-2 md:ml-20 md:w-auto w-[100%]">
           <div className="m-7">
             <Accordion
               expanded={expanded === "panel3"}
@@ -371,7 +372,7 @@ const TechHomePage = () => {
                 expandIcon={
                   <ArrowDownwardIcon
                     style={{
-                      color: "blue",
+                      color: "white",
                       fontWeight: "bold",
                       fontSize: "1.6rem",
                       animation: "bounce 1s infinite",
@@ -382,7 +383,7 @@ const TechHomePage = () => {
               >
                 <div className="flex items-center justify-center gap-2">
                   <img src={ecom} className="md:h-12" alt="E-Gov & E-Com" />
-                  <div className="font-bold pt-1 text-lg text-[#00bfff]">
+                  <div className="font-bold pt-1 text-lg text-[#0060b5]">
                     E-Gov & E-Com
                   </div>
                 </div>
@@ -409,7 +410,7 @@ const TechHomePage = () => {
                 expandIcon={
                   <ArrowDownwardIcon
                     style={{
-                      color: "blue",
+                      color: "white",
                       fontWeight: "bold",
                       fontSize: "1.6rem",
                       animation: "bounce 1s infinite",
@@ -420,7 +421,7 @@ const TechHomePage = () => {
               >
                 <div className="flex items-center justify-center gap-2">
                   <img src={health} className="md:h-12" alt="HealthCare" />
-                  <div className="font-bold pt-1 text-lg text-[#00bfff]">
+                  <div className="font-bold pt-1 text-lg text-[#0060b5]">
                     HealthCare
                   </div>
                 </div>
@@ -434,18 +435,19 @@ const TechHomePage = () => {
               </AccordionDetails>
             </Accordion>
           </div>
-        </div>
+        {/* </div> */}
+      </div>
       </div>
 
-      <div className="flex-col">
+      <div className="flex-col ">
         <h1 className=" text-center h-[10vh] my-4 text-white text-5xl italic m-[5px] font-montserrat md:mt-[40px]">
           Our Promise
         </h1>
 
         {/* ....................... */}
-        <div className="flex justify-evenly">
+        <div className="md:flex md:flex-row flex flex-col gap-4 md:gap-0 md:p-0 p-2  justify-evenly">
           <div
-            className="border rounded-[10px] border-black w-[22%] h-[520px] p-4 bg-[#0060b5] transform transition-all duration-500 hover:-translate-y-3 hover:shadow-lg group relative"
+            className="border rounded-[10px] border-black md:w-[22%] md:h-[520px] h-[510px] p-4 bg-[#0060b5] transform transition-all duration-500 hover:-translate-y-3 hover:shadow-lg group relative"
             style={{ perspective: "1000px" }}
           >
             <style jsx>{`
@@ -518,7 +520,7 @@ const TechHomePage = () => {
           </div>
           {/* .................................. */}
           <div
-            className="border rounded-[10px] border-black w-[22%] h-[520px] p-4 bg-white transform transition-all duration-500 hover:-translate-y-3 hover:shadow-lg group relative"
+            className="border rounded-[10px] border-black md:w-[22%] md:h-[520px] h-[510px] p-4 bg-white transform transition-all duration-500 hover:-translate-y-3 hover:shadow-lg group relative"
             style={{ perspective: "1000px" }}
           >
             <style jsx>{`
@@ -591,7 +593,7 @@ const TechHomePage = () => {
           {/* ........................... */}
 
           <div
-            className="border rounded-[10px] border-black w-[22%] h-[520px] p-4 bg-[#0060b5]  transform transition-all duration-500 hover:-translate-y-3 hover:shadow-lg group relative"
+            className="border rounded-[10px] border-black md:w-[22%] md:h-[520px] h-[510px] p-4 bg-[#0060b5]  transform transition-all duration-500 hover:-translate-y-3 hover:shadow-lg group relative"
             style={{ perspective: "1000px" }}
           >
             <style jsx>{`
@@ -665,9 +667,9 @@ const TechHomePage = () => {
           {/* ................ */}
         </div>
 
-        <div className="flex justify-evenly my-8">
+        <div className="md:flex md:flex-row flex flex-col gap-4 md:gap-0 md:p-0 p-2 justify-evenly md:my-8 my-0">
           <div
-            className="border rounded-[10px] border-black w-[22%] h-[520px] p-4 bg-white transform transition-all duration-500 hover:-translate-y-3 hover:shadow-lg group relative"
+            className="border rounded-[10px] border-black md:w-[22%] md:h-[520px] h-[510px] p-4 bg-white transform transition-all duration-500 hover:-translate-y-3 hover:shadow-lg group relative"
             style={{ perspective: "1000px" }}
           >
             <style jsx>{`
@@ -739,7 +741,7 @@ const TechHomePage = () => {
           </div>
 
           <div
-            className="border rounded-[10px] border-black w-[22%] bg-[#0060b5] h-[520px] p-4 transform transition-all duration-500 hover:-translate-y-3 hover:shadow-lg group relative"
+            className="border rounded-[10px] border-black md:w-[22%] bg-[#0060b5] md:h-[520px] h-[510px] p-4 transform transition-all duration-500 hover:-translate-y-3 hover:shadow-lg group relative"
             style={{ perspective: "1000px" }}
           >
             <style jsx>{`
@@ -806,7 +808,7 @@ const TechHomePage = () => {
           </div>
 
           <div
-            className="border rounded-[10px] border-black w-[22%] h-[520px] p-4 bg-white transform transition-all duration-500 hover:-translate-y-3 hover:shadow-lg group relative"
+            className="border rounded-[10px] border-black md:w-[22%] md:h-[520px] h-[510px] p-4 bg-white transform transition-all duration-500 hover:-translate-y-3 hover:shadow-lg group relative"
             style={{ perspective: "1000px" }}
           >
             <style jsx>{`
