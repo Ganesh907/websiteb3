@@ -259,12 +259,12 @@ const TechHomePage = () => {
         </div>
       </HeroSection>
 
-      <div className="w-[90%] h-auto">
+      <div className="w-[100%] h-auto">
         <h1 className="text-center md:text-center md:ml-[9%] text-white text-5xl italic m-[5px] font-montserrat md:mt-[40px]">
           Industries we deal with
         </h1>
 
-        <div className="grid grid-cols-1 place-content-center md:grid-cols-2 md:gap-2 md:ml-20 md:w-auto w-[100%]">
+        <div className="grid grid-cols-1 place-content-center md:grid-cols-2 md:gap-2 md:ml-20 md:w-auto w-[100vw]">
           <div className="m-7 ">
             <Accordion
               expanded={expanded === "panel1"}
@@ -354,8 +354,8 @@ const TechHomePage = () => {
               </AccordionDetails>
             </Accordion>
           </div>
-          </div>
-          <div className="grid grid-cols-1 place-content-center md:grid-cols-2 md:gap-2 md:ml-20 md:w-auto w-[100%]">
+          {/* </div> */}
+          {/* <div className="grid grid-cols-1 place-content-center md:grid-cols-2 md:gap-2 md:ml-20 md:w-auto w-[100%]"> */}
           <div className="m-7">
             <Accordion
               expanded={expanded === "panel3"}
@@ -435,8 +435,8 @@ const TechHomePage = () => {
               </AccordionDetails>
             </Accordion>
           </div>
-        {/* </div> */}
-      </div>
+          {/* </div> */}
+        </div>
       </div>
 
       <div className="flex-col ">
