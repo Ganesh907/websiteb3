@@ -12,6 +12,8 @@ import candidate from '../../Assets/Images/candidateicon1.png'
 import rating from '../../Assets/Images/ratingicon.png'
 import ITicon from '../../Assets/Images/information.png'
 import software from '../../Assets/Images/softwareicon.png'
+import cloud from '../../Assets/Images/cloudicon.png'
+import enterprise from '../../Assets/Images/enterpriseicon.png'
 const RecHomePage = () => {
   const searchIconSvg = `data:image/svg+xml;base64,${btoa(`
 
@@ -204,7 +206,7 @@ const RecHomePage = () => {
   </h1>
 
   <span
-    className="absolute bottom-0 md:top-7 top-[120px] left-0 md:w-[65vh] w-[20vh] border-b-2 my-8"
+    className="absolute bottom-0 md:top-7 top-[120px] left-0 md:w-[65vh] w-[70%] border-b-2 my-8"
     style={{
       borderImage: "linear-gradient(to right, yellow, white, blue, black) 1",
       animation: "gradientShift 6s infinite",
@@ -309,14 +311,14 @@ const RecHomePage = () => {
         Industry Specialization
         </h1>
 
-        <div className="grid grid-cols-1 place-content-center md:grid-cols-2 md:gap-2 md:ml-20 md:w-auto w-[100%]">
+        <div className="grid grid-cols-1  place-content-center md:grid-cols-2 md:gap-2 md:ml-20 md:w-auto w-[110%]">
           <div className="m-7">
             <Accordion
               expanded={expanded === "panel1"}
               onMouseEnter={() => handleMouseEnter2("panel1")}
               onMouseLeave={handleMouseLeave2}
               style={{ backgroundColor: "#1a1a1a" }}
-              className="p-2 border border-[#333] border-spacing-4 hover:border-blue-600 shadow-lg transition-shadow duration-300"
+              className="p-2 border border-[#333] bg-red-500 border-spacing-4 hover:border-blue-600 shadow-lg transition-shadow duration-300"
             >
               {/* <AccordionSummary
           aria-controls='panel1-content'
@@ -325,7 +327,7 @@ const RecHomePage = () => {
                 expandIcon={
                   <ArrowDownwardIcon
                     style={{
-                      color: "blue",
+                      color: "white",
                       fontWeight: "bold",
                       fontSize: "1.6rem",
                       animation: "bounce 1s infinite",
@@ -367,7 +369,7 @@ const RecHomePage = () => {
                 expandIcon={
                   <ArrowDownwardIcon
                     style={{
-                      color: "blue",
+                      color: "white",
                       fontWeight: "bold",
                       fontSize: "1.6rem",
                       animation: "bounce 1s infinite",
@@ -416,7 +418,7 @@ const RecHomePage = () => {
                 expandIcon={
                   <ArrowDownwardIcon
                     style={{
-                      color: "blue",
+                      color: "white",
                       fontWeight: "bold",
                       fontSize: "1.6rem",
                       animation: "bounce 1s infinite",
@@ -426,7 +428,7 @@ const RecHomePage = () => {
                 aria-controls="panel3-content"
               >
                 <div className="flex items-center justify-center gap-2">
-                  {/* <img src={ecom} className="md:h-12" alt="E-Gov & E-Com" /> */}
+                  <img src={cloud} className="md:h-12" alt="E-Gov & E-Com" />
                   <div className="font-bold pt-1 text-lg text-[#00bfff]">
                   Cloud Computing & Data Science
                   </div>
@@ -454,7 +456,7 @@ const RecHomePage = () => {
                 expandIcon={
                   <ArrowDownwardIcon
                     style={{
-                      color: "blue",
+                      color: "white",
                       fontWeight: "bold",
                       fontSize: "1.6rem",
                       animation: "bounce 1s infinite",
@@ -464,7 +466,7 @@ const RecHomePage = () => {
                 aria-controls="panel4-content"
               >
                 <div className="flex items-center justify-center gap-2">
-                  {/* <img src={health} className="md:h-12" alt="HealthCare" /> */}
+                  <img src={enterprise} className="md:h-12" alt="HealthCare" />
                   <div className="font-bold pt-1 text-lg text-[#00bfff]">
                   Enterprise Solutions
                   </div>
