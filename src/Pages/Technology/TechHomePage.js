@@ -259,7 +259,7 @@ const TechHomePage = () => {
         </div>
       </HeroSection>
 
-      <div className="w-[100%] h-auto">
+      <div className="md:w-[90%] w-[100%] h-auto">
         <h1 className="text-center md:text-center md:ml-[9%] text-white text-5xl italic m-[5px] font-montserrat md:mt-[40px]">
           Industries we deal with
         </h1>
