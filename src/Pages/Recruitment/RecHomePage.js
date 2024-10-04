@@ -512,7 +512,7 @@ const RecHomePage = () => {
 {/* ....................... */}
 <div>
 
-<h1 className=" italic text-5xl mb-8 text-center h-[10vh] text-white">
+<h1 className=" italic text-5xl md:mb-8 text-center h-[10vh] text-white">
   Our Promise
 </h1>
 
@@ -604,7 +604,7 @@ data-aos-duration="3000">
 </div> */}
 
 {/* ....................... */}
-<div className='md:flex md:justify-evenly md:flex-row md:gap-0 gap-2 md:p-0 p-2 flex flex-col justify-center items-center'>
+<div className='md:flex md:justify-evenly md:flex-row md:gap-0 gap-2 md:p-0 p-6 flex flex-col justify-center items-center'>
 <div className="border rounded-[10px] border-black w-full  md:w-[22%] h-[520px] p-4 bg-[#0060b5] transform transition-all duration-500 hover:-translate-y-3 hover:shadow-lg group relative" style={{ perspective: '1000px' }}>
 <style jsx>{`
 .rotate-y-360 {
@@ -641,7 +641,7 @@ style={{
 </div>
 
 <div>
-<h1 className="my-2 text-white font-bold">Full End to end Delivery</h1>
+<h1 className="my-2 text-white font-bold text-xl">Full End to end Delivery</h1>
 <ul className="list-disc leading-loose text-white ml-4" style={{ '--tw-marker-color': 'blue' }}>
 <li className="marker:text-white">Recruiters manage the entire end-to-end delivery process.</li>
 <li className="marker:text-white">Standardized process ensures better candidate presentation.</li>
@@ -656,7 +656,7 @@ style={{
 <div className="absolute bottom-0 left-6 w-[80%] h-1 m-2 bg-transparent group-hover:bg-white transition-all duration-500"></div>
 </div>
 {/* .................................. */}
-<div className="border rounded-[10px] border-black md:w-[22%] h-[520px] p-4 bg-white transform transition-all duration-500 hover:-translate-y-3 hover:shadow-lg group relative" style={{ perspective: '1000px' }}>
+<div className="border rounded-[10px] border-black md:w-[22%] h-[520px] md:mt-0 mt-3 p-4 bg-white transform transition-all duration-500 hover:-translate-y-3 hover:shadow-lg group relative" style={{ perspective: '1000px' }}>
 <style jsx>{`
 .rotate-y-360 {
 transform: rotateY(0deg);
@@ -692,7 +692,7 @@ style={{
 </div>
 
 <div>
-<h1 className="my-2 text-black font-bold"> We assure a CLIENT to</h1>
+<h1 className="my-2 text-black font-bold text-xl"> We assure a CLIENT to</h1>
 <ul className="list-disc leading-loose text-black ml-4" style={{ '--tw-marker-color': 'blue' }}>
 <li className="marker:text-blue-500">Understand their requirements in detail before taking any action.</li>
 <li className="marker:text-blue-500">Deploy the right recruiters, in the right quantity, for the right duration.</li>
@@ -708,7 +708,7 @@ style={{
 </div>
 {/* ........................... */}
 
-<div className="border rounded-[10px] border-black md:w-[22%] h-[520px] p-4 bg-[#0060b5] transform transition-all duration-500 hover:-translate-y-3 hover:shadow-lg group relative" style={{ perspective: '1000px' }}>
+<div className="border rounded-[10px] border-black md:w-[22%] h-[520px] p-4 md:mt-0 mt-3 bg-[#0060b5] transform transition-all duration-500 hover:-translate-y-3 hover:shadow-lg group relative" style={{ perspective: '1000px' }}>
 <style jsx>{`
 .rotate-y-360 {
 transform: rotateY(0deg);
@@ -744,7 +744,7 @@ style={{
 </div>
 
 <div className='group-hover:text-white'>
-<h1 className="my-2  font-bold text-white"> We assure a CANDIDATE to</h1>
+<h1 className="my-2  font-bold text-white text-xl"> We assure a CANDIDATE to</h1>
 <ul className="list-disc leading-loose  ml-4 text-white" style={{ '--tw-marker-color': 'blue' }}>
 <li className="marker:text-white">Take the time to understand your unique needs and requirements.</li>
 <li className="marker:text-white">Refer only genuine positions that match your qualifications.</li>
@@ -762,7 +762,7 @@ style={{
 
 {/* ................ */}
 
-<div className="border rounded-[10px] border-black md:w-[22%] h-[520px] p-4 bg-white transform transition-all duration-500 hover:-translate-y-3 hover:shadow-lg group relative" style={{ perspective: '1000px' }}>
+<div className="border rounded-[10px] border-black md:w-[22%] h-[520px] p-4 md:mt-0 mt-3 bg-white transform transition-all duration-500 hover:-translate-y-3 hover:shadow-lg group relative" style={{ perspective: '1000px' }}>
 <style jsx>{`
 .rotate-y-360 {
 transform: rotateY(0deg);
@@ -798,14 +798,15 @@ style={{
 </div>
 
 <div>
-<h1 className="my-2 text-black font-bold">Competitive Rates & Delivery</h1>
+<h1 className="my-2 text-black font-bold text-xl ">Competitive Rates & Delivery</h1>
 <ul className="list-disc leading-loose text-black ml-4" style={{ '--tw-marker-color': 'blue' }}>
-<li className="marker:text-blue-500">We are a delivery-based TECHNOLOGY and HR solutions startup that goes the extra mile.</li>
-<li className="marker:text-blue-500">Known for fast and accurate delivery without compromising quality standards.</li>
-<li className="marker:text-blue-500">At BitByBit, we offer the best industry rates, ensuring cost-effectiveness.</li>
-<li className="marker:text-blue-500">Committed to building long-term relationships with our clients.</li>
-{/* <li className="marker:text-blue-500">Recognized as one of the best value-for-money TECHNOLOGY and HR agencies in a short span.</li> */}
+  <li className="marker:text-blue-500">A tech and HR solutions startup going the extra mile.</li>
+  <li className="marker:text-blue-500">Fast, accurate delivery with uncompromised quality.</li>
+  <li className="marker:text-blue-500">Best industry rates for cost-effective solutions.</li>
+  <li className="marker:text-blue-500">Building long-term client relationships.</li>
+  <li className="marker:text-blue-500">Recognized for value-for-money solutions in tech and HR.</li>
 </ul>
+
 
 </div>
 

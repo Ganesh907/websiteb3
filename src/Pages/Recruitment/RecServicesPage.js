@@ -47,8 +47,6 @@ import Recruitericon3 from "../../Assets/Images/Recruitment3.png";
     "Oracle PL/SQL",
     "SAP ABAP Consultant",
     "SAP ABAP HR",
-    "SAP ABAP HR",
-    "SAP HANA",
     "SAP HANA"
   ];
 
@@ -127,10 +125,11 @@ import Recruitericon3 from "../../Assets/Images/Recruitment3.png";
   // }, [visibleItems]);
 
   const jobRoles = [
-    "JAVA .NET .NET PHP Developers",
+    "JAVA ",
+    ".NET",
+    "PHP Developers",
     "Android, Kotlin, Flutter - Developer",
     "SAP ABAP / Basis / FICO / MDG / CRM / BPC / Hana",
-    "SAP ABAP",
     "Linux Admin / Network Engineer",
     "Microsoft Azure / Ms Dynamic 365",
     "Workday/ OracleES / EDM",
@@ -141,9 +140,9 @@ import Recruitericon3 from "../../Assets/Images/Recruitment3.png";
     "Google Big Query / Pega System",
     "Service Desk / Service Now",
     "Manual / Automation tester",
-    "B3 Angular Developer",
+    "Angular Developer",
     "Business Analyst",
-    "Data Scientist / Machine Learning"
+    
   ];
 
   const marqueeRef = useRef(null); 
@@ -163,7 +162,7 @@ import Recruitericon3 from "../../Assets/Images/Recruitment3.png";
         videoOpacity={20}
         MarginAnimtion={true}
       >
-        <div className=" flex flex-col justify-end items-start font-bold drop-shadow-xl ">
+        <div className="lg:w-[50vw] w-[90vw] flex flex-col justify-end items-start font-bold drop-shadow-xl ">
           {/* <div className=" flex items-center">
             <h1 className="text-[#0060b5] text-7xl font-bold drop-shadow-xl ">
               Our Recruitment Services
@@ -173,7 +172,7 @@ import Recruitericon3 from "../../Assets/Images/Recruitment3.png";
 
 
           <div className=" flex flex-col text-start  ">
-            <h1 className="drop-shadow-lg text-[#0060b5] text-5xl  font-bold">
+            <h1 className="text-[#0060b5]  text-3xl lg:text-5xl font-bold drop-shadow-xl">
               Our Solutions 
               <span
   className="absolute bottom-0 left-0 w-full border-b-2 border-dotted translate-y-5"
@@ -196,7 +195,7 @@ import Recruitericon3 from "../../Assets/Images/Recruitment3.png";
   `}
 </style>
             </h1><br/>
-            <h1 className="drop-shadow-lg   text-white text-3xl  w-auto  mb-5 font-bold "> Your <span className='text-yellow-500'>Hiring</span> Needs
+            <h1 className="drop-shadow-lg   text-white text-3xl  md:w-auto  mb-5 font-bold "> Your <span className='text-yellow-500'>Hiring</span> Needs
           
 
            </h1>
@@ -209,14 +208,14 @@ import Recruitericon3 from "../../Assets/Images/Recruitment3.png";
     className="relative pl-4  opacity-0 animate-fadeInRepeat"
     style={{ animationDelay: '0.5s' }} // First item appears after 0.5s
   >
-    <div className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white w-2 h-2 rounded-full"></div>
+    <div className="absolute left-0 md:top-1/2 top-[28%] transform -translate-y-1/2 bg-white w-2 h-2 rounded-full"></div>
     Discover tailored recruitment strategies to perfect your team fit.
   </li>
   <li
     className="relative pl-4 opacity-0 animate-fadeInRepeat"
     style={{ animationDelay: '1.5s' }} // Second item appears after 1.5s
   >
-    <div className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white w-2 h-2 rounded-full"></div>
+    <div className="absolute left-0 md:top-1/2 top-[28%] transform -translate-y-1/2 bg-white w-2 h-2 rounded-full"></div>
     Enhance your hiring strategy with our comprehensive talent services.
   </li>
 </ul>
