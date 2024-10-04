@@ -128,15 +128,44 @@ const AboutUsPage = () => {
     setIsHovered(false);
   };
 
+
+
+{/* <HeroSection videoUrl={Techclient} videoOpacity={20} MarginAnimtion={true}>
+        <div className='lg:w-[50vw] w-[90vw] flex justify-end items-end'>
+          <div className="relative w-full md:h-80 h-96  overflow-hidden mr-2 cursor-pointer mb-16">
+            <h1 className="text-[#0060b5]  text-3xl lg:text-5xl font-bold drop-shadow-xl">
+              Empower Your Journey
+              <span
+                className="absolute bottom-0 top-4 left-0 lg:w-[40vw] w-[90vw] lg:border-b-2 border-b-4 my-9"
+                style={{
+                  borderImage: "linear-gradient(to right, yellow, white, blue, black) 1",
+                  animation: "gradientShift 6s infinite",
+                }}
+              ></span>
+            </h1>
+
+            <p className="md:text-2xl text-xl font-bold md:mt-4 mt-10 text-white" data-aos="fade-up">
+              Redefine Your <span className="text-yellow-400">Success</span> With Innovation And Excellence.
+            </p>
+
+            <h1 className="text-2xl mt-14 italic ">
+              <span className="p-3 border-white border-l-2" style={{ backgroundColor: 'rgb(0,0,0,0.5)' }}>
+                Our Clients' Words
+              </span>
+            </h1> */}
+
+
+
+
   return (
     <div>
       <HeroSection videoUrl={AboutUsBgVideo} videoOpacity={20} MarginAnimtion={true}>
-        <div className='w-[50vw] flex justify-end items-end'>
-          <div className="relative w-full h-52 overflow-hidden mr-2 cursor-pointer mb-16">
-            <h1 className="text-[#0060b5] text-5xl font-bold drop-shadow-xl">
+        <div className='lg:w-[50vw] w-[90vw] flex justify-end items-end'>
+          <div className="relative w-full md:h-80 h-96  overflow-hidden mr-2 cursor-pointer mb-16">
+            <h1 className="text-[#0060b5] text-3xl lg:text-5xl font-bold drop-shadow-xl">
               Who We Are
               <span
-                className="absolute bottom-0 top-4 left-0 w-[45vh] border-b-2 my-9"
+                className="absolute bottom-0 top-4 left-0 lg:w-[45vh]  w-[90vw] lg:border-b-2 border-b-4 my-9"
                 style={{
                   borderImage: "linear-gradient(to right, yellow, white, blue, black) 1",
                   animation: "gradientShift 6s infinite",
@@ -170,11 +199,11 @@ const AboutUsPage = () => {
               onMouseLeave={handleMouseLeave}
             >
               {content.map((item, index) => (
-                <div key={index} className="w-full flex-shrink-0 bg-transparent font-bold text-3xl pl-2 text-white drop-shadow-xl">
-                  <h3 className="text-2xl font-semibold inline-block pb-1 my-4">
+                <div key={index} className="w-full flex-shrink-0 bg-transparent font-bold  pl-2 text-white drop-shadow-xl">
+                  <h3 className="mt-10 md:mt-4 md:text-2xl text-xl font-semibold inline-block pb-1 my-4">
                     {highlightText(item.heading)}
                   </h3>
-                  <ul className="list-disc pl-5 space-y-2">
+                  <ul className="list-disc pl-5 space-y-2 text-xl">
                     {item.paragraph.map((point, idx) => (
                       <li key={idx} className="text-white font-semibold text-xl drop-shadow-xl">
                         {point}
@@ -358,7 +387,8 @@ At BitByBit Solutions, we’re committed to excellence, ensuring that every proj
 
 <div className="lg:h-[100vh] w-full flex md:flex-row flex-col px-5 md:px-0 justify-between">
 <div className="md:h-full  md:w-[45%] flex flex-col justify-center md:justify-start z-2 items-start  " 
-data-aos="fade-left" data-aos-duration="3000" 
+  data-aos={window.innerWidth <= 768 ? "fade-up" : "fade-left"}
+ data-aos-duration="3000" 
 >
   <div className="flex flex-col justify-between items-center  w-full p-5"
   >
@@ -383,11 +413,12 @@ data-aos="fade-left" data-aos-duration="3000"
 
 <div className="flex justify-center md:w-[40%] items-center"
  data-aos="zoom-in" data-aos-duration="3000" >
-  <img src={MissionVisionGif} alt="" className="scale-150 "/>
+  <img src={MissionVisionGif} alt="" className="md:scale-150 "/>
 </div>
 
 <div className="md:h-full md:w-[45%]  flex flex-col justify-end z-2   items-end  "
-data-aos="fade-right" data-aos-duration="3000" 
+  data-aos={window.innerWidth <= 768 ? "fade-up" : "fade-right"}
+ data-aos-duration="3000" 
 >
   <div className="flex flex-col  justify-between items-center  w-full p-5">
     

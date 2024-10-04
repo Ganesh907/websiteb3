@@ -187,15 +187,40 @@ const RecHomePage = () => {
   return (
     <div className="recrHomepageMain" >
 
+
+{/* <HeroSection videoUrl={Techclient} videoOpacity={20} MarginAnimtion={true}>
+        <div className='lg:w-[50vw] w-[90vw] flex justify-end items-end'>
+          <div className="relative w-full md:h-80 h-96  overflow-hidden mr-2 cursor-pointer mb-16">
+            <h1 className="text-[#0060b5]  text-3xl lg:text-5xl font-bold drop-shadow-xl">
+              Empower Your Journey
+              <span
+                className="absolute bottom-0 top-4 left-0 lg:w-[40vw] w-[90vw] lg:border-b-2 border-b-4 my-9"
+                style={{
+                  borderImage: "linear-gradient(to right, yellow, white, blue, black) 1",
+                  animation: "gradientShift 6s infinite",
+                }}
+              ></span>
+            </h1>
+
+            <p className="md:text-2xl text-xl font-bold md:mt-4 mt-10 text-white" data-aos="fade-up">
+              Redefine Your <span className="text-yellow-400">Success</span> With Innovation And Excellence.
+            </p>
+
+            <h1 className="text-2xl mt-14 italic ">
+              <span className="p-3 border-white border-l-2" style={{ backgroundColor: 'rgb(0,0,0,0.5)' }}>
+                Our Clients' Words
+              </span>
+            </h1> */}
+
 <HeroSection videoUrl={jobinterview}
         videoOpacity={20}
         MarginAnimtion={true}
       >
-        <div className="font-bold drop-shadow-xl">
+        <div className="lg:w-[50vw] w-[90vw] md:h-80 h-auto font-bold drop-shadow-xl">
           <div className='' style={{ cursor: `url(${searchIconSvg}) 40 30, auto` }}>
           <div className="relative">
   <h1
-    className=" text-[#0060b5] text-5xl font-bold drop-shadow-xl mr-2 "
+    className=" text-[#0060b5] text-3xl lg:text-5xl font-bold drop-shadow-xl mr-2 "
     style={{ userSelect: 'none', WebkitUserSelect: 'none', MsUserSelect: 'none' }}
   >
     {"Top Talent Access".split("").map((letter, index) => (
@@ -206,7 +231,7 @@ const RecHomePage = () => {
   </h1>
 
   <span
-    className="absolute bottom-0 md:top-7 top-[120px] left-0 md:w-[65vh] w-[70%] border-b-2 my-8"
+    className="absolute bottom-0 lg:top-5 top-2 left-0 lg:w-[30vw] w-[90vw] lg:border-b-2 border-b-4 my-9"
     style={{
       borderImage: "linear-gradient(to right, yellow, white, blue, black) 1",
       animation: "gradientShift 6s infinite",
@@ -234,28 +259,28 @@ const RecHomePage = () => {
 
           <div className=" flex items-center">
 
-            <h1 className="drop-shadow-lg  text-white text-3xl my-5 font-bold  pb-4"
+            <h1 className="drop-shadow-lg  text-white md:text-3xl text-xl my-5 font-bold  pb-4"
               style={{ userSelect: 'none', WebkitUserSelect: 'none', MsUserSelect: 'none' }}
             >
               {"Let Us Find the ".split("").map((letter, index) => (
-                <span key={index} className="hover:text-[#0060b5] hover:text-[35px] transition-opacity duration-300">
+                <span key={index} className="hover:text-[#0060b5] md:hover:text-[35px] transition-opacity duration-300">
                   {letter}
                 </span>
               ))}
 
 
-              <span> </span>
+           
 
-              {"Perfect Fit".split("").map((letter, index) => (
-                <span key={index} className="hover:text-[#0060b5] hover:text-[35px] transition-opacity duration-300 text-yellow-500 text-3xl">
+              {"Perfect Fit ".split("").map((letter, index) => (
+                <span key={index} className="hover:text-[#0060b5] md:hover:text-[35px] transition-opacity duration-300 text-yellow-500  md:text-3xl text-xl">
                   {letter}
                 </span>
               ))}
 
-              <span> </span>
+             
 
               {"for Your Company".split("").map((letter, index) => (
-                <span key={index} className="hover:text-[#0060b5]  hover:text-[35px] text-white transition-opacity duration-300">
+                <span key={index} className="hover:text-[#0060b5]  md:hover:text-[35px] text-white transition-opacity duration-300">
                   {letter}
                 </span>
               ))}
@@ -272,7 +297,7 @@ const RecHomePage = () => {
               onMouseLeave={handleMouseLeave}
             >
               {quotes.map((quote, index) => (
-                <div key={index} className="w-full font-semibold text-xl flex-shrink-0 bg-transparent text-white drop-shadow-xl">
+                <div key={index} className="w-full font-semibold md:text-xl flex-shrink-0 bg-transparent text-white drop-shadow-xl">
                   <p>{quote}</p>
                 </div>
               ))}
@@ -306,8 +331,8 @@ const RecHomePage = () => {
       </ul> */}
 
 {/* ............................ */}
-<div className="w-[90%] h-auto">
-        <h1 className="text-center md:text-center md:ml-[9%] text-white text-5xl italic m-[5px] font-montserrat md:mt-[40px]">
+<div className="w-[90%] h-auto py-20">
+        <h1 className="text-center md:text-center md:ml-[9%] text-white text-5xl italic m-[5px]  md:mt-[40px] md:mb-10">
         Industry Specialization
         </h1>
 
@@ -337,8 +362,8 @@ const RecHomePage = () => {
                 aria-controls="panel1-content"
               >
                 <div className="flex items-center justify-center gap-2">
-                  <img src={ITicon} className="md:h-12" alt="IT" />
-                  <div className="font-bold pt-1 text-lg text-[#00bfff]">
+                  <img src={ITicon} className="md:h-16" alt="IT" />
+                  <div className="font-bold pt-1  ml-4 text-2xl text-[#00bfff]">
                   Information Technology (IT)
                   </div>
                 </div>
@@ -382,11 +407,11 @@ const RecHomePage = () => {
                  
                   <img
                     src={software}
-                    className="md:h-12"
+                    className="md:h-16"
                     alt="Software"
                   />
-                  <div className="font-bold pt-1 text-lg text-[#00bfff]">
-                  Software Development & Engineering
+                  <div className="font-bold pt-1  ml-4 text-2xl  text-[#00bfff]">
+                  Software Development 
                   </div>
                 </div>
               </AccordionSummary>
@@ -428,8 +453,8 @@ const RecHomePage = () => {
                 aria-controls="panel3-content"
               >
                 <div className="flex items-center justify-center gap-2">
-                  <img src={cloud} className="md:h-12" alt="E-Gov & E-Com" />
-                  <div className="font-bold pt-1 text-lg text-[#00bfff]">
+                  <img src={cloud} className="md:h-16" alt="E-Gov & E-Com" />
+                  <div className="font-bold pt-1  ml-4 text-2xl text-[#00bfff]">
                   Cloud Computing & Data Science
                   </div>
                 </div>
@@ -450,7 +475,7 @@ const RecHomePage = () => {
               onMouseEnter={() => handleMouseEnter2("panel4")}
               onMouseLeave={handleMouseLeave2}
               style={{ backgroundColor: "#1a1a1a" }}
-              className="p-2 bg-[#1a1a1a] border border-[#333] border-spacing-4 hover:border-blue-600 shadow-lg transition-shadow duration-300"
+              className="p-2 bg-[#1a1a1a] border border-[#333] text-center border-spacing-4 hover:border-blue-600 shadow-lg transition-shadow duration-300"
             >
               <AccordionSummary
                 expandIcon={
@@ -466,8 +491,8 @@ const RecHomePage = () => {
                 aria-controls="panel4-content"
               >
                 <div className="flex items-center justify-center gap-2">
-                  <img src={enterprise} className="md:h-12" alt="HealthCare" />
-                  <div className="font-bold pt-1 text-lg text-[#00bfff]">
+                  <img src={enterprise} className="md:h-16" alt="HealthCare" />
+                  <div className="font-bold pt-1  ml-4 text-2xl text-[#00bfff] text-center">
                   Enterprise Solutions
                   </div>
                 </div>
@@ -721,11 +746,11 @@ style={{
 <div className='group-hover:text-white'>
 <h1 className="my-2  font-bold text-white"> We assure a CANDIDATE to</h1>
 <ul className="list-disc leading-loose  ml-4 text-white" style={{ '--tw-marker-color': 'blue' }}>
-<li className="marker:text-white">Recruiters manage the entire end-to-end delivery process.</li>
-<li className="marker:text-white">Standardized process ensures better candidate presentation.</li>
-<li className="marker:text-white">Recruiters handle requirements gathering to candidate start date.</li>
-<li className="marker:text-white">Workflow prevents information loss during translation.</li>
-<li className="marker:text-white">Streamlined process ensures faster delivery.</li>
+<li className="marker:text-white">Take the time to understand your unique needs and requirements.</li>
+<li className="marker:text-white">Refer only genuine positions that match your qualifications.</li>
+<li className="marker:text-white">Ensure that roles align with your experience and career goals.</li>
+<li className="marker:text-white">Maintain complete confidentiality in all communications.</li>
+<li className="marker:text-white">Provide personalized and trustworthy recruitment services.</li>
 </ul>
 </div>
 
