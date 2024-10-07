@@ -31,7 +31,7 @@ function Dropdown({ items, scrolled }) {
       }`}
     >
       {items.map((item, index) => (
-        <li key={index} className="relative bg-black bg-opacity-20 lg:m-1 border-2 border-transparent hover:border-white rounded-lg overflow-hidden">
+        <li key={index} className="relative text-center  bg-black bg-opacity-20 lg:m-1 border-2 border-transparent hover:border-white rounded-lg overflow-hidden">
           <Link className="block text-white text-sm w-full h-full pl-2 p-3 no-underline" to={item.path} onClick={() => setClick(false)}>
             {item.title}
           </Link>
