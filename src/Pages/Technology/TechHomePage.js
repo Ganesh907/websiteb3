@@ -18,66 +18,32 @@ import "./TechServicesPage.css";
 import delivery from "../../Assets/Images/delivery.png";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import innovative from "../../Assets/Images/innovative.png";
-import transperency from "../../Assets/Images/transparency.png";
+import transperency from "../../Assets/Images/trans (2).png";
 import customization from "../../Assets/Images/customization.png";
-import ontimedelivery from "../../Assets/Images/ontime (2).png";
+import ontimedelivery from "../../Assets/Images/timing.png";
 import Quality from "../../Assets/Images/quality.png";
-import scalable from "../../Assets/Images/scalable (2).png";
+import scalable from "../../Assets/Images/scalable.png";
 import "./TechServicesPage.css";
+import "./Section2.css";
 
 const TechHomePage = () => {
   const [expanded, setExpanded] = useState(false);
-  const [bottomRadius, setBottomRadius] = useState("0%");
+  const [hovered, setHovered] = useState(null); // Track hovered Accordion
+  const [visibleLines, setVisibleLines] = useState(0);
   const [scrollHeading, setScrollHeading] = useState("");
+  const [hoveredGroup, setHoveredGroup] = useState(null);
+
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
-      const maxScroll = 50; // Adjust this value for how quickly you want the border to round
-      const radius = Math.min((scrollTop / maxScroll) * 50, 50); // Cap at 50% for a smooth transition
-      setBottomRadius(`${radius}%`);
+      const maxScroll = 50;
+      const radius = Math.min((scrollTop / maxScroll) * 50, 50);
       setScrollHeading(scrollTop > 30 ? true : false);
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  const [visibleSteps, setVisibleSteps] = useState(0);
-  const [visibleLines, setVisibleLines] = useState(0); // Track how many lines are visible
-  const [visibleItems, setVisibleItems] = useState({});
-  const [hoverDelay, setHoverDelay] = useState(null);
-
-  useEffect(() => {
-    if (visibleSteps < 2) {
-      const timer = setTimeout(() => {
-        setVisibleSteps((prev) => prev + 1);
-      }, 100); // Adjust the time for each step to appear
-      return () => clearTimeout(timer); // Clean up the timer
-    }
-  }, [visibleSteps]);
-  // const [expanded, setExpanded] = useState(false);
-
-  const sectionRef = useRef(null);
-  const [inView, setInView] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setInView(true);
-          observer.disconnect(); // Stop observing once it's in view
-        }
-      },
-      { threshold: 0.3 } // Trigger when 30% of the section is in view
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
-
   const linesBank = [
     "Expertise in secure and efficient software for the BFSI sector.",
     "Financial transactions management solutions.",
@@ -107,20 +73,24 @@ const TechHomePage = () => {
     "Healthcare data analytics to improve patient care and operations.",
   ];
 
+  // Handle mouse enter
   const handleMouseEnter = (panel) => {
-    setExpanded(panel); // Expand the accordion on hover
+    // setHovered(panel);
+    setExpanded(panel);
   };
 
+  // Handle mouse leave
   const handleMouseLeave = () => {
-    setExpanded(false); // Collapse the accordion when the mouse leaves
-    setVisibleLines(0); // Reset visible lines when closed
+    // setHovered(null);
+    setExpanded(false);
+    setVisibleLines(0);
   };
+
+  // Handle typing effect for visible lines
   useEffect(() => {
     if (expanded) {
       let lineIndex = 0;
-      let currentLines = []; // Declare currentLines here
-
-      // Assign the correct lines based on the expanded panel
+      let currentLines = [];
       if (expanded === "panel1") {
         currentLines = linesBank;
       } else if (expanded === "panel2") {
@@ -133,17 +103,16 @@ const TechHomePage = () => {
 
       const typingInterval = setInterval(() => {
         if (lineIndex < currentLines.length) {
-          setVisibleLines((prev) => prev + 1); // Show next line
+          setVisibleLines((prev) => prev + 1);
           lineIndex++;
         } else {
-          clearInterval(typingInterval); // Clear interval when done
+          clearInterval(typingInterval);
         }
-      }, 300); // Adjust the speed of typing here (1000ms = 1 second)
+      }, 300);
 
-      return () => clearInterval(typingInterval); // Cleanup
+      return () => clearInterval(typingInterval);
     }
   }, [expanded, linesBank, linesHospitality, linesGov, linesHealth]);
-
   return (
     <div className="techHomepageMain  ">
       {scrollHeading ? (
@@ -165,7 +134,7 @@ const TechHomePage = () => {
         videoOpacity={20}
         MarginAnimtion={true}
       >
-        <div className="  z-50 w-auto md:flex md:flex-col md:justify-end  md:gap-2  ">
+        <div className="lg:w-[50vw] w-[90vw] md:flex md:flex-col md:justify-end  md:gap-2  ">
           <h1
             className={`md:w-full font-bold  text-5xl  font-montserrat pb-4 z-50 text-[#0060b5] `}
             style={{ transition: "margin-left 1s ease-in-out" }}
@@ -173,7 +142,7 @@ const TechHomePage = () => {
             Your <span className="text-[#0060b5]">Solution</span>
           </h1>
           <span
-            className="absolute bottom-[182px] left-50 w-[48%] border-b-2 border-dotted translate-y-5"
+            className="absolute md:bottom-[182px] bottom-[230px] left-50 w-[145%] md:w-[48%] border-b-2 border-dotted translate-y-5"
             style={{
               borderImage: "linear-gradient(to right, yellow, white, blue) 1",
               animation: "gradientShift 3s infinite", // Increase duration to slow down the speed
@@ -194,39 +163,39 @@ const TechHomePage = () => {
           </style>
 
           <div
-            className={`label   w-full mt-2 md:flex md:justify-start  md:gap-3 `}
+            className={`label   w-full mt-2 md:flex md:justify-start  md:gap-3  `}
             style={{ transition: "margin-left 1s ease-in-out" }}
           >
             <h1
-              className={`relative w-full font-bold text-5xl text-white `}
+              className={`relative w-full font-bold text-5xl text-white md:mt-0 md:top-0 top-3`}
               style={{ transition: "margin-left 1s ease-in-out" }}
             >
               We
-              <span className="absolute animate-zoom-design md:ml-4 text-yellow-400">
+              <span className="absolute animate-zoom-design ml-4 text-yellow-400">
                 Design
               </span>
-              <span className="absolute animate-zoom-develop md:ml-4 text-yellow-400">
+              <span className="absolute animate-zoom-develop ml-4 text-yellow-400">
                 Develop
               </span>
-              <span className="absolute animate-zoom-deliver md:ml-4 text-yellow-400">
+              <span className="absolute animate-zoom-deliver ml-4 text-yellow-400">
                 Deliver
               </span>
             </h1>
           </div>
 
-          <ul className="list-none space-y-4 text-xl font-semibold mt-1">
+          <ul className="list-none space-y-4 text-xl font-semibold md:mt-1 ">
             <li
-              className="relative pl-4 mt-2 opacity-0 animate-fadeInRepeat text-white"
+              className="relative pl-4 md:mt-2 mt-8  opacity-0 animate-fadeInRepeat text-white"
               style={{ animationDelay: "0.5s" }} // First item appears after 0.5s
             >
-              <div className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white w-2 h-2 rounded-full"></div>
+              <div className="absolute left-0 md:top-1/2 top-[28%] transform -translate-y-1/2 bg-white w-2 h-2 rounded-full"></div>
               Latest scalable technologies for reliable solutions.
             </li>
             <li
               className="relative pl-4 mt-4 opacity-0 animate-fadeInRepeat text-white"
               style={{ animationDelay: "1.5s" }} // Second item appears after 1.5s
             >
-              <div className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white w-2 h-2 rounded-full"></div>
+              <div className="absolute left-0 md:top-1/2 top-[28%] transform -translate-y-1/2 bg-white w-2 h-2 rounded-full"></div>
               Expert custom website, app, and system development.
             </li>
           </ul>
@@ -259,183 +228,193 @@ const TechHomePage = () => {
         </div>
       </HeroSection>
 
-      <div className="md:w-[90%] w-[100%] h-auto">
-        <h1 className="text-center md:text-center md:ml-[9%] text-white text-5xl italic m-[5px] font-montserrat md:mt-[40px]">
-          Industries we deal with
+      <div className="w-[90%] h-auto py-20">
+        <h1 className="text-center md:text-center md:ml-[9%] text-white text-5xl italic m-[5px] md:mt-[40px] md:mb-10">
+          Industry-Focused Innovation
         </h1>
 
-        <div className="grid grid-cols-1 place-content-center md:grid-cols-2 md:gap-2 md:ml-20 md:w-auto w-[100vw]">
-          <div className="m-7 ">
-            <Accordion
-              expanded={expanded === "panel1"}
-              onMouseEnter={() => handleMouseEnter("panel1")}
-              onMouseLeave={handleMouseLeave}
-              style={{ backgroundColor: "#1a1a1a" }}
-              className="p-2 border border-[#333] border-spacing-4 hover:border-blue-600 shadow-lg transition-shadow duration-300"
-            >
-              {/* <AccordionSummary
-          aria-controls='panel1-content'
-        > */}
-              <AccordionSummary
-                expandIcon={
-                  <ArrowDownwardIcon
-                    style={{
-                      color: "white",
-                      fontWeight: "bold",
-                      fontSize: "1.6rem",
-                      animation: "bounce 1s infinite",
-                    }}
-                  />
-                }
-                aria-controls="panel1-content"
+        <div className="grid grid-cols-1 p-1 place-content-center md:grid-cols-2 md:gap-4 md:ml-20 md:w-auto w-[110%]">
+          {/* Group 1 */}
+          <div
+            className="relative group"
+            expanded={expanded === "panel1"}
+            onMouseEnter={() => handleMouseEnter("panel1")}
+            onMouseLeave={handleMouseLeave}
+          >
+            <div className="transition-shadow duration-300">
+              {" "}
+              {/* Removed transition-transform */}
+              <Accordion
+                expanded={expanded === "panel1"}
+                onMouseEnter={() => handleMouseEnter("panel1")}
+                onMouseLeave={handleMouseLeave}
+                style={{ backgroundColor: "#1a1a1a" }}
+                className={`p-2 border border-[#333] hover:border-blue-600 shadow-lg ${
+                  expanded === "panel1" ? "relative" : ""
+                }`}
               >
-                <div className="flex items-center justify-center gap-2 ">
-                  <img src={bank} className="md:h-12" alt="Banking" />
-                  <div className="font-bold pt-1 text-lg text-[#0060b5]">
-                    Banking, Financial Services and Insurance
+                <AccordionSummary
+                  expandIcon={
+                    <ArrowDownwardIcon
+                      style={{
+                        color: "white",
+                        fontWeight: "bold",
+                        fontSize: "1.6rem",
+                        animation: "bounce 1s infinite",
+                      }}
+                    />
+                  }
+                  aria-controls="panel1-content"
+                >
+                  <div className="flex items-center justify-center gap-4">
+                    <img src={bank} className="md:h-18" alt="Banking" />
+                    <div className="font-bold pt-1 ml-4 text-xl text-[#00bfff]">
+                      Banking, Financial Services and Insurance
+                    </div>
                   </div>
-                </div>
-              </AccordionSummary>
-              <AccordionDetails>
-                <ul className="md:pl-5 list-disc leading-loose text-white">
-                  {linesBank.slice(0, visibleLines).map((line, index) => (
-                    <li key={index}>{line}</li>
-                  ))}
-                </ul>
-              </AccordionDetails>
-            </Accordion>
-          </div>
-
-          <div className="m-7">
-            <Accordion
-              expanded={expanded === "panel2"}
-              onMouseEnter={() => handleMouseEnter("panel2")}
-              onMouseLeave={handleMouseLeave}
-              style={{ backgroundColor: "#1a1a1a" }}
-              className="p-2 bg-[#1a1a1a] border border-[#333] border-spacing-4 hover:border-blue-600 shadow-lg transition-shadow duration-300"
-            >
-              {/* <AccordionSummary
-          aria-controls='panel2-content'
-        > */}
-
-              <AccordionSummary
-                expandIcon={
-                  <ArrowDownwardIcon
-                    style={{
-                      color: "white",
-                      fontWeight: "bold",
-                      fontSize: "1.6rem",
-                      animation: "bounce 1s infinite",
-                    }}
-                  />
-                }
-                aria-controls="panel2-content"
-              >
-                <div className="flex items-center justify-center gap-2">
-                  {/* <img src={bank} className='md:h-12' alt='Banking' /> */}
-                  <img
-                    src={hospitality}
-                    className="md:h-12"
-                    alt="Hospitality"
-                  />
-                  <div className="font-bold pt-1 text-lg text-[#0060b5]">
-                    Hospitality
-                  </div>
-                </div>
-              </AccordionSummary>
-              <AccordionDetails>
-                <ul className="md:pl-5 list-disc leading-loose text-white">
-                  {linesHospitality
-                    .slice(0, visibleLines)
-                    .map((line, index) => (
+                </AccordionSummary>
+                <AccordionDetails>
+                  <ul className="md:pl-5 list-disc leading-loose text-white">
+                    {linesBank.slice(0, visibleLines).map((line, index) => (
                       <li key={index}>{line}</li>
                     ))}
-                </ul>
-              </AccordionDetails>
-            </Accordion>
-          </div>
-          {/* </div> */}
-          {/* <div className="grid grid-cols-1 place-content-center md:grid-cols-2 md:gap-2 md:ml-20 md:w-auto w-[100%]"> */}
-          <div className="m-7">
-            <Accordion
-              expanded={expanded === "panel3"}
-              onMouseEnter={() => handleMouseEnter("panel3")}
-              onMouseLeave={handleMouseLeave}
-              style={{ backgroundColor: "#1a1a1a" }}
-              className="p-2 bg-[#1a1a1a] border border-[#333] border-spacing-4 hover:border-blue-600 shadow-lg transition-shadow duration-300"
-            >
-              {/* <AccordionSummary
-          aria-controls='panel2-content'
-        > */}
-
-              <AccordionSummary
-                expandIcon={
-                  <ArrowDownwardIcon
-                    style={{
-                      color: "white",
-                      fontWeight: "bold",
-                      fontSize: "1.6rem",
-                      animation: "bounce 1s infinite",
-                    }}
-                  />
-                }
-                aria-controls="panel3-content"
+                  </ul>
+                </AccordionDetails>
+              </Accordion>
+              <br />
+              <Accordion
+                expanded={expanded === "panel2"}
+                onMouseEnter={() => handleMouseEnter("panel2")}
+                onMouseLeave={handleMouseLeave}
+                style={{ backgroundColor: "#1a1a1a" }}
+                className={`p-2 border border-[#333] hover:border-blue-600 shadow-lg ${
+                  expanded === "panel2" ? "relative" : ""
+                }`}
               >
-                <div className="flex items-center justify-center gap-2">
-                  <img src={ecom} className="md:h-12" alt="E-Gov & E-Com" />
-                  <div className="font-bold pt-1 text-lg text-[#0060b5]">
-                    E-Gov & E-Com
+                <AccordionSummary
+                  expandIcon={
+                    <ArrowDownwardIcon
+                      style={{
+                        color: "white",
+                        fontWeight: "bold",
+                        fontSize: "1.6rem",
+                        animation: "bounce 1s infinite",
+                      }}
+                    />
+                  }
+                  aria-controls="panel2-content"
+                >
+                  <div className="flex items-center justify-center gap-4">
+                    <img
+                      src={hospitality}
+                      className="md:h-18"
+                      alt="Hospitality"
+                    />
+                    <div className="font-bold pt-1 ml-4 text-2xl text-[#00bfff]">
+                      Hospitality
+                    </div>
                   </div>
-                </div>
-              </AccordionSummary>
-              <AccordionDetails>
-                <ul className="md:pl-5 list-disc leading-loose text-white">
-                  {linesGov.slice(0, visibleLines).map((line, index) => (
-                    <li key={index}>{line}</li>
-                  ))}
-                </ul>
-              </AccordionDetails>
-            </Accordion>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <ul className="md:pl-5 list-disc leading-loose text-white">
+                    {linesHospitality
+                      .slice(0, visibleLines)
+                      .map((line, index) => (
+                        <li key={index}>{line}</li>
+                      ))}
+                  </ul>
+                </AccordionDetails>
+              </Accordion>
+            </div>
           </div>
 
-          <div className="m-7">
-            <Accordion
-              expanded={expanded === "panel4"}
-              onMouseEnter={() => handleMouseEnter("panel4")}
-              onMouseLeave={handleMouseLeave}
-              style={{ backgroundColor: "#1a1a1a" }}
-              className="p-2 bg-[#1a1a1a] border border-[#333] border-spacing-4 hover:border-blue-600 shadow-lg transition-shadow duration-300"
-            >
-              <AccordionSummary
-                expandIcon={
-                  <ArrowDownwardIcon
-                    style={{
-                      color: "white",
-                      fontWeight: "bold",
-                      fontSize: "1.6rem",
-                      animation: "bounce 1s infinite",
-                    }}
-                  />
-                }
-                aria-controls="panel4-content"
+          {/* Group 2 */}
+          <div
+            className="relative group md:mt-0 mt-8"
+            expanded={expanded === "panel1"}
+            onMouseEnter={() => handleMouseEnter("panel1")}
+            onMouseLeave={handleMouseLeave}
+          >
+            <div className="transition-shadow duration-300">
+              {" "}
+              {/* Removed transform */}
+              <Accordion
+                expanded={expanded === "panel3"}
+                onMouseEnter={() => handleMouseEnter("panel3")}
+                onMouseLeave={handleMouseLeave}
+                style={{ backgroundColor: "#1a1a1a" }}
+                className={`p-2 border border-[#333] hover:border-blue-600 shadow-lg ${
+                  expanded === "panel3" ? "relative" : ""
+                }`}
               >
-                <div className="flex items-center justify-center gap-2">
-                  <img src={health} className="md:h-12" alt="HealthCare" />
-                  <div className="font-bold pt-1 text-lg text-[#0060b5]">
-                    HealthCare
+                <AccordionSummary
+                  expandIcon={
+                    <ArrowDownwardIcon
+                      style={{
+                        color: "white",
+                        fontWeight: "bold",
+                        fontSize: "1.6rem",
+                        animation: "bounce 1s infinite",
+                      }}
+                    />
+                  }
+                  aria-controls="panel3-content"
+                >
+                  <div className="flex items-center justify-center gap-4">
+                    <img src={ecom} className="md:h-18" alt="E-Gov & E-Com" />
+                    <div className="font-bold pt-1 ml-4 text-2xl text-[#00bfff]">
+                      E-Gov & E-Com
+                    </div>
                   </div>
-                </div>
-              </AccordionSummary>
-              <AccordionDetails>
-                <ul className="md:pl-5 list-disc leading-loose text-white">
-                  {linesHealth.slice(0, visibleLines).map((line, index) => (
-                    <li key={index}>{line}</li>
-                  ))}
-                </ul>
-              </AccordionDetails>
-            </Accordion>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <ul className="md:pl-5 list-disc leading-loose text-white">
+                    {linesGov.slice(0, visibleLines).map((line, index) => (
+                      <li key={index}>{line}</li>
+                    ))}
+                  </ul>
+                </AccordionDetails>
+              </Accordion>
+              <br />
+              <Accordion
+                expanded={expanded === "panel4"}
+                onMouseEnter={() => handleMouseEnter("panel4")}
+                onMouseLeave={handleMouseLeave}
+                style={{ backgroundColor: "#1a1a1a" }}
+                className={`p-2 border border-[#333] hover:border-blue-600 shadow-lg ${
+                  expanded === "panel4" ? "relative" : ""
+                }`}
+              >
+                <AccordionSummary
+                  expandIcon={
+                    <ArrowDownwardIcon
+                      style={{
+                        color: "white",
+                        fontWeight: "bold",
+                        fontSize: "1.6rem",
+                        animation: "bounce 1s infinite",
+                      }}
+                    />
+                  }
+                  aria-controls="panel4-content"
+                >
+                  <div className="flex items-center justify-center gap-4">
+                    <img src={health} className="md:h-16" alt="Healthcare" />
+                    <div className="font-bold pt-1 ml-4 text-2xl text-[#00bfff]">
+                      Healthcare
+                    </div>
+                  </div>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <ul className="md:pl-5 list-disc leading-loose text-white">
+                    {linesHealth.slice(0, visibleLines).map((line, index) => (
+                      <li key={index}>{line}</li>
+                    ))}
+                  </ul>
+                </AccordionDetails>
+              </Accordion>
+            </div>
           </div>
-          {/* </div> */}
         </div>
       </div>
 
@@ -613,7 +592,7 @@ const TechHomePage = () => {
                   <div className="absolute inset-0 rotate-y-360">
                     <img
                       src={customization}
-                      className="w-full h-full p-2  object-cover border-r-[50%] rounded-full"
+                      className="w-24 h-24 p-2 mt-1  object-cover border-r-[50%] rounded-full"
                     />
                   </div>
                 </div>
@@ -689,7 +668,7 @@ const TechHomePage = () => {
                   <div className="absolute inset-0 rotate-y-360">
                     <img
                       src={ontimedelivery}
-                      className="w-full h-full p-2  object-cover border-r-[50%] "
+                      className="w-24 h-24 p-2 mt-1  object-cover border-r-[50%] "
                     />
                   </div>
                 </div>
@@ -760,7 +739,7 @@ const TechHomePage = () => {
                   <div className="absolute inset-0 rotate-y-360">
                     <img
                       src={Quality}
-                      className="w-full h-full p-2 object-cover border-r-[50%] rounded-full"
+                      className="w-24 h-24 p-2 mt-1 object-cover border-r-[50%] rounded-full"
                     />
                   </div>
                 </div>
@@ -827,7 +806,7 @@ const TechHomePage = () => {
                   <div className="absolute inset-0 rotate-y-360">
                     <img
                       src={scalable}
-                      className="w-22 h-22 p-2 mt-2 object-cover border-r-[50%]  "
+                      className="w-22 h-22 p-2 mt-1 object-cover border-r-[50%]  "
                     />
                   </div>
                 </div>
