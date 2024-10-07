@@ -61,8 +61,8 @@ const TypingText = () => {
   }, [currentPhraseIndex]);
 
   return (
-    <div className="flex flex-col mx-auto  mb-10 m relative w-full">
-      <h1 className="text-[#0060b5] mr-2 text-5xl font-bold  absolute bottom-36">
+    <div className="flex flex-col mx-auto  mb-10 m relative lg:w-[50vw] w-[90vw]">
+      <h1 className="text-[#0060b5] mr-2  text-5xl font-bold  absolute md:bottom-36 bottom-56">
         {constantText}
         <span
           className="absolute bottom-0 left-0 w-full border-b-2    pb-20 translate-y-5"
@@ -87,9 +87,9 @@ const TypingText = () => {
         </style>
       </h1>
       <h2
-        className={`absolute bottom-20 max-w-max text-3xl font-semibold ${
+        className={`absolute md:bottom-20 bottom-32 md:pr-0 pr-5   md:max-w-max w-[100vw] text-3xl font-semibold ${
           isTyping ? "text-white" : "text-yellow-300"
-        } mt-20 `}
+        } md:mt-20 `}
       >
         {displayedText}
       </h2>
@@ -104,7 +104,7 @@ const TypingText = () => {
           Enhance your hiring strategy with our comprehensive talent services.
         </li>
       </ul> */}
-  <div className="  w-[50vw] text-white text-xl text-start font-semibold mt-10 drop-shadow-xl pl-7 "> 
+  <div className="  md:w-[50vw] w-[100vw] text-white text-xl text-start font-semibold md:mt-10 mt-16 drop-shadow-xl pl-7 "> 
              <ul className='list-disc'>
             <li className="mb-2">We craft custom software for efficiency, security, and performance.</li>
             <li>Trust us for solutions that align with your business goals.</li>
