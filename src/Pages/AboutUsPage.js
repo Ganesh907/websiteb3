@@ -392,7 +392,7 @@ At BitByBit Solutions, we’re committed to excellence, ensuring that every proj
 >
   <div className="flex flex-col justify-between items-center  w-full p-5"
   >
-    <img src={mission} className="h-28 w-28 p-1  hover:rounded-none border-4 rounded-full border-[#0060b5] transition-all ease-in-out duration-600" />
+    <img src={mission} className="h-28 w-28 p-1  border-4 rounded-full border-[#0060b5] transition-all ease-in-out duration-600" />
     <div>
 
       <div className="text-center text-2xl text-[#0060b5] font-bold mt-10">

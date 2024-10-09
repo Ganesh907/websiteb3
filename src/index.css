@@ -5,6 +5,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+ 
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+  url('./Assets/Images/ContactUSImg4.jpg');
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat; */
 }
 
 code {
@@ -20,6 +26,7 @@ code {
 body {
   /* background-color: var(--background-color); */
   background-color: #121212;
+  /* background-color: #323232; */
   color: white;
 }
 @tailwind base;

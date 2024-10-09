@@ -14,6 +14,7 @@ import ITicon from '../../Assets/Images/information.png'
 import software from '../../Assets/Images/softwareicon.png'
 import cloud from '../../Assets/Images/cloudicon.png'
 import enterprise from '../../Assets/Images/enterpriseicon.png'
+import CustomAccordion from './NewTwo';
 const RecHomePage = () => {
   const searchIconSvg = `data:image/svg+xml;base64,${btoa(`
 
@@ -99,89 +100,62 @@ const RecHomePage = () => {
   const sectionRef = useRef(null);
   const [inView, setInView] = useState(false);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setInView(true);
-          observer.disconnect(); // Stop observing once it's in view
-        }
-      },
-      { threshold: 0.3 } // Trigger when 30% of the section is in view
-    );
+  // useEffect(() => {
+  //   const observer = new IntersectionObserver(
+  //     ([entry]) => {
+  //       if (entry.isIntersecting) {
+  //         setInView(true);
+  //         observer.disconnect(); // Stop observing once it's in view
+  //       }
+  //     },
+  //     { threshold: 0.3 } // Trigger when 30% of the section is in view
+  //   );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
+  //   if (sectionRef.current) {
+  //     observer.observe(sectionRef.current);
+  //   }
 
-    return () => observer.disconnect();
-  }, []);
+  //   return () => observer.disconnect();
+  // }, []);
 
-  const IT = [
-    "We specialize in sourcing top-tier talent for various IT roles.",
-    "Expertise in Java, .NET, and Android development.",
-    "Proficiency in SAP and DevOps.",
-    "Skilled in machine learning and cloud services.",
-    "Focus on cybersecurity solutions.",
-  ];
-  const Software = [
-    "Expertise in recruiting for software development roles.",
-    "Specialization in front-end, back-end, and full-stack positions.",
-    "Successful placements in Angular and React development.",
-    "Skilled developers in Python, PHP, and C++.",
-    "Broad coverage of additional software technologies.",
-  ];
-  const Cloud = [
-    "Skilled in recruiting specialists for cloud infrastructure.",
-    "Expertise in AWS, Azure, and Google Cloud platforms.",
-    "Focus on hiring data scientists.",
-    "Experience in sourcing machine learning experts.",
-    "Supporting businesses in adopting data-driven strategies.",
-  ];
-  const Enterprise  = [
-    "Specialize in recruiting talent for enterprise-level technologies.",
-    "Expertise in SAP, Oracle, Workday, and Microsoft Dynamics.",
-    "Provide customized staffing solutions for businesses in these sectors.",
-    "Address dynamic demands of enterprise-level industries.",
-    "Focus on ensuring optimal results and long-term success for clients.",
-  ];
 
-  const handleMouseEnter2 = (panel) => {
-    setExpanded(panel); // Expand the accordion on hover
-  };
 
-  const handleMouseLeave2 = () => {
-    setExpanded(false); // Collapse the accordion when the mouse leaves
-    setVisibleLines(0); // Reset visible lines when closed
-  };
-  useEffect(() => {
-    if (expanded) {
-      let lineIndex = 0;
-      let currentLines = []; // Declare currentLines here
+  // const handleMouseEnter2 = (panel) => {
+  //   setExpanded(panel); // Expand the accordion on hover
+  // };
 
-      // Assign the correct lines based on the expanded panel
-      if (expanded === "panel1") {
-        currentLines = IT;
-      } else if (expanded === "panel2") {
-        currentLines = Software;
-      } else if (expanded === "panel3") {
-        currentLines = Cloud;
-      } else if (expanded === "panel4") {
-        currentLines = Enterprise;
-      }
+  // const handleMouseLeave2 = () => {
+  //   setExpanded(false); // Collapse the accordion when the mouse leaves
+  //   setVisibleLines(0); // Reset visible lines when closed
+  // };
+  // useEffect(() => {
+  //   if (expanded) {
+  //     let lineIndex = 0;
+  //     let currentLines = []; // Declare currentLines here
 
-      const typingInterval = setInterval(() => {
-        if (lineIndex < currentLines.length) {
-          setVisibleLines((prev) => prev + 1); // Show next line
-          lineIndex++;
-        } else {
-          clearInterval(typingInterval); // Clear interval when done
-        }
-      }, 300); // Adjust the speed of typing here (1000ms = 1 second)
+  //     // Assign the correct lines based on the expanded panel
+  //     if (expanded === "panel1") {
+  //       currentLines = IT;
+  //     } else if (expanded === "panel2") {
+  //       currentLines = Software;
+  //     } else if (expanded === "panel3") {
+  //       currentLines = Cloud;
+  //     } else if (expanded === "panel4") {
+  //       currentLines = Enterprise;
+  //     }
 
-      return () => clearInterval(typingInterval); // Cleanup
-    }
-  }, [expanded, IT, Software, Cloud, Enterprise]);
+  //     const typingInterval = setInterval(() => {
+  //       if (lineIndex < currentLines.length) {
+  //         setVisibleLines((prev) => prev + 1); // Show next line
+  //         lineIndex++;
+  //       } else {
+  //         clearInterval(typingInterval); // Clear interval when done
+  //       }
+  //     }, 300); // Adjust the speed of typing here (1000ms = 1 second)
+
+  //     return () => clearInterval(typingInterval); // Cleanup
+  //   }
+  // }, [expanded, IT, Software, Cloud, Enterprise]);
 
 
   return (
@@ -308,6 +282,9 @@ const RecHomePage = () => {
 
       </HeroSection>
 
+
+      <CustomAccordion/>
+
       {/* <div className='h-[80vh] w-full  flex flex-col justify-center items-center'>
         <h1 className='uppercase text-xl font-bold '>for hiring</h1>
         <h1 className='text-7xl mt-10 drop-shadow-xl text-[#0060b5]'>Our Working Process</h1>
@@ -331,183 +308,7 @@ const RecHomePage = () => {
       </ul> */}
 
 {/* ............................ */}
-<div className="w-[90%] h-auto py-20">
-        <h1 className="text-center md:text-center md:ml-[9%] text-white text-5xl italic m-[5px]  md:mt-[40px] md:mb-10">
-        Industry Specialization
-        </h1>
 
-        <div className="grid grid-cols-1  place-content-center md:grid-cols-2 md:gap-2 md:ml-20 md:w-auto w-[110%]">
-          <div className="m-7">
-            <Accordion
-              expanded={expanded === "panel1"}
-              onMouseEnter={() => handleMouseEnter2("panel1")}
-              onMouseLeave={handleMouseLeave2}
-              style={{ backgroundColor: "#1a1a1a" }}
-              className="p-2 border border-[#333] bg-red-500 border-spacing-4 hover:border-blue-600 shadow-lg transition-shadow duration-300"
-            >
-              {/* <AccordionSummary
-          aria-controls='panel1-content'
-        > */}
-              <AccordionSummary
-                expandIcon={
-                  <ArrowDownwardIcon
-                    style={{
-                      color: "white",
-                      fontWeight: "bold",
-                      fontSize: "1.6rem",
-                      animation: "bounce 1s infinite",
-                    }}
-                  />
-                }
-                aria-controls="panel1-content"
-              >
-                <div className="flex items-center justify-center gap-2">
-                  <img src={ITicon} className="md:h-16" alt="IT" />
-                  <div className="font-bold pt-1  ml-4 text-2xl text-[#00bfff]">
-                  Information Technology (IT)
-                  </div>
-                </div>
-              </AccordionSummary>
-              <AccordionDetails>
-                <ul className="md:pl-5 list-disc leading-loose text-white">
-                  {IT.slice(0, visibleLines).map((line, index) => (
-                    <li key={index}>{line}</li>
-                  ))}
-                </ul>
-              </AccordionDetails>
-            </Accordion>
-          </div>
-
-          <div className="m-7">
-            <Accordion
-              expanded={expanded === "panel2"}
-              onMouseEnter={() => handleMouseEnter2("panel2")}
-              onMouseLeave={handleMouseLeave2}
-              style={{ backgroundColor: "#1a1a1a" }}
-              className="p-2 bg-[#1a1a1a] border border-[#333] border-spacing-4 hover:border-blue-600 shadow-lg transition-shadow duration-300"
-            >
-              {/* <AccordionSummary
-          aria-controls='panel2-content'
-        > */}
-
-              <AccordionSummary
-                expandIcon={
-                  <ArrowDownwardIcon
-                    style={{
-                      color: "white",
-                      fontWeight: "bold",
-                      fontSize: "1.6rem",
-                      animation: "bounce 1s infinite",
-                    }}
-                 />
-                }
-                aria-controls="panel2-content"
-              >
-                <div className="flex items-center justify-center gap-2">
-                 
-                  <img
-                    src={software}
-                    className="md:h-16"
-                    alt="Software"
-                  />
-                  <div className="font-bold pt-1  ml-4 text-2xl  text-[#00bfff]">
-                  Software Development 
-                  </div>
-                </div>
-              </AccordionSummary>
-              <AccordionDetails>
-                <ul className="md:pl-5 list-disc leading-loose text-white">
-                  {Software
-                    .slice(0, visibleLines)
-                    .map((line, index) => (
-                      <li key={index}>{line}</li>
-                    ))}
-                </ul>
-              </AccordionDetails>
-            </Accordion>
-          </div>
-
-          <div className="m-7">
-            <Accordion
-              expanded={expanded === "panel3"}
-              onMouseEnter={() => handleMouseEnter2("panel3")}
-              onMouseLeave={handleMouseLeave2}
-              style={{ backgroundColor: "#1a1a1a" }}
-              className="p-2 bg-[#1a1a1a] border border-[#333] border-spacing-4 hover:border-blue-600 shadow-lg transition-shadow duration-300"
-            >
-              {/* <AccordionSummary
-          aria-controls='panel2-content'
-        > */}
-
-              <AccordionSummary
-                expandIcon={
-                  <ArrowDownwardIcon
-                    style={{
-                      color: "white",
-                      fontWeight: "bold",
-                      fontSize: "1.6rem",
-                      animation: "bounce 1s infinite",
-                    }}
-                  />
-                }
-                aria-controls="panel3-content"
-              >
-                <div className="flex items-center justify-center gap-2">
-                  <img src={cloud} className="md:h-16" alt="E-Gov & E-Com" />
-                  <div className="font-bold pt-1  ml-4 text-2xl text-[#00bfff]">
-                  Cloud Computing & Data Science
-                  </div>
-                </div>
-              </AccordionSummary>
-              <AccordionDetails>
-                <ul className="md:pl-5 list-disc leading-loose text-white">
-                  {Cloud.slice(0, visibleLines).map((line, index) => (
-                    <li key={index}>{line}</li>
-                  ))}
-                </ul>
-              </AccordionDetails>
-            </Accordion>
-          </div>
-
-          <div className="m-7">
-            <Accordion
-              expanded={expanded === "panel4"}
-              onMouseEnter={() => handleMouseEnter2("panel4")}
-              onMouseLeave={handleMouseLeave2}
-              style={{ backgroundColor: "#1a1a1a" }}
-              className="p-2 bg-[#1a1a1a] border border-[#333] text-center border-spacing-4 hover:border-blue-600 shadow-lg transition-shadow duration-300"
-            >
-              <AccordionSummary
-                expandIcon={
-                  <ArrowDownwardIcon
-                    style={{
-                      color: "white",
-                      fontWeight: "bold",
-                      fontSize: "1.6rem",
-                      animation: "bounce 1s infinite",
-                    }}
-                  />
-                }
-                aria-controls="panel4-content"
-              >
-                <div className="flex items-center justify-center gap-2">
-                  <img src={enterprise} className="md:h-16" alt="HealthCare" />
-                  <div className="font-bold pt-1  ml-4 text-2xl text-[#00bfff] text-center">
-                  Enterprise Solutions
-                  </div>
-                </div>
-              </AccordionSummary>
-              <AccordionDetails>
-                <ul className="md:pl-5 list-disc leading-loose text-white">
-                  {Enterprise.slice(0, visibleLines).map((line, index) => (
-                    <li key={index}>{line}</li>
-                  ))}
-                </ul>
-              </AccordionDetails>
-            </Accordion>
-          </div>
-        </div>
-      </div>
 
 {/* ....................... */}
 <div>
@@ -838,3 +639,219 @@ style={{
 
 
 export default RecHomePage;
+
+
+
+
+
+
+
+
+
+
+
+// <div className="w-[90%] h-auto py-20">
+//         <h1 className="text-center md:text-center md:ml-[9%] text-white text-5xl italic m-[5px]  md:mt-[40px] md:mb-10">
+//         Industry Specialization
+//         </h1>
+
+//         <div className="grid grid-cols-1  bg-red-300 p-1 place-content-center md:grid-cols-2 md:gap-2 md:ml-20 md:w-auto w-[110%]">
+//           <div className="m-7">
+//             <Accordion
+//               expanded={expanded === "panel1"}
+//               onMouseEnter={() => handleMouseEnter2("panel1")}
+//               onMouseLeave={handleMouseLeave2}
+//               style={{ backgroundColor: "#1a1a1a" }}
+//               className="p-2 border border-[#333] bg-red-500 border-spacing-4 hover:border-blue-600 shadow-lg transition-shadow duration-300"
+//             >
+         
+//               <AccordionSummary
+//                 expandIcon={
+//                   <ArrowDownwardIcon
+//                     style={{
+//                       color: "white",
+//                       fontWeight: "bold",
+//                       fontSize: "1.6rem",
+//                       animation: "bounce 1s infinite",
+//                     }}
+//                   />
+//                 }
+//                 aria-controls="panel1-content"
+//               >
+//                 <div className="flex items-center justify-center gap-2">
+//                   <img src={ITicon} className="md:h-16" alt="IT" />
+//                   <div className="font-bold pt-1  ml-4 text-2xl text-[#00bfff]">
+//                   Technology Recruitment
+//                   </div>
+//                 </div>
+//               </AccordionSummary>
+//               <AccordionDetails>
+//                 <ul className="md:pl-5 list-disc leading-loose text-white">
+//                   {IT.slice(0, visibleLines).map((line, index) => (
+//                     <li key={index}>{line}</li>
+//                   ))}
+//                 </ul>
+//               </AccordionDetails>
+//             </Accordion>
+//           </div>
+
+//           <div className="m-7">
+//             <Accordion
+//               expanded={expanded === "panel2"}
+//               onMouseEnter={() => handleMouseEnter2("panel2")}
+//               onMouseLeave={handleMouseLeave2}
+//               style={{ backgroundColor: "#1a1a1a" }}
+//               className="p-2 bg-[#1a1a1a] border border-[#333] border-spacing-4 hover:border-blue-600 shadow-lg transition-shadow duration-300"
+//             >
+          
+
+//               <AccordionSummary
+//                 expandIcon={
+//                   <ArrowDownwardIcon
+//                     style={{
+//                       color: "white",
+//                       fontWeight: "bold",
+//                       fontSize: "1.6rem",
+//                       animation: "bounce 1s infinite",
+//                     }}
+//                  />
+//                 }
+//                 aria-controls="panel2-content"
+//               >
+//                 <div className="flex items-center justify-center gap-2">
+                 
+//                   <img
+//                     src={software}
+//                     className="md:h-16"
+//                     alt="Software"
+//                   />
+//                   <div className="font-bold pt-1  ml-4 text-2xl  text-[#00bfff]">
+//                   BFSI Recruitment
+//                   </div>
+//                 </div>
+//               </AccordionSummary>
+//               <AccordionDetails>
+//                 <ul className="md:pl-5 list-disc leading-loose text-white">
+//                   {Software
+//                     .slice(0, visibleLines)
+//                     .map((line, index) => (
+//                       <li key={index}>{line}</li>
+//                     ))}
+//                 </ul>
+//               </AccordionDetails>
+//             </Accordion>
+//           </div>
+
+//           <div className="m-7">
+//             <Accordion
+//               expanded={expanded === "panel3"}
+//               onMouseEnter={() => handleMouseEnter2("panel3")}
+//               onMouseLeave={handleMouseLeave2}
+//               style={{ backgroundColor: "#1a1a1a" }}
+//               className="p-2 bg-[#1a1a1a] border border-[#333] border-spacing-4 hover:border-blue-600 shadow-lg transition-shadow duration-300"
+         
+
+//               <AccordionSummary
+//                 expandIcon={
+//                   <ArrowDownwardIcon
+//                     style={{
+//                       color: "white",
+//                       fontWeight: "bold",
+//                       fontSize: "1.6rem",
+//                       animation: "bounce 1s infinite",
+//                     }}
+//                   />
+//                 }
+//                 aria-controls="panel3-content"
+//               >
+//                 <div className="flex items-center justify-center gap-2">
+//                   <img src={cloud} className="md:h-16" alt="E-Gov & E-Com" />
+//                   <div className="font-bold pt-1  ml-4 text-2xl text-[#00bfff]">
+//                   {/* Cloud Computing & Data Science */}
+//                   Contract Hiring (Data needed)
+//                   </div>
+//                 </div>
+//               </AccordionSummary>
+//               <AccordionDetails>
+//                 <ul className="md:pl-5 list-disc leading-loose text-white">
+//                   {Cloud.slice(0, visibleLines).map((line, index) => (
+//                     <li key={index}>{line}</li>
+//                   ))}
+//                 </ul>
+//               </AccordionDetails>
+//             </Accordion>
+//           </div>
+
+//           <div className="m-7">
+//             <Accordion
+//               expanded={expanded === "panel4"}
+//               onMouseEnter={() => handleMouseEnter2("panel4")}
+//               onMouseLeave={handleMouseLeave2}
+//               style={{ backgroundColor: "#1a1a1a" }}
+//               className="p-2 bg-[#1a1a1a] border border-[#333] text-center border-spacing-4 hover:border-blue-600 shadow-lg transition-shadow duration-300"
+//             >
+//               <AccordionSummary
+//                 expandIcon={
+//                   <ArrowDownwardIcon
+//                     style={{
+//                       color: "white",
+//                       fontWeight: "bold",
+//                       fontSize: "1.6rem",
+//                       animation: "bounce 1s infinite",
+//                     }}
+//                   />
+//                 }
+//                 aria-controls="panel4-content"
+//               >
+//                 <div className="flex items-center justify-center gap-2">
+//                   <img src={enterprise} className="md:h-16" alt="HealthCare" />
+//                   <div className="font-bold pt-1  ml-4 text-2xl text-[#00bfff] text-center">
+              
+//                   Client Partnerships
+//                   </div>
+//                 </div>
+//               </AccordionSummary>
+//               <AccordionDetails>
+//                 <ul className="md:pl-5 list-disc leading-loose text-white">
+//                   {Enterprise.slice(0, visibleLines).map((line, index) => (
+//                     <li key={index}>{line}</li>
+//                   ))}
+//                 </ul>
+//               </AccordionDetails>
+//             </Accordion>
+//           </div>
+//         </div>
+      // </div>
+
+
+
+
+// const IT = [
+
+//   "We assist our clients in securing top-tier talent for a broad spectrum of IT roles.",
+// "Including but not limited to Java, .NET, Android development, SAP, DevOps, machine learning, cloud services, and cybersecurity.", 
+// "Our in-depth understanding of the tech industry enables us to identify candidates ",
+// "With the right skills and expertise we drive success in today’s technology-driven landscape."
+
+// ];
+// const Software = [
+
+//   "BitByBit Solutions offers comprehensive recruitment services for clients in the BFSI sector",
+// "We source professionals for critical roles such as financial analysts, risk managers, compliance officers, investment bankers, and more",
+// "Our focus is on finding candidates with the requisite industry knowledge and regulatory expertise",
+// ];
+// const Cloud = [
+  // "Skilled in recruiting specialists for cloud infrastructure.",
+  // "Expertise in AWS, Azure, and Google Cloud platforms.",
+  // "Focus on hiring data scientists.",
+  // "Experience in sourcing machine learning experts.",
+  // "Supporting businesses in adopting data-driven strategies.",
+// ];
+// const Enterprise  = [
+
+
+//   "BitByBit Solutions takes pride in working with a wide range of prominent organizations across various industries",
+// "We have built lasting partnerships with leading companies such as InterTrust Group, Accenture, Capgemini, CitiusTech, AQM, IPS e-services, NSE, and many more",
+// "Our ongoing collaboration with these clients is a testament to the quality of our recruitment services and our commitment to delivering the best talent solutions",
+// "Whether it’s IT, or Non-IT sectors, our client-centric approach ensures that we understand and fulfill the specific recruitment needs of every business we serve",
+// ];
