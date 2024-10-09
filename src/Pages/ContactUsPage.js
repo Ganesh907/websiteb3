@@ -380,7 +380,7 @@ url(${ContactUSImg})
 
 
                        
-                        <Footer />
+                        {/* <Footer /> */}
                 </div>
         )
 }

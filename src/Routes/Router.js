@@ -29,7 +29,7 @@ const AppRoutes = [
       { path: "/clients", element: <ClientsPage /> },
       { path: "/recruitment", element: <RecHomePage /> },
       { path: "/recruitment-services", element: <RecServicesPage /> },
-      { path: "/contactus", element: <ContactUsPage /> },
+      { path: "/contact", element: <ContactUsPage /> },
       { path: "/aboutB3", element: <AboutUsPage /> },
       { path: "/careers", element: <CareerPage /> },
       { path: "/blogs", element: <Blogs /> },

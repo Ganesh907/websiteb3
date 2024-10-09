@@ -30,7 +30,7 @@ import CitiusTech from "../Assets/Images/CitiusTechLogo.jpg"
 import AQM from "../Assets/Images/AQMNewLogo.jpg"
 import greenland from "../Assets/Images/greenland.jpg"
 // import NSE from "../Assets/Images/NSE.jpg"
-import NSE from "../Assets/Images/NSE_Logo.svg"
+import NSE from "../Assets/Images/NSE_Logo.jpg"
 import SSC from "../Assets/Images/SSandC.png"
 
 
@@ -563,9 +563,9 @@ const ClientsPage = () => {
       </div> */}
 
 
-      <div className="tech-footer mt-20">
+      {/* <div className="tech-footer mt-20">
         <Footer />
-      </div>
+      </div> */}
     </>
   );
 };

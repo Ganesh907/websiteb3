@@ -13,7 +13,7 @@ import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 
 
 // TypingEffect component
-const TypingEffect = ({ text = '', typingSpeed = 100, isOpen = false }) => {
+const TypingEffect = ({ text = '', typingSpeed = 50, isOpen = false }) => {
         const [displayedText, setDisplayedText] = useState('');
 
         useEffect(() => {
@@ -38,13 +38,18 @@ const TypingEffect = ({ text = '', typingSpeed = 100, isOpen = false }) => {
         }, [isOpen, text, typingSpeed]);
 
         return (
-                <span>
+                <div className='flex'>
                         {/* Conditionally render the icon after the first character has been typed */}
+                        <div>
                         {displayedText.length > 1 && (
                                 <AlbumIcon style={{ verticalAlign: 'middle', marginRight: '5px', fontSize: '15px' }} />
                         )}
-                        {displayedText}
-                </span>
+                                </div>
+                        <h1>{displayedText}
+                                </h1>
+                       
+                        
+                </div>
         );
 };
 
@@ -106,7 +111,7 @@ const AccordionItem = ({ item, index, expanded, handleMouseEnter, handleMouseLea
                 if (expanded === index) {
                         const timer = setTimeout(() => {
                                 setStartTyping(true);
-                        }, 500); // 1 second
+                        }, 400); // 1 second
 
                         return () => clearTimeout(timer); // Cleanup on unmount or when expanded changes
                 } else {
@@ -116,14 +121,14 @@ const AccordionItem = ({ item, index, expanded, handleMouseEnter, handleMouseLea
 
         return (
                 <div
-                        className={` bg-[#1a1a1a] border-[#0060b5] hover:border-[#00bfff] hover:border-2  border-2 text-red-200   transition-all duration-700 ease-in-out p-4  cursor-pointer ${expanded === index ? 'h-64' : 'h-20'}`}
+                        className={` bg-[#1a1a1a] border-[#0060b5] hover:border-[#00bfff] hover:border-2  border-2 text-red-200   transition-all duration-700 ease-in-out p-4  cursor-pointer ${expanded === index ? 'md:h-64 h-80' : 'h-20'}`}
                         //     style={{ backgroundColor: "rgba(0, 0, 0, 0.1)" }}
                         onMouseEnter={() => handleMouseEnter(index)}
                         onMouseLeave={handleMouseLeave}
                 >
                         <div className="flex items-center text-white">
                                 <item.icon className="mr-2 text-[#008bff] " style={{ fontSize: '50px' }} />
-                                <span className="font-bold text-2xl text-[#00bfff]">{item.title}</span>
+                                <span className="font-bold text-md md:text-2xl text-[#00bfff]">{item.title}</span>
                                 {
                                         expanded === index ? 
                                         <ExpandLessIcon
@@ -140,11 +145,11 @@ const AccordionItem = ({ item, index, expanded, handleMouseEnter, handleMouseLea
 
                         </div>
                         <div className={`mt-2 overflow-hidden ${expanded === index ? 'block' : 'hidden'}`}>
-                                <ul className="text-white list-disc italic  ">
+                                <ul className="text-white list-disc italic text-sm md:text-base  ">
                                         {item.content.map((line, lineIndex) => (
                                                 <li key={lineIndex} className="mb-2">
 
-                                                        <TypingEffect text={line} typingSpeed={expanded === index ? 20 : 0} isOpen={startTyping} />
+                                                        <TypingEffect text={line} typingSpeed={expanded === index ? 15 : 0} isOpen={startTyping} />
                                                 </li>
                                         ))}
                                 </ul>

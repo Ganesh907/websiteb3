@@ -449,7 +449,7 @@ At BitByBit Solutions, we’re committed to excellence, ensuring that every proj
         
 
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

@@ -8,32 +8,50 @@ import Footer from "../../Components/CommonComponents/Footer";
 import TypingTextAnimation from "../../Components/CommonComponents/TypingTextAnimation";
 import SplitCard from "../../Components/TechServicesPage/SplitCard";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import JAVA from "../../Assets/Images/JavaI.png";
+
+import AndroidKotlin from "../../Assets/Images/TechServicePageLanguages/Android-Kotlin.png"
+import Angular from "../../Assets/Images/TechServicePageLanguages/Angular.png"
+import ApplicationSupport from "../../Assets/Images/TechServicePageLanguages/Application-Support.png"
+import BusinessAnalyst from "../../Assets/Images/TechServicePageLanguages/Business-Analyst.png"
+import CloudOperations from "../../Assets/Images/TechServicePageLanguages/CloudOperations.png"
+import DataScienceML from "../../Assets/Images/TechServicePageLanguages/DataScience-ML.png"
+import DevOps from "../../Assets/Images/TechServicePageLanguages/DevOps.png"
+import DotNet from "../../Assets/Images/TechServicePageLanguages/DotNet.png"
+import Flutter from "../../Assets/Images/TechServicePageLanguages/Flutter.png"
+import FullStackDevelopment from "../../Assets/Images/TechServicePageLanguages/FullStackDevelopment.png"
+import MSSQL from "../../Assets/Images/TechServicePageLanguages/MS-SQL.png"
+import ManualAutomationTester from "../../Assets/Images/TechServicePageLanguages/Manual-Automation-Tester.png"
+import MicrosoftAzure from "../../Assets/Images/TechServicePageLanguages/MicrosoftAzure.png"
+import MongoDB from "../../Assets/Images/TechServicePageLanguages/MongoDB.png"
+import PHP from "../../Assets/Images/TechServicePageLanguages/PHP.png"
+import ReactIcon from "../../Assets/Images/TechServicePageLanguages/React.png"
+import Wordpress from "../../Assets/Images/TechServicePageLanguages/Wordpress.png"
 // import javalogo from "../../Assets/Images/java1.png";
 
 
 
 const TechServicesPage = (props) => {
 
-  const jobRoles2 = [
-    " JAVA ",
-    " .NET  ",
-    "  React ",
-    "  Angular",
-    "Android/kotlin",
-    "Flutter",
-    " Full Stack Developement",
-    "Data science / ML ",
-    "DevOps ",
-    "Microsoft Azure ",
-    "Mongo DB",
-    "Cloud Operations",
-    " MS SQL",
-    " Manual / Automation tester ",
-    "PHP ",
-    " Word press",
-    " Business Analyst ",
-    "Application Support",
-  ];
+  const jobRolesWithImages = [
+    { text: "JAVA", image: JAVA }, // Replace with your actual image paths
+    { text: ".NET", image: DotNet },
+    { text: "React", image: ReactIcon},
+    { text: "Angular", image: Angular},
+    { text: "Android/kotlin", image: AndroidKotlin },
+    { text: "Flutter", image: Flutter },
+    { text: "Full Stack Development", image: FullStackDevelopment},
+    { text: "Data science / ML", image: DataScienceML },
+    { text: "DevOps", image: DevOps },
+    { text: "Microsoft Azure", image: MicrosoftAzure },
+    { text: "Mongo DB", image: MongoDB },
+    { text: "Cloud Operations", image: CloudOperations },
+    { text: "MS SQL", image: MSSQL },
+    { text: "Manual / Automation tester", image: ManualAutomationTester },
+    { text: "PHP", image: PHP },
+    { text: "WordPress", image: Wordpress },
+    { text: "Business Analyst", image: BusinessAnalyst },
+    { text: "Application Support", image: ApplicationSupport}]
 
   const marqueeRef2 = useRef(null); // Reference to the marquee element
 
@@ -60,47 +78,55 @@ const TechServicesPage = (props) => {
 
       <SplitCard />
 
-      <div className="my-10">
+      <div className="my-20">
         <h1 className="italic text-center mt-10 text-white text-5xl m-[5px] md:mt-[40px]">
         Redefining IT Skill Expertise
         </h1>
 
-        <marquee
-          className="w-full p-5 text-black"
-          behavior="scroll"
-          direction="left"
-          scrollamount="10"
-          ref={marqueeRef}
-          onMouseEnter={handleMouseEnter1}
-          onMouseLeave={handleMouseLeave1}
-        >
-          {jobRoles2.map((role, index) => (
-            <span
-              key={index}
-              className={`inline-flex items-center mx-4 rounded-lg drop-shadow-lg border-2 p-3 ${
-                index % 2 === 0
-                  ? "bg-white text-[#0060b5] border-blue-900" // Darker blue for even items
-                  : "bg-white text-[#0060b5] border-blue-900" // Dark background for odd items
-              }`}
-            >
-              {role}
-               <ArrowBackIcon
-                className={`ml-2 ${
-                  index % 2 === 0 ? "text-[#0060b5]" : "text-[#0060b5]"
-                }`}
-              /> 
-              
-            </span>
-          ))}
-        </marquee>
+      
+<marquee
+  className="w-full h-[30vh] flex justify-start items-center  text-black my-10"
+  style={{backgroundColor:'rgba(0,0,0,0.4)'}}
+  behavior="scroll"
+  direction="left"
+  scrollamount="10"
+  ref={marqueeRef}
+  onMouseEnter={handleMouseEnter1}
+  onMouseLeave={handleMouseLeave1}
+>
+  {jobRolesWithImages.map((role, index) => (
+    <span
+      key={index}
+      className={`inline-flex items-center mx-4 rounded-lg text-xl  hover:scale-110 hover:py-7  hover:bg-white hover:text-black drop-shadow-lg shadow-lg shadow-black border-x-4 py-5 px-5 bg-black text-white  border-blue-900 `}
+      //   ${
+      //   index % 2 === 0
+      //     ? "  bg-black text-white  border-blue-900" // Styles for even items
+      //     : " text-[#0060b5] border-blue-900"
+      //      : " bg-white text-[#0060b5]  border-blue-900"
+      //     :"  bg-black text-white  border-blue-900"
+      // }`}
+      
+    >
+      {/* Display the job role text */}
+      {role.text}
+
+      {/* Right-side: Job role image */}
+      <img
+        src={role.image}
+        // alt={role.text}
+        className="w-10 h-10 ml-2" // Adjust width and height as needed
+      />
+    </span>
+  ))}
+</marquee>
       </div> 
 
       
 
 
-      <div className="tech-footer">
+      {/* <div className="tech-footer">
         <Footer />
-      </div>
+      </div> */}
     </div>
     // {/* </> */}
   );

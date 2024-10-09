@@ -140,8 +140,8 @@ const CareerPage = () => {
 
 <h1 className='h-[100vh] flex justify-center items-center text-4xl text-[var(--primary-color)]'>Work In Progress.....</h1>
 
-      <div className='recr-footer'>
-        <Footer /></div>
+      {/* <div className='recr-footer'>
+        <Footer /></div> */}
     </div>
 
   );

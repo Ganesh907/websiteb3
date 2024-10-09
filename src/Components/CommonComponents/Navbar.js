@@ -27,7 +27,7 @@ function Dropdown({ items, scrolled }) {
     <ul
       onClick={handleClick}
       className={`${
-        click ? "hidden" : `absolute w-[140px] bg-black list-none border-t-[1px] lg:border-t-0 border-white lg:p-2 text-start shadow-lg transition-opacity duration-300 ${scrolled ? "bg-opacity-100 lg:border-b-[1px] rounded-lg border-white" : "bg-opacity-20"}`
+        click ? "hidden" : `absolute w-[140px] bg-black list-none border-t-[1px] lg:border-b-[1px] rounded-b-lg lg-border-white lg:border-t-0 border-white lg:p-2 text-start shadow-lg transition-opacity duration-300 ${scrolled ? "bg-opacity-100 lg:border-b-[1px] rounded-lg border-white" : "bg-opacity-20"}`
       }`}
     >
       {items.map((item, index) => (
@@ -222,7 +222,7 @@ function Navbar() {
         </li>
         <li>
           <NavLink
-            to="/contactus"
+            to="/contact"
             className={({ isActive }) =>
               `nav-links px-3 mx-1 py-1 border-2 border-transparent hover:border-white rounded-md text-lg ${
                 isActive ? "border-white rounded-md font-semibold text-[#facc15]" : "text-white"
@@ -237,7 +237,7 @@ function Navbar() {
           <NavLink
             to="/blogs"
             className={({ isActive }) =>
-              `text-black px-3 mx-1 py-1 italic text-2xl font-semibold border-b-2 border-transparent hover:border-white hover:text-yellow-400 hover:bg-transparent border-white hover:shadow-none ${
+              `text-black px-3 mx-1 py-1 italic text-2xl font-semibold border-b-2  hover:border-white hover:text-yellow-400 hover:bg-transparent border-white hover:shadow-none ${
                 isActive ? "bg-transparent text-yellow-400" : "bg-yellow-400 drop-shadow-lg shadow-md shadow-black"
               }`
             }

@@ -625,8 +625,8 @@ style={{
           “At BitByBit, it’s all about YOU! Whether you’re hunting for a new full-time role or just need a temp role, our recruiters are here to help you out.”
         </p>
 {/* .......................... */}
-      <div className='recr-footer'>
-        <Footer /></div>
+      {/* <div className='recr-footer'>
+        <Footer /></div> */}
 
 
     </div>

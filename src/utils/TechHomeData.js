@@ -23,7 +23,7 @@ export const TechHomeData1 = [
             icon: FlagIcon,
             content: [
                 "  Comprehensive e-Governance and e-Commerce solutions.",
-                "  Services include ticket booking, recharges, money transfers, and Aadhaar enrolments.",
+                "  Services include ticket booking, recharges, money transfers & Aadhaar enrolments.",
                 "  Supports Amazon orders, insurance purchases, and utility bill payments.",
                 "  Features shopping cart integration and payment gateways.",
                 "  Customer management and data analytics for seamless online transactions.",

@@ -35,7 +35,8 @@ const NotFoundPage = () => {
         </div>
 
         {/* 404 message directly below the blue-bordered div */}
-        <h1 className='text-white font-bold text-5xl mt-10'>404 - Page Not Found</h1>
+        <h1 className='text-white font-bold  text-xl lg:text-5xl mt-10'>404 - Page Not Found</h1>
+        
       </div>
     </div>
   );

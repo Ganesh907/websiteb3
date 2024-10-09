@@ -22,6 +22,33 @@ import Temporaryicon3 from "../../Assets/Images/temporary3.png";
 import Recruitericon from "../../Assets/Images/Recruitment.png";
 import Recruitericon2 from "../../Assets/Images/Recruitment2.png";
 import Recruitericon3 from "../../Assets/Images/Recruitment3.png";
+import JAVA from "../../Assets/Images/JavaI.png";
+// import JAVA from "../../Assets/Images/JavaI.png";
+
+import AndroidKotlin from "../../Assets/Images/TechServicePageLanguages/Android-Kotlin.png"
+import Angular from "../../Assets/Images/TechServicePageLanguages/Angular.png"
+import ApplicationSupport from "../../Assets/Images/TechServicePageLanguages/Application-Support.png"
+import BusinessAnalyst from "../../Assets/Images/TechServicePageLanguages/Business-Analyst.png"
+import CloudOperations from "../../Assets/Images/TechServicePageLanguages/CloudOperations.png"
+import DataScienceML from "../../Assets/Images/TechServicePageLanguages/DataScience-ML.png"
+import DevOps from "../../Assets/Images/TechServicePageLanguages/DevOps.png"
+import DotNet from "../../Assets/Images/TechServicePageLanguages/DotNet.png"
+import Flutter from "../../Assets/Images/TechServicePageLanguages/Flutter.png"
+import FullStackDevelopment from "../../Assets/Images/TechServicePageLanguages/FullStackDevelopment.png"
+import MSSQL from "../../Assets/Images/TechServicePageLanguages/MS-SQL.png"
+import ManualAutomationTester from "../../Assets/Images/TechServicePageLanguages/Manual-Automation-Tester.png"
+import MicrosoftAzure from "../../Assets/Images/TechServicePageLanguages/MicrosoftAzure.png"
+import MongoDB from "../../Assets/Images/TechServicePageLanguages/MongoDB.png"
+import PHP from "../../Assets/Images/TechServicePageLanguages/PHP.png"
+import ReactIcon from "../../Assets/Images/TechServicePageLanguages/React.png"
+import Wordpress from "../../Assets/Images/TechServicePageLanguages/Wordpress.png"
+
+
+
+
+
+
+
  const RecServicesPage = () => {
 
   
@@ -124,26 +151,46 @@ import Recruitericon3 from "../../Assets/Images/Recruitment3.png";
   //   return () => observer.disconnect();
   // }, [visibleItems]);
 
-  const jobRoles = [
-    "JAVA ",
-    ".NET",
-    "PHP Developers",
-    "Android, Kotlin, Flutter - Developer",
-    "SAP ABAP / Basis / FICO / MDG / CRM / BPC / Hana",
-    "Linux Admin / Network Engineer",
-    "Microsoft Azure / Ms Dynamic 365",
-    "Workday/ OracleES / EDM",
-    "Devops / RSA ARCHER / PAAS",
-    "C++ Programmer / Open Link",
-    "Sales Force / RED HAT",
-    "Mongo DB / Cloud contact center OPS",
-    "Google Big Query / Pega System",
-    "Service Desk / Service Now",
-    "Manual / Automation tester",
-    "Angular Developer",
-    "Business Analyst",
+  // const jobRoles = [
+  //   "JAVA ",
+  //   ".NET",
+  //   "PHP Developers",
+  //   "Android, Kotlin, Flutter - Developer",
+  //   "SAP ABAP / Basis / FICO / MDG / CRM / BPC / Hana",
+  //   "Linux Admin / Network Engineer",
+  //   "Microsoft Azure / Ms Dynamic 365",
+  //   "Workday/ OracleES / EDM",
+  //   "Devops / RSA ARCHER / PAAS",
+  //   "C++ Programmer / Open Link",
+  //   "Sales Force / RED HAT",
+  //   "Mongo DB / Cloud contact center OPS",
+  //   "Google Big Query / Pega System",
+  //   "Service Desk / Service Now",
+  //   "Manual / Automation tester",
+  //   "Angular Developer",
+  //   "Business Analyst",
     
-  ];
+  // ];
+
+
+  const jobRolesWithImages = [
+    { text: "JAVA", image: JAVA }, // Replace with your actual image paths
+    { text: ".NET", image: DotNet },
+    { text: "PHP Developers", image: PHP},
+    { text: "Android, Kotlin, Flutter - Developer", image: AndroidKotlin},
+    { text: "SAP ABAP / Basis / FICO / MDG / CRM / BPC / Hana", image:JAVA },
+    { text: "Linux Admin / Network Engineer", image: JAVA },
+    { text: "Microsoft Azure / Ms Dynamic 365", image: MicrosoftAzure},
+    { text: "Workday/ OracleES / EDM", image: JAVA },
+    { text: "Devops / RSA ARCHER / PAAS", image: DevOps },
+    { text: "C++ Programmer / Open Link", image: JAVA },
+    { text: "Sales Force / RED HAT", image: JAVA },
+    { text: "Mongo DB / Cloud contact center OPS", image: MongoDB },
+    { text: "Google Big Query / Pega System", image: JAVA },
+    { text: "Service Desk / Service Now", image: JAVA },
+    { text: "Manual / Automation tester", image: ManualAutomationTester },
+    { text: "Angular Developer", image: Angular },
+    { text: "Business Analyst", image: BusinessAnalyst }]
 
   const marqueeRef = useRef(null); 
   const handleMouseEnter1 = () => {
@@ -566,15 +613,16 @@ import Recruitericon3 from "../../Assets/Images/Recruitment3.png";
       
       </div>
 {/* //////////////////////////////////////////////////// */}
-<div className='my-10 '>
 
-<h1 className="italic text-5xl text-center mt-14 mb-5 text-white" >
-  B3 Expertise In IT Recruitment
-</h1>
+
+<div className="my-20">
+        <h1 className="italic text-center mt-10 text-white text-5xl m-[5px] md:mt-[40px]">
+        B3 Expertise In IT Recruitment
+        </h1>
 
 
 <marquee
-  className="w-full  p-5 text-black"
+  className="w-full p-2 text-black my-10 cursor-pointer"
   behavior="scroll"
   direction="left"
   scrollamount="10"
@@ -582,10 +630,25 @@ import Recruitericon3 from "../../Assets/Images/Recruitment3.png";
   onMouseEnter={handleMouseEnter1}
   onMouseLeave={handleMouseLeave1}
 >
-  {jobRoles.map((role, index) => (
-    <span key={index} className="inline-flex items-center mx-4 rounded-lg bg-white text-black drop-shadow-lg  border-2 border-[#0060b5] p-3">
-      {role}
-      <ArrowBackIcon className="ml-2 text-[#0060b5]" />
+  {jobRolesWithImages.map((role, index) => (
+    <span
+      key={index}
+      className={`inline-flex items-center mx-4 rounded-lg drop-shadow-lg border-2 p-1 px-2  ${
+        index % 2 === 0
+          ? "  bg-white text-[#0060b5]  border-blue-900" // Styles for even items
+          // : " text-[#0060b5] border-blue-900"
+           : " bg-white text-[#0060b5]  border-blue-900"
+      }`}
+    >
+      {/* Display the job role text */}
+      {role.text}
+
+      {/* Right-side: Job role image */}
+      <img
+        src={role.image}
+        // alt={role.text}
+        className="w-10 h-10 ml-2" // Adjust width and height as needed
+      />
     </span>
   ))}
 </marquee>
@@ -614,9 +677,9 @@ import Recruitericon3 from "../../Assets/Images/Recruitment3.png";
 </marquee> */}
 </div>      
 
-      <div>
+      {/* <div>
         <Footer />
-      </div>
+      </div> */}
     </>
   )
 }

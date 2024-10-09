@@ -339,9 +339,11 @@ const Footer = () => {
   );
 
   return (
-    <footer className=" flex justify-center items-center bg-gray-900 text-white py-5">
+    <footer className=" flex justify-center items-center  bg-gray-900 text-white py-5">
        {/* <div className=" bg-blue-950 mx-10 rounded-md border-2 shadow-lg shadow-black border-[#0060b5]"></div> */}
-      <div className="  mx-10 rounded-md border-2 shadow-lg shadow-black border-[#0060b5]">
+      <div className="  mx-10 rounded-md border-2   shadow-lg shadow-black border-[#0060b5]">
+      {/* <div class=" mx-10  bg-blue-950   shadow-black border-[#0060b5] bg-black/30 backdrop-blur-lg rounded-lg shadow-lg border border-white/20 p-6"> */}
+  
         <div className="grid grid-cols-1  md:grid-cols-4 gap-x-8 md:px-10 px-5 pt-10 relative overflow-hidden">
           {/* Letter A as a background element */}
           {/* <span className="absolute text-9xl animate-backgroundLetter">

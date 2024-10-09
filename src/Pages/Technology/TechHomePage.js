@@ -25,7 +25,7 @@ import Quality from "../../Assets/Images/quality.png";
 import scalable from "../../Assets/Images/scalable.png";
 import "./TechServicesPage.css";
 import "./Section2.css";
-import CustomAccordion from "./NewOne";
+import CustomAccordion from "../../Components/TechServicesPage/AccordionComponent";
 
 const TechHomePage = () => {
   const [expanded, setExpanded] = useState(false);
@@ -128,7 +128,7 @@ const TechHomePage = () => {
           {" "}
           {/* Adjusted top position */}
           <img src={letstalk} width="25px" alt="Let's talk" />
-          <a href="#" onClick={(e) => e.preventDefault()}>
+          <a href="contact" onClick={(e) => e.preventDefault()}>
             Let’s talk
           </a>
         </div>
@@ -680,9 +680,9 @@ const TechHomePage = () => {
 
 
 
-      <div className=" tech-footer">
+      {/* <div className=" tech-footer">
         <Footer />
-      </div>
+      </div> */}
     </div>
   );
 };
