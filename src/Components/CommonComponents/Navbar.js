@@ -108,6 +108,11 @@ function Navbar() {
         to="/"
         className="flex items-center text-[#0060b5] font-bold text-2xl md:text-lg xl:text-2xl"
         onClick={closeMobileMenu}
+        style={{
+          color: '#0060b5', // Text color
+          textShadow: '0.8px 0.8px 0 white, -0.8px -0.8px 0 white, 0.8px -0.8px 0 white, -0.8px 0.8px 0 white',
+          letterSpacing: '0.1em', // Adjust the gap between letters
+        }}
       >
         <img src={Logo} alt="logo" className="w-10 h-10" />
         &nbsp;BitByBit Solutions

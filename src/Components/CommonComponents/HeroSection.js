@@ -94,7 +94,8 @@ const HeroSection = ({ videoUrl, videoOpacity, MarginAnimtion, children }) => {
                 autoPlay
                 loop
                 muted
-                className={`absolute inset-0 w-full h-full object-cover opacity-20 transition-all duration-1000 ease-in-out`}
+                className={`absolute inset-0 w-full h-full object-cover transition-all duration-1000 ease-in-out ${videoOpacity == 100 ? 'opacity-80' : 'opacity-20'}`}
+
                 style={containerStyle}// Smooth border-radius transition
             >
                 <source src={videoUrl} type="video/mp4" />

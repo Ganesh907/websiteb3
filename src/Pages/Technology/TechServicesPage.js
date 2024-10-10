@@ -95,9 +95,9 @@ const TechServicesPage = (props) => {
   onMouseLeave={handleMouseLeave1}
 >
   {jobRolesWithImages.map((role, index) => (
-    <span
-      key={index}
-      className={`inline-flex items-center mx-4 rounded-lg text-xl  hover:scale-110 hover:py-7  hover:bg-white hover:text-black drop-shadow-lg shadow-lg shadow-black border-x-4 py-5 px-5 bg-black text-white  border-blue-900 `}
+    // <span
+    //   key={index}
+    //   className={`inline-flex items-center mx-4 rounded-lg text-xl  hover:scale-110 hover:py-7  hover:bg-white hover:text-black drop-shadow-lg shadow-lg shadow-black border-x-4 py-5 px-5 bg-black text-white  border-blue-900 transition-all duration-300  `}
       //   ${
       //   index % 2 === 0
       //     ? "  bg-black text-white  border-blue-900" // Styles for even items
@@ -106,7 +106,15 @@ const TechServicesPage = (props) => {
       //     :"  bg-black text-white  border-blue-900"
       // }`}
       
-    >
+    // >
+
+
+<span
+  key={index}
+  className={`inline-flex items-center mx-4 rounded-lg text-xl hover:scale-110 hover:bg-white hover:text-black drop-shadow-lg shadow-lg shadow-black border-x-4 py-5 px-5 bg-black text-white border-blue-900 transition-all duration-500 ease-in-out`}
+>
+
+
       {/* Display the job role text */}
       {role.text}
 

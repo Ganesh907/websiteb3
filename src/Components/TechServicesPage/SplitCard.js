@@ -26,7 +26,7 @@ export default class SplitCard extends Component {
   render() {
     return (
       <div className="  flex flex-col items-center  min-h-screen  bg-[linear-gradient(135deg,_#0000_20.5%,_#ffffff_0_29.5%,_#0000_0)_0_50px,_linear-gradient(45deg,_#0000_8%,_#ffffff_0_17%,_#0000_0_58%)_100px_0,_linear-gradient(135deg,_#0000_8%,_#ffffff_0_17%,_#0000_0_58%,_#ffffff_0_67%,_#0000_0),_linear-gradient(45deg,_#0000_8%,_#ffffff_0_17%,_#0000_0_58%,_#ffffff_0_67%,_#0000_0_83%,_#ffffff_0_92%,_#0000_0),_rgba(71,74,255,0.05)] bg-[200px_200px]">
-        <h1 className=" md:text-start text-center  heading1  italic text-5xl mt-8 md:mb-2 mb-10 md:ml-0  ">
+        <h1 className=" md:text-start text-center  heading1  italic md:text-5xl text-2xl mt-8 md:mb-2 mb-10 md:ml-0  ">
           Our Professional Services Portfolio
         </h1>
         {/* <span className="hidden relative lg:w-[8%] lg:h-[5px] lg:mr-[62%] lg:block lg:rounded-b-[5px]" style={{ backgroundColor: '#002eff' }}></span> */}
@@ -61,8 +61,8 @@ export default class SplitCard extends Component {
               <div className=" bg-opacity-75  rounded  "></div>
             </div>
           </div>
-          {/* <div className="bg-gradient-to-r from-[rgba(220,220,220,0.4)] to-[#0060b5] m-2 md:border-none border-2 border-sky-600 rounded-2xl parentDiv md:w-[90%] shadow-xl parentDiv md:relative md:left-20 md:shadow-2xl  md:p-5 md:rounded-xl md:mb-5 md:transform md:transition-all  md:border "> */}
-          <div className="bg-[#0060b5] md:pl-0 pl-4 m-2 md:border-none border-2 border-sky-600  rounded-2xl parentDiv md:w-[90%] shadow-xl parentDiv md:relative md:left-20 md:shadow-2xl  md:p-5 md:rounded-xl md:mb-5 md:transform md:transition-all  md:border ">
+          {/* <div className="bg-gradient-to-r from-[rgba(220,220,220,0.4)] to-[#0060b5] m-2 md:border-none border-2 border-sky-600 rounded-2xl parentDiv md:w-[90%] shadow-xl parentDiv md:relative md:left-20 md:shadow-2xl  mx-4 md:mx-0 md:p-5 md:rounded-xl md:mb-5 md:transform md:transition-all  md:border "> */}
+          <div className="bg-[#0060b5] md:pl-0 pl-4 m-2 md:border-none border-2 border-sky-600  rounded-2xl parentDiv md:w-[90%] shadow-xl parentDiv md:relative md:left-20 md:shadow-2xl  md:mx-0 md:p-5 mx-5 md:rounded-xl md:mb-5 md:transform md:transition-all  md:border ">
 
             <div className="md:flex   md:h-80 md:pl-72 md:flex-col md:items-center     ">
               <div className=" md:h-full  md:flex md:flex-col md:justify-between md:w-full ">
@@ -139,7 +139,7 @@ export default class SplitCard extends Component {
             </div>
           </div>
 
-          <div className="bg-white md:pl-0 pl-8 m-2  parentDiv md:w-[90%] md:left-20 mt-2   md:relative  border-sky-600 border-2 md:shadow-2xl md:p-6 rounded-2xl  md:transform md:transition-all  md:border-none ">
+          <div className="bg-white md:pl-0 pl-8 m-2  parentDiv md:w-[90%] md:left-20 mt-2   md:relative  border-sky-600 border-2 md:shadow-2xl md:p-6 rounded-2xl mx-5 md:mx-0  md:transform md:transition-all  md:border-none ">
             <div className="md:flex md:flex-col md:h-80 md:items-start">
               <h4 className="heading font-bold text-[30px] smallcontaint my-3 ml-1 md:pl-14 text-[#0060b5]">
                 Mobile App Development
@@ -198,7 +198,7 @@ export default class SplitCard extends Component {
             </div>
           </div>
 
-          <div className="bg-[#0060b5] md:pl-0 pl-8  m-2 mt-2 parentDiv md:w-[90%] border-sky-600 border-2 rounded-2xl md:h-96 h-96 md:relative md:left-20 md:shadow-2xl  md:p-3 md:rounded-xl md:mb-5 md:mt-5 md:transform md:transition-all  md:border-none ">
+          <div className="bg-[#0060b5] md:pl-0 pl-8  m-2 mt-2 parentDiv md:w-[90%] border-sky-600 border-2 rounded-2xl md:h-96 h-96 md:relative md:left-20 md:shadow-2xl  mx-4 md:mx-0 md:p-3 md:rounded-xl md:mb-5 md:mt-5 md:transform md:transition-all  md:border-none ">
             <div className="md:flex md:flex-col  ">
               <div className="  ">
                 <h4 className=" md:text-center heading border-solid border-black font-bold text-[30px] smallcontaint ml-1  md:pl-60 md:pr-32 text-white ">
@@ -265,7 +265,7 @@ export default class SplitCard extends Component {
             </div>
           </div>
 
-          <div className=" bg-white m-2 md:pl-0 pl-8 parentDiv md:w-[90%] mt-2  md:relative md:left-20   md:shadow-2xl md:p-6 rounded-2xl  md:transform md:transition-all ">
+          <div className=" bg-white m-2 md:pl-0 pl-8 parentDiv md:w-[90%] mt-2  md:relative md:left-20   md:shadow-2xl md:p-6 rounded-2xl  md:transform md:transition-all mx-5 md:mx-0 ">
             <div className="md:flex md:flex-col md:h-80 md:items-start">
               <h4 className="heading font-bold text-[30px] smallcontaint my-3 ml-1 md:pl-14 text-[#0060b5]">
                 Managed IT Services

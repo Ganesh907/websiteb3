@@ -5,29 +5,52 @@ import { TechHomeData1 } from '../../utils/RecHomeData';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 
 // TypingEffect component to display lines one after another with a delay
-const TypingEffect = ({ text = '', delay = 500, isOpen = false }) => {
-  const [showText, setShowText] = useState(false);
+const TypingEffect = ({ text = '', typingSpeed = 50, isOpen = false }) => {
+  const [displayedText, setDisplayedText] = useState('');
 
   useEffect(() => {
-    if (isOpen) {
-      const timer = setTimeout(() => {
-        setShowText(true);
-      }, delay);
-      return () => clearTimeout(timer);
-    } else {
-      setShowText(false); // Reset when accordion is closed
+    if (!isOpen || typeof text !== 'string') {
+      setDisplayedText(''); // Reset if not open
+      return;
     }
-  }, [isOpen, delay]);
+
+    let currentCharIndex = 0;
+    const interval = setInterval(() => {
+      if (currentCharIndex < text.length) {
+        setDisplayedText((prev) => prev + text.charAt(currentCharIndex));
+        currentCharIndex++;
+      } else {
+        clearInterval(interval);
+      }
+    }, typingSpeed);
+
+    return () => clearInterval(interval);
+  }, [isOpen, text, typingSpeed]);
 
   return (
-    <span>
-      {showText && (
-        <>
-          <AlbumIcon style={{ verticalAlign: 'middle', marginRight: '5px', fontSize: '15px' }} />
-          {text}
-        </>
-      )}
-    </span>
+
+    <div className='flex'>
+    {/* Conditionally render the icon after the first character has been typed */}
+    <div>
+    {displayedText.length > 1 && (
+            <AlbumIcon style={{ verticalAlign: 'middle', marginRight: '5px', fontSize: '15px' }} />
+    )}
+            </div>
+    <h1>{displayedText}
+            </h1>
+   
+    
+</div>
+
+    
+    // <span>
+    //   {displayedText && (
+    //     <>
+    //       <AlbumIcon style={{ verticalAlign: 'middle', marginRight: '5px', fontSize: '15px' }} />
+    //       {displayedText}
+    //     </>
+    //   )}
+    // </span>
   );
 };
 
@@ -39,7 +62,7 @@ const AccordionItem = ({ item, index, expanded, handleMouseEnter, handleMouseLea
     if (expanded === index) {
       const timer = setTimeout(() => {
         setStartTyping(true);
-      }, 500);
+      }, 500); // Delay before starting typing effect
 
       return () => clearTimeout(timer);
     } else {
@@ -49,39 +72,23 @@ const AccordionItem = ({ item, index, expanded, handleMouseEnter, handleMouseLea
 
   return (
     <div
-      className={`bg-[#1a1a1a] border-[#0060b5] hover:border-[#00bfff] hover:border-2 border-2 text-red-200 transition-all duration-700 ease-in-out p-4 cursor-pointer ${
-        expanded === index ? 'h-80' : 'h-20'
-      }`}
+      className={`bg-[#1a1a1a] border-[#0060b5] rounded-lg hover:border-[#00bfff] hover:border-2 border-2 text-red-200 transition-all duration-700 ease-in-out p-4 cursor-pointer ${expanded === index ? 'h-auto md:h-80' : 'h-20'}`}
       onMouseEnter={() => handleMouseEnter(index)}
       onMouseLeave={handleMouseLeave}
     >
       <div className="flex items-center text-white">
         <item.icon className="mr-2 text-[#008bff]" style={{ fontSize: '50px' }} />
-        <span className="font-bold text-2xl text-[#00bfff]">{item.title}</span>
-        {
-                                        expanded === index ? 
-                                        <ExpandLessIcon
-                                                        className='ml-auto transition-transform duration-300 animate-bounce'
-                                                        style={{ animationDelay: '3000ms', animationDuration: '0.6s' }}
-                                                />
-                                                :
-                                                <ExpandMoreIcon
-                                                className='ml-auto transition-transform duration-300 animate-bounce'
-                                                style={{ animationDelay: '1000ms', animationDuration: '0.6s' }}
-                                        />
-                                                
-                                                }
-
+        <span className="font-bold text-xl md:text-2xl text-[#00bfff]">{item.title}</span>
+        {expanded === index ? 
+          <ExpandLessIcon className='ml-auto transition-transform duration-300 animate-bounce' /> :
+          <ExpandMoreIcon className='ml-auto transition-transform duration-300 animate-bounce' />
+        }
       </div>
       <div className={`mt-2 overflow-hidden ${expanded === index ? 'block' : 'hidden'}`}>
         <ul className="text-white list-disc italic">
           {item.content.map((line, lineIndex) => (
             <li key={lineIndex} className="mb-2">
-              <TypingEffect
-                text={line}
-                delay={lineIndex * 500} // Each line appears 500ms after the previous one
-                isOpen={startTyping}
-              />
+              <TypingEffect text={line} typingSpeed={expanded === index ? 15 : 0} isOpen={startTyping} />
             </li>
           ))}
         </ul>
@@ -98,8 +105,12 @@ export default function CustomAccordion() {
 
   return (
     <div className="py-32">
-      <h1 className="text-center md:text-center text-white text-5xl italic md:mt-10 md:mb-20">
-      Industry Specialization
+ <h1 className="text-center uppercase md:text-center text-white text-xl md:text-5xl font-bold md:mt-10 md:mb-20"
+                        style={{
+                               
+                              fontFamily: 'Goudy Old Style' ,
+                                letterSpacing: '0.05em'}}>
+        Industry Specialization
       </h1>
       <div className="flex flex-wrap justify-center">
         <div className="w-full md:w-1/2 flex flex-col gap-y-10 p-5">

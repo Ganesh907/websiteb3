@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import letstalk from "../../Assets/Images/letstakeicon1.png";
-import technology from "../../Assets/Videos/Technology6.mp4";
+// import technology from "../../Assets/Videos/Technology6.mp4";
+import technology from "../../Assets/Videos/Technology4y.mp4";
 
 import bank from "../../Assets/Images/bankingicon.png";
 import ecom from "../../Assets/Images/egovandecomicon.png";
@@ -119,25 +120,26 @@ const TechHomePage = () => {
     }
   }, [expanded, linesBank, linesHospitality, linesGov, linesHealth]);
   return (
-    <div className="techHomepageMain  ">
-      {scrollHeading ? (
-        <div
-          className="z-50 bg-blue-800 text-white fixed flex justify-center items-center rounded-lg font-montserrat text-[18px] font-bold h-[44px] leading-[24px] w-2/5 gap-[10px] md:p-0 md:w-[10%] md:ml-2"
-          style={{ bottom: "10px", right: "10px" }}
-        >
-          {" "}
-          {/* Adjusted top position */}
-          <img src={letstalk} width="25px" alt="Let's talk" />
-          <a href="contact" onClick={(e) => e.preventDefault()}>
-            Let’s talk
-          </a>
-        </div>
+    <div className="  ">
+      {scrollHeading ? (<>Ganesh</>
+        // <div
+        //   className="z-50 bg-blue-800 text-white fixed flex justify-center items-center rounded-lg font-montserrat text-[18px] font-bold h-[44px] leading-[24px] w-2/5 gap-[10px] md:p-0 md:w-[10%] md:ml-2"
+        //   style={{ bottom: "10px", right: "10px" }}
+        // >
+        //   {" "}
+        //   {/* Adjusted top position */}
+        //   <img src={letstalk} width="25px" alt="Let's talk" />
+        //   <a href="contact" onClick={(e) => e.preventDefault()}>
+        //     Let’s talk
+        //   </a>
+        // </div>
       ) : null}
 
       <HeroSection
         videoUrl={technology}
-        videoOpacity={20}
+        videoOpacity={100}
         MarginAnimtion={true}
+
       >
         <div className="lg:w-[50vw] w-[90vw] md:flex md:flex-col md:justify-end  md:gap-2  ">
           <h1
@@ -237,7 +239,12 @@ const TechHomePage = () => {
 
       <CustomAccordion/>
       <div className="flex-col ">
-        <h1 className=" text-center h-[10vh] my-4 text-white text-5xl italic m-[5px] font-montserrat md:my-20">
+        <h1 className=" text-center h-[10vh] my-4 uppercase text-white font-bold  text-5xl  m-[5px] font-montserrat md:my-20"
+        style={{
+                               
+          fontFamily: 'Goudy Old Style' ,
+            letterSpacing: '0.05em'            
+        }}>
           Our Promise
         </h1>
 
@@ -284,7 +291,7 @@ const TechHomePage = () => {
             </div>
 
             <div>
-              <h1 className="my-2 text-white font-bold border-b-2 border-white text-xl">
+              <h1 className="my-2 text-white font-bold border-b-2 border-white lg:text-2xl pb-2 text-lg">
                 {" "}
                 Innovative Solutions
               </h1>
@@ -361,7 +368,7 @@ const TechHomePage = () => {
             </div>
 
             <div>
-            <h1 className="my-2 text-black font-bold border-b-2 border-black text-lg">
+            <h1 className="my-2 text-black font-bold border-b-2 border-black lg:text-xl pb-2 text-lg">
                 Transparency and Communication
               </h1>
               <ul
@@ -434,7 +441,7 @@ const TechHomePage = () => {
             </div>
 
             <div>
-            <h1 className="my-2 text-white font-bold border-b-2 border-white text-md">
+            <h1 className="my-2 text-white font-bold border-b-2 border-white lg:text-2xl pb-2 text-lg">
                 Customization as per Your Needs
               </h1>
               <ul
@@ -510,7 +517,7 @@ const TechHomePage = () => {
             </div>
 
             <div>
-            <h1 className="my-2 text-black font-bold border-b-2 border-black text-xl">On-Time Delivery</h1>
+            <h1 className="my-2 text-black font-bold border-b-2 border-black lg:text-2xl pb-2 text-lg">On-Time Delivery</h1>
               <ul
                 className="list-disc leading-loose text-black ml-4"
                 style={{ "--tw-marker-color": "blue" }}
@@ -581,7 +588,7 @@ const TechHomePage = () => {
             </div>
 
             <div>
-            <h1 className="my-2 text-black font-bold border-b-2 border-black text-xl">Quality Assurance</h1>
+            <h1 className="my-2 text-white font-bold border-b-2 border-white lg:text-2xl pb-2 text-lg">Quality Assurance</h1>
               <ul
                 className="list-disc leading-loose text-white ml-4"
                 style={{ "--tw-marker-color": "blue" }}
@@ -648,7 +655,7 @@ const TechHomePage = () => {
             </div>
 
             <div>
-            <h1 className="my-2 text-black font-bold border-b-2 border-black text-lg">
+            <h1 className="my-2 text-black font-bold border-b-2 border-black lg:text-2xl pb-2 text-lg">
                 Scalability and Future-Proofing
               </h1>
               <ul

@@ -2,7 +2,7 @@ import React from 'react';
 
 const Spinner = () => {
   return (
-    <div className="fixed inset-0 flex justify-center items-center bg-transparent ">
+    <div className="fixed inset-0 flex h-screen w-screen justify-center z-40 items-center bg-black ">
       <div className="loader">
         <style jsx>{`
           .loader {

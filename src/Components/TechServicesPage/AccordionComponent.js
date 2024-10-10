@@ -66,7 +66,16 @@ export default function CustomAccordion() {
         return (
                 <div className="py-32" >
                         {/* <h2 className="text-center text-3xl text-white font-bold mb-6"> */}
-                        <h1 className="text-center md:text-center text-white text-5xl italic md:mt-10 md:mb-20">
+                        <h1 className="text-center uppercase md:text-center text-white text-xl md:text-5xl font-bold md:mt-10 md:mb-20"
+                        style={{
+                               
+                              fontFamily: 'Goudy Old Style' ,
+                                letterSpacing: '0.05em'
+                                 // textShadow: 
+                                // textShadow: '0.8px 0.8px 0 white, -0.8px -0.8px 0 white, 0.8px -0.8px 0 white, -0.8px 0.8px 0 white',
+                                // '1px 1px 0 white, -1px -1px 0 #eec317, 1px -1px 0 #eec317, -1px 1px 0 #eec317, ' +
+                                // '1px 0 0 white, -1px 0 0 white, 0 1px 0 white, 0 -1px 0 white',
+                        }}>
                                 Industry-Focused Innovation</h1>
                         {/* </h2> */}
                         <div className="flex flex-wrap justify-center ">

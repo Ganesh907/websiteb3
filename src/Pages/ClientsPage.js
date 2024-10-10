@@ -202,7 +202,8 @@ const ClientsPage = () => {
 
 
       <div className="flex flex-col items-center justify-center py-10">
-  <h2 className=" text-3xl md:text-5xl text-[#0060b5] my-6 font-semibold drop-shadow-lg">
+  <h2 className=" text-3xl md:text-5xl text-[#0060b5] my-6 font-semibold drop-shadow-lg"
+  style={{  textShadow: '0.8px 0.8px 0 #eec317, -0.8px -0.8px 0 white, 0.8px -0.8px 0 white, -0.8px 0.8px 0 #eec317',}}>
     Our Reputed Clients
   </h2>
   <p className=" italic text-lg mb-8 text-center">
@@ -371,7 +372,7 @@ const ClientsPage = () => {
       </div>
 
       <div className="flex w-auto gap-10 justify-center mt-10 ">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
+        <div className="md:grid-cols-2 lg:grid-cols-3 grid grid-cols-1  gap-6 p-4">
           {[
             {
               src: qualityClient,
@@ -399,7 +400,7 @@ const ClientsPage = () => {
               title: "Expert Team",
               description: "Highly skilled professionals.",
               number: "04",
-              bgColor: "bg-yellow-700",
+              // bgColor: "bg-yellow-700",
             },
             {
               src: innovation,

@@ -11,11 +11,11 @@ export const MainLayout = () => {
     <div>
       <Navbar />
       {/* Wrap Outlet with Suspense to show Spinner while loading lazy components */}
-     
+      <ScrollToTop/>
         <Outlet />
       {/* </Suspense> */}
       {/* The Footer will render only after the Outlet content has loaded */}
-      <ScrollToTop/>
+     
       <Footer />
     </div>
   );
