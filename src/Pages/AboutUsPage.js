@@ -1,40 +1,19 @@
 
 import React, { useEffect, useState } from "react";
 import PropTypes from 'prop-types';
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
-import Footer from "../Components/CommonComponents/Footer";
 import HeroSection from "../Components/CommonComponents/HeroSection";
 import AboutUsBgVideo from '../Assets/Videos/AboutUsBgVideo.mp4';
-import MissionVisionVideo from '../Assets/Videos/MissionVisionVideo.mp4';
-
 import mission from "../Assets/Images/mission.gif";
 import vision from "../Assets/Images/vision.gif";
-import Overview from "../Components/About us/Overview";
-import Mission from "../Components/About us/Mission";
-import Vission from "../Components/About us/Vission";
 import Corevalues from "../Components/About us/Corevalues"; 
-import Partner from "../Components/About us/Partner";
-import Family from "../Components/About us/Family";
-import Candidate from "../Components/About us/Candidate";
 import MissionVisionGif from "../Assets/Images/MissionVisionGif.gif"
 import TypingText from "../Components/CommonComponents/TypingText";
-import MissionNew from "../Assets/Images/MissionNew.gif"
 import B3Banner from "../Assets/Images/B3Banner.jpg"
 import B3Img from "../Assets/Images/1690.jpg"
 
 const AboutUsPage = () => {
-  const textStyle = {
-    background: 'linear-gradient(to bottom, var(--primary-color) 50%, var(--secondary-color) 50%)',
-    WebkitBackgroundClip: 'text',
-    color: 'transparent',
-    textTransform: "uppercase",
-    fontFamily: "cursive",
-    textAlign: "center",
-    fontSize: "50px",
-    letterSpacing: "1px",
-  };
+ 
 
   const content = [
     {
@@ -130,29 +109,7 @@ const AboutUsPage = () => {
 
 
 
-{/* <HeroSection videoUrl={Techclient} videoOpacity={20} MarginAnimtion={true}>
-        <div className='lg:w-[50vw] w-[90vw] flex justify-end items-end'>
-          <div className="relative w-full md:h-80 h-96  overflow-hidden mr-2 cursor-pointer mb-16">
-            <h1 className="text-[#0060b5]  text-3xl lg:text-5xl font-bold drop-shadow-xl">
-              Empower Your Journey
-              <span
-                className="absolute bottom-0 top-4 left-0 lg:w-[40vw] w-[90vw] lg:border-b-2 border-b-4 my-9"
-                style={{
-                  borderImage: "linear-gradient(to right, yellow, white, blue, black) 1",
-                  animation: "gradientShift 6s infinite",
-                }}
-              ></span>
-            </h1>
 
-            <p className="md:text-2xl text-xl font-bold md:mt-4 mt-10 text-white" data-aos="fade-up">
-              Redefine Your <span className="text-yellow-400">Success</span> With Innovation And Excellence.
-            </p>
-
-            <h1 className="text-2xl mt-14 italic ">
-              <span className="p-3 border-white border-l-2" style={{ backgroundColor: 'rgb(0,0,0,0.5)' }}>
-                Our Clients' Words
-              </span>
-            </h1> */}
 
 
 
@@ -216,145 +173,7 @@ const AboutUsPage = () => {
           </div>
         </div>
       </HeroSection>
-
-
-      {/* <section className="h-auto min-h-screen">
-  <h1 className="text-yellow-400 h-[20vh] text-5xl font-bold text-center pt-10">About B3</h1>
-
-  <Box sx={{ width: '100%', height: '80vh' }} className="flex justify-center bg-yellow-100 items-center">
-    <Box sx={{ borderRight: 2, paddingRight: '0px', borderColor: '#808080', height: 'auto', width: '180px' }} className="flex italic flex-col justify-center w-[15%]">
-      <Tabs
-        orientation="vertical"
-        value={value}
-        onChange={handleChange}
-        aria-label="vertical tabs example"
-        TabIndicatorProps={{ sx: { backgroundColor: '#0060b5', left: 0 } }}
-      >
-        <Tab
-          label="Overview"
-          {...a11yProps(0)}
-          className={`tabStyle ${value === 0 ? 'tabActive' : ''}`}
-        />
-        <Tab
-          label="Mission"
-          {...a11yProps(1)}
-          className={`tabStyle ${value === 1 ? 'tabActive' : ''}`}
-        />
-        <Tab
-          label="Vision"
-          {...a11yProps(2)}
-          className={`tabStyle ${value === 2 ? 'tabActive' : ''}`}
-        />
-        <Tab
-          label="Core Values"
-          {...a11yProps(3)}
-          className={`tabStyle ${value === 3 ? 'tabActive' : ''}`}
-        />
-        <Tab
-          label="Candidate"
-          {...a11yProps(4)}
-          className={`tabStyle ${value === 4 ? 'tabActive' : ''}`}
-        />
-        <Tab
-          label="Partner"
-          {...a11yProps(5)}
-          className={`tabStyle ${value === 5 ? 'tabActive' : ''}`}
-        />
-        <Tab
-          label="B3 Family"
-          {...a11yProps(6)}
-          className={`tabStyle ${value === 6 ? 'tabActive' : ''}`}
-        />
-      </Tabs>
-    </Box>
-
-    <Box className="w-[80%] p-10 h-[90vh] flex justify-center items-center">
-      <CustomTabPanel value={value} index={0}>
-        <Overview />
-      </CustomTabPanel>
-      <CustomTabPanel value={value} index={1} className="text-blue-600">
-        <Mission />
-      </CustomTabPanel>
-      <CustomTabPanel value={value} index={2} className="text-blue-600">
-        <Vission />
-      </CustomTabPanel>
-      <CustomTabPanel value={value} index={3} className="text-blue-600">
-        <Corevalues />
-      </CustomTabPanel>
-      <CustomTabPanel value={value} index={4} className="text-blue-600">
-        <Candidate />
-      </CustomTabPanel>
-      <CustomTabPanel value={value} index={5} className="text-blue-600">
-        <Partner />
-      </CustomTabPanel>
-      <CustomTabPanel value={value} index={6} className="text-blue-600">
-        <Family />
-      </CustomTabPanel>
-    </Box>
-  </Box>
-
-  <style jsx>{`
-    .tabStyle {
-      font-size: 1.125rem;
-      font-weight: 500;
-      color: black;
-      text-align: left;
-      width: 80%;
-      align-items: flex-start;
-      text-transform: none;
-    }
-
-    .tabStyle.tabActive {
-      color: white !important;
-      background: #0060b5;
-      margin-left: 10px;
-    }
-  `}</style>
-</section> */}
-
-
-
-
-
-{/* <div className="relative grid md:grid-cols-2 h-[100vh] overflow-hidden">
-<div className="md:h-full w-full flex flex-col justify-center z-10 items-start  ">
-  <div className="flex flex-col justify-between items-center  w-[75%] p-5">
-    <img src={MissionNew} className="h-32 w-32  bg-red-200 " />
-    <div>
-      <h1 className="text-center text-2xl font-bold">
-        OUR MISSION
-      </h1>
-      <h2 className="mt-4 text-[var(--secondary-color)] rounded-lg p-3">
-        {
-          "We strive to provide a tailored, end to end services to our clients and establishing strong partnerships to ensure we understand each others goals and deadlines, without compromising our professional and ethical standards."
-        }
-      </h2>
-    </div>
-  </div>
-</div>
-
-
-<div className="md:h-full w-full flex flex-col justify-center z-10   items-end  ">
-  <div className="flex flex-col justify-between items-center  w-[70%] p-5">
-    <img src={vision} className="h-32 w-32 bg-red-200" />
-    <div>
-      <h1 className="text-center text-2xl font-bold">
-        OUR VISION
-      </h1>
-      <h2 className="mt-4 rounded-lg p-3  text-[var(--secondary-color)] ">
-        {
-          "To build trust by establishing a winning value chain system based on the ever changing surroundings, with the utmost focus on transforming lives and providing solutions."
-        }
-      </h2>
-    </div>
-  </div>
-</div>
-
-</div> */}
-
-
-
-{/* <div className="relative h-[78vh] my-10 flex pb-2  justify-end items-center px-10">
+ {/* <div className="relative h-[78vh] my-10 flex pb-2  justify-end items-center px-10">
   <div
     className="absolute inset-0 bg-black opacity-20 "
     style={{
@@ -381,7 +200,7 @@ At BitByBit Solutions, we’re committed to excellence, ensuring that every proj
 
     </p>
   </div>
-</div> */}
+</div>  */}
 
 
 
@@ -438,18 +257,8 @@ At BitByBit Solutions, we’re committed to excellence, ensuring that every proj
 </div>
 </div>
 
-
-
-
-
-
-
 <Corevalues/>
 
-        
-
-
-      {/* <Footer /> */}
     </div>
   );
 };

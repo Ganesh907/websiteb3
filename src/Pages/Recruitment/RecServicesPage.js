@@ -403,7 +403,11 @@ import Wordpress from "../../Assets/Images/TechServicePageLanguages/Wordpress.pn
 
 {/* /////////////////////////////////////////////////////////// */}
 <div className="  flex flex-col items-center  min-h-screen  bg-[linear-gradient(135deg,_#0000_20.5%,_#ffffff_0_29.5%,_#0000_0)_0_50px,_linear-gradient(45deg,_#0000_8%,_#ffffff_0_17%,_#0000_0_58%)_100px_0,_linear-gradient(135deg,_#0000_8%,_#ffffff_0_17%,_#0000_0_58%,_#ffffff_0_67%,_#0000_0),_linear-gradient(45deg,_#0000_8%,_#ffffff_0_17%,_#0000_0_58%,_#ffffff_0_67%,_#0000_0_83%,_#ffffff_0_92%,_#0000_0),_rgba(71,74,255,0.05)] bg-[200px_200px]">
-        <h1 className=" md:text-start text-center  heading1  italic text-5xl mt-8 md:mb-2 mb-10 md:ml-0  ">
+<h1 className="text-center uppercase md:text-center text-white text-xl md:text-5xl font-bold md:my-20"
+                                style={{
+
+                                        fontFamily: 'Goudy Old Style',
+                                        letterSpacing: '0.05em'}}>
         Services Offered
         </h1>
         {/* <span className="hidden relative lg:w-[8%] lg:h-[5px] lg:mr-[62%] lg:block lg:rounded-b-[5px]" style={{ backgroundColor: '#002eff' }}></span> */}
@@ -616,13 +620,23 @@ import Wordpress from "../../Assets/Images/TechServicePageLanguages/Wordpress.pn
 
 
 <div className="my-20">
-        <h1 className="italic text-center mt-10 text-white text-5xl m-[5px] md:mt-[40px]">
+<h1 className="text-center uppercase md:text-center text-white text-xl md:text-5xl font-bold md:my-20"
+                                style={{
+
+                                        fontFamily: 'Goudy Old Style',
+                                        letterSpacing: '0.05em'}}>
         B3 Expertise In IT Recruitment
         </h1>
 
 
-<marquee
-  className="w-full p-2 text-black my-10 cursor-pointer"
+
+
+
+
+      
+        <marquee
+  className="w-full h-[30vh] flex justify-start items-center  text-black my-10"
+  style={{backgroundColor:'rgba(0,0,0,0.4)'}}
   behavior="scroll"
   direction="left"
   scrollamount="10"
@@ -631,15 +645,26 @@ import Wordpress from "../../Assets/Images/TechServicePageLanguages/Wordpress.pn
   onMouseLeave={handleMouseLeave1}
 >
   {jobRolesWithImages.map((role, index) => (
-    <span
-      key={index}
-      className={`inline-flex items-center mx-4 rounded-lg drop-shadow-lg border-2 p-1 px-2  ${
-        index % 2 === 0
-          ? "  bg-white text-[#0060b5]  border-blue-900" // Styles for even items
-          // : " text-[#0060b5] border-blue-900"
-           : " bg-white text-[#0060b5]  border-blue-900"
-      }`}
-    >
+    // <span
+    //   key={index}
+    //   className={`inline-flex items-center mx-4 rounded-lg text-xl  hover:scale-110 hover:py-7  hover:bg-white hover:text-black drop-shadow-lg shadow-lg shadow-black border-x-4 py-5 px-5 bg-black text-white  border-blue-900 transition-all duration-300  `}
+      //   ${
+      //   index % 2 === 0
+      //     ? "  bg-black text-white  border-blue-900" // Styles for even items
+      //     : " text-[#0060b5] border-blue-900"
+      //      : " bg-white text-[#0060b5]  border-blue-900"
+      //     :"  bg-black text-white  border-blue-900"
+      // }`}
+      
+    // >
+
+
+<span
+  key={index}
+  className={`inline-flex items-center mx-4 rounded-lg text-xl hover:scale-110 hover:bg-white hover:text-black drop-shadow-lg shadow-lg shadow-black border-x-4 py-5 px-5 bg-black text-white border-blue-900 transition-all duration-500 ease-in-out`}
+>
+
+
       {/* Display the job role text */}
       {role.text}
 
@@ -652,6 +677,9 @@ import Wordpress from "../../Assets/Images/TechServicePageLanguages/Wordpress.pn
     </span>
   ))}
 </marquee>
+
+
+
 
 
 {/* <h1 className="font-bold text-xl text-center mt-10  uppercase text-[var(--primary-color)]">

@@ -79,7 +79,11 @@ const TechServicesPage = (props) => {
       <SplitCard />
 
       <div className="my-20">
-        <h1 className="italic text-center mt-10 text-white text-5xl m-[5px] md:mt-[40px]">
+      <h1 className="text-center uppercase md:text-center text-white text-xl md:text-5xl font-bold md:mt-10 md:mb-20"
+                                style={{
+                                  // textShadow: '0.8px 0.8px 0 #eec317, -0.8px -0.8px 0 white, 0.8px -0.8px 0 white, -0.8px 0.8px 0 #eec317',
+                                        fontFamily: 'Goudy Old Style',
+                                        letterSpacing: '0.05em'}}>
         Redefining IT Skill Expertise
         </h1>
 

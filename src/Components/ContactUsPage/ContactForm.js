@@ -105,33 +105,33 @@ export const ContactForm = () => {
                     <Box display="flex" alignItems="center">
                         <PersonIcon style={{ color: 'white', marginRight: '10px', marginTop: '14px' }} />
                         <TextField
-  id="fullName"
-  name="fullName"
-  label="Full Name"
-  variant="standard"
-  value={formValues.fullName}
-  onChange={handleChange}
-  error={!!errors.fullName}
-  helperText={errors.fullName}
-  InputLabelProps={{
-    style: { color: "white" },
-  }}
-  InputProps={{
-    sx: {
-      color: 'white',
-      '&:before': {
-        borderBottomColor: 'white', 
-      },
-      '&:hover:not(.Mui-disabled):before': {
-        borderBottomColor: 'white', 
-      },
-      '&:after': {
-        borderBottomColor: '#0060b5', 
-      },
-    },
-  }}
-  fullWidth
-/>
+                            id="fullName"
+                            name="fullName"
+                            label="Full Name"
+                            variant="standard"
+                            value={formValues.fullName}
+                            onChange={handleChange}
+                            error={!!errors.fullName}
+                            helperText={errors.fullName}
+                            InputLabelProps={{
+                                style: { color: "white" },
+                            }}
+                            InputProps={{
+                                sx: {
+                                    color: 'white',
+                                    '&:before': {
+                                        borderBottomColor: 'white',
+                                    },
+                                    '&:hover:not(.Mui-disabled):before': {
+                                        borderBottomColor: 'white',
+                                    },
+                                    '&:after': {
+                                        borderBottomColor: '#0060b5',
+                                    },
+                                },
+                            }}
+                            fullWidth
+                        />
 
                     </Box>
 
@@ -153,19 +153,19 @@ export const ContactForm = () => {
                                 sx: {
                                     color: 'white',
                                     '&:before': {
-                                      borderBottomColor: 'white', 
+                                        borderBottomColor: 'white',
                                     },
                                     '&:hover:not(.Mui-disabled):before': {
-                                      borderBottomColor: 'white', 
+                                        borderBottomColor: 'white',
                                     },
                                     '&:after': {
-                                      borderBottomColor: '#0060b5', 
+                                        borderBottomColor: '#0060b5',
                                     },
-                                  },
+                                },
                                 inputProps: {
-                                    maxLength: 10, // Restrict input to 10 characters
-                                    pattern: "[0-9]*", // Allow only numeric characters
-                                    inputMode: 'numeric', // Show numeric keyboard on mobile
+                                    maxLength: 10, 
+                                    pattern: "[0-9]*",
+                                    inputMode: 'numeric', 
                                 },
                             }}
                             fullWidth
@@ -190,15 +190,15 @@ export const ContactForm = () => {
                                 sx: {
                                     color: 'white',
                                     '&:before': {
-                                      borderBottomColor: 'white', 
+                                        borderBottomColor: 'white',
                                     },
                                     '&:hover:not(.Mui-disabled):before': {
-                                      borderBottomColor: 'white', 
+                                        borderBottomColor: 'white',
                                     },
                                     '&:after': {
-                                      borderBottomColor: '#0060b5', 
+                                        borderBottomColor: '#0060b5',
                                     },
-                                  },
+                                },
                             }}
                             fullWidth
                         />
@@ -227,15 +227,15 @@ export const ContactForm = () => {
                             sx: {
                                 color: 'white',
                                 '&:before': {
-                                  borderBottomColor: 'white', 
+                                    borderBottomColor: 'white',
                                 },
                                 '&:hover:not(.Mui-disabled):before': {
-                                  borderBottomColor: 'white', 
+                                    borderBottomColor: 'white',
                                 },
                                 '&:after': {
-                                  borderBottomColor: '#0060b5', 
+                                    borderBottomColor: '#0060b5',
                                 },
-                              },
+                            },
                         }}
                     />
                 </Box>

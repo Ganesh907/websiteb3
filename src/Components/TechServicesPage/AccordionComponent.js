@@ -1,15 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import LocalHotelIcon from '@mui/icons-material/LocalHotel';
-import MedicalServicesIcon from '@mui/icons-material/MedicalServices';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import AlbumIcon from '@mui/icons-material/Album';
-import BusinessIcon from '@mui/icons-material/Business';
 import { TechHomeData1 } from '../../utils/TechHomeData'
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 
-// Import the icon from Material-UI
 
 
 // TypingEffect component
@@ -41,14 +35,14 @@ const TypingEffect = ({ text = '', typingSpeed = 50, isOpen = false }) => {
                 <div className='flex'>
                         {/* Conditionally render the icon after the first character has been typed */}
                         <div>
-                        {displayedText.length > 1 && (
-                                <AlbumIcon style={{ verticalAlign: 'middle', marginRight: '5px', fontSize: '15px' }} />
-                        )}
-                                </div>
+                                {displayedText.length > 1 && (
+                                        <AlbumIcon style={{ verticalAlign: 'middle', marginRight: '5px', fontSize: '15px' }} />
+                                )}
+                        </div>
                         <h1>{displayedText}
-                                </h1>
-                       
-                        
+                        </h1>
+
+
                 </div>
         );
 };
@@ -67,15 +61,15 @@ export default function CustomAccordion() {
                 <div className="py-32" >
                         {/* <h2 className="text-center text-3xl text-white font-bold mb-6"> */}
                         <h1 className="text-center uppercase md:text-center text-white text-xl md:text-5xl font-bold md:mt-10 md:mb-20"
-                        style={{
-                               
-                              fontFamily: 'Goudy Old Style' ,
-                                letterSpacing: '0.05em'
-                                 // textShadow: 
-                                // textShadow: '0.8px 0.8px 0 white, -0.8px -0.8px 0 white, 0.8px -0.8px 0 white, -0.8px 0.8px 0 white',
-                                // '1px 1px 0 white, -1px -1px 0 #eec317, 1px -1px 0 #eec317, -1px 1px 0 #eec317, ' +
-                                // '1px 0 0 white, -1px 0 0 white, 0 1px 0 white, 0 -1px 0 white',
-                        }}>
+                                style={{
+
+                                        fontFamily: 'Goudy Old Style',
+                                        letterSpacing: '0.05em'
+                                        // textShadow: 
+                                        // textShadow: '0.8px 0.8px 0 white, -0.8px -0.8px 0 white, 0.8px -0.8px 0 white, -0.8px 0.8px 0 white',
+                                        // '1px 1px 0 white, -1px -1px 0 #eec317, 1px -1px 0 #eec317, -1px 1px 0 #eec317, ' +
+                                        // '1px 0 0 white, -1px 0 0 white, 0 1px 0 white, 0 -1px 0 white',
+                                }}>
                                 Industry-Focused Innovation</h1>
                         {/* </h2> */}
                         <div className="flex flex-wrap justify-center ">
@@ -139,18 +133,18 @@ const AccordionItem = ({ item, index, expanded, handleMouseEnter, handleMouseLea
                                 <item.icon className="mr-2 text-[#008bff] " style={{ fontSize: '50px' }} />
                                 <span className="font-bold text-md md:text-2xl text-[#00bfff]">{item.title}</span>
                                 {
-                                        expanded === index ? 
-                                        <ExpandLessIcon
+                                        expanded === index ?
+                                                <ExpandLessIcon
                                                         className='ml-auto transition-transform duration-300 animate-bounce'
                                                         style={{ animationDelay: '3000ms', animationDuration: '0.6s' }}
                                                 />
                                                 :
                                                 <ExpandMoreIcon
-                                                className='ml-auto transition-transform duration-300 animate-bounce'
-                                                style={{ animationDelay: '1000ms', animationDuration: '0.6s' }}
-                                        />
-                                                
-                                                }
+                                                        className='ml-auto transition-transform duration-300 animate-bounce'
+                                                        style={{ animationDelay: '1000ms', animationDuration: '0.6s' }}
+                                                />
+
+                                }
 
                         </div>
                         <div className={`mt-2 overflow-hidden ${expanded === index ? 'block' : 'hidden'}`}>
