@@ -7,7 +7,7 @@ const Homepage = lazy(() => import("../Pages/Homepage"));
 const TechHomePage = lazy(() => import("../Pages/Technology/TechHomePage"));
 const ClientsPage = lazy(() => import("../Pages/ClientsPage"));
 const RecServicesPage = lazy(() => import("../Pages/Recruitment/RecServicesPage"));
-const RecClientsPage = lazy(() => import("../Pages/Recruitment/RecClientsPage"));
+// const RecClientsPage = lazy(() => import("../Pages/Recruitment/RecClientsPage"));
 const ContactUsPage = lazy(() => import("../Pages/ContactUsPage"));
 const RecHomePage = lazy(() => import("../Pages/Recruitment/RecHomePage"));
 const AboutUsPage = lazy(() => import("../Pages/AboutUsPage"));
@@ -16,6 +16,7 @@ const LandingPage = lazy(() => import("../Pages/LandingPage"));
 const Blogs = lazy(() => import("../Pages/Blogs"));
 const CareerPage = lazy(() => import("../Pages/CareerPage"));
 const NotFoundPage = lazy(() => import("../Pages/NotFoundPage")); 
+const FullBlog = lazy(() => import("../Pages/FullBlog")); 
 
 // Define routes
 const AppRoutes = [
@@ -34,6 +35,7 @@ const AppRoutes = [
       { path: "/careers", element: <CareerPage /> },
       { path: "/blogs", element: <Blogs /> },
       { path: "*", element: <NotFoundPage /> }, // Handle 404 Not Found route
+      { path: "FullBlog", element: <FullBlog /> }, 
     ],
   },
 ];
