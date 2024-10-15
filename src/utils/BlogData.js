@@ -18,36 +18,6 @@ export const blogData = [
         content: "An introduction to React JS covering its features, components, state, and props. Learn why React is a great choice for modern web development."
     },
     {
-        image: blog2,
-        profileImage: null,
-        category: "Technology",
-        readTime: "5 min read",
-        title: "Understanding JavaScript Promises",
-        authorName: "Jane Smith",
-        date: "13 Oct. 2024",
-        content: "This article explains JavaScript Promises, their usage, and how to handle asynchronous operations more effectively in your applications."
-    },
-    {
-        image: blog3,
-        profileImage: blog3,
-        category: "Technology",
-        readTime: "7 min read",
-        title: "CSS Grid vs Flexbox",
-        authorName: "Alice Johnson",
-        date: "12 Oct. 2024",
-        content: "A detailed comparison of CSS Grid and Flexbox, discussing their differences, when to use each, and best practices."
-    },
-    {
-        image: blog1,
-        profileImage: null,
-        category: "Consulting",
-        readTime: "8 min read",
-        title: "Effective Strategies for Business Consulting",
-        authorName: "Emily White",
-        date: "11 Oct. 2024",
-        content: "Explore key strategies that consultants can use to help businesses improve their performance and achieve their goals."
-    },
-    {
         image: blog2, 
         profileImage: null,
         category: "Outsourcing",
@@ -67,6 +37,38 @@ export const blogData = [
         date: "9 Oct. 2024",
         content: "An overview of how digital tools and technologies are transforming the consulting landscape."
     },
+   
+    {
+        image: blog1,
+        profileImage: null,
+        category: "Consulting",
+        readTime: "8 min read",
+        title: "Effective Strategies for Business Consulting",
+        authorName: "Emily White",
+        date: "11 Oct. 2024",
+        content: "Explore key strategies that consultants can use to help businesses improve their performance and achieve their goals."
+    },
+    {
+        image: blog2,
+        profileImage: null,
+        category: "Technology",
+        readTime: "5 min read",
+        title: "Understanding JavaScript Promises",
+        authorName: "Jane Smith",
+        date: "13 Oct. 2024",
+        content: "This article explains JavaScript Promises, their usage, and how to handle asynchronous operations more effectively in your applications."
+    },
+    {
+        image: blog3,
+        profileImage: blog3,
+        category: "Technology",
+        readTime: "7 min read",
+        title: "CSS Grid vs Flexbox",
+        authorName: "Alice Johnson",
+        date: "12 Oct. 2024",
+        content: "A detailed comparison of CSS Grid and Flexbox, discussing their differences, when to use each, and best practices."
+    },
+   
     {
         image: blog1, 
         profileImage: null,
