@@ -124,14 +124,18 @@ const AccordionItem = ({ item, index, expanded, handleMouseEnter, handleMouseLea
 
         return (
                 <div
-                        className={` bg-[#1a1a1a] border-[#0060b5] hover:border-[#00bfff] hover:border-2  border-2 text-red-200   transition-all duration-700 ease-in-out p-4  cursor-pointer ${expanded === index ? 'md:h-64 h-80' : 'h-20'}`}
+                        className={` bg-[#1a1a1a] border-[#0060b5] rounded-lg  shadow-xl shadow-black  hover:border-[#00bfff] hover:border-2  border-2 text-red-200   transition-all duration-700 ease-in-out p-4  cursor-pointer ${expanded === index ? 'md:h-64 h-80' : 'h-24'}`}
                         //     style={{ backgroundColor: "rgba(0, 0, 0, 0.1)" }}
                         onMouseEnter={() => handleMouseEnter(index)}
                         onMouseLeave={handleMouseLeave}
                 >
                         <div className="flex items-center text-white">
-                                <item.icon className="mr-2 text-[#008bff] " style={{ fontSize: '50px' }} />
-                                <span className="font-bold text-md md:text-2xl text-[#00bfff]">{item.title}</span>
+                                <item.icon className="text-[#008bff] h-14 w-14 bg-black shadow-lg shadow-black  border-[1px] border-white rounded-md p-1 mr-4" style={{ fontSize: '55px' }} />
+
+
+                                {/* <img src={item.img} alt='' className='h-14 w-14 bg-black shadow-lg shadow-black  border-[1px] border-white rounded-md p-1 mr-4'/> */}
+
+                                <span className=" text-md md:text-2xl text-[#00bfff]">{item.title}</span>
                                 {
                                         expanded === index ?
                                                 <ExpandLessIcon

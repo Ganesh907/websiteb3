@@ -5,10 +5,15 @@ import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
 import Diversity3Icon from '@mui/icons-material/Diversity3';
 import ArticleIcon from '@mui/icons-material/Article';
 import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
+import img1 from '../Assets/Images/RecHome/Img1.png'
+import img2 from '../Assets/Images/RecHome/Img3.png'
+import img3 from '../Assets/Images/RecHome/Img2.png'
+import img4 from '../Assets/Images/RecHome/Img4.png'
 export const TechHomeData1 = [
   {
     title: 'Technology Recruitment',
     icon: CodeIcon,
+    img: img1,
     content: [
       "  We assist our clients in securing top-tier talent for a broad spectrum of IT roles.",
       "  Including but not limited to Java, .NET, Android development, SAP, DevOps, machine learning, cloud services, and cybersecurity.",
@@ -19,6 +24,7 @@ export const TechHomeData1 = [
   {
     title: 'BFSI Recruitment',
     icon: AccountBalanceIcon,
+    img: img2,
     content: [
       "  BitByBit Solutions offers comprehensive recruitment services for clients in the BFSI sector.",
       "  We source professionals for critical roles such as financial analysts, risk managers, compliance officers, investment bankers, and more.",
@@ -29,6 +35,7 @@ export const TechHomeData1 = [
   {
     title: 'Contract Hiring',
     icon: ArticleIcon,
+    img: img3,
     content: [
       "  Whether you require short-term expertise or need to scale up quickly, our contract hiring solutions ensure that you get the right talent, right when you need it.",
 "  With a focus on flexibility, our contract hiring services enable you to quickly adapt to changing project requirements without the long-term commitment." ,
@@ -44,6 +51,7 @@ export const TechHomeData1 = [
   {
     title: 'Client Partnerships',
     icon: Diversity3Icon,
+    img: img4,
     content: [
       "  BitByBit Solutions takes pride in working with a wide range of prominent organizations across various industries.",
       "  We have built lasting partnerships with leading companies such as InterTrust Group, Accenture, Capgemini, CitiusTech, AQM, IPS e-services, NSE, and many more.",

@@ -4,6 +4,9 @@ import AlbumIcon from '@mui/icons-material/Album';
 import { TechHomeData1 } from '../../utils/RecHomeData';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 
+
+
+
 // TypingEffect component to display lines one after another with a delay
 const TypingEffect = ({ text = '', typingSpeed = 50, isOpen = false }) => {
   const [displayedText, setDisplayedText] = useState('');
@@ -72,19 +75,27 @@ const AccordionItem = ({ item, index, expanded, handleMouseEnter, handleMouseLea
 
   return (
     <div
-      className={`bg-[#1a1a1a] border-[#0060b5] rounded-lg hover:border-[#00bfff] hover:border-2 border-2 text-red-200 transition-all duration-700 ease-in-out p-4 cursor-pointer ${expanded === index ? 'h-auto md:h-80' : 'h-20'}`}
+      className={`bg-[#1a1a1a] border-[#0060b5] rounded-lg hover:border-[#00bfff] hover:border-2 shadow-md shadow-black border-2  transition-all duration-700 ease-in-out p-4 cursor-pointer ${expanded === index ? 'h-auto md:h-80' : 'h-24'}`}
       onMouseEnter={() => handleMouseEnter(index)}
       onMouseLeave={handleMouseLeave}
     >
       <div className="flex items-center text-white">
-        <item.icon className="mr-2 text-[#008bff]" style={{ fontSize: '50px' }} />
-        <span className="font-bold text-xl md:text-2xl text-[#00bfff]">{item.title}</span>
+
+        
+        <img src={item.img} alt='' className='h-14 w-14 bg-black shadow-lg shadow-black  border-[1px] border-white rounded-md p-1 mr-4'/>
+
+        {/* <img src={item.img} alt='' className='h-14 w-14 mr-4'/> */}
+       
+        {/* <item.icon className="mr-2 text-[#008bff]" style={{ fontSize: '50px' }} /> */}
+     
+
+        <span className="font-bold text-xl md:text-2xl text-[#00bfff] drop-shadow-lg">{item.title}</span>
         {expanded === index ? 
           <ExpandLessIcon className='ml-auto transition-transform duration-300 animate-bounce' /> :
           <ExpandMoreIcon className='ml-auto transition-transform duration-300 animate-bounce' />
         }
       </div>
-      <div className={`mt-2 overflow-hidden ${expanded === index ? 'block' : 'hidden'}`}>
+      <div className={`mt-4 overflow-hidden ${expanded === index ? 'block' : 'hidden'}`}>
         <ul className="text-white list-disc italic">
           {item.content.map((line, lineIndex) => (
             <li key={lineIndex} className="mb-2">

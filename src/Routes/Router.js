@@ -17,6 +17,8 @@ const Blogs = lazy(() => import("../Pages/Blogs"));
 const CareerPage = lazy(() => import("../Pages/CareerPage"));
 const NotFoundPage = lazy(() => import("../Pages/NotFoundPage")); 
 const FullBlog = lazy(() => import("../Pages/FullBlog")); 
+const AdminDashboard = lazy(() => import("../Pages/Admin/AdminDashboard")); 
+const AdminLogin = lazy(() => import("../Pages/Admin/AdminLogin")); 
 
 // Define routes
 const AppRoutes = [
@@ -34,8 +36,10 @@ const AppRoutes = [
       { path: "/aboutB3", element: <AboutUsPage /> },
       { path: "/careers", element: <CareerPage /> },
       { path: "/blogs", element: <Blogs /> },
+      { path: "/adminlogin", element: <AdminLogin /> },
+      { path: "/dashboard", element: <AdminDashboard /> },
+      { path: "/blog/:id", element:<FullBlog />},
       { path: "*", element: <NotFoundPage /> }, // Handle 404 Not Found route
-      { path: "FullBlog", element: <FullBlog /> }, 
     ],
   },
 ];

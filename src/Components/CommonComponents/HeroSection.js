@@ -80,7 +80,7 @@ const HeroSection = ({ videoUrl, videoOpacity, MarginAnimtion, children }) => {
     
     return (
         <div
-            className={`relative flex h-[100vh] items-center  ${isCentered ? 'border-b-4 ' : 'border-b-0'} border-b-yellow-400 justify-start shadow-xl bg-black transition-all duration-1000 ease-in-out`}
+            className={`relative flex h-[100vh] items-center  ${isCentered ? 'border-b-4 ' : 'border-b-0'} border-b-[#0060b5] justify-start shadow-xl bg-black transition-all duration-1000 ease-in-out`}
             style={containerStyle}
         >
            <div

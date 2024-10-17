@@ -15,6 +15,7 @@ import software from '../../Assets/Images/softwareicon.png'
 import cloud from '../../Assets/Images/cloudicon.png'
 import enterprise from '../../Assets/Images/enterpriseicon.png'
 import CustomAccordion from './NewTwo';
+import PromiseCardsContainer from '../../Components/RecHomePage/PromiseCards';
 const RecHomePage = () => {
   const searchIconSvg = `data:image/svg+xml;base64,${btoa(`
 
@@ -410,7 +411,56 @@ data-aos-duration="3000">
 </div> */}
 
 {/* ....................... */}
-<div className='md:grid md:grid-cols-2 gap-y-20  pb-20  gap-2 items-center place-items-center '>
+
+
+<PromiseCardsContainer/>
+
+
+
+
+
+
+</div>
+
+
+
+{/* <p className='text-lg italic text-white text-center m-5 underline pb-2' style={{ textDecorationSkip: 'ink', textDecorationThickness: '0.1em', textDecorationColor: 'currentColor', textUnderlineOffset: '0.4em' }}>
+          “At BitByBit, it’s all about YOU! Whether you’re hunting for a new full-time role or just need a temp role, our recruiters are here to help you out.”
+        </p> */}
+{/* .......................... */}
+      {/* <div className='recr-footer'>
+        <Footer /></div> */}
+
+<p className='text-lg italic text-yellow-400 text-semibold text-center m-20 py-5  border-y-2 border-white'>
+          “ At BitByBit, it’s all about YOU! Whether you’re hunting for a new full-time role or just need a temp role, our recruiters are here to help you out. ”
+        </p>
+    </div>
+
+  );
+
+
+}
+
+
+
+export default RecHomePage;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{/* <div className='md:grid md:grid-cols-2 gap-y-20  pb-20  gap-2 items-center place-items-center '>
 
 <div className="border  scale-90 flex  rounded-[10px] border-black w-full  p-4 bg-[#0060b5] transform transition-all duration-500 hover:-translate-y-3 hover:shadow-lg group relative" style={{ perspective: '1000px' }}>
 <style jsx>{`
@@ -428,7 +478,6 @@ transform: rotateY(360deg);
 
 
 <div className="flex flex-col justify-between items-center mr-5 ">
-{/* Image flipping 360 degrees from right to left on hover */}
 <div className="relative w-[100px] h-[100px]">
 <div className="absolute inset-0 rotate-y-360">
   <img src={delivery} className="w-24 h-24 object-cover " />
@@ -457,15 +506,12 @@ style={{
 <li className="marker:text-white">Standardized process ensures better candidate presentation.</li>
 <li className="marker:text-white">Recruiters handle requirements gathering to candidate start date.</li>
 <li className="marker:text-white">Workflow prevents information loss during translation.</li>
-{/* <li className="marker:text-white">Streamlined process ensures faster delivery.</li> */}
 </ul>
 
 </div>
 
-{/* Underline at the bottom of the card */}
 <div className="absolute bottom-0 left-6 w-[80%] h-1 m-2 bg-transparent group-hover:bg-white transition-all duration-500"></div>
 </div>
-{/* .................................. */}
 <div className="border flex rounded-[10px] border-black w-full scale-90   md:mt-0 mt-3 p-4 bg-white transform transition-all duration-500 hover:-translate-y-3 hover:shadow-lg group relative" style={{ perspective: '1000px' }}>
 <style jsx>{`
 .rotate-y-360 {
@@ -479,7 +525,6 @@ transform: rotateY(360deg);
 `}</style>
 <div>
 <div className="flex flex-col justify-between items-center mr-5 ">
-{/* Image flipping 360 degrees from right to left on hover */}
 <div className="relative w-[100px] h-[100px]">
 <div className="absolute inset-0 rotate-y-360">
   <img src={clienticon} className="w-24 h-24 object-cover  " />
@@ -513,12 +558,8 @@ style={{
 
 </div>
 
-{/* Underline at the bottom of the card */}
 <div className="absolute bottom-0 left-6 w-[80%] h-1 bg-transparent m-2 group-hover:bg-[#0060b5] transition-all duration-500"></div>
 </div>
-{/* ........................... */}
-
-
 <div className="scale-90 flex border rounded-[10px] border-black w-full p-4 md:mt-0 mt-3 bg-white transform transition-all duration-500 hover:-translate-y-3 hover:shadow-lg group relative" style={{ perspective: '1000px' }}>
 <style jsx>{`
 .rotate-y-360 {
@@ -532,7 +573,6 @@ transform: rotateY(360deg);
 `}</style>
 <div>
 <div className="flex flex-col  justify-between items-center">
-{/* Image flipping 360 degrees from right to left on hover */}
 <div className="relative w-[100px] h-[100px]">
 <div className="absolute inset-0 rotate-y-360">
   <img src={rating} className="w-24 h-24 object-cover  p-3" />
@@ -561,13 +601,11 @@ style={{
   <li className="marker:text-blue-500">Fast, accurate delivery with uncompromised quality.</li>
   <li className="marker:text-blue-500">Best industry rates for cost-effective solutions.</li>
   <li className="marker:text-blue-500">Building long-term client relationships.</li>
-  {/* <li className="marker:text-blue-500">Recognized for value-for-money solutions in tech and HR.</li> */}
 </ul>
 
 
 </div>
 
-{/* Underline at the bottom of the card */}
 <div className="absolute bottom-0 left-6 w-[80%] h-1 m-1 bg-transparent group-hover:bg-blue-500 transition-all duration-500"></div>
 </div>
 
@@ -586,7 +624,6 @@ transform: rotateY(360deg);
 `}</style>
 <div>
 <div className="flex flex-col  mr-5 justify-between items-center">
-{/* Image flipping 360 degrees from right to left on hover */}
 <div className="relative w-[100px] h-[100px]">
 <div className="absolute inset-0 rotate-y-360">
   <img src={candidate} className="w-24 h-24 object-cover   " />
@@ -615,48 +652,20 @@ style={{
 <li className="marker:text-white">Refer only genuine positions that match your qualifications.</li>
 <li className="marker:text-white">Ensure that roles align with your experience and career goals.</li>
 <li className="marker:text-white">Maintain complete confidentiality in all communications.</li>
-{/* <li className="marker:text-white">Provide personalized and trustworthy recruitment services.</li> */}
 </ul>
 </div>
 
-{/* Underline at the bottom of the card */}
+
 <div className="absolute bottom-0 left-6 w-[80%] h-1 m-2 bg-transparent group-hover:bg-white transition-all duration-500"></div>
 </div>
 
 
 
-{/* ................ */}
 
-
-</div>
-
+</div> */}
 
 
 
-</div>
-
-
-
-{/* <p className='text-lg italic text-white text-center m-5 underline pb-2' style={{ textDecorationSkip: 'ink', textDecorationThickness: '0.1em', textDecorationColor: 'currentColor', textUnderlineOffset: '0.4em' }}>
-          “At BitByBit, it’s all about YOU! Whether you’re hunting for a new full-time role or just need a temp role, our recruiters are here to help you out.”
-        </p> */}
-{/* .......................... */}
-      {/* <div className='recr-footer'>
-        <Footer /></div> */}
-
-<p className='text-lg italic text-yellow-400 text-semibold text-center m-20 py-5  border-y-2 border-white'>
-          “ At BitByBit, it’s all about YOU! Whether you’re hunting for a new full-time role or just need a temp role, our recruiters are here to help you out. ”
-        </p>
-    </div>
-
-  );
-
-
-}
-
-
-
-export default RecHomePage;
 
 
 

@@ -110,8 +110,8 @@ function Navbar() {
         onClick={closeMobileMenu}
         style={{
           color: '#0060b5', // Text color
-          textShadow: '0.8px 0.8px 0 white, -0.8px -0.8px 0 white, 0.8px -0.8px 0 white, -0.8px 0.8px 0 white',
-          letterSpacing: '0.1em', // Adjust the gap between letters
+          // textShadow: '0.8px 0.8px 0 white, -0.8px -0.8px 0 white, 0.8px -0.8px 0 white, -0.8px 0.8px 0 white',
+          // letterSpacing: '0.1em', 
         }}
       >
         <img src={Logo} alt="logo" className="w-10 h-10" />

@@ -89,7 +89,7 @@ const TechServicesPage = (props) => {
 
       
 <marquee
-  className="w-full h-[30vh] flex justify-start items-center  text-black my-10"
+  className="w-full h-[30vh] flex justify-start items-center  text-black my-10 cursor-pointer"
   style={{backgroundColor:'rgba(0,0,0,0.4)'}}
   behavior="scroll"
   direction="left"
@@ -126,7 +126,7 @@ const TechServicesPage = (props) => {
       <img
         src={role.image}
         // alt={role.text}
-        className="w-10 h-10 ml-2" // Adjust width and height as needed
+        className="w-10 h-10 ml-2 " // Adjust width and height as needed
       />
     </span>
   ))}

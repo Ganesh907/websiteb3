@@ -13,7 +13,8 @@ const ContactUsPage = () => {
                                         backgroundPosition: 'center',
                                         backgroundRepeat: 'no-repeat',
                                         backgroundBlendMode: 'overlay',
-                                }}>
+                                }}
+                                >
                                 <div className=' md:h-[90vh] w-[100vw] mt-20 bg-red-200 lg:mt-0 flex justify-center flex-col lg:flex-row  items-center p-4 lg:p-20  bg-transparent '>
                                         <div className=' rounded-lg w-full lg:w-[40%]  flex  flex-col justify-center '
                                                 data-aos="fade-up" data-aos-duration="1000">

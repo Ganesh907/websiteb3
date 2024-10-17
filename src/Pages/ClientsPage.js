@@ -174,7 +174,7 @@ const ClientsPage = () => {
       </div>
 
       <div className="flex w-auto gap-10 justify-center mt-10">
-      <div className="md:grid-cols-2 lg:grid-cols-3 grid grid-cols-1 gap-6 p-4">
+      <div className="lg:grid-cols-3  md:grid-cols-2 grid grid-cols-1 gap-6 p-4">
         {WeOffersToClient.map((item, index) => (
           <div
             key={index}

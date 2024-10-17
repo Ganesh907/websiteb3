@@ -442,6 +442,10 @@ import Wordpress from "../../Assets/Images/TechServicePageLanguages/Wordpress.pn
               <div className=" bg-opacity-75  rounded  "></div>
             </div>
           </div>
+
+
+
+
           {/* <div className="bg-gradient-to-r from-[rgba(220,220,220,0.4)] to-[#0060b5] m-2 md:border-none border-2 border-sky-600 rounded-2xl parentDiv md:w-[90%] shadow-xl parentDiv md:relative md:left-20 md:shadow-2xl  md:p-5 md:rounded-xl md:mb-5 md:transform md:transition-all  md:border "> */}
           <div className="bg-[#0060b5] m-2 md:px-0 px-3 md:border-none border-2 border-sky-600 rounded-2xl parentDiv md:w-[90%] shadow-xl parentDiv md:relative md:left-20 md:shadow-2xl  md:p-5 md:rounded-xl md:mb-5 md:transform md:transition-all  md:border ">
 
@@ -613,6 +617,59 @@ import Wordpress from "../../Assets/Images/TechServicePageLanguages/Wordpress.pn
               </div>
             </div>
           </div>
+          
+
+
+{/* <div className='md:w-[90%] md:h-96 bg-white flex items-center rounded-lg mx-auto'> 
+  <div className=' w-[30%]'>
+  
+<video
+                className=" rounded-[20px] object-cover w-72 h-72 -ml-14 hover:-translate-y-10 transition-all duration-300 ease-in-out shadow-black shadow-lg"
+                autoPlay
+                loop
+                muted
+              >
+                <source src={Recruiters} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              </div>
+<div className='h-full  flex flex-col justify-around w-[70%] bg-red-200'> 
+<h1 className="   font-bold text-3xl text-white ">
+                Recruitment process outsourcing (RPO)
+                </h1>
+                <div className="md:pl-2  md:flex md:justify-center   ">
+                  <ul className="text-white list-disc leading-loose">
+                    <li>
+                    We offer Recruitment Process Outsourcing (RPO) services.
+                    </li>
+                    <li>
+                    We take on the task of identifying potential candidates for your recruitment needs.
+                    </li>
+                    <li>
+                    Our approach focuses on delivering well-suited candidates.
+                    </li>
+                    <li>We aim to streamline the recruitment process for your organization.</li>
+                    <li>This minimizes the involvement of your HR personnel.</li>
+                  </ul>
+                </div>
+                <div className=" flex mr-6 md:py-0 py-3  shadow-2xl shadow-transparent  flex-row gap-4 md:flex md:justify-end  md:gap-3 ">
+                  <img
+                    src={Recruitericon}
+                    className="md:h-10 h-8 filter   hover:scale-105 transition duration-300"
+                  />
+                  <img
+                    src={Recruitericon2}
+                    className="md:h-10 h-8 filter  hover:scale-105 transition duration-300"
+                  />
+                  <img
+                    src={Recruitericon3}
+                    className="md:h-10 h-8 filter   hover:scale-105 transition duration-300"
+                  />
+                </div>
+</div>
+
+</div> */}
+
         </div>
       
       </div>

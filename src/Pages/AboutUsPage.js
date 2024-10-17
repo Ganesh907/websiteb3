@@ -11,6 +11,7 @@ import MissionVisionGif from "../Assets/Images/MissionVisionGif.gif"
 import TypingText from "../Components/CommonComponents/TypingText";
 import B3Banner from "../Assets/Images/B3Banner.jpg"
 import B3Img from "../Assets/Images/1690.jpg"
+import ContactUSImg4 from "../Assets/Images/ContactUSImg4.jpg"
 
 const AboutUsPage = () => {
  
@@ -115,7 +116,15 @@ const AboutUsPage = () => {
 
 
   return (
-    <div>
+    <div 
+    style={{
+      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${ContactUSImg4})`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat',
+      minHeight: '100vh',
+    }}>
+    
       <HeroSection videoUrl={AboutUsBgVideo} videoOpacity={20} MarginAnimtion={true}>
         <div className='lg:w-[50vw] w-[90vw] flex justify-end items-end'>
           <div className="relative w-full md:h-80 h-96  overflow-hidden mr-2 cursor-pointer mb-16">

@@ -316,9 +316,10 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import '../../CSS_Files/NotFoundPage.css'; // Import custom CSS
 import Imagelogo from "../../Assets/Images/B3logo.png";
 import Logo from '../../Assets/Images/B3logo.png'
+import { useLocation } from "react-router-dom";
 
 const Footer = () => {
-
+  const currentLocation = useLocation(); 
   const currentYear = new Date().getFullYear(); 
   const dots = Array.from({ length: 3 }, (_, index) => (
     <div key={index} className="h-5 w-5 bg-white  mx-2 rounded-sm animate-spin " style={{animationDuration:'2000ms'}} />  ));
@@ -337,9 +338,10 @@ const Footer = () => {
       <span className="absolute inset-y-0 -left-1 w-full bg-[#0060b5] translate-x-[-100%] group-hover:translate-x-1 transition-transform duration-500 ease-in-out"></span>
     </a>
   );
+  const footerBgColor = (currentLocation.pathname === "/aboutB3" || "/contact") ? "bg-transparent" : "bg-blue-900";
 
   return (
-    <footer className=" flex justify-center items-center  text-white py-5">
+    <footer className={`flex justify-center items-center  text-white py-5 ${footerBgColor}`}>
        {/* <div className=" bg-blue-950 mx-10 rounded-md border-2 shadow-lg shadow-black border-[#0060b5]"></div> */}
       {/* <div className="  mx-10 rounded-md border-2   shadow-lg shadow-black border-[#0060b5]"> */}
       <div class=" mx-10   shadow-black border-[#0060b5] bg-black/50 backdrop-blur-lg rounded-lg shadow-lg border border-white/70 p-6">

@@ -5,9 +5,11 @@ import blog1 from '../Assets/Images/BlogImages/blog1.jpg'
 import blog2 from '../Assets/Images/BlogImages/blog2.jpg'
 import blog3 from '../Assets/Images/BlogImages/blog3.jpg'
 
-// Sample blog data organized into Consulting, Technology, and Outsourcing categories
+
+
 export const blogData = [
     {
+        id: 1,
         image: blog1,
         profileImage: blog3,
         category: "Technology",
@@ -18,6 +20,7 @@ export const blogData = [
         content: "An introduction to React JS covering its features, components, state, and props. Learn why React is a great choice for modern web development."
     },
     {
+        id: 2,
         image: blog2, 
         profileImage: null,
         category: "Outsourcing",
@@ -28,6 +31,7 @@ export const blogData = [
         content: "Learn how outsourcing IT services can reduce costs, increase efficiency, and provide access to specialized expertise."
     },
     {
+        id: 3,
         image: blog3, 
         profileImage: null,
         category: "Consulting",
@@ -37,8 +41,8 @@ export const blogData = [
         date: "9 Oct. 2024",
         content: "An overview of how digital tools and technologies are transforming the consulting landscape."
     },
-   
     {
+        id: 4,
         image: blog1,
         profileImage: null,
         category: "Consulting",
@@ -49,6 +53,7 @@ export const blogData = [
         content: "Explore key strategies that consultants can use to help businesses improve their performance and achieve their goals."
     },
     {
+        id: 5,
         image: blog2,
         profileImage: null,
         category: "Technology",
@@ -59,6 +64,7 @@ export const blogData = [
         content: "This article explains JavaScript Promises, their usage, and how to handle asynchronous operations more effectively in your applications."
     },
     {
+        id: 6,
         image: blog3,
         profileImage: blog3,
         category: "Technology",
@@ -68,8 +74,8 @@ export const blogData = [
         date: "12 Oct. 2024",
         content: "A detailed comparison of CSS Grid and Flexbox, discussing their differences, when to use each, and best practices."
     },
-   
     {
+        id: 7,
         image: blog1, 
         profileImage: null,
         category: "Outsourcing",
@@ -80,6 +86,7 @@ export const blogData = [
         content: "This article discusses the emerging trends in outsourcing for 2024 and how businesses can adapt."
     },
     {
+        id: 8,
         image: blog1,
         profileImage: null,
         category: "Tech",
