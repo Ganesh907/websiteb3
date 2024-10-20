@@ -3,7 +3,6 @@ import Spinner from "../Components/CommonComponents/Spinner";
 import { MainLayout } from "../layouts/MainLayout";
 
 // Lazy load components
-const Homepage = lazy(() => import("../Pages/Homepage"));
 const TechHomePage = lazy(() => import("../Pages/Technology/TechHomePage"));
 const ClientsPage = lazy(() => import("../Pages/ClientsPage"));
 const RecServicesPage = lazy(() => import("../Pages/Recruitment/RecServicesPage"));
@@ -16,7 +15,7 @@ const LandingPage = lazy(() => import("../Pages/LandingPage"));
 const Blogs = lazy(() => import("../Pages/Blogs"));
 const CareerPage = lazy(() => import("../Pages/CareerPage"));
 const NotFoundPage = lazy(() => import("../Pages/NotFoundPage")); 
-const FullBlog = lazy(() => import("../Pages/FullBlog")); 
+const FullBlog = lazy(() => import("../Components/Blogs/FullBlog")); 
 const AdminDashboard = lazy(() => import("../Pages/Admin/AdminDashboard")); 
 const AdminLogin = lazy(() => import("../Pages/Admin/AdminLogin")); 
 
@@ -49,28 +48,3 @@ const AppRoutes = [
 ];
 
 export default AppRoutes;
-
-
-
-
-
-// const AppRoutes = () => {
-//   return (
-//     <Suspense fallback={<Spinner />}>
-//       <Routes>
-//         <Route path:"/" element:{<MainLayout />} >
-//         <Route path:"/technology" element:{<TechHomePage />} />
-//         <Route path:"/technology-services" element:{<TechServicesPage />} />
-//         <Route path:"/clients" element:{<ClientsPage />} />
-//         <Route path:"/recruitment" element:{<RecHomePage />} />
-//         <Route path:"/recruitment-services" element:{<RecServicesPage />} />
-//         <Route path:"/contactus" element:{<ContactUsPage />} />
-//         <Route path:"/aboutB3" element:{<AboutUsPage />} />
-//         <Route path:"/careers" element:{<CareerPage />} />
-//         <Route path:"/blogs" element:{<Blogs />} />
-//         <Route path:"*" element:{<NotFoundPage />} />
-//         </Route>
-//       </Routes>
-//     </Suspense>
-//   );
-// };

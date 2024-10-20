@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { NavLink, Link, useLocation } from "react-router-dom";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
-import MenuIcon from "@mui/icons-material/Menu"; 
-import CloseIcon from "@mui/icons-material/Close"; 
-import Logo from '../Assets/Images/B3logo.png';
+import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
+import Logo from '../../Assets/Images/B3logo.png';
 
 const techitems = [
   { title: "Home", path: "/technology" },
@@ -221,27 +221,13 @@ function NavbarDemo() {
           <NavLink
             to="/contact"
             className={({ isActive }) =>
-              `nav-links px-3 mx-1 py-1 border-2 border-transparent hover:border-white rounded-md text-lg ${
+              `nav-links px-3 mx-1 py-1 text-lg border-2 border-transparent hover:border-white rounded-md ${
                 isActive ? "border-white rounded-md font-semibold text-[#0060b5]" : ""
               }`
             }
             onClick={closeMobileMenu}
           >
             Contact
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/blogs"
-            className={({ isActive }) =>
-              `text-white px-3 mx-1 py-1 italic text-2xl font-semibold border-b-2 hover:border-white hover:text-[#0060b5] hover:bg-transparent border-white hover:shadow-none ${
-                isActive ? "bg-transparent text-[#0060b5]" : "bg-[#0060b5] drop-shadow-lg shadow-md shadow-black"
-              }`
-            }
-            style={{ fontFamily: "Lucida Serif" }}
-            onClick={closeMobileMenu}
-          >
-            Blogs
           </NavLink>
         </li>
       </ul>

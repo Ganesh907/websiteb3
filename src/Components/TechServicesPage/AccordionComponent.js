@@ -4,13 +4,13 @@ import AlbumIcon from '@mui/icons-material/Album';
 import { TechHomeData1 } from '../../utils/TechHomeData';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 
-// TypingEffect component to display lines one after another with a delay
+
 const TypingEffect = ({ text = '', typingSpeed = 50, isOpen = false }) => {
   const [displayedText, setDisplayedText] = useState('');
 
   useEffect(() => {
     if (!isOpen || typeof text !== 'string') {
-      setDisplayedText(''); // Reset if not open
+      setDisplayedText(''); 
       return;
     }
 
@@ -57,7 +57,7 @@ const AccordionItem = ({ item, index, expanded, onHoverStart, onHoverEnd }) => {
 
   return (
     <div
-      className={`bg-[#1a1a1a] border-[#0060b5] rounded-lg shadow-xl shadow-black hover:border-[#00bfff] hover:border-2 border-2 text-red-200 transition-all duration-700 ease-in-out p-4 cursor-pointer ${expanded === index ? 'md:h-80 h-80' : 'h-24'}`}
+      className={`bg-[#1a1a1a] border-[#0060b5] rounded-lg shadow-xl shadow-black hover:border-[#00bfff] hover:border-2 border-2 text-red-200 transition-all duration-700 ease-in-out p-4 cursor-pointer ${expanded === index ? 'md:h-80 h-auto' : 'h-24'}`}
       onMouseEnter={() => onHoverStart(index)}
       onMouseLeave={onHoverEnd}
     >
@@ -113,12 +113,13 @@ export default function CustomAccordion() {
 
   const handleHoverEnd = () => {
     setIsHovered(false); // Resume auto-expand when hover ends
+    setExpanded(0); // Immediately expand the first item
   };
 
   return (
-    <div className="py-32">
+    <div className="h-[100vh]">
       <h1
-        className="text-center uppercase md:text-center text-white text-xl md:text-5xl font-bold md:mt-10 md:mb-20"
+        className="text-center uppercase md:text-center text-white text-xl md:text-5xl font-bold py-10"
         style={{ fontFamily: 'Goudy Old Style', letterSpacing: '0.05em' }}
       >
         Industry-Focused Innovation
@@ -135,7 +136,7 @@ export default function CustomAccordion() {
               onHoverEnd={handleHoverEnd}
             />
           ))}
-        </div>
+        </div> 
 
         <div className="w-full md:w-1/2 flex flex-col gap-y-10 p-5">
           {TechHomeData1.slice(2).map((item, index) => (

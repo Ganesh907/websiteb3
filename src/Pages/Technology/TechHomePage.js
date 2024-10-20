@@ -243,24 +243,9 @@ const TechHomePage = () => {
      
 
       <CustomAccordion/>
-      <div className="flex-col ">
-        <h1 className=" text-center h-[10vh] my-4 uppercase text-white font-bold  text-5xl  m-[5px] font-montserrat md:my-20"
-        style={{
-                               
-          fontFamily: 'Goudy Old Style' ,
-            letterSpacing: '0.05em'            
-        }}>
-          Our Promise
-        </h1>
-
-       
 
 
 <PromiseCardsContainer/>
-
-
-      </div>
-
 
 
     </div>

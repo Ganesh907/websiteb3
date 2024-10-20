@@ -71,20 +71,6 @@ const ContactMap = () => {
 
 <p className="text-xs ms-10  w-auto">912 | 1st Floor | Building No 9 | Solitaire Corporate Park | Andheri Kurla Road | Chakala | Andheri (East) | Mumbai - 400 093</p>
 </div>
-
-
-                    {/* <div className="flex">
-                        <div className="text-white p-2 h-12 bg-[#0060b5] text-2xl font-semibold rounded-md">
-                            B<sup>3</sup>
-                        </div>
-                        <div className="text-black font-semibold flex flex-col justify-center items-center ms-3">
-                            BitByBit Solutions
-                          
-                           
-                            
-                        </div>
-                        <p className="text-xs ms-10">912 | 1st Floor | Building No 9 | Solitaire Corporate Park | Andheri Kurla Road | Chakala | Andheri (East) | Mumbai - 400 093</p>
-                    </div> */}
                 </Popup>
             </Marker>
         </MapContainer>

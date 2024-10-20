@@ -93,17 +93,6 @@ const TypingText = () => {
       >
         {displayedText}
       </h2>
-
-      {/* <ul className="list-none space-y-4 text-xl font-semibold mt-1">
-        <li className="relative pl-4 mt-2 ">
-          <div className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white w-2 h-2 rounded-full"></div>
-          Discover tailored recruitment strategies to perfect your team fit.
-        </li>
-        <li className="relative pl-4 mt-4">
-          <div className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white w-2 h-2 rounded-full"></div>
-          Enhance your hiring strategy with our comprehensive talent services.
-        </li>
-      </ul> */}
   <div className="  md:w-[50vw] w-[100vw] text-white text-xl text-start font-semibold md:mt-10 mt-16 drop-shadow-xl pl-7 "> 
              <ul className='list-disc'>
             <li className="mb-2">We craft custom software for efficiency, security, and performance.</li>

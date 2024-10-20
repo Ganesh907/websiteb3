@@ -2,11 +2,21 @@ import { promises } from "../../utils/TechHomePromises";
 
 const PromiseCardsContainer = ({ cardDataArray }) => {
         return (
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-24  mx-5 md:mx-20">
+<>
+          <h1 className=" text-center py-10  uppercase text-white font-bold text-2xl md:text-5xl  m-[5px] font-montserrat "
+          style={{
+                                 
+            fontFamily: 'Goudy Old Style' ,
+              letterSpacing: '0.05em'            
+          }}>
+            Our Promise
+          </h1>
+          <div className="grid grid-cols-1 md:grid-cols-3 md:gap-24  mx-5 md:mx-20">
             {promises.map((cardData, index) => (
               <PromiseCards key={index} cardData={cardData} />
             ))}
           </div>
+          </>
         );
       };
       

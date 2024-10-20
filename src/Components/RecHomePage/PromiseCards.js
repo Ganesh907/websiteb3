@@ -2,11 +2,23 @@ import { promises } from "../../utils/RecHomePromises";
 
 const PromiseCardsContainer = ({ cardDataArray }) => {
         return (
+          <>
+         <h1 className=" text-center h-[10vh] my-4 uppercase text-[#0060b5] font-bold  text-5xl  m-[5px] font-montserrat md:my-14"
+style={{
+  // textShadow: '0.8px 0.8px 0 #eec317, -0.8px -0.8px 0 white, 0.8px -0.8px 0 white, -0.8px 0.8px 0 #eec317',                 
+  fontFamily: 'Goudy Old Style' ,
+    letterSpacing: '0.05em'            
+}}>
+  Our Promise
+</h1>
           <div className="grid grid-cols-1 md:grid-cols-3 md:gap-10 mx-5 md:mx-20 ">
+            
+ 
             {promises.map((cardData, index) => (
               <PromiseCards key={index} cardData={cardData} />
             ))}
           </div>
+          </>
         );
       };
       
