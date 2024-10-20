@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { values } from '../../utils/AboutCoreValueData';
+import { values } from '../../data/AboutCoreValueData';
 
 const ValueBlock = ({ Icon, iconColor, borderColor, stepNumber, title, description, delay }) => (
   <div

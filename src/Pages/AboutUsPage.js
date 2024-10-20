@@ -2,13 +2,13 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
-import HeroSection from "../Components/CommonComponents/HeroSection";
+import HeroSection from "../Components/commoncomponents/HeroSection";
 import AboutUsBgVideo from '../Assets/Videos/AboutUsBgVideo.mp4';
 import mission from "../Assets/Images/mission.gif";
 import vision from "../Assets/Images/vision.gif";
-import Corevalues from "../Components/About us/Corevalues"; 
+import Corevalues from "../Components/aboutus/Corevalues"; 
 import MissionVisionGif from "../Assets/Images/MissionVisionGif.gif"
-import TypingText from "../Components/CommonComponents/TypingText";
+import TypingText from "../Components/commoncomponents/TypingText";
 import B3Banner from "../Assets/Images/B3Banner.jpg"
 import B3Img from "../Assets/Images/1690.jpg"
 import ContactUSImg4 from "../Assets/Images/ContactUSImg4.jpg"

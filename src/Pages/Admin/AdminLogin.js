@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { TextField, Button, Typography, Snackbar } from '@mui/material';
 import { Email, Lock } from '@mui/icons-material';
 import { Slide } from '@mui/material';
-import leftImage from '../../Assets/Images/BlogImages/blog2.jpg'; // Replace with your actual image path
+import leftImage from '../../Assets/Images/blogs/blog2.jpg'; // Replace with your actual image path
 
 const AdminLogin = () => {
   const [email, setEmail] = useState('');

@@ -1,4 +1,4 @@
-import { promises } from "../../utils/TechHomePromises";
+import { promises } from "../../data/TechHomePromises";
 
 const PromiseCardsContainer = ({ cardDataArray }) => {
         return (

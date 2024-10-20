@@ -1,6 +1,6 @@
 import { useRoutes } from "react-router-dom";
-import AppRoutes from "./Routes/Router"; // Import the Routes
-import Spinner from "./Components/CommonComponents/Spinner";
+import AppRoutes from "./routes/Router"; // Import the Routes
+import Spinner from "./Components/commoncomponents/Spinner";
 import { Suspense } from "react";
 
 function App() {

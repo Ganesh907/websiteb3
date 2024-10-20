@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import HeroSection from "../Components/CommonComponents/HeroSection";
+import HeroSection from "../Components/commoncomponents/HeroSection";
 import Techclient from "../Assets/Videos/techclient.mp4";
-import { clientLogos, clientTestimonials, WeOffersToClient } from "../utils/ClientsData";
+import { clientLogos, clientTestimonials, WeOffersToClient } from "../data/ClientsData";
 
 
 const ClientsPage = () => {

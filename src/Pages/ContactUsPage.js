@@ -1,7 +1,7 @@
 import React from 'react'
 import ContactUSImg3 from '../Assets/Images/ContactUSImg4.jpg'
-import { ContactForm } from '../Components/ContactUsPage/ContactForm';
-import ContactMap from '../Components/ContactUsPage/Map';
+import { ContactForm } from '../Components/contactuspage/ContactForm';
+import ContactMap from '../Components/contactuspage/Map';
 
 const ContactUsPage = () => {
         return (

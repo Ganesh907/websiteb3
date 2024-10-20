@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import AlbumIcon from '@mui/icons-material/Album';
-import { TechHomeData1 } from '../../utils/RecHomeData';
+import { TechHomeData1 } from '../../data/RecHomeData';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 
 // TypingEffect component to display lines one after another with a delay

@@ -1,10 +1,10 @@
 import React from 'react';
-import Navbar from '../Components/CommonComponents/Navbar';
-import Footer from '../Components/CommonComponents/Footer';
+import Navbar from '../Components/commoncomponents/Navbar';
+import Footer from '../Components/commoncomponents/Footer';
 import { Outlet } from 'react-router-dom';
 import { Suspense } from 'react';
-import Spinner from '../Components/CommonComponents/Spinner';
-import { ScrollToTop } from '../Components/CommonComponents/ScrollToTop';
+import Spinner from '../Components/commoncomponents/Spinner';
+import { ScrollToTop } from '../Components/commoncomponents/ScrollToTop';
 
 export const MainLayout = () => {
   return (

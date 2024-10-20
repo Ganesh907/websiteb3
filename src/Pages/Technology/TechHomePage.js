@@ -13,8 +13,8 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
-import Footer from "../../Components/CommonComponents/Footer";
-import HeroSection from "../../Components/CommonComponents/HeroSection";
+import Footer from "../../Components/commoncomponents/Footer";
+import HeroSection from "../../Components/commoncomponents/HeroSection";
 import "./TechServicesPage.css";
 import delivery from "../../Assets/Images/delivery.png";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
@@ -26,11 +26,11 @@ import Quality from "../../Assets/Images/quality.png";
 import scalable from "../../Assets/Images/scalable.png";
 import "./TechServicesPage.css";
 import "./Section2.css";
-import CustomAccordion from "../../Components/TechServicesPage/AccordionComponent";
+import CustomAccordion from "../../Components/techservicepage/AccordionComponent";
 import { useNavigate } from "react-router-dom";
-import { promises } from "../../utils/TechHomePromises";
-import PromiseCards from "../../Components/TechHomePage/PromiseCards";
-import PromiseCardsContainer from "../../Components/TechHomePage/PromiseCards";
+import { promises } from "../../data/TechHomePromises";
+// import PromiseCards from "../../Components/techhomepage/PromiseCards";
+import PromiseCardsContainer from "../../Components/techhomepage/PromiseCards";
 
 const TechHomePage = () => {
   const [expanded, setExpanded] = useState(false);

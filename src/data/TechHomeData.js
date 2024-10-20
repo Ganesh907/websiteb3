@@ -5,10 +5,10 @@ import MedicalServicesIcon from '@mui/icons-material/MedicalServices';
 import BusinessIcon from '@mui/icons-material/Business';
 import AssuredWorkloadIcon from '@mui/icons-material/AssuredWorkload';
 import FlagIcon from '@mui/icons-material/Flag';
-import healthcare from '../Assets/Images/TechHome/health-insurance.png'
-import egov from '../Assets/Images/TechHome/corporate-governance.png'
-import ecommerce from '../Assets/Images/TechHome/online-shopping.png'
-import img2 from '../Assets/Images/RecHome/Img3.png'
+import healthcare from '../Assets/Images/techhome/health-insurance.png'
+import egov from '../Assets/Images/techhome/corporate-governance.png'
+import ecommerce from '../Assets/Images/techhome/online-shopping.png'
+import img2 from '../Assets/Images/rechome/Img3.png'
 
 // import healthcare from '../Assets/Images/TechHome/health-insurance.png'
 

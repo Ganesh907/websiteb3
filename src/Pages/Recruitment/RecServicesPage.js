@@ -5,8 +5,8 @@ import OurServices from '../../Assets/Videos/OurServices.mp4'
 import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-import Footer from '../../Components/CommonComponents/Footer';
-import HeroSection from '../../Components/CommonComponents/HeroSection';
+import Footer from '../../Components/commoncomponents/Footer';
+import HeroSection from '../../Components/commoncomponents/HeroSection';
 import { LockOpenOutlined } from '@mui/icons-material';
 import SearchIcon from '@mui/icons-material/Search';
 import EnterpriseSolution from "../../Assets/Videos/enterprisesolution.mp4";
@@ -28,29 +28,29 @@ import Recruitericon3 from "../../Assets/Images/Recruitment3.png";
 import JAVA from "../../Assets/Images/JavaI.png";
 // import JAVA from "../../Assets/Images/JavaI.png";
 
-import AndroidKotlin from "../../Assets/Images/TechServicePageLanguages/Android-Kotlin.png"
-import Angular from "../../Assets/Images/TechServicePageLanguages/Angular.png"
-import ApplicationSupport from "../../Assets/Images/TechServicePageLanguages/Application-Support.png"
-import BusinessAnalyst from "../../Assets/Images/TechServicePageLanguages/Business-Analyst.png"
-import CloudOperations from "../../Assets/Images/TechServicePageLanguages/CloudOperations.png"
-import DataScienceML from "../../Assets/Images/TechServicePageLanguages/DataScience-ML.png"
-import DevOps from "../../Assets/Images/TechServicePageLanguages/DevOps.png"
-import DotNet from "../../Assets/Images/TechServicePageLanguages/DotNet.png"
-import Flutter from "../../Assets/Images/TechServicePageLanguages/Flutter.png"
-import FullStackDevelopment from "../../Assets/Images/TechServicePageLanguages/FullStackDevelopment.png"
-import MSSQL from "../../Assets/Images/TechServicePageLanguages/MS-SQL.png"
-import ManualAutomationTester from "../../Assets/Images/TechServicePageLanguages/Manual-Automation-Tester.png"
-import MicrosoftAzure from "../../Assets/Images/TechServicePageLanguages/MicrosoftAzure.png"
-import MongoDB from "../../Assets/Images/TechServicePageLanguages/MongoDB.png"
-import PHP from "../../Assets/Images/TechServicePageLanguages/PHP.png"
-import ReactIcon from "../../Assets/Images/TechServicePageLanguages/React.png"
-import CPlus from "../../Assets/Images/TechServicePageLanguages/C++.png"
-import SAP from "../../Assets/Images/TechServicePageLanguages/SAP.png"
-import Google from "../../Assets/Images/TechServicePageLanguages/GoogleBigQuery.png"
-import Network from "../../Assets/Images/TechServicePageLanguages/NetworkEng.png"
-import Oracle from "../../Assets/Images/TechServicePageLanguages/Oracle.png"
-import Sales from "../../Assets/Images/TechServicePageLanguages/Sales.png"
-import ServiceDesk from "../../Assets/Images/TechServicePageLanguages/ServiceDesk.png"
+import AndroidKotlin from "../../Assets/Images/tech-languages-logos/Android-Kotlin.png"
+import Angular from "../../Assets/Images/tech-languages-logos/Angular.png"
+import ApplicationSupport from "../../Assets/Images/tech-languages-logos/Application-Support.png"
+import BusinessAnalyst from "../../Assets/Images/tech-languages-logos/Business-Analyst.png"
+import CloudOperations from "../../Assets/Images/tech-languages-logos/CloudOperations.png"
+import DataScienceML from "../../Assets/Images/tech-languages-logos/DataScience-ML.png"
+import DevOps from "../../Assets/Images/tech-languages-logos/DevOps.png"
+import DotNet from "../../Assets/Images/tech-languages-logos/DotNet.png"
+import Flutter from "../../Assets/Images/tech-languages-logos/Flutter.png"
+import FullStackDevelopment from "../../Assets/Images/tech-languages-logos/FullStackDevelopment.png"
+import MSSQL from "../../Assets/Images/tech-languages-logos/MS-SQL.png"
+import ManualAutomationTester from "../../Assets/Images/tech-languages-logos/Manual-Automation-Tester.png"
+import MicrosoftAzure from "../../Assets/Images/tech-languages-logos/MicrosoftAzure.png"
+import MongoDB from "../../Assets/Images/tech-languages-logos/MongoDB.png"
+import PHP from "../../Assets/Images/tech-languages-logos/PHP.png"
+import ReactIcon from "../../Assets/Images/tech-languages-logos/React.png"
+import CPlus from "../../Assets/Images/tech-languages-logos/C++.png"
+import SAP from "../../Assets/Images/tech-languages-logos/SAP.png"
+import Google from "../../Assets/Images/tech-languages-logos/GoogleBigQuery.png"
+import Network from "../../Assets/Images/tech-languages-logos/NetworkEng.png"
+import Oracle from "../../Assets/Images/tech-languages-logos/Oracle.png"
+import Sales from "../../Assets/Images/tech-languages-logos/Sales.png"
+import ServiceDesk from "../../Assets/Images/tech-languages-logos/ServiceDesk.png"
 
 
 

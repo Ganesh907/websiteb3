@@ -1,23 +1,23 @@
 import { lazy, Suspense } from "react";
-import Spinner from "../Components/CommonComponents/Spinner";
+import Spinner from "../Components/commoncomponents/Spinner";
 import { MainLayout } from "../layouts/MainLayout";
 
 // Lazy load components
-const TechHomePage = lazy(() => import("../Pages/Technology/TechHomePage"));
+const TechHomePage = lazy(() => import("../Pages/technology/TechHomePage"));
 const ClientsPage = lazy(() => import("../Pages/ClientsPage"));
-const RecServicesPage = lazy(() => import("../Pages/Recruitment/RecServicesPage"));
+const RecServicesPage = lazy(() => import("../Pages/recruitment/RecServicesPage"));
 // const RecClientsPage = lazy(() => import("../Pages/Recruitment/RecClientsPage"));
 const ContactUsPage = lazy(() => import("../Pages/ContactUsPage"));
-const RecHomePage = lazy(() => import("../Pages/Recruitment/RecHomePage"));
+const RecHomePage = lazy(() => import("../Pages/recruitment/RecHomePage"));
 const AboutUsPage = lazy(() => import("../Pages/AboutUsPage"));
-const TechServicesPage = lazy(() => import("../Pages/Technology/TechServicesPage"));
+const TechServicesPage = lazy(() => import("../Pages/technology/TechServicesPage"));
 const LandingPage = lazy(() => import("../Pages/LandingPage"));
-const Blogs = lazy(() => import("../Pages/Blogs"));
+const Blogs = lazy(() => import("../Pages/BlogsPage"));
 const CareerPage = lazy(() => import("../Pages/CareerPage"));
 const NotFoundPage = lazy(() => import("../Pages/NotFoundPage")); 
 const FullBlog = lazy(() => import("../Components/Blogs/FullBlog")); 
-const AdminDashboard = lazy(() => import("../Pages/Admin/AdminDashboard")); 
-const AdminLogin = lazy(() => import("../Pages/Admin/AdminLogin")); 
+const AdminDashboard = lazy(() => import("../Pages/admin/AdminDashboard")); 
+const AdminLogin = lazy(() => import("../Pages/admin/AdminLogin")); 
 
 // Define routes
 const AppRoutes = [

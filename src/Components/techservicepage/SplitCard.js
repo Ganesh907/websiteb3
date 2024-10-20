@@ -14,17 +14,17 @@ import digital from "../../Assets/Images/enterprisesol.png";
 import solution from "../../Assets/Images/architecture (2).png";
 // import WebDevelopment from "../../Assets/Images/TechWebDev.png";
 // import AndroidDevlopment from "../../Assets/Images/TechAppDev.png";
-import EnterpriseSolution from "../../Assets/Videos/TechServices/enterprisevideo.mp4";
-import androidappvideo from "../../Assets/Videos/TechServices/appdevvideo.mp4";
+import EnterpriseSolution from "../../Assets/Videos/techservices/enterprisevideo.mp4";
+import androidappvideo from "../../Assets/Videos/techservices/appdevvideo.mp4";
 // import EnterpriseSolution from "../../Assets/Videos/enterprisesolution.mp4";
 import service from "../../Assets/Images/devops.png";
 import itservice from "../../Assets/Images/it-systems.png";
 import software from "../../Assets/Images/software.png";
 // import itmanaged from "../../Assets/Images/itmanagemnet.jpg";
 // import itteamSolution from "../../Assets/Videos/itteam.mp4";
-import webdevelopment from "../../Assets/Videos/webdevelopment.mp4";
-import webdevelopmentvideo from "../../Assets/Videos/TechServices/webdevvideo.mp4";
-import itservicesvideo from "../../Assets/Videos/TechServices/ManagedItServicesVideo.mp4";
+// import webdevelopment from "../../Assets/Videos/webdevelopment.mp4";
+import webdevelopmentvideo from "../../Assets/Videos/techservices/webdevvideo.mp4";
+import itservicesvideo from "../../Assets/Videos/techservices/ManagedItServicesVideo.mp4";
 // import javascript from "../../Assets/Images/javascript.png";
 export default class SplitCard extends Component {
   render() {

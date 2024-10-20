@@ -5,10 +5,10 @@ import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
 import Diversity3Icon from '@mui/icons-material/Diversity3';
 import ArticleIcon from '@mui/icons-material/Article';
 import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
-import img1 from '../Assets/Images/RecHome/Img1.png'
-import img2 from '../Assets/Images/RecHome/Img3.png'
-import img3 from '../Assets/Images/RecHome/Img2.png'
-import img4 from '../Assets/Images/RecHome/Img4.png'
+import img1 from '../Assets/Images/rechome/Img1.png'
+import img2 from '../Assets/Images/rechome/Img3.png'
+import img3 from '../Assets/Images/rechome/Img2.png'
+import img4 from '../Assets/Images/rechome/Img4.png'
 
 export const TechHomeData1 = [
   {

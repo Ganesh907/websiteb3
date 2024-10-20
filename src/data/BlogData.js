@@ -1,9 +1,9 @@
 import img1 from '../Assets/Images/ontime.jpeg'; // Example image 1
 import img2 from '../Assets/Images/highquality3.jpeg'; // Example image 2
 import img3 from '../Assets/Images/support.png'; // Example image 3
-import blog1 from '../Assets/Images/BlogImages/blog1.jpg'
-import blog2 from '../Assets/Images/BlogImages/blog2.jpg'
-import blog3 from '../Assets/Images/BlogImages/blog3.jpg'
+import blog1 from '../Assets/Images/blogs/blog1.jpg'
+import blog2 from '../Assets/Images/blogs/blog2.jpg'
+import blog3 from '../Assets/Images/blogs/blog3.jpg'
 
 
 

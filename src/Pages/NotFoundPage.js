@@ -1,5 +1,5 @@
 import React from 'react';
-import '../CSS_Files/NotFoundPage.css'; // Import custom CSS
+import '../css-files/NotFoundPage.css'; // Import custom CSS
 
 // NotFoundPage Component
 const NotFoundPage = () => {

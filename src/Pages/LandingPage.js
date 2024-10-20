@@ -1,5 +1,5 @@
 import React from "react";
-import "../CSS_Files/LandingPage.css";
+import "../css-files/LandingPage.css";
 import b3stamp from "../Assets/Images/b3stamp.png"
 import { Button } from "@mui/material"; // Assuming you're using Material-UI v5
 // import Header from "../../components/Header/header";

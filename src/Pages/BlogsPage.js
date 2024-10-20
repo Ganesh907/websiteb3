@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { blogData } from '../utils/BlogData';
+import { blogData } from '../data/BlogData';
 import { useNavigate } from 'react-router-dom'; // Import the useNavigate hook
-import blog1 from '../Assets/Images/BlogImages/blog1.jpg';
+import blog1 from '../Assets/Images/blogs/blog1.jpg';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import CommentIcon from '@mui/icons-material/Comment';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';

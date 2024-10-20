@@ -3,7 +3,7 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/Twitter';
-import '../../CSS_Files/NotFoundPage.css';
+import '../../css-files/NotFoundPage.css';
 import Logo from '../../Assets/Images/B3logo.png'
 import { useLocation } from "react-router-dom";
 

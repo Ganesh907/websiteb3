@@ -3,9 +3,9 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import AboutUs4 from '../../Assets/Images/AboutUs4.jpg';
 import { Accordion, AccordionDetails, AccordionSummary, Button } from '@mui/material';
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
-import Footer from '../../Components/CommonComponents/Footer';
+import Footer from '../../Components/commoncomponents/Footer';
 import jobinterview from '../../Assets/Videos/jobinterview.mp4'
-import HeroSection from '../../Components/CommonComponents/HeroSection';
+import HeroSection from '../../Components/commoncomponents/HeroSection';
 import delivery from '../../Assets/Images/deliveryicon1.png'
 import clienticon from '../../Assets/Images/clienticon2.png'
 // import candidate from '../../Assets/Images/candidateicon1.png'
@@ -15,7 +15,7 @@ import ITicon from '../../Assets/Images/information.png'
 
 import enterprise from '../../Assets/Images/enterpriseicon.png'
 import CustomAccordion from './NewTwo';
-import PromiseCardsContainer from '../../Components/RecHomePage/PromiseCards';
+import PromiseCardsContainer from '../../Components/rechomepage/PromiseCards';
 import NavbarDemo from '../../Components/lightmodecomponents/NavbarDemo';
 import HeroSection2 from './HeroSection2';
 const RecHomePage = () => {

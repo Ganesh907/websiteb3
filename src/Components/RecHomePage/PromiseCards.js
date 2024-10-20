@@ -1,4 +1,4 @@
-import { promises } from "../../utils/RecHomePromises";
+import { promises } from "../../data/RecHomePromises";
 
 const PromiseCardsContainer = ({ cardDataArray }) => {
         return (

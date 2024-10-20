@@ -1,15 +1,15 @@
 
 import React, { useEffect, useState } from 'react';
 import OurServices from '../Assets/Videos/OurServices.mp4';
-import HeroSection from '../Components/CommonComponents/HeroSection';
+import HeroSection from '../Components/commoncomponents/HeroSection';
 import SearchIcon from '@mui/icons-material/Search';
 import TrendingUpOutlinedIcon from '@mui/icons-material/TrendingUpOutlined';
 import { Button } from '@mui/material';
 import { Padding } from '@mui/icons-material';
 
 import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
-import TypingText from '../Components/CommonComponents/TypingText';
-import Footer from '../Components/CommonComponents/Footer';
+import TypingText from '../Components/commoncomponents/TypingText';
+import Footer from '../Components/commoncomponents/Footer';
 import CareerVideo from '../Assets/Videos/CareerVideo.mp4'
 
 
