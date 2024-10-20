@@ -2,7 +2,7 @@ import { promises } from "../../utils/RecHomePromises";
 
 const PromiseCardsContainer = ({ cardDataArray }) => {
         return (
-          <div className="grid grid-cols-1 md:grid-cols-3 md:gap-24  mx-5 md:mx-20 ">
+          <div className="grid grid-cols-1 md:grid-cols-3 md:gap-10 mx-5 md:mx-20 ">
             {promises.map((cardData, index) => (
               <PromiseCards key={index} cardData={cardData} />
             ))}

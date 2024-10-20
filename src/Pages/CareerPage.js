@@ -2,8 +2,8 @@
 import React, { useEffect, useState } from 'react';
 import OurServices from '../Assets/Videos/OurServices.mp4';
 import HeroSection from '../Components/CommonComponents/HeroSection';
-import AboutUs4 from '../Assets/Images/AboutUs4.jpg';
-import RecruitmentHomeBg from '../Assets/Images/RecruitmentHomeBg.jpg';
+// import AboutUs4 from '../Assets/Images/AboutUs4.jpg';
+// import RecruitmentHomeBg from '../Assets/Images/RecruitmentHomeBg.jpg';
 import SearchIcon from '@mui/icons-material/Search';
 import TrendingUpOutlinedIcon from '@mui/icons-material/TrendingUpOutlined';
 import { Button } from '@mui/material';

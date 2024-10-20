@@ -116,14 +116,7 @@ const AboutUsPage = () => {
 
 
   return (
-    <div 
-    style={{
-      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${ContactUSImg4})`,
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-      backgroundRepeat: 'no-repeat',
-      minHeight: '100vh',
-    }}>
+    <div>
     
       <HeroSection videoUrl={AboutUsBgVideo} videoOpacity={20} MarginAnimtion={true}>
         <div className='lg:w-[50vw] w-[90vw] flex justify-end items-end'>

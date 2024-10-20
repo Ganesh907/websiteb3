@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import letstalk from "../../Assets/Images/letstakeicon1.png";
 // import technology from "../../Assets/Videos/Technology6.mp4";
-import technology from "../../Assets/Videos/Technology4y.mp4";
+import technology from "../../Assets/Videos/Technology3y.mp4";
 
 import bank from "../../Assets/Images/bankingicon.png";
 import ecom from "../../Assets/Images/egovandecomicon.png";
@@ -19,7 +19,7 @@ import "./TechServicesPage.css";
 import delivery from "../../Assets/Images/delivery.png";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import innovative from "../../Assets/Images/innovative.png";
-import transperency from "../../Assets/Images/trans (2).png";
+// import transperency from "../../Assets/Images/trans (2).png";
 import customization from "../../Assets/Images/customization.png";
 import ontimedelivery from "../../Assets/Images/timing.png";
 import Quality from "../../Assets/Images/quality.png";

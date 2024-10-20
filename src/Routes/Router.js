@@ -30,7 +30,7 @@ const AppRoutes = [
       { path: "/technology", element: <TechHomePage /> },
       { path: "/technology-services", element: <TechServicesPage /> },
       { path: "/clients", element: <ClientsPage /> },
-      { path: "/recruitment", element: <RecHomePage /> },
+      // { path: "/recruitment", element: <RecHomePage /> },
       { path: "/recruitment-services", element: <RecServicesPage /> },
       { path: "/contact", element: <ContactUsPage /> },
       { path: "/aboutB3", element: <AboutUsPage /> },
@@ -41,6 +41,10 @@ const AppRoutes = [
       { path: "/blog/:id", element:<FullBlog />},
       { path: "*", element: <NotFoundPage /> }, // Handle 404 Not Found route
     ],
+  },
+  {
+    path: "/recruitment", // This route is outside the MainLayout
+    element: <RecHomePage />,
   },
 ];
 

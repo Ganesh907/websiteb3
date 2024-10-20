@@ -9,6 +9,7 @@ import img1 from '../Assets/Images/RecHome/Img1.png'
 import img2 from '../Assets/Images/RecHome/Img3.png'
 import img3 from '../Assets/Images/RecHome/Img2.png'
 import img4 from '../Assets/Images/RecHome/Img4.png'
+
 export const TechHomeData1 = [
   {
     title: 'Technology Recruitment',
@@ -59,4 +60,5 @@ export const TechHomeData1 = [
       "  Whether it’s IT, or Non-IT sectors, our client-centric approach ensures that we understand and fulfill the specific recruitment needs of every business we serve.",
     ],
   },
+  
 ];

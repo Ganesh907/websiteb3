@@ -8,21 +8,22 @@ import jobinterview from '../../Assets/Videos/jobinterview.mp4'
 import HeroSection from '../../Components/CommonComponents/HeroSection';
 import delivery from '../../Assets/Images/deliveryicon1.png'
 import clienticon from '../../Assets/Images/clienticon2.png'
-import candidate from '../../Assets/Images/candidateicon1.png'
+// import candidate from '../../Assets/Images/candidateicon1.png'
 import rating from '../../Assets/Images/ratingicon.png'
 import ITicon from '../../Assets/Images/information.png'
-import software from '../../Assets/Images/softwareicon.png'
-import cloud from '../../Assets/Images/cloudicon.png'
+// import software from '../../Assets/Images/softwareicon.png'
+
 import enterprise from '../../Assets/Images/enterpriseicon.png'
 import CustomAccordion from './NewTwo';
 import PromiseCardsContainer from '../../Components/RecHomePage/PromiseCards';
+import NavbarDemo from '../NavbarDemo';
+import HeroSection2 from './HeroSection2';
 const RecHomePage = () => {
   const searchIconSvg = `data:image/svg+xml;base64,${btoa(`
 
 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100"  fill="white" height="100" viewBox="0 0 24 24">
 <path d="M 10 2 C 5.590603 2 2 5.5906063 2 10 C 2 14.409394 5.590603 18 10 18 C 11.929744 18 13.635779 17.22512 15.019531 16.082031 L 20.71875 21.78125 A 0.75130096 0.75130096 0 1 0 21.78125 20.71875 L 16.082031 15.019531 C 17.225119 13.635778 18 11.929742 18 10 C 18 5.5906063 14.409397 2 10 2 z M 10 3.5 C 13.598737 3.5 16.5 6.401265 16.5 10 C 16.5 13.598735 13.598737 16.5 10 16.5 C 6.4012627 16.5 3.5 13.598735 3.5 10 C 3.5 6.401265 6.4012627 3.5 10 3.5 z"></path>
 </svg>
-
 
   `)}`;
 
@@ -120,7 +121,6 @@ const RecHomePage = () => {
   // }, []);
 
 
-
   // const handleMouseEnter2 = (panel) => {
   //   setExpanded(panel); // Expand the accordion on hover
   // };
@@ -159,9 +159,35 @@ const RecHomePage = () => {
   // }, [expanded, IT, Software, Cloud, Enterprise]);
 
 
-  return (
-    <div className="recrHomepageMain" >
 
+  const [scrollReached, setScrollReached] = useState(false);
+  
+  // Scroll handler to detect when user scrolls past a specific height
+  const handleScroll = () => {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    const targetHeight = 300; // Height after which state becomes true
+
+    if (scrollTop >= targetHeight) {
+      setScrollReached(true);
+    } else {
+      setScrollReached(false);
+    }
+  };
+
+  useEffect(() => {
+    // Add scroll event listener
+    window.addEventListener('scroll', handleScroll);
+
+    // Clean up the event listener on unmount
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+
+  return (
+    <div className="recrHomepageMain bg-white" >
+      <NavbarDemo/>
 
 {/* <HeroSection videoUrl={Techclient} videoOpacity={20} MarginAnimtion={true}>
         <div className='lg:w-[50vw] w-[90vw] flex justify-end items-end'>
@@ -187,7 +213,7 @@ const RecHomePage = () => {
               </span>
             </h1> */}
 
-<HeroSection videoUrl={jobinterview}
+<HeroSection2 videoUrl={jobinterview}
         videoOpacity={20}
         MarginAnimtion={true}
       >
@@ -231,7 +257,6 @@ const RecHomePage = () => {
   `}</style>
 </div>
 
-
           <div className=" flex items-center">
 
             <h1 className="drop-shadow-lg  text-white md:text-3xl text-xl my-5 font-bold  pb-4"
@@ -243,11 +268,10 @@ const RecHomePage = () => {
                 </span>
               ))}
 
-
            
 
               {"Perfect Fit ".split("").map((letter, index) => (
-                <span key={index} className="hover:text-[#0060b5] md:hover:text-[35px] transition-opacity duration-300 text-yellow-500  md:text-3xl text-xl">
+                <span key={index} className="hover:text-[#0060b5] md:hover:text-[35px] transition-opacity duration-300 text-[#0060b5]  md:text-4xl text-xl">
                   {letter}
                 </span>
               ))}
@@ -280,11 +304,9 @@ const RecHomePage = () => {
           </div>
         </div>
 
+      </HeroSection2>
 
-      </HeroSection>
-
-
-      <CustomAccordion/>
+      <CustomAccordion />
 
       {/* <div className='h-[80vh] w-full  flex flex-col justify-center items-center'>
         <h1 className='uppercase text-xl font-bold '>for hiring</h1>
@@ -295,7 +317,6 @@ const RecHomePage = () => {
       {/* </div> */}
 
      
-
 
 
 
@@ -310,13 +331,12 @@ const RecHomePage = () => {
 
 {/* ............................ */}
 
-
 {/* ....................... */}
 <div>
 
-  <h1 className=" text-center h-[10vh] my-4 uppercase text-white font-bold  text-5xl  m-[5px] font-montserrat md:my-20"
+  <h1 className=" text-center h-[10vh] my-4 uppercase text-[#0060b5] font-bold  text-5xl  m-[5px] font-montserrat md:my-14"
 style={{
-                               
+  // textShadow: '0.8px 0.8px 0 #eec317, -0.8px -0.8px 0 white, 0.8px -0.8px 0 white, -0.8px 0.8px 0 #eec317',                 
   fontFamily: 'Goudy Old Style' ,
     letterSpacing: '0.05em'            
 }}>
@@ -346,7 +366,6 @@ data-aos-duration="3000">
   </div>
 
 
-
   <div className='w-full'>
     <div className='bg-green-200 h-1/3 w-full'>
       <img src={RecServiceBackground} alt="" /></div>
@@ -362,7 +381,6 @@ data-aos-duration="3000">
       </ul>
     </div>
   </div>
-
 
 
 
@@ -382,7 +400,6 @@ data-aos-duration="3000">
     <div className='bg-green-200 h-1/3 w-full'>
       <img src={RecServiceBackground} alt="" /></div>
   </div>
-
 
 
 
@@ -407,11 +424,9 @@ data-aos-duration="3000">
   </div>
 
 
-
 </div> */}
 
 {/* ....................... */}
-
 
 <PromiseCardsContainer/>
 
@@ -419,9 +434,7 @@ data-aos-duration="3000">
 
 
 
-
 </div>
-
 
 
 {/* <p className='text-lg italic text-white text-center m-5 underline pb-2' style={{ textDecorationSkip: 'ink', textDecorationThickness: '0.1em', textDecorationColor: 'currentColor', textUnderlineOffset: '0.4em' }}>
@@ -431,24 +444,21 @@ data-aos-duration="3000">
       {/* <div className='recr-footer'>
         <Footer /></div> */}
 
-<p className='text-lg italic text-yellow-400 text-semibold text-center m-20 py-5  border-y-2 border-white'>
+<p className='text-lg italic text-[#0060b5] text-semibold text-center mt-20 py-5  border-y-2 border-white'>
           “ At BitByBit, it’s all about YOU! Whether you’re hunting for a new full-time role or just need a temp role, our recruiters are here to help you out. ”
         </p>
+
+
+<Footer/>
+
     </div>
 
   );
 
-
 }
 
 
-
 export default RecHomePage;
-
-
-
-
-
 
 
 

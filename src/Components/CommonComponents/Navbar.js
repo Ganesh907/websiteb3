@@ -5,10 +5,9 @@ import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close"; 
 import Logo from '../../Assets/Images/B3logo.png';
 
-// Mocked menu items (you can replace these with actual imports if available)
 const techitems = [
-  { title: "Home", path: "technology" },
-  { title: "Services", path: "technology-services" },
+  { title: "Home", path: "/technology" },
+  { title: "Services", path: "/technology-services" },
   // Add more items as needed
 ];
 
@@ -18,7 +17,6 @@ const recruitmentitems = [
   // Add more items as needed
 ];
 
-// Reusable Dropdown component
 function Dropdown({ items, scrolled }) {
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
@@ -27,11 +25,11 @@ function Dropdown({ items, scrolled }) {
     <ul
       onClick={handleClick}
       className={`${
-        click ? "hidden" : `absolute w-[140px] bg-black list-none border-t-[1px] lg:border-b-[1px] rounded-b-lg lg-border-white lg:border-t-0 border-white lg:p-2 text-start shadow-lg transition-opacity duration-300 ${scrolled ? "bg-opacity-100 lg:border-b-[1px] rounded-lg border-white" : "bg-opacity-20"}`
+        click ? "hidden" : `absolute w-[140px] bg-black list-none border-t-[1px] lg:border-b-[1px] rounded-b-lg lg:border-white lg:border-t-0 border-white lg:p-2 text-start shadow-lg transition-opacity duration-300 ${scrolled ? "bg-opacity-100 lg:border-b-[1px] rounded-lg border-white" : "bg-opacity-20"}`
       }`}
     >
       {items.map((item, index) => (
-        <li key={index} className="relative text-center  bg-black bg-opacity-20 lg:m-1 border-2 border-transparent hover:border-white rounded-lg overflow-hidden">
+        <li key={index} className="relative text-center bg-black bg-opacity-20 lg:m-1 border-2 border-transparent hover:border-white rounded-lg overflow-hidden">
           <Link className="block text-white text-sm w-full h-full pl-2 p-3 no-underline" to={item.path} onClick={() => setClick(false)}>
             {item.title}
           </Link>
@@ -53,7 +51,6 @@ function Navbar() {
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
 
-  // Toggle dropdowns on click for mobile screens
   const toggleDropdown1 = () => {
     if (window.innerWidth < 960) {
       setDropdown1(!dropdown1);
@@ -87,20 +84,28 @@ function Navbar() {
       const currentScrollY = window.scrollY;
       const triggerHeight = window.innerHeight * 0.05;
 
-      setShowNavbar(currentScrollY < lastScrollY || currentScrollY <= triggerHeight);
+      if (currentScrollY > lastScrollY && currentScrollY > triggerHeight) {
+        // Scrolling down, hide navbar
+        setShowNavbar(false);
+      } else {
+        // Scrolling up or near the top, show navbar
+        setShowNavbar(true);
+      }
+
       setLastScrollY(currentScrollY);
       setScrolled(currentScrollY > triggerHeight);
     };
 
     window.addEventListener("scroll", handleScroll);
+
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
 
   return (
     <nav
-      className={`fixed top-0 left-1/2 transform -translate-x-1/2 z-50 transition-all px-5 duration-300 w-[100vw] flex justify-between items-center h-[65px] ${
+      className={`fixed left-1/2 transform -translate-x-1/2 z-50 transition-all px-5 duration-300 w-[100vw] flex justify-between items-center h-[65px] ${
         scrolled ? "bg-black shadow-lg border-b-[1px] border-white" : "bg-transparent border-b-[1px] border-transparent"
-      } ${showNavbar ? "top-0" : "-top-[100px]"}`}
+      } ${showNavbar ? "top-0" : "-top-[65px]"}`} // Navbar hidden when scrolled down
       style={{ zIndex: 100 }}
     >
       {/* Logo */}
@@ -108,11 +113,6 @@ function Navbar() {
         to="/"
         className="flex items-center text-[#0060b5] font-bold text-2xl md:text-lg xl:text-2xl"
         onClick={closeMobileMenu}
-        style={{
-          color: '#0060b5', // Text color
-          // textShadow: '0.8px 0.8px 0 white, -0.8px -0.8px 0 white, 0.8px -0.8px 0 white, -0.8px 0.8px 0 white',
-          // letterSpacing: '0.1em', 
-        }}
       >
         <img src={Logo} alt="logo" className="w-10 h-10" />
         &nbsp;BitByBit Solutions
@@ -136,7 +136,7 @@ function Navbar() {
             to="/aboutB3"
             className={({ isActive }) =>
               `nav-links px-3 mx-1 py-1 text-lg border-2 border-transparent hover:border-white rounded-md ${
-                isActive ? "border-white rounded-md font-semibold text-[#facc15]" : "text-white"
+                isActive ? "border-white rounded-md font-semibold text-[#0060b5]" : "text-white"
               }`
             }
             onClick={closeMobileMenu}
@@ -155,14 +155,14 @@ function Navbar() {
           <span
             className={`px-3 mx-1 py-1 text-lg flex items-center ${
               location.pathname === "/technology" || location.pathname === "/technology-services"
-                ? "border-white border-2 rounded-md font-semibold text-[#facc15]"
+                ? "border-white border-2 rounded-md font-semibold text-[#0060b5]"
                 : "text-white"
             }`}
           >
             Technology
             <ArrowDropDownIcon 
-  className={`transform ${dropdown1 ? '-rotate-180' : 'rotate-0'} transition-transform duration-300`} 
-/>
+              className={`transform ${dropdown1 ? '-rotate-180' : 'rotate-0'} transition-transform duration-300`} 
+            />
           </span>
           {dropdown1 && <Dropdown items={techitems} scrolled={scrolled} />}
         </li>
@@ -172,24 +172,23 @@ function Navbar() {
           className="relative cursor-pointer py-5"
           style={{
             marginTop: dropdown1 && window.innerWidth < 1024 ? "90px" : "0px",
-            transition: "margin-top 0.5s ease",  // Adds smooth transition for marginTop
+            transition: "margin-top 0.5s ease",
           }}
           onMouseEnter={onMouseEnter2}
           onMouseLeave={onMouseLeave2}
           onClick={toggleDropdown2}
         >
           <span
-            className={`px-3 mx-1 py-1  text-lg flex items-center ${
+            className={`px-3 mx-1 py-1 text-lg flex items-center ${
               location.pathname === "/recruitment" || location.pathname === "/recruitment-services"
-                ? "border-white border-2 rounded-md font-semibold text-[#facc15]"
+                ? "border-white border-2 rounded-md font-semibold text-[#0060b5]"
                 : "text-white"
             }`}
           >
-            
             Recruitment
             <ArrowDropDownIcon 
-  className={`transform ${dropdown2 ? '-rotate-180' : 'rotate-0'} transition-transform duration-300`} 
-/>
+              className={`transform ${dropdown2 ? '-rotate-180' : 'rotate-0'} transition-transform duration-300`} 
+            />
           </span>
           {dropdown2 && <Dropdown items={recruitmentitems} scrolled={scrolled} />}
         </li>
@@ -197,14 +196,14 @@ function Navbar() {
         <li
           style={{
             marginTop: dropdown2 && window.innerWidth < 1024 ? "90px" : "0px",
-            transition: "margin-top 0.5s ease",  // Adds smooth transition for marginTop
+            transition: "margin-top 0.5s ease",
           }}
         >
           <NavLink
             to="/clients"
             className={({ isActive }) =>
               `nav-links px-3 mx-1 py-1 text-lg border-2 border-transparent hover:border-white rounded-md ${
-                isActive ? "border-white rounded-md font-semibold text-[#facc15]" : "text-white"
+                isActive ? "border-white rounded-md font-semibold text-[#0060b5]" : "text-white"
               }`
             }
             onClick={closeMobileMenu}
@@ -217,7 +216,7 @@ function Navbar() {
             to="/careers"
             className={({ isActive }) =>
               `nav-links px-3 mx-1 py-1 text-lg border-2 border-transparent hover:border-white rounded-md ${
-                isActive ? "border-white rounded-md font-semibold text-[#facc15]" : "text-white"
+                isActive ? "border-white rounded-md font-semibold text-[#0060b5]" : "text-white"
               }`
             }
             onClick={closeMobileMenu}
@@ -230,7 +229,7 @@ function Navbar() {
             to="/contact"
             className={({ isActive }) =>
               `nav-links px-3 mx-1 py-1 border-2 border-transparent hover:border-white rounded-md text-lg ${
-                isActive ? "border-white rounded-md font-semibold text-[#facc15]" : "text-white"
+                isActive ? "border-white rounded-md font-semibold text-[#0060b5]" : "text-white"
               }`
             }
             onClick={closeMobileMenu}
@@ -242,8 +241,8 @@ function Navbar() {
           <NavLink
             to="/blogs"
             className={({ isActive }) =>
-              `text-black px-3 mx-1 py-1 italic text-2xl font-semibold border-b-2  hover:border-white hover:text-yellow-400 hover:bg-transparent border-white hover:shadow-none ${
-                isActive ? "bg-transparent text-yellow-400" : "bg-yellow-400 drop-shadow-lg shadow-md shadow-black"
+              `text-white px-3 mx-1 py-1 italic text-2xl font-semibold border-b-2 hover:border-white hover:text-[#0060b5] hover:bg-transparent border-white hover:shadow-none ${
+                isActive ? "bg-transparent text-[#0060b5]" : "bg-[#0060b5] drop-shadow-lg shadow-md shadow-black"
               }`
             }
             style={{ fontFamily: "Lucida Serif" }}

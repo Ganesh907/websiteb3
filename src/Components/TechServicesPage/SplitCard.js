@@ -12,15 +12,19 @@ import flutter from "../../Assets/Images/flutter.png";
 import enterpriselogo from "../../Assets/Images/enterp.png";
 import digital from "../../Assets/Images/enterprisesol.png";
 import solution from "../../Assets/Images/architecture (2).png";
-import WebDevelopment from "../../Assets/Images/TechWebDev.png";
+// import WebDevelopment from "../../Assets/Images/TechWebDev.png";
 // import AndroidDevlopment from "../../Assets/Images/TechAppDev.png";
-import EnterpriseSolution from "../../Assets/Videos/enterprisesolution.mp4";
+import EnterpriseSolution from "../../Assets/Videos/TechServices/enterprisevideo.mp4";
+import androidappvideo from "../../Assets/Videos/TechServices/appdevvideo.mp4";
+// import EnterpriseSolution from "../../Assets/Videos/enterprisesolution.mp4";
 import service from "../../Assets/Images/devops.png";
 import itservice from "../../Assets/Images/it-systems.png";
 import software from "../../Assets/Images/software.png";
-import itmanaged from "../../Assets/Images/itmanagemnet.jpg";
-import itteamSolution from "../../Assets/Videos/itteam.mp4";
+// import itmanaged from "../../Assets/Images/itmanagemnet.jpg";
+// import itteamSolution from "../../Assets/Videos/itteam.mp4";
 import webdevelopment from "../../Assets/Videos/webdevelopment.mp4";
+import webdevelopmentvideo from "../../Assets/Videos/TechServices/webdevvideo.mp4";
+import itservicesvideo from "../../Assets/Videos/TechServices/ManagedItServicesVideo.mp4";
 // import javascript from "../../Assets/Images/javascript.png";
 export default class SplitCard extends Component {
   render() {
@@ -58,7 +62,7 @@ export default class SplitCard extends Component {
                 loop
                 muted
               >
-                <source src={webdevelopment} type="video/mp4" />
+                <source src={webdevelopmentvideo} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
 
@@ -135,7 +139,7 @@ export default class SplitCard extends Component {
                 loop
                 muted
               >
-                <source src={EnterpriseSolution} type="video/mp4" />
+                <source src={androidappvideo} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
 
@@ -262,7 +266,7 @@ export default class SplitCard extends Component {
                 loop
                 muted
               >
-                <source src={itteamSolution} type="video/mp4" />
+                <source src={itservicesvideo} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
               <div className=" bg-opacity-75  rounded  "></div>

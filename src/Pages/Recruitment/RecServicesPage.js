@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
-import RecServiceBackground from '../../Assets/Images/RecServiceBackground.jpg'
+// import RecServiceBackground from '../../Assets/Images/RecServiceBackground.jpg'
 import delivery from '../../Assets/Images/delivery.png'
 import OurServices from '../../Assets/Videos/OurServices.mp4'
 import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
@@ -10,9 +10,12 @@ import HeroSection from '../../Components/CommonComponents/HeroSection';
 import { LockOpenOutlined } from '@mui/icons-material';
 import SearchIcon from '@mui/icons-material/Search';
 import EnterpriseSolution from "../../Assets/Videos/enterprisesolution.mp4";
-import Permanent from "../../Assets/Videos/temporary staffing.mp4";
+// import Permanent from "../../Assets/Videos/temporary staffing.mp4";
+import Permanent from "../../Assets/Videos/webdevelopment.mp4";
+
 import Recruiters from "../../Assets/Videos/Recruitment.mp4";
-import Temporary from "../../Assets/Videos/permanent staffing.mp4";
+// import Temporary from "../../Assets/Videos/permanent staffing.mp4";
+import Temporary from "../../Assets/Videos/CareerVideo.mp4";
 import Permanenticon from "../../Assets/Images/Permanent1.png";
 import Permanenticon2 from "../../Assets/Images/Permanent2.png";
 import Permanenticon3 from "../../Assets/Images/Permanent3.png";
@@ -41,7 +44,13 @@ import MicrosoftAzure from "../../Assets/Images/TechServicePageLanguages/Microso
 import MongoDB from "../../Assets/Images/TechServicePageLanguages/MongoDB.png"
 import PHP from "../../Assets/Images/TechServicePageLanguages/PHP.png"
 import ReactIcon from "../../Assets/Images/TechServicePageLanguages/React.png"
-import Wordpress from "../../Assets/Images/TechServicePageLanguages/Wordpress.png"
+import CPlus from "../../Assets/Images/TechServicePageLanguages/C++.png"
+import SAP from "../../Assets/Images/TechServicePageLanguages/SAP.png"
+import Google from "../../Assets/Images/TechServicePageLanguages/GoogleBigQuery.png"
+import Network from "../../Assets/Images/TechServicePageLanguages/NetworkEng.png"
+import Oracle from "../../Assets/Images/TechServicePageLanguages/Oracle.png"
+import Sales from "../../Assets/Images/TechServicePageLanguages/Sales.png"
+import ServiceDesk from "../../Assets/Images/TechServicePageLanguages/ServiceDesk.png"
 
 
 
@@ -178,16 +187,16 @@ import Wordpress from "../../Assets/Images/TechServicePageLanguages/Wordpress.pn
     { text: ".NET", image: DotNet },
     { text: "PHP Developers", image: PHP},
     { text: "Android, Kotlin, Flutter - Developer", image: AndroidKotlin},
-    { text: "SAP ABAP / Basis / FICO / MDG / CRM / BPC / Hana", image:JAVA },
-    { text: "Linux Admin / Network Engineer", image: JAVA },
+    { text: "SAP ABAP / Basis / FICO / MDG / CRM / BPC / Hana", image:SAP },
+    { text: "Linux Admin / Network Engineer", image: Network },
     { text: "Microsoft Azure / Ms Dynamic 365", image: MicrosoftAzure},
-    { text: "Workday/ OracleES / EDM", image: JAVA },
+    { text: "Workday/ OracleES / EDM", image: Oracle },
     { text: "Devops / RSA ARCHER / PAAS", image: DevOps },
-    { text: "C++ Programmer / Open Link", image: JAVA },
-    { text: "Sales Force / RED HAT", image: JAVA },
+    { text: "C++ Programmer / Open Link", image: CPlus },
+    { text: "Sales Force / RED HAT", image: Sales },
     { text: "Mongo DB / Cloud contact center OPS", image: MongoDB },
-    { text: "Google Big Query / Pega System", image: JAVA },
-    { text: "Service Desk / Service Now", image: JAVA },
+    { text: "Google Big Query / Pega System", image: Google },
+    { text: "Service Desk / Service Now", image: ServiceDesk },
     { text: "Manual / Automation tester", image: ManualAutomationTester },
     { text: "Angular Developer", image: Angular },
     { text: "Business Analyst", image: BusinessAnalyst }]
