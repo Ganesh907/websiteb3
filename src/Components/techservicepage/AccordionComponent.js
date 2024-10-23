@@ -4,13 +4,13 @@ import AlbumIcon from '@mui/icons-material/Album';
 import { TechHomeData1 } from '../../data/TechHomeData';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 
-
+// TypingEffect component to display lines one after another with a delay
 const TypingEffect = ({ text = '', typingSpeed = 50, isOpen = false }) => {
   const [displayedText, setDisplayedText] = useState('');
 
   useEffect(() => {
     if (!isOpen || typeof text !== 'string') {
-      setDisplayedText(''); 
+      setDisplayedText(''); // Reset if not open
       return;
     }
 
@@ -57,26 +57,23 @@ const AccordionItem = ({ item, index, expanded, onHoverStart, onHoverEnd }) => {
 
   return (
     <div
-      className={`bg-[#1a1a1a] border-[#0060b5] rounded-lg shadow-xl shadow-black hover:border-[#00bfff] hover:border-2 border-2 text-red-200 transition-all duration-700 ease-in-out p-4 cursor-pointer ${expanded === index ? 'md:h-80 h-auto' : 'h-24'}`}
+      className={`border-black dark:bg-black/70 dark:border-[#0060b5]  dark:hover:border-[#00bfff]  bg-[#0060b5] rounded-lg hover:border-transparent hover:border-2 shadow-md shadow-black border-2 transition-all duration-700 ease-in-out p-4 cursor-pointer ${expanded === index ? 'h-auto md:h-80 dark:border-[#00bfff]' : 'h-24'}`}
       onMouseEnter={() => onHoverStart(index)}
       onMouseLeave={onHoverEnd}
     >
       <div className="flex items-center text-white">
-        <img src={item.img} alt="" className="h-14 w-14 p-2 bg-black shadow-lg shadow-black border-[1px] border-white rounded-md mr-4" />
-        <span
-          className="text-md md:text-3xl text-[#00bfff] italic"
-          style={{ fontFamily: 'Goudy Old Style', letterSpacing: '0.05em' }}
-        >
+        <img src={item.img} alt="" className="h-14 w-14 bg-white p-1 rounded-md mr-4" />
+        <span className="text-xl md:text-3xl italic dark:text-[#00bfff] text-white drop-shadow-lg" style={{ fontFamily: 'Goudy Old Style', letterSpacing: '0.05em' }}>
           {item.title}
         </span>
         {expanded === index ? (
-          <ExpandLessIcon className="ml-auto transition-transform duration-300 animate-bounce" style={{ animationDelay: '3000ms', animationDuration: '0.6s' }} />
+          <ExpandLessIcon className="ml-auto text-white transition-transform duration-300 animate-bounce" />
         ) : (
-          <ExpandMoreIcon className="ml-auto transition-transform duration-300 animate-bounce" style={{ animationDelay: '1000ms', animationDuration: '0.6s' }} />
+          <ExpandMoreIcon className="ml-auto text-white transition-transform duration-300 animate-bounce" />
         )}
       </div>
-      <div className={`mt-2 overflow-hidden ${expanded === index ? 'block' : 'hidden'}`}>
-        <ul className="text-white list-disc italic text-sm md:text-base">
+      <div className={`mt-4 overflow-hidden ${expanded === index ? 'block' : 'hidden'}`}>
+        <ul className="text-white list-disc italic">
           {item.content.map((line, lineIndex) => (
             <li key={lineIndex} className="mb-2">
               <TypingEffect text={line} typingSpeed={expanded === index ? 15 : 0} isOpen={startTyping} />
@@ -113,18 +110,18 @@ export default function CustomAccordion() {
 
   const handleHoverEnd = () => {
     setIsHovered(false); // Resume auto-expand when hover ends
-    setExpanded(0); // Immediately expand the first item
+    setExpanded(0); // Reset to the first accordion item
   };
 
   return (
-    <div className="h-[100vh]">
+    <div className="py-32">
       <h1
-        className="text-center uppercase md:text-center text-white text-xl md:text-5xl font-bold py-10"
+        className="text-center uppercase md:text-center dark:text-white text-[#0060b5] text-xl md:text-5xl font-bold md:mt-10 md:mb-20"
         style={{ fontFamily: 'Goudy Old Style', letterSpacing: '0.05em' }}
       >
-        Industry-Focused Innovation
+        Industry Specialization
       </h1>
-      <div className="flex flex-wrap justify-center">
+      <div className="flex flex-wrap justify-center h-[80vh]">
         <div className="w-full md:w-1/2 flex flex-col gap-y-10 p-5">
           {TechHomeData1.slice(0, 2).map((item, index) => (
             <AccordionItem
@@ -136,7 +133,7 @@ export default function CustomAccordion() {
               onHoverEnd={handleHoverEnd}
             />
           ))}
-        </div> 
+        </div>
 
         <div className="w-full md:w-1/2 flex flex-col gap-y-10 p-5">
           {TechHomeData1.slice(2).map((item, index) => (

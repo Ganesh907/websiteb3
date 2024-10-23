@@ -32,10 +32,10 @@ export const TechHomeData1 = [
         icon: FlagIcon,
         img:egov,
         content: [
-            "  BitByBit Solutions is at the forefront of enabling digital transformation in governance through innovative e-governance solutions",
-            "  E-governance aims to improve transparency, accessibility, and efficiency in public administration, creating a more inclusive and participatory system of governance",
+            "  BitByBit Solutions is at the forefront of enabling digital transformation in governance through innovative e-governance solutions.",
+            "  E-governance aims to improve transparency, accessibility, and efficiency in public administration, creating a more inclusive and participatory system of governance.",
             "  Our team collaborates with government agencies to create secure, scalable digital platforms for seamless interactions among citizens, businesses, and government.",
-            "  By leveraging advanced technologies, we help streamline government operations and foster a culture of accountability",
+            "  By leveraging advanced technologies, we help streamline government operations and foster a culture of accountability.",
         ]
     },
     {
@@ -75,7 +75,7 @@ export const TechHomeData1 = [
         icon: ShoppingCartIcon,
         img:ecommerce,
         content: [
-            "  We specialize in providing cutting-edge technology solutions for the rapidly evolving e-commerce sector",
+            "  We specialize in providing cutting-edge technology solutions for the rapidly evolving e-commerce sector.",
             "  We offer custom solutions to help online businesses grow, streamline operations, and boost user engagement.",
             "  We provide tailored solutions that drive growth, boost efficiency, and enhance engagement, helping businesses stay competitive in a fast-changing digital market.",
             "  We deliver end-to-end e-commerce solutions, from planning to execution, helping clients navigate the ever-changing market successfully."

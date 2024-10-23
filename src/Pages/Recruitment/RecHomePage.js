@@ -3,21 +3,25 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import AboutUs4 from '../../Assets/Images/AboutUs4.jpg';
 import { Accordion, AccordionDetails, AccordionSummary, Button } from '@mui/material';
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
-import Footer from '../../Components/commoncomponents/Footer';
+import Footer from '../../Components/common/Footer';
 import jobinterview from '../../Assets/Videos/jobinterview.mp4'
-import HeroSection from '../../Components/commoncomponents/HeroSection';
+import HeroSection from '../../Components/common/HeroSection';
 import delivery from '../../Assets/Images/deliveryicon1.png'
 import clienticon from '../../Assets/Images/clienticon2.png'
 // import candidate from '../../Assets/Images/candidateicon1.png'
 import rating from '../../Assets/Images/ratingicon.png'
 import ITicon from '../../Assets/Images/information.png'
+import SearchIcon from '@mui/icons-material/Search';
 // import software from '../../Assets/Images/softwareicon.png'
 
 import enterprise from '../../Assets/Images/enterpriseicon.png'
 import CustomAccordion from './NewTwo';
 import PromiseCardsContainer from '../../Components/rechomepage/PromiseCards';
 import NavbarDemo from '../../Components/lightmodecomponents/NavbarDemo';
-import HeroSection2 from './HeroSection2';
+import { useTheme } from '../../Components/common/ThemeProvider';
+import Navbar from '../../Components/common/Navbar';
+
+// import HeroSection2 from './HeroSection2';
 const RecHomePage = () => {
   const searchIconSvg = `data:image/svg+xml;base64,${btoa(`
 
@@ -33,7 +37,7 @@ const RecHomePage = () => {
   const quotes = [
     "Your success is our priority. With our deep industry knowledge and personalized approach, we match you with top talent that drives your business forward, creating long-term value beyond just filling a position.",
 
-    "Your business deserves the best, and we’re here to deliver. We go beyond resumes to find candidates that align with your company’s values and goals, ensuring a perfect fit every time",
+    "Your business deserves the best, and we’re here to deliver. We go beyond resumes to find candidates that align with your company’s values and goals, ensuring a perfect fit every time.",
   ];
 
 
@@ -98,6 +102,7 @@ const RecHomePage = () => {
   };
 
   useEffect(() => {
+    console.log(theme)
     // Add scroll event listener
     window.addEventListener('scroll', handleScroll);
 
@@ -107,12 +112,15 @@ const RecHomePage = () => {
     };
   }, []);
 
-
+  const { theme } = useTheme();
   return (
-    <div className="recrHomepageMain bg-white" >
-      <NavbarDemo/>
+    <div className="recrHomepageMain  dark:bg-transparent" >
 
-<HeroSection2 videoUrl={jobinterview}
+{/* {theme === 'dark' ? <Navbar/> : <NavbarDemo />} */}
+
+      {/* <Navbar/> */}
+
+<HeroSection videoUrl={jobinterview}
         videoOpacity={20}
         MarginAnimtion={true}
       >
@@ -203,7 +211,7 @@ const RecHomePage = () => {
           </div>
         </div>
 
-      </HeroSection2>
+      </HeroSection>
 
       <CustomAccordion />
 
@@ -216,14 +224,39 @@ const RecHomePage = () => {
 
 
 
+{/* <div className="relative flex items-center justify-center m-20">
+     
+      <div className="absolute left-0 top-0 h-1/2 border-l-2 border-black dark:border-white"></div>
+
+     
+     
+      <div className="absolute bottom-0 left-0 right-0 border-b-2 border-black dark:border-white"></div>
+
+      <div className="absolute right-0 bottom-0 h-1/2 border-r-2 border-black dark:border-white"></div>
+
+   
+      <p className='text-lg italic text-[#0060b5] dark:text-white font-semibold text-center mx-5 py-5'>
+        "At BitByBit, it's all about finding the right talent for your needs! Whether you're looking to fill a full-time position or need temporary staff,<br /> our dedicated recruiters are here to connect you with top candidates."
+      </p>
+    </div> */}
+
+<p className='text-lg text-[#0060b5] dark:text-white bg-white dark:bg-black/30 font-semibold text-center my-20 mx-14 py-5 border-y-2 border-black dark:border-white'>
+  <span className="block mb-2 text-3xl font-bold " style={{ fontFamily: 'Playfair Display' }}>
+  🔎
+  <span className='italic text-[#0060b5]'>Finding the <span className=' text-black dark:text-white'>  Right Talent</span> for You!</span> 
+   🔎
+  </span>
+  <span className="block">
+    " Whether you need a full-time expert or short-term support, our passionate recruiters are ready to match you with the best candidates! "
+  </span>
+</p>
 
 
-<p className='text-lg italic text-[#0060b5] text-semibold text-center mt-20 py-5  border-y-2 border-white'>
-          “ At BitByBit, it’s all about YOU! Whether you’re hunting for a new full-time role or just need a temp role, our recruiters are here to help you out. ”
-        </p>
+        {/* “ At BitByBit, it’s all about YOU! Whether you’re hunting for a new full-time role or just need a temp role, our recruiters are here to help you out. ” */}
+     
 
 
-<Footer/>
+{/* <Footer/> */}
 
     </div>
 

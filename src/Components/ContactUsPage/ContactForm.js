@@ -90,12 +90,12 @@ export const ContactForm = () => {
     const linkClass = "group relative inline-flex items-center overflow-hidden px-2 py-2 transition-colors duration-300 ";
 
     return (
-        <div className='flex justify-center p-5  md:py-5 items-center w-auto md:scale-95 text-white rounded-md'
+        <div className='flex justify-center p-5  md:py-5 items-center w-auto md:scale-90 text-white rounded-md'
             style={{
                 backgroundColor: 'rgb(0,0,0,0.4)'
             }}>
             <form className='text-center text-white' onSubmit={handleSubmit}>
-                <h1 className='font-bold text-4xl drop-shadow-lg text-yellow-400'>Contact Us</h1>
+                <h1 className='font-bold text-4xl drop-shadow-lg text-white'>Contact Us</h1>
                 <h2 className='font-semibold mt-2 text-base text-white'>
                     Any question or remarks? Just write us a message!
                 </h2>
@@ -241,10 +241,10 @@ export const ContactForm = () => {
                 </Box>
 
                 <button
-                    className={`group relative border-transparent font-semibold rounded-md bg-yellow-400 text-black transition-all duration-300 ${linkClass}`}
+                    className={`group relative border-transparent font-semibold rounded-md bg-white text-[#0060b5] transition-all duration-300 ${linkClass}`}
                 >
-                    <span className="relative z-10 text-black group-hover:text-white">Send Message</span>
-                    <span className="absolute inset-y-0 -left-1 w-full bg-[#0060b5] translate-x-[-100%] group-hover:translate-x-1 transition-transform duration-500 ease-in-out z-0"></span>
+                    <span className="relative z-10 text-[#0060b5] group-hover:text-white">Send Message</span>
+                    <span className="absolute inset-y-0 -left-1 w-full  bg-[#0060b5] translate-x-[-100%] group-hover:translate-x-1 transition-transform duration-500 ease-in-out z-0"></span>
                 </button>
             </form>
         </div>

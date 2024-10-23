@@ -1,7 +1,7 @@
 import delivery from "../Assets/Images/deliveryicon1.png"; // Assuming these are the correct image paths
-import clienticon from "../Assets/Images/clienticon2.png"; 
-import rating from "../Assets/Images/ratingicon.png"; 
-import candidate from "../Assets/Images/candidateicon1.png"; 
+import clienticon from "../Assets/Images/clienticon2.png";
+import rating from "../Assets/Images/ratingicon.png";
+import candidate from "../Assets/Images/candidateicon1.png";
 
 export const promises = [
   {
@@ -16,7 +16,7 @@ export const promises = [
       "Workflow prevents information loss during translation.",
     ],
     bgColor: "bg-[#0060b5]",
-    borderColor: "border-black",
+    borderColor: "border-black dark:border-white",
     textColor: "text-transparent",
     strokeColor: "white",
     imgBorderStyle: "border-r-[50%]",
@@ -54,7 +54,7 @@ export const promises = [
       "Maintain complete confidentiality in all communications.",
     ],
     bgColor: "bg-[#0060b5]",
-    borderColor: "border-black",
+    borderColor: "border-black dark:border-white",
     textColor: "text-transparent",
     strokeColor: "white",
     imgBorderStyle: "border-r-[50%]",
@@ -63,7 +63,7 @@ export const promises = [
   },
   {
     number: "04",
-    title: "Competitive Rates & Delivery",
+    title: "Affordable Solutions with Timely Delivery",
     imageSrc: rating,
     content: [
       "A tech and HR solutions startup going the extra mile.",
@@ -81,16 +81,20 @@ export const promises = [
   },
   {
     number: "05",
-    title: "Full End to end Delivery",
+    title: "Long-Term Talent Development",
     imageSrc: delivery,
     content: [
-      "Recruiters manage the entire end-to-end delivery process.",
-      "Standardized process ensures better candidate presentation.",
-      "Recruiters handle requirements gathering to candidate start date.",
-      "Workflow prevents information loss during translation.",
+      // "We promise to not only help you recruit top talent but also support their ongoing growth and development.",
+      // "Through training, skill-building opportunities, and performance tracking, we ensure that the candidates we place are continuously improving and adding value to your organization. ",
+      // "This commitment to talent development fosters employee retention, ensuring that your business benefits from long-term, highly skilled professionals."
+      "We help recruit top talent and support their growth.",
+      "We offer training, skill-building, and performance tracking.",
+      "Our focus on talent development ensures continuous improvement.",
+      "This commitment enhances retention and long-term value for your business."
+
     ],
     bgColor: "bg-[#0060b5]",
-    borderColor: "border-black",
+    borderColor: "border-black dark:border-white",
     textColor: "text-transparent",
     strokeColor: "white",
     imgBorderStyle: "border-r-[50%]",
@@ -99,13 +103,16 @@ export const promises = [
   },
   {
     number: "06",
-    title: "We assure a CLIENT to",
+    title: "Rapid Response & Flexibility",
     imageSrc: clienticon,
     content: [
-      "Understand their requirements in detail before taking any action.",
-      "Deploy the right recruiters, in the right quantity, for the right duration.",
-      "Maintain confidentiality throughout all dealings across the value chain.",
-      "Fulfill their requirements exactly as per their expectations.",
+      // "In today’s fast-paced environment, we promise to offer rapid response and flexibility in meeting your recruitment needs.",
+      // "Whether it’s scaling up your workforce quickly or adapting to changing project requirements, we have the agility and expertise to deliver the right talent at the right time.",
+      // "Our flexible recruitment models allow us to seamlessly align with your evolving business needs, ensuring uninterrupted workflow and project continuity."
+      "We provide rapid response and flexibility for your recruitment needs.",
+      "Whether scaling up or adapting, we deliver the right talent quickly.",
+      "Our agile approach ensures seamless alignment with changing requirements.",
+      "Flexible recruitment models maintain workflow and project continuity."
     ],
     bgColor: "bg-white",
     borderColor: "border-[#0060b5]",

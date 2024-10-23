@@ -3,7 +3,7 @@ import { promises } from "../../data/RecHomePromises";
 const PromiseCardsContainer = ({ cardDataArray }) => {
         return (
           <>
-         <h1 className=" text-center h-[10vh] my-4 uppercase text-[#0060b5] font-bold  text-5xl  m-[5px] font-montserrat md:my-14"
+         <h1 className=" text-center h-[10vh] my-4 uppercase dark:text-white text-[#0060b5] font-bold  text-5xl  m-[5px] font-montserrat md:my-14"
 style={{
   // textShadow: '0.8px 0.8px 0 #eec317, -0.8px -0.8px 0 white, 0.8px -0.8px 0 white, -0.8px 0.8px 0 #eec317',                 
   fontFamily: 'Goudy Old Style' ,
@@ -11,7 +11,7 @@ style={{
 }}>
   Our Promise
 </h1>
-          <div className="grid grid-cols-1 md:grid-cols-3 md:gap-10 mx-5 md:mx-20 ">
+          <div className="grid grid-cols-1 md:grid-cols-3  dark:md:gap-20 md:gap-10 mx-5 md:mx-20 ">
             
  
             {promises.map((cardData, index) => (
@@ -25,7 +25,9 @@ style={{
       const PromiseCards = ({ cardData }) => {
         return (
           <div
-            className={`border-2 rounded-[10px] hover:rounded-none ${cardData.bgColor} md:w-[100%] md:h-[530px] h-[510px] p-4 ${cardData.borderColor} transform transition-all duration-500 hover:scale-100 shadow-black shadow-md group relative hover:border-x-transparent hover:border-t-transparent scale-90`}
+            className={`border-2 rounded-[10px] hover:rounded-none ${cardData.bgColor} md:w-[100%] md:h-[530px] h-[510px] p-4 ${cardData.borderColor} transform transition-all duration-500 hover:scale-100 shadow-black shadow-md dark:shadow-none 
+            dark:hover:shadow-lg group relative hover:border-x-transparent hover:border-t-transparent 
+            dark:hover:border-x-transparent dark:hover:border-t-transparent scale-90`}
             style={{ perspective: "1000px" }}
           >
             <style jsx>{`

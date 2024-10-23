@@ -2,10 +2,10 @@ import React, { useEffect, useState,useRef } from "react";
 
 import TechServicesVideo from "../../Assets/Videos/TechServicesVideo.mp4";
 import "./TechServicesPage.css";
-import HeroSection from "../../Components/commoncomponents/HeroSection";
+import HeroSection from "../../Components/common/HeroSection";
 
-import Footer from "../../Components/commoncomponents/Footer";
-import TypingTextAnimation from "../../Components/commoncomponents/TypingTextAnimation";
+import Footer from "../../Components/common/Footer";
+import TypingTextAnimation from "../../Components/common/TypingTextAnimation";
 import SplitCard from "../../Components/techservicepage/SplitCard";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import JAVA from "../../Assets/Images/JavaI.png";
@@ -79,7 +79,7 @@ const TechServicesPage = (props) => {
       <SplitCard />
 
       <div className="my-20">
-      <h1 className="text-center uppercase md:text-center text-white text-xl md:text-5xl font-bold md:mt-10 md:mb-20"
+      <h1 className="text-center uppercase md:text-center dark:text-white text-[#0060b5] text-xl md:text-5xl font-bold md:mt-10 md:mb-20"
                                 style={{
                                   // textShadow: '0.8px 0.8px 0 #eec317, -0.8px -0.8px 0 white, 0.8px -0.8px 0 white, -0.8px 0.8px 0 #eec317',
                                         fontFamily: 'Goudy Old Style',
@@ -88,7 +88,7 @@ const TechServicesPage = (props) => {
         </h1>
 
       
-<marquee
+{/* <marquee
   className="w-full h-[30vh] flex justify-start items-center  text-black my-10 cursor-pointer"
   style={{backgroundColor:'rgba(0,0,0,0.4)'}}
   behavior="scroll"
@@ -114,7 +114,34 @@ const TechServicesPage = (props) => {
       />
     </span>
   ))}
-</marquee>
+</marquee> */}
+<marquee
+          className="w-full md:h-[30vh] h-[15vh] flex justify-start items-center cursor-pointer bg-[#0060b5]  text-black my-10 dark:bg-[rgba(0,0,0,0.4)]"
+          // style={{ backgroundColor: 'rgba(0,0,0,0.4)' }}
+          behavior="scroll"
+          direction="left"
+          scrollamount="10"
+          ref={marqueeRef}
+          onMouseEnter={handleMouseEnter1}
+          onMouseLeave={handleMouseLeave1}
+        >
+          {jobRolesWithImages.map((role, index) => (
+         
+            <span
+              key={index}
+              className={`inline-flex items-center mx-4 rounded-lg text-xl hover:scale-110 hover:bg-black hover:text-white 
+                dark:hover:bg-white dark:hover:text-black drop-shadow-lg shadow-lg shadow-black border-x-4 py-5 px-5 bg-white text-black  dark:bg-black dark:text-white   border-blue-900 transition-all duration-500 ease-in-out`}
+            >
+
+              {role.text}
+
+              <img
+                src={role.image}
+                className="w-10 h-10 ml-2" 
+              />
+            </span>
+          ))}
+        </marquee>
       </div> 
 
       

@@ -30,7 +30,7 @@ export default class SplitCard extends Component {
   render() {
     return (
       <div className="  flex flex-col items-center  min-h-screen  bg-[linear-gradient(135deg,_#0000_20.5%,_#ffffff_0_29.5%,_#0000_0)_0_50px,_linear-gradient(45deg,_#0000_8%,_#ffffff_0_17%,_#0000_0_58%)_100px_0,_linear-gradient(135deg,_#0000_8%,_#ffffff_0_17%,_#0000_0_58%,_#ffffff_0_67%,_#0000_0),_linear-gradient(45deg,_#0000_8%,_#ffffff_0_17%,_#0000_0_58%,_#ffffff_0_67%,_#0000_0_83%,_#ffffff_0_92%,_#0000_0),_rgba(71,74,255,0.05)] bg-[200px_200px]">
-        <h1 className="text-center uppercase md:text-center text-white text-xl md:text-5xl font-bold md:my-20"
+        <h1 className="text-center uppercase md:text-center text-[#0060b5] dark:text-white text-xl md:text-5xl font-bold md:my-20"
                                 style={{
 
                                         fontFamily: 'Goudy Old Style',

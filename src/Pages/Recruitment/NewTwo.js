@@ -57,13 +57,13 @@ const AccordionItem = ({ item, index, expanded, onHoverStart, onHoverEnd }) => {
 
   return (
     <div
-      className={`border-black bg-[#0060b5] rounded-lg hover:border-transparent hover:border-2 shadow-md shadow-black border-2 transition-all duration-700 ease-in-out p-4 cursor-pointer ${expanded === index ? 'h-auto md:h-80' : 'h-24'}`}
+      className={`border-black dark:bg-black/70 dark:border-[#0060b5]  dark:hover:border-[#00bfff]  bg-[#0060b5] rounded-lg hover:border-transparent hover:border-2 shadow-md shadow-black border-2 transition-all duration-700 ease-in-out p-4 cursor-pointer ${expanded === index ? 'h-auto md:h-80' : 'h-24'}`}
       onMouseEnter={() => onHoverStart(index)}
       onMouseLeave={onHoverEnd}
     >
       <div className="flex items-center text-white">
         <img src={item.img} alt="" className="h-14 w-14 bg-white p-1 rounded-md mr-4" />
-        <span className="text-xl md:text-3xl italic text-white drop-shadow-lg" style={{ fontFamily: 'Goudy Old Style', letterSpacing: '0.05em' }}>
+        <span className="text-xl md:text-3xl italic dark:text-[#00bfff] text-white drop-shadow-lg" style={{ fontFamily: 'Goudy Old Style', letterSpacing: '0.05em' }}>
           {item.title}
         </span>
         {expanded === index ? (
@@ -116,7 +116,7 @@ export default function CustomAccordion() {
   return (
     <div className="py-32">
       <h1
-        className="text-center uppercase md:text-center text-[#0060b5] text-xl md:text-5xl font-bold md:mt-10 md:mb-20"
+        className="text-center uppercase md:text-center dark:text-white text-[#0060b5] text-xl md:text-5xl font-bold md:mt-10 md:mb-20"
         style={{ fontFamily: 'Goudy Old Style', letterSpacing: '0.05em' }}
       >
         Industry Specialization

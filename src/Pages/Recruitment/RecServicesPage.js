@@ -5,8 +5,7 @@ import OurServices from '../../Assets/Videos/OurServices.mp4'
 import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-import Footer from '../../Components/commoncomponents/Footer';
-import HeroSection from '../../Components/commoncomponents/HeroSection';
+import HeroSection from '../../Components/common/HeroSection';
 import { LockOpenOutlined } from '@mui/icons-material';
 import SearchIcon from '@mui/icons-material/Search';
 import EnterpriseSolution from "../../Assets/Videos/enterprisesolution.mp4";
@@ -51,6 +50,8 @@ import Network from "../../Assets/Images/tech-languages-logos/NetworkEng.png"
 import Oracle from "../../Assets/Images/tech-languages-logos/Oracle.png"
 import Sales from "../../Assets/Images/tech-languages-logos/Sales.png"
 import ServiceDesk from "../../Assets/Images/tech-languages-logos/ServiceDesk.png"
+import Footer from '../../Components/common/Footer';
+import NavbarDemo from '../../Components/lightmodecomponents/NavbarDemo';
 
 
 
@@ -91,8 +92,8 @@ const RecServicesPage = () => {
   };
 
   return (
-    <>
-
+    <div className='dark:bg-transparent'>
+{/* <NavbarDemo/> */}
       <HeroSection
         videoUrl={OurServices}
         videoOpacity={20}
@@ -183,7 +184,7 @@ const RecServicesPage = () => {
 
 
       <div className="  flex flex-col items-center  min-h-screen  bg-[linear-gradient(135deg,_#0000_20.5%,_#ffffff_0_29.5%,_#0000_0)_0_50px,_linear-gradient(45deg,_#0000_8%,_#ffffff_0_17%,_#0000_0_58%)_100px_0,_linear-gradient(135deg,_#0000_8%,_#ffffff_0_17%,_#0000_0_58%,_#ffffff_0_67%,_#0000_0),_linear-gradient(45deg,_#0000_8%,_#ffffff_0_17%,_#0000_0_58%,_#ffffff_0_67%,_#0000_0_83%,_#ffffff_0_92%,_#0000_0),_rgba(71,74,255,0.05)] bg-[200px_200px]">
-        <h1 className="text-center uppercase md:text-center text-white text-xl md:text-5xl font-bold md:my-20"
+        <h1 className="text-center uppercase md:text-center text-[#0060b5] dark:text-white text-xl md:text-5xl font-bold md:my-20"
           style={{
 
             fontFamily: 'Goudy Old Style',
@@ -206,7 +207,7 @@ const RecServicesPage = () => {
 
 
               <video
-                className="Imagescss rounded-[20px] object-cover h-full w-full  shadow-[0px_13px_27px_-5px_rgba(50,50,93,0.25),_0px_8px_16px_-8px_rgba(0,0,0,0.3)]"
+                className="Imagescss rounded-[20px] object-cover h-full w-full  shadow-lg shadow-black dark:shadow-md dark:shadow-black "
                 autoPlay
                 loop
                 muted
@@ -277,7 +278,7 @@ const RecServicesPage = () => {
 
 
               <video
-                className="Imagescss rounded-[20px] object-cover h-full w-full  shadow-[0px_13px_27px_-5px_rgba(50,50,93,0.25),_0px_8px_16px_-8px_rgba(0,0,0,0.3)]"
+                className="Imagescss rounded-[20px] object-cover h-full w-full  dark:shadow-md dark:shadow-black shadow-lg shadow-black"
                 autoPlay
                 loop
                 muted
@@ -336,7 +337,7 @@ const RecServicesPage = () => {
           >
             <div className="md:absolute  hidden  md:left-10  md:top-16  md:z-10 md:p-3  bg-cover bg-center  md:text-2xl md:font-bold md:flex   	 customborder  md:justify-center   md:h-72 lg:h-72 md:w-72 lg:w-1/4 md:hover:-translate-y-8  md:transition-all md:duration-500">
               <video
-                className="Imagescss rounded-[20px] object-cover h-full w-full  shadow-[0px_13px_27px_-5px_rgba(50,50,93,0.25),_0px_8px_16px_-8px_rgba(0,0,0,0.3)]"
+                className="Imagescss rounded-[20px] object-cover h-full w-full  shadow-lg shadow-black dark:shadow-md dark:shadow-black "
                 autoPlay
                 loop
                 muted
@@ -393,8 +394,8 @@ const RecServicesPage = () => {
       </div>
 
 
-      <div className="my-20">
-        <h1 className="text-center uppercase md:text-center text-white text-xl md:text-5xl font-bold md:my-20"
+      <div className="py-20 ">
+        <h1 className="text-center uppercase md:text-center text-[#0060b5] dark:text-white text-xl md:text-5xl font-bold md:my-20"
           style={{
 
             fontFamily: 'Goudy Old Style',
@@ -403,8 +404,8 @@ const RecServicesPage = () => {
           B3 Expertise In IT Recruitment
         </h1>
         <marquee
-          className="w-full h-[30vh] flex justify-start items-center  text-black my-10"
-          style={{ backgroundColor: 'rgba(0,0,0,0.4)' }}
+          className="w-full md:h-[30vh] h-[15vh] flex justify-start items-center cursor-pointer bg-[#0060b5]  text-black my-10 dark:bg-[rgba(0,0,0,0.4)]"
+          // style={{ backgroundColor: 'rgba(0,0,0,0.4)' }}
           behavior="scroll"
           direction="left"
           scrollamount="10"
@@ -416,7 +417,8 @@ const RecServicesPage = () => {
          
             <span
               key={index}
-              className={`inline-flex items-center mx-4 rounded-lg text-xl hover:scale-110 hover:bg-white hover:text-black drop-shadow-lg shadow-lg shadow-black border-x-4 py-5 px-5 bg-black text-white border-blue-900 transition-all duration-500 ease-in-out`}
+              className={`inline-flex items-center mx-4 rounded-lg text-xl hover:scale-110 hover:bg-black hover:text-white 
+                dark:hover:bg-white dark:hover:text-black drop-shadow-lg shadow-lg shadow-black border-x-4 py-5 px-5 bg-white text-black  dark:bg-black dark:text-white   border-blue-900 transition-all duration-500 ease-in-out`}
             >
 
               {role.text}
@@ -430,8 +432,9 @@ const RecServicesPage = () => {
         </marquee>
 
       </div>
+{/* <Footer/> */}
 
-    </>
+    </div>
   )
 }
 

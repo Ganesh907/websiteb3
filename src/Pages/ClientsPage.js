@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import HeroSection from "../Components/commoncomponents/HeroSection";
+import HeroSection from "../Components/common/HeroSection";
 import Techclient from "../Assets/Videos/techclient.mp4";
 import { clientLogos, clientTestimonials, WeOffersToClient } from "../data/ClientsData";
 
@@ -130,7 +130,7 @@ const ClientsPage = () => {
   style={{  textShadow: '0.8px 0.8px 0 #eec317, -0.8px -0.8px 0 white, 0.8px -0.8px 0 white, -0.8px 0.8px 0 #eec317',}}>
     Our Reputed Clients
   </h2>
-  <p className=" italic text-lg mb-8 text-center">
+  <p className=" italic text-lg mb-8 text-center text-black dark:text-white">
     We partner with leading organizations to deliver world-class solutions and
     support. <br />
     <span className="text-yellow-400  text-xl">
@@ -138,12 +138,12 @@ const ClientsPage = () => {
     </span>
   </p>
 
-  <div className="flex items-center justify-center bg-white/20 md:p-10 p-5 mx-10 md:mx-0  rounded-md shadow-inner w-[95vw]">
+  <div className="flex items-center justify-center dark:bg-white/20 bg-[#0060b5] md:p-10 p-5 mx-10 md:mx-0  rounded-md shadow-inner w-[95vw]">
   <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-x-4 md:gap-x-20 gap-y-12 w-11/12 max-w-4xl">
       {clientLogos.map((img, index) => (
         <div
           key={index}
-          className="flex justify-center items-center h-20 p-2 border-black bg-white shadow-lg shadow-black border-2 rounded-md transition-all duration-700 ease-in-out hover:scale-110"
+          className="flex justify-center items-center h-20 p-2 border-black bg-white shadow-lg shadow-black border-2 rounded-md transition-all duration-700 ease-in-out hover:scale-110  cursor-pointer"
         >
           <img
             src={img.src}
@@ -178,7 +178,7 @@ const ClientsPage = () => {
         {WeOffersToClient.map((item, index) => (
           <div
             key={index}
-            className="relative flex flex-col bg-black/50 shadow-lg gap-2 p-4 group transition-transform duration-300 transform hover:scale-110 rounded-lg"
+            className="relative flex flex-col dark:bg-black/50 bg-black/80 shadow-lg gap-2 dark:p-4  p-2 group transition-transform duration-300 transform hover:scale-110 rounded-lg"
           >
             <div>
               <img

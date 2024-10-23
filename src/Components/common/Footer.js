@@ -25,22 +25,25 @@ const Footer = () => {
       <span className="absolute inset-y-0 -left-1 w-full bg-[#0060b5] translate-x-[-100%] group-hover:translate-x-1 transition-transform duration-500 ease-in-out"></span>
     </a>
   );
-  const footerBgColor = currentLocation.pathname != "/recruitment" ? "bg-transparent" : "bg-blue-200";
+  const footerBgColor = (currentLocation.pathname !== "/recruitment" && currentLocation.pathname !== '/recruitment-services') ? "bg-transparent" : "bg-blue-200";
+
+  const footerBgColor2 = (currentLocation.pathname !== "/recruitment" && currentLocation.pathname !== '/recruitment-services') ? "bg-transparent" : "";
+  
 
   return (
-    <footer className={`flex justify-center items-center  text-white py-5 ${footerBgColor}`}>
+    <footer className={`flex justify-center items-center  text-white dark:py-5 dark:bg-transparent`}>
        {/* <div className=" bg-blue-950 mx-10 rounded-md border-2 shadow-lg shadow-black border-[#0060b5]"></div> */}
       {/* <div className="  mx-10 rounded-md border-2   shadow-lg shadow-black border-[#0060b5]"> */}
       {/* <div class=" mx-10   shadow-black border-[#0060b5] bg-blue-900 backdrop-blur-lg rounded-lg shadow-lg border border-white/70 p-6"> */}
-      <div class=" mx-10   shadow-black backdrop-blur-lg rounded-lg shadow-lg border border-white/70 p-6">
+      <div class={`bg-blue-900 dark:mx-10   shadow-black dark:bg-black/50  dark:backdrop-blur-lg dark:rounded-lg shadow-lg border border-white/70 p-6`}>
   
         <div className="grid grid-cols-1  md:grid-cols-4 gap-x-8 md:px-10 px-5 pt-10 relative overflow-hidden">
      
           <div className="flex flex-col items-center">
             <div className="animate-bounce flex duration-1000 justify-center items-end h-24 w-24 ">
-              <div className="bg-white  animate-alternate-colors rounded-full border-2 border-white p-2" style={{ boxShadow: "0 4px 0 rgba(0, 0, 0, 0.2)" }}>
+              <div className="bg-white  animate-alternate-colors  " style={{ boxShadow: "0 4px 0 rgba(0, 0, 0, 0.2)" }}>
            
-                <img src={Logo} alt="" className="h-16 w-16 rounded-full  "/>
+                <img src={Logo} alt="" className="h-16 w-16  "/>
               </div>
             </div>
 
@@ -55,7 +58,7 @@ const Footer = () => {
             <h4 className="md:text-lg  text-xl text-center md:text-left font-semibold mb-4 border-b border-gray-700 pb-2 mt-10 md:mt-0">Company</h4>
             <ul className=" space-y-[2px]">
               <li><AnimatedLink href="/aboutB3" text="About B3" /></li>
-              <li><AnimatedLink href="/contactus" text="Contact" /></li>
+              <li><AnimatedLink href="/contact" text="Contact" /></li>
               <li><AnimatedLink href="/Careers" text="Careers" /></li>
               <li><AnimatedLink href="/clients" text="Clients" /></li>
             </ul>
@@ -80,22 +83,25 @@ const Footer = () => {
             
             <p className=" text-base">912 | 1st Floor | Building No 9 | Solitaire Corporate Park | Andheri Kurla Road | Chakala | Andheri (East) | Mumbai - 400 093</p>
             <div className="flex space-x-4 items-end md:mt-8 mt-2 animate-pulse">
-              {[
-                { href: "/facebook", icon: <FacebookIcon />, color: "text-blue-600" },
-                { href: "/instagram", icon: <InstagramIcon />, color: "text-pink-500" },
-                { href: "/linkedin", icon: <LinkedInIcon />, color: "text-blue-700" },
-                { href: "/twitter", icon: <TwitterIcon />, color: "text-blue-400" }
-              ].map(({ href, icon, color }, index) => (
-                <div key={index} className="relative group">
-                  <a href={href} className={`${color} hover:${color.replace('-600', '-400')} transition-colors duration-300`}>
-                    {icon}
-                  </a>
-                  <span className="absolute bottom-full mb-0 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 text-sm text-white transition-opacity duration-300">
-                    {href.replace("/", "").charAt(0).toUpperCase() + href.replace("/", "").slice(1)}
-                  </span>
-                </div>
-              ))}
+            {[
+  { href: "https://www.facebook.com/people/Bitbybit-Solutions/100076458850415/", name: 'Facebook', icon: <FacebookIcon />, color: "text-blue-600" },
+  { href: "https://www.instagram.com/bitbybitsolutions_/", name: 'Instagram', icon: <InstagramIcon />, color: "text-pink-500" },
+  { href: "https://www.linkedin.com/company/bitbybit-solutions/", name: 'LinkedIn', icon: <LinkedInIcon />, color: "text-blue-700" },
+  { href: "https://x.com/i/flow/login?redirect_after_login=%2FBitByBitSoluti1", name: 'Twitter', icon: <TwitterIcon />, color: "text-blue-400" }
+].map(({ href, icon, color, name }, index) => (
+  <div key={index} className="relative group">
+    <a href={href} className={`${color} hover:${color.replace('-600', '-400')} transition-colors duration-300`}>
+      {icon}
+    </a>
+    <span className="absolute bottom-full mb-0 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 text-sm text-white transition-opacity duration-300 bg-[#0060b5] p-1 rounded-md">
+      {name}
+    </span>
+  </div>
+))}
+
+               {/* {href.replace("/", "").charAt(0).toUpperCase() + href.replace("/", "").slice(1)} */}
             </div>
+
             </div>
             </div>
           </div>

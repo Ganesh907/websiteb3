@@ -12,14 +12,14 @@ const ValueBlock = ({ Icon, iconColor, borderColor, stepNumber, title, descripti
     <div className='h-28 w-28 scale-75 md:scale-100 rounded-full bg-white shadow-2xl shadow-black flex justify-center items-center'>
       <Icon sx={{ color: 'black', fontSize: '90px', border: `6px solid ${iconColor}`, borderRadius: '50px', padding: '10px' }} />
     </div>
-    <div className='h-36 w-1 bg-transparent hidden md:block border-l-2 border-dotted border-white'></div>
+    <div className='h-36 w-1 bg-transparent hidden md:block border-l-2 border-dotted border-black dark:border-white'></div>
     <div
       className={`h-10 w-10 hidden md:flex justify-center items-center rounded-full font-bold ${stepNumber % 2 === 0 ? 'bg-yellow-400 text-black' : 'bg-[#0060b5] text-white'} border-2 border-white shadow-sm shadow-black animate-pulse`}
     >
       {stepNumber}
     </div>
-    <h1 className='text-xl uppercase my-2 font-semibold'>{title}</h1>
-    <p className='italic border-t-2 rounded-2xl py-2' style={{ backgroundColor: 'rgb(0,0,0,0.3)', borderTopColor: borderColor, borderTopWidth: '2px' }}>
+    <h1 className='text-xl uppercase my-2 font-semibold text-black dark:text-white'>{title}</h1>
+    <p className='italic border-t-2 rounded-2xl py-2' style={{ backgroundColor: 'rgb(0,0,0,0.5)', borderTopColor: borderColor, borderTopWidth: '2px' }}>
       {description}
     </p>
   </div>
@@ -29,7 +29,7 @@ const CoreValues = () => {
  
   return (
     <div className='flex flex-col justify-center items-center'>
-      <h1 className='text-[#0060b5] text-3xl font-bold uppercase text-center mt-16 mb-5 border-y-2 py-2 px-5 border-white'>
+      <h1 className='text-[#0060b5] text-3xl font-bold uppercase text-center mt-16 mb-5 border-y-2 py-2 px-5 border-black dark:border-white'>
         Core <span className='text-yellow-400'>Values</span>
       </h1>
       <div className='text-white md:h-[80vh] w-[90vw] gap-y-10 px-5 md:px-0 flex flex-col md:flex-row justify-between items-center text-center mb-10 md:mb-0'>

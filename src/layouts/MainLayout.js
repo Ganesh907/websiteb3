@@ -1,15 +1,17 @@
 import React from 'react';
-import Navbar from '../Components/commoncomponents/Navbar';
-import Footer from '../Components/commoncomponents/Footer';
+import Navbar from '../Components/common/Navbar';
+import Footer from '../Components/common/Footer';
 import { Outlet } from 'react-router-dom';
 import { Suspense } from 'react';
-import Spinner from '../Components/commoncomponents/Spinner';
-import { ScrollToTop } from '../Components/commoncomponents/ScrollToTop';
+import Spinner from '../Components/common/Spinner';
+import { ScrollToTop } from '../Components/common/ScrollToTop';
+import ThemeProvider from '../Components/common/ThemeProvider';
 
 export const MainLayout = () => {
   return (
     <div>
       <Navbar />
+      <ThemeProvider/>
       {/* Wrap Outlet with Suspense to show Spinner while loading lazy components */}
       <ScrollToTop/>
         <Outlet />

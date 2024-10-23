@@ -5,8 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1)), 
-  /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),  */
+  background-image: 
+
   url('./Assets/Images/ContactUSImg4.jpg');
 background-size: cover;
 background-position: center;
@@ -14,6 +14,9 @@ background-repeat: no-repeat;
 min-height: 100vh;
 
 }
+
+  /* linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1)),  */
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),  */
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

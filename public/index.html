@@ -51,5 +51,18 @@
     <script>
       AOS.init();
     </script>
+     <script>
+      (function() {
+        const storedTheme = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (storedTheme) {
+          document.documentElement.classList.add(storedTheme);
+        } else if (prefersDark) {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.add('light');
+        }
+      })();
+    </script>
   </body>
 </html>

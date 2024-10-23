@@ -13,8 +13,8 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
-import Footer from "../../Components/commoncomponents/Footer";
-import HeroSection from "../../Components/commoncomponents/HeroSection";
+import Footer from "../../Components/common/Footer";
+import HeroSection from "../../Components/common/HeroSection";
 import "./TechServicesPage.css";
 import delivery from "../../Assets/Images/delivery.png";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
@@ -247,7 +247,21 @@ const TechHomePage = () => {
 
 <PromiseCardsContainer/>
 
+{/* <p className='text-lg italic text-[#0060b5] dark:text-white text-semibold text-center m-20 py-5  border-y-2 border-black dark:border-white'>
+       "    At BitByBit, we’re all about leveling up your tech game! Whether you need to boost your online vibe or streamline your operations, our squad is here to help you slay your goals with cutting-edge solutions! "
+        </p> */}
 
+<p className='text-lg text-[#0060b5] dark:text-white bg-white dark:bg-black/30 font-semibold text-center my-20 mx-14 py-5 border-y-2 border-black dark:border-white'>
+  <span className="block mb-2 text-3xl font-bold italic" style={{ fontFamily: 'Playfair Display' }}>
+    🚀 
+    <span className='italic text-[#0060b5]'> Elevate Your <span className='text-black dark:text-white'>Digital Experience </span>!</span> 
+    🚀
+  </span>
+  <span className="block">
+    " Whether you’re looking to boost your online vibe or streamline your ops, our squad’s got your back with cutting-edge solutions! "
+  </span>
+</p>
+ 
     </div>
   );
 };
