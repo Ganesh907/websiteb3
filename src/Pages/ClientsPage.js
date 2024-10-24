@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import HeroSection from "../Components/common/HeroSection";
 import Techclient from "../Assets/Videos/techclient.mp4";
 import { clientLogos, clientTestimonials, WeOffersToClient } from "../data/ClientsData";
+import { useTheme } from "../Components/common/ThemeProvider";
 
 
 const ClientsPage = () => {
@@ -10,20 +11,21 @@ const ClientsPage = () => {
   const [value, setValue] = useState(0);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
+  const { theme, toggleTheme } = useTheme();
 
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.scrollY;
-      const maxScroll = 50;
-      const radius = Math.min((scrollTop / maxScroll) * 50, 50);
-      setBottomRadius(`${radius}%`);
-      setScrollHeading(scrollTop > 30 ? "ml-[30%]" : "ml-0");
-    };
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const scrollTop = window.scrollY;
+  //     const maxScroll = 50;
+  //     const radius = Math.min((scrollTop / maxScroll) * 50, 50);
+  //     setBottomRadius(`${radius}%`);
+  //     setScrollHeading(scrollTop > 30 ? "ml-[30%]" : "ml-0");
+  //   };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // }, []);
 
 
 
@@ -46,9 +48,21 @@ const ClientsPage = () => {
   };
 
 
+
+
+  const [hoveredIndex, setHoveredIndex] = useState(null); // Track hovered image index
+
+  const handlePopoverOpen = (index) => {
+    setHoveredIndex(index);
+  };
+
+  const handlePopoverClose = () => {
+    setHoveredIndex(null);
+  };
+
   return (
     <>
-    
+
 
       <HeroSection videoUrl={Techclient} videoOpacity={20} MarginAnimtion={true}>
         <div className='lg:w-[50vw] w-[90vw] flex justify-end items-end'>
@@ -111,7 +125,7 @@ const ClientsPage = () => {
                     {item.client}
                   </h3>
 
-                
+
                 </div>
               ))}
             </div>
@@ -121,43 +135,78 @@ const ClientsPage = () => {
       </HeroSection>
 
 
-    
+
 
 
 
       <div className="flex flex-col items-center justify-center py-10">
-  <h2 className=" text-3xl md:text-5xl text-[#0060b5] my-6 font-semibold drop-shadow-lg"
-  style={{  textShadow: '0.8px 0.8px 0 #eec317, -0.8px -0.8px 0 white, 0.8px -0.8px 0 white, -0.8px 0.8px 0 #eec317',}}>
-    Our Reputed Clients
-  </h2>
-  <p className=" italic text-lg mb-8 text-center text-black dark:text-white">
-    We partner with leading organizations to deliver world-class solutions and
-    support. <br />
-    <span className="text-yellow-400  text-xl">
-      " Join us in shaping the future together "
-    </span>
-  </p>
-
-  <div className="flex items-center justify-center dark:bg-white/20 bg-[#0060b5] md:p-10 p-5 mx-10 md:mx-0  rounded-md shadow-inner w-[95vw]">
-  <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-x-4 md:gap-x-20 gap-y-12 w-11/12 max-w-4xl">
-      {clientLogos.map((img, index) => (
-        <div
-          key={index}
-          className="flex justify-center items-center h-20 p-2 border-black bg-white shadow-lg shadow-black border-2 rounded-md transition-all duration-700 ease-in-out hover:scale-110  cursor-pointer"
+        <h2 className=" text-3xl md:text-5xl text-[#0060b5] uppercase dark:text-white  my-6 font-bold drop-shadow-lg"
+          // data-aos="zoom-in"
+          // data-aos-duration="1000"
+          // data-aos-delay="100"
+          // data-aos-offset="100"
+          style={{
+            fontFamily: 'Goudy Old Style',
+            letterSpacing: '0.05em',
+            // textShadow: '0.8px 0.8px 0 #eec317, -0.8px -0.8px 0 white, 0.8px -0.8px 0 white, -0.8px 0.8px 0 #eec317'
+          }}
         >
-          <img
-            src={img.src}
-            className={`w-auto ${img.height || ""}`}
-            alt={img.alt}
-            data-aos={window.innerWidth <= 768 ? "fade-up" : "fade-left"}
-            data-aos-delay={img.delay}
-            data-aos-duration="1500"
-          />
+          Our Reputed Clients
+        </h2>
+        <p className=" italic text-lg mb-8 text-center text-black dark:text-white">
+          We partner with leading organizations to deliver world-class solutions and
+          support. <br />
+          <span className="dark:text-yellow-400  text-xl">
+            " Join us in shaping the future together "
+          </span>
+        </p>
+
+
+        <div className="flex items-center justify-center dark:bg-white/20 bg-[#0060b5] md:p-10 p-5 mx-10 md:mx-0  rounded-md shadow-inner w-[95vw]">
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-x-4 md:gap-x-20 gap-y-12 w-11/12 max-w-4xl">
+            {clientLogos.map((img, index) => (
+              <div
+                key={index}
+                className="relative"
+                onMouseEnter={() => handlePopoverOpen(index)} // Open popover on hover
+                onMouseLeave={handlePopoverClose} // Close popover when mouse leaves
+              >
+                <div className="flex justify-center items-center h-20 p-2 border-black  dark:bg-black bg-white dark:shadow-md dark:shadow-black shadow-lg shadow-black border-2 rounded-md transition-all duration-700 ease-in-out hover:scale-110 cursor-pointer">
+                  <img
+                    src={theme === 'dark' ? img.srcDark : img.srcLight}
+
+                    className={`w-auto  ${img.height || ""}`}
+                    alt={img.alt}
+                    data-aos={window.innerWidth <= 768 ? "fade-up" : "fade-left"}
+                    data-aos-delay={img.delay}
+                    data-aos-duration="1500"
+                    style={{
+                      filter: (theme === 'dark' && (img.alt == 'AQM' || img.alt == 'Greenland')) ? 'brightness(0) invert(1)' : ''
+                    }}
+                  />
+                </div>
+                {hoveredIndex === index && (
+                  <div className="absolute left-1/2 top-0 w-72 transform -translate-x-1/2 -translate-y-full -mt-2 mb-20 p-2 dark:text-white border-2 border-black text-black bg-white dark:border-white dark:bg-black dark:border rounded-lg text-sm shadow-lg z-40">
+                    {img.content} {/* Your custom content here */}
+                    <div className="arrow" style={{
+                      position: 'absolute',
+                      top: '100%', // Positioning the arrow at the bottom of the popover
+                      left: '50%',
+                      marginLeft: '-5px',
+                      borderWidth: '5px',
+                      borderStyle: 'solid',
+                      borderColor: theme === 'dark' ? 'white transparent transparent transparent' : 'black transparent transparent transparent',
+
+                    }} />
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+
+
         </div>
-      ))}
-    </div>
-  </div>
-</div>
+      </div>
 
 
 
@@ -167,49 +216,59 @@ const ClientsPage = () => {
           data-aos-duration="1000"
           data-aos-delay="100"
           data-aos-offset="100"
-          className=" text-[#0060b5]  text-xl md:text-5xl  font-semibold"
-        >
+
+          className=" text-[#0060b5]  text-lg dark:text-white  text-center uppercase md:text-4xl  font-bold"
+          style={{
+            fontFamily: 'Goudy Old Style',
+            letterSpacing: '0.05em',
+            // textShadow: '0.8px 0.8px 0 #eec317, -0.8px -0.8px 0 white, 0.8px -0.8px 0 white, -0.8px 0.8px 0 #eec317',}}
+
+          }}    >
           Redefine Your Success Story With Us
         </h1>
       </div>
 
       <div className="flex w-auto gap-10 justify-center mt-10">
-      <div className="lg:grid-cols-3  md:grid-cols-2 grid grid-cols-1 gap-6 p-4">
-        {WeOffersToClient.map((item, index) => (
-          <div
-            key={index}
-            className="relative flex flex-col dark:bg-black/50 bg-black/80 shadow-lg gap-2 dark:p-4  p-2 group transition-transform duration-300 transform hover:scale-110 rounded-lg"
-          >
-            <div>
-              <img
-                src={item.src}
-                className="w-full h-[185px] border-b-2 border-yellow-400 object-cover rounded-lg p-0 m-0 shadow-none opacity-70"
-                alt={item.title}
-              />
-              <div className={`absolute inset-0 flex flex-col items-start justify-end p-6 rounded-lg text-white`}>
-                <div
-                  className="w-full p-2 rounded-md"
-                  data-aos="fade-up"
-                  data-aos-duration="3000"
-                  style={{ backgroundColor: "rgba(0,0,0,0.7)" }}
-                >
-                  <h1 className="text-xl font-bold text-yellow-400 drop-shadow-xl">
-                    {item.title}
-                  </h1>
-                  <p className="text-sm italic drop-shadow-lg">
-                    {item.description}
-                  </p>
+        <div className="lg:grid-cols-3  md:grid-cols-2 grid grid-cols-1 gap-6 p-4">
+          {WeOffersToClient.map((item, index) => (
+            <div
+              key={index}
+              className="relative flex flex-col dark:bg-black/50 bg-[#0060b5] md:w-[350px]  h-full shadow-lg gap-2 dark:p-4  p-2 group transition-transform duration-300 transform hover:scale-110 rounded-lg"
+            >
+              <div>
+                <img
+                  src={item.src}
+                  className="w-full h-[185px] border-2 dark:border-0  dark:border-b-2 dark:border-yellow-400 border-white object-cover rounded-lg p-0 m-0 shadow-none dark:opacity-70"
+                  alt={item.title}
+                />
+                <div className={`absolute inset-0 flex flex-col items-start justify-end dark:p-6 p-4 rounded-lg text-black dark:text-white`}>
+                  <div
+                    className="w-full p-2 rounded-md "
+                    data-aos="fade-up"
+                    data-aos-duration="3000"
+
+                    style={{
+                      backgroundColor: theme === 'dark' ? 'rgba(0,0,0,0.7)' : 'rgba(255, 255, 255, 0.9)',
+                    }}
+
+                  >
+                    <h1 className="text-xl font-bold dark:text-yellow-400 text-[#0060b5] drop-shadow-xl">
+                      {item.title}
+                    </h1>
+                    <p className="text-sm italic drop-shadow-lg">
+                      {item.description}
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
 
 
-    
-   
+
+
 
 
     </>

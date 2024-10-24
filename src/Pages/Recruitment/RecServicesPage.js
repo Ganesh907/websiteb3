@@ -353,7 +353,7 @@ const RecServicesPage = () => {
             <div className="md:flex md:flex-col  ">
               <div className="  ">
                 <h4 className=" md:text-center heading border-solid border-black font-bold text-[30px] smallcontaint ml-1  md:pl-60 md:pr-32 text-white ">
-                  Recruitment process outsourcing (RPO)
+                  Recruitment Process Outsourcing (RPO)
                 </h4>
                 <div className="md:pl-2  md:flex md:justify-center   ">
                   <ul className="text-white list-disc leading-loose font md:h-[275px] md:pt-10 md:pl-80 ml-1 md:w-[100%] md:line-break:anywhere">

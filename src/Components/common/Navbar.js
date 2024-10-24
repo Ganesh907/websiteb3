@@ -8,6 +8,7 @@ import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import { IconButton } from "@mui/material";
 import { useTheme } from './ThemeProvider';
+import { Scale } from "@mui/icons-material";
 
 const techitems = [
   { title: "Home", path: "/technology" },
@@ -283,7 +284,7 @@ useEffect(() => {
             Contact
           </NavLink>
         </li>
-        {/* <li>
+        <li>
           <NavLink
             to="/blogs"
             className={({ isActive }) =>
@@ -296,27 +297,32 @@ useEffect(() => {
           >
             Blogs
           </NavLink>
-        </li> */}
+        </li>
 
 <li>
 
 <IconButton
-        sx={{
-          ml: 1,
-          padding: '2px',
-          borderRadius: '30px',
-          backgroundColor: theme === 'dark' ? 'gray' : 'white',
-          border: theme === 'dark' ? '2px solid white' : '2px solid black',
-        }}
-        onClick={toggleTheme}
-        color="primary"
-      >
-        {theme === 'dark' ? (
-          <LightModeIcon sx={{ color: 'yellow' }} />
-        ) : (
-          <DarkModeIcon sx={{ color: 'black' }} />
-        )}
-      </IconButton>
+  sx={{
+    ml: 1,
+    padding: '2px',
+    borderRadius: '30px',
+    backgroundColor: theme === 'dark' ? 'gray' : 'white',
+    border: theme === 'dark' ? '2px solid white' : '2px solid black',
+    "&:hover": {
+      transform: "scale(1.1)", // Correct way to apply scaling on hover
+      transition: "transform 0.3s ease-in-out", // Optional: Adds smooth transition effect
+    },
+  }}
+  onClick={toggleTheme}
+  color="primary"
+>
+  {theme === 'dark' ? (
+    <LightModeIcon sx={{ color: 'yellow' }} />
+  ) : (
+    <DarkModeIcon sx={{ color: 'black' }} />
+  )}
+</IconButton>
+
         </li>
 
       </ul>

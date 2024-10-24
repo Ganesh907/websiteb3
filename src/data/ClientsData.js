@@ -1,26 +1,33 @@
-import hamarakendra from "../Assets/Images/hamarakendra.png";
-import ips from "../Assets/Images/IpsNewLogo.png";
-import suntrap from "../Assets/Images/suntrap.83df4c98.png";
-import publicis from "../Assets/Images/publicis-sapient.jpg";
-import accenture from "../Assets/Images/Accenture.png";
-import capgemini from "../Assets/Images/CapgeminiLogo.svg";
-import intertrust from "../Assets/Images/intertrust.jpg";
-import qualityClient from "../Assets/Images/qualityclient.png";
-import care from "../Assets/Images/care.png";
-import support from "../Assets/Images/support.png";
-import personnel from "../Assets/Images/personnel.png";
-import innovation from "../Assets/Images/innovation.png";
-import commitment from "../Assets/Images/commitment.png";
-import highquality from "../Assets/Images/highquality3.jpeg"
-import onbudget from "../Assets/Images/ontime.jpeg"
-import CitiusTech from "../Assets/Images/CitiusTechLogo.jpg"
-import AQM from "../Assets/Images/AQMNewLogo.jpg"
-import greenland from "../Assets/Images/greenland.jpg"
-import NSE from "../Assets/Images/NSE.jpg"
-import SSC from "../Assets/Images/SSandC.png"
+import hamarakendraLight from "../Assets/Images/clientspage/clientslogos/hamarakendra.png";
+import ipsLight from "../Assets/Images/clientspage/clientslogos/IpsNewLogo.png";
+import suntrapLight from "../Assets/Images/clientspage/clientslogos/suntrap.83df4c98.png";
+import publicisLight from "../Assets/Images/clientspage/clientslogos/publicisLight.svg";
+import publicisDark from "../Assets/Images/clientspage/clientslogos/publicis-sapient-dark.svg";
+import accentureLight from "../Assets/Images/clientspage/clientslogos/Accenture.png";
+import accentureDark from "../Assets/Images/clientspage/clientslogos/ACN_BIG.D.png";
+import capgeminiLight from "../Assets/Images/clientspage/clientslogos/capgemini.png";
+import intertrustDark from "../Assets/Images/clientspage/clientslogos/intertrust2.webp";
+import intertrustLight from "../Assets/Images/clientspage/clientslogos/intertrust.png";
+import citiustechLight from "../Assets/Images/clientspage/clientslogos/CitiusTechLogo.jpg"
+import aqmLight from "../Assets/Images/clientspage/clientslogos/AQMLOGO.png"
+import greenlandLight from "../Assets/Images/clientspage/clientslogos/greenlandLight.png"
+import nseLight from "../Assets/Images/clientspage/clientslogos/NSE3.png"
+import sscLight from "../Assets/Images/clientspage/clientslogos/ss-c-technologies-logo.svg"
+import SSandCDark from "../Assets/Images/clientspage/clientslogos/SSandCDark.png"
+
+import qualityClient from "../Assets/Images/clientspage/clientwork/qualityclient.png";
+import care from "../Assets/Images/clientspage/clientwork/care.png";
+import support from "../Assets/Images/clientspage/clientwork/support.png";
+import personnel from "../Assets/Images/clientspage/clientwork/personnel.png";
+import innovation from "../Assets/Images/clientspage/clientwork/innovation.png";
+import commitment from "../Assets/Images/clientspage/clientwork/commitment.png";
+import highquality from "../Assets/Images/clientspage/clientwork/highquality3.jpeg"
+import onbudget from "../Assets/Images/clientspage/clientwork/ontime.jpeg"
+import { useTheme } from "../Components/common/ThemeProvider";
 
 
 export const clientTestimonials = [
+
         {
           review: "Partnering with them has significantly improved our project efficiency.",
           client: "- Hamarakendra"
@@ -34,20 +41,117 @@ export const clientTestimonials = [
           client: "- SunTrap"
         }
       ]
+      // export const clientLogos = [
+        
+      //   { src: ips, alt: "IPS", delay: "0", height: "h-16" },
+      //   { src: capgemini, alt: "Capgemini", delay: "400" },
+      //   { src: accenture, alt: "Accenture", delay: "800" },
+      //   { src: hamarakendra, alt: "Hamarakendra", delay: "1200", height: "h-16" },
+      //   { src: NSE, alt: "NSE", delay: "100", height: "h-10" },
+      //   { src: intertrust, alt: "Intertrust", delay: "500", height: "h-16" },
+      //   { src: suntrap, alt: "Suntrap", delay: "900" },
+      //   { src: publicis, alt: "Publicis", delay: "1300", height: "h-16" },
+      //   { src: AQM, alt: "AQM", delay: "0" },
+      //   { src: SSC, alt: "SSC", delay: "400" },
+      //   { src: CitiusTech, alt: "CitiusTech", delay: "800" },
+      //   { src: greenland, alt: "Greenland", delay: "1200", height: "bg-red-200" },
+      // ];
+  
+
       export const clientLogos = [
-        { src: ips, alt: "IPS", delay: "0", height: "h-16" },
-        { src: capgemini, alt: "Capgemini", delay: "400" },
-        { src: accenture, alt: "Accenture", delay: "800" },
-        { src: hamarakendra, alt: "Hamarakendra", delay: "1200", height: "h-16" },
-        { src: NSE, alt: "NSE", delay: "100", height: "h-16" },
-        { src: intertrust, alt: "Intertrust", delay: "500", height: "h-16" },
-        { src: suntrap, alt: "Suntrap", delay: "900" },
-        { src: publicis, alt: "Publicis", delay: "1300", height: "h-16" },
-        { src: AQM, alt: "AQM", delay: "200" },
-        { src: SSC, alt: "SSC", delay: "600" },
-        { src: CitiusTech, alt: "CitiusTech", delay: "1000" },
-        { src: greenland, alt: "Greenland", delay: "1400", height: "bg-red-200" },
-      ];
+        {
+            srcLight: ipsLight,
+            srcDark: ipsLight,
+            alt: "IPS",
+            delay: "0",
+            height: "h-16",
+            content: "Worked on cloud integration solutions and software development."
+        },
+        {
+            srcLight: capgeminiLight,
+            srcDark: capgeminiLight,
+            alt: "Capgemini",
+            delay: "300",
+            content: "Collaborated on digital transformation projects for various sectors."
+        },
+        {
+            srcLight: accentureLight,
+            srcDark: accentureDark,
+            alt: "Accenture",
+            delay: "600",
+            content: "Provided data analytics and business strategy consulting."
+        },
+        {
+            srcLight: hamarakendraLight,
+            srcDark: hamarakendraLight,
+            alt: "Hamarakendra",
+            delay: "900",
+            height: "h-16",
+            content: "Developed community engagement platforms and mobile apps."
+        },
+        {
+            srcLight: nseLight,
+            srcDark: nseLight,
+            alt: "NSE",
+            delay: "100",
+            height: "h-10",
+            content: "Assisted in enhancing trading algorithms and system architecture."
+        },
+        {
+            srcLight: intertrustLight,
+            srcDark: intertrustDark,
+            alt: "Intertrust",
+            delay: "400",
+            height: "h-16",
+            content: "Implemented cybersecurity solutions and compliance strategies."
+        },
+        {
+            srcLight: suntrapLight,
+            srcDark: suntrapLight,
+            alt: "Suntrap",
+            delay: "700",
+            content: "Worked on renewable energy management systems."
+        },
+        {
+            srcLight: publicisLight,
+            srcDark: publicisDark,
+            alt: "Publicis",
+            delay: "1000",
+            height: "h-10",
+            content: "Created marketing analytics tools and consumer insights platforms."
+        },
+        {
+            srcLight: aqmLight,
+            srcDark: aqmLight,
+            alt: "AQM",
+            delay: "0",
+            
+            content: "Developed quality management software for production systems."
+        },
+        {
+            srcLight: sscLight,
+            srcDark: sscLight,
+            alt: "SSC",
+            delay: "300",
+            height: "h-12",
+            content: "Provided supply chain optimization solutions and ERP integrations."
+        },
+        {
+            srcLight: citiustechLight,
+            srcDark: citiustechLight,
+            alt: "CitiusTech",
+            delay: "600",
+            content: "Worked on healthcare IT solutions and patient data management."
+        },
+        {
+            srcLight: greenlandLight,
+            srcDark: greenlandLight,
+            alt: "Greenland",
+            delay: "900",
+            height: "dark:mix-blend-lighten",
+            content: "Assisted in agricultural tech innovations and sustainability practices."
+        }
+    ];
     
     
       export const WeOffersToClient = [

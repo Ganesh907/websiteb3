@@ -41,7 +41,7 @@ const TechServicesPage = (props) => {
     { text: "Android/kotlin", image: AndroidKotlin },
     { text: "Flutter", image: Flutter },
     { text: "Full Stack Development", image: FullStackDevelopment},
-    { text: "Data science / ML", image: DataScienceML },
+    // { text: "Data science / ML", image: DataScienceML },
     { text: "DevOps", image: DevOps },
     { text: "Microsoft Azure", image: MicrosoftAzure },
     { text: "Mongo DB", image: MongoDB },
