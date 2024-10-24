@@ -1,20 +1,21 @@
 import { useRoutes } from "react-router-dom";
-import AppRoutes from "./routes/Router"; // Import the Routes
-import Spinner from "./Components/common/Spinner";
+import AppRoutes from './routes/Router'
 import { Suspense } from "react";
-import ThemeProvider from "./Components/common/ThemeProvider";
+import ThemeProvider from "./components/common/ThemeProvider";
+import Spinner from "./components/common/Spinner";
 
 function App() {
+
   const routing = useRoutes(AppRoutes);
 
   return (
     <ThemeProvider>
-    <div  className="bg-blue-50 dark:bg-transparent">
+      <div className="bg-blue-50 dark:bg-transparent">
 
-       <Suspense fallback={<Spinner />}>
-      {routing}
-      </Suspense>
-    </div>
+        <Suspense fallback={<Spinner />}>
+          {routing}
+        </Suspense>
+      </div>
     </ThemeProvider>
   );
 }

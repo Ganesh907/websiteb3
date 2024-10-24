@@ -4,9 +4,9 @@ import PersonIcon from '@mui/icons-material/Person';
 import PhoneIcon from '@mui/icons-material/Phone';
 import EmailIcon from '@mui/icons-material/Email';
 import MessageIcon from '@mui/icons-material/Message';
-import emailjs from 'emailjs-com'; // Import EmailJS
+import emailjs from 'emailjs-com';
 
-export const ContactForm = () => {
+const ContactForm = () => {
     const [formValues, setFormValues] = useState({
         fullName: '',
         email: '',
@@ -163,9 +163,9 @@ export const ContactForm = () => {
                                     },
                                 },
                                 inputProps: {
-                                    maxLength: 10, 
+                                    maxLength: 10,
                                     pattern: "[0-9]*",
-                                    inputMode: 'numeric', 
+                                    inputMode: 'numeric',
                                 },
                             }}
                             fullWidth
@@ -250,3 +250,5 @@ export const ContactForm = () => {
         </div>
     );
 };
+
+export default ContactForm;

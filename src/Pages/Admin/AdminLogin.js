@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { TextField, Button, Typography, Snackbar } from '@mui/material';
 import { Email, Lock } from '@mui/icons-material';
 import { Slide } from '@mui/material';
-import leftImage from '../../Assets/Images/blogs/blog2.jpg'; // Replace with your actual image path
+import leftImage from '../../assets/images/blogs/blog2.jpg';
 
 const AdminLogin = () => {
   const [email, setEmail] = useState('');
@@ -40,8 +40,6 @@ const AdminLogin = () => {
       setSuccessMessage('Login successful!');
       setErrors({});
       setOpenSnackbar(true);
-
-      // Handle login logic here (e.g., API call)
       console.log('Email:', email);
       console.log('Password:', password);
     } else {
@@ -59,12 +57,9 @@ const AdminLogin = () => {
   return (
     <div className="flex items-center justify-center min-h-screen bg-black/20">
       <div className="flex w-full max-w-5xl p-4 rounded-lg  overflow-hidden bg-black shadow-md shadow-white border-2 border-white  text-white  ">
-        {/* Image Section */}
         <div className="hidden md:flex md:w-1/2">
           <img src={leftImage} alt="Login Visual" className="w-full h-full object-cover" />
         </div>
-
-        {/* Login Form Section */}
         <div className="w-full md:w-1/2 flex items-center justify-center">
           <form
             className=" w-full max-w-md "
@@ -100,7 +95,7 @@ const AdminLogin = () => {
                 InputLabelProps={{
                   style: { color: 'white' }, // White text for label
                 }}
-                sx={{ "& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": { borderColor: "white" }}}
+                sx={{ "& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": { borderColor: "white" } }}
               />
             </div>
 
@@ -121,7 +116,7 @@ const AdminLogin = () => {
                 InputLabelProps={{
                   style: { color: 'white' }, // White text for label
                 }}
-                sx={{ "& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": { borderColor: "white" }}}
+                sx={{ "& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": { borderColor: "white" } }}
               />
             </div>
 

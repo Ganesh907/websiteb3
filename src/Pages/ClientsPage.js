@@ -1,33 +1,14 @@
 import { useEffect, useState } from "react";
-import HeroSection from "../Components/common/HeroSection";
-import Techclient from "../Assets/Videos/techclient.mp4";
+import HeroSection from "../components/common/HeroSection";
+import Techclient from "../assets/videos/techclient.mp4";
 import { clientLogos, clientTestimonials, WeOffersToClient } from "../data/ClientsData";
-import { useTheme } from "../Components/common/ThemeProvider";
-
+import { useTheme } from "../components/common/ThemeProvider";
 
 const ClientsPage = () => {
-  const [bottomRadius, setBottomRadius] = useState("0%");
-  const [scrollHeading, setScrollHeading] = useState("");
-  const [value, setValue] = useState(0);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
   const { theme, toggleTheme } = useTheme();
-
-
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     const scrollTop = window.scrollY;
-  //     const maxScroll = 50;
-  //     const radius = Math.min((scrollTop / maxScroll) * 50, 50);
-  //     setBottomRadius(`${radius}%`);
-  //     setScrollHeading(scrollTop > 30 ? "ml-[30%]" : "ml-0");
-  //   };
-
-  //   window.addEventListener("scroll", handleScroll);
-  //   return () => window.removeEventListener("scroll", handleScroll);
-  // }, []);
-
-
+  const [hoveredIndex, setHoveredIndex] = useState(null);
 
   useEffect(() => {
     let interval;
@@ -47,11 +28,6 @@ const ClientsPage = () => {
     setIsHovered(false);
   };
 
-
-
-
-  const [hoveredIndex, setHoveredIndex] = useState(null); // Track hovered image index
-
   const handlePopoverOpen = (index) => {
     setHoveredIndex(index);
   };
@@ -62,8 +38,6 @@ const ClientsPage = () => {
 
   return (
     <>
-
-
       <HeroSection videoUrl={Techclient} videoOpacity={20} MarginAnimtion={true}>
         <div className='lg:w-[50vw] w-[90vw] flex justify-end items-end'>
           <div className="relative w-full md:h-80 h-96  overflow-hidden mr-2 cursor-pointer mb-16">
@@ -134,21 +108,11 @@ const ClientsPage = () => {
         </div>
       </HeroSection>
 
-
-
-
-
-
       <div className="flex flex-col items-center justify-center py-10">
         <h2 className=" text-3xl md:text-5xl text-[#0060b5] uppercase dark:text-white  my-6 font-bold drop-shadow-lg"
-          // data-aos="zoom-in"
-          // data-aos-duration="1000"
-          // data-aos-delay="100"
-          // data-aos-offset="100"
           style={{
             fontFamily: 'Goudy Old Style',
             letterSpacing: '0.05em',
-            // textShadow: '0.8px 0.8px 0 #eec317, -0.8px -0.8px 0 white, 0.8px -0.8px 0 white, -0.8px 0.8px 0 #eec317'
           }}
         >
           Our Reputed Clients
@@ -168,8 +132,8 @@ const ClientsPage = () => {
               <div
                 key={index}
                 className="relative"
-                onMouseEnter={() => handlePopoverOpen(index)} // Open popover on hover
-                onMouseLeave={handlePopoverClose} // Close popover when mouse leaves
+                onMouseEnter={() => handlePopoverOpen(index)}
+                onMouseLeave={handlePopoverClose}
               >
                 <div className="flex justify-center items-center h-20 p-2 border-black  dark:bg-black bg-white dark:shadow-md dark:shadow-black shadow-lg shadow-black border-2 rounded-md transition-all duration-700 ease-in-out hover:scale-110 cursor-pointer">
                   <img
@@ -181,34 +145,29 @@ const ClientsPage = () => {
                     data-aos-delay={img.delay}
                     data-aos-duration="1500"
                     style={{
-                      filter: (theme === 'dark' && (img.alt == 'AQM' || img.alt == 'Greenland')) ? 'brightness(0) invert(1)' : ''
+                      filter: (theme === 'dark' && (img.alt === 'AQM' || img.alt === 'Greenland')) ? 'brightness(0) invert(1)' : ''
                     }}
                   />
                 </div>
                 {hoveredIndex === index && (
                   <div className="absolute left-1/2 top-0 w-72 transform -translate-x-1/2 -translate-y-full -mt-2 mb-20 p-2 dark:text-white border-2 border-black text-black bg-white dark:border-white dark:bg-black dark:border rounded-lg text-sm shadow-lg z-40">
-                    {img.content} {/* Your custom content here */}
+                    {img.content}
                     <div className="arrow" style={{
                       position: 'absolute',
-                      top: '100%', // Positioning the arrow at the bottom of the popover
+                      top: '100%',
                       left: '50%',
                       marginLeft: '-5px',
                       borderWidth: '5px',
                       borderStyle: 'solid',
                       borderColor: theme === 'dark' ? 'white transparent transparent transparent' : 'black transparent transparent transparent',
-
                     }} />
                   </div>
                 )}
               </div>
             ))}
           </div>
-
-
         </div>
       </div>
-
-
 
       <div className="flex items-center justify-center mt-12">
         <h1
@@ -216,14 +175,11 @@ const ClientsPage = () => {
           data-aos-duration="1000"
           data-aos-delay="100"
           data-aos-offset="100"
-
           className=" text-[#0060b5]  text-lg dark:text-white  text-center uppercase md:text-4xl  font-bold"
           style={{
             fontFamily: 'Goudy Old Style',
             letterSpacing: '0.05em',
-            // textShadow: '0.8px 0.8px 0 #eec317, -0.8px -0.8px 0 white, 0.8px -0.8px 0 white, -0.8px 0.8px 0 #eec317',}}
-
-          }}    >
+          }}>
           Redefine Your Success Story With Us
         </h1>
       </div>
@@ -265,12 +221,6 @@ const ClientsPage = () => {
           ))}
         </div>
       </div>
-
-
-
-
-
-
     </>
   );
 };

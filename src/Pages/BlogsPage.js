@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { blogData } from '../data/BlogData';
-import { useNavigate } from 'react-router-dom'; // Import the useNavigate hook
-import blog1 from '../Assets/Images/blogs/blog1.jpg';
+import { useNavigate } from 'react-router-dom';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import CommentIcon from '@mui/icons-material/Comment';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
@@ -14,44 +13,42 @@ const getInitials = (name) => {
 
 const Blogs = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
-  const navigate = useNavigate(); // Initialize the navigation
+  const navigate = useNavigate();
 
   const handleReadMore = (blog) => {
-    navigate(`/blog/${blog.id}`, { state: { blog } }); // Navigate to the blog route with state
+    navigate(`/blog/${blog.id}`, { state: { blog } });
   };
 
   const uniqueCategories = ['All', ...new Set(blogData.map(blog => blog.category))];
-  const filteredBlogs = selectedCategory === 'All' 
-    ? blogData 
+  const filteredBlogs = selectedCategory === 'All'
+    ? blogData
     : blogData.filter(blog => blog.category === selectedCategory);
 
   return (
     <div className="flex flex-col items-center mt-20 text-black">
       <div className="w-full">
-        {/* Tabs for category filtering */}
         <div className="mb-5 flex w-full justify-center space-x-4">
           {uniqueCategories.map((category) => (
             <button
               key={category}
               onClick={() => setSelectedCategory(category)}
-              className={`py-2 px-4 rounded-lg font-semibold transition-all duration-300 ${
-                selectedCategory === category
+              className={`py-2 px-4 rounded-lg font-semibold transition-all duration-300 ${selectedCategory === category
                   ? 'bg-gray-800 text-white text-lg transform scale-105'
                   : 'bg-gray-300 text-gray-700'
-              }`}
+                }`}
             >
               {category}
             </button>
           ))}
         </div>
 
-        {/* Blog Cards */}
+
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-10 gap-x-5 gap-y-8 place-items-center'>
           {filteredBlogs.map((blog, index) => (
             <div
               key={index}
               className='rounded-lg w-[400px] hover:scale-[1.015] transition-all duration-300 cursor-pointer'
-              onClick={() => handleReadMore(blog)} // Click handler to navigate to full blog
+              onClick={() => handleReadMore(blog)}
             >
               <div className='bg-white h-[450px] flex flex-col justify-between rounded-lg p-2'>
                 <img

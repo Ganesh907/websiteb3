@@ -1,9 +1,7 @@
 
-import blog1 from '../Assets/Images/blogs/blog1.jpg'
-import blog2 from '../Assets/Images/blogs/blog2.jpg'
-import blog3 from '../Assets/Images/blogs/blog3.jpg'
-
-
+import blog1 from '../assets/images/blogs/blog1.jpg'
+import blog2 from '../assets/images/blogs/blog2.jpg'
+import blog3 from '../assets/images/blogs/blog3.jpg'
 
 export const blogData = [
     {
@@ -95,50 +93,3 @@ export const blogData = [
         content: "This article discusses the emerging trends in outsourcing for 2024 and how businesses can adapt."
     }
 ];
-
-
-// export const blogPosts = [
-//     {
-//       id: 1,
-//       coverImg: blog1,
-//       author: {
-//         avatar: "https://via.placeholder.com/50",
-//         name: "Author Name",
-//       },
-//       readTime: "2 min Read",
-//       category: "Technology",
-//       title: "React JS: A Starter Guide",
-//       views: "1.2k",
-//       comments: 24,
-//       date: "Mon, Oct 15",
-//     },
-//     {
-//         id: 2,
-//         coverImg: blog2,
-//         author: {
-//           avatar: "https://via.placeholder.com/50",
-//           name: "Author Name",
-//         },
-//         readTime: "2 min Read",
-//         category: "Outsourcing",
-//         title: "Understanding JavaScript Promises",
-//         views: "1.2k",
-//         comments: 24,
-//         date: "Mon, Oct 15",
-//       },
-//       {
-//         id: 3,
-//         coverImg: blog3,
-//         author: {
-//           avatar: "https://via.placeholder.com/50",
-//           name: "Author Name",
-//         },
-//         readTime: "2 min Read",
-//         category: "Category",
-//         title: "Blog Post Title",
-//         views: "1.2k",
-//         comments: 24,
-//         date: "Mon, Oct 15",
-//       },
-//     // Add more posts as needed
-//   ];

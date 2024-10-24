@@ -1,24 +1,11 @@
 
 import React, { useEffect, useState } from 'react';
-import OurServices from '../Assets/Videos/OurServices.mp4';
-import HeroSection from '../Components/common/HeroSection';
-import SearchIcon from '@mui/icons-material/Search';
-import TrendingUpOutlinedIcon from '@mui/icons-material/TrendingUpOutlined';
+import HeroSection from '../components/common/HeroSection';
 import { Button } from '@mui/material';
-import { Padding } from '@mui/icons-material';
-
-import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
-import TypingText from '../Components/common/TypingText';
-import Footer from '../Components/common/Footer';
-import CareerVideo from '../Assets/Videos/CareerVideo.mp4'
-
+import TypingText from '../components/common/TypingText';
+import CareerVideo from '../assets/videos/CareerVideo.mp4'
 
 const CareerPage = () => {
-
- 
-
-
-
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const quotes = [
@@ -31,8 +18,7 @@ const CareerPage = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % quotes.length);
-    }, 15000); // Change quote every 3 seconds
-
+    }, 15000);
     return () => clearInterval(interval);
   }, [quotes.length]);
 
@@ -45,25 +31,22 @@ const CareerPage = () => {
         videoOpacity={20}
         MarginAnimtion={true}
       >
-
-
         <div className={`z-10 flex justify-end transition-all duration-300  items-end`}>
           <div className=" w-full drop-shadow-xl">
             <div className=" flex items-center">
               <h1 className="text-[#0060b5] text-5xl font-bold  mr-2 ">
-                Find Your 
-                  Job
-                  
-  <span
-    className="absolute bottom-0  left-0 w-[48vh] border-b-2 my-40 "
-    style={{
-      borderImage: "linear-gradient(to right, yellow, white, blue, black) 1",
-      animation: "gradientShift 6s infinite", // Adjust duration as needed
-    }}
-  ></span>
-  
-  <style>
-    {`
+                Find Your Job
+
+                <span
+                  className="absolute bottom-0  left-0 w-[48vh] border-b-2 my-40 "
+                  style={{
+                    borderImage: "linear-gradient(to right, yellow, white, blue, black) 1",
+                    animation: "gradientShift 6s infinite",
+                  }}
+                ></span>
+
+                <style>
+                  {`
       .relative {
         position: relative;
       }
@@ -79,19 +62,14 @@ const CareerPage = () => {
         }
       }
     `}
-  </style>
+                </style>
               </h1>
-              {/* <SearchIcon className="text-white scale-75" sx={{ fontSize: '60px' }} /> */}
+
             </div>
-
-
-
             <div className=" flex items-center">
               <h1 className="drop-shadow-lg text-white text-3xl my-5 font-bold  pb-1">
-                Transform Your <TypingText word="CAREER"  />
+                Transform Your <TypingText word="CAREER" />
               </h1>
-
-             
             </div>
 
             <div className="relative w-full h-24 overflow-hidden">
@@ -111,18 +89,6 @@ const CareerPage = () => {
         </div>
       </HeroSection>
 
-
-
-
-
-
-
-
-
-
-
-
-
       <div className='h-[80vh] w-full  flex flex-col justify-center items-center'>
         <h1 className='uppercase text-xl font-bold text-white'>for Job seekers</h1>
         <h1 className='text-7xl mt-10 drop-shadow-xl text-[#0060b5]'>Our Seeking Process</h1>
@@ -130,22 +96,9 @@ const CareerPage = () => {
         <Button variant="contained" size="large" sx={{ borderRadius: '20px', backgroundColor: '#0060b5' }}>
           Discover Jobs</Button>
       </div>
-
-
-
-
-
-
-<h1 className='h-[100vh] flex justify-center items-center text-4xl text-[var(--primary-color)]'>Work In Progress.....</h1>
-
-    
+      <h1 className='h-[100vh] flex justify-center items-center text-4xl text-[var(--primary-color)]'>Work In Progress.....</h1>
     </div>
-
   );
-
-
 }
-
-
 
 export default CareerPage;

@@ -1,21 +1,21 @@
 import React from 'react'
-import Permanent from "../../Assets/Videos/webdevelopment.mp4";
-import Recruiters from "../../Assets/Videos/Recruitment.mp4";
-import Temporary from "../../Assets/Videos/CareerVideo.mp4";
-import Permanenticon from "../../Assets/Images/Permanent1.png";
-import Permanenticon2 from "../../Assets/Images/Permanent2.png";
-import Permanenticon3 from "../../Assets/Images/Permanent3.png";
-import Temporaryicon from "../../Assets/Images/temporary.png";
-import Temporaryicon2 from "../../Assets/Images/temporary2.png";
-import Temporaryicon3 from "../../Assets/Images/temporary3.png";
-import Recruitericon from "../../Assets/Images/Recruitment.png";
-import Recruitericon2 from "../../Assets/Images/Recruitment2.png";
-import Recruitericon3 from "../../Assets/Images/Recruitment3.png";
+import Permanent from "../../assets/videos/webdevelopment.mp4";
+import Recruiters from "../../assets/videos/Recruitment.mp4";
+import Temporary from "../../assets/videos/CareerVideo.mp4";
+import Permanenticon from "../../assets/images/Permanent1.png";
+import Permanenticon2 from "../../assets/images/Permanent2.png";
+import Permanenticon3 from "../../assets/images/Permanent3.png";
+import Temporaryicon from "../../assets/images/temporary.png";
+import Temporaryicon2 from "../../assets/images/temporary2.png";
+import Temporaryicon3 from "../../assets/images/temporary3.png";
+import Recruitericon from "../../assets/images/Recruitment.png";
+import Recruitericon2 from "../../assets/images/Recruitment2.png";
+import Recruitericon3 from "../../assets/images/Recruitment3.png";
 
 const RecServices = () => {
   return (
     <div>
-        <div className="  flex flex-col items-center  min-h-screen  bg-[linear-gradient(135deg,_#0000_20.5%,_#ffffff_0_29.5%,_#0000_0)_0_50px,_linear-gradient(45deg,_#0000_8%,_#ffffff_0_17%,_#0000_0_58%)_100px_0,_linear-gradient(135deg,_#0000_8%,_#ffffff_0_17%,_#0000_0_58%,_#ffffff_0_67%,_#0000_0),_linear-gradient(45deg,_#0000_8%,_#ffffff_0_17%,_#0000_0_58%,_#ffffff_0_67%,_#0000_0_83%,_#ffffff_0_92%,_#0000_0),_rgba(71,74,255,0.05)] bg-[200px_200px]">
+      <div className="  flex flex-col items-center  min-h-screen  bg-[linear-gradient(135deg,_#0000_20.5%,_#ffffff_0_29.5%,_#0000_0)_0_50px,_linear-gradient(45deg,_#0000_8%,_#ffffff_0_17%,_#0000_0_58%)_100px_0,_linear-gradient(135deg,_#0000_8%,_#ffffff_0_17%,_#0000_0_58%,_#ffffff_0_67%,_#0000_0),_linear-gradient(45deg,_#0000_8%,_#ffffff_0_17%,_#0000_0_58%,_#ffffff_0_67%,_#0000_0_83%,_#ffffff_0_92%,_#0000_0),_rgba(71,74,255,0.05)] bg-[200px_200px]">
         <h1 className="text-center uppercase md:text-center text-[#0060b5] dark:text-white text-xl md:text-5xl font-bold md:my-20"
           style={{
 
@@ -80,14 +80,17 @@ const RecServices = () => {
                 <div className=" flex flex-row gap-4 mt-4 md:pb-0 md:ml-0 md:mr-6  ml-6 pb-3 shadow-2xl shadow-transparent md:flex  md:justify-end md:items-end md:gap-3">
                   <img
                     src={Permanenticon}
+                    alt=''
                     className="md:h-10 h-8 filter   hover:scale-105 transition duration-300"
                   />
                   <img
                     src={Permanenticon2}
+                    alt=''
                     className="md:h-10 h-8 filter   hover:scale-105 transition duration-300"
                   />
                   <img
                     src={Permanenticon3}
+                    alt=''
                     className="md:h-10 h-8 filter   hover:scale-105 transition duration-300"
                   />
                 </div>
@@ -142,14 +145,17 @@ const RecServices = () => {
               <div className=" flex flex-row gap-4 ml-3 mt-2 md:py-0 py-2 shadow-2xl shadow-transparent md:flex md:justify-end md:items-end md:gap-3 ">
                 <img
                   src={Temporaryicon}
+                  alt=''
                   className="md:h-10 h-8  filter  hover:grayscale-0 hover:scale-105 transition duration-300"
                 />
                 <img
                   src={Temporaryicon2}
+                  alt=''
                   className="md:h-10 h-8 filter  hover:grayscale-0 hover:scale-105 transition duration-300"
                 />
                 <img
                   src={Temporaryicon3}
+                  alt=''
                   className="md:h-10 h-8 filter  hover:grayscale-0 hover:scale-105 transition duration-300"
                 />
               </div>
@@ -205,14 +211,17 @@ const RecServices = () => {
                 <div className=" flex mr-6 md:py-0 py-3  shadow-2xl shadow-transparent  flex-row gap-4 md:flex md:justify-end  md:gap-3 ">
                   <img
                     src={Recruitericon}
+                    alt=''
                     className="md:h-10 h-8 filter   hover:scale-105 transition duration-300"
                   />
                   <img
                     src={Recruitericon2}
+                    alt=''
                     className="md:h-10 h-8 filter  hover:scale-105 transition duration-300"
                   />
                   <img
                     src={Recruitericon3}
+                    alt=''
                     className="md:h-10 h-8 filter   hover:scale-105 transition duration-300"
                   />
                 </div>

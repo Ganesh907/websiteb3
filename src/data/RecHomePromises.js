@@ -1,7 +1,7 @@
-import delivery from "../Assets/Images/deliveryicon1.png"; // Assuming these are the correct image paths
-import clienticon from "../Assets/Images/clienticon2.png";
-import rating from "../Assets/Images/ratingicon.png";
-import candidate from "../Assets/Images/candidateicon1.png";
+import delivery from "../assets/images/deliveryicon1.png"; // Assuming these are the correct image paths
+import clienticon from "../assets/images/clienticon2.png";
+import rating from "../assets/images/ratingicon.png";
+import candidate from "../assets/images/candidateicon1.png";
 
 export const promises = [
   {

@@ -1,7 +1,5 @@
-// BlogForm.js
 import React, { useRef, useState } from 'react';
-import { useFormContext } from './FormContext'; // Import the context
-
+import { useFormContext } from './FormContext';
 import FormatBoldIcon from '@mui/icons-material/FormatBold';
 import FormatItalicIcon from '@mui/icons-material/FormatItalic';
 import FormatUnderlinedIcon from '@mui/icons-material/FormatUnderlined';
@@ -11,21 +9,21 @@ import FormatAlignRightIcon from '@mui/icons-material/FormatAlignRight';
 import ImageIcon from '@mui/icons-material/Image';
 
 const BlogForm = () => {
-  const { formData, updateFormData } = useFormContext(); // Get form data and update function
+  const { formData, updateFormData } = useFormContext();
   const [submitted, setSubmitted] = useState(false);
   const fileInputRef = useRef(null);
 
   const handleSubmit = (e) => {
-        e.preventDefault();
-        updateFormData({
-            title: formData.title, // This should get the current value from state
-            content: formData.content,
-            images: formData.images,
-            imagePosition: formData.imagePosition,
-            imageSize: formData.imageSize
-        });
-        setSubmitted(true);
-    };
+    e.preventDefault();
+    updateFormData({
+      title: formData.title,
+      content: formData.content,
+      images: formData.images,
+      imagePosition: formData.imagePosition,
+      imageSize: formData.imageSize
+    });
+    setSubmitted(true);
+  };
   const formatText = (command, value = null) => {
     document.execCommand(command, false, value);
   };
@@ -67,8 +65,6 @@ const BlogForm = () => {
 
         <div className="mb-4">
           <label className="block text-lg mb-2 font-semibold">Blog Content</label>
-
-          {/* Formatting Toolbar */}
           <div className="mb-2 flex flex-wrap space-x-2">
             <button
               type="button"
@@ -122,7 +118,6 @@ const BlogForm = () => {
               <FormatAlignRightIcon />
             </button>
 
-            {/* Image Upload */}
             <button
               type="button"
               className="border px-2 py-1 rounded mr-2 mb-2 flex items-center"
@@ -152,14 +147,12 @@ const BlogForm = () => {
             </select>
           </div>
 
-          {/* Editable content area */}
           <div
             className="border border-gray-300 p-4 rounded h-72 overflow-y-auto"
             contentEditable
             onInput={(e) => updateFormData({ content: e.currentTarget.innerHTML })}
           ></div>
 
-          {/* Image Preview */}
           {formData.images.length > 0 && (
             <div className="mt-4">
               {formData.images.map((img, index) => (
@@ -187,13 +180,11 @@ const BlogForm = () => {
         </button>
       </form>
 
-      {/* Display submitted content */}
       {submitted && (
         <div className="mt-6 p-4 border border-gray-400 bg-white text-black rounded w-[90vw]">
           <h2 className="text-xl font-bold mb-2">{formData.title}</h2>
           <div dangerouslySetInnerHTML={{ __html: formData.content }}></div>
 
-          {/* Display Uploaded Images */}
           {formData.images.length > 0 && (
             <div className="mt-4">
               {formData.images.map((img, index) => (

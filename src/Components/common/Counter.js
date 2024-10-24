@@ -7,7 +7,6 @@ const Counter = ({ end, duration = 2000 }) => {
     let start = 0;
     const endValue = end;
     const startTime = Date.now();
-    const interval = 1000 / 60; // 60 frames per second
     const step = () => {
       const elapsed = Date.now() - startTime;
       const progress = Math.min(elapsed / duration, 1);
@@ -17,7 +16,7 @@ const Counter = ({ end, duration = 2000 }) => {
       if (progress < 1) {
         requestAnimationFrame(step);
       } else {
-        setCount(endValue); // Ensure final value is set
+        setCount(endValue);
       }
     };
     requestAnimationFrame(step);

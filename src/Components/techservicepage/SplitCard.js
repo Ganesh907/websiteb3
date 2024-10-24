@@ -1,46 +1,36 @@
 import React, { Component } from "react";
-
 import "tailwindcss/tailwind.css";
-// import Aos from "aos";
-// import webDevelopment from "../../Assets/Images/web development.png";
-import javascript from "../../Assets/Images/javascript.png";
-import reactlogo from "../../Assets/Images/reactjs.png";
-import nodelogo from "../../Assets/Images/nodejs .png";
-import javalogo from "../../Assets/Images/java1.png";
-import kotline from "../../Assets/Images/Kotlin_Icon.png";
-import flutter from "../../Assets/Images/flutter.png";
-import enterpriselogo from "../../Assets/Images/enterp.png";
-import digital from "../../Assets/Images/enterprisesol.png";
-import solution from "../../Assets/Images/architecture (2).png";
-// import WebDevelopment from "../../Assets/Images/TechWebDev.png";
-// import AndroidDevlopment from "../../Assets/Images/TechAppDev.png";
-import EnterpriseSolution from "../../Assets/Videos/techservices/enterprisevideo.mp4";
-import androidappvideo from "../../Assets/Videos/techservices/appdevvideo.mp4";
-// import EnterpriseSolution from "../../Assets/Videos/enterprisesolution.mp4";
-import service from "../../Assets/Images/devops.png";
-import itservice from "../../Assets/Images/it-systems.png";
-import software from "../../Assets/Images/software.png";
-// import itmanaged from "../../Assets/Images/itmanagemnet.jpg";
-// import itteamSolution from "../../Assets/Videos/itteam.mp4";
-// import webdevelopment from "../../Assets/Videos/webdevelopment.mp4";
-import webdevelopmentvideo from "../../Assets/Videos/techservices/webdevvideo.mp4";
-import itservicesvideo from "../../Assets/Videos/techservices/ManagedItServicesVideo.mp4";
-// import javascript from "../../Assets/Images/javascript.png";
+import javascript from "../../assets/images/javascript.png";
+import reactlogo from "../../assets/images/reactjs.png";
+import nodelogo from "../../assets/images/nodejs .png";
+import javalogo from "../../assets/images/java1.png";
+import kotline from "../../assets/images/Kotlin_Icon.png";
+import flutter from "../../assets/images/flutter.png";
+import enterpriselogo from "../../assets/images/enterp.png";
+import digital from "../../assets/images/enterprisesol.png";
+import solution from "../../assets/images/architecture (2).png";
+import EnterpriseSolution from "../../assets/videos/techservices/enterprisevideo.mp4";
+import androidappvideo from "../../assets/videos/techservices/appdevvideo.mp4";
+import service from "../../assets/images/devops.png";
+import itservice from "../../assets/images/it-systems.png";
+import software from "../../assets/images/software.png";
+import webdevelopmentvideo from "../../assets/videos/techservices/webdevvideo.mp4";
+import itservicesvideo from "../../assets/videos/techservices/ManagedItServicesVideo.mp4";
 export default class SplitCard extends Component {
   render() {
     return (
       <div className="  flex flex-col items-center  min-h-screen  bg-[linear-gradient(135deg,_#0000_20.5%,_#ffffff_0_29.5%,_#0000_0)_0_50px,_linear-gradient(45deg,_#0000_8%,_#ffffff_0_17%,_#0000_0_58%)_100px_0,_linear-gradient(135deg,_#0000_8%,_#ffffff_0_17%,_#0000_0_58%,_#ffffff_0_67%,_#0000_0),_linear-gradient(45deg,_#0000_8%,_#ffffff_0_17%,_#0000_0_58%,_#ffffff_0_67%,_#0000_0_83%,_#ffffff_0_92%,_#0000_0),_rgba(71,74,255,0.05)] bg-[200px_200px]">
         <h1 className="text-center uppercase md:text-center text-[#0060b5] dark:text-white text-xl md:text-5xl font-bold md:my-20"
-                                style={{
+          style={{
 
-                                        fontFamily: 'Goudy Old Style',
-                                        letterSpacing: '0.05em'}}>
+            fontFamily: 'Goudy Old Style',
+            letterSpacing: '0.05em'
+          }}>
           Our Professional Services Portfolio
         </h1>
-        {/* <span className="hidden relative lg:w-[8%] lg:h-[5px] lg:mr-[62%] lg:block lg:rounded-b-[5px]" style={{ backgroundColor: '#002eff' }}></span> */}
 
         <div
-          // data-aos="fade-up"
+
           data-aos-duration="4000"
           className="md:mx-auto md:w-10/12 md:mt-4 md:relative containt "
         >
@@ -50,11 +40,7 @@ export default class SplitCard extends Component {
             className="relative z-50"
           >
             <div className="md:absolute hidden  md:left-10 md:top-10 md:z-10  bg-cover bg-center  md:text-2xl md:font-bold md:flex p-3  	 customborder   custom-border relative border-[4px] border-transparent rounded-[10%] max-w-[23em] custom-border md:justify-center   md:h-72 lg:h-72 md:w-72 lg:w-1/4 hover:-translate-y-6  md:transition-all md:duration-500">
-              {/* <img
-                src={WebDevelopment}
-                className="object-cover Imagescss rounded-[20px] shadow-[0px_13px_27px_-5px_rgba(50,50,93,0.25),_0px_8px_16px_-8px_rgba(0,0,0,0.3)] "
-                alt=""
-              /> */}
+
 
               <video
                 className="Imagescss rounded-[20px] object-cover h-full w-full  shadow-[0px_13px_27px_-5px_rgba(50,50,93,0.25),_0px_8px_16px_-8px_rgba(0,0,0,0.3)]"
@@ -69,7 +55,6 @@ export default class SplitCard extends Component {
               <div className=" bg-opacity-75  rounded  "></div>
             </div>
           </div>
-          {/* <div className="bg-gradient-to-r from-[rgba(220,220,220,0.4)] to-[#0060b5] m-2 md:border-none border-2 border-sky-600 rounded-2xl parentDiv md:w-[90%] shadow-xl parentDiv md:relative md:left-20 md:shadow-2xl  mx-4 md:mx-0 md:p-5 md:rounded-xl md:mb-5 md:transform md:transition-all  md:border "> */}
           <div className="bg-[#0060b5] md:pl-0 pl-4 m-2 md:border-none border-2 border-sky-600  rounded-2xl parentDiv md:w-[90%] shadow-xl parentDiv md:relative md:left-20 md:shadow-2xl  md:mx-0 md:p-5 mx-5 md:rounded-xl md:mb-5 md:transform md:transition-all  md:border ">
 
             <div className="md:flex   md:h-80 md:pl-72 md:flex-col md:items-center     ">
@@ -100,13 +85,16 @@ export default class SplitCard extends Component {
                 <div className=" flex flex-row gap-4 md:pb-0 pb-2 mt-4 md:pl-0 pl-4 shadow-2xl shadow-transparent md:flex  md:justify-end md:items-end md:gap-3">
                   <img
                     src={javascript}
+                    alt=""
                     className="md:h-10 h-8 filter   hover:scale-105 transition duration-300"
                   />
                   <img
                     src={reactlogo}
+                    alt=""
                     className="md:h-10 h-8 filter   hover:scale-105 transition duration-300"
                   />
                   <img
+                    alt=""
                     src={nodelogo}
                     className="md:h-10 h-8 filter   hover:scale-105 transition duration-300"
                   />
@@ -117,7 +105,6 @@ export default class SplitCard extends Component {
         </div>
 
         <div
-          // data-aos="fade-up"
           data-aos-duration="4000"
           className="md:mx-auto md:w-10/12 md:relative containt "
         >
@@ -127,12 +114,6 @@ export default class SplitCard extends Component {
             className="relative z-50"
           >
             <div className="md:absolute hidden rounded-2xl  md:right-[-0.75rem] md:top-10 md:z-10   bg-cover bg-center  md:text-2xl md:font-bold md:flex p-3  	 customborder  md:justify-center  md:h-72 lg:h-72 md:w-72 lg:w-1/4 hover:-translate-y-6  md:transition-all md:duration-500">
-              {/* <img
-                src={AndroidDevlopment}
-                className="Imagescss  object-cover rounded-[20px] border-4 border-[#0060b5] shadow-[0px_13px_27px_-5px_rgba(50,50,93,0.25),_0px_8px_16px_-8px_rgba(0,0,0,0.3)]"
-                alt=""
-              /> */}
-
               <video
                 className="Imagescss rounded-[20px] object-cover h-full w-full  shadow-[0px_13px_27px_-5px_rgba(50,50,93,0.25),_0px_8px_16px_-8px_rgba(0,0,0,0.3)]"
                 autoPlay
@@ -167,14 +148,17 @@ export default class SplitCard extends Component {
               <div className=" flex flex-row gap-4 md:pb-0 pb-2 md:ml-3 ml-0  mt-2 shadow-2xl shadow-transparent md:flex md:justify-end md:items-end md:gap-3 ">
                 <img
                   src={javalogo}
+                  alt=""
                   className="md:h-10 h-8  filter  hover:grayscale-0 hover:scale-105 transition duration-300"
                 />
                 <img
                   src={kotline}
+                  alt=""
                   className="md:h-10 h-8 filter  hover:grayscale-0 hover:scale-105 transition duration-300"
                 />
                 <img
                   src={flutter}
+                  alt=""
                   className="md:h-10 h-8 filter  hover:grayscale-0 hover:scale-105 transition duration-300"
                 />
               </div>
@@ -232,14 +216,17 @@ export default class SplitCard extends Component {
                 <div className=" flex md:mr-6 md:pb-0 pb-2 shadow-2xl shadow-transparent  flex-row gap-4 md:flex md:justify-end  md:gap-3 ">
                   <img
                     src={enterpriselogo}
+                    alt=""
                     className="md:h-10 h-8 filter   hover:scale-105 transition duration-300"
                   />
                   <img
                     src={digital}
+                    alt=""
                     className="md:h-10 h-8 filter  hover:scale-105 transition duration-300"
                   />
                   <img
                     src={solution}
+                    alt=""
                     className="md:h-10 h-8 filter   hover:scale-105 transition duration-300"
                   />
                 </div>
@@ -258,7 +245,7 @@ export default class SplitCard extends Component {
             className="relative z-50"
           >
             <div className="md:absolute hidden shadow-2xl shadow-transparent rounded-2xl  md:right-[-0.75rem] md:top-10 md:z-10   bg-cover bg-center  md:text-2xl md:font-bold md:flex p-3  	 customborder  md:justify-center  md:h-72 lg:h-72 md:w-72 lg:w-1/4 hover:-translate-y-6  md:transition-all md:duration-500">
-             
+
 
               <video
                 className="Imagescss rounded-[20px] object-cover h-full w-full  shadow-[0px_13px_27px_-5px_rgba(50,50,93,0.25),_0px_8px_16px_-8px_rgba(0,0,0,0.3)]"
@@ -279,7 +266,7 @@ export default class SplitCard extends Component {
                 Managed IT Services
               </h4>
               <ul className=" text-black  md:ml-8 list-disc leading-loose md:h-72 ml-1 font md:p-6 md:w-[74%] ">
-               
+
                 <li>
                   Enhancing performance and efficiency of existing systems for
                   better output.
@@ -302,14 +289,17 @@ export default class SplitCard extends Component {
               <div className=" flex flex-row md:pb-0 pb-2 gap-4 md:ml-3 ml-0 mt-2 shadow-2xl shadow-transparent md:flex md:justify-end md:items-end md:gap-3 ">
                 <img
                   src={service}
+                  alt=""
                   className="md:h-10 h-8  filter  hover:grayscale-0 hover:scale-105 transition duration-300"
                 />
                 <img
                   src={itservice}
+                  alt=""
                   className="md:h-10 h-8 filter  hover:grayscale-0 hover:scale-105 transition duration-300"
                 />
                 <img
                   src={software}
+                  alt=""
                   className="md:h-10 h-8 filter  hover:grayscale-0 hover:scale-105 transition duration-300"
                 />
               </div>

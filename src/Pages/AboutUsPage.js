@@ -2,29 +2,24 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
-import HeroSection from "../Components/common/HeroSection";
-import AboutUsBgVideo from '../Assets/Videos/AboutUsBgVideo.mp4';
-import mission from "../Assets/Images/mission.gif";
-import vision from "../Assets/Images/vision.gif";
-import Corevalues from "../Components/aboutus/Corevalues"; 
-import MissionVisionGif from "../Assets/Images/MissionVisionGif.gif"
-import TypingText from "../Components/common/TypingText";
-import B3Banner from "../Assets/Images/B3Banner.jpg"
-import B3Img from "../Assets/Images/1690.jpg"
-import ContactUSImg4 from "../Assets/Images/ContactUSImg4.jpg"
+import HeroSection from "../components/common/HeroSection";
+import AboutUsBgVideo from '../assets/videos/AboutUsBgVideo.mp4';
+import mission from "../assets/images/mission.gif";
+import vision from "../assets/images/vision.gif";
+import Corevalues from "../components/aboutus/Corevalues";
+import MissionVisionGif from "../assets/images/MissionVisionGif.gif"
+import TypingText from "../components/common/TypingText";
 
 const AboutUsPage = () => {
- 
-
   const content = [
     {
       heading: "Turning Ideas Into Digital Solutions",
       paragraph: [
-      
-// "BitByBit Solutions is a dynamic and rapidly growing technology startup based in Mumbai, India’s commercial hub.",
-// "Since our inception in 2018, we’ve specialized in delivering high-quality IT solutions to esteemed clients across India and the Indo-Pacific region.",
-// "Our expertise spans custom software development, data management, and digital transformation.",
-// "We are driven by a young and passionate team with diverse experience across multiple industries, enabling us to craft innovative solutions that meet the unique needs of each client.",
+
+        // "BitByBit Solutions is a dynamic and rapidly growing technology startup based in Mumbai, India’s commercial hub.",
+        // "Since our inception in 2018, we’ve specialized in delivering high-quality IT solutions to esteemed clients across India and the Indo-Pacific region.",
+        // "Our expertise spans custom software development, data management, and digital transformation.",
+        // "We are driven by a young and passionate team with diverse experience across multiple industries, enabling us to craft innovative solutions that meet the unique needs of each client.",
 
         "From seamless software development to advanced data management, we deliver tech that works for you efficiently and effortlessly.",
         "We bring your vision to life with IT solutions designed to drive results and keep you ahead in the digital world."
@@ -76,19 +71,8 @@ const AboutUsPage = () => {
     index: PropTypes.number.isRequired,
     value: PropTypes.number.isRequired,
   };
-
-  const a11yProps = (index) => ({
-    id: `simple-tab-${index}`,
-    'aria-controls': `simple-tabpanel-${index}`,
-  });
-
-  const [value, setValue] = useState(0);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
-
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
 
   useEffect(() => {
     let interval;
@@ -108,16 +92,9 @@ const AboutUsPage = () => {
     setIsHovered(false);
   };
 
-
-
-
-
-
-
-
   return (
     <div>
-    
+
       <HeroSection videoUrl={AboutUsBgVideo} videoOpacity={20} MarginAnimtion={true}>
         <div className='lg:w-[50vw] w-[90vw] flex justify-end items-end'>
           <div className="relative w-full md:h-80 h-96  overflow-hidden mr-2 cursor-pointer mb-16">
@@ -175,91 +152,61 @@ const AboutUsPage = () => {
           </div>
         </div>
       </HeroSection>
- {/* <div className="relative h-[78vh] my-10 flex pb-2  justify-end items-center px-10">
-  <div
-    className="absolute inset-0 bg-black opacity-20 "
-    style={{
-      backgroundImage: `url(${B3Banner})`,
-      backgroundSize: 'cover',
-      backgroundPosition: 'top',
-      zIndex: '-1', 
-    }}
-  />
-  <div className="h-[40vh] w-[82vw] m-10">
-<img src={B3Img} alt="" className="rounded-lg shadow-2xl shadow-black"/>
-  </div>
-  
-  <div className="relative z-2  flex flex-col border-l-2 border-white rounded-lg justify-center italic items-center drop-shadow-lg text-lg p-5 "
-  style={{backgroundColor:"rgb(0,0,0,0.8)"}}>
-    <h1 className="w-[50%] text-5xl drop-shadow-lg text-center mb-10  font-bold text-[#0060b5] pb-2 border-b-2 border-white "
-    data-aos="fade-up" data-aos-duration="3000" 
-    >Discover <span className="text-white">B3</span></h1>
-  <p>
 
-    "BitByBit Solutions is a dynamic and rapidly growing technology startup based in Mumbai, India’s commercial hub. Since our inception in 2018, we’ve specialized in delivering high-quality IT solutions to esteemed clients across India and the Indo-Pacific region.<br/><br/>
-Our expertise spans custom software development, data management, and digital transformation. We are driven by a young and passionate team with diverse experience across multiple industries, enabling us to craft innovative solutions that meet the unique needs of each client.<br/><br/>
-At BitByBit Solutions, we’re committed to excellence, ensuring that every project we deliver helps businesses streamline operations, enhance efficiency, and achieve their digital goals.” 
+      <div className="lg:h-[100vh] w-auto flex md:flex-row flex-col px-5 md:px-0 justify-between md:m-10">
+        <div className="md:h-full  md:w-[55%] flex flex-col justify-center md:justify-start z-2 items-start  "
+          data-aos={window.innerWidth <= 768 ? "fade-up" : "fade-left"}
+          data-aos-duration="3000"
+        >
+          <div className="flex flex-col justify-between items-center  w-full p-5"
+          >
+            <img src={mission} alt="" className="h-28 w-28 p-1  border-4 rounded-full border-[#0060b5] transition-all ease-in-out duration-600" />
+            <div>
 
-    </p>
-  </div>
-</div>  */}
+              <div className="text-center text-2xl text-[#0060b5] font-bold mt-10">
+                OUR
+                <TypingText word=" MISSION" />
+
+              </div>
+              <h2 className="mt-4 rounded-2xl  p-3  text-[var(--secondary-color)] drop-shadow-xl border-b-0 italic border-t-4  border-[#0060b5]  "
+                style={{ backgroundColor: 'rgb(0,0,0,0.5)' }}>
+                {
+                  "We strive to provide a tailored, end to end services to our clients and establishing strong partnerships to ensure we understand each others goals and deadlines, without compromising our professional and ethical standards."
+                }
+              </h2>
+            </div>
+          </div>
+        </div>
 
 
+        <div className="flex justify-center md:w-[40%] items-center"
+          data-aos="zoom-in" data-aos-duration="3000" >
+          <img src={MissionVisionGif} alt="" className="md:scale-150 " />
+        </div>
 
-<div className="lg:h-[100vh] w-auto flex md:flex-row flex-col px-5 md:px-0 justify-between md:m-10">
-<div className="md:h-full  md:w-[55%] flex flex-col justify-center md:justify-start z-2 items-start  " 
-  data-aos={window.innerWidth <= 768 ? "fade-up" : "fade-left"}
- data-aos-duration="3000" 
->
-  <div className="flex flex-col justify-between items-center  w-full p-5"
-  >
-    <img src={mission} className="h-28 w-28 p-1  border-4 rounded-full border-[#0060b5] transition-all ease-in-out duration-600" />
-    <div>
+        <div className="md:h-full md:w-[55%]  flex flex-col justify-end z-2   items-end  "
+          data-aos={window.innerWidth <= 768 ? "fade-up" : "fade-right"}
+          data-aos-duration="3000"
+        >
+          <div className="flex flex-col  justify-between items-center  w-full p-5">
 
-      <div className="text-center text-2xl text-[#0060b5] font-bold mt-10">
-        OUR
-        <TypingText word=" MISSION"/>
-      
+            <img src={vision} alt="" className="h-28 w-28 p-1  border-4 rounded-full border-[#0060b5]" />
+            <div>
+              <h1 className="text-center text-2xl mt-10 text-[#0060b5] font-bold">
+                OUR   <TypingText word=" VISION" />
+              </h1>
+              <h2 className="mt-4 rounded-2xl  p-3 drop-shadow-xl  border-t-4 italic  border-[#0060b5] "
+                style={{ backgroundColor: 'rgb(0,0,0,0.5)' }}>
+                {
+                  "To build trust by establishing a winning value chain system based on the ever changing surroundings, with the utmost focus on transforming lives and providing solutions."
+                }
+              </h2>
+            </div>
+          </div>
+        </div>
       </div>
-      <h2 className="mt-4 rounded-2xl  p-3  text-[var(--secondary-color)] drop-shadow-xl border-b-0 italic border-t-4  border-[#0060b5]  "
-       style={{backgroundColor:'rgb(0,0,0,0.5)'}}>
-        {
-          "We strive to provide a tailored, end to end services to our clients and establishing strong partnerships to ensure we understand each others goals and deadlines, without compromising our professional and ethical standards."
-        }
-      </h2>
-    </div>
-  </div>
-</div>
 
-
-<div className="flex justify-center md:w-[40%] items-center"
- data-aos="zoom-in" data-aos-duration="3000" >
-  <img src={MissionVisionGif} alt="" className="md:scale-150 "/>
-</div>
-
-<div className="md:h-full md:w-[55%]  flex flex-col justify-end z-2   items-end  "
-  data-aos={window.innerWidth <= 768 ? "fade-up" : "fade-right"}
- data-aos-duration="3000" 
->
-  <div className="flex flex-col  justify-between items-center  w-full p-5">
-    
-    <img src={vision}className="h-28 w-28 p-1  border-4 rounded-full border-[#0060b5]"  />
-    <div>
-      <h1 className="text-center text-2xl mt-10 text-[#0060b5] font-bold">
-        OUR   <TypingText word=" VISION"/>
-      </h1>
-      <h2 className="mt-4 rounded-2xl  p-3 drop-shadow-xl  border-t-4 italic  border-[#0060b5] "
-       style={{backgroundColor:'rgb(0,0,0,0.5)'}}>
-        {
-          "To build trust by establishing a winning value chain system based on the ever changing surroundings, with the utmost focus on transforming lives and providing solutions."
-        }
-      </h2>
-    </div>
-  </div>
-</div>
-</div>
-
-<Corevalues/>
+      <Corevalues />
 
     </div>
   );

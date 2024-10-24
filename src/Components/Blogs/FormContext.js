@@ -1,20 +1,13 @@
-import React, { createContext, useState, useContext, useEffect } from 'react';
-
-// Create a Context
+import React, { createContext, useState, useContext } from 'react';
 const FormContext = createContext();
 
-
-// Create a provider component
 export const FormProvider = ({ children }) => {
-
-
-
     const [formData, setFormData] = useState({
         title: '',
         content: '',
         images: [],
-        imagePosition: 'left', // or whatever default you want
-        imageSize: 'medium', // default size
+        imagePosition: 'left',
+        imageSize: 'medium',
     });
 
     const updateFormData = (newData) => {
@@ -32,7 +25,6 @@ export const FormProvider = ({ children }) => {
     );
 };
 
-// Custom hook to use the FormContext
 export const useFormContext = () => {
     return useContext(FormContext);
 };

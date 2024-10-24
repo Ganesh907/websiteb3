@@ -1,32 +1,17 @@
-import React, { useEffect, useState,useRef } from "react";
-import TechServicesVideo from "../../Assets/Videos/TechServicesVideo.mp4";
-import "./TechServicesPage.css";
-import HeroSection from "../../Components/common/HeroSection";
-import TypingTextAnimation from "../../Components/common/TypingTextAnimation";
-import SplitCard from "../../Components/techservicepage/SplitCard";
+import React, { useRef } from "react";
+import TechServicesVideo from "../../assets/videos/TechServicesVideo.mp4";
+import HeroSection from "../../components/common/HeroSection";
+import TypingTextAnimation from "../../components/common/TypingTextAnimation";
+import SplitCard from "../../components/techservicepage/SplitCard";
 import { jobRolesWithImages } from "../../data/languagesdata/TechData";
-import LanguagesLogos from "../../Components/common/LanguagesLogos";
+import LanguagesLogos from "../../components/common/LanguagesLogos";
+
+const TechServicesPage = () => {
 
 
-
-
-const TechServicesPage = (props) => {
-
- 
-
-  const marqueeRef2 = useRef(null); // Reference to the marquee element
-
-  const marqueeRef = useRef(null);
-  const handleMouseEnter1 = () => {
-    marqueeRef.current.stop();
-  };
-
-  const handleMouseLeave1 = () => {
-    marqueeRef.current.start();
-  };
   return (
-    // <>
-    <div className="service-div-main ">
+
+    <div>
       <HeroSection
         videoUrl={TechServicesVideo}
         videoOpacity={20}
@@ -36,14 +21,9 @@ const TechServicesPage = (props) => {
           <TypingTextAnimation />
         </div>
       </HeroSection>
-
       <SplitCard />
-
-        <LanguagesLogos title="Redefining IT Skill Expertise" jobRolesWithImages={jobRolesWithImages}/>
-   
-
-      
-</div>
+      <LanguagesLogos title="Redefining IT Skill Expertise" jobRolesWithImages={jobRolesWithImages} />
+    </div>
   );
 };
 

@@ -1,21 +1,17 @@
 import React from 'react';
-import '../css-files/NotFoundPage.css'; // Import custom CSS
+import '../css-files/NotFoundPage.css';
 
-// NotFoundPage Component
 const NotFoundPage = () => {
   const dots = Array.from({ length: 3 }, (_, index) => (
     <div
       key={index}
       className="h-5 w-5 bg-white rounded-md mx-1 animate-spin"
-//       style={{ animationDelay: `${index * 0.2}s` }}
     />
   ));
 
   return (
     <div className='bg-transparent min-h-screen flex flex-col items-center justify-center'>
-      {/* pt-20 ensures there's space for the navbar */}
       <div className='relative flex flex-col items-center  '>
-        {/* Spinner with changing background and text color */}
         <div className='p-2 flex flex-col items-center '>
           <div className="animate-bounce  flex duration-1000 justify-center items-end h-24 w-24">
             <div
@@ -26,17 +22,11 @@ const NotFoundPage = () => {
             </div>
           </div>
 
-          {/* Dots animation */}
           <div className='h-10 flex justify-center items-center '>
-            {/* <h1 className='font-bold text-white ml-2'>B &nbsp;</h1> */}
             {dots}
-            {/* <h1 className='font-bold text-white ml-2'>3</h1> */}
           </div>
         </div>
-
-        {/* 404 message directly below the blue-bordered div */}
         <h1 className='text-white font-bold  text-xl lg:text-5xl mt-10'>404 - Page Not Found</h1>
-        
       </div>
     </div>
   );

@@ -1,14 +1,11 @@
 import CodeIcon from '@mui/icons-material/Code';
-import DeveloperModeIcon from '@mui/icons-material/DeveloperMode';
-import CloudIcon from '@mui/icons-material/Cloud';
-import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
 import Diversity3Icon from '@mui/icons-material/Diversity3';
 import ArticleIcon from '@mui/icons-material/Article';
 import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
-import img1 from '../Assets/Images/rechome/Img1.png'
-import img2 from '../Assets/Images/rechome/Img3.png'
-import img3 from '../Assets/Images/rechome/Img2.png'
-import img4 from '../Assets/Images/rechome/Img4.png'
+import img1 from '../assets/images/rechome/Img1.png'
+import img2 from '../assets/images/rechome/Img3.png'
+import img3 from '../assets/images/rechome/Img2.png'
+import img4 from '../assets/images/rechome/Img4.png'
 
 export const TechHomeData1 = [
   {
@@ -39,8 +36,8 @@ export const TechHomeData1 = [
     img: img3,
     content: [
       "  Whether you require short-term expertise or need to scale up quickly, our contract hiring solutions ensure that you get the right talent, right when you need it.",
-"  With a focus on flexibility, our contract hiring services enable you to quickly adapt to changing project requirements without the long-term commitment." ,
-"  Our extensive pool of experts includes professionals across a wide range of roles"
+      "  With a focus on flexibility, our contract hiring services enable you to quickly adapt to changing project requirements without the long-term commitment.",
+      "  Our extensive pool of experts includes professionals across a wide range of roles"
 
       // "Skilled in recruiting specialists for cloud infrastructure.",
       // "Expertise in AWS, Azure, and Google Cloud platforms.",
@@ -60,5 +57,5 @@ export const TechHomeData1 = [
       "  Whether it’s IT, or Non-IT sectors, our client-centric approach ensures that we understand and fulfill the specific recruitment needs of every business we serve.",
     ],
   },
-  
+
 ];

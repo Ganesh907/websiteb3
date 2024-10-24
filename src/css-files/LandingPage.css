@@ -22,7 +22,7 @@
     }
     
     .technology .techchild {
-        background-image: url(../Assets/Images/techbackground.png);
+        background-image: url(../assets/images/techbackground.png);
         background-repeat: no-repeat;
         width: inherit;
         height: 100%;
@@ -77,7 +77,7 @@
     }
     
     .recruitment .recruitmentchild {
-        background-image: url(../Assets/Images/recruitmentbackground.png);
+        background-image: url(../assets/images/recruitmentbackground.png);
         background-repeat: no-repeat;
         width: inherit;
         height: 100%;

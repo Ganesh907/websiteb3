@@ -4,13 +4,12 @@ import AlbumIcon from '@mui/icons-material/Album';
 import { TechHomeData1 } from '../../data/RecHomeData';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 
-// TypingEffect component to display lines one after another with a delay
 const TypingEffect = ({ text = '', typingSpeed = 50, isOpen = false }) => {
   const [displayedText, setDisplayedText] = useState('');
 
   useEffect(() => {
     if (!isOpen || typeof text !== 'string') {
-      setDisplayedText(''); // Reset if not open
+      setDisplayedText('');
       return;
     }
 
@@ -39,7 +38,7 @@ const TypingEffect = ({ text = '', typingSpeed = 50, isOpen = false }) => {
   );
 };
 
-// Accordion Item Component
+
 const AccordionItem = ({ item, index, expanded, onHoverStart, onHoverEnd }) => {
   const [startTyping, setStartTyping] = useState(false);
 
@@ -47,7 +46,7 @@ const AccordionItem = ({ item, index, expanded, onHoverStart, onHoverEnd }) => {
     if (expanded === index) {
       const timer = setTimeout(() => {
         setStartTyping(true);
-      }, 500); // Delay before starting typing effect
+      }, 500);
 
       return () => clearTimeout(timer);
     } else {
@@ -86,31 +85,30 @@ const AccordionItem = ({ item, index, expanded, onHoverStart, onHoverEnd }) => {
 };
 
 export default function CustomAccordion() {
-  const [expanded, setExpanded] = useState(0); // Start at the first accordion
-  const [isHovered, setIsHovered] = useState(false); // Track hover state
+  const [expanded, setExpanded] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
     let interval;
     if (!isHovered) {
-      // Auto-expand only when not hovered
       const cycleAccordion = () => {
-        setExpanded((prevExpanded) => (prevExpanded + 1) % TechHomeData1.length); // Reset to 0 when reaching the last item
+        setExpanded((prevExpanded) => (prevExpanded + 1) % TechHomeData1.length);
       };
 
-      interval = setInterval(cycleAccordion, 5000); // Change every 5 seconds
+      interval = setInterval(cycleAccordion, 5000);
     }
 
-    return () => clearInterval(interval); // Cleanup interval on unmount or hover state change
+    return () => clearInterval(interval);
   }, [isHovered]);
 
   const handleHoverStart = (index) => {
-    setIsHovered(true); // Stop auto-expand on hover
-    setExpanded(index); // Expand the hovered item
+    setIsHovered(true);
+    setExpanded(index);
   };
 
   const handleHoverEnd = () => {
-    setIsHovered(false); // Resume auto-expand when hover ends
-    setExpanded(0); // Reset to the first accordion item
+    setIsHovered(false);
+    setExpanded(0);
   };
 
   return (

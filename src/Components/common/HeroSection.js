@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown'; 
+import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
 
 const HeroSection = ({ videoUrl, videoOpacity, MarginAnimtion, children }) => {
     const [bottomRadius, setBottomRadius] = useState('0%');
@@ -48,8 +48,8 @@ const HeroSection = ({ videoUrl, videoOpacity, MarginAnimtion, children }) => {
     };
 
     const ScrollFun = () => {
-        const scrollDuration = 2000; 
-        const scrollHeight = window.innerHeight; 
+        const scrollDuration = 2000;
+        const scrollHeight = window.innerHeight;
         const start = window.scrollY;
         const startTime = performance.now();
 
@@ -59,8 +59,8 @@ const HeroSection = ({ videoUrl, videoOpacity, MarginAnimtion, children }) => {
 
         const smoothScroll = (currentTime) => {
             const timeElapsed = currentTime - startTime;
-            const progress = Math.min(timeElapsed / scrollDuration, 1); 
-            const easedProgress = easeInOutQuad(progress); 
+            const progress = Math.min(timeElapsed / scrollDuration, 1);
+            const easedProgress = easeInOutQuad(progress);
 
             window.scrollTo(0, start + easedProgress * scrollHeight);
 
@@ -89,20 +89,20 @@ const HeroSection = ({ videoUrl, videoOpacity, MarginAnimtion, children }) => {
                 loop
                 muted
                 className={`absolute inset-0 w-full h-full object-cover transition-all duration-1000 ease-in-out ${videoOpacity === 100 ? 'opacity-80' : 'opacity-20'}`}
-                style={containerStyle} // Smooth border-radius transition
+                style={containerStyle}
             >
                 <source src={videoUrl} type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
 
-            {/* Blue Overlay */}
+
             <div
-               className="absolute inset-0 bg-blue-500"
-               style={{
-                   opacity: 0.1, // Set opacity for the blue overlay
-                   borderRadius: `0 0 ${bottomRadius} ${bottomRadius}`, // Apply the borderRadius
-                   transition: 'border-radius 1s ease-in-out', // Apply the transition
-               }} 
+                className="absolute inset-0 bg-blue-500"
+                style={{
+                    opacity: 0.1,
+                    borderRadius: `0 0 ${bottomRadius} ${bottomRadius}`,
+                    transition: 'border-radius 1s ease-in-out',
+                }}
             ></div>
 
             <div

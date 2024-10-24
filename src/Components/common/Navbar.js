@@ -1,6 +1,6 @@
   import { useState, useEffect } from 'react';
   import { Link } from 'react-router-dom';
-  import Logo from '../../Assets/Images/B3logo.png';
+  import Logo from '../../assets/images/B3logo.png';
 
   const techItems = [
     { title: 'Home', path: '/technology' },
@@ -230,7 +230,7 @@
 // import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 // import MenuIcon from "@mui/icons-material/Menu"; 
 // import CloseIcon from "@mui/icons-material/Close"; 
-// import Logo from '../../Assets/Images/B3logo.png';
+// import Logo from '../../assets/images/B3logo.png';
 // import LightModeIcon from '@mui/icons-material/LightMode';
 // import DarkModeIcon from '@mui/icons-material/DarkMode';
 // import { IconButton } from "@mui/material";

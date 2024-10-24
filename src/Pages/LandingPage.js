@@ -1,24 +1,22 @@
 import React from "react";
 import "../css-files/LandingPage.css";
-import b3stamp from "../Assets/Images/b3stamp.png"
-import { Button } from "@mui/material"; // Assuming you're using Material-UI v5
-// import Header from "../../components/Header/header";
-import { useNavigate } from "react-router-dom"; // Import useNavigate
+import b3stamp from "../assets/images/b3stamp.png"
+import { Button } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 const LandingPage = () => {
-  const navigate = useNavigate(); // Initialize useNavigate
+  const navigate = useNavigate();
 
   function goToTechnology() {
-    navigate("/technology"); // Use navigate function to navigate to '/technology'
+    navigate("/technology");
   }
 
   function goToRecruitment() {
-    navigate("/recruitment"); // Use navigate function to navigate to '/recruitment'
+    navigate("/recruitment");
   }
 
   return (
     <div className="landingMain">
-      {/* <Nav /> */}
       <div className="landingcontainer">
         <div className="technology">
           <div className="techchild">

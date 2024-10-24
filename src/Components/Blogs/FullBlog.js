@@ -11,9 +11,9 @@ import { useLocation, useNavigate } from 'react-router-dom';
 
 const FullBlog = () => {
   const [darkMode, setDarkMode] = useState(false);
-  const location = useLocation(); // Get the route state
-  const navigate = useNavigate(); // For back navigation
-  const { blog } = location.state; // Destructure blog from state
+  const location = useLocation();
+  const navigate = useNavigate();
+  const { blog } = location.state;
 
   const handleClick = () => {
     setDarkMode(!darkMode);
@@ -23,12 +23,12 @@ const FullBlog = () => {
 
   return (
     <div className="w-full min-h-screen flex flex-col items-center justify-start py-10 px-5">
-      <button  onClick={() => navigate(-1)} className="self-start text-blue-500 underline my-5">
+      <button onClick={() => navigate(-1)} className="self-start text-blue-500 underline my-5">
         Back to Blogs
       </button>
 
       <div className={`w-full max-w-5xl rounded-lg shadow-lg p-6 ${darkMode ? 'bg-black/80 border' : 'bg-white'}`}>
-        {/* Author info */}
+
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center">
             {blog.profileImage ? (
@@ -39,9 +39,8 @@ const FullBlog = () => {
               />
             ) : (
               <div
-                className={`bg-[#0060b5] border-2 h-12 w-12 rounded-full flex items-center justify-center ${
-                  darkMode ? 'border-white' : 'border-black'
-                }`}
+                className={`bg-[#0060b5] border-2 h-12 w-12 rounded-full flex items-center justify-center ${darkMode ? 'border-white' : 'border-black'
+                  }`}
               >
                 <span className="text-white font-bold">
                   {blog.authorName && blog.authorName.split(' ').map(n => n[0]).join('')}
@@ -80,15 +79,9 @@ const FullBlog = () => {
         </div>
 
         <img src={blog.image} alt={blog.title} className="w-full h-[500px] object-cover rounded-lg mb-6" />
-
-        {/* Blog title */}
         <h1 className={`text-3xl font-bold mb-4 ${darkMode ? 'text-white' : 'text-gray-900'}`}>{blog.title}</h1>
-
-        {/* Blog content */}
         <div className={`text-lg leading-relaxed mb-6 ${darkMode ? 'text-white/80' : 'text-gray-700'}`}>
           {blog.content}
-
-          {/* Additional blog content */}
           <div className={`${darkMode ? 'text-white/90' : 'text-gray-700'}`}>
             <p className="mb-4">
               Today front-end development has changed enormously, and React.js has played an important role in this
@@ -109,7 +102,7 @@ const FullBlog = () => {
             <h2 className="text-2xl font-semibold mt-6 mb-2">Characteristics of React.js</h2>
             <ul className="list-disc list-inside mb-4">
               <li>
-                <strong>Component-based Architecture:</strong> Components are the main focus of React and are
+                <strong>Component-based Architecture:</strong> components are the main focus of React and are
                 independent and reusable pieces of code to form UIs.
               </li>
               <li>
@@ -132,7 +125,6 @@ const FullBlog = () => {
           </div>
         </div>
 
-        {/* Blog stats */}
         <div className="flex items-center justify-between text-gray-600">
           <div className="flex gap-3 items-center text-sm">
             <div className="flex items-center gap-1">

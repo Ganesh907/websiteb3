@@ -1,29 +1,24 @@
-import { lazy, Suspense } from "react";
-import Spinner from "../Components/common/Spinner";
+import { lazy } from "react";
 import { MainLayout } from "../layouts/MainLayout";
+const TechHomePage = lazy(() => import("../pages/technology/TechHomePage"));
+const ClientsPage = lazy(() => import("../pages/ClientsPage"));
+const RecServicesPage = lazy(() => import("../pages/recruitment/RecServicesPage"));
+const ContactUsPage = lazy(() => import("../pages/ContactUsPage"));
+const RecHomePage = lazy(() => import("../pages/recruitment/RecHomePage"));
+const AboutUsPage = lazy(() => import("../pages/AboutUsPage"));
+const TechServicesPage = lazy(() => import("../pages/technology/TechServicesPage"));
+const LandingPage = lazy(() => import("../pages/LandingPage"));
+const Blogs = lazy(() => import("../pages/BlogsPage"));
+const CareerPage = lazy(() => import("../pages/CareerPage"));
+const NotFoundPage = lazy(() => import("../pages/NotFoundPage"));
+const FullBlog = lazy(() => import("../components/blogs/FullBlog"));
+const AdminDashboard = lazy(() => import("../pages/admin/AdminDashboard"));
+const AdminLogin = lazy(() => import("../pages/admin/AdminLogin"));
 
-// Lazy load components
-const TechHomePage = lazy(() => import("../Pages/technology/TechHomePage"));
-const ClientsPage = lazy(() => import("../Pages/ClientsPage"));
-const RecServicesPage = lazy(() => import("../Pages/recruitment/RecServicesPage"));
-// const RecClientsPage = lazy(() => import("../Pages/Recruitment/RecClientsPage"));
-const ContactUsPage = lazy(() => import("../Pages/ContactUsPage"));
-const RecHomePage = lazy(() => import("../Pages/recruitment/RecHomePage"));
-const AboutUsPage = lazy(() => import("../Pages/AboutUsPage"));
-const TechServicesPage = lazy(() => import("../Pages/technology/TechServicesPage"));
-const LandingPage = lazy(() => import("../Pages/LandingPage"));
-const Blogs = lazy(() => import("../Pages/BlogsPage"));
-const CareerPage = lazy(() => import("../Pages/CareerPage"));
-const NotFoundPage = lazy(() => import("../Pages/NotFoundPage")); 
-const FullBlog = lazy(() => import("../Components/Blogs/FullBlog")); 
-const AdminDashboard = lazy(() => import("../Pages/admin/AdminDashboard")); 
-const AdminLogin = lazy(() => import("../Pages/admin/AdminLogin")); 
-
-// Define routes
 const AppRoutes = [
   {
     path: "/",
-    element: <MainLayout />,  // Main layout wraps all child routes
+    element: <MainLayout />,
     children: [
       { path: "/", element: <LandingPage /> },
       { path: "/technology", element: <TechHomePage /> },
@@ -37,18 +32,10 @@ const AppRoutes = [
       { path: "/blogs", element: <Blogs /> },
       { path: "/adminlogin", element: <AdminLogin /> },
       { path: "/dashboard", element: <AdminDashboard /> },
-      { path: "/blog/:id", element:<FullBlog />},
-      { path: "*", element: <NotFoundPage /> }, // Handle 404 Not Found route
+      { path: "/blog/:id", element: <FullBlog /> },
+      { path: "*", element: <NotFoundPage /> },
     ],
   },
-  // {
-  //   path: "/recruitment", // This route is outside the MainLayout
-  //   element: <RecHomePage />,
-  // },
-  // {
-  //   path: "/recruitment-services", // This route is outside the MainLayout
-  //   element: <RecServicesPage />,
-  // },
 ];
 
 export default AppRoutes;

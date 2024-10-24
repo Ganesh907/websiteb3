@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { values } from '../../data/AboutCoreValueData';
 
 const ValueBlock = ({ Icon, iconColor, borderColor, stepNumber, title, description, delay }) => (
@@ -26,7 +25,6 @@ const ValueBlock = ({ Icon, iconColor, borderColor, stepNumber, title, descripti
 );
 
 const CoreValues = () => {
- 
   return (
     <div className='flex flex-col justify-center items-center'>
       <h1 className='text-[#0060b5] text-3xl font-bold uppercase text-center mt-16 mb-5 border-y-2 py-2 px-5 border-black dark:border-white'>

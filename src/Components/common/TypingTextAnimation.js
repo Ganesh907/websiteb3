@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 const TypingText = () => {
-  const constantText = "We Offer"; // The constant part of the sentence
+  const constantText = "We Offer";
   const phrases = [
     "Custom software solutions in e-Governance",
     "Ensuring quality and seamless service",
@@ -9,13 +9,13 @@ const TypingText = () => {
     "Leading-edge Technology solutions",
     "Advanced Healthcare technology",
     "Cutting-edge solutions",
-  ]; // Array of phrases to display
-  const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0); // Track which phrase to show
-  const [displayedText, setDisplayedText] = useState(""); // Text that appears on screen
-  const [isTyping, setIsTyping] = useState(true); // Track if we are typing or erasing
-  const typingSpeed = 50; // Speed of typing each letter (ms)
-  const displayDuration = 1500; // Duration for which the entire phrase is displayed (ms)
-  const eraseSpeed = 50; // Speed of erasing each letter (ms)
+  ];
+  const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
+  const [displayedText, setDisplayedText] = useState("");
+  const [isTyping, setIsTyping] = useState(true);
+  const typingSpeed = 50;
+  const displayDuration = 1500;
+  const eraseSpeed = 50;
 
   useEffect(() => {
     let timeout;
@@ -25,27 +25,24 @@ const TypingText = () => {
 
     const typePhrase = () => {
       if (!erasing) {
-        setIsTyping(true); // Set typing mode to true
+        setIsTyping(true);
         if (charIndex < currentPhrase.length) {
           setDisplayedText(currentPhrase.substring(0, charIndex + 1));
           charIndex++;
           timeout = setTimeout(typePhrase, typingSpeed);
         } else {
-          // Phrase fully typed, wait before erasing
           timeout = setTimeout(() => {
             erasing = true;
-            setIsTyping(false); // Set typing mode to false when erasing
+            setIsTyping(false);
             typePhrase();
           }, displayDuration);
         }
       } else {
-        // Erase the phrase
         if (charIndex > 0) {
           setDisplayedText(currentPhrase.substring(0, charIndex - 1));
           charIndex--;
           timeout = setTimeout(typePhrase, eraseSpeed);
         } else {
-          // Move to the next phrase
           setCurrentPhraseIndex(
             (prevIndex) => (prevIndex + 1) % phrases.length
           );
@@ -87,19 +84,18 @@ const TypingText = () => {
         </style>
       </h1>
       <h2
-        className={`absolute md:bottom-20 bottom-32 md:pr-0 pr-5   md:max-w-max w-[100vw] text-3xl font-semibold ${
-          isTyping ? "text-white" : "text-yellow-300"
-        } md:mt-20 `}
+        className={`absolute md:bottom-20 bottom-32 md:pr-0 pr-5   md:max-w-max w-[100vw] text-3xl font-semibold ${isTyping ? "text-white" : "text-yellow-300"
+          } md:mt-20 `}
       >
         {displayedText}
       </h2>
-  <div className="  md:w-[50vw] w-[100vw] text-white text-xl text-start font-semibold md:mt-10 mt-16 drop-shadow-xl pl-7 "> 
-             <ul className='list-disc'>
-            <li className="mb-2">We craft custom software for efficiency, security, and performance.</li>
-            <li>Trust us for solutions that align with your business goals.</li>
+      <div className="  md:w-[50vw] w-[100vw] text-white text-xl text-start font-semibold md:mt-10 mt-16 drop-shadow-xl pl-7 ">
+        <ul className='list-disc'>
+          <li className="mb-2">We craft custom software for efficiency, security, and performance.</li>
+          <li>Trust us for solutions that align with your business goals.</li>
 
-            </ul>
-            </div>
+        </ul>
+      </div>
     </div>
   );
 };

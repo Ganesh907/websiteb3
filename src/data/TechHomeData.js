@@ -1,24 +1,22 @@
 
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import LocalHotelIcon from '@mui/icons-material/LocalHotel';
-import MedicalServicesIcon from '@mui/icons-material/MedicalServices';
+// import LocalHotelIcon from '@mui/icons-material/LocalHotel';
+// import MedicalServicesIcon from '@mui/icons-material/MedicalServices';
 import BusinessIcon from '@mui/icons-material/Business';
 import AssuredWorkloadIcon from '@mui/icons-material/AssuredWorkload';
 import FlagIcon from '@mui/icons-material/Flag';
-import healthcare from '../Assets/Images/techhome/health-insurance.png'
-import egov from '../Assets/Images/techhome/corporate-governance.png'
-import ecommerce from '../Assets/Images/techhome/online-shopping.png'
-import img2 from '../Assets/Images/rechome/Img3.png'
+import healthcare from '../assets/images/techhome/health-insurance.png'
+import egov from '../assets/images/techhome/corporate-governance.png'
+import ecommerce from '../assets/images/techhome/online-shopping.png'
+import img2 from '../assets/images/rechome/Img3.png'
 
-// import healthcare from '../Assets/Images/TechHome/health-insurance.png'
-
-
+// import healthcare from '../assets/images/TechHome/health-insurance.png'
 
 export const TechHomeData1 = [
     {
         title: 'Banking,Financial Services & Insurance',
         icon: AssuredWorkloadIcon,
-        img:img2,
+        img: img2,
         content: [
             "  Expertise in secure and efficient software for the BFSI sector.",
             "  Financial transactions management solutions.",
@@ -30,7 +28,7 @@ export const TechHomeData1 = [
     {
         title: 'e-Governance',
         icon: FlagIcon,
-        img:egov,
+        img: egov,
         content: [
             "  BitByBit Solutions is at the forefront of enabling digital transformation in governance through innovative e-governance solutions.",
             "  E-governance aims to improve transparency, accessibility, and efficiency in public administration, creating a more inclusive and participatory system of governance.",
@@ -50,7 +48,7 @@ export const TechHomeData1 = [
         // ], 
         title: 'Healthcare',
         icon: BusinessIcon,
-        img:healthcare,
+        img: healthcare,
         content: [
             // "  Wide range of healthcare IT solutions.",
             // "  Electronic Health Records (EHR) systems for efficient patient data management.",
@@ -60,12 +58,12 @@ export const TechHomeData1 = [
 
 
 
-            "  We offer a wide range of healthcare IT solutions designed to meet the diverse needs of modern healthcare providers.", 
+            "  We offer a wide range of healthcare IT solutions designed to meet the diverse needs of modern healthcare providers.",
             "  Our Electronic Health Records (EHR) systems ensure efficient patient data management, helping healthcare providers improve the overall quality of care.",
             "  Appointment scheduling software allows for smooth and efficient management of patient appointments, reducing administrative burden.",
             "  Our telemedicine platforms enable healthcare providers to deliver remote patient care, ensuring patients can access services from the comfort of their homes.",
             // "  We utilize healthcare data analytics to help providers make informed decisions."
-            
+
 
         ],
 
@@ -73,7 +71,7 @@ export const TechHomeData1 = [
     {
         title: 'e-Commerce',
         icon: ShoppingCartIcon,
-        img:ecommerce,
+        img: ecommerce,
         content: [
             "  We specialize in providing cutting-edge technology solutions for the rapidly evolving e-commerce sector.",
             "  We offer custom solutions to help online businesses grow, streamline operations, and boost user engagement.",
