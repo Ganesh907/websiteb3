@@ -20,6 +20,8 @@ import PromiseCardsContainer from '../../Components/rechomepage/PromiseCards';
 import NavbarDemo from '../../Components/lightmodecomponents/NavbarDemo';
 import { useTheme } from '../../Components/common/ThemeProvider';
 import Navbar from '../../Components/common/Navbar';
+import { jobRolesWithImages } from '../../data/languagesdata/RecData';
+import LanguagesLogos from '../../Components/common/LanguagesLogos';
 
 // import HeroSection2 from './HeroSection2';
 const RecHomePage = () => {
@@ -254,7 +256,7 @@ const RecHomePage = () => {
 
         {/* “ At BitByBit, it’s all about YOU! Whether you’re hunting for a new full-time role or just need a temp role, our recruiters are here to help you out. ” */}
      
-
+        <LanguagesLogos title="B3 Expertise In IT Recruitment" jobRolesWithImages={jobRolesWithImages}/>
 
 {/* <Footer/> */}
 

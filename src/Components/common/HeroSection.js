@@ -106,7 +106,7 @@ const HeroSection = ({ videoUrl, videoOpacity, MarginAnimtion, children }) => {
             ></div>
 
             <div
-                className="absolute bottom-0 left-1/2 flex flex-col justify-center items-center mb-5 transform -translate-x-1/2 h-14 text-white z-50 animate-pulse cursor-pointer"
+                className="absolute bottom-0 left-1/2 flex flex-col justify-center items-center mb-5 transform -translate-x-1/2 h-14 text-white z-30 animate-pulse cursor-pointer"
                 style={{ animationDuration: "4000ms" }}
             >
                 <KeyboardDoubleArrowDownIcon

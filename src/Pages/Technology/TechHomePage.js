@@ -31,16 +31,11 @@ import { useNavigate } from "react-router-dom";
 import { promises } from "../../data/TechHomePromises";
 // import PromiseCards from "../../Components/techhomepage/PromiseCards";
 import PromiseCardsContainer from "../../Components/techhomepage/PromiseCards";
+import LanguagesLogos from "../../Components/common/LanguagesLogos";
+import { jobRolesWithImages } from "../../data/languagesdata/TechData";
 
 const TechHomePage = () => {
-  const [expanded, setExpanded] = useState(false);
-  const [hovered, setHovered] = useState(null); // Track hovered Accordion
-  const [visibleLines, setVisibleLines] = useState(0);
   const [scrollHeading, setScrollHeading] = useState("");
-  const [hoveredGroup, setHoveredGroup] = useState(null);
-
-    
-    
   const navigate = useNavigate();
   useEffect(() => {
     const handleScroll = () => {
@@ -53,79 +48,7 @@ const TechHomePage = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-  const linesBank = [
-    "Expertise in secure and efficient software for the BFSI sector.",
-    "Financial transactions management solutions.",
-    "Risk assessment systems for informed decision-making.",
-    "Customer relationship management (CRM) solutions.",
-    "Regulatory compliance solutions to meet industry standards.",
-  ];
-  const linesHospitality = [
-    // "Property Management Systems (PMS) for efficient hospitality operations.",
-    // "Booking and reservation systems to streamline guest management.",
-    // "CRM software to enhance customer service.",
-    // "POS systems for optimized transaction handling.",
-    // "Tailored solutions leveraging industry expertise and latest technologies.",
-    "Our approach to work order management is centered around one core objective: meeting our clients’ goals with precision and efficiency.",
-"By thoroughly understanding your business priorities, we create customized processes that guarantee each task or project is handled with the utmost care and focus.",
-"We recognize that every client has unique requirements, and our team is dedicated to ensuring that each work order aligns seamlessly with those needs.",
-"From initiation to execution, we manage every detail, allowing you to focus on your core business activities while knowing your operational goals are being met efficiently and effectively."
-  ];
-  const linesGov = [
-    "Comprehensive e-Governance and e-Commerce solutions.",
-    "Services include ticket booking, recharges, money transfers, and Aadhaar enrolments.",
-    "Supports Amazon orders, insurance purchases, and utility bill payments.",
-    "Features shopping cart integration and payment gateways.",
-    "Customer management and data analytics for seamless online transactions.",
-  ];
-  const linesHealth = [
-    "Wide range of healthcare IT solutions.",
-    "Electronic Health Records (EHR) systems for efficient patient data management.",
-    "Appointment scheduling software for streamlined bookings.",
-    "Telemedicine platforms for remote patient care.",
-    "Healthcare data analytics to improve patient care and operations.",
-  ];
 
-  // Handle mouse enter
-  const handleMouseEnter = (panel) => {
-    // setHovered(panel);
-    setExpanded(panel);
-  };
-
-  // Handle mouse leave
-  const handleMouseLeave = () => {
-    // setHovered(null);
-    setExpanded(false);
-    setVisibleLines(0);
-  };
-
-  // Handle typing effect for visible lines
-  useEffect(() => {
-    if (expanded) {
-      let lineIndex = 0;
-      let currentLines = [];
-      if (expanded === "panel1") {
-        currentLines = linesBank;
-      } else if (expanded === "panel2") {
-        currentLines = linesHospitality;
-      } else if (expanded === "panel3") {
-        currentLines = linesGov;
-      } else if (expanded === "panel4") {
-        currentLines = linesHealth;
-      }
-
-      const typingInterval = setInterval(() => {
-        if (lineIndex < currentLines.length) {
-          setVisibleLines((prev) => prev + 1);
-          lineIndex++;
-        } else {
-          clearInterval(typingInterval);
-        }
-      }, 300);
-
-      return () => clearInterval(typingInterval);
-    }
-  }, [expanded, linesBank, linesHospitality, linesGov, linesHealth]);
   return (
     <div className="  ">
        {scrollHeading ? (
@@ -247,9 +170,6 @@ const TechHomePage = () => {
 
 <PromiseCardsContainer/>
 
-{/* <p className='text-lg italic text-[#0060b5] dark:text-white text-semibold text-center m-20 py-5  border-y-2 border-black dark:border-white'>
-       "    At BitByBit, we’re all about leveling up your tech game! Whether you need to boost your online vibe or streamline your operations, our squad is here to help you slay your goals with cutting-edge solutions! "
-        </p> */}
 
 <p className='text-lg text-[#0060b5] dark:text-white bg-white dark:bg-black/30 font-semibold text-center my-20 mx-14 py-5 border-y-2 border-black dark:border-white'>
   <span className="block mb-2 text-3xl font-bold italic" style={{ fontFamily: 'Playfair Display' }}>
@@ -262,9 +182,13 @@ const TechHomePage = () => {
   </span>
 </p>
  
+
+<LanguagesLogos title="Redefining IT Skill Expertise" jobRolesWithImages={jobRolesWithImages}/>
     </div>
   );
 };
+
+
 
 export default TechHomePage;
 
